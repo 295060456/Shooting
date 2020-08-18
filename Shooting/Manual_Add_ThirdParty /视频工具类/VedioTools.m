@@ -183,9 +183,22 @@ static VedioTools *vedioTools = nil;
             [MBProgressHUD wj_showPlainText:@"处理完毕...."
                                        view:getMainWindow()];
             @strongify(self)
-            //处理完毕的回调
-            if (self.VedioToolsBlock) {
-                self.VedioToolsBlock(self);
+            switch (self.exporter.status) {
+                case AVAssetExportSessionStatusFailed:{
+                    NSLog(@"Export failed: %@", [[self.exporter error] localizedDescription]);
+                } break;
+                case AVAssetExportSessionStatusCancelled:{
+                    NSLog(@"Export canceled");
+                } break;
+                case AVAssetExportSessionStatusCompleted:{
+                    NSLog(@"转换成功");
+                    //  处理完毕的回调
+                    if (self.VedioToolsBlock) {
+                        self.VedioToolsBlock(self);
+                    }
+                } break;
+                default:
+                    break;
             }
         });
     }];

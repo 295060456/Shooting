@@ -270,10 +270,10 @@ shouldChangeTextInRange:(NSRange)range
         _textView.backgroundColor = COLOR_RGB(33, 38, 50, 1);
         _textView.delegate = self;
         
-        [ShowAvailableFont.sharedInstance getAvailableFont];
+        [ShowAvailableFont.sharedInstance getAvailableFont];//[UIFont fontWithName:@"PingFangSC-Medium" size: 15]
         
         _textView.attributedPlaceholder = [[NSMutableAttributedString alloc] initWithString:@"来两句！~~~"
-                                                                                 attributes:@{NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Medium" size: 15],//PingFangSC
+                                                                                 attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15 weight:UIFontWeightMedium],
                                                                                               NSForegroundColorAttributeName:kWhiteColor}];
         _textView.placeholderTextColor = kWhiteColor;
         _textView.textColor = kWhiteColor;
@@ -291,7 +291,7 @@ shouldChangeTextInRange:(NSRange)range
         _tipsLab = UILabel.new;
         _tipsLab.textColor = kWhiteColor;//
         _tipsLab.attributedText = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"还可以输入%d个字符",self.inputLimit]
-                                                                         attributes:@{NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Medium" size: 15],//PingFangSC
+                                                                         attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15 weight:UIFontWeightMedium],
                                                                                       NSForegroundColorAttributeName:HEXCOLOR(0x242A37)}];
         [self.backView addSubview:_tipsLab];
         [_tipsLab mas_makeConstraints:^(MASConstraintMaker *make) {
