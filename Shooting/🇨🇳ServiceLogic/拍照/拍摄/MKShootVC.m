@@ -403,25 +403,26 @@
         //        @strongify(self)
         if ([data isKindOfClass:VedioTools.class]) {
             #pragma mark —— GPUImage
+            // GPUImage 只能播放本地视频，不能处理网络流媒体url
 //            [CustomerGPUImagePlayerVC ComingFromVC:weak_self
 //                                       comingStyle:ComingStyle_PUSH
 //                                 presentationStyle:UIModalPresentationFullScreen
 //                                     requestParams:@{
-//                                         @"AVPlayerURL":[NSURL URLWithString:VedioTools.sharedInstance.recentlyVedioFileUrl]
+//                                         @"AVPlayerURL":[NSURL URLWithString:VedioTools.sharedInstance.recentlyVedioFileUrl]//fileURLWithPath
 //                                     }
 //                                           success:^(id data) {}
 //                                          animated:YES];
             #pragma mark —— AVPlayer
-//            [CustomerAVPlayerVC ComingFromVC:weak_self
-//                                 comingStyle:ComingStyle_PUSH
-//                           presentationStyle:UIModalPresentationFullScreen
-//                               requestParams:@{
-//                                   @"AVPlayerURL":[NSURL fileURLWithPath:VedioTools.sharedInstance.recentlyVedioFileUrl]
-//                               }
-//                                     success:^(id data) {}
-//                                    animated:YES];
+            [CustomerAVPlayerVC ComingFromVC:weak_self
+                                 comingStyle:ComingStyle_PUSH
+                           presentationStyle:UIModalPresentationFullScreen
+                               requestParams:@{
+                                   @"AVPlayerURL":[NSURL fileURLWithPath:VedioTools.sharedInstance.recentlyVedioFileUrl]
+                               }
+                                     success:^(id data) {}
+                                    animated:YES];
             #pragma mark —— 悬浮窗AVPlayer
-            self.AVPlayerView.alpha = 1;
+//            self.AVPlayerView.alpha = 1;
         }
     }];
 }

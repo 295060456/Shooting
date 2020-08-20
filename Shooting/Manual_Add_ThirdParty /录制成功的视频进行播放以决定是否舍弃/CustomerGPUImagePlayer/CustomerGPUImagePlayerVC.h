@@ -9,7 +9,7 @@
 #import "BaseVC.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+//特别需要指出的是，GPUImage 不支持网络视频流媒体url的解析以及播放，只可以播放本地视频
 @interface CustomerGPUImagePlayerVC : BaseVC
 
 + (instancetype)ComingFromVC:(UIViewController *)rootVC

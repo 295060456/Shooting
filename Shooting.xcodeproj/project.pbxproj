@@ -256,6 +256,12 @@
 		C58F048124EBD78500B6D09C /* spark_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F047A24EBD78500B6D09C /* spark_red@3x.png */; };
 		C58F048224EBD78500B6D09C /* day_like_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F047B24EBD78500B6D09C /* day_like_red@2x.png */; };
 		C58F048524EBD79000B6D09C /* RBCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F048324EBD79000B6D09C /* RBCLikeButton.m */; };
+		C5A46BC024EEA86300158D1E /* 闪光灯-自动@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBA24EEA86300158D1E /* 闪光灯-自动@2x.png */; };
+		C5A46BC124EEA86300158D1E /* 闪光灯-自动@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBB24EEA86300158D1E /* 闪光灯-自动@3x.png */; };
+		C5A46BC224EEA86300158D1E /* 闪光灯-关闭@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBC24EEA86300158D1E /* 闪光灯-关闭@3x.png */; };
+		C5A46BC324EEA86300158D1E /* 闪光灯-关闭@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBD24EEA86300158D1E /* 闪光灯-关闭@2x.png */; };
+		C5A46BC424EEA86300158D1E /* 闪光灯@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBE24EEA86300158D1E /* 闪光灯@2x.png */; };
+		C5A46BC524EEA86300158D1E /* 闪光灯@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBF24EEA86300158D1E /* 闪光灯@3x.png */; };
 		D1C77CE50CE1275572271736 /* Pods_ShootingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -773,6 +779,12 @@
 		C58F047B24EBD78500B6D09C /* day_like_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "day_like_red@2x.png"; sourceTree = "<group>"; };
 		C58F048324EBD79000B6D09C /* RBCLikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCLikeButton.m; sourceTree = "<group>"; };
 		C58F048424EBD79000B6D09C /* RBCLikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCLikeButton.h; sourceTree = "<group>"; };
+		C5A46BBA24EEA86300158D1E /* 闪光灯-自动@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-自动@2x.png"; sourceTree = "<group>"; };
+		C5A46BBB24EEA86300158D1E /* 闪光灯-自动@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-自动@3x.png"; sourceTree = "<group>"; };
+		C5A46BBC24EEA86300158D1E /* 闪光灯-关闭@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-关闭@3x.png"; sourceTree = "<group>"; };
+		C5A46BBD24EEA86300158D1E /* 闪光灯-关闭@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-关闭@2x.png"; sourceTree = "<group>"; };
+		C5A46BBE24EEA86300158D1E /* 闪光灯@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯@2x.png"; sourceTree = "<group>"; };
+		C5A46BBF24EEA86300158D1E /* 闪光灯@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯@3x.png"; sourceTree = "<group>"; };
 		CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shooting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -2017,6 +2029,7 @@
 		C58F033724EA6E1600B6D09C /* ⚽️PicResource */ = {
 			isa = PBXGroup;
 			children = (
+				C5A46BB924EEA86300158D1E /* 闪光灯 */,
 				C58F03CC24EA789100B6D09C /* 翻转镜头@2x.png */,
 				C58F03CB24EA789100B6D09C /* 翻转镜头@3x.png */,
 				C58F03C724EA77BB00B6D09C /* back_white.png */,
@@ -2108,6 +2121,20 @@
 				C58F047A24EBD78500B6D09C /* spark_red@3x.png */,
 			);
 			path = resource;
+			sourceTree = "<group>";
+		};
+		C5A46BB924EEA86300158D1E /* 闪光灯 */ = {
+			isa = PBXGroup;
+			children = (
+				C5A46BBA24EEA86300158D1E /* 闪光灯-自动@2x.png */,
+				C5A46BBB24EEA86300158D1E /* 闪光灯-自动@3x.png */,
+				C5A46BBC24EEA86300158D1E /* 闪光灯-关闭@3x.png */,
+				C5A46BBD24EEA86300158D1E /* 闪光灯-关闭@2x.png */,
+				C5A46BBE24EEA86300158D1E /* 闪光灯@2x.png */,
+				C5A46BBF24EEA86300158D1E /* 闪光灯@3x.png */,
+			);
+			name = "闪光灯";
+			path = "../../../../GitLab/monkeyKingVideo/MonkeyKingVideo/Pic/其他/闪光灯";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2228,13 +2255,18 @@
 				C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */,
 				C58F03AB24EA6E7600B6D09C /* MyStore@2x.png in Resources */,
 				C58F03A824EA6E7600B6D09C /* Home@3x.png in Resources */,
+				C5A46BC024EEA86300158D1E /* 闪光灯-自动@2x.png in Resources */,
 				C58F03B824EA6F0700B6D09C /* green_lottie_tab_discover.json in Resources */,
+				C5A46BC124EEA86300158D1E /* 闪光灯-自动@3x.png in Resources */,
 				C58F03AC24EA6E7600B6D09C /* My@3x.png in Resources */,
 				C58F047C24EBD78500B6D09C /* day_like@2x.png in Resources */,
 				C58F03B024EA6E7600B6D09C /* 摄像机.png in Resources */,
 				C58F047024EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 in Resources */,
 				C58F03BA24EA6F0700B6D09C /* green_lottie_tab_home.json in Resources */,
 				C58F03AD24EA6E7600B6D09C /* MyStore@3x.png in Resources */,
+				C5A46BC324EEA86300158D1E /* 闪光灯-关闭@2x.png in Resources */,
+				C5A46BC224EEA86300158D1E /* 闪光灯-关闭@3x.png in Resources */,
+				C5A46BC424EEA86300158D1E /* 闪光灯@2x.png in Resources */,
 				C58F002324EA36FA00B6D09C /* LaunchScreen.storyboard in Resources */,
 				C58F010B24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */,
 				C58F018224EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton in Resources */,
@@ -2255,6 +2287,7 @@
 				C58F018F24EA5CAC00B6D09C /* 专治UITableView相应链断裂 in Resources */,
 				C58F03AA24EA6E7600B6D09C /* My@2x.png in Resources */,
 				C58F048124EBD78500B6D09C /* spark_red@3x.png in Resources */,
+				C5A46BC524EEA86300158D1E /* 闪光灯@3x.png in Resources */,
 				C58F00EF24EA581F00B6D09C /* Pod里面的Bug in Resources */,
 				C58F002024EA36FA00B6D09C /* Assets.xcassets in Resources */,
 				C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */,
