@@ -9,7 +9,7 @@
 #ifndef Pods_h
 #define Pods_h
 
-#import "WMZBannerView.h"
+//#import "WMZBannerView.h"
 #import <Masonry/Masonry.h>
 #import "AFNetworking.h"
 #import "TZImagePickerController.h"

@@ -1,8 +1,8 @@
 //
-//  MKShootVC.h
+//  CustomerAVPlayerVC.h
 //  MonkeyKingVideo
 //
-//  Created by Jobs on 2020/8/10.
+//  Created by Jobs on 2020/8/18.
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
@@ -10,19 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKShootVC : BaseVC
+@interface CustomerAVPlayerVC : BaseVC
 
 + (instancetype)ComingFromVC:(UIViewController *)rootVC
                  comingStyle:(ComingStyle)comingStyle
            presentationStyle:(UIModalPresentationStyle)presentationStyle
-               requestParams:(nullable id)requestParams
+               requestParams:(nullable id)requestParams//需要传资源地址 URL
                      success:(MKDataBlock)block
                     animated:(BOOL)animated;
-
--(void)ActionMKShootVCBlock:(MKDataBlock)MKShootVCBlock;
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-//App 退到后台 或者杀死的时候 不录
+
+

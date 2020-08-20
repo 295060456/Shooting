@@ -30,7 +30,6 @@ JXCategoryTitleViewDataSource
 @property(nonatomic,assign)BOOL isPush;
 @property(nonatomic,assign)BOOL isPresent;
 
-
 @end
 
 @implementation PhotoVC
@@ -165,7 +164,6 @@ didClickSelectedItemAtIndex:(NSInteger)index {
 
 - (void)categoryView:(JXCategoryBaseView *)categoryView
 didScrollSelectedItemAtIndex:(NSInteger)index{
-    NSLog(@"");
     if (index) {//1
         [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
         self.gk_navigationBar.hidden = NO;

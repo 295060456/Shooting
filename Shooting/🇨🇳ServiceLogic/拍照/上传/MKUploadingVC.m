@@ -131,7 +131,7 @@ UITextViewDelegate
                                            view:self.view];
             }
         }else{
-            //进入登录流程
+            //登录流程
         }
     }else{
         if (!self.imgData) {
@@ -269,11 +269,8 @@ shouldChangeTextInRange:(NSRange)range
         _textView = SZTextView.new;
         _textView.backgroundColor = COLOR_RGB(33, 38, 50, 1);
         _textView.delegate = self;
-        
-        [ShowAvailableFont.sharedInstance getAvailableFont];//[UIFont fontWithName:@"PingFangSC-Medium" size: 15]
-        
-        _textView.attributedPlaceholder = [[NSMutableAttributedString alloc] initWithString:@"来两句！~~~"
-                                                                                 attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15 weight:UIFontWeightMedium],
+        _textView.attributedPlaceholder = [[NSMutableAttributedString alloc] initWithString:@"主人来两句嘛！~~~"
+                                                                                 attributes:@{NSFontAttributeName:[UIFont fontWithName:@"PingFangSC" size: 15],
                                                                                               NSForegroundColorAttributeName:kWhiteColor}];
         _textView.placeholderTextColor = kWhiteColor;
         _textView.textColor = kWhiteColor;
@@ -291,7 +288,7 @@ shouldChangeTextInRange:(NSRange)range
         _tipsLab = UILabel.new;
         _tipsLab.textColor = kWhiteColor;//
         _tipsLab.attributedText = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"还可以输入%d个字符",self.inputLimit]
-                                                                         attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15 weight:UIFontWeightMedium],
+                                                                         attributes:@{NSFontAttributeName:[UIFont fontWithName:@"PingFangSC" size: 15],
                                                                                       NSForegroundColorAttributeName:HEXCOLOR(0x242A37)}];
         [self.backView addSubview:_tipsLab];
         [_tipsLab mas_makeConstraints:^(MASConstraintMaker *make) {

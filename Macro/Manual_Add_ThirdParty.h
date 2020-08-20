@@ -23,6 +23,7 @@
 #import "LGiOSBtn.h"
 #import "ECAuthorizationTools.h"
 #import "ShowAvailableFont.h"//打印全员字体
+#import "JhtBannerView.h"
 
 #pragma mark —— 以下是自定义的
 #import "ToolMacro.h"
@@ -31,6 +32,7 @@
 #import "NSArray+Extension.h"
 #import "NSArray+Extend.h"
 #import "NSString+Extras.h"
+#import "NSObject+Measure.h"
 #import "UIView+Extras.h"
 #import "UIImage+Extras.h"
 #import "UIButton+Block.h"

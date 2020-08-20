@@ -5,7 +5,7 @@ target 'Shooting' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'WMZBanner'
+#  pod 'WMZBanner'
   pod 'Masonry'
   pod 'AFNetworking'
   pod 'TZImagePickerController'
