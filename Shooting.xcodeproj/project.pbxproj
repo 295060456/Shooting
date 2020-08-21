@@ -131,11 +131,6 @@
 		C58F01C624EA5E7900B6D09C /* YBNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01C424EA5E7800B6D09C /* YBNotificationManager.m */; };
 		C58F01CB24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01CA24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m */; };
 		C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */ = {isa = PBXBuildFile; fileRef = C58F01E224EA603400B6D09C /* 替换系统的UITabBarViewController */; };
-		C58F01EB24EA605200B6D09C /* UIViewController+LZBTabBarVCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01E824EA605200B6D09C /* UIViewController+LZBTabBarVCItem.m */; };
-		C58F01EC24EA605200B6D09C /* LZBTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01E924EA605200B6D09C /* LZBTabBarVC.m */; };
-		C58F01F424EA605B00B6D09C /* LOTAnimationView+action.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01EE24EA605B00B6D09C /* LOTAnimationView+action.m */; };
-		C58F01F524EA605B00B6D09C /* LZBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01EF24EA605B00B6D09C /* LZBTabBar.m */; };
-		C58F01F624EA605B00B6D09C /* LZBTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01F024EA605B00B6D09C /* LZBTabBarItem.m */; };
 		C58F01F924EA60D100B6D09C /* CustomSYSUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01F824EA60D100B6D09C /* CustomSYSUITabBarController.m */; };
 		C58F020224EA617800B6D09C /* BWItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01FD24EA617800B6D09C /* BWItemCollectionViewCell.m */; };
 		C58F020324EA617800B6D09C /* BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01FF24EA617800B6D09C /* BWShareView.m */; };
@@ -262,6 +257,11 @@
 		C5A46BC324EEA86300158D1E /* 闪光灯-关闭@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBD24EEA86300158D1E /* 闪光灯-关闭@2x.png */; };
 		C5A46BC424EEA86300158D1E /* 闪光灯@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBE24EEA86300158D1E /* 闪光灯@2x.png */; };
 		C5A46BC524EEA86300158D1E /* 闪光灯@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBF24EEA86300158D1E /* 闪光灯@3x.png */; };
+		C5A46C0124EFB6E200158D1E /* UIViewController+LZBTabBarVCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFD24EFB6E100158D1E /* UIViewController+LZBTabBarVCItem.m */; };
+		C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFF24EFB6E200158D1E /* LZBTabBarVC.m */; };
+		C5A46C0A24EFB6E900158D1E /* LZBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0424EFB6E800158D1E /* LZBTabBar.m */; };
+		C5A46C0B24EFB6E900158D1E /* LOTAnimationView+action.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0724EFB6E900158D1E /* LOTAnimationView+action.m */; };
+		C5A46C0C24EFB6E900158D1E /* LZBTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */; };
 		D1C77CE50CE1275572271736 /* Pods_ShootingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -546,18 +546,6 @@
 		C58F01C924EA5F0100B6D09C /* YHGPUImageBeautifyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHGPUImageBeautifyFilter.h; sourceTree = "<group>"; };
 		C58F01CA24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHGPUImageBeautifyFilter.m; sourceTree = "<group>"; };
 		C58F01E224EA603400B6D09C /* 替换系统的UITabBarViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "替换系统的UITabBarViewController"; sourceTree = "<group>"; };
-		C58F01E624EA605200B6D09C /* UIViewController+LZBTabBarVCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LZBTabBarVCItem.h"; sourceTree = "<group>"; };
-		C58F01E724EA605200B6D09C /* LZBTabBarVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarVCDelegate.h; sourceTree = "<group>"; };
-		C58F01E824EA605200B6D09C /* UIViewController+LZBTabBarVCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LZBTabBarVCItem.m"; sourceTree = "<group>"; };
-		C58F01E924EA605200B6D09C /* LZBTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBarVC.m; sourceTree = "<group>"; };
-		C58F01EA24EA605200B6D09C /* LZBTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarVC.h; sourceTree = "<group>"; };
-		C58F01ED24EA605B00B6D09C /* LZBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBar.h; sourceTree = "<group>"; };
-		C58F01EE24EA605B00B6D09C /* LOTAnimationView+action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LOTAnimationView+action.m"; sourceTree = "<group>"; };
-		C58F01EF24EA605B00B6D09C /* LZBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBar.m; sourceTree = "<group>"; };
-		C58F01F024EA605B00B6D09C /* LZBTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBarItem.m; sourceTree = "<group>"; };
-		C58F01F124EA605B00B6D09C /* LOTAnimationView+action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LOTAnimationView+action.h"; sourceTree = "<group>"; };
-		C58F01F224EA605B00B6D09C /* LZBTabBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarDelegate.h; sourceTree = "<group>"; };
-		C58F01F324EA605B00B6D09C /* LZBTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarItem.h; sourceTree = "<group>"; };
 		C58F01F724EA60D100B6D09C /* CustomSYSUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSYSUITabBarController.h; sourceTree = "<group>"; };
 		C58F01F824EA60D100B6D09C /* CustomSYSUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSYSUITabBarController.m; sourceTree = "<group>"; };
 		C58F01FB24EA617800B6D09C /* BWItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWItemCollectionViewCell.h; sourceTree = "<group>"; };
@@ -785,6 +773,18 @@
 		C5A46BBD24EEA86300158D1E /* 闪光灯-关闭@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-关闭@2x.png"; sourceTree = "<group>"; };
 		C5A46BBE24EEA86300158D1E /* 闪光灯@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯@2x.png"; sourceTree = "<group>"; };
 		C5A46BBF24EEA86300158D1E /* 闪光灯@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯@3x.png"; sourceTree = "<group>"; };
+		C5A46BFC24EFB6E100158D1E /* LZBTabBarVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarVCDelegate.h; sourceTree = "<group>"; };
+		C5A46BFD24EFB6E100158D1E /* UIViewController+LZBTabBarVCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LZBTabBarVCItem.m"; sourceTree = "<group>"; };
+		C5A46BFE24EFB6E100158D1E /* LZBTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarVC.h; sourceTree = "<group>"; };
+		C5A46BFF24EFB6E200158D1E /* LZBTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBarVC.m; sourceTree = "<group>"; };
+		C5A46C0024EFB6E200158D1E /* UIViewController+LZBTabBarVCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LZBTabBarVCItem.h"; sourceTree = "<group>"; };
+		C5A46C0324EFB6E800158D1E /* LZBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBar.h; sourceTree = "<group>"; };
+		C5A46C0424EFB6E800158D1E /* LZBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBar.m; sourceTree = "<group>"; };
+		C5A46C0524EFB6E800158D1E /* LZBTabBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarDelegate.h; sourceTree = "<group>"; };
+		C5A46C0624EFB6E800158D1E /* LOTAnimationView+action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LOTAnimationView+action.h"; sourceTree = "<group>"; };
+		C5A46C0724EFB6E900158D1E /* LOTAnimationView+action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LOTAnimationView+action.m"; sourceTree = "<group>"; };
+		C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBarItem.m; sourceTree = "<group>"; };
+		C5A46C0924EFB6E900158D1E /* LZBTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarItem.h; sourceTree = "<group>"; };
 		CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shooting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1691,13 +1691,13 @@
 		C58F01E424EA604100B6D09C /* LZBTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				C58F01F224EA605B00B6D09C /* LZBTabBarDelegate.h */,
-				C58F01F324EA605B00B6D09C /* LZBTabBarItem.h */,
-				C58F01F024EA605B00B6D09C /* LZBTabBarItem.m */,
-				C58F01ED24EA605B00B6D09C /* LZBTabBar.h */,
-				C58F01EF24EA605B00B6D09C /* LZBTabBar.m */,
-				C58F01F124EA605B00B6D09C /* LOTAnimationView+action.h */,
-				C58F01EE24EA605B00B6D09C /* LOTAnimationView+action.m */,
+				C5A46C0624EFB6E800158D1E /* LOTAnimationView+action.h */,
+				C5A46C0724EFB6E900158D1E /* LOTAnimationView+action.m */,
+				C5A46C0324EFB6E800158D1E /* LZBTabBar.h */,
+				C5A46C0424EFB6E800158D1E /* LZBTabBar.m */,
+				C5A46C0524EFB6E800158D1E /* LZBTabBarDelegate.h */,
+				C5A46C0924EFB6E900158D1E /* LZBTabBarItem.h */,
+				C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */,
 			);
 			path = LZBTabBar;
 			sourceTree = "<group>";
@@ -1705,11 +1705,11 @@
 		C58F01E524EA604800B6D09C /* LZBTabBarVC */ = {
 			isa = PBXGroup;
 			children = (
-				C58F01E724EA605200B6D09C /* LZBTabBarVCDelegate.h */,
-				C58F01EA24EA605200B6D09C /* LZBTabBarVC.h */,
-				C58F01E924EA605200B6D09C /* LZBTabBarVC.m */,
-				C58F01E624EA605200B6D09C /* UIViewController+LZBTabBarVCItem.h */,
-				C58F01E824EA605200B6D09C /* UIViewController+LZBTabBarVCItem.m */,
+				C5A46BFE24EFB6E100158D1E /* LZBTabBarVC.h */,
+				C5A46BFF24EFB6E200158D1E /* LZBTabBarVC.m */,
+				C5A46BFC24EFB6E100158D1E /* LZBTabBarVCDelegate.h */,
+				C5A46C0024EFB6E200158D1E /* UIViewController+LZBTabBarVCItem.h */,
+				C5A46BFD24EFB6E100158D1E /* UIViewController+LZBTabBarVCItem.m */,
 			);
 			path = LZBTabBarVC;
 			sourceTree = "<group>";
@@ -2429,7 +2429,6 @@
 				C58F018824EA5CAC00B6D09C /* UIView+JHGestureBlock.m in Sources */,
 				C56161AF24EE4DDE001CD851 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m in Sources */,
 				C58F02AE24EA61C600B6D09C /* LOTAnimationView.m in Sources */,
-				C58F01EB24EA605200B6D09C /* UIViewController+LZBTabBarVCItem.m in Sources */,
 				C58F028E24EA61C600B6D09C /* LOTRepeaterRenderer.m in Sources */,
 				C58F029B24EA61C600B6D09C /* LOTBlockCallback.m in Sources */,
 				C58F00D724EA581F00B6D09C /* UIViewController+GKCategory.m in Sources */,
@@ -2482,7 +2481,6 @@
 				C58F020324EA617800B6D09C /* BWShareView.m in Sources */,
 				C58F02AB24EA61C600B6D09C /* LOTLayerGroup.m in Sources */,
 				C58F029924EA61C600B6D09C /* LOTRenderGroup.m in Sources */,
-				C58F01F524EA605B00B6D09C /* LZBTabBar.m in Sources */,
 				C58F02AF24EA61C600B6D09C /* LOTAnimatedControl.m in Sources */,
 				C58F00D824EA581F00B6D09C /* UIImage+WebP.m in Sources */,
 				C561619824EE4CA9001CD851 /* MKUploadingVC.m in Sources */,
@@ -2492,7 +2490,6 @@
 				C561619D24EE4CB7001CD851 /* PhotoVC.m in Sources */,
 				C58F02C024EA61C600B6D09C /* LOTBezierPath.m in Sources */,
 				C58F00CD24EA581F00B6D09C /* GKPushAnimatedTransition.m in Sources */,
-				C58F01F424EA605B00B6D09C /* LOTAnimationView+action.m in Sources */,
 				C58F029424EA61C600B6D09C /* LOTAsset.m in Sources */,
 				C58F00D324EA581F00B6D09C /* UIScrollView+GKCategory.m in Sources */,
 				C58F019C24EA5CAD00B6D09C /* BaseVC+GifImageView.m in Sources */,
@@ -2512,6 +2509,7 @@
 				C58F00D524EA581F00B6D09C /* UIImage+GKCategory.m in Sources */,
 				C58F01A124EA5CAD00B6D09C /* BaseVC+BWShareView.m in Sources */,
 				C58F01A724EA5CAD00B6D09C /* UIImage+YBGIF.m in Sources */,
+				C5A46C0C24EFB6E900158D1E /* LZBTabBarItem.m in Sources */,
 				C58F018624EA5CAC00B6D09C /* UIView+Extras.m in Sources */,
 				C58F019E24EA5CAD00B6D09C /* BaseVC+TZImagePickerControllerDelegate.m in Sources */,
 				C58F018924EA5CAC00B6D09C /* HQCollectionViewFlowLayout.m in Sources */,
@@ -2521,6 +2519,8 @@
 				C58F029D24EA61C600B6D09C /* LOTShapeGroup.m in Sources */,
 				C58F019324EA5CAC00B6D09C /* UITableViewCell+WhiteArrows.m in Sources */,
 				C58F02FB24EA63F300B6D09C /* MKLaunchingAdModel.m in Sources */,
+				C5A46C0A24EFB6E900158D1E /* LZBTabBar.m in Sources */,
+				C5A46C0B24EFB6E900158D1E /* LOTAnimationView+action.m in Sources */,
 				C58F01BF24EA5E5E00B6D09C /* PlaySound.m in Sources */,
 				C58F018524EA5CAC00B6D09C /* UIView+SuspendView.m in Sources */,
 				C56161A524EE4DAE001CD851 /* CustomerGPUImagePlayerVC.m in Sources */,
@@ -2586,13 +2586,13 @@
 				C58F029F24EA61C600B6D09C /* LOTLayer.m in Sources */,
 				C58F00CE24EA581F00B6D09C /* GKBaseAnimatedTransition.m in Sources */,
 				C58F02AC24EA61C600B6D09C /* LOTValueInterpolator.m in Sources */,
-				C58F01F624EA605B00B6D09C /* LZBTabBarItem.m in Sources */,
 				C58F033424EA69D400B6D09C /* ViewController@3.m in Sources */,
 				C58F018B24EA5CAC00B6D09C /* UIButton+Block.m in Sources */,
 				C56161BB24EE4F43001CD851 /* JhtBannerCardView.m in Sources */,
 				C58F00CB24EA581F00B6D09C /* GKTransitionDelegateHandler.m in Sources */,
 				C58F031624EA648200B6D09C /* FMHttpRequest.m in Sources */,
 				C58F029824EA61C600B6D09C /* UIColor+Expanded.m in Sources */,
+				C5A46C0124EFB6E200158D1E /* UIViewController+LZBTabBarVCItem.m in Sources */,
 				C58F01C624EA5E7900B6D09C /* YBNotificationManager.m in Sources */,
 				C58F01A824EA5CAD00B6D09C /* UIImage+Extras.m in Sources */,
 				C58F001524EA36F800B6D09C /* SceneDelegate.m in Sources */,
@@ -2620,9 +2620,9 @@
 				C58F00DA24EA581F00B6D09C /* SDWebImageFrame.m in Sources */,
 				C56161C224EE4F52001CD851 /* JhtBannerView.m in Sources */,
 				C58F019524EA5CAC00B6D09C /* CJTextField.m in Sources */,
+				C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */,
 				C58F02A824EA61C600B6D09C /* LOTSizeInterpolator.m in Sources */,
 				C58F00EB24EA581F00B6D09C /* NSBundle+BRPickerView.m in Sources */,
-				C58F01EC24EA605200B6D09C /* LZBTabBarVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

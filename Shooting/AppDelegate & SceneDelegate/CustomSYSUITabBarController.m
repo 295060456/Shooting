@@ -23,11 +23,13 @@
 LZBTabBarVCDelegate
 >
 
+@property(nonatomic,strong)BaseNavigationVC *customNavigationVC;
+
 @property(nonatomic,strong)NSMutableArray<UIImage *> *customUnselectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray<UIImage *> *customSelectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray<NSString *> *titleStrMutArr;
 @property(nonatomic,strong)NSMutableArray<UIViewController *> *viewControllerMutArr;
-@property(nonatomic,strong)BaseNavigationVC *customNavigationVC;
+@property(nonatomic,strong)NSMutableArray<NSString *> *lottieJsonNameStrMutArr;
 @property(nonatomic,strong)NSMutableArray *mutArr;
 
 @end
@@ -52,17 +54,21 @@ CGFloat LZB_TABBAR_HEIGHT;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.gk_navigationBar.hidden = YES;
+    self.navigationController.navigationBar.hidden = NO;
+    
+    self.lzb_tabBar.tabBarStyleType = LZBTabBarStyleType_sysNormal;
+//    self.lzb_tabBar.lottieJsonNameStrMutArr = self.lottieJsonNameStrMutArr;
+    self.lzb_tabBar.topLine.alpha = 0;
+    
     [self p_setUpAllChildViewController];
 }
 
 - (void)p_setUpAllChildViewController {
     self.delegate = self;
     for (int i = 0; i < self.viewControllerMutArr.count; i ++) {
-//        self.customNavigationVC = [[BaseNavigationVC alloc]initWithRootViewController:(UIViewController *)self.viewControllerMutArr[i]];
-//        self.customNavigationVC.navigationBar.hidden = YES;
-//        [self.mutArr addObject:self.customNavigationVC];
-
-        [self.mutArr addObject:self.viewControllerMutArr[i]];
+        [self.mutArr addObject:(UIViewController *)self.viewControllerMutArr[i]];
     }
     self.viewControllers = (NSArray *)self.mutArr;
     for (int i = 0; i <self.titleStrMutArr.count; i++) {
@@ -71,7 +77,7 @@ CGFloat LZB_TABBAR_HEIGHT;
                                      SelectImage:(UIImage *)self.customSelectedImgMutArr[i]
                                    NnSelectImage:(UIImage *)self.customUnselectedImgMutArr[i]];
     }
-//    self.lzb_tabBar.backgroundColor = kWhiteColor;
+    self.lzb_tabBar.backgroundColor = [UIColor blackColor];
     self.isShouldAnimation = YES;
 }
 
@@ -164,6 +170,19 @@ CGFloat LZB_TABBAR_HEIGHT;
         [_viewControllerMutArr addObject:ViewController_3.new];
         [_viewControllerMutArr addObject:ViewController_4.new];
     }return _viewControllerMutArr;
+}
+
+-(NSMutableArray<NSString *> *)lottieJsonNameStrMutArr{
+    if (!_lottieJsonNameStrMutArr) {
+        _lottieJsonNameStrMutArr = NSMutableArray.array;
+        
+//        [_lottieJsonNameStrMutArr addObject:@"首页选中.json"];
+//        [_lottieJsonNameStrMutArr addObject:@"首页选中.json"];
+//        [_lottieJsonNameStrMutArr addObject:@"首页选中.json"];
+//        [_lottieJsonNameStrMutArr addObject:@"首页选中.json"];
+//        [_lottieJsonNameStrMutArr addObject:@"首页选中.json"];
+        
+    }return _lottieJsonNameStrMutArr;
 }
 
 @end
