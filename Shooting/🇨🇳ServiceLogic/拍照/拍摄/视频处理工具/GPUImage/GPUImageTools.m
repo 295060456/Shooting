@@ -101,7 +101,7 @@
 //    self.vedioShootType = VedioShootType_end;
     [movieWriter finishRecording];//已经写了文件
     self.videoCamera.audioEncodingTarget = nil;
-    [self.urlArray addObject:[NSURL fileURLWithPath:self.recentlyVedioFileUrl]];
+//    [self.urlArray addObject:[NSURL fileURLWithPath:self.recentlyVedioFileUrl]];
     _FileUrlByTime = nil;//只要一暂停录制，就需要置空，因为是时间戳路径，需要懒加载获取到最新
     // 合成：将音频流和视频流 合在一起，在这个动作之前，不是视频。合成结束并且写文件。
     [MBProgressHUD wj_showPlainText:@"视频合成中......" view:getMainWindow()];
@@ -111,13 +111,16 @@
                    dispatch_get_main_queue(), ^{
         @strongify(self)
         self.videoSize = self.movieWriterSize;
-        NSString *d = [NSString stringWithFormat:@"%@%@",[FileFolderHandleTool directoryAtPath:self.recentlyVedioFileUrl],@"/合成视频的缓存"];//,[FileFolderHandleTool getOnlyFileName:self.recentlyVedioFileUrl]
+        NSString *d = [NSString stringWithFormat:@"%@%@",[FileFolderHandleTool directoryAtPath:self.recentlyVedioFileUrl],@"/合成视频的缓存"];
         
-        NSString *dd = [NSString stringWithFormat:@"%@%@%@",[FileFolderHandleTool directoryAtPath:self.recentlyVedioFileUrl],@"/合成视频的缓存/",[FileFolderHandleTool getFullFileName:self.recentlyVedioFileUrl]];
-
         if ([FileFolderHandleTool createFolderByUrl:d error:nil]) {
-            [self mergeAndExportVideos:self.urlArray //@[[NSURL fileURLWithPath:dd]]
-                                    withOutPath:d];
+            
+            [self.urlArray addObject:[NSURL fileURLWithPath:self.recentlyVedioFileUrl]];
+            NSString *ds = [NSString stringWithFormat:@"%@%@%@",[FileFolderHandleTool directoryAtPath:self.recentlyVedioFileUrl],@"/合成视频的缓存/",[FileFolderHandleTool getOnlyFileName:self.recentlyVedioFileUrl]];
+            NSString *dfv = [NSString stringWithFormat:@"%@,%@",ds,@".mp4"];
+
+            [self mergeAndExportVideos:self.urlArray//全地址
+                                    withOutPath:dfv];
             //缩略图
             BOOL s = [FileFolderHandleTool writeFileAtPath:self.recentlyVedioFileUrl
                                                    content:[self getImage:self.recentlyVedioFileUrl]
@@ -231,6 +234,7 @@
         totalDuration = CMTimeAdd(totalDuration, asset.duration);
     }
     self.mergeFileURL = [NSURL fileURLWithPath:outpath];
+    
     [self.exporter exportAsynchronouslyWithCompletionHandler:^{
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD wj_showPlainText:@"处理完毕...."
