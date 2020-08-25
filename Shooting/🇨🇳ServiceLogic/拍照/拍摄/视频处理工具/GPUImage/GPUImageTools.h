@@ -36,10 +36,10 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)vedioShoottingOff;
 #pragma mark —— 翻转摄像头
 -(void)overturnCamera;
-///视频合并
+#pragma mark —— 视频合并
 -(void)mergeAndExportVideos:(NSArray *)videosPathArray
                 withOutPath:(NSString *)outpath;
-///缩略图
+#pragma mark —— 缩略图
 -(UIImage *)getImage:(NSString *)videoURL;
 
 @end

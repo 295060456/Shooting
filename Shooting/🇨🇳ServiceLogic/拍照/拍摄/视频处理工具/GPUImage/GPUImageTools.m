@@ -59,21 +59,19 @@
 
 @implementation GPUImageTools
 
-#pragma mark ——实况视频
+- (void)dealloc {
+    NSLog(@"Running self.class = %@;NSStringFromSelector(_cmd) = '%@';__FUNCTION__ = %s", self.class, NSStringFromSelector(_cmd),__FUNCTION__);
+}
+
 -(instancetype)init{
     if (self = [super init]) {
     }return self;
 }
-
+#pragma mark ——实况视频
 -(void)LIVE{
     self.position = AVCaptureDevicePositionFront;//使用前置还是后置摄像头
     self.videoCamera.enabled = YES;
     [self.videoCamera startCameraCapture];//全局只有一次
-}
-
-- (void)startRecord{
-    self.videoCamera.audioEncodingTarget = movieWriter;
-    [movieWriter startRecording];
 }
 #pragma mark —— GPUImageVideoCameraDelegate
 //实时每一帧的截取 滚动发出
@@ -95,7 +93,8 @@
 //    }
     
     [self initMovieWriter];
-    [self startRecord];
+    self.videoCamera.audioEncodingTarget = movieWriter;
+    [movieWriter startRecording];
 }
 #pragma mark —— 结束录制
 -(void)vedioShoottingEnd{
@@ -126,7 +125,56 @@
         }
     });
 }
-///缩略图
+#pragma mark —— 暂停录制
+-(void)vedioShoottingSuspend{
+    if (!movieWriter.isPaused) {
+        movieWriter.paused = YES;
+    }
+}
+#pragma mark —— 继续录制
+-(void)vedioShoottingContinue{
+    if (movieWriter.isPaused) {
+        movieWriter.paused = NO;
+    }
+}
+#pragma mark —— 取消录制
+-(void)vedioShoottingOff{
+    [movieWriter finishRecording];
+    self.videoCamera.audioEncodingTarget = nil;
+    _FileUrlByTime = nil;//只要一暂停录制，就需要置空，因为是时间戳路径，需要懒加载获取到最新
+    movieWriter = nil;
+}
+#pragma mark —— 翻转摄像头
+-(void)overturnCamera{
+    switch (self.position) {
+        case AVCaptureDevicePositionBack: {
+            if (self.videoCamera.cameraPosition == AVCaptureDevicePositionBack) {
+                [self.videoCamera pauseCameraCapture];
+                self.position = AVCaptureDevicePositionFront;
+            }
+        }
+            break;
+        case AVCaptureDevicePositionFront: {
+            if (self.videoCamera.cameraPosition == AVCaptureDevicePositionFront) {
+                [self.videoCamera pauseCameraCapture];
+                self.position = AVCaptureDevicePositionBack;
+            }
+        }
+            break;
+        default:
+            break;
+    }
+    
+    [self.videoCamera rotateCamera];
+    [self.videoCamera resumeCameraCapture];
+    
+    if ([self.videoCamera.inputCamera lockForConfiguration:nil] &&
+        [self.videoCamera.inputCamera isExposureModeSupported:AVCaptureExposureModeContinuousAutoExposure]) {
+        [self.videoCamera.inputCamera setExposureMode:AVCaptureExposureModeContinuousAutoExposure];
+        [self.videoCamera.inputCamera unlockForConfiguration];
+    }
+}
+#pragma mark —— 缩略图
 -(UIImage *)getImage:(NSString *)videoURL{
 
     CMTime time = CMTimeMakeWithSeconds(0.0, 600);
@@ -137,7 +185,7 @@
     CGImageRelease(image);
     return self.thumb;
 }
-
+#pragma mark —— 视频合并
 -(void)mergeAndExportVideos:(NSArray *)videosPathArray
                 withOutPath:(NSString *)outpath{
     if (videosPathArray.count == 0) {
@@ -199,55 +247,6 @@
             }
         });
     }];
-}
-#pragma mark —— 暂停录制
--(void)vedioShoottingSuspend{
-    if (!movieWriter.isPaused) {
-        movieWriter.paused = YES;
-    }
-}
-#pragma mark —— 继续录制
--(void)vedioShoottingContinue{
-    if (movieWriter.isPaused) {
-        movieWriter.paused = NO;
-    }
-}
-#pragma mark —— 取消录制
--(void)vedioShoottingOff{
-    [movieWriter finishRecording];
-    self.videoCamera.audioEncodingTarget = nil;
-    _FileUrlByTime = nil;//只要一暂停录制，就需要置空，因为是时间戳路径，需要懒加载获取到最新
-    movieWriter = nil;
-}
-#pragma mark —— 翻转摄像头
--(void)overturnCamera{
-    switch (self.position) {
-        case AVCaptureDevicePositionBack: {
-            if (self.videoCamera.cameraPosition == AVCaptureDevicePositionBack) {
-                [self.videoCamera pauseCameraCapture];
-                self.position = AVCaptureDevicePositionFront;
-            }
-        }
-            break;
-        case AVCaptureDevicePositionFront: {
-            if (self.videoCamera.cameraPosition == AVCaptureDevicePositionFront) {
-                [self.videoCamera pauseCameraCapture];
-                self.position = AVCaptureDevicePositionBack;
-            }
-        }
-            break;
-        default:
-            break;
-    }
-    
-    [self.videoCamera rotateCamera];
-    [self.videoCamera resumeCameraCapture];
-    
-    if ([self.videoCamera.inputCamera lockForConfiguration:nil] &&
-        [self.videoCamera.inputCamera isExposureModeSupported:AVCaptureExposureModeContinuousAutoExposure]) {
-        [self.videoCamera.inputCamera setExposureMode:AVCaptureExposureModeContinuousAutoExposure];
-        [self.videoCamera.inputCamera unlockForConfiguration];
-    }
 }
 ///videoCamera的点击事件
 -(void)actionVedioToolsClickBlock:(MKDataBlock)actionVedioToolsClickBlock{
@@ -376,7 +375,8 @@
     
     [FileFolderHandleTool createFileByUrl:self.recentlyVedioFileUrl error:nil];
     
-    movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:[NSURL fileURLWithPath:self.recentlyVedioFileUrl] size:self.movieWriterSize];
+    movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:[NSURL fileURLWithPath:self.recentlyVedioFileUrl]
+                                                           size:self.movieWriterSize];
     movieWriter.encodingLiveVideo = YES;
     movieWriter.shouldPassthroughAudio = YES;
     switch (_typeFilter) {
@@ -451,7 +451,7 @@
          只能用定时器监听了  NStimer
          */
         
-        _exporter.outputURL = self.mergeFileURL;//这个是干嘛的？
+        _exporter.outputURL = self.mergeFileURL;
         _exporter.outputFileType = self.outputFileType;//视频分辨率设置
         _exporter.shouldOptimizeForNetworkUse = YES;
     }return _exporter;
