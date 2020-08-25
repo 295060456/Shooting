@@ -18,6 +18,7 @@ typedef enum : NSUInteger {
 
 NS_ASSUME_NONNULL_BEGIN
 
+//说是一个button，实际上是一个View
 @interface StartOrPauseBtn : UIView
 
 @property(nonatomic,strong)NSTimer *mytimer;

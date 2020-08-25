@@ -169,23 +169,23 @@ didScrollSelectedItemAtIndex:(NSInteger)index{
         self.gk_navigationBar.hidden = NO;
     }else{//0
         //重新拍摄
-        switch (VedioTools.sharedInstance.vedioShootType) {
-            case VedioShootType_on://开始录制
-            case VedioShootType_suspend://暂停录制
-            case VedioShootType_continue:{//继续录制
-                [self alertControllerStyle:SYS_AlertController
-                        showAlertViewTitle:@"丢弃掉当前拍摄的作品？"
-                                   message:nil
-                           isSeparateStyle:NO
-                               btnTitleArr:@[@"确认",@"手滑了"]
-                            alertBtnAction:@[@"sure",@"Cancel"]
-                              alertVCBlock:^(id data) {
-                    //DIY
-                }];
-            } break;
-            default:
-                break;
-        }
+//        switch (VedioTools.sharedInstance.vedioShootType) {
+//            case VedioShootType_on://开始录制
+//            case VedioShootType_suspend://暂停录制
+//            case VedioShootType_continue:{//继续录制
+//                [self alertControllerStyle:SYS_AlertController
+//                        showAlertViewTitle:@"丢弃掉当前拍摄的作品？"
+//                                   message:nil
+//                           isSeparateStyle:NO
+//                               btnTitleArr:@[@"确认",@"手滑了"]
+//                            alertBtnAction:@[@"sure",@"Cancel"]
+//                              alertVCBlock:^(id data) {
+//                    //DIY
+//                }];
+//            } break;
+//            default:
+//                break;
+//        }
         
         [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
         self.gk_navigationBar.hidden = YES;
@@ -236,43 +236,43 @@ scrollingFromLeftIndex:(NSInteger)leftIndex
     if (!_shootVC) {
         _shootVC = MKShootVC.new;
         @weakify(self)
-        [_shootVC ActionMKShootVCBlock:^(id data) {
-            @strongify(self)
-            if ([data isKindOfClass:NSNumber.class]) {
-                NSNumber *num = (NSNumber *)data;
-                if (num.boolValue) {//进来
-                    [UIView animateWithDuration:0.25f
-                                     animations:^{
-                        [self.categoryView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                            make.left.equalTo(self.view);
-                            make.right.equalTo(self.view.mas_centerX);
-                            make.height.mas_equalTo(SCALING_RATIO(0));
-                            make.top.equalTo(self.listContainerView).offset(rectOfStatusbar());
-                        }];
-                    } completion:^(BOOL finished) {
-                        
-                    }];
-                }else{//出去
-                    [UIView animateWithDuration:0.25f
-                                     animations:^{
-                        [self.categoryView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                            make.left.equalTo(self.view);
-                            make.right.equalTo(self.view.mas_centerX);
-                            make.height.mas_equalTo(SCALING_RATIO(50));
-                            make.top.equalTo(self.listContainerView).offset(rectOfStatusbar());
-                        }];
-                    } completion:^(BOOL finished) {
-                        
-                    }];
-                }
-            }else if ([data isKindOfClass:NSString.class]){
-                NSString *str = (NSString *)data;
-                if ([str isEqualToString:@"exit"]) {
-                    [self.categoryView selectItemAtIndex:0];
-                    [self.listContainerView didClickSelectedItemAtIndex:0];
-                }
-            }
-        }];
+//        [_shootVC ActionMKShootVCBlock:^(id data) {
+//            @strongify(self)
+//            if ([data isKindOfClass:NSNumber.class]) {
+//                NSNumber *num = (NSNumber *)data;
+//                if (num.boolValue) {//进来
+//                    [UIView animateWithDuration:0.25f
+//                                     animations:^{
+//                        [self.categoryView mas_remakeConstraints:^(MASConstraintMaker *make) {
+//                            make.left.equalTo(self.view);
+//                            make.right.equalTo(self.view.mas_centerX);
+//                            make.height.mas_equalTo(SCALING_RATIO(0));
+//                            make.top.equalTo(self.listContainerView).offset(rectOfStatusbar());
+//                        }];
+//                    } completion:^(BOOL finished) {
+//
+//                    }];
+//                }else{//出去
+//                    [UIView animateWithDuration:0.25f
+//                                     animations:^{
+//                        [self.categoryView mas_remakeConstraints:^(MASConstraintMaker *make) {
+//                            make.left.equalTo(self.view);
+//                            make.right.equalTo(self.view.mas_centerX);
+//                            make.height.mas_equalTo(SCALING_RATIO(50));
+//                            make.top.equalTo(self.listContainerView).offset(rectOfStatusbar());
+//                        }];
+//                    } completion:^(BOOL finished) {
+//
+//                    }];
+//                }
+//            }else if ([data isKindOfClass:NSString.class]){
+//                NSString *str = (NSString *)data;
+//                if ([str isEqualToString:@"exit"]) {
+//                    [self.categoryView selectItemAtIndex:0];
+//                    [self.listContainerView didClickSelectedItemAtIndex:0];
+//                }
+//            }
+//        }];
     }return _shootVC;
 }
 

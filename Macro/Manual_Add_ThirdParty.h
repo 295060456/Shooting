@@ -71,7 +71,7 @@
 #import <VideoToolbox/VideoToolbox.h>//FFmpeg 需要
 
 #import "APIKey.h"
-#import "VedioTools.h"//视频录制
+//#import "VedioTools.h"//视频录制
 //替代系统的TabBarController
 #import "LZBTabbarVC.h"
 #import "CustomSYSUITabBarController.h"

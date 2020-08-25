@@ -11,13 +11,13 @@
 @interface StartOrPauseBtn ()<UIGestureRecognizerDelegate>
 
 @property(nonatomic,strong)UITapGestureRecognizer *tapGR;
-//@property(nonatomic,strong)UILongPressGestureRecognizer *longPressGR;
 @property(nonatomic,strong)ZZCircleProgress *progressView;
-
-@property(nonatomic,copy)MKDataBlock tapGRHandleSingleFingerActionBlock;
-//@property(nonatomic,copy)MKDataBlock longPressGRActionBlock;
 @property(nonatomic,assign)BOOL isClickStartOrPauseBtn;
+@property(nonatomic,copy)MKDataBlock tapGRHandleSingleFingerActionBlock;
 @property(nonatomic,copy)MKDataBlock startOrPauseBtnBlock;
+
+//@property(nonatomic,strong)UILongPressGestureRecognizer *longPressGR;
+//@property(nonatomic,copy)MKDataBlock longPressGRActionBlock;
 
 @end
 
@@ -34,6 +34,7 @@
     if (self = [super init]) {
         [self addGestureRecognizer:self.tapGR];
 //        [self addGestureRecognizer:self.longPressGR];
+        
         self.userInteractionEnabled = YES;
         self.progressView.alpha = 1;
         self.currentTime = 0.0f;
@@ -71,6 +72,7 @@
           withEvent:(UIEvent *)event{
     NSLog(@"");
 //    @weakify(self)
+    //点击放大再缩小，动效
     [UIView addViewAnimation:self
              completionBlock:^(id data) {
 //        @strongify(self)
@@ -81,7 +83,7 @@
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
     return YES;
 }
-#pragma mark —— 点击事件
+#pragma mark —— 点击事件 启动 - 暂停 - 继续 - 暂停 ...
 -(void)tapGRHandleSingleFingerAction:(UITapGestureRecognizer *)sender{
     self.isClickStartOrPauseBtn = !self.isClickStartOrPauseBtn;
     if (self.isClickStartOrPauseBtn) {
@@ -113,9 +115,6 @@
     }
 }
 
-//-(void)longPressGRAction:(UILongPressGestureRecognizer *)sender{
-//    NSLog(@"1234");
-//}
 #pragma mark —— lazyLoad
 -(UITapGestureRecognizer *)tapGR{//单击一下
     if (!_tapGR) {
@@ -127,13 +126,7 @@
     }return _tapGR;
 }
 
-//-(UILongPressGestureRecognizer *)longPressGR{//长按
-//    if (!_longPressGR) {
-//        _longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self
-//                                                                     action:@selector(longPressGRAction:)];
-//        _longPressGR.minimumPressDuration = 2;//最小长按时间
-//    }return _longPressGR;
-//}
+
 
 -(ZZCircleProgress *)progressView{
     if (!_progressView) {
@@ -176,5 +169,17 @@
         _safetyTime = 30.0f;
     }return _safetyTime;
 }
+
+//-(UILongPressGestureRecognizer *)longPressGR{//长按
+//    if (!_longPressGR) {
+//        _longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self
+//                                                                     action:@selector(longPressGRAction:)];
+//        _longPressGR.minimumPressDuration = 2;//最小长按时间
+//    }return _longPressGR;
+//}
+
+//-(void)longPressGRAction:(UILongPressGestureRecognizer *)sender{
+//    NSLog(@"1234");
+//}
 
 @end
