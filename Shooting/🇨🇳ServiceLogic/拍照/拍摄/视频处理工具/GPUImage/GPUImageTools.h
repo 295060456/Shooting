@@ -11,16 +11,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+//不要用单例，让这个工具类有一个完整的生命周期，里面的属性得以释放
 @interface GPUImageTools : NSObject
 
 @property(nonatomic,assign)CGSize videoSize;
 @property(nonatomic,strong)MKGPUImageView *GPUImageView;//实际上点击的是它，所以点击事件在 myGPUImageView 的回调里面
-///_myGPUImageView是点击事件
+@property(nonatomic,strong)UIImage *thumb;
+///GPUImageView的点击事件
 -(void)actionVedioToolsClickBlock:(MKDataBlock)actionVedioToolsClickBlock;
 ///视频合并处理结束
 -(void)vedioToolsSessionStatusCompletedBlock:(MKDataBlock)vedioToolsSessionStatusCompletedBlock;
-
-+(GPUImageTools *)sharedInstance;
 
 #pragma mark ——实况视频
 -(void)LIVE;
@@ -39,7 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 ///视频合并
 -(void)mergeAndExportVideos:(NSArray *)videosPathArray
                 withOutPath:(NSString *)outpath;
-
+///缩略图
+-(UIImage *)getImage:(NSString *)videoURL;
 
 @end
 

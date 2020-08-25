@@ -181,25 +181,25 @@
     //判断文件(夹)是否存在
     if ([FileFolderHandleTool isExistsAtPath:path]) {
         if ([content isKindOfClass:[NSMutableArray class]]) {//文件内容为可变数组
-            [(NSMutableArray *)content writeToFile:path atomically:YES];
+            return [(NSMutableArray *)content writeToFile:path atomically:YES];
         }else if ([content isKindOfClass:[NSArray class]]) {//文件内容为不可变数组
-            [(NSArray *)content writeToFile:path atomically:YES];
+            return [(NSArray *)content writeToFile:path atomically:YES];
         }else if ([content isKindOfClass:[NSMutableData class]]) {//文件内容为可变NSMutableData
-            [(NSMutableData *)content writeToFile:path atomically:YES];
+            return [(NSMutableData *)content writeToFile:path atomically:YES];
         }else if ([content isKindOfClass:[NSData class]]) {//文件内容为NSData
-            [(NSData *)content writeToFile:path atomically:YES];
+            return [(NSData *)content writeToFile:path atomically:YES];
         }else if ([content isKindOfClass:[NSMutableDictionary class]]) {//文件内容为可变字典
-            [(NSMutableDictionary *)content writeToFile:path atomically:YES];
+            return [(NSMutableDictionary *)content writeToFile:path atomically:YES];
         }else if ([content isKindOfClass:[NSDictionary class]]) {//文件内容为不可变字典
-            [(NSDictionary *)content writeToFile:path atomically:YES];
+            return [(NSDictionary *)content writeToFile:path atomically:YES];
         }else if ([content isKindOfClass:[NSJSONSerialization class]]) {//文件内容为JSON类型
-            [(NSDictionary *)content writeToFile:path atomically:YES];
+            return [(NSDictionary *)content writeToFile:path atomically:YES];
         }else if ([content isKindOfClass:[NSMutableString class]]) {//文件内容为可变字符串
-            [[((NSString *)content) dataUsingEncoding:NSUTF8StringEncoding] writeToFile:path atomically:YES];
+            return [[((NSString *)content) dataUsingEncoding:NSUTF8StringEncoding] writeToFile:path atomically:YES];
         }else if ([content isKindOfClass:[NSString class]]) {//文件内容为不可变字符串
-            [[((NSString *)content) dataUsingEncoding:NSUTF8StringEncoding] writeToFile:path atomically:YES];
-        }else if ([content isKindOfClass:[UIImage class]]) {//文件内容为图片
-            [UIImagePNGRepresentation((UIImage *)content) writeToFile:path atomically:YES];
+            return [[((NSString *)content) dataUsingEncoding:NSUTF8StringEncoding] writeToFile:path atomically:YES];
+        }else if ([content isKindOfClass:[UIImage class]]) {//文件内容为图片 保存为PNG
+            return [UIImagePNGRepresentation((UIImage *)content) writeToFile:path atomically:YES];
         }else if ([content conformsToProtocol:@protocol(NSCoding)]) {//文件归档
 //            [NSKeyedArchiver archiveRootObject:content toFile:path];//API_DEPRECATED
             [NSKeyedArchiver archivedDataWithRootObject:content

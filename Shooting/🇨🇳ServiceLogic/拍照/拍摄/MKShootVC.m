@@ -17,8 +17,9 @@
 @property(nonatomic,assign)CGFloat safetyTime;//小于等于这个时间点的录制的视频不允许被保存，而是应该被遗弃
 @property(nonatomic,assign)CGFloat __block time;
 
+@property(nonatomic,strong)GPUImageTools *gpuImageTools;
 
-
+@property(nonatomic,strong)UIImageView *imgv;
 
 @property(nonatomic,strong)id requestParams;
 @property(nonatomic,copy)MKDataBlock successBlock;
@@ -31,6 +32,33 @@
 
 - (void)dealloc {
     NSLog(@"Running self.class = %@;NSStringFromSelector(_cmd) = '%@';__FUNCTION__ = %s", self.class, NSStringFromSelector(_cmd),__FUNCTION__);
+}
+
+-(GPUImageTools *)gpuImageTools{
+    if (!_gpuImageTools) {
+        _gpuImageTools = GPUImageTools.new;
+        @weakify(self)
+        //点击事件
+        [_gpuImageTools actionVedioToolsClickBlock:^(id data) {
+            @strongify(self)
+        }];
+        //视频合并处理结束
+        [_gpuImageTools vedioToolsSessionStatusCompletedBlock:^(id data) {
+            @strongify(self)
+            if ([data isKindOfClass:GPUImageTools.class]) {
+                GPUImageTools *tools = (GPUImageTools *)data;
+                self.imgv.image = tools.thumb;
+            }
+        }];
+    }return _gpuImageTools;
+}
+
+-(UIImageView *)imgv{
+    if (!_imgv) {
+        _imgv = UIImageView.new;
+        [self.gpuImageTools.GPUImageView addSubview:_imgv];
+        _imgv.frame = CGRectMake(100, 100, 100, 100);
+    }return _imgv;
 }
 
 + (instancetype)ComingFromVC:(UIViewController *)rootVC
@@ -83,7 +111,9 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:kIMG(@"MKShootVC")];
     [self check];
-    [self.view addSubview:GPUImageTools.sharedInstance.GPUImageView];
+    [self.view addSubview:self.gpuImageTools.GPUImageView];
+    
+    self.imgv.alpha = 1;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -141,7 +171,7 @@
             NSLog(@"已经开启麦克风权限");
 //            self.isMicrophoneCanBeUsed = YES;
             
-            [GPUImageTools.sharedInstance LIVE];
+            [self.gpuImageTools LIVE];
             self.recordBtn.alpha = 1;
             
             return nil;
@@ -189,19 +219,19 @@
                 NSNumber *num = (NSNumber *)data;
                 switch (num.intValue) {
                     case ShottingStatus_on:{//开始录制
-                        [GPUImageTools.sharedInstance vedioShoottingOn];
+                        [self.gpuImageTools vedioShoottingOn];
                     }break;
                     case ShottingStatus_suspend:{//暂停录制
 //                        [GPUImageTools.sharedInstance vedioShoottingSuspend];
 #warning
-                        [GPUImageTools.sharedInstance vedioShoottingEnd];
+                        [self.gpuImageTools vedioShoottingEnd];
                         
                     }break;
                     case ShottingStatus_continue:{//继续录制
-                        [GPUImageTools.sharedInstance vedioShoottingContinue];
+                        [self.gpuImageTools vedioShoottingContinue];
                     }break;
                     case ShottingStatus_off:{//取消录制
-                        [GPUImageTools.sharedInstance vedioShoottingOff];
+                        [self.gpuImageTools vedioShoottingOff];
                     }break;
                         
                     default:

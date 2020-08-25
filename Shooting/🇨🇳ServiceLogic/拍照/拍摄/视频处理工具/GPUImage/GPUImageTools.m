@@ -40,6 +40,10 @@
 @property(nonatomic,strong)AVMutableVideoCompositionLayerInstruction *layerInstruction;
 @property(nonatomic,strong)AVAssetExportSession *exporter;//视频导出工具
 
+@property(nonatomic,strong)AVURLAsset *asset;
+@property(nonatomic,strong)AVAssetImageGenerator *gen;
+@property(nonatomic,assign)CMTime time;
+
 @property(nonatomic,assign)CGSize movieWriterSize;
 @property(nonatomic,strong)NSString *sessionPreset;
 @property(nonatomic,strong)NSString *recentlyVedioFileUrl;//最近的一段视频资源地址
@@ -56,15 +60,6 @@
 @implementation GPUImageTools
 
 #pragma mark ——实况视频
-static GPUImageTools *gpuImageTools = nil;
-+(GPUImageTools *)sharedInstance{
-    @synchronized(self){
-        if (!gpuImageTools) {
-            gpuImageTools = GPUImageTools.new;
-        }
-    }return gpuImageTools;
-}
-
 -(instancetype)init{
     if (self = [super init]) {
     }return self;
@@ -117,14 +112,30 @@ static GPUImageTools *gpuImageTools = nil;
                    dispatch_get_main_queue(), ^{
         @strongify(self)
         self.videoSize = self.movieWriterSize;
-        
         NSString *d = [NSString stringWithFormat:@"%@%@%@",[FileFolderHandleTool directoryAtPath:self.recentlyVedioFileUrl],@"/合成视频的缓存",[FileFolderHandleTool getOnlyFileName:self.recentlyVedioFileUrl]];
         [self mergeAndExportVideos:self.urlArray
-                       withOutPath:d];
-        //缩略图 ?? 有问题
-//        NSString *imgPath = [[FileFolderHandleTool directoryAtPath:self.FileByUrl] stringByAppendingString:@"img"];
-//        [VedioTools.sharedInstance getImage:imgPath];
+                                withOutPath:d];
+        //缩略图
+        BOOL s = [FileFolderHandleTool writeFileAtPath:self.recentlyVedioFileUrl
+                                               content:[self getImage:self.recentlyVedioFileUrl]
+                                                 error:nil];
+        if (s) {
+            NSLog(@"保存缩略图成功");
+        }else{
+            NSLog(@"保存缩略图失败");
+        }
     });
+}
+///缩略图
+-(UIImage *)getImage:(NSString *)videoURL{
+
+    CMTime time = CMTimeMakeWithSeconds(0.0, 600);
+    NSError *error = nil;
+    CMTime actualTime;
+    CGImageRef image = [self.gen copyCGImageAtTime:time actualTime:&actualTime error:&error];
+    self.thumb = [[UIImage alloc] initWithCGImage:image];
+    CGImageRelease(image);
+    return self.thumb;
 }
 
 -(void)mergeAndExportVideos:(NSArray *)videosPathArray
@@ -141,7 +152,6 @@ static GPUImageTools *gpuImageTools = nil;
 
     CMTime totalDuration = kCMTimeZero;
     for (int i = 0; i < videosPathArray.count; i++) {
-        //        AVURLAsset *asset = [AVURLAsset assetWithURL:[NSURL URLWithString:videosPathArray[i]]];
         NSDictionary* options = @{AVURLAssetPreferPreciseDurationAndTimingKey:@YES};
         AVAsset* asset = [AVURLAsset URLAssetWithURL:videosPathArray[i] options:options];
 
@@ -166,12 +176,10 @@ static GPUImageTools *gpuImageTools = nil;
         totalDuration = CMTimeAdd(totalDuration, asset.duration);
     }
     self.mergeFileURL = [NSURL fileURLWithPath:outpath];
-    @weakify(self)
     [self.exporter exportAsynchronouslyWithCompletionHandler:^{
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD wj_showPlainText:@"处理完毕...."
                                        view:getMainWindow()];
-            @strongify(self)
             switch (self.exporter.status) {
                 case AVAssetExportSessionStatusFailed:{
                     NSLog(@"Export failed: %@", [[self.exporter error] localizedDescription]);
@@ -364,7 +372,6 @@ static GPUImageTools *gpuImageTools = nil;
     }return _FileUrlByTime;
 }
 
-
 - (void)initMovieWriter{
     
     [FileFolderHandleTool createFileByUrl:self.recentlyVedioFileUrl error:nil];
@@ -472,6 +479,20 @@ static GPUImageTools *gpuImageTools = nil;
         _videoComp.instructions = [NSArray arrayWithObject: self.instruction];
     }return _videoComp;
 }
+
+-(AVAssetImageGenerator *)gen{
+    if (!_gen) {
+        _gen = [[AVAssetImageGenerator alloc] initWithAsset:self.asset];
+        _gen.appliesPreferredTrackTransform = YES;
+    }return _gen;
+}
+
+-(AVURLAsset *)asset{
+    if (!_asset) {
+        _asset = [[AVURLAsset alloc] initWithURL:[NSURL fileURLWithPath:self.recentlyVedioFileUrl] options:nil];
+    }return _asset;
+}
+
 
 
 //滤镜
