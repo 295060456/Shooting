@@ -99,7 +99,7 @@
 #pragma mark —— 结束录制
 -(void)vedioShoottingEnd{
 //    self.vedioShootType = VedioShootType_end;
-    [movieWriter finishRecording];
+    [movieWriter finishRecording];//已经写了文件
     self.videoCamera.audioEncodingTarget = nil;
     [self.urlArray addObject:[NSURL fileURLWithPath:self.recentlyVedioFileUrl]];
     _FileUrlByTime = nil;//只要一暂停录制，就需要置空，因为是时间戳路径，需要懒加载获取到最新
@@ -111,17 +111,24 @@
                    dispatch_get_main_queue(), ^{
         @strongify(self)
         self.videoSize = self.movieWriterSize;
-        NSString *d = [NSString stringWithFormat:@"%@%@%@",[FileFolderHandleTool directoryAtPath:self.recentlyVedioFileUrl],@"/合成视频的缓存",[FileFolderHandleTool getOnlyFileName:self.recentlyVedioFileUrl]];
-        [self mergeAndExportVideos:self.urlArray
-                                withOutPath:d];
-        //缩略图
-        BOOL s = [FileFolderHandleTool writeFileAtPath:self.recentlyVedioFileUrl
-                                               content:[self getImage:self.recentlyVedioFileUrl]
-                                                 error:nil];
-        if (s) {
-            NSLog(@"保存缩略图成功");
+        NSString *d = [NSString stringWithFormat:@"%@%@",[FileFolderHandleTool directoryAtPath:self.recentlyVedioFileUrl],@"/合成视频的缓存"];//,[FileFolderHandleTool getOnlyFileName:self.recentlyVedioFileUrl]
+        
+        NSString *dd = [NSString stringWithFormat:@"%@%@%@",[FileFolderHandleTool directoryAtPath:self.recentlyVedioFileUrl],@"/合成视频的缓存/",[FileFolderHandleTool getFullFileName:self.recentlyVedioFileUrl]];
+
+        if ([FileFolderHandleTool createFolderByUrl:d error:nil]) {
+            [self mergeAndExportVideos:self.urlArray //@[[NSURL fileURLWithPath:dd]]
+                                    withOutPath:d];
+            //缩略图
+            BOOL s = [FileFolderHandleTool writeFileAtPath:self.recentlyVedioFileUrl
+                                                   content:[self getImage:self.recentlyVedioFileUrl]
+                                                     error:nil];
+            if (s) {
+                NSLog(@"保存缩略图成功");
+            }else{
+                NSAssert(0, @"保存缩略图失败");
+            }
         }else{
-            NSLog(@"保存缩略图失败");
+             NSAssert(0, @"创建文件夹失败,终止movieWriter的创建");
         }
     });
 }
@@ -372,32 +379,34 @@
 }
 
 - (void)initMovieWriter{
-    
-    [FileFolderHandleTool createFileByUrl:self.recentlyVedioFileUrl error:nil];
-    
-    movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:[NSURL fileURLWithPath:self.recentlyVedioFileUrl]
-                                                           size:self.movieWriterSize];
-    movieWriter.encodingLiveVideo = YES;
-    movieWriter.shouldPassthroughAudio = YES;
-    switch (_typeFilter) {
-        case filterNone:{
-            [self.videoCamera addTarget:movieWriter];
-        }break;
-        case filterDilation:{
-            [dilationFilter addTarget:movieWriter];
-        }break;
-        case filterGif:{
-            [gifFilter addTarget:movieWriter];
-        }break;
-        case filterBeautify:{
-            [beautifyFilter addTarget:movieWriter];
-        }break;
-        case filterGaussBlur:{
-            [gaussBlurFilter addTarget:movieWriter];
-        }break;
-            
-        default:
-            break;
+    if ([FileFolderHandleTool createFileByUrl:self.recentlyVedioFileUrl error:nil]) {
+        movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:[NSURL fileURLWithPath:self.recentlyVedioFileUrl]
+                                                               size:self.movieWriterSize];
+        movieWriter.encodingLiveVideo = YES;
+        movieWriter.shouldPassthroughAudio = YES;
+        switch (_typeFilter) {
+            case filterNone:{
+                [self.videoCamera addTarget:movieWriter];
+            }break;
+            case filterDilation:{
+                [dilationFilter addTarget:movieWriter];
+            }break;
+            case filterGif:{
+                [gifFilter addTarget:movieWriter];
+            }break;
+            case filterBeautify:{
+                [beautifyFilter addTarget:movieWriter];
+            }break;
+            case filterGaussBlur:{
+                [gaussBlurFilter addTarget:movieWriter];
+            }break;
+                
+            default:
+                break;
+        }
+    }else{
+        movieWriter = nil;
+        NSAssert(movieWriter, @"创建文件夹失败,终止movieWriter的创建");
     }
 }
 

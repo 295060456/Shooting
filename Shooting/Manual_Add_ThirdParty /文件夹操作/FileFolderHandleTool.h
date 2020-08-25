@@ -45,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSString *)cacheURL:(NSString *)extension
                folder:(NSString *)folderName;
 #pragma mark —— 创建文件（夹）
-///创建文件夹：
+///软性 创建文件夹📂：
 + (BOOL)createDirectoryAtPath:(NSString *)path
                         error:(NSError *__autoreleasing *)error;
 /*创建文件
@@ -55,11 +55,22 @@ NS_ASSUME_NONNULL_BEGIN
  *参数4：错误信息
  */
 +(BOOL)createFileAtPath:(NSString *)path
-               overwrite:(BOOL)overwrite
-                   error:(NSError *__autoreleasing *)error;
-///file_url是文件的全路径。外层拼接好，如果返回YES则file_url可用
+              overwrite:(BOOL)overwrite
+                  error:(NSError *__autoreleasing *)error;
+/* 硬性创建
+* 给定一个具体的精确到文件📃的路径地址
+* 不管他是否存在与否，强制性的创建出来
+* file_url是文件的全路径。外层拼接好，如果返回YES则file_url可用
+*/
 +(BOOL)createFileByUrl:(NSString *)file_url
                  error:(NSError *__autoreleasing *)error;
+/* 硬性创建
+* 给定一个具体的精确到文件夹📂的路径地址
+* 不管他是否存在与否，强制性的创建出来
+* file_url是文件的全路径。外层拼接好，如果返回YES则file_url可用
+*/
++(BOOL)createFolderByUrl:(NSString *)folder_url
+                   error:(NSError *__autoreleasing *)error;
 ///获取文件创建的时间
 +(NSDate *)creationDateOfItemAtPath:(NSString *)path
                               error:(NSError *__autoreleasing *)error;

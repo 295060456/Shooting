@@ -83,7 +83,7 @@
     }return cachePath;
 }
 #pragma mark —— 创建文件（夹）
-///创建文件夹：返回是否创建成功
+///软性 创建文件夹：返回是否创建成功
 +(BOOL)createDirectoryAtPath:(NSString *)path
                        error:(NSError *__autoreleasing *)error {
     NSFileManager *manager = [NSFileManager defaultManager];
@@ -135,16 +135,31 @@
         }
     }return NO;
 }
-//file_url是文件的全路径。外层拼接好，如果返回YES则file_url可用
+/* 硬性创建
+ * 给定一个具体的精确到文件📃的路径地址
+ * 不管他是否存在与否，强制性的创建出来
+ * file_url是文件的全路径。外层拼接好，如果返回YES则file_url可用
+ */
 +(BOOL)createFileByUrl:(NSString *)file_url
                  error:(NSError *__autoreleasing *)error{
     //删除最后一个路径节点，提取父文件夹的路径
     NSString *directoryPath = [FileFolderHandleTool directoryAtPath:file_url];
     //创建目录
     //如果文件夹路径不存在，那么先创建文件夹
-    if (![FileFolderHandleTool isExistsAtPath:directoryPath]) {
+    return [FileFolderHandleTool createFolderByUrl:directoryPath error:nil];
+}
+/* 硬性创建
+* 给定一个具体的精确到文件夹📂的路径地址
+* 不管他是否存在与否，强制性的创建出来
+* file_url是文件的全路径。外层拼接好，如果返回YES则file_url可用
+*/
++(BOOL)createFolderByUrl:(NSString *)folder_url
+                   error:(NSError *__autoreleasing *)error{
+    //创建目录
+    //如果文件夹路径不存在，那么先创建文件夹
+    if (![FileFolderHandleTool isExistsAtPath:folder_url]) {
         // 创建文件夹，返回文件夹是否创建成功：先有文件夹再有文件，没有文件夹就没有文件
-        if (![FileFolderHandleTool createDirectoryAtPath:directoryPath
+        if (![FileFolderHandleTool createDirectoryAtPath:folder_url
                                    error:error]) {
             return NO;
         }return YES;
