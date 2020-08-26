@@ -185,8 +185,8 @@
                     [self netWorking_downLoadGif:self.launchingAdPathStr];
                 }else{
                     //文件夹下面有文件，则删除之
-                    [FileFolderHandleTool removeContentsOfDirectory:self.launchingAdPathStr
-                                                      withExtension:nil];
+                    [FileFolderHandleTool delFile:@[self.launchingAdPathStr]
+                                       fileSuffix:nil];
                     //空文件夹
                     NSLog(@"");
                     [self netWorking_downLoadGif:self.launchingAdPathStr];

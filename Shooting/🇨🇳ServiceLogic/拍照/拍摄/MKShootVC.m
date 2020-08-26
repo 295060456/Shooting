@@ -61,6 +61,10 @@
     }return _imgv;
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+}
+
 + (instancetype)ComingFromVC:(UIViewController *)rootVC
                  comingStyle:(ComingStyle)comingStyle
            presentationStyle:(UIModalPresentationStyle)presentationStyle

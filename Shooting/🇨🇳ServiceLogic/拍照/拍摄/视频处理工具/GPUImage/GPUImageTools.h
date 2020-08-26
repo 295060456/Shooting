@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)CGSize videoSize;
 @property(nonatomic,strong)MKGPUImageView *GPUImageView;//实际上点击的是它，所以点击事件在 myGPUImageView 的回调里面
 @property(nonatomic,strong)UIImage *thumb;
+@property(nonatomic,strong)__block NSString *compressedVedioPathStr;
+
 ///GPUImageView的点击事件
 -(void)actionVedioToolsClickBlock:(MKDataBlock)actionVedioToolsClickBlock;
 ///视频合并处理结束

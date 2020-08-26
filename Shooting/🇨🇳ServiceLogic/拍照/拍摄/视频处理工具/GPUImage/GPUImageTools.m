@@ -116,11 +116,10 @@
         if ([FileFolderHandleTool createFolderByUrl:d error:nil]) {
             
             [self.urlArray addObject:[NSURL fileURLWithPath:self.recentlyVedioFileUrl]];
-            NSString *ds = [NSString stringWithFormat:@"%@%@%@",[FileFolderHandleTool directoryAtPath:self.recentlyVedioFileUrl],@"/合成视频的缓存/",[FileFolderHandleTool getOnlyFileName:self.recentlyVedioFileUrl]];
-            NSString *dfv = [NSString stringWithFormat:@"%@,%@",ds,@".mp4"];
+            self.compressedVedioPathStr = [NSString stringWithFormat:@"%@%@%@",[FileFolderHandleTool directoryAtPath:self.recentlyVedioFileUrl],@"/合成视频的缓存/",[FileFolderHandleTool getFullFileName:self.recentlyVedioFileUrl]];//被压缩的视频文件的路径
 
-            [self mergeAndExportVideos:self.urlArray//全地址
-                                    withOutPath:dfv];
+            [self mergeAndExportVideos:self.urlArray//原始数据地址
+                           withOutPath:self.compressedVedioPathStr];
             //缩略图
             BOOL s = [FileFolderHandleTool writeFileAtPath:self.recentlyVedioFileUrl
                                                    content:[self getImage:self.recentlyVedioFileUrl]
@@ -196,6 +195,9 @@
     return self.thumb;
 }
 #pragma mark —— 视频合并
+/// 压缩和合并视频
+/// @param videosPathArray 原始数据地址
+/// @param outpath 压缩成品的地址
 -(void)mergeAndExportVideos:(NSArray *)videosPathArray
                 withOutPath:(NSString *)outpath{
     if (videosPathArray.count == 0) {
@@ -234,9 +236,10 @@
         totalDuration = CMTimeAdd(totalDuration, asset.duration);
     }
     self.mergeFileURL = [NSURL fileURLWithPath:outpath];
-    
+    @weakify(self)
     [self.exporter exportAsynchronouslyWithCompletionHandler:^{
         dispatch_async(dispatch_get_main_queue(), ^{
+            @strongify(self)
             [MBProgressHUD wj_showPlainText:@"处理完毕...."
                                        view:getMainWindow()];
             switch (self.exporter.status) {
@@ -248,6 +251,7 @@
                 } break;
                 case AVAssetExportSessionStatusCompleted:{
                     NSLog(@"转换成功");
+                    [self delRaw];
                     //  处理完毕的回调
                     if (self.vedioToolsSessionStatusCompletedBlock) {
                         self.vedioToolsSessionStatusCompletedBlock(self);
@@ -258,6 +262,21 @@
             }
         });
     }];
+}
+///转换视频成功删除原始视频素材
+-(void)delRaw{
+    //原始的视频素材，路径 self.urlArray
+    //新生成的，被压缩的视频 self.compressedVedioPathStr 这才是最后需要上传到服务器的资源
+//    for (NSURL *url in self.urlArray) {
+//        [FileFolderHandleTool removeContentsOfDirectory:[FileFolderHandleTool directoryAtPath:url.absoluteString] withExtension:@".mp4"];
+//    }
+    
+    NSURL *url = self.urlArray[0];
+    BOOL d = [NSString isNullString:url.absoluteString];
+    if (!d) {
+        [FileFolderHandleTool delFile:@[url.absoluteString]
+                           fileSuffix:@"mp4"];//删除文件夹📂路径下的文件
+    }
 }
 ///videoCamera的点击事件
 -(void)actionVedioToolsClickBlock:(MKDataBlock)actionVedioToolsClickBlock{
@@ -376,9 +395,7 @@
          沙盒中tmp的目录：tmpDir
          
          */
-        _FileUrlByTime = [FileFolderHandleTool cacheURL:@".mp4"
-                                                 folder:@"vedio"];//Library/Caches/vedio
-
+        _FileUrlByTime = [FileFolderHandleTool createCacheFolderPath:@"vedio"];//Library/Caches/vedio
     }return _FileUrlByTime;
 }
 

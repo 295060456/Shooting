@@ -71,19 +71,19 @@
 +(NSString *)tmpDir{
     return NSTemporaryDirectory();
 }
-#pragma mark - 以当前时间戳生成缓存路径 Library/Caches：存放缓存文件，iTunes不会备份此目录，此目录下文件不会在应用退出删除。一般存放体积比较大，不是特别重要的资源。
-+(NSString *)cacheURL:(NSString *)extension
-               folder:(NSString *)folderName{
-    NSString *fileName = [[NSString getTimeString:[NSString getSysTimeStamp]] stringByAppendingString:extension];
+#pragma mark - 创建Library/Caches下的文件夹📂路径 还未真正创建
+//以当前时间戳生成缓存路径 Library/Caches：存放缓存文件，iTunes不会备份此目录，此目录下文件不会在应用退出删除。一般存放体积比较大，不是特别重要的资源。
++(NSString *)createCacheFolderPath:(NSString * __nullable)folderNameEx{
+    NSString *folderName = [NSString getTimeString:[NSString getSysTimeStamp]];
     NSString *cachePath;
-    if ([NSString isNullString:folderName]) {
-        cachePath = [[FileFolderHandleTool cachesDir] stringByAppendingPathComponent:fileName];
+    if ([NSString isNullString:folderNameEx]) {
+        cachePath = [[FileFolderHandleTool cachesDir] stringByAppendingPathComponent:folderName];
     }else{
-        cachePath = [[FileFolderHandleTool cachesDir] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/%@",folderName,fileName]];
+        cachePath = [[FileFolderHandleTool cachesDir] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/%@",folderName,folderNameEx]];
     }return cachePath;
 }
 #pragma mark —— 创建文件（夹）
-///软性 创建文件夹：返回是否创建成功
+///软性 仅仅是创建文件夹：返回是否创建成功
 +(BOOL)createDirectoryAtPath:(NSString *)path
                        error:(NSError *__autoreleasing *)error {
     NSFileManager *manager = [NSFileManager defaultManager];
@@ -102,7 +102,7 @@
     }
     return isSuccess;
 }
-/*创建文件
+/*创建带文件夹的文件
  *参数1：文件创建的路径
  *参数2：写入文件的内容
  *参数3 overwrite ：假如已经存在此文件是(YES)否(NO)覆盖
@@ -180,9 +180,35 @@
                                            error:error];
 }
 #pragma mark —— 写入文件内容
+/// 将bundle里面的文件写进手机本地文件
+/// @param bundleFileName bundle文件名
+/// @param bundleFileSuffix bundle 文件后缀名
+/// @param LocalFileName 被写入的本地文件名 前提要有空白文件，否则写入失败
+/// @param LocalFileSuffix 被写入的本地文件后缀
++(NSString *)BundleFile:(NSString *)bundleFileName
+       bundleFileSuffix:(NSString *)bundleFileSuffix
+            ToLocalFile:(NSString *)LocalFileName
+        localFileSuffix:(NSString *)LocalFileSuffix{
+    //获取bundle路径
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:bundleFileName ofType:bundleFileSuffix];
+    UIImage *img = [UIImage imageWithContentsOfFile:bundlePath];
+    NSString *fileFolderPathStr = [FileFolderHandleTool createCacheFolderPath:nil];
+    //写文件之前一定要 有空白文件可写。
+    //文件全名 带后缀
+    NSString *localFileFullNameStr = [NSString stringWithFormat:@"/%@.%@",LocalFileName,LocalFileSuffix];
+    bool b = [FileFolderHandleTool createFileAtPath:[fileFolderPathStr stringByAppendingString:localFileFullNameStr] overwrite:YES error:nil];
+    
+    bool d = NO;
+    if (b) {
+        //写文件
+        NSString *ff = [NSString stringWithFormat:@"%@%@",fileFolderPathStr,localFileFullNameStr];
+        d = [FileFolderHandleTool writeFileAtPath:ff content:img error:nil];
+    }
+    return fileFolderPathStr = d? fileFolderPathStr : nil;
+}
 ///写入文件内容：按照文件路径向文件写入内容，内容可为数组、字典、NSData等等
-/*参数1：文件路径
- *参数2：文件内容
+/*参数1：要写入的文件路径
+ *参数2：要写入的文件内容
  *参数3：错误信息
  */
 +(BOOL)writeFileAtPath:(NSString *)path
@@ -226,24 +252,31 @@
             return NO;
         }
     }else {
+        NSLog(@"文件路径不存在");
         return NO;
     }return YES;
 }
 #pragma mark —— 删除文件（夹）
-///删除directory（路径）文件夹下的文件。extension是指定文件后缀名文件，传nil是全部删除
-+(void)removeContentsOfDirectory:(NSString *)directory
-                   withExtension:(NSString *_Nullable)extension{
+/// 删除指定后缀名的文件
+/// @param pathArr 这个文件夹下面的内容进行删除 非递归删除
+/// @param fileSuffix 传需要删除的文件的后缀名，如果需要全部删除就传nil
++(void)delFile:(NSArray *)pathArr
+    fileSuffix:(NSString *_Nullable)fileSuffix{
+    NSString *extension = fileSuffix;
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSArray *contents = [fileManager contentsOfDirectoryAtPath:directory error:NULL];
-    NSEnumerator *e = [contents objectEnumerator];
+    NSArray *paths = pathArr;
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+     
+    NSArray *contents = [fileManager contentsOfDirectoryAtPath:documentsDirectory error:NULL];
+    NSEnumerator*e = [contents objectEnumerator];
     NSString *filename;
     while ((filename = [e nextObject])) {
         if (extension) {
             if ([[filename pathExtension] hasPrefix:extension]) {
-                [fileManager removeItemAtPath:[directory stringByAppendingPathComponent:filename] error:NULL];
+                [fileManager removeItemAtPath:[documentsDirectory stringByAppendingPathComponent:filename] error:NULL];
             }
         }else{
-            [fileManager removeItemAtPath:[directory stringByAppendingPathComponent:filename] error:NULL];
+            [fileManager removeItemAtPath:[documentsDirectory stringByAppendingPathComponent:filename] error:NULL];
         }
     }
 }
