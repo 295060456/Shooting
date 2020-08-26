@@ -9,15 +9,30 @@
 #import <Foundation/Foundation.h>
 #import "MKGPUImageView.h"
 
+typedef enum : NSUInteger {
+    VedioShootType_un = 0,//未定义的
+    VedioShootType_on,//开始录制
+    VedioShootType_suspend,//暂停录制
+    VedioShootType_continue,//继续录制
+    VedioShootType_off,//取消录制
+    VedioShootType_end//结束录制
+} VedioShootType;//视频录制的状态
+
 NS_ASSUME_NONNULL_BEGIN
 
 //不要用单例，让这个工具类有一个完整的生命周期，里面的属性得以释放
 @interface GPUImageTools : NSObject
 
 @property(nonatomic,assign)CGSize videoSize;
+@property(nonatomic,assign)VedioShootType vedioShootType;
 @property(nonatomic,strong)MKGPUImageView *GPUImageView;//实际上点击的是它，所以点击事件在 myGPUImageView 的回调里面
 @property(nonatomic,strong)UIImage *thumb;
 @property(nonatomic,strong)__block NSString *compressedVedioPathStr;
+@property(nonatomic,strong)NSString *recentlyVedioFileUrl;//最近的一段视频资源地址
+@property(nonatomic,strong)NSString *FileUrlByTime;//时间戳地址
+@property(nonatomic,strong)NSMutableArray *urlArray;
+@property(nonatomic,copy)MKDataBlock actionVedioToolsClickBlock;
+@property(nonatomic,copy)MKDataBlock vedioToolsSessionStatusCompletedBlock;
 
 ///GPUImageView的点击事件
 -(void)actionVedioToolsClickBlock:(MKDataBlock)actionVedioToolsClickBlock;

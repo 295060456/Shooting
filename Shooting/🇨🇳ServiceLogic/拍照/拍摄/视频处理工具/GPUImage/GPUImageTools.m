@@ -23,7 +23,6 @@
     NSString                         *videoPathUrl;
 }
 
-@property(nonatomic,strong)NSMutableArray *urlArray;
 @property(nonatomic,strong)NSMutableArray *lastAry;
 @property(nonatomic,strong)NSMutableArray *progressViewArray;
 
@@ -46,14 +45,9 @@
 
 @property(nonatomic,assign)CGSize movieWriterSize;
 @property(nonatomic,strong)NSString *sessionPreset;
-@property(nonatomic,strong)NSString *recentlyVedioFileUrl;//最近的一段视频资源地址
-@property(nonatomic,strong)NSString *FileUrlByTime;//时间戳地址
 @property(nonatomic,strong)NSURL *mergeFileURL;//这个是干嘛的？
 @property(nonatomic,assign)BOOL isRecoding;
 @property(nonatomic,assign)BOOL isCanReord;
-
-@property(nonatomic,copy)MKDataBlock actionVedioToolsClickBlock;
-@property(nonatomic,copy)MKDataBlock vedioToolsSessionStatusCompletedBlock;
 
 @end
 
