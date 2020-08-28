@@ -254,6 +254,7 @@
 		C59D9AA424F8C3BC00A74CE9 /* NSObject+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AA324F8C3BC00A74CE9 /* NSObject+Random.m */; };
 		C59D9AA724F8C79500A74CE9 /* video.gif in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AA524F8C79500A74CE9 /* video.gif */; };
 		C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AA624F8C79500A74CE9 /* watermark.bmp */; };
+		C59D9AB324F8E8DC00A74CE9 /* MKShootVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C561618D24EE4C9F001CD851 /* MKShootVC+VM.m */; };
 		C5A46BC024EEA86300158D1E /* 闪光灯-自动@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBA24EEA86300158D1E /* 闪光灯-自动@2x.png */; };
 		C5A46BC124EEA86300158D1E /* 闪光灯-自动@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBB24EEA86300158D1E /* 闪光灯-自动@3x.png */; };
 		C5A46BC224EEA86300158D1E /* 闪光灯-关闭@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBC24EEA86300158D1E /* 闪光灯-关闭@3x.png */; };
@@ -306,8 +307,6 @@
 		C561618924EE4C98001CD851 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
 		C561618A24EE4C98001CD851 /* StartOrPauseBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartOrPauseBtn.h; sourceTree = "<group>"; };
 		C561618D24EE4C9F001CD851 /* MKShootVC+VM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKShootVC+VM.m"; sourceTree = "<group>"; };
-		C561618E24EE4C9F001CD851 /* MKShootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKShootVC.m; sourceTree = "<group>"; };
-		C561618F24EE4C9F001CD851 /* MKShootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKShootVC.h; sourceTree = "<group>"; };
 		C561619024EE4C9F001CD851 /* MKShootVC+VM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKShootVC+VM.h"; sourceTree = "<group>"; };
 		C561619324EE4CA9001CD851 /* MKUploadingVC+VM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKUploadingVC+VM.h"; sourceTree = "<group>"; };
 		C561619424EE4CA9001CD851 /* MKUploadingVC+VM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKUploadingVC+VM.m"; sourceTree = "<group>"; };
@@ -879,18 +878,7 @@
 			path = "视频处理工具";
 			sourceTree = "<group>";
 		};
-		C55497AC24F3A31D0065510D /* old */ = {
-			isa = PBXGroup;
-			children = (
-				C561618F24EE4C9F001CD851 /* MKShootVC.h */,
-				C561618E24EE4C9F001CD851 /* MKShootVC.m */,
-				C561619024EE4C9F001CD851 /* MKShootVC+VM.h */,
-				C561618D24EE4C9F001CD851 /* MKShootVC+VM.m */,
-			);
-			path = old;
-			sourceTree = "<group>";
-		};
-		C55497AD24F3A3A20065510D /* New Group */ = {
+		C55497AD24F3A3A20065510D /* OtherVC */ = {
 			isa = PBXGroup;
 			children = (
 				C58F032C24EA69D400B6D09C /* ViewController@1.h */,
@@ -904,7 +892,7 @@
 				C58F032D24EA69D400B6D09C /* ViewController@5.h */,
 				C58F033124EA69D400B6D09C /* ViewController@5.m */,
 			);
-			path = "New Group";
+			path = OtherVC;
 			sourceTree = "<group>";
 		};
 		C561618324EE4C72001CD851 /* 拍照 */ = {
@@ -936,12 +924,11 @@
 			children = (
 				C59D9AA524F8C79500A74CE9 /* video.gif */,
 				C59D9AA624F8C79500A74CE9 /* watermark.bmp */,
-				C55497AC24F3A31D0065510D /* old */,
 				C55497AB24F3A3050065510D /* 视频处理工具 */,
 				C55497A224F38CDB0065510D /* MKShootVC.h */,
 				C55497A324F38CDB0065510D /* MKShootVC.m */,
-				C59D9AA224F8C3BC00A74CE9 /* NSObject+Random.h */,
-				C59D9AA324F8C3BC00A74CE9 /* NSObject+Random.m */,
+				C561619024EE4C9F001CD851 /* MKShootVC+VM.h */,
+				C561618D24EE4C9F001CD851 /* MKShootVC+VM.m */,
 				C561618624EE4C8F001CD851 /* 拍摄页面的一切其他的子控件 */,
 			);
 			path = "拍摄";
@@ -1676,6 +1663,8 @@
 				C58F017C24EA5CAC00B6D09C /* NSObject+Sound.m */,
 				C58F017D24EA5CAC00B6D09C /* NSObject+Time.h */,
 				C58F018024EA5CAC00B6D09C /* NSObject+Time.m */,
+				C59D9AA224F8C3BC00A74CE9 /* NSObject+Random.h */,
+				C59D9AA324F8C3BC00A74CE9 /* NSObject+Random.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -2083,7 +2072,7 @@
 		C58F032724EA69C800B6D09C /* 🇨🇳ServiceLogic */ = {
 			isa = PBXGroup;
 			children = (
-				C55497AD24F3A3A20065510D /* New Group */,
+				C55497AD24F3A3A20065510D /* OtherVC */,
 				C561618324EE4C72001CD851 /* 拍照 */,
 			);
 			path = "🇨🇳ServiceLogic";
@@ -2649,6 +2638,7 @@
 				C58F01C624EA5E7900B6D09C /* YBNotificationManager.m in Sources */,
 				C58F01A824EA5CAD00B6D09C /* UIImage+Extras.m in Sources */,
 				C58F001524EA36F800B6D09C /* SceneDelegate.m in Sources */,
+				C59D9AB324F8E8DC00A74CE9 /* MKShootVC+VM.m in Sources */,
 				C58F02B124EA61C600B6D09C /* LOTShapeRepeater.m in Sources */,
 				C58F030224EA645A00B6D09C /* NSObject+LBLaunchImage.m in Sources */,
 				C58F00E324EA581F00B6D09C /* BRResultModel.m in Sources */,
