@@ -19,11 +19,6 @@
 		C561619824EE4CA9001CD851 /* MKUploadingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C561619524EE4CA9001CD851 /* MKUploadingVC.m */; };
 		C561619D24EE4CB7001CD851 /* PhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C561619924EE4CB6001CD851 /* PhotoVC.m */; };
 		C561619E24EE4CB7001CD851 /* PhotoVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C561619C24EE4CB7001CD851 /* PhotoVC+VM.m */; };
-		C56161A524EE4DAE001CD851 /* CustomerGPUImagePlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161A424EE4DAE001CD851 /* CustomerGPUImagePlayerVC.m */; };
-		C56161AA24EE4DD3001CD851 /* RepeatPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161A924EE4DD3001CD851 /* RepeatPlayer.m */; };
-		C56161AF24EE4DDE001CD851 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161AB24EE4DDD001CD851 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m */; };
-		C56161B024EE4DDE001CD851 /* CustomerAVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161AC24EE4DDE001CD851 /* CustomerAVPlayerView.m */; };
-		C56161B324EE4DE9001CD851 /* CustomerAVPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161B124EE4DE9001CD851 /* CustomerAVPlayerVC.m */; };
 		C56161BB24EE4F43001CD851 /* JhtBannerCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161B924EE4F43001CD851 /* JhtBannerCardView.m */; };
 		C56161BF24EE4F4B001CD851 /* JhtBannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161BD24EE4F4B001CD851 /* JhtBannerScrollView.m */; };
 		C56161C224EE4F52001CD851 /* JhtBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161C124EE4F52001CD851 /* JhtBannerView.m */; };
@@ -255,6 +250,14 @@
 		C59D9AA724F8C79500A74CE9 /* video.gif in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AA524F8C79500A74CE9 /* video.gif */; };
 		C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AA624F8C79500A74CE9 /* watermark.bmp */; };
 		C59D9AB324F8E8DC00A74CE9 /* MKShootVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C561618D24EE4C9F001CD851 /* MKShootVC+VM.m */; };
+		C59D9ACE24F8EF1100A74CE9 /* CustomerGPUImagePlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9ACC24F8EF1100A74CE9 /* CustomerGPUImagePlayerVC.m */; };
+		C59D9AD124F8EF1F00A74CE9 /* RepeatPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AD024F8EF1F00A74CE9 /* RepeatPlayer.m */; };
+		C59D9AD724F8EF4100A74CE9 /* CustomerAVPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AD624F8EF4100A74CE9 /* CustomerAVPlayerVC.m */; };
+		C59D9ADC24F8EF4D00A74CE9 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AD824F8EF4D00A74CE9 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m */; };
+		C59D9ADD24F8EF4D00A74CE9 /* CustomerAVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9ADB24F8EF4D00A74CE9 /* CustomerAVPlayerView.m */; };
+		C59D9AED24F8F08500A74CE9 /* ZZCountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AE924F8F08500A74CE9 /* ZZCountingLabel.m */; };
+		C59D9AEE24F8F08500A74CE9 /* ZZCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AEA24F8F08500A74CE9 /* ZZCircleProgress.m */; };
+		C59D9AEF24F8F08500A74CE9 /* ZZCircleProgress.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AEC24F8F08500A74CE9 /* ZZCircleProgress.bundle */; };
 		C5A46BC024EEA86300158D1E /* 闪光灯-自动@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBA24EEA86300158D1E /* 闪光灯-自动@2x.png */; };
 		C5A46BC124EEA86300158D1E /* 闪光灯-自动@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBB24EEA86300158D1E /* 闪光灯-自动@3x.png */; };
 		C5A46BC224EEA86300158D1E /* 闪光灯-关闭@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBC24EEA86300158D1E /* 闪光灯-关闭@3x.png */; };
@@ -316,17 +319,6 @@
 		C561619A24EE4CB6001CD851 /* PhotoVC+VM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PhotoVC+VM.h"; sourceTree = "<group>"; };
 		C561619B24EE4CB7001CD851 /* PhotoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoVC.h; sourceTree = "<group>"; };
 		C561619C24EE4CB7001CD851 /* PhotoVC+VM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PhotoVC+VM.m"; sourceTree = "<group>"; };
-		C56161A224EE4DA6001CD851 /* Use */ = {isa = PBXFileReference; lastKnownFileType = text; path = Use; sourceTree = "<group>"; };
-		C56161A324EE4DAE001CD851 /* CustomerGPUImagePlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerGPUImagePlayerVC.h; sourceTree = "<group>"; };
-		C56161A424EE4DAE001CD851 /* CustomerGPUImagePlayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerGPUImagePlayerVC.m; sourceTree = "<group>"; };
-		C56161A824EE4DD3001CD851 /* RepeatPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatPlayer.h; sourceTree = "<group>"; };
-		C56161A924EE4DD3001CD851 /* RepeatPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatPlayer.m; sourceTree = "<group>"; };
-		C56161AB24EE4DDD001CD851 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CustomerAVPlayerView+UIGestureRecognizerDelegate.m"; sourceTree = "<group>"; };
-		C56161AC24EE4DDE001CD851 /* CustomerAVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerAVPlayerView.m; sourceTree = "<group>"; };
-		C56161AD24EE4DDE001CD851 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CustomerAVPlayerView+UIGestureRecognizerDelegate.h"; sourceTree = "<group>"; };
-		C56161AE24EE4DDE001CD851 /* CustomerAVPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerAVPlayerView.h; sourceTree = "<group>"; };
-		C56161B124EE4DE9001CD851 /* CustomerAVPlayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerAVPlayerVC.m; sourceTree = "<group>"; };
-		C56161B224EE4DE9001CD851 /* CustomerAVPlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerAVPlayerVC.h; sourceTree = "<group>"; };
 		C56161B924EE4F43001CD851 /* JhtBannerCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhtBannerCardView.m; sourceTree = "<group>"; };
 		C56161BA24EE4F43001CD851 /* JhtBannerCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhtBannerCardView.h; sourceTree = "<group>"; };
 		C56161BC24EE4F4B001CD851 /* JhtBannerScrollViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhtBannerScrollViewProtocol.h; sourceTree = "<group>"; };
@@ -777,6 +769,21 @@
 		C59D9AA324F8C3BC00A74CE9 /* NSObject+Random.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Random.m"; sourceTree = "<group>"; };
 		C59D9AA524F8C79500A74CE9 /* video.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = video.gif; sourceTree = "<group>"; };
 		C59D9AA624F8C79500A74CE9 /* watermark.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = watermark.bmp; sourceTree = "<group>"; };
+		C59D9ACC24F8EF1100A74CE9 /* CustomerGPUImagePlayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerGPUImagePlayerVC.m; sourceTree = "<group>"; };
+		C59D9ACD24F8EF1100A74CE9 /* CustomerGPUImagePlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerGPUImagePlayerVC.h; sourceTree = "<group>"; };
+		C59D9ACF24F8EF1F00A74CE9 /* RepeatPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatPlayer.h; sourceTree = "<group>"; };
+		C59D9AD024F8EF1F00A74CE9 /* RepeatPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatPlayer.m; sourceTree = "<group>"; };
+		C59D9AD524F8EF4100A74CE9 /* CustomerAVPlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerAVPlayerVC.h; sourceTree = "<group>"; };
+		C59D9AD624F8EF4100A74CE9 /* CustomerAVPlayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerAVPlayerVC.m; sourceTree = "<group>"; };
+		C59D9AD824F8EF4D00A74CE9 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CustomerAVPlayerView+UIGestureRecognizerDelegate.m"; sourceTree = "<group>"; };
+		C59D9AD924F8EF4D00A74CE9 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CustomerAVPlayerView+UIGestureRecognizerDelegate.h"; sourceTree = "<group>"; };
+		C59D9ADA24F8EF4D00A74CE9 /* CustomerAVPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerAVPlayerView.h; sourceTree = "<group>"; };
+		C59D9ADB24F8EF4D00A74CE9 /* CustomerAVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerAVPlayerView.m; sourceTree = "<group>"; };
+		C59D9AE824F8F08500A74CE9 /* ZZCountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCountingLabel.h; sourceTree = "<group>"; };
+		C59D9AE924F8F08500A74CE9 /* ZZCountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCountingLabel.m; sourceTree = "<group>"; };
+		C59D9AEA24F8F08500A74CE9 /* ZZCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCircleProgress.m; sourceTree = "<group>"; };
+		C59D9AEB24F8F08500A74CE9 /* ZZCircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCircleProgress.h; sourceTree = "<group>"; };
+		C59D9AEC24F8F08500A74CE9 /* ZZCircleProgress.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZCircleProgress.bundle; sourceTree = "<group>"; };
 		C5A46BBA24EEA86300158D1E /* 闪光灯-自动@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-自动@2x.png"; sourceTree = "<group>"; };
 		C5A46BBB24EEA86300158D1E /* 闪光灯-自动@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-自动@3x.png"; sourceTree = "<group>"; };
 		C5A46BBC24EEA86300158D1E /* 闪光灯-关闭@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-关闭@3x.png"; sourceTree = "<group>"; };
@@ -945,56 +952,6 @@
 			path = "拍摄页面的一切其他的子控件";
 			sourceTree = "<group>";
 		};
-		C561619F24EE4D7A001CD851 /* 录制成功的视频进行播放以决定是否舍弃 */ = {
-			isa = PBXGroup;
-			children = (
-				C56161A224EE4DA6001CD851 /* Use */,
-				C56161A124EE4D9E001CD851 /* CustomerGPUImagePlayer */,
-				C56161A024EE4D96001CD851 /* CustomerAVPlayer */,
-			);
-			path = "录制成功的视频进行播放以决定是否舍弃";
-			sourceTree = "<group>";
-		};
-		C56161A024EE4D96001CD851 /* CustomerAVPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				C56161A724EE4DCB001CD851 /* CustomerAVPlayerView */,
-				C56161A624EE4DB9001CD851 /* CustomerAVPlayerVC */,
-				C56161A824EE4DD3001CD851 /* RepeatPlayer.h */,
-				C56161A924EE4DD3001CD851 /* RepeatPlayer.m */,
-			);
-			path = CustomerAVPlayer;
-			sourceTree = "<group>";
-		};
-		C56161A124EE4D9E001CD851 /* CustomerGPUImagePlayer */ = {
-			isa = PBXGroup;
-			children = (
-				C56161A324EE4DAE001CD851 /* CustomerGPUImagePlayerVC.h */,
-				C56161A424EE4DAE001CD851 /* CustomerGPUImagePlayerVC.m */,
-			);
-			path = CustomerGPUImagePlayer;
-			sourceTree = "<group>";
-		};
-		C56161A624EE4DB9001CD851 /* CustomerAVPlayerVC */ = {
-			isa = PBXGroup;
-			children = (
-				C56161B224EE4DE9001CD851 /* CustomerAVPlayerVC.h */,
-				C56161B124EE4DE9001CD851 /* CustomerAVPlayerVC.m */,
-			);
-			path = CustomerAVPlayerVC;
-			sourceTree = "<group>";
-		};
-		C56161A724EE4DCB001CD851 /* CustomerAVPlayerView */ = {
-			isa = PBXGroup;
-			children = (
-				C56161AE24EE4DDE001CD851 /* CustomerAVPlayerView.h */,
-				C56161AC24EE4DDE001CD851 /* CustomerAVPlayerView.m */,
-				C56161AD24EE4DDE001CD851 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.h */,
-				C56161AB24EE4DDD001CD851 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m */,
-			);
-			path = CustomerAVPlayerView;
-			sourceTree = "<group>";
-		};
 		C56161B424EE4F10001CD851 /* 卡片式滑动效果 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1132,6 +1089,7 @@
 		C58F007124EA580B00B6D09C /* Pod 不进去的 */ = {
 			isa = PBXGroup;
 			children = (
+				C59D9AE724F8F07B00A74CE9 /* ZZCircleProgress */,
 				C58F00AB24EA581F00B6D09C /* BRPickerView */,
 				C58F007224EA581F00B6D09C /* GKNavigationBar */,
 				C58F00C724EA581F00B6D09C /* MKGPUImageView */,
@@ -1673,7 +1631,6 @@
 			isa = PBXGroup;
 			children = (
 				C56161B424EE4F10001CD851 /* 卡片式滑动效果 */,
-				C561619F24EE4D7A001CD851 /* 录制成功的视频进行播放以决定是否舍弃 */,
 				C58F046B24EBD6F000B6D09C /* UIControl+XY */,
 				C58F046A24EBD6E900B6D09C /* ECAuthorizationTools */,
 				C58F03BB24EA728000B6D09C /* iOS打印全员字体 */,
@@ -2072,6 +2029,7 @@
 		C58F032724EA69C800B6D09C /* 🇨🇳ServiceLogic */ = {
 			isa = PBXGroup;
 			children = (
+				C59D9AB424F8EECB00A74CE9 /* 录制成功的视频进行预览播放以决定是否舍弃 */,
 				C55497AD24F3A3A20065510D /* OtherVC */,
 				C561618324EE4C72001CD851 /* 拍照 */,
 			);
@@ -2161,6 +2119,67 @@
 				C58F047A24EBD78500B6D09C /* spark_red@3x.png */,
 			);
 			path = resource;
+			sourceTree = "<group>";
+		};
+		C59D9AB424F8EECB00A74CE9 /* 录制成功的视频进行预览播放以决定是否舍弃 */ = {
+			isa = PBXGroup;
+			children = (
+				C59D9ACB24F8EF0A00A74CE9 /* CustomerGPUImagePlayer */,
+				C59D9ACA24F8EF0200A74CE9 /* CustomerAVPlayer */,
+			);
+			path = "录制成功的视频进行预览播放以决定是否舍弃";
+			sourceTree = "<group>";
+		};
+		C59D9ACA24F8EF0200A74CE9 /* CustomerAVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C59D9AD424F8EF3900A74CE9 /* CustomerAVPlayerVC */,
+				C59D9AD224F8EF2C00A74CE9 /* CustomerAVPlayerView */,
+				C59D9ACF24F8EF1F00A74CE9 /* RepeatPlayer.h */,
+				C59D9AD024F8EF1F00A74CE9 /* RepeatPlayer.m */,
+			);
+			path = CustomerAVPlayer;
+			sourceTree = "<group>";
+		};
+		C59D9ACB24F8EF0A00A74CE9 /* CustomerGPUImagePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C59D9ACD24F8EF1100A74CE9 /* CustomerGPUImagePlayerVC.h */,
+				C59D9ACC24F8EF1100A74CE9 /* CustomerGPUImagePlayerVC.m */,
+			);
+			path = CustomerGPUImagePlayer;
+			sourceTree = "<group>";
+		};
+		C59D9AD224F8EF2C00A74CE9 /* CustomerAVPlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				C59D9ADA24F8EF4D00A74CE9 /* CustomerAVPlayerView.h */,
+				C59D9ADB24F8EF4D00A74CE9 /* CustomerAVPlayerView.m */,
+				C59D9AD924F8EF4D00A74CE9 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.h */,
+				C59D9AD824F8EF4D00A74CE9 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m */,
+			);
+			path = CustomerAVPlayerView;
+			sourceTree = "<group>";
+		};
+		C59D9AD424F8EF3900A74CE9 /* CustomerAVPlayerVC */ = {
+			isa = PBXGroup;
+			children = (
+				C59D9AD524F8EF4100A74CE9 /* CustomerAVPlayerVC.h */,
+				C59D9AD624F8EF4100A74CE9 /* CustomerAVPlayerVC.m */,
+			);
+			path = CustomerAVPlayerVC;
+			sourceTree = "<group>";
+		};
+		C59D9AE724F8F07B00A74CE9 /* ZZCircleProgress */ = {
+			isa = PBXGroup;
+			children = (
+				C59D9AEC24F8F08500A74CE9 /* ZZCircleProgress.bundle */,
+				C59D9AEB24F8F08500A74CE9 /* ZZCircleProgress.h */,
+				C59D9AEA24F8F08500A74CE9 /* ZZCircleProgress.m */,
+				C59D9AE824F8F08500A74CE9 /* ZZCountingLabel.h */,
+				C59D9AE924F8F08500A74CE9 /* ZZCountingLabel.m */,
+			);
+			path = ZZCircleProgress;
 			sourceTree = "<group>";
 		};
 		C5A46BB924EEA86300158D1E /* 闪光灯 */ = {
@@ -2325,6 +2344,7 @@
 				C58F048224EBD78500B6D09C /* day_like_red@2x.png in Resources */,
 				C58F03C524EA779100B6D09C /* MKShootVC@2x.png in Resources */,
 				C58F03C024EA76C600B6D09C /* nodata.png in Resources */,
+				C59D9AEF24F8F08500A74CE9 /* ZZCircleProgress.bundle in Resources */,
 				C58F03CD24EA789100B6D09C /* 翻转镜头@3x.png in Resources */,
 				C58F018F24EA5CAC00B6D09C /* 专治UITableView相应链断裂 in Resources */,
 				C58F03AA24EA6E7600B6D09C /* My@2x.png in Resources */,
@@ -2469,7 +2489,6 @@
 				C58F019024EA5CAC00B6D09C /* BaseTableViewer.m in Sources */,
 				C58F002624EA36FA00B6D09C /* main.m in Sources */,
 				C58F018824EA5CAC00B6D09C /* UIView+JHGestureBlock.m in Sources */,
-				C56161AF24EE4DDE001CD851 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m in Sources */,
 				C58F02AE24EA61C600B6D09C /* LOTAnimationView.m in Sources */,
 				C58F028E24EA61C600B6D09C /* LOTRepeaterRenderer.m in Sources */,
 				C58F029B24EA61C600B6D09C /* LOTBlockCallback.m in Sources */,
@@ -2504,6 +2523,7 @@
 				C58F01A224EA5CAD00B6D09C /* BaseVC+JXCategoryListContentViewDelegate.m in Sources */,
 				C58F019224EA5CAC00B6D09C /* TBVCell_style_01.m in Sources */,
 				C58F02C324EA61C600B6D09C /* UIBezierPath.m in Sources */,
+				C59D9AEE24F8F08500A74CE9 /* ZZCircleProgress.m in Sources */,
 				C58F00DC24EA581F00B6D09C /* UIImage+WebP_Diff.m in Sources */,
 				C58F02BF24EA61C600B6D09C /* LOTCircleAnimator.m in Sources */,
 				C58F00D124EA581F00B6D09C /* UINavigationController+GKCategory.m in Sources */,
@@ -2520,10 +2540,12 @@
 				C58F010A24EA584B00B6D09C /* LYLUnicode.m in Sources */,
 				C58F020324EA617800B6D09C /* BWShareView.m in Sources */,
 				C58F02AB24EA61C600B6D09C /* LOTLayerGroup.m in Sources */,
+				C59D9ADD24F8EF4D00A74CE9 /* CustomerAVPlayerView.m in Sources */,
 				C58F029924EA61C600B6D09C /* LOTRenderGroup.m in Sources */,
 				C58F02AF24EA61C600B6D09C /* LOTAnimatedControl.m in Sources */,
 				C58F00D824EA581F00B6D09C /* UIImage+WebP.m in Sources */,
 				C561619824EE4CA9001CD851 /* MKUploadingVC.m in Sources */,
+				C59D9AD724F8EF4100A74CE9 /* CustomerAVPlayerVC.m in Sources */,
 				C58F01AD24EA5CAD00B6D09C /* NSObject+Extras.m in Sources */,
 				C58F00EE24EA581F00B6D09C /* BaseGPUImageView.m in Sources */,
 				C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */,
@@ -2554,8 +2576,10 @@
 				C58F018624EA5CAC00B6D09C /* UIView+Extras.m in Sources */,
 				C58F019E24EA5CAD00B6D09C /* BaseVC+TZImagePickerControllerDelegate.m in Sources */,
 				C58F018924EA5CAC00B6D09C /* HQCollectionViewFlowLayout.m in Sources */,
+				C59D9ACE24F8EF1100A74CE9 /* CustomerGPUImagePlayerVC.m in Sources */,
 				C58F030724EA647400B6D09C /* MonitorNetwoking.m in Sources */,
 				C58F028824EA61C600B6D09C /* LOTInterpolatorCallback.m in Sources */,
+				C59D9ADC24F8EF4D00A74CE9 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m in Sources */,
 				C58F010D24EA584B00B6D09C /* NSlogToDocumentFolder.m in Sources */,
 				C58F029D24EA61C600B6D09C /* LOTShapeGroup.m in Sources */,
 				C58F019324EA5CAC00B6D09C /* UITableViewCell+WhiteArrows.m in Sources */,
@@ -2564,12 +2588,10 @@
 				C5A46C0B24EFB6E900158D1E /* LOTAnimationView+action.m in Sources */,
 				C58F01BF24EA5E5E00B6D09C /* PlaySound.m in Sources */,
 				C58F018524EA5CAC00B6D09C /* UIView+SuspendView.m in Sources */,
-				C56161A524EE4DAE001CD851 /* CustomerGPUImagePlayerVC.m in Sources */,
 				C58F029224EA61C600B6D09C /* LOTPathAnimator.m in Sources */,
 				C58F02D624EA62B500B6D09C /* SuspendView.m in Sources */,
 				C58F02A224EA61C600B6D09C /* LOTPolygonAnimator.m in Sources */,
 				C58F02A424EA61C600B6D09C /* LOTGradientFillRender.m in Sources */,
-				C56161B024EE4DDE001CD851 /* CustomerAVPlayerView.m in Sources */,
 				C58F01C224EA5E5E00B6D09C /* SoundBtn.m in Sources */,
 				C58F01A324EA5CAD00B6D09C /* BaseVC.m in Sources */,
 				C58F02D524EA62B500B6D09C /* suspendBtn.m in Sources */,
@@ -2588,7 +2610,6 @@
 				C58F019624EA5CAC00B6D09C /* ZYTextField.m in Sources */,
 				C58F00DB24EA581F00B6D09C /* SDWebImageCodersManager.m in Sources */,
 				C58F00DD24EA581F00B6D09C /* SDWebImageCoderHelper.m in Sources */,
-				C56161AA24EE4DD3001CD851 /* RepeatPlayer.m in Sources */,
 				C58F00DE24EA581F00B6D09C /* SDWebImageCoder.m in Sources */,
 				C58F00E724EA581F00B6D09C /* BRDatePickerView.m in Sources */,
 				C58F018124EA5CAC00B6D09C /* DeleteSystemUITabBarButton.m in Sources */,
@@ -2596,7 +2617,6 @@
 				C58F02D724EA62B500B6D09C /* SuspendLab.m in Sources */,
 				C58F00D224EA581F00B6D09C /* UIBarButtonItem+GKCategory.m in Sources */,
 				C58F01A624EA5CAD00B6D09C /* BaseVC+OpenURL.m in Sources */,
-				C56161B324EE4DE9001CD851 /* CustomerAVPlayerVC.m in Sources */,
 				C58F019924EA5CAD00B6D09C /* CALayer+Anim.m in Sources */,
 				C58F02A524EA61C600B6D09C /* LOTCompositionContainer.m in Sources */,
 				C58F01AE24EA5CAD00B6D09C /* NSObject+Time.m in Sources */,
@@ -2608,6 +2628,7 @@
 				C58F018D24EA5CAC00B6D09C /* NSArray+Extension.m in Sources */,
 				C58F029024EA61C600B6D09C /* LOTAnimatorNode.m in Sources */,
 				C58F028B24EA61C600B6D09C /* LOTTransformInterpolator.m in Sources */,
+				C59D9AD124F8EF1F00A74CE9 /* RepeatPlayer.m in Sources */,
 				C58F01B624EA5DBB00B6D09C /* FSCustomButton.m in Sources */,
 				C58F031524EA648200B6D09C /* FMARCNetwork.m in Sources */,
 				C58F020424EA617800B6D09C /* BWItemModel.m in Sources */,
@@ -2641,6 +2662,7 @@
 				C59D9AB324F8E8DC00A74CE9 /* MKShootVC+VM.m in Sources */,
 				C58F02B124EA61C600B6D09C /* LOTShapeRepeater.m in Sources */,
 				C58F030224EA645A00B6D09C /* NSObject+LBLaunchImage.m in Sources */,
+				C59D9AED24F8F08500A74CE9 /* ZZCountingLabel.m in Sources */,
 				C58F00E324EA581F00B6D09C /* BRResultModel.m in Sources */,
 				C58F02A924EA61C600B6D09C /* LOTShapeTransform.m in Sources */,
 				C58F029524EA61C600B6D09C /* LOTShapeCircle.m in Sources */,

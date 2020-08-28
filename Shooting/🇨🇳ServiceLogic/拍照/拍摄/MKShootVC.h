@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
                      success:(MKDataBlock)block
                     animated:(BOOL)animated;
 
+-(void)ActionMKShootVCBlock:(MKDataBlock)MKShootVCBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

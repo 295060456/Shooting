@@ -8,13 +8,14 @@
 
 #import "CustomerGPUImagePlayerVC.h"
 #import "MKGPUImageView.h"
+#import "GPUImage.h"
 
 @interface CustomerGPUImagePlayerVC ()<GPUImageMovieDelegate>
 
-@property(nonatomic,strong)GPUImageMovie *movie;//播放
+@property(nonatomic,strong)GPUImageMovie *movie;//负责视频文件的读取 播放
 @property(nonatomic,strong)GPUImageFilter *filter;//滤镜
 @property(nonatomic,strong)GPUImageToonFilter *toonFilter;
-@property(nonatomic,strong)MKGPUImageView *filterView;//播放视图
+@property(nonatomic,strong)MKGPUImageView *filterView;//负责最终图像的展示 播放视图
 @property(nonatomic,strong)GPUImageMovieWriter *writer;//保存
 
 @property(nonatomic,strong)NSURL *AVPlayerURL;

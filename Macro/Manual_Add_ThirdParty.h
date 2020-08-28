@@ -24,6 +24,7 @@
 #import "ECAuthorizationTools.h"
 #import "ShowAvailableFont.h"//打印全员字体
 #import "JhtBannerView.h"
+#import "ZZCircleProgress.h"
 
 #pragma mark —— 以下是自定义的
 #import "ToolMacro.h"
@@ -76,6 +77,10 @@
 //替代系统的TabBarController
 #import "LZBTabbarVC.h"
 #import "CustomSYSUITabBarController.h"
+///视频预览
+#import "CustomerAVPlayerVC.h"
+#import "CustomerAVPlayerView.h"
+#import "CustomerGPUImagePlayerVC.h"
 
 
 #import "MKLaunchingAdModel.h"

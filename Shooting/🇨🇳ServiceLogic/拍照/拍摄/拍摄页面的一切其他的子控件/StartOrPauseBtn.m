@@ -11,7 +11,6 @@
 @interface StartOrPauseBtn ()<UIGestureRecognizerDelegate>
 
 @property(nonatomic,strong)UITapGestureRecognizer *tapGR;
-@property(nonatomic,strong)ZZCircleProgress *progressView;
 @property(nonatomic,assign)BOOL isClickStartOrPauseBtn;
 @property(nonatomic,copy)MKDataBlock tapGRHandleSingleFingerActionBlock;
 @property(nonatomic,copy)MKDataBlock startOrPauseBtnBlock;
@@ -42,22 +41,6 @@
     }return self;
 }
 
--(void)actionTapGRHandleSingleFingerBlock:(MKDataBlock)tapGRHandleSingleFingerActionBlock{
-    if (self.tapGRHandleSingleFingerActionBlock) {
-        self.tapGRHandleSingleFingerActionBlock(@1);
-    }
-}
-
-//-(void)actionLongPressGRBlock:(MKDataBlock)longPressGRActionBlock{
-//    if (self.longPressGRActionBlock) {
-//        self.longPressGRActionBlock(@1);
-//    }
-//}
-
--(void)actionStartOrPauseBtnBlock:(MKDataBlock)startOrPauseBtnBlock{
-    self.startOrPauseBtnBlock = startOrPauseBtnBlock;
-}
-
 -(void)mytimerAction{
     self.currentTime += 1;
     NSLog(@"KKK = %f",self.currentTime);
@@ -79,17 +62,21 @@
         
     }];
 }
-#pragma mark —— UIGestureRecognizerDelegate
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
-    return YES;
+
+-(void)reset{
+    self.progressView.progressLabel.placeStr = @"录制";
+    self.backgroundColor = kBlueColor;
+    [_mytimer invalidate];
+    _mytimer = nil;
+    self.progressView.startAngle = 0;
 }
-#pragma mark —— 点击事件 启动 - 暂停 - 继续 - 暂停 ...
--(void)tapGRHandleSingleFingerAction:(UITapGestureRecognizer *)sender{
-    self.isClickStartOrPauseBtn = !self.isClickStartOrPauseBtn;
-    if (self.isClickStartOrPauseBtn) {
+
+-(void)tapGRUI:(BOOL)isClick{
+    if (isClick) {
         if (!_mytimer) {
             //启动 开始录制
             self.shottingStatus = ShottingStatus_on;
+            self.progressView.progressLabel.placeStr = @"录制中";
             [self.mytimer fire];
             self.backgroundColor = kRedColor;
             [MBProgressHUD wj_showPlainText:@"开始录制"
@@ -97,6 +84,7 @@
         }else{
             //继续录制
             self.shottingStatus = ShottingStatus_continue;
+            self.progressView.progressLabel.placeStr = @"录制中";
             [MBProgressHUD wj_showPlainText:@"继续录制"
                                        view:nil];
             [self.mytimer setFireDate:[NSDate date]];
@@ -105,16 +93,41 @@
     }else{
         //暂停录制
         self.shottingStatus = ShottingStatus_suspend;
-#warning 这里有一个明显的UI Bug
         [self.mytimer setFireDate:[NSDate distantFuture]];
-        self.progressView.progressLabel.text = @"暂停";
+        self.progressView.progressLabel.placeStr = @"已暂停";
         self.backgroundColor = kBlueColor;
     }
+}
+
+-(void)actionTapGRHandleSingleFingerBlock:(MKDataBlock)tapGRHandleSingleFingerActionBlock{
+    if (self.tapGRHandleSingleFingerActionBlock) {
+        self.tapGRHandleSingleFingerActionBlock(@1);
+    }
+}
+
+//-(void)actionLongPressGRBlock:(MKDataBlock)longPressGRActionBlock{
+//    if (self.longPressGRActionBlock) {
+//        self.longPressGRActionBlock(@1);
+//    }
+//}
+
+-(void)actionStartOrPauseBtnBlock:(MKDataBlock)startOrPauseBtnBlock{
+    self.startOrPauseBtnBlock = startOrPauseBtnBlock;
+}
+#pragma mark —— UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    return YES;
+}
+#pragma mark —— 点击事件
+-(void)tapGRHandleSingleFingerAction:(UITapGestureRecognizer *)sender{
+    self.isClickStartOrPauseBtn = !self.isClickStartOrPauseBtn;
+    //UI部分
+    [self tapGRUI:self.isClickStartOrPauseBtn];
+    //外面启用GPUImage事件
     if (self.startOrPauseBtnBlock) {
         self.startOrPauseBtnBlock(@(self.shottingStatus));
     }
 }
-
 #pragma mark —— lazyLoad
 -(UITapGestureRecognizer *)tapGR{//单击一下
     if (!_tapGR) {
@@ -125,8 +138,6 @@
         _tapGR.delegate = self;
     }return _tapGR;
 }
-
-
 
 -(ZZCircleProgress *)progressView{
     if (!_progressView) {
@@ -140,6 +151,7 @@
         _progressView.pathFillColor = [UIColor redColor];
         _progressView.increaseFromLast = YES;//是否从头开始
         _progressView.progressLabel.text = @"录制";
+        _progressView.showProgressText = YES;
         [self addSubview:_progressView];
         [_progressView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self);
