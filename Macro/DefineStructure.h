@@ -14,9 +14,4 @@
  这个类只放置用户自定义的定义的枚举值
  */
 
-#pragma mark —— GPUImage
-
-
-
-
 #endif /* DefineStructure_h */

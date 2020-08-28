@@ -77,6 +77,7 @@
 //替代系统的TabBarController
 #import "LZBTabbarVC.h"
 #import "CustomSYSUITabBarController.h"
+#import "GPUImageTools.h"//GPUImage视频处理工具
 ///视频预览
 #import "CustomerAVPlayerVC.h"
 #import "CustomerAVPlayerView.h"
