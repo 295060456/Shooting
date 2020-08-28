@@ -40,6 +40,7 @@
 #import "NSObject+Extras.h"
 #import "NSObject+Time.h"
 #import "NSObject+LBLaunchImage.h"
+#import "NSObject+Random.h"
 #import "UIControl+XY.h"
 #import "UITableViewCell+WhiteArrows.h"
 #import "UIImageView+GIF.h"//UIImageView支持GIF动画 https://github.com/pupboss/UIImageView-GIF

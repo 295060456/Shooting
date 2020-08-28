@@ -251,6 +251,9 @@
 		C58F048124EBD78500B6D09C /* spark_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F047A24EBD78500B6D09C /* spark_red@3x.png */; };
 		C58F048224EBD78500B6D09C /* day_like_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F047B24EBD78500B6D09C /* day_like_red@2x.png */; };
 		C58F048524EBD79000B6D09C /* RBCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F048324EBD79000B6D09C /* RBCLikeButton.m */; };
+		C59D9AA424F8C3BC00A74CE9 /* NSObject+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AA324F8C3BC00A74CE9 /* NSObject+Random.m */; };
+		C59D9AA724F8C79500A74CE9 /* video.gif in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AA524F8C79500A74CE9 /* video.gif */; };
+		C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AA624F8C79500A74CE9 /* watermark.bmp */; };
 		C5A46BC024EEA86300158D1E /* 闪光灯-自动@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBA24EEA86300158D1E /* 闪光灯-自动@2x.png */; };
 		C5A46BC124EEA86300158D1E /* 闪光灯-自动@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBB24EEA86300158D1E /* 闪光灯-自动@3x.png */; };
 		C5A46BC224EEA86300158D1E /* 闪光灯-关闭@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBC24EEA86300158D1E /* 闪光灯-关闭@3x.png */; };
@@ -771,6 +774,10 @@
 		C58F047B24EBD78500B6D09C /* day_like_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "day_like_red@2x.png"; sourceTree = "<group>"; };
 		C58F048324EBD79000B6D09C /* RBCLikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCLikeButton.m; sourceTree = "<group>"; };
 		C58F048424EBD79000B6D09C /* RBCLikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCLikeButton.h; sourceTree = "<group>"; };
+		C59D9AA224F8C3BC00A74CE9 /* NSObject+Random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Random.h"; sourceTree = "<group>"; };
+		C59D9AA324F8C3BC00A74CE9 /* NSObject+Random.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Random.m"; sourceTree = "<group>"; };
+		C59D9AA524F8C79500A74CE9 /* video.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = video.gif; sourceTree = "<group>"; };
+		C59D9AA624F8C79500A74CE9 /* watermark.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = watermark.bmp; sourceTree = "<group>"; };
 		C5A46BBA24EEA86300158D1E /* 闪光灯-自动@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-自动@2x.png"; sourceTree = "<group>"; };
 		C5A46BBB24EEA86300158D1E /* 闪光灯-自动@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-自动@3x.png"; sourceTree = "<group>"; };
 		C5A46BBC24EEA86300158D1E /* 闪光灯-关闭@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-关闭@3x.png"; sourceTree = "<group>"; };
@@ -927,10 +934,14 @@
 		C561618524EE4C87001CD851 /* 拍摄 */ = {
 			isa = PBXGroup;
 			children = (
+				C59D9AA524F8C79500A74CE9 /* video.gif */,
+				C59D9AA624F8C79500A74CE9 /* watermark.bmp */,
 				C55497AC24F3A31D0065510D /* old */,
 				C55497AB24F3A3050065510D /* 视频处理工具 */,
 				C55497A224F38CDB0065510D /* MKShootVC.h */,
 				C55497A324F38CDB0065510D /* MKShootVC.m */,
+				C59D9AA224F8C3BC00A74CE9 /* NSObject+Random.h */,
+				C59D9AA324F8C3BC00A74CE9 /* NSObject+Random.m */,
 				C561618624EE4C8F001CD851 /* 拍摄页面的一切其他的子控件 */,
 			);
 			path = "拍摄";
@@ -2291,6 +2302,7 @@
 				C58F048024EBD78500B6D09C /* spark_red.png in Resources */,
 				C58F03CE24EA789100B6D09C /* 翻转镜头@2x.png in Resources */,
 				C58F03A924EA6E7600B6D09C /* ShoppingCart@3x.png in Resources */,
+				C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */,
 				C58F047F24EBD78500B6D09C /* day_like@3x.png in Resources */,
 				C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */,
 				C58F03AB24EA6E7600B6D09C /* MyStore@2x.png in Resources */,
@@ -2299,6 +2311,7 @@
 				C58F03B824EA6F0700B6D09C /* green_lottie_tab_discover.json in Resources */,
 				C5A46BC124EEA86300158D1E /* 闪光灯-自动@3x.png in Resources */,
 				C58F03AC24EA6E7600B6D09C /* My@3x.png in Resources */,
+				C59D9AA724F8C79500A74CE9 /* video.gif in Resources */,
 				C58F047C24EBD78500B6D09C /* day_like@2x.png in Resources */,
 				C58F03B024EA6E7600B6D09C /* 摄像机.png in Resources */,
 				C58F047024EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 in Resources */,
@@ -2627,6 +2640,7 @@
 				C58F02AC24EA61C600B6D09C /* LOTValueInterpolator.m in Sources */,
 				C58F033424EA69D400B6D09C /* ViewController@3.m in Sources */,
 				C58F018B24EA5CAC00B6D09C /* UIButton+Block.m in Sources */,
+				C59D9AA424F8C3BC00A74CE9 /* NSObject+Random.m in Sources */,
 				C56161BB24EE4F43001CD851 /* JhtBannerCardView.m in Sources */,
 				C58F00CB24EA581F00B6D09C /* GKTransitionDelegateHandler.m in Sources */,
 				C58F031624EA648200B6D09C /* FMHttpRequest.m in Sources */,

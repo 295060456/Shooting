@@ -41,6 +41,10 @@
         //点击事件
         [_gpuImageTools actionVedioToolsClickBlock:^(id data) {
             @strongify(self)
+            //点击切换滤镜功能
+            TypeFilter typeFilter = [NSObject getRandomNumberFrom:filterGaussBlur
+                                                               to:filterGif];
+            self->_gpuImageTools.typeFilter = typeFilter;
         }];
         //视频合并处理结束
         [_gpuImageTools vedioToolsSessionStatusCompletedBlock:^(id data) {
