@@ -264,6 +264,10 @@
 		C59D9B0424F9045E00A74CE9 /* 闪光灯-自动@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AFE24F9045E00A74CE9 /* 闪光灯-自动@2x.png */; };
 		C59D9B0524F9045E00A74CE9 /* 闪光灯-自动@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AFF24F9045E00A74CE9 /* 闪光灯-自动@3x.png */; };
 		C59D9B0624F9045E00A74CE9 /* 闪光灯@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D9B0024F9045E00A74CE9 /* 闪光灯@3x.png */; };
+		C59D9B1A24F9083200A74CE9 /* sure@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D9B1624F9083200A74CE9 /* sure@3x.png */; };
+		C59D9B1B24F9083200A74CE9 /* 删除@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D9B1724F9083200A74CE9 /* 删除@2x.png */; };
+		C59D9B1C24F9083200A74CE9 /* sure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D9B1824F9083200A74CE9 /* sure@2x.png */; };
+		C59D9B1D24F9083200A74CE9 /* 删除@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D9B1924F9083200A74CE9 /* 删除@3x.png */; };
 		C5A46C0124EFB6E200158D1E /* UIViewController+LZBTabBarVCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFD24EFB6E100158D1E /* UIViewController+LZBTabBarVCItem.m */; };
 		C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFF24EFB6E200158D1E /* LZBTabBarVC.m */; };
 		C5A46C0A24EFB6E900158D1E /* LZBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0424EFB6E800158D1E /* LZBTabBar.m */; };
@@ -790,6 +794,10 @@
 		C59D9AFE24F9045E00A74CE9 /* 闪光灯-自动@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-自动@2x.png"; sourceTree = "<group>"; };
 		C59D9AFF24F9045E00A74CE9 /* 闪光灯-自动@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-自动@3x.png"; sourceTree = "<group>"; };
 		C59D9B0024F9045E00A74CE9 /* 闪光灯@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯@3x.png"; sourceTree = "<group>"; };
+		C59D9B1624F9083200A74CE9 /* sure@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sure@3x.png"; sourceTree = "<group>"; };
+		C59D9B1724F9083200A74CE9 /* 删除@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "删除@2x.png"; sourceTree = "<group>"; };
+		C59D9B1824F9083200A74CE9 /* sure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sure@2x.png"; sourceTree = "<group>"; };
+		C59D9B1924F9083200A74CE9 /* 删除@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "删除@3x.png"; sourceTree = "<group>"; };
 		C5A46BFC24EFB6E100158D1E /* LZBTabBarVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarVCDelegate.h; sourceTree = "<group>"; };
 		C5A46BFD24EFB6E100158D1E /* UIViewController+LZBTabBarVCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LZBTabBarVCItem.m"; sourceTree = "<group>"; };
 		C5A46BFE24EFB6E100158D1E /* LZBTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarVC.h; sourceTree = "<group>"; };
@@ -2039,7 +2047,7 @@
 		C58F033724EA6E1600B6D09C /* ⚽️PicResource */ = {
 			isa = PBXGroup;
 			children = (
-				C59D9AFA24F9044A00A74CE9 /* 闪光灯 */,
+				C59D9B1524F9082600A74CE9 /* 拍摄 */,
 				C58F03CC24EA789100B6D09C /* 翻转镜头@2x.png */,
 				C58F03CB24EA789100B6D09C /* 翻转镜头@3x.png */,
 				C58F03C724EA77BB00B6D09C /* back_white.png */,
@@ -2195,6 +2203,18 @@
 			path = "闪光灯";
 			sourceTree = "<group>";
 		};
+		C59D9B1524F9082600A74CE9 /* 拍摄 */ = {
+			isa = PBXGroup;
+			children = (
+				C59D9AFA24F9044A00A74CE9 /* 闪光灯 */,
+				C59D9B1724F9083200A74CE9 /* 删除@2x.png */,
+				C59D9B1924F9083200A74CE9 /* 删除@3x.png */,
+				C59D9B1824F9083200A74CE9 /* sure@2x.png */,
+				C59D9B1624F9083200A74CE9 /* sure@3x.png */,
+			);
+			path = "拍摄";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2307,6 +2327,7 @@
 				C58F047D24EBD78500B6D09C /* day_like_red@3x.png in Resources */,
 				C58F047E24EBD78500B6D09C /* spark_red@2x.png in Resources */,
 				C58F048024EBD78500B6D09C /* spark_red.png in Resources */,
+				C59D9B1A24F9083200A74CE9 /* sure@3x.png in Resources */,
 				C58F03CE24EA789100B6D09C /* 翻转镜头@2x.png in Resources */,
 				C58F03A924EA6E7600B6D09C /* ShoppingCart@3x.png in Resources */,
 				C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */,
@@ -2327,6 +2348,7 @@
 				C58F002324EA36FA00B6D09C /* LaunchScreen.storyboard in Resources */,
 				C58F010B24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */,
 				C58F018224EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton in Resources */,
+				C59D9B1C24F9083200A74CE9 /* sure@2x.png in Resources */,
 				C58F03AF24EA6E7600B6D09C /* Home@2x.png in Resources */,
 				C58F03C824EA77BB00B6D09C /* back_white.png in Resources */,
 				C58F010C24EA584B00B6D09C /* 调试时候添加日志时使用,上线需要去掉 in Resources */,
@@ -2353,7 +2375,9 @@
 				C58F002024EA36FA00B6D09C /* Assets.xcassets in Resources */,
 				C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */,
 				C58F03AE24EA6E7600B6D09C /* ShoppingCart@2x.png in Resources */,
+				C59D9B1B24F9083200A74CE9 /* 删除@2x.png in Resources */,
 				C58F00D924EA581F00B6D09C /* 手动集成 SDWebImage_WebP in Resources */,
+				C59D9B1D24F9083200A74CE9 /* 删除@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
