@@ -258,12 +258,12 @@
 		C59D9AED24F8F08500A74CE9 /* ZZCountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AE924F8F08500A74CE9 /* ZZCountingLabel.m */; };
 		C59D9AEE24F8F08500A74CE9 /* ZZCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AEA24F8F08500A74CE9 /* ZZCircleProgress.m */; };
 		C59D9AEF24F8F08500A74CE9 /* ZZCircleProgress.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AEC24F8F08500A74CE9 /* ZZCircleProgress.bundle */; };
-		C5A46BC024EEA86300158D1E /* 闪光灯-自动@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBA24EEA86300158D1E /* 闪光灯-自动@2x.png */; };
-		C5A46BC124EEA86300158D1E /* 闪光灯-自动@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBB24EEA86300158D1E /* 闪光灯-自动@3x.png */; };
-		C5A46BC224EEA86300158D1E /* 闪光灯-关闭@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBC24EEA86300158D1E /* 闪光灯-关闭@3x.png */; };
-		C5A46BC324EEA86300158D1E /* 闪光灯-关闭@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBD24EEA86300158D1E /* 闪光灯-关闭@2x.png */; };
-		C5A46BC424EEA86300158D1E /* 闪光灯@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBE24EEA86300158D1E /* 闪光灯@2x.png */; };
-		C5A46BC524EEA86300158D1E /* 闪光灯@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A46BBF24EEA86300158D1E /* 闪光灯@3x.png */; };
+		C59D9B0124F9045E00A74CE9 /* 闪光灯@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AFB24F9045E00A74CE9 /* 闪光灯@2x.png */; };
+		C59D9B0224F9045E00A74CE9 /* 闪光灯-关闭@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AFC24F9045E00A74CE9 /* 闪光灯-关闭@2x.png */; };
+		C59D9B0324F9045E00A74CE9 /* 闪光灯-关闭@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AFD24F9045E00A74CE9 /* 闪光灯-关闭@3x.png */; };
+		C59D9B0424F9045E00A74CE9 /* 闪光灯-自动@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AFE24F9045E00A74CE9 /* 闪光灯-自动@2x.png */; };
+		C59D9B0524F9045E00A74CE9 /* 闪光灯-自动@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AFF24F9045E00A74CE9 /* 闪光灯-自动@3x.png */; };
+		C59D9B0624F9045E00A74CE9 /* 闪光灯@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D9B0024F9045E00A74CE9 /* 闪光灯@3x.png */; };
 		C5A46C0124EFB6E200158D1E /* UIViewController+LZBTabBarVCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFD24EFB6E100158D1E /* UIViewController+LZBTabBarVCItem.m */; };
 		C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFF24EFB6E200158D1E /* LZBTabBarVC.m */; };
 		C5A46C0A24EFB6E900158D1E /* LZBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0424EFB6E800158D1E /* LZBTabBar.m */; };
@@ -784,12 +784,12 @@
 		C59D9AEA24F8F08500A74CE9 /* ZZCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCircleProgress.m; sourceTree = "<group>"; };
 		C59D9AEB24F8F08500A74CE9 /* ZZCircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCircleProgress.h; sourceTree = "<group>"; };
 		C59D9AEC24F8F08500A74CE9 /* ZZCircleProgress.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZCircleProgress.bundle; sourceTree = "<group>"; };
-		C5A46BBA24EEA86300158D1E /* 闪光灯-自动@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-自动@2x.png"; sourceTree = "<group>"; };
-		C5A46BBB24EEA86300158D1E /* 闪光灯-自动@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-自动@3x.png"; sourceTree = "<group>"; };
-		C5A46BBC24EEA86300158D1E /* 闪光灯-关闭@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-关闭@3x.png"; sourceTree = "<group>"; };
-		C5A46BBD24EEA86300158D1E /* 闪光灯-关闭@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-关闭@2x.png"; sourceTree = "<group>"; };
-		C5A46BBE24EEA86300158D1E /* 闪光灯@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯@2x.png"; sourceTree = "<group>"; };
-		C5A46BBF24EEA86300158D1E /* 闪光灯@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯@3x.png"; sourceTree = "<group>"; };
+		C59D9AFB24F9045E00A74CE9 /* 闪光灯@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯@2x.png"; sourceTree = "<group>"; };
+		C59D9AFC24F9045E00A74CE9 /* 闪光灯-关闭@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-关闭@2x.png"; sourceTree = "<group>"; };
+		C59D9AFD24F9045E00A74CE9 /* 闪光灯-关闭@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-关闭@3x.png"; sourceTree = "<group>"; };
+		C59D9AFE24F9045E00A74CE9 /* 闪光灯-自动@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-自动@2x.png"; sourceTree = "<group>"; };
+		C59D9AFF24F9045E00A74CE9 /* 闪光灯-自动@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯-自动@3x.png"; sourceTree = "<group>"; };
+		C59D9B0024F9045E00A74CE9 /* 闪光灯@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闪光灯@3x.png"; sourceTree = "<group>"; };
 		C5A46BFC24EFB6E100158D1E /* LZBTabBarVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarVCDelegate.h; sourceTree = "<group>"; };
 		C5A46BFD24EFB6E100158D1E /* UIViewController+LZBTabBarVCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LZBTabBarVCItem.m"; sourceTree = "<group>"; };
 		C5A46BFE24EFB6E100158D1E /* LZBTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarVC.h; sourceTree = "<group>"; };
@@ -2039,7 +2039,7 @@
 		C58F033724EA6E1600B6D09C /* ⚽️PicResource */ = {
 			isa = PBXGroup;
 			children = (
-				C5A46BB924EEA86300158D1E /* 闪光灯 */,
+				C59D9AFA24F9044A00A74CE9 /* 闪光灯 */,
 				C58F03CC24EA789100B6D09C /* 翻转镜头@2x.png */,
 				C58F03CB24EA789100B6D09C /* 翻转镜头@3x.png */,
 				C58F03C724EA77BB00B6D09C /* back_white.png */,
@@ -2182,18 +2182,17 @@
 			path = ZZCircleProgress;
 			sourceTree = "<group>";
 		};
-		C5A46BB924EEA86300158D1E /* 闪光灯 */ = {
+		C59D9AFA24F9044A00A74CE9 /* 闪光灯 */ = {
 			isa = PBXGroup;
 			children = (
-				C5A46BBA24EEA86300158D1E /* 闪光灯-自动@2x.png */,
-				C5A46BBB24EEA86300158D1E /* 闪光灯-自动@3x.png */,
-				C5A46BBC24EEA86300158D1E /* 闪光灯-关闭@3x.png */,
-				C5A46BBD24EEA86300158D1E /* 闪光灯-关闭@2x.png */,
-				C5A46BBE24EEA86300158D1E /* 闪光灯@2x.png */,
-				C5A46BBF24EEA86300158D1E /* 闪光灯@3x.png */,
+				C59D9AFC24F9045E00A74CE9 /* 闪光灯-关闭@2x.png */,
+				C59D9AFD24F9045E00A74CE9 /* 闪光灯-关闭@3x.png */,
+				C59D9AFE24F9045E00A74CE9 /* 闪光灯-自动@2x.png */,
+				C59D9AFF24F9045E00A74CE9 /* 闪光灯-自动@3x.png */,
+				C59D9AFB24F9045E00A74CE9 /* 闪光灯@2x.png */,
+				C59D9B0024F9045E00A74CE9 /* 闪光灯@3x.png */,
 			);
-			name = "闪光灯";
-			path = "../../../../GitLab/monkeyKingVideo/MonkeyKingVideo/Pic/其他/闪光灯";
+			path = "闪光灯";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2311,13 +2310,13 @@
 				C58F03CE24EA789100B6D09C /* 翻转镜头@2x.png in Resources */,
 				C58F03A924EA6E7600B6D09C /* ShoppingCart@3x.png in Resources */,
 				C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */,
+				C59D9B0124F9045E00A74CE9 /* 闪光灯@2x.png in Resources */,
 				C58F047F24EBD78500B6D09C /* day_like@3x.png in Resources */,
 				C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */,
+				C59D9B0324F9045E00A74CE9 /* 闪光灯-关闭@3x.png in Resources */,
 				C58F03AB24EA6E7600B6D09C /* MyStore@2x.png in Resources */,
 				C58F03A824EA6E7600B6D09C /* Home@3x.png in Resources */,
-				C5A46BC024EEA86300158D1E /* 闪光灯-自动@2x.png in Resources */,
 				C58F03B824EA6F0700B6D09C /* green_lottie_tab_discover.json in Resources */,
-				C5A46BC124EEA86300158D1E /* 闪光灯-自动@3x.png in Resources */,
 				C58F03AC24EA6E7600B6D09C /* My@3x.png in Resources */,
 				C59D9AA724F8C79500A74CE9 /* video.gif in Resources */,
 				C58F047C24EBD78500B6D09C /* day_like@2x.png in Resources */,
@@ -2325,9 +2324,6 @@
 				C58F047024EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 in Resources */,
 				C58F03BA24EA6F0700B6D09C /* green_lottie_tab_home.json in Resources */,
 				C58F03AD24EA6E7600B6D09C /* MyStore@3x.png in Resources */,
-				C5A46BC324EEA86300158D1E /* 闪光灯-关闭@2x.png in Resources */,
-				C5A46BC224EEA86300158D1E /* 闪光灯-关闭@3x.png in Resources */,
-				C5A46BC424EEA86300158D1E /* 闪光灯@2x.png in Resources */,
 				C58F002324EA36FA00B6D09C /* LaunchScreen.storyboard in Resources */,
 				C58F010B24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */,
 				C58F018224EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton in Resources */,
@@ -2341,15 +2337,18 @@
 				C58F00CF24EA581F00B6D09C /* GKNavigationBar.bundle in Resources */,
 				C58F00E824EA581F00B6D09C /* BRPickerView.bundle in Resources */,
 				C58F01C124EA5E5E00B6D09C /* Sound.wav in Resources */,
+				C59D9B0524F9045E00A74CE9 /* 闪光灯-自动@3x.png in Resources */,
 				C58F048224EBD78500B6D09C /* day_like_red@2x.png in Resources */,
 				C58F03C524EA779100B6D09C /* MKShootVC@2x.png in Resources */,
 				C58F03C024EA76C600B6D09C /* nodata.png in Resources */,
+				C59D9B0424F9045E00A74CE9 /* 闪光灯-自动@2x.png in Resources */,
 				C59D9AEF24F8F08500A74CE9 /* ZZCircleProgress.bundle in Resources */,
 				C58F03CD24EA789100B6D09C /* 翻转镜头@3x.png in Resources */,
 				C58F018F24EA5CAC00B6D09C /* 专治UITableView相应链断裂 in Resources */,
+				C59D9B0624F9045E00A74CE9 /* 闪光灯@3x.png in Resources */,
+				C59D9B0224F9045E00A74CE9 /* 闪光灯-关闭@2x.png in Resources */,
 				C58F03AA24EA6E7600B6D09C /* My@2x.png in Resources */,
 				C58F048124EBD78500B6D09C /* spark_red@3x.png in Resources */,
-				C5A46BC524EEA86300158D1E /* 闪光灯@3x.png in Resources */,
 				C58F00EF24EA581F00B6D09C /* Pod里面的Bug in Resources */,
 				C58F002024EA36FA00B6D09C /* Assets.xcassets in Resources */,
 				C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */,
