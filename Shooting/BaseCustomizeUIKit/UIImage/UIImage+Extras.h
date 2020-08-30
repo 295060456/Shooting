@@ -42,7 +42,6 @@ NS_ASSUME_NONNULL_BEGIN
 +(UIImage *)createNonInterpolatedUIImageFormString:(NSString *)string
                                           withSize:(CGFloat)size;
 
-+ (UIImage *)rendImageWithView:(UIView *)view;
 
 @end
 

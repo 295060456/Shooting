@@ -28,6 +28,7 @@ UITextViewDelegate
 @property(nonatomic,strong)UIImage *imgData;
 @property(nonatomic,assign)BOOL isClickMKUploadingVCView;
 @property(nonatomic,strong)NSData *__block vedioData;
+@property(nonatomic,strong)AVURLAsset *__block urlAsset;
 
 @property(nonatomic,strong)AWRichText *richText;
 @property(nonatomic,strong)AWRichTextLabel *rtLabel;
@@ -111,7 +112,7 @@ UITextViewDelegate
         self.imgData) {
         NSLog(@"发布成功");
         //这里先鉴定是否已经登录？
-        if (YES) {
+        if (!YES) {
             // 已经登录才可以上传视频
             //对视频的大小进行控制 单个视频上传最大支持300M
             
@@ -124,13 +125,15 @@ UITextViewDelegate
 //            最终支持所有格式上传，目前优先支持mp4和webm格式。如不符合上传格式要求，前期则半透明悬浮提示“请上传mp4或webm格式的视频文件”。
             
             if (sizeof(self.vedioData) <= 300 * 1024 * 1024) {
-                [self videosUploadNetworking:self.vedioData
-                             andVideoArticle:self.textView.text];
+                [self videosUploadNetworkingWithData:self.vedioData
+                                        videoArticle:self.textView.text
+                                            urlAsset:self.urlAsset];
             }else{
                 [MBProgressHUD wj_showPlainText:@"单个文件大小需要在300M以内"
                                            view:self.view];
             }
         }else{
+//            @weakify(self)
             //登录流程
         }
     }else{
@@ -206,8 +209,10 @@ UITextViewDelegate
                         PHAsset *phAsset = (PHAsset *)arg;
                         [FileFolderHandleTool getVedioFromPHAsset:phAsset
                                                          complete:^(id data) {
-                            if ([data isKindOfClass:NSData.class]) {
-                                self.vedioData = (NSData *)data;
+                            if ([data isKindOfClass:AVURLAsset.class]) {
+                                self.urlAsset = (AVURLAsset *)data;
+                                NSURL *url = self.urlAsset.URL;
+                                self.vedioData = [NSData dataWithContentsOfURL:url];
                             }
                         }];
                     }else if ([arg isKindOfClass:NSString.class]){
@@ -334,7 +339,6 @@ shouldChangeTextInRange:(NSRange)range
     [self addLinkCompWithText:@"上传须知"
                       onClick:^{
         NSLog(@"点击到了一个链接");
-        
     }];
 }
 

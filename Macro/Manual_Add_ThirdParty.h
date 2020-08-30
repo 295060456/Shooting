@@ -35,7 +35,6 @@
 #import "NSString+Extras.h"
 #import "NSObject+Measure.h"
 #import "UIView+Extras.h"
-#import "UIImage+Extras.h"
 #import "UIButton+Block.h"
 #import "UIColor+Hex.h"
 #import "NSObject+Extras.h"
@@ -45,7 +44,9 @@
 #import "UIControl+XY.h"
 #import "UITableViewCell+WhiteArrows.h"
 #import "UIImageView+GIF.h"//UIImageView支持GIF动画 https://github.com/pupboss/UIImageView-GIF
+#import "UIImage+SYS.h"
 #import "UIImage+YBGIF.h"
+#import "UIImage+Extras.h"
 #import "UIView+JHGestureBlock.h"
 #import "UIView+Chain.h"
 #import "UIView+SuspendView.h"
