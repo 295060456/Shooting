@@ -83,7 +83,7 @@ UITextViewDelegate
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.isClickMKUploadingVCView = NO;
-    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
+    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
 }
 
 -(void)viewWillLayoutSubviews{
@@ -205,10 +205,10 @@ UITextViewDelegate
                     NSLog(@"KKK = %@", arg);
                     if ([arg isKindOfClass:UIImage.class]) {
                         self.imgData = (UIImage *)arg;
-                        [self.choosePicBtn setImage:self.imgData
-                                  forState:UIControlStateNormal];
+                        [self.choosePicBtn setImage:[UIImage addImage:[UIImage cropSquareImage:self.imgData]
+                                                            withImage:kIMG(@"播放")]
+                                           forState:UIControlStateNormal];
                         self.choosePicBtn.iconBtn.alpha = 0.7;
-                        NSLog(@"");
                     }else if ([arg isKindOfClass:PHAsset.class]){
                         NSLog(@"");
                         PHAsset *phAsset = (PHAsset *)arg;
@@ -255,7 +255,6 @@ UITextViewDelegate
         }
     }];
 }
-
 #pragma mark - DZDeleteButtonDelegate
 - (void)deleteButtonRemoveSelf:(LGiOSBtn *_Nonnull)button{
     [button setImage:kIMG(@"加号")

@@ -46,7 +46,9 @@
 #import "UIImageView+GIF.h"//UIImageView支持GIF动画 https://github.com/pupboss/UIImageView-GIF
 #import "UIImage+SYS.h"
 #import "UIImage+YBGIF.h"
+#import "UIImage+Overlay.h"
 #import "UIImage+Extras.h"
+#import "UIImage+Tailor.h"
 #import "UIView+JHGestureBlock.h"
 #import "UIView+Chain.h"
 #import "UIView+SuspendView.h"
