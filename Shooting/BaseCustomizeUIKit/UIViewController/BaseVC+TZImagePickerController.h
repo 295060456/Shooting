@@ -26,7 +26,7 @@ TZImagePickerControllerDelegate
 ,UIImagePickerControllerDelegate
 >
 #pragma mark —— BaseVC+TZImagePickerController
-@property(nonatomic,strong)TZImagePickerController *imagePickerVC;
+@property(nonatomic,strong,nullable)TZImagePickerController *imagePickerVC;
 @property(nonatomic,strong)UIImagePickerController *imagePickerVC_Sys;
 @property(nonatomic,strong)NSMutableArray *mediaTypesMutArr;
 @property(nonatomic,assign)TZImagePickerControllerType tzImagePickerControllerType;

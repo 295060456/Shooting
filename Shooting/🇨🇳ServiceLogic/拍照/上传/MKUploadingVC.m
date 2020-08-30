@@ -153,7 +153,7 @@ UITextViewDelegate
                                message:nil
                        isSeparateStyle:NO
                            btnTitleArr:@[@"确定"]
-                        alertBtnAction:@[@"sure"]
+                        alertBtnAction:@[@"OK"]
                           alertVCBlock:^(id data) {
                 //DIY
             }];
@@ -175,9 +175,14 @@ UITextViewDelegate
     }
 }
 
--(void)sure{}
+-(void)sure{
+    [self choosePicBtnClickEvent:nil];
+}
+
+-(void)OK{}
 
 -(void)choosePicBtnClickEvent:(UIButton *)sender{
+    self.imagePickerVC = Nil;
     [NSObject feedbackGenerator];
     [self choosePic:TZImagePickerControllerType_1];
     @weakify(self)
