@@ -32,6 +32,7 @@
 #import "SZTextView.h"
 #import "AWRichText.h"
 #import <YXAlertController.h>
+#import "PPBadgeView.h"
 
 
 
