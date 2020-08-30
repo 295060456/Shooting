@@ -11,7 +11,7 @@
 @interface ZZCountingLabel : UILabel
 
 @property(nonatomic,assign)CGFloat duration;
-@property(nonatomic,strong)NSString *placeStr;
+@property(nonatomic,strong)NSString *__block placeStr;
 
 -(void)countingFrom:(CGFloat)fromValue
                  to:(CGFloat)toValue;

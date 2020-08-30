@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class LZBTabBarVC;
 
 NS_ASSUME_NONNULL_BEGIN
 

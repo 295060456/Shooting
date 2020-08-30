@@ -271,7 +271,6 @@
 		C5A46C0124EFB6E200158D1E /* UIViewController+LZBTabBarVCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFD24EFB6E100158D1E /* UIViewController+LZBTabBarVCItem.m */; };
 		C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFF24EFB6E200158D1E /* LZBTabBarVC.m */; };
 		C5A46C0A24EFB6E900158D1E /* LZBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0424EFB6E800158D1E /* LZBTabBar.m */; };
-		C5A46C0B24EFB6E900158D1E /* LOTAnimationView+action.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0724EFB6E900158D1E /* LOTAnimationView+action.m */; };
 		C5A46C0C24EFB6E900158D1E /* LZBTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */; };
 		D1C77CE50CE1275572271736 /* Pods_ShootingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */; };
 /* End PBXBuildFile section */
@@ -806,8 +805,6 @@
 		C5A46C0324EFB6E800158D1E /* LZBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBar.h; sourceTree = "<group>"; };
 		C5A46C0424EFB6E800158D1E /* LZBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBar.m; sourceTree = "<group>"; };
 		C5A46C0524EFB6E800158D1E /* LZBTabBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarDelegate.h; sourceTree = "<group>"; };
-		C5A46C0624EFB6E800158D1E /* LOTAnimationView+action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LOTAnimationView+action.h"; sourceTree = "<group>"; };
-		C5A46C0724EFB6E900158D1E /* LOTAnimationView+action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LOTAnimationView+action.m"; sourceTree = "<group>"; };
 		C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBarItem.m; sourceTree = "<group>"; };
 		C5A46C0924EFB6E900158D1E /* LZBTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarItem.h; sourceTree = "<group>"; };
 		CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1716,8 +1713,6 @@
 		C58F01E424EA604100B6D09C /* LZBTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				C5A46C0624EFB6E800158D1E /* LOTAnimationView+action.h */,
-				C5A46C0724EFB6E900158D1E /* LOTAnimationView+action.m */,
 				C5A46C0324EFB6E800158D1E /* LZBTabBar.h */,
 				C5A46C0424EFB6E800158D1E /* LZBTabBar.m */,
 				C5A46C0524EFB6E800158D1E /* LZBTabBarDelegate.h */,
@@ -2616,7 +2611,6 @@
 				C58F019324EA5CAC00B6D09C /* UITableViewCell+WhiteArrows.m in Sources */,
 				C58F02FB24EA63F300B6D09C /* MKLaunchingAdModel.m in Sources */,
 				C5A46C0A24EFB6E900158D1E /* LZBTabBar.m in Sources */,
-				C5A46C0B24EFB6E900158D1E /* LOTAnimationView+action.m in Sources */,
 				C58F01BF24EA5E5E00B6D09C /* PlaySound.m in Sources */,
 				C58F018524EA5CAC00B6D09C /* UIView+SuspendView.m in Sources */,
 				C58F029224EA61C600B6D09C /* LOTPathAnimator.m in Sources */,

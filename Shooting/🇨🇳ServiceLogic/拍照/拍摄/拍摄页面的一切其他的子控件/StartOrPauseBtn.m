@@ -43,6 +43,7 @@
 
 -(void)mytimerAction{
     self.currentTime += 1;
+    self.progressView.progressLabel.placeStr = @"录制中";
     NSLog(@"KKK = %f",self.currentTime);
     self.progressView.progress = self.currentTime / self.time;
     if (self.progressView.progress == 1.0) {
@@ -71,12 +72,12 @@
     [_mytimer invalidate];
     _mytimer = nil;
     
-    self.currentTime = 0;
-    self.progressView.increaseFromLast = NO;
-    self.progressView.progress = 0;
-    self.progressView.startAngle = 0.1;
-    self.progressView.startAngle = 0;
-    self.progressView.increaseFromLast = YES;
+//    self.currentTime = 0;
+//    self.progressView.increaseFromLast = NO;
+//    self.progressView.progress = 0;
+//    self.progressView.startAngle = 0.1;
+//    self.progressView.startAngle = 0;
+//    self.progressView.increaseFromLast = YES;
     
     
 }

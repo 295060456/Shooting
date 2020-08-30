@@ -7,21 +7,31 @@
 //
 
 #import "LZBTabBarVC.h"
-#import "UIViewController+LZBTabBarVCItem.h"
-#import "LOTAnimationView+action.h"
 
 #define LZB_TABBAR_DEFULT_HEIGHT 49
 
 @interface LZBTabBarVC ()<LZBTabBarDelegate>
 
+@property(nonatomic,strong)NSMutableArray <LZBTabBarItem *>*tabBarItems;
+
 @end
 
 @implementation LZBTabBarVC
 
+- (void)dealloc {
+    NSLog(@"Running self.class = %@;NSStringFromSelector(_cmd) = '%@';__FUNCTION__ = %s", self.class, NSStringFromSelector(_cmd),__FUNCTION__);
+}
+
+- (instancetype)init{
+    if (self = [super init]) {
+        
+    }return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.contentView];
-    [self.view addSubview:self.tabbar];
+    [self.view addSubview:self.lzb_tabBar];
     self.isShouldAnimation = NO;
 }
 
@@ -43,14 +53,13 @@
     }
     
     _viewControllers = viewControllers;
-    NSMutableArray *tabBarItems = [NSMutableArray array];
     for (UIViewController *viewController in viewControllers) {
-        LZBTabBarItem *tabBarItem = [[LZBTabBarItem alloc] init];
-         [tabBarItems addObject:tabBarItem];
-         [tabBarItem setTitle:viewController.title];
-         viewController.lzb_tabBarController = self;
+        LZBTabBarItem *tabBarItem = LZBTabBarItem.new;
+        [tabBarItem setTitle:viewController.title];
+        [self.tabBarItems addObject:tabBarItem];
+        viewController.lzb_tabBarController = self;
     }
-    [self.tabbar setItems:tabBarItems];
+    [self.lzb_tabBar setLzbTabBarItemsArr:self.tabBarItems];
 }
 
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{
@@ -68,9 +77,9 @@
     }
     _selectedIndex = selectedIndex;
     self.isShouldAnimation = animation;
-    LZBTabBarItem *selectItem = [self.tabbar.items objectAtIndex:selectedIndex];
-    [self.tabbar setCurrentSelectItem:selectItem
-                            animation:self.isShouldAnimation];
+    LZBTabBarItem *selectItem = [self.lzb_tabBar.lzbTabBarItemsArr objectAtIndex:selectedIndex];
+    [self.lzb_tabBar setCurrentSelectItem:selectItem
+                                animation:self.isShouldAnimation];
     self.selectedViewController = [self.viewControllers objectAtIndex:selectedIndex];
     [self addChildViewController:self.selectedViewController];
     self.selectedViewController.view.frame = self.contentView.bounds;
@@ -153,7 +162,6 @@
       viewController = viewController.navigationController;
     return [self.viewControllers indexOfObject:viewController];
 }
-
 #pragma mark- tabbarDelegate
 - (BOOL)lzb_tabBar:(LZBTabBar *)tabBar
 shouldSelectItemAtIndex:(NSInteger)index{
@@ -182,42 +190,6 @@ didSelectItemAtIndex:(NSInteger)index{
 //                          type:@"wav"];
     //震动特效反馈
     [NSObject feedbackGenerator];
-    
-    {///单个点选放映 & 结束 动画特效
-        //只有点击其他item 才能将本item的点击状态置为NO
-        NSInteger idx = [self.lzb_tabBar.items indexOfObject:self.lzb_tabBar.currentSelectItem];
-        NSInteger i = 0;
-        for (LZBTabBarItem *ITEM in self.lzb_tabBar.items) {
-            //对每一个状态进行异或操作——>归零
-            ITEM.selected ^= ITEM.selected;
-            //再对这个状态进行重新赋值改变
-            if (idx == i) {
-                ITEM.selected = YES;
-                
-                if (ITEM.animation.isAnimationPlaying) {
-                    //等他放
-                }else{
-                    [ITEM.animation playWithCompletion:^(BOOL animationFinished) {
-
-                    }];
-                }
-            }
-            
-            if (ITEM.selected) {//放
-                if (!ITEM.animation.isAnimationPlaying) {
-                    [ITEM.animation playWithCompletion:^(BOOL animationFinished) {
-
-                    }];
-                }
-            }else{//结束
-                if (!ITEM.animation.isAnimationPlaying) {
-                    [ITEM.animation stop];
-                }
-            }
-            i++;
-        }
-    }
-    
     if (index < 0 || index >= self.viewControllers.count)  return;
     [self setSelectedIndex:index
                  animation:self.isShouldAnimation];
@@ -226,7 +198,6 @@ didSelectItemAtIndex:(NSInteger)index{
                     didSelectViewController:[self.viewControllers objectAtIndex:index]];
     }
 }
-
 #pragma mark —— LazyLoad
 - (UIView *)contentView{
   if(_contentView == nil){
@@ -238,26 +209,28 @@ didSelectItemAtIndex:(NSInteger)index{
   }return _contentView;
 }
 
-- (LZBTabBar *)tabbar{
-   if(_tabbar == nil){
-       _tabbar = LZBTabBar.new;
-       _tabbar.tabBarStyleType = LZBTabBarStyleType_middleItemUp;
-       _tabbar.autoresizingMask = UIViewAutoresizingFlexibleWidth|
-                                  UIViewAutoresizingFlexibleTopMargin|
-                                  UIViewAutoresizingFlexibleLeftMargin|
-                                  UIViewAutoresizingFlexibleRightMargin|
-                                  UIViewAutoresizingFlexibleBottomMargin;
-       extern CGFloat LZB_TABBAR_HEIGHT;
-       _tabbar.frame = CGRectMake(0,
-                                  self.contentView.frame.size.height - LZB_TABBAR_HEIGHT,
-                                  [UIScreen mainScreen].bounds.size.width,
-                                  LZB_TABBAR_HEIGHT);
-       _tabbar.delegate = self;
-   }return _tabbar;
+-(LZBTabBar *)lzb_tabBar{
+    if (!_lzb_tabBar) {
+        _lzb_tabBar = LZBTabBar.new;
+        _lzb_tabBar.tabBarStyleType = LZBTabBarStyleType_middleItemUp;
+        _lzb_tabBar.autoresizingMask = UIViewAutoresizingFlexibleWidth|
+                                    UIViewAutoresizingFlexibleTopMargin|
+                                   UIViewAutoresizingFlexibleLeftMargin|
+                                   UIViewAutoresizingFlexibleRightMargin|
+                                   UIViewAutoresizingFlexibleBottomMargin;
+        extern CGFloat LZB_TABBAR_HEIGHT;
+        _lzb_tabBar.frame = CGRectMake(0,
+                                       self.contentView.frame.size.height - LZB_TABBAR_HEIGHT,
+                                       [UIScreen mainScreen].bounds.size.width,
+                                       LZB_TABBAR_HEIGHT);
+        _lzb_tabBar.delegate = self;
+    }return _lzb_tabBar;
 }
 
-- (LZBTabBar *)lzb_tabBar{
-    return self.tabbar;
+-(NSMutableArray<LZBTabBarItem *> *)tabBarItems{
+    if (!_tabBarItems) {
+        _tabBarItems = NSMutableArray.array;
+    }return _tabBarItems;
 }
 
 @end

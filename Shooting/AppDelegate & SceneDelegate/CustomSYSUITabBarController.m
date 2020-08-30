@@ -24,7 +24,7 @@ LZBTabBarVCDelegate
 >
 
 @property(nonatomic,strong)BaseNavigationVC *customNavigationVC;
-
+ 
 @property(nonatomic,strong)NSMutableArray<UIImage *> *customUnselectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray<UIImage *> *customSelectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray<NSString *> *titleStrMutArr;
@@ -44,7 +44,7 @@ CGFloat LZB_TABBAR_HEIGHT;
 
 -(instancetype)init{
     if (self = [super init]) {
-        LZB_TABBAR_HEIGHT = isiPhoneX_series() ? 80 + isiPhoneX_seriesBottom : 49;
+        LZB_TABBAR_HEIGHT = isiPhoneX_series() ? (50 + isiPhoneX_seriesBottom) : 49;
     }return self;
 }
 
@@ -59,10 +59,25 @@ CGFloat LZB_TABBAR_HEIGHT;
     self.navigationController.navigationBar.hidden = NO;
     
     self.lzb_tabBar.tabBarStyleType = LZBTabBarStyleType_sysNormal;
+    self.lzb_tabBar.topLine.alpha = 0;//TabBar顶部分割线
 //    self.lzb_tabBar.lottieJsonNameStrMutArr = self.lottieJsonNameStrMutArr;
-    self.lzb_tabBar.topLine.alpha = 0;
-    
+
     [self p_setUpAllChildViewController];
+    
+//    [self Badge];
+}
+///右上角角标
+-(void)Badge{
+    LZBTabBarItem *tabBarItem = self.lzb_tabBar.lzbTabBarItemsArr[0];
+//    [tabBarItem pp_addBadgeWithText:@"99+"];
+    [tabBarItem pp_addBadgeWithNumber:99];
+    [tabBarItem pp_moveBadgeWithX:-20 Y:20];
+    [tabBarItem pp_decreaseBy:10];
+}
+///登录流程
+-(void)presentLoginVC{
+//    @weakify(self)
+    
 }
 
 - (void)p_setUpAllChildViewController {
@@ -82,9 +97,9 @@ CGFloat LZB_TABBAR_HEIGHT;
 }
 
 -(void)p_setupCustomTBCWithViewController:(UIViewController *)vc
-                                  Title:(NSString *)titleStr
-                            SelectImage:(UIImage *)selectImage
-                          NnSelectImage:(UIImage *)unSelectImage{
+                                    Title:(NSString *)titleStr
+                              SelectImage:(UIImage *)selectImage
+                            NnSelectImage:(UIImage *)unSelectImage{
     vc.lzb_tabBarItem.selectImage = selectImage;
     vc.lzb_tabBarItem.unSelectImage = unSelectImage;
     vc.lzb_tabBarItem.title = titleStr;//下

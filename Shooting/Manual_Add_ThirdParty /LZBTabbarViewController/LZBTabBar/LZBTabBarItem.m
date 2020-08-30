@@ -7,24 +7,27 @@
 //
 
 #import "LZBTabBarItem.h"
-#import "LOTAnimationView+action.h"
 
 @interface LZBTabBarItem()<UIGestureRecognizerDelegate>
 
 @property(nonatomic,copy)TwoDataBlock LZBTabBarItemGestureRecognizerBlock;
-@property(nonatomic,copy)MKDataBlock LZBTabBarItemAnimationActionBlock;
 
 @end
 
 @implementation LZBTabBarItem
 
-- (instancetype)initWithFrame:(CGRect)frame{
-  if(self = [super initWithFrame:frame]){
-      [self setupInit];
-      //添加手势
-      self.tagGR.enabled = YES;
-      self.longPressGR.enabled = YES;
-  }return self;
+- (void)dealloc {
+    NSLog(@"Running self.class = %@;NSStringFromSelector(_cmd) = '%@';__FUNCTION__ = %s", self.class, NSStringFromSelector(_cmd),__FUNCTION__);
+}
+
+- (instancetype)init{
+    if (self = [super init]) {
+        [self setupInit];
+        //添加手势
+        self.tagGR.enabled = YES;
+        self.longPressGR.enabled = YES;
+//        self.backgroundColor = kWhiteColor;
+    }return self;
 }
 
 - (void)setupInit{
@@ -39,39 +42,8 @@
                                NSForegroundColorAttributeName: [UIColor colorWithHexString:@"0xf78361"],};
 }
 
--(void)setTagger:(NSInteger)tagger{
-    _tagger = tagger;
-    [self Lottie];
-}
-
--(void)gestureRecognizerLZBTabBarItemBlock:(TwoDataBlock)LZBTabBarItemGestureRecognizerBlock{
-    self.LZBTabBarItemGestureRecognizerBlock = LZBTabBarItemGestureRecognizerBlock;
-}
-
--(void)animationActionLZBTabBarItemBlock:(MKDataBlock)LZBTabBarItemAnimationActionBlock{
-    self.LZBTabBarItemAnimationActionBlock = LZBTabBarItemAnimationActionBlock;
-}
-
--(void)Lottie{
-    //Lottie
-    self.animation = [LOTAnimationView animationNamed:self.lottieJsonNameStrMutArr[self.tagger]];
-//    self.animation.userInteractionEnabled = YES;
-//    self.animation.loopAnimation//是否循环
-//    self.animation.animationProgress//动画的进度
-//    self.animation.animationDuration//动画时长
-//    self.animation.isAnimationPlaying//动画是否在执行
-    self.animation.animationSpeed = 3;//放慢动画播放速度?
-    [self addSubview:self.animation];
-    @weakify(self)
-    [self.animation actionLOTAnimationViewBlock:^(id data) {
-        @strongify(self)
-        if (self.LZBTabBarItemAnimationActionBlock) {
-            self.LZBTabBarItemAnimationActionBlock(@(self.tagger));
-        }
-    }];
-}
-
-- (void)drawRect:(CGRect)rect{
+-(void)drawRect:(CGRect)rect{
+    [super drawRect:rect];
     CGSize frameSize = self.frame.size;
     CGSize imageSize = CGSizeZero;
     CGSize titleSize = CGSizeZero;
@@ -122,6 +94,7 @@
 }
 #pragma mark —— 手势的响应事件
 -(void)LZBTabBarItemTap:(UITapGestureRecognizer *)tapGR{
+    //点按手势
     if (self.LZBTabBarItemGestureRecognizerBlock) {
         self.LZBTabBarItemGestureRecognizerBlock(self,tapGR);
     }
@@ -133,6 +106,7 @@
 //            NSLog(@"没有触摸事件发生，所有手势识别的默认状态");
         }break;
         case UIGestureRecognizerStateBegan:{
+            //长按手势
             NSLog(@"一个手势已经开始  但尚未改变或者完成时");
             if (self.LZBTabBarItemGestureRecognizerBlock) {
                 self.LZBTabBarItemGestureRecognizerBlock(self,longPressGR);
@@ -153,6 +127,14 @@
         default:
             break;
     }
+}
+
+-(void)gestureRecognizerLZBTabBarItemBlock:(TwoDataBlock)LZBTabBarItemGestureRecognizerBlock{
+    self.LZBTabBarItemGestureRecognizerBlock = LZBTabBarItemGestureRecognizerBlock;
+}
+
+-(void)setTagger:(NSInteger)tagger{
+    _tagger = tagger;
 }
 #pragma mark —— lazyLoad
 -(UITapGestureRecognizer *)tagGR{
@@ -233,6 +215,10 @@
 - (void)setTitle:(NSString *)title{
     _title = title;
     [self setNeedsDisplay];
+}
+
+-(void)setAnimationView:(LOTAnimationView *)animationView{
+    _animationView = animationView;
 }
 
 @end
