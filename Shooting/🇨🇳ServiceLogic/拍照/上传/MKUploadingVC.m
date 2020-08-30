@@ -217,8 +217,33 @@ UITextViewDelegate
                         }];
                     }else if ([arg isKindOfClass:NSString.class]){
                         NSLog(@"");
+                    }else if ([arg isKindOfClass:NSArray.class]){
+                        NSArray *arr = (NSArray *)arg;
+                        if (arr.count == 1) {
+                            if ([arr[0] isKindOfClass:PHAsset.class]) {
+                                
+                            }else if ([arr[0] isKindOfClass:UIImage.class]){
+                                [self alertControllerStyle:SYS_AlertController
+                                        showAlertViewTitle:@"请选择视频作品"
+                                                   message:nil
+                                           isSeparateStyle:NO
+                                               btnTitleArr:@[@"确认"]
+                                            alertBtnAction:@[@"sure"]
+                                              alertVCBlock:^(id data) {
+                                    //DIY
+                                }];
+                            }else{
+                                NSLog(@"");
+                            }
+                        }else{
+                            NSLog(@"");
+                        }
+                    }else{
+                        NSLog(@"");
                     }
                 }
+            }else{
+                NSLog(@"");
             }
             // 清空参数列表，并置参数指针args无效
             va_end(args);
