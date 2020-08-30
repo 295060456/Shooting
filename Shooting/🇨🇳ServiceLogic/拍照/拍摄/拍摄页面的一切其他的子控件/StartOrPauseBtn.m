@@ -72,14 +72,12 @@
     [_mytimer invalidate];
     _mytimer = nil;
     
-//    self.currentTime = 0;
-//    self.progressView.increaseFromLast = NO;
-//    self.progressView.progress = 0;
-//    self.progressView.startAngle = 0.1;
-//    self.progressView.startAngle = 0;
-//    self.progressView.increaseFromLast = YES;
-    
-    
+    self.currentTime = 0;
+    self.progressView.increaseFromLast = NO;
+    self.progressView.progress = 0;
+    self.progressView.startAngle = 0.1;
+    self.progressView.startAngle = 0;
+    self.progressView.increaseFromLast = YES;
 }
 
 -(void)tapGRUI:(BOOL)isClick{
