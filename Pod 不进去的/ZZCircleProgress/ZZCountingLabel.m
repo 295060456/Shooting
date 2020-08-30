@@ -47,19 +47,22 @@
     _displayPerSecond = 30;
 }
 
-- (void)countingFrom:(CGFloat)fromValue to:(CGFloat)toValue {
+- (void)countingFrom:(CGFloat)fromValue
+                  to:(CGFloat)toValue {
     [self countingFrom:fromValue to:toValue duration:_duration];
 }
 
-- (void)countingFrom:(CGFloat)fromValue to:(CGFloat)toValue duration:(CGFloat)duration {
+- (void)countingFrom:(CGFloat)fromValue
+                  to:(CGFloat)toValue
+            duration:(CGFloat)duration {
     
     _fromValue = fromValue;
     _toValue = toValue;
     _duration = duration;
     
     _increaseValue = _fromValue;
-    _perValue = (_toValue - _fromValue)/(_duration==0?1:(_displayPerSecond*_duration));
-    
+    _perValue = (_toValue - _fromValue) / (_duration == 0 ? 1 : (_displayPerSecond * _duration));
+     
     if (self.playLink) {
         [self.playLink invalidate];
         self.playLink = nil;
@@ -68,8 +71,8 @@
     CADisplayLink *playLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(countingAction)];
     if (@available(iOS 10.0, *)) {
         playLink.preferredFramesPerSecond = _displayPerSecond;
-    } else {
-        playLink.frameInterval = 60/(_displayPerSecond==0?1:_displayPerSecond);
+    }else{
+        playLink.frameInterval = 60 / (_displayPerSecond == 0 ? 1 : _displayPerSecond);
     }
     
     [playLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];

@@ -937,8 +937,7 @@
 		C561618524EE4C87001CD851 /* 拍摄 */ = {
 			isa = PBXGroup;
 			children = (
-				C59D9AA524F8C79500A74CE9 /* video.gif */,
-				C59D9AA624F8C79500A74CE9 /* watermark.bmp */,
+				C596079524F9221E00D4C824 /* res */,
 				C55497AB24F3A3050065510D /* 视频处理工具 */,
 				C55497A224F38CDB0065510D /* MKShootVC.h */,
 				C55497A324F38CDB0065510D /* MKShootVC.m */,
@@ -2127,6 +2126,15 @@
 				C58F047A24EBD78500B6D09C /* spark_red@3x.png */,
 			);
 			path = resource;
+			sourceTree = "<group>";
+		};
+		C596079524F9221E00D4C824 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				C59D9AA524F8C79500A74CE9 /* video.gif */,
+				C59D9AA624F8C79500A74CE9 /* watermark.bmp */,
+			);
+			path = res;
 			sourceTree = "<group>";
 		};
 		C59D9AB424F8EECB00A74CE9 /* 录制成功的视频进行预览播放以决定是否舍弃 */ = {

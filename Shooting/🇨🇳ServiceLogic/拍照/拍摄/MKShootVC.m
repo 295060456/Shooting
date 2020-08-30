@@ -164,6 +164,7 @@
 //删除作品
 -(void)deleteFilmBtnClickEvent:(UIButton *)sender{
     NSLog(@"删除作品？");
+    [self.gpuImageTools vedioShoottingSuspend];
     [self alertControllerStyle:SYS_AlertController
             showAlertViewTitle:@"删除作品？"
                        message:nil
@@ -229,6 +230,10 @@
 
     [self.recordBtn.progressView reset];
     [self.recordBtn reset];
+
+    [MBProgressHUD wj_showPlainText:@"开始录制"
+                               view:nil];
+    
     //功能性的 删除tmp文件夹下的文件
     BOOL success = [FileFolderHandleTool removeItemAtPath:[FileFolderHandleTool directoryAtPath:self.gpuImageTools.FileUrlByTime]
                                                     error:nil];

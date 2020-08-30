@@ -228,14 +228,6 @@
         [self.pointImage.layer addAnimation:pointAnimation forKey:@"pointResetAnimation"];
         self.lastPointAnimation = pointAnimation;
     }
-//
-//    if (_showProgressText && _increaseFromLast) {
-//        [self.progressLabel countingFrom:_lastProgress*100 to:_progress*100 duration:_duration];
-//    } else if (_showProgressText) {
-//        [self.progressLabel countingFrom:0 to:_progress*100 duration:_duration];
-//    }
-//
-//    _lastProgress = _progress;
 }
 //下面这2个不能写成属性，因为要反复绘制
 //线的动画

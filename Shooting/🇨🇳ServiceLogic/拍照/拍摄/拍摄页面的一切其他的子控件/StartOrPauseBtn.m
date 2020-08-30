@@ -64,7 +64,9 @@
 }
 
 -(void)reset{
+    
     self.progressView.progressLabel.placeStr = @"录制";
+    
     self.backgroundColor = kBlueColor;
     [_mytimer invalidate];
     _mytimer = nil;
@@ -75,6 +77,8 @@
     self.progressView.startAngle = 0.1;
     self.progressView.startAngle = 0;
     self.progressView.increaseFromLast = YES;
+    
+    
 }
 
 -(void)tapGRUI:(BOOL)isClick{
@@ -172,7 +176,6 @@
                                                   selector:@selector(mytimerAction)
                                                   userInfo:nil
                                                    repeats:YES];
-        
     }return _mytimer;
 }
 
