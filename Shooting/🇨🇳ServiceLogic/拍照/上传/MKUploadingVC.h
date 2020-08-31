@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MKUploadingVC : BaseVC
 
 @property(nonatomic,copy)MKDataBlock MKUploadingBlock;
+///发布成功以后做的事情
+-(void)afterRelease;
 -(void)actionMKUploadingBlock:(MKDataBlock)MKUploadingBlock;
 
 @end

@@ -95,6 +95,12 @@ UITextViewDelegate
     [super viewDidLayoutSubviews];
     NSLog(@"");
 }
+///发布成功以后做的事情
+-(void)afterRelease{
+    [self deleteButtonRemoveSelf:self.choosePicBtn];
+    [self btnClickEvent:btn];
+    self.textView.text = @"";
+}
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches
           withEvent:(UIEvent *)event{
