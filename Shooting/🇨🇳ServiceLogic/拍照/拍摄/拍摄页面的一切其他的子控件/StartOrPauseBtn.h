@@ -28,10 +28,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)CGFloat time;//录制时间
 @property(nonatomic,assign)CGFloat currentTime;//已经录了多少秒
 @property(nonatomic,assign)CGFloat safetyTime;//小于等于这个时间点的录制的视频不允许被保存，而是应该被遗弃
-
--(void)actionTapGRHandleSingleFingerBlock:(MKDataBlock)tapGRHandleSingleFingerActionBlock;//点击事件
-//-(void)actionLongPressGRBlock:(MKDataBlock)longPressGRActionBlock;//长按事件
+#pragma mark —— 链接性质的Block方法
+-(void)actionTapGRHandleSingleFingerBlock:(MKDataBlock)tapGRHandleSingleFingerActionBlock;
 -(void)actionStartOrPauseBtnBlock:(MKDataBlock)startOrPauseBtnBlock;
+//-(void)actionLongPressGRBlock:(MKDataBlock)longPressGRActionBlock;//长按事件
+#pragma mark —— 功能性的方法
+-(void)tapGRHandleSingleFingerAction:(UITapGestureRecognizer *_Nullable)sender;//点击事件
 -(void)tapGRUI:(BOOL)isClick;
 -(void)reset;
 

@@ -103,14 +103,27 @@ JXCategoryTitleViewDataSource
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
 }
-
+///丢弃掉当前拍摄的作品
 -(void)sure{
-
+    [self.shootVC delTmpRes];
+    [self.shootVC.recordBtn reset];
+    self.shootVC.gpuImageTools.vedioShootType = VedioShootType_un;
 }
 
 -(void)Cancel{
     [self.categoryView selectItemAtIndex:1];
     [self.listContainerView didClickSelectedItemAtIndex:1];
+}
+
+-(void)suspendShoot{
+    [self.shootVC.gpuImageTools vedioShoottingSuspend];
+    [self.shootVC.recordBtn tapGRHandleSingleFingerAction:nil];
+}
+
+-(void)continueShoot{
+    [self.categoryView selectItemAtIndex:1];
+    [self.listContainerView didClickSelectedItemAtIndex:1];
+    [self.shootVC.gpuImageTools vedioShoottingContinue];
 }
 #pragma mark JXCategoryTitleViewDataSource
 //// 如果将JXCategoryTitleView嵌套进UITableView的cell，每次重用的时候，JXCategoryTitleView进行reloadData时，会重新计算所有的title宽度。所以该应用场景，需要UITableView的cellModel缓存titles的文字宽度，再通过该代理方法返回给JXCategoryTitleView。
@@ -147,18 +160,6 @@ JXCategoryTitleViewDataSource
 //传递didClickSelectedItemAt事件给listContainerView，必须调用！！！
 - (void)categoryView:(JXCategoryBaseView *)categoryView
 didClickSelectedItemAtIndex:(NSInteger)index {
-//    if (index == 0) {
-//        WeakSelf
-//        if ([MKTools mkLoginIsYESWith:weakSelf]) {
-//            NSLog(@"");
-//            [self.listContainerView didClickSelectedItemAtIndex:index];
-//        }else{
-//            [self.listContainerView didClickSelectedItemAtIndex:1];
-//        }
-//    }else{
-//        [self.listContainerView didClickSelectedItemAtIndex:index];
-//    }
-//
      [self.listContainerView didClickSelectedItemAtIndex:index];
 }
 
@@ -169,12 +170,27 @@ didScrollSelectedItemAtIndex:(NSInteger)index{
         self.gk_navigationBar.hidden = NO;
         [self.shootVC.gpuImageTools.videoCamera resumeCameraCapture];
     }else{//0
-        // 停止实况采样节约能耗
+        //停止实况采样节约能耗
         [self.shootVC.gpuImageTools.videoCamera stopCameraCapture];
         //重新拍摄
         switch (self.shootVC.gpuImageTools.vedioShootType) {
-            case VedioShootType_on://开始录制
-            case VedioShootType_suspend://暂停录制
+            case VedioShootType_un:{//未定义的初始状态 此时第一次进去 在实况视频
+                
+            } break;
+            case VedioShootType_on:{//开始录制
+                [self alertControllerStyle:SYS_AlertController
+                        showAlertViewTitle:@"暂停拍摄？"
+                                   message:nil
+                           isSeparateStyle:NO
+                               btnTitleArr:@[@"确认暂停",@"继续拍摄"]
+                            alertBtnAction:@[@"suspendShoot",@"continueShoot"]
+                              alertVCBlock:^(id data) {
+                    //DIY
+                }];
+            } break;
+            case VedioShootType_suspend:{//暂停录制
+                
+            } break;
             case VedioShootType_continue:{//继续录制
                 [self alertControllerStyle:SYS_AlertController
                         showAlertViewTitle:@"丢弃掉当前拍摄的作品？"
@@ -186,6 +202,12 @@ didScrollSelectedItemAtIndex:(NSInteger)index{
                     //DIY
                 }];
             } break;
+            case VedioShootType_off:{//取消录制
+                
+            }break;
+            case VedioShootType_end:{//结束录制
+                
+            }break;
             default:
                 break;
         }

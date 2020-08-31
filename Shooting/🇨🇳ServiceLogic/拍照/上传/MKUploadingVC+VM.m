@@ -35,13 +35,15 @@
         if ([response.reqResult isKindOfClass:NSDictionary.class]) {
             NSDictionary *dic = (NSDictionary *)response.reqResult;
             if ([dic[@"code"] intValue] == 200) {
-                [MBProgressHUD wj_showPlainText:@"发布成功" view:getMainWindow()];
+                [MBProgressHUD wj_showPlainText:@"发布成功"
+                                           view:getMainWindow()];
                 [self afterRelease];
                 if (self.MKUploadingBlock) {//为什么不执行？？？
                     self.MKUploadingBlock(@1);
                 }
             }else{
-                [MBProgressHUD wj_showPlainText:@"服务器异常" view:getMainWindow()];
+                [MBProgressHUD wj_showPlainText:@"服务器异常"
+                                           view:getMainWindow()];
             }
         }
     }];

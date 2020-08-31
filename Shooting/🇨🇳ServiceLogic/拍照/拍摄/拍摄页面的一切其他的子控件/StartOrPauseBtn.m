@@ -48,7 +48,8 @@
     self.progressView.progress = self.currentTime / self.time;
     if (self.progressView.progress == 1.0) {
         [self.mytimer setFireDate:[NSDate distantFuture]];
-        [MBProgressHUD wj_showPlainText:@"录制结束" view:getMainWindow()];
+        [MBProgressHUD wj_showPlainText:@"录制结束"
+                                   view:getMainWindow()];
     }
 }
 
@@ -87,12 +88,12 @@
             self.shottingStatus = ShottingStatus_on;
             [self.mytimer fire];
             [MBProgressHUD wj_showPlainText:@"开始录制"
-                                       view:nil];
+                                       view:getMainWindow()];
         }else{
             //继续录制
             self.shottingStatus = ShottingStatus_continue;
             [MBProgressHUD wj_showPlainText:@"继续录制"
-                                       view:nil];
+                                       view:getMainWindow()];
             [self.mytimer setFireDate:[NSDate date]];
         }
         self.progressView.progressLabel.placeStr = @"录制中";
@@ -123,7 +124,7 @@
     return YES;
 }
 #pragma mark —— 点击事件
--(void)tapGRHandleSingleFingerAction:(UITapGestureRecognizer *)sender{
+-(void)tapGRHandleSingleFingerAction:(UITapGestureRecognizer *_Nullable)sender{
     self.isClickStartOrPauseBtn = !self.isClickStartOrPauseBtn;
     //UI部分
     [self tapGRUI:self.isClickStartOrPauseBtn];

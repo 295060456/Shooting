@@ -9,7 +9,6 @@
 #import "MKShootVC.h"
 #import "GPUImageTools.h"
 #import "CustomerGPUImagePlayerVC.h"//视频预览 VC
-#import "StartOrPauseBtn.h"
 #import "MyCell.h"
 
 #import "MKShootVC+VM.h"
@@ -25,7 +24,6 @@
 @property(nonatomic,strong)UIView *indexView;
 @property(nonatomic,strong)JhtBannerView *bannerView;
 @property(nonatomic,strong)CustomerAVPlayerView *AVPlayerView;
-@property(nonatomic,strong)__block StartOrPauseBtn *recordBtn;
 
 @property(nonatomic,assign)CGFloat safetyTime;//小于等于这个时间点的录制的视频不允许被保存，而是应该被遗弃
 @property(nonatomic,assign)CGFloat __block time;
@@ -198,7 +196,7 @@
     //判定规则：小于3秒的被遗弃，不允许被保存
     if (self.recordBtn.currentTime <= self.recordBtn.safetyTime) {
         [MBProgressHUD wj_showPlainText:[NSString stringWithFormat:@"不能保存录制时间低于%.2f秒的视频",self.recordBtn.safetyTime]
-                                   view:self.view];
+                                   view:getMainWindow()];
     }else{
         [self.gpuImageTools vedioShoottingEnd];
         [self.recordBtn reset];
@@ -232,15 +230,17 @@
     [self.recordBtn reset];
 
     [MBProgressHUD wj_showPlainText:@"开始录制"
-                               view:nil];
-    
-    //功能性的 删除tmp文件夹下的文件
+                               view:getMainWindow()];
+    [self delTmpRes];
+}
+///功能性的 删除tmp文件夹下的文件
+-(void)delTmpRes{
     BOOL success = [FileFolderHandleTool removeItemAtPath:[FileFolderHandleTool directoryAtPath:self.gpuImageTools.FileUrlByTime]
                                                     error:nil];
     if (success) {
         NSLog(@"删除作品成功");
         [MBProgressHUD wj_showPlainText:@"删除作品成功"
-                                   view:self.view];
+                                   view:getMainWindow()];
     }
 }
 

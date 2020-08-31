@@ -136,7 +136,7 @@ UITextViewDelegate
                                             urlAsset:self.urlAsset];
             }else{
                 [MBProgressHUD wj_showPlainText:@"单个文件大小需要在300M以内"
-                                           view:self.view];
+                                           view:getMainWindow()];
             }
         }else{
 //            @weakify(self)
