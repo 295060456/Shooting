@@ -957,13 +957,13 @@
 		C561618524EE4C87001CD851 /* 拍摄 */ = {
 			isa = PBXGroup;
 			children = (
+				C561618624EE4C8F001CD851 /* 拍摄页面的一切其他的子控件 */,
 				C596079524F9221E00D4C824 /* res */,
 				C55497AB24F3A3050065510D /* 视频处理工具 */,
 				C55497A224F38CDB0065510D /* MKShootVC.h */,
 				C55497A324F38CDB0065510D /* MKShootVC.m */,
 				C561619024EE4C9F001CD851 /* MKShootVC+VM.h */,
 				C561618D24EE4C9F001CD851 /* MKShootVC+VM.m */,
-				C561618624EE4C8F001CD851 /* 拍摄页面的一切其他的子控件 */,
 			);
 			path = "拍摄";
 			sourceTree = "<group>";

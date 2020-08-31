@@ -60,7 +60,6 @@
     [UIView addViewAnimation:self
              completionBlock:^(id data) {
 //        @strongify(self)
-        
     }];
 }
 
@@ -85,26 +84,27 @@
         if (!_mytimer) {
             //启动 开始录制
             self.shottingStatus = ShottingStatus_on;
-            self.progressView.progressLabel.placeStr = @"录制中";
             [self.mytimer fire];
-            self.backgroundColor = kRedColor;
             [MBProgressHUD wj_showPlainText:@"开始录制"
                                        view:nil];
         }else{
             //继续录制
             self.shottingStatus = ShottingStatus_continue;
-            self.progressView.progressLabel.placeStr = @"录制中";
             [MBProgressHUD wj_showPlainText:@"继续录制"
                                        view:nil];
             [self.mytimer setFireDate:[NSDate date]];
-            self.backgroundColor = kRedColor;
         }
+        self.progressView.progressLabel.placeStr = @"录制中";
+        self.backgroundColor = kRedColor;
+        _progressView.pathFillColor = kBlueColor;
     }else{
         //暂停录制
         self.shottingStatus = ShottingStatus_suspend;
         [self.mytimer setFireDate:[NSDate distantFuture]];
+        
         self.progressView.progressLabel.placeStr = @"已暂停";
-        self.backgroundColor = kBlueColor;
+        self.backgroundColor = KGreenColor;
+        _progressView.pathFillColor = kRedColor;
     }
 }
 
@@ -151,13 +151,12 @@
 -(ZZCircleProgress *)progressView{
     if (!_progressView) {
         _progressView = [[ZZCircleProgress alloc] initWithFrame:CGRectZero
-                                                  pathBackColor:[UIColor grayColor]
-                                                  pathFillColor:[UIColor greenColor]
+                                                  pathBackColor:KYellowColor//原本的色彩
+                                                  pathFillColor:kBlueColor//进度条略过的色彩
                                                      startAngle:0
                                                     strokeWidth:3];
         _progressView.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3];
         _progressView.userInteractionEnabled = YES;
-        _progressView.pathFillColor = [UIColor redColor];
         _progressView.increaseFromLast = YES;//是否从头开始
         _progressView.progressLabel.text = @"录制";
         _progressView.showProgressText = YES;
