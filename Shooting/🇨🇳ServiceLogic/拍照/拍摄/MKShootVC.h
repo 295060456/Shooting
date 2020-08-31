@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MKShootVC : BaseVC
 
+@property(nonatomic,strong)GPUImageTools *gpuImageTools;
+
 + (instancetype)ComingFromVC:(UIViewController *)rootVC
                  comingStyle:(ComingStyle)comingStyle
            presentationStyle:(UIModalPresentationStyle)presentationStyle

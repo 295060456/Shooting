@@ -31,7 +31,6 @@
 @property(nonatomic,assign)CGFloat __block time;
 @property(nonatomic,strong)NSArray *timeArr;
 
-@property(nonatomic,strong)GPUImageTools *gpuImageTools;
 @property(nonatomic,strong)id requestParams;
 @property(nonatomic,assign)BOOL isPush;
 @property(nonatomic,assign)BOOL isPresent;

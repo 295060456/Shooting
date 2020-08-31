@@ -31,7 +31,6 @@
 @property(nonatomic,strong)NSMutableArray *progressViewArray;
 
 @property(nonatomic,copy,nullable)AVFileType outputFileType;
-@property(nonatomic,strong)GPUImageVideoCamera *videoCamera;
 @property(nonatomic,strong)AVAssetTrack *mixVideoTrack;
 @property(nonatomic,strong)AVCaptureDevice *captureDevice;
 @property(nonatomic,assign)AVCaptureDevicePosition position;
@@ -75,7 +74,7 @@
 #pragma mark —— GPUImageVideoCameraDelegate
 //实时每一帧的截取 滚动发出
 - (void)willOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer{
-//    NSLog(@"实时每一帧的截取 滚动发出");
+    NSLog(@"实时每一帧的截取 滚动发出");
 }
 #pragma mark —— 开始录制
 -(void)vedioShoottingOn{

@@ -24,7 +24,6 @@ JXCategoryTitleViewDataSource
 @property(nonatomic,strong)NSMutableArray *childVCMutArr;
 @property(nonatomic,strong)MKUploadingVC *uploadingVC;
 @property(nonatomic,strong)MKShootVC *shootVC;
-@property(nonatomic,strong)GPUImageTools *gpuImageTools;
 
 @property(nonatomic,strong)id requestParams;
 @property(nonatomic,copy)MKDataBlock successBlock;
@@ -168,9 +167,12 @@ didScrollSelectedItemAtIndex:(NSInteger)index{
     if (index) {//1
         [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
         self.gk_navigationBar.hidden = NO;
+        [self.shootVC.gpuImageTools.videoCamera resumeCameraCapture];
     }else{//0
+        // 停止实况采样节约能耗
+        [self.shootVC.gpuImageTools.videoCamera stopCameraCapture];
         //重新拍摄
-        switch (self.gpuImageTools.vedioShootType) {
+        switch (self.shootVC.gpuImageTools.vedioShootType) {
             case VedioShootType_on://开始录制
             case VedioShootType_suspend://暂停录制
             case VedioShootType_continue:{//继续录制
@@ -325,12 +327,6 @@ scrollingFromLeftIndex:(NSInteger)leftIndex
         }];
         [self.view layoutIfNeeded];
     }return _categoryView;
-}
-
--(GPUImageTools *)gpuImageTools{
-    if (!_gpuImageTools) {
-        _gpuImageTools = GPUImageTools.new;
-    }return _gpuImageTools;
 }
 
 @end
