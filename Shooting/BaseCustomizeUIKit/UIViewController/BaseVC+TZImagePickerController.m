@@ -167,13 +167,16 @@ static char *BaseVC_TZImagePickerController_asset = "BaseVC_TZImagePickerControl
                                  OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }return ImagePickerVC_Sys;
 }
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> *)info{
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> *)info{
     UIImage *photo = [info objectForKey:UIImagePickerControllerOriginalImage];
     if (photo == nil) {
         [MBProgressHUD wj_showError:@"异常操作，导致拍照失败"];
         return;
     }else{
-         self.picBlock(photo);
+        if (self.picBlock) {
+            self.picBlock(@1,photo);
+        }
     }
     [self dismissViewControllerAnimated:self.imagePickerVC_Sys completion:^{}];
 }
