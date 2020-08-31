@@ -248,6 +248,10 @@
 -(void)shoottingContinue{
     [self.recordBtn tapGRUI:YES];
     [self.gpuImageTools vedioShoottingContinue];
+    
+    self.deleteFilmBtn.alpha = 0;
+    self.sureFilmBtn.alpha = 0;
+    self.previewBtn.alpha = 0;
 }
 
 -(void)exit{
@@ -341,6 +345,9 @@
                 switch (num.intValue) {
                     case ShottingStatus_on:{//开始录制
                         [self.gpuImageTools vedioShoottingOn];
+                        self.deleteFilmBtn.alpha = 0;
+                        self.sureFilmBtn.alpha = 0;
+                        self.previewBtn.alpha = 0;
                     }break;
                     case ShottingStatus_suspend:{//暂停录制
                         [self.gpuImageTools vedioShoottingSuspend];
@@ -349,6 +356,9 @@
                     }break;
                     case ShottingStatus_continue:{//继续录制
                         [self.gpuImageTools vedioShoottingContinue];
+                        self.deleteFilmBtn.alpha = 0;
+                        self.sureFilmBtn.alpha = 0;
+                        self.previewBtn.alpha = 0;
                     }break;
 //                    case ShottingStatus_off:{//取消录制
 //                        [self.gpuImageTools vedioShoottingOff];

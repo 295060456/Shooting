@@ -80,6 +80,7 @@
 }
 
 -(void)tapGRUI:(BOOL)isClick{
+    self.isClickStartOrPauseBtn = isClick;//外界调用的时候，会不一致，这里进行补齐
     if (isClick) {
         if (!_mytimer) {
             //启动 开始录制
@@ -113,12 +114,6 @@
         self.tapGRHandleSingleFingerActionBlock(@1);
     }
 }
-
-//-(void)actionLongPressGRBlock:(MKDataBlock)longPressGRActionBlock{
-//    if (self.longPressGRActionBlock) {
-//        self.longPressGRActionBlock(@1);
-//    }
-//}
 
 -(void)actionStartOrPauseBtnBlock:(MKDataBlock)startOrPauseBtnBlock{
     self.startOrPauseBtnBlock = startOrPauseBtnBlock;
@@ -200,5 +195,12 @@
 //-(void)longPressGRAction:(UILongPressGestureRecognizer *)sender{
 //    NSLog(@"1234");
 //}
+
+//-(void)actionLongPressGRBlock:(MKDataBlock)longPressGRActionBlock{
+//    if (self.longPressGRActionBlock) {
+//        self.longPressGRActionBlock(@1);
+//    }
+//}
+
 
 @end
