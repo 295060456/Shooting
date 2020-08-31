@@ -14,6 +14,7 @@
 @property(nonatomic,assign)BOOL isClickStartOrPauseBtn;
 @property(nonatomic,copy)MKDataBlock tapGRHandleSingleFingerActionBlock;
 @property(nonatomic,copy)MKDataBlock startOrPauseBtnBlock;
+@property(nonatomic,copy)MKDataBlock finishWorkBlock;
 
 //@property(nonatomic,strong)UILongPressGestureRecognizer *longPressGR;
 //@property(nonatomic,copy)MKDataBlock longPressGRActionBlock;
@@ -47,9 +48,14 @@
     NSLog(@"KKK = %f",self.currentTime);
     self.progressView.progress = self.currentTime / self.time;
     if (self.progressView.progress == 1.0) {
-        [self.mytimer setFireDate:[NSDate distantFuture]];
+        [self.mytimer invalidate];
+        _mytimer = nil;
         [MBProgressHUD wj_showPlainText:@"录制结束"
                                    view:getMainWindow()];
+        if (self.finishWorkBlock) {
+            self.finishWorkBlock(@1);
+        }
+        [self reset];
     }
 }
 
@@ -114,6 +120,10 @@
     if (self.tapGRHandleSingleFingerActionBlock) {
         self.tapGRHandleSingleFingerActionBlock(@1);
     }
+}
+
+-(void)actionFinishWorkBlock:(MKDataBlock)finishWorkBlock{
+    self.finishWorkBlock = finishWorkBlock;
 }
 
 -(void)actionStartOrPauseBtnBlock:(MKDataBlock)startOrPauseBtnBlock{

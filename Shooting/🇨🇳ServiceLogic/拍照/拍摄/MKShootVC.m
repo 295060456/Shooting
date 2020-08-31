@@ -367,6 +367,10 @@
                 }
             }
         }];
+        [_recordBtn actionFinishWorkBlock:^(id data) {
+            @strongify(self)
+            [self.gpuImageTools vedioShoottingEnd];
+        }];
     }return _recordBtn;
 }
 
