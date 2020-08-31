@@ -206,7 +206,8 @@ UITextViewDelegate
                     if ([arg isKindOfClass:UIImage.class]) {
                         self.imgData = (UIImage *)arg;
                         [self.choosePicBtn setImage:[UIImage addImage:[UIImage cropSquareImage:self.imgData]
-                                                            withImage:kIMG(@"播放")]
+                                                            withImage:kIMG(@"播放")
+                                                    image2Coefficient:3]
                                            forState:UIControlStateNormal];
                         self.choosePicBtn.iconBtn.alpha = 0.7;
                     }else if ([arg isKindOfClass:PHAsset.class]){
