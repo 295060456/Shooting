@@ -102,7 +102,7 @@ static char *UIView_SuspendView_panRcognize = "UIView_SuspendView_panRcognize";
 -(UIViewController *)vc{
     UIViewController *VC = objc_getAssociatedObject(self, UIView_SuspendView_vc);
     if (!VC) {
-        NSAssert(0, @"VC 不能为空");
+        NSLog(@"VC 不能为空");
     }return VC;
 }
 

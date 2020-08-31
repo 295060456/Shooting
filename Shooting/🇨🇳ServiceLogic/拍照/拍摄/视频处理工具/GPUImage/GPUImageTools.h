@@ -37,10 +37,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)VedioShootType vedioShootType;
 @property(nonatomic,strong)MKGPUImageView *GPUImageView;//实际上点击的是它，所以点击事件在 myGPUImageView 的回调里面
 @property(nonatomic,strong)UIImage *thumb;
-@property(nonatomic,strong)__block NSString *compressedVedioPathStr;
+@property(nonatomic,strong)__block NSString *compressedVedioPathStr;//新生成的,被压缩的视频,这才是最后需要上传到服务器的资源
 @property(nonatomic,strong)NSString *recentlyVedioFileUrl;//最近的一段视频资源地址
 @property(nonatomic,strong)NSString *FileUrlByTime;//时间戳地址
-@property(nonatomic,strong)NSMutableArray *urlArray;
+@property(nonatomic,strong)NSMutableArray *urlArray;//原始的视频素材,路径
 @property(nonatomic,copy)MKDataBlock actionVedioToolsClickBlock;
 @property(nonatomic,copy)MKDataBlock vedioToolsSessionStatusCompletedBlock;
 

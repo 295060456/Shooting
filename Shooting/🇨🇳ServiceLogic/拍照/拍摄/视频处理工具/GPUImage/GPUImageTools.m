@@ -272,8 +272,9 @@
                 } break;
                 case AVAssetExportSessionStatusCompleted:{
                     NSLog(@"转换成功");
+                    //转换视频成功删除原始视频素材
                     [self delRaw];
-                    //  处理完毕的回调
+                    //处理完毕的回调
                     if (self.vedioToolsSessionStatusCompletedBlock) {
                         self.vedioToolsSessionStatusCompletedBlock(self);
                     }

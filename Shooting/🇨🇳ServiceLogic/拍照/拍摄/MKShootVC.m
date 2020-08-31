@@ -201,7 +201,8 @@
         [MBProgressHUD wj_showPlainText:[NSString stringWithFormat:@"不能保存录制时间低于%.2f秒的视频",self.recordBtn.safetyTime]
                                    view:self.view];
     }else{
-         [self.gpuImageTools vedioShoottingEnd];
+        [self.gpuImageTools vedioShoottingEnd];
+        [self.recordBtn reset];
     }
     
     self.deleteFilmBtn.alpha = 0;
@@ -617,55 +618,60 @@
 -(CustomerAVPlayerView *)AVPlayerView{
     if (!_AVPlayerView) {
         @weakify(self)
-        _AVPlayerView = [[CustomerAVPlayerView alloc] initWithURL:[NSURL fileURLWithPath:self.gpuImageTools.recentlyVedioFileUrl]
-                                                        suspendVC:weak_self];
-        _AVPlayerView.isSuspend = YES;//开启悬浮窗效果
-        [_AVPlayerView errorCustomerAVPlayerBlock:^{
-            @strongify(self)
-            [self alertControllerStyle:SYS_AlertController
-                    showAlertViewTitle:@"软件内部错误"
-                               message:@"因为某种未知的原因，找不到播放的资源文件"
-                       isSeparateStyle:NO
-                           btnTitleArr:@[@"确定"]
-                        alertBtnAction:@[@"OK"]
-                          alertVCBlock:^(id data) {
-                //DIY
+        if (![NSString isNullString:self.gpuImageTools.compressedVedioPathStr]) {
+            _AVPlayerView = [[CustomerAVPlayerView alloc] initWithURL:[NSURL fileURLWithPath:self.gpuImageTools.compressedVedioPathStr]
+                                                            suspendVC:weak_self];
+            _AVPlayerView.isSuspend = YES;//开启悬浮窗效果
+            [_AVPlayerView errorCustomerAVPlayerBlock:^{
+                @strongify(self)
+                [self alertControllerStyle:SYS_AlertController
+                        showAlertViewTitle:@"软件内部错误"
+                                   message:@"因为某种未知的原因，找不到播放的资源文件"
+                           isSeparateStyle:NO
+                               btnTitleArr:@[@"确定"]
+                            alertBtnAction:@[@"OK"]
+                              alertVCBlock:^(id data) {
+                    //DIY
+                }];
             }];
-        }];
-        
-        ///点击事件回调 参数1：self CustomerAVPlayerView，参数2：手势 UITapGestureRecognizer & UISwipeGestureRecognizer
-        [_AVPlayerView actionCustomerAVPlayerBlock:^(id data,
-                                                     id data2) {
-            @strongify(self)
-            if ([data2 isKindOfClass:UITapGestureRecognizer.class]) {
-                NSLog(@"你点击了我");
-            }else if ([data2 isKindOfClass:UISwipeGestureRecognizer.class]){
-                if ([data isKindOfClass:CustomerAVPlayerView.class]) {
-                    CustomerAVPlayerView *view = (CustomerAVPlayerView *)data;
-                    if ([view.vc isEqual:self]) {
-                        if (self.navigationController) {
-                            [self.navigationController popViewControllerAnimated:YES];
-                        }else{
-                            [self dismissViewControllerAnimated:YES
-                                                     completion:^{
-                                
-                            }];
+            
+            ///点击事件回调 参数1：self CustomerAVPlayerView，参数2：手势 UITapGestureRecognizer & UISwipeGestureRecognizer
+            [_AVPlayerView actionCustomerAVPlayerBlock:^(id data,
+                                                         id data2) {
+                @strongify(self)
+                if ([data2 isKindOfClass:UITapGestureRecognizer.class]) {
+                    NSLog(@"你点击了我");
+                }else if ([data2 isKindOfClass:UISwipeGestureRecognizer.class]){
+                    if ([data isKindOfClass:CustomerAVPlayerView.class]) {
+                        CustomerAVPlayerView *view = (CustomerAVPlayerView *)data;
+                        if ([view.vc isEqual:self]) {
+                            if (self.navigationController) {
+                                [self.navigationController popViewControllerAnimated:YES];
+                            }else{
+                                [self dismissViewControllerAnimated:YES
+                                                         completion:^{
+                                    
+                                }];
+                            }
                         }
                     }
+                }else{}
+            }];
+            [self.view addSubview:_AVPlayerView];
+            [self.view.layer addSublayer:_AVPlayerView.playerLayer];
+            [_AVPlayerView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(self.view).offset(SCALING_RATIO(50));
+                make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2));
+                if (self.gk_navigationBar.hidden) {
+                    make.top.equalTo(self.view);
+                }else{
+                    make.top.equalTo(self.gk_navigationBar.mas_bottom);
                 }
-            }else{}
-        }];
-        [self.view addSubview:_AVPlayerView];
-        [self.view.layer addSublayer:_AVPlayerView.playerLayer];
-        [_AVPlayerView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.view).offset(SCALING_RATIO(50));
-            make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2));
-            if (self.gk_navigationBar.hidden) {
-                make.top.equalTo(self.view);
-            }else{
-                make.top.equalTo(self.gk_navigationBar.mas_bottom);
-            }
-        }];
+            }];
+        }else{
+            NSLog(@"文件资源查找失败,播放终止");
+            _AVPlayerView = nil;
+        }
     }return _AVPlayerView;
 }
 
