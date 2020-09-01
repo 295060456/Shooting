@@ -29,6 +29,7 @@
     }
     UINavigationController *navigationController = (UINavigationController *)tabC.lzb_selectedViewController;
     return navigationController;
+    #pragma clang diagnostic pop
 }
 
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
