@@ -35,6 +35,8 @@
 		C572A27F24FBDEF2000A1687 /* 播放@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C572A27D24FBDEF2000A1687 /* 播放@2x.png */; };
 		C572A28024FBDEF2000A1687 /* 播放@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C572A27E24FBDEF2000A1687 /* 播放@3x.png */; };
 		C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A28224FBE933000A1687 /* UIImage+Tailor.m */; };
+		C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */ = {isa = PBXBuildFile; fileRef = C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */; };
+		C572A2A824FDFA71000A1687 /* CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A2A524FDFA71000A1687 /* CountDownBtn.m */; };
 		C58F001224EA36F800B6D09C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001124EA36F800B6D09C /* AppDelegate.m */; };
 		C58F001524EA36F800B6D09C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001424EA36F800B6D09C /* SceneDelegate.m */; };
 		C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58F001924EA36F800B6D09C /* Main.storyboard */; };
@@ -358,6 +360,9 @@
 		C572A27E24FBDEF2000A1687 /* 播放@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "播放@3x.png"; sourceTree = "<group>"; };
 		C572A28124FBE933000A1687 /* UIImage+Tailor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tailor.h"; sourceTree = "<group>"; };
 		C572A28224FBE933000A1687 /* UIImage+Tailor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tailor.m"; sourceTree = "<group>"; };
+		C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "验证码按钮单例封装"; sourceTree = "<group>"; };
+		C572A2A524FDFA71000A1687 /* CountDownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownBtn.m; sourceTree = "<group>"; };
+		C572A2A624FDFA71000A1687 /* CountDownBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownBtn.h; sourceTree = "<group>"; };
 		C58F000D24EA36F800B6D09C /* Shooting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58F001024EA36F800B6D09C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C58F001124EA36F800B6D09C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -933,6 +938,7 @@
 		C561618324EE4C72001CD851 /* 拍照 */ = {
 			isa = PBXGroup;
 			children = (
+				C572A2A324FDFA67000A1687 /* 💰VerifyCodeButton */,
 				C561618524EE4C87001CD851 /* 拍摄 */,
 				C561618424EE4C7F001CD851 /* 上传 */,
 				C561619B24EE4CB7001CD851 /* PhotoVC.h */,
@@ -1023,6 +1029,16 @@
 				C56161B924EE4F43001CD851 /* JhtBannerCardView.m */,
 			);
 			path = JhtBannerCardView;
+			sourceTree = "<group>";
+		};
+		C572A2A324FDFA67000A1687 /* 💰VerifyCodeButton */ = {
+			isa = PBXGroup;
+			children = (
+				C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */,
+				C572A2A624FDFA71000A1687 /* CountDownBtn.h */,
+				C572A2A524FDFA71000A1687 /* CountDownBtn.m */,
+			);
+			path = "💰VerifyCodeButton";
 			sourceTree = "<group>";
 		};
 		C58F000424EA36F800B6D09C = {
@@ -2365,6 +2381,7 @@
 				C572A27724FBC6E4000A1687 /* unsure@3x.png in Resources */,
 				C58F01C024EA5E5E00B6D09C /* 带有按键音的按钮 in Resources */,
 				C58F047D24EBD78500B6D09C /* day_like_red@3x.png in Resources */,
+				C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */,
 				C58F047E24EBD78500B6D09C /* spark_red@2x.png in Resources */,
 				C58F048024EBD78500B6D09C /* spark_red.png in Resources */,
 				C572A27624FBC6E4000A1687 /* unsure@2x.png in Resources */,
@@ -2735,6 +2752,7 @@
 				C59D9AED24F8F08500A74CE9 /* ZZCountingLabel.m in Sources */,
 				C58F00E324EA581F00B6D09C /* BRResultModel.m in Sources */,
 				C58F02A924EA61C600B6D09C /* LOTShapeTransform.m in Sources */,
+				C572A2A824FDFA71000A1687 /* CountDownBtn.m in Sources */,
 				C58F029524EA61C600B6D09C /* LOTShapeCircle.m in Sources */,
 				C58F029724EA61C600B6D09C /* LOTShapeStroke.m in Sources */,
 				C58F029E24EA61C600B6D09C /* LOTStrokeRenderer.m in Sources */,
