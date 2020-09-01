@@ -755,7 +755,6 @@
 		C58F032924EA69D400B6D09C /* ViewController@2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController@2.m"; sourceTree = "<group>"; };
 		C58F032A24EA69D400B6D09C /* ViewController@4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController@4.m"; sourceTree = "<group>"; };
 		C58F032B24EA69D400B6D09C /* ViewController@3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController@3.m"; sourceTree = "<group>"; };
-		C58F032C24EA69D400B6D09C /* ViewController@1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController@1.h"; sourceTree = "<group>"; };
 		C58F032D24EA69D400B6D09C /* ViewController@5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController@5.h"; sourceTree = "<group>"; };
 		C58F032E24EA69D400B6D09C /* ViewController@3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController@3.h"; sourceTree = "<group>"; };
 		C58F032F24EA69D400B6D09C /* ViewController@4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController@4.h"; sourceTree = "<group>"; };
@@ -835,6 +834,7 @@
 		C5A46C0524EFB6E800158D1E /* LZBTabBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarDelegate.h; sourceTree = "<group>"; };
 		C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBarItem.m; sourceTree = "<group>"; };
 		C5A46C0924EFB6E900158D1E /* LZBTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarItem.h; sourceTree = "<group>"; };
+		C5C67C4324FE382C000A26B8 /* ViewController@1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController@1.h"; sourceTree = "<group>"; };
 		CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shooting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -921,7 +921,7 @@
 		C55497AD24F3A3A20065510D /* OtherVC */ = {
 			isa = PBXGroup;
 			children = (
-				C58F032C24EA69D400B6D09C /* ViewController@1.h */,
+				C5C67C4324FE382C000A26B8 /* ViewController@1.h */,
 				C58F033024EA69D400B6D09C /* ViewController@1.m */,
 				C58F032824EA69D400B6D09C /* ViewController@2.h */,
 				C58F032924EA69D400B6D09C /* ViewController@2.m */,
