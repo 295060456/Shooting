@@ -11,7 +11,6 @@
 @interface StartOrPauseBtn ()<UIGestureRecognizerDelegate>
 
 @property(nonatomic,strong)UITapGestureRecognizer *tapGR;
-@property(nonatomic,assign)BOOL isClickStartOrPauseBtn;
 @property(nonatomic,copy)MKDataBlock tapGRHandleSingleFingerActionBlock;
 @property(nonatomic,copy)MKDataBlock startOrPauseBtnBlock;
 @property(nonatomic,copy)MKDataBlock finishWorkBlock;
@@ -25,9 +24,6 @@
 
 - (void)dealloc {
     NSLog(@"Running self.class = %@;NSStringFromSelector(_cmd) = '%@';__FUNCTION__ = %s", self.class, NSStringFromSelector(_cmd),__FUNCTION__);
-    [_mytimer invalidate];
-    //别忘了把定时器置为nil,否则定时器依然没有释放掉的
-    _mytimer = nil;
 }
 
 -(instancetype)init{
@@ -42,21 +38,42 @@
     }return self;
 }
 
+-(void)makeTimer{
+    //创建方式——1
+    //    [NSTimerManager nsTimeStart:self.nsTimerManager.nsTimer
+    //                    withRunLoop:nil];
+    //创建方式——2
+    [self.nsTimerManager nsTimeStartSysAutoInRunLoop];
+}
+
 -(void)mytimerAction{
     self.currentTime += 1;
     self.progressView.progressLabel.placeStr = @"录制中";
     NSLog(@"KKK = %f",self.currentTime);
     self.progressView.progress = self.currentTime / self.time;
-    if (self.progressView.progress == 1.0) {
-        [self.mytimer invalidate];
-        _mytimer = nil;
-        [MBProgressHUD wj_showPlainText:@"录制结束"
-                                   view:getMainWindow()];
-        if (self.finishWorkBlock) {
-            self.finishWorkBlock(@1);
-        }
-        [self reset];
-    }
+}
+
+-(NSTimerManager *)nsTimerManager{
+    if (!_nsTimerManager) {
+        _nsTimerManager = NSTimerManager.new;
+        _nsTimerManager.timerStyle = TimerStyle_anticlockwise;
+        _nsTimerManager.anticlockwiseTime = self.time;
+        [_nsTimerManager actionNSTimerManagerRunningBlock:^(id data) {
+            if ([data isKindOfClass:NSTimerManager.class]) {
+                [self mytimerAction];
+            }
+        }];
+        @weakify(self)
+        [_nsTimerManager actionNSTimerManagerFinishBlock:^(id data) {
+            @strongify(self)
+            [MBProgressHUD wj_showPlainText:@"录制结束"
+                                       view:getMainWindow()];
+            if (self.finishWorkBlock) {
+                self.finishWorkBlock(@1);
+            }
+            [self reset];
+        }];
+    }return _nsTimerManager;
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches
@@ -75,8 +92,6 @@
     self.progressView.progressLabel.placeStr = @"录制";
     
     self.backgroundColor = kBlueColor;
-    [_mytimer invalidate];
-    _mytimer = nil;
     
     self.currentTime = 0;
     self.progressView.increaseFromLast = NO;
@@ -89,10 +104,10 @@
 -(void)tapGRUI:(BOOL)isClick{
     self.isClickStartOrPauseBtn = isClick;//外界调用的时候，会不一致，这里进行补齐
     if (isClick) {
-        if (!_mytimer) {
+        if (!_nsTimerManager.nsTimer) {
             //启动 开始录制
             self.shottingStatus = ShottingStatus_on;
-            [self.mytimer fire];
+            [self makeTimer];
             [MBProgressHUD wj_showPlainText:@"开始录制"
                                        view:getMainWindow()];
         }else{
@@ -100,7 +115,7 @@
             self.shottingStatus = ShottingStatus_continue;
             [MBProgressHUD wj_showPlainText:@"继续录制"
                                        view:getMainWindow()];
-            [self.mytimer setFireDate:[NSDate date]];
+            [NSTimerManager nsTimecontinue:self.nsTimerManager.nsTimer];
         }
         self.progressView.progressLabel.placeStr = @"录制中";
         self.backgroundColor = kRedColor;
@@ -108,11 +123,24 @@
     }else{
         //暂停录制
         self.shottingStatus = ShottingStatus_suspend;
-        [self.mytimer setFireDate:[NSDate distantFuture]];
+        [NSTimerManager nsTimePause:self.nsTimerManager.nsTimer];
         
         self.progressView.progressLabel.placeStr = @"已暂停";
         self.backgroundColor = KGreenColor;
         _progressView.pathFillColor = kRedColor;
+    }
+}
+#pragma mark —— UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    return YES;
+}
+#pragma mark —— 点击事件
+-(void)tapGRHandleSingleFingerAction:(UITapGestureRecognizer *_Nullable)sender{
+    self.isClickStartOrPauseBtn = !self.isClickStartOrPauseBtn;
+    [self tapGRUI:self.isClickStartOrPauseBtn];
+    //在外面启用GPUImage事件
+    if (self.startOrPauseBtnBlock) {
+        self.startOrPauseBtnBlock(self);
     }
 }
 
@@ -128,20 +156,6 @@
 
 -(void)actionStartOrPauseBtnBlock:(MKDataBlock)startOrPauseBtnBlock{
     self.startOrPauseBtnBlock = startOrPauseBtnBlock;
-}
-#pragma mark —— UIGestureRecognizerDelegate
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
-    return YES;
-}
-#pragma mark —— 点击事件
--(void)tapGRHandleSingleFingerAction:(UITapGestureRecognizer *_Nullable)sender{
-    self.isClickStartOrPauseBtn = !self.isClickStartOrPauseBtn;
-    //UI部分
-    [self tapGRUI:self.isClickStartOrPauseBtn];
-    //外面启用GPUImage事件
-    if (self.startOrPauseBtnBlock) {
-        self.startOrPauseBtnBlock(@(self.shottingStatus));
-    }
 }
 #pragma mark —— lazyLoad
 -(UITapGestureRecognizer *)tapGR{//单击一下
@@ -171,16 +185,6 @@
             make.edges.equalTo(self);
         }];
     }return _progressView;
-}
-
--(NSTimer *)mytimer{
-    if (!_mytimer) {
-        _mytimer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                    target:self
-                                                  selector:@selector(mytimerAction)
-                                                  userInfo:nil
-                                                   repeats:YES];
-    }return _mytimer;
 }
 
 -(CGFloat)time{

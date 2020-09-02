@@ -26,6 +26,7 @@
 #import "JhtBannerView.h"
 #import "ZZCircleProgress.h"
 #import "TimerManager.h"
+#import "MovieCountDown.h"
 
 #pragma mark —— 以下是自定义的
 #import "ToolMacro.h"

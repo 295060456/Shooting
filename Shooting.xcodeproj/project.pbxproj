@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		063BD15EB981BAEE23911AF2 /* Pods_Shooting_ShootingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2871C6CC92ACB94D4642EEC /* Pods_Shooting_ShootingUITests.framework */; };
 		7F96368156DDD0B899DCFEA0 /* Pods_Shooting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */; };
+		C52EE27124FF647D0033CD47 /* 倒计时 开启状态@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52EE26D24FF647C0033CD47 /* 倒计时 开启状态@2x.png */; };
+		C52EE27224FF647D0033CD47 /* 倒计时 关闭状态@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52EE26E24FF647C0033CD47 /* 倒计时 关闭状态@2x.png */; };
+		C52EE27324FF647D0033CD47 /* 倒计时 关闭状态@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52EE26F24FF647D0033CD47 /* 倒计时 关闭状态@3x.png */; };
+		C52EE27424FF647D0033CD47 /* 倒计时 开启状态@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52EE27024FF647D0033CD47 /* 倒计时 开启状态@3x.png */; };
 		C55497A424F38CDB0065510D /* MKShootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A324F38CDB0065510D /* MKShootVC.m */; };
 		C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A624F38D9C0065510D /* AVFounationTools.m */; };
 		C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A924F3A1F00065510D /* GPUImageTools.m */; };
@@ -318,6 +322,10 @@
 		8EF824CCB3C797C08F0AA84C /* Pods-ShootingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingTests.release.xcconfig"; path = "Target Support Files/Pods-ShootingTests/Pods-ShootingTests.release.xcconfig"; sourceTree = "<group>"; };
 		975BB3BDBE4F3C4E85B6606A /* Pods-Shooting-ShootingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shooting-ShootingUITests.release.xcconfig"; path = "Target Support Files/Pods-Shooting-ShootingUITests/Pods-Shooting-ShootingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B2871C6CC92ACB94D4642EEC /* Pods_Shooting_ShootingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shooting_ShootingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52EE26D24FF647C0033CD47 /* 倒计时 开启状态@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倒计时 开启状态@2x.png"; sourceTree = "<group>"; };
+		C52EE26E24FF647C0033CD47 /* 倒计时 关闭状态@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倒计时 关闭状态@2x.png"; sourceTree = "<group>"; };
+		C52EE26F24FF647D0033CD47 /* 倒计时 关闭状态@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倒计时 关闭状态@3x.png"; sourceTree = "<group>"; };
+		C52EE27024FF647D0033CD47 /* 倒计时 开启状态@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倒计时 开启状态@3x.png"; sourceTree = "<group>"; };
 		C55497A224F38CDB0065510D /* MKShootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKShootVC.h; sourceTree = "<group>"; };
 		C55497A324F38CDB0065510D /* MKShootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKShootVC.m; sourceTree = "<group>"; };
 		C55497A524F38D9C0065510D /* AVFounationTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVFounationTools.h; sourceTree = "<group>"; };
@@ -2280,6 +2288,10 @@
 			isa = PBXGroup;
 			children = (
 				C59D9AFA24F9044A00A74CE9 /* 闪光灯 */,
+				C52EE26E24FF647C0033CD47 /* 倒计时 关闭状态@2x.png */,
+				C52EE26F24FF647D0033CD47 /* 倒计时 关闭状态@3x.png */,
+				C52EE26D24FF647C0033CD47 /* 倒计时 开启状态@2x.png */,
+				C52EE27024FF647D0033CD47 /* 倒计时 开启状态@3x.png */,
 				C572A27D24FBDEF2000A1687 /* 播放@2x.png */,
 				C572A27E24FBDEF2000A1687 /* 播放@3x.png */,
 				C58F03CC24EA789100B6D09C /* 翻转镜头@2x.png */,
@@ -2461,6 +2473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C572A27724FBC6E4000A1687 /* unsure@3x.png in Resources */,
+				C52EE27324FF647D0033CD47 /* 倒计时 关闭状态@3x.png in Resources */,
 				C58F01C024EA5E5E00B6D09C /* 带有按键音的按钮 in Resources */,
 				C58F047D24EBD78500B6D09C /* day_like_red@3x.png in Resources */,
 				C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */,
@@ -2471,12 +2484,14 @@
 				C58F03CE24EA789100B6D09C /* 翻转镜头@2x.png in Resources */,
 				C58F03A924EA6E7600B6D09C /* ShoppingCart@3x.png in Resources */,
 				C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */,
+				C52EE27224FF647D0033CD47 /* 倒计时 关闭状态@2x.png in Resources */,
 				C59D9B0124F9045E00A74CE9 /* 闪光灯@2x.png in Resources */,
 				C58F047F24EBD78500B6D09C /* day_like@3x.png in Resources */,
 				C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */,
 				C59D9B0324F9045E00A74CE9 /* 闪光灯-关闭@3x.png in Resources */,
 				C58F03AB24EA6E7600B6D09C /* MyStore@2x.png in Resources */,
 				C58F03A824EA6E7600B6D09C /* Home@3x.png in Resources */,
+				C52EE27424FF647D0033CD47 /* 倒计时 开启状态@3x.png in Resources */,
 				C58F03B824EA6F0700B6D09C /* green_lottie_tab_discover.json in Resources */,
 				C58F03AC24EA6E7600B6D09C /* My@3x.png in Resources */,
 				C59D9AA724F8C79500A74CE9 /* video.gif in Resources */,
@@ -2487,6 +2502,7 @@
 				C572A27F24FBDEF2000A1687 /* 播放@2x.png in Resources */,
 				C58F03AD24EA6E7600B6D09C /* MyStore@3x.png in Resources */,
 				C58F002324EA36FA00B6D09C /* LaunchScreen.storyboard in Resources */,
+				C52EE27124FF647D0033CD47 /* 倒计时 开启状态@2x.png in Resources */,
 				C58F010B24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */,
 				C58F018224EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton in Resources */,
 				C59D9B1C24F9083200A74CE9 /* sure@2x.png in Resources */,

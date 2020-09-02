@@ -74,7 +74,7 @@
 #pragma mark —— GPUImageVideoCameraDelegate
 //实时每一帧的截取 滚动发出
 - (void)willOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer{
-    NSLog(@"实时每一帧的截取 滚动发出");
+//    NSLog(@"实时每一帧的截取 滚动发出");
 }
 #pragma mark —— 开始录制
 -(void)vedioShoottingOn{

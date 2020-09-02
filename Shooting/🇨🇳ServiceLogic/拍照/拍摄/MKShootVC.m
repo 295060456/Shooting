@@ -9,7 +9,9 @@
 #import "MKShootVC.h"
 #import "GPUImageTools.h"
 #import "CustomerGPUImagePlayerVC.h"//视频预览 VC
+
 #import "MyCell.h"
+#import "MovieCountDown.h"
 
 #import "MKShootVC+VM.h"
 
@@ -18,6 +20,7 @@
 #pragma mark —— UI
 @property(nonatomic,strong)UIButton *overturnBtn;//镜头翻转
 @property(nonatomic,strong)UIButton *flashLightBtn;//闪光灯
+@property(nonatomic,strong)UIButton *countDownBtn;//开始录制的时候是否允许有倒计时;默认无
 @property(nonatomic,strong)UIButton *deleteFilmBtn;//删除视频
 @property(nonatomic,strong)UIButton *sureFilmBtn;//保存视频
 @property(nonatomic,strong)UIButton *previewBtn;
@@ -102,8 +105,8 @@
     
     self.gk_navLeftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.backBtnCategory];
     self.gk_navRightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.flashLightBtn],
-                                       [[UIBarButtonItem alloc] initWithCustomView:self.overturnBtn]];
-    
+                                       [[UIBarButtonItem alloc] initWithCustomView:self.overturnBtn],
+                                       [[UIBarButtonItem alloc] initWithCustomView:self.countDownBtn]];
     self.gk_navTitle = @"";
     [self hideNavLine];
 
@@ -151,6 +154,7 @@
 #pragma mark —— 点击事件
 //翻转摄像头
 -(void)overturnBtnClickEvent:(UIButton *)sender{
+    sender.selected = !sender.selected;
     [self.gpuImageTools overturnCamera];
 }
 //开启闪光灯
@@ -189,6 +193,10 @@
 -(void)previewBtnClickEvent:(UIButton *)sender{
     //值得注意：想要预览视频必须写文件。因为GPUImageMovieWriter在做合成动作之前，没有把音频流和视频流进行整合，碎片化的信息文件不能称之为一个完整的视频文件
     [self.gpuImageTools vedioShoottingEnd];
+}
+//倒计时
+-(void)countDownBtnClickEvent:(UIButton *)sender{
+    sender.selected = !sender.selected;
 }
 
 -(void)sureFilmBtnClickEvent:(UIButton *)sender{
@@ -487,6 +495,19 @@
                          action:@selector(flashLightBtnClickEvent:)
                forControlEvents:UIControlEventTouchUpInside];
     }return _flashLightBtn;
+}
+
+-(UIButton *)countDownBtn{
+    if (!_countDownBtn) {
+        _countDownBtn = UIButton.new;
+        [_countDownBtn setImage:kIMG(@"倒计时 关闭状态")
+                       forState:UIControlStateNormal];
+        [_countDownBtn setImage:kIMG(@"倒计时 开启状态")
+                       forState:UIControlStateSelected];
+        [_countDownBtn addTarget:self
+                          action:@selector(countDownBtnClickEvent:)
+                forControlEvents:UIControlEventTouchUpInside];
+    }return _countDownBtn;
 }
 
 -(UIButton *)previewBtn{
