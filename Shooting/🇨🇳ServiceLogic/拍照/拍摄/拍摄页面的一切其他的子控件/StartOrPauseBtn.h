@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)CGFloat currentTime;//已经录了多少秒
 @property(nonatomic,assign)CGFloat safetyTime;//小于等于这个时间点的录制的视频不允许被保存，而是应该被遗弃
 @property(nonatomic,assign)BOOL isClickStartOrPauseBtn;
+@property(nonatomic,assign)BOOL isCountDown;
 
 #pragma mark —— 链接性质的Block方法
 -(void)actionFinishWorkBlock:(MKDataBlock)finishWorkBlock;
@@ -38,6 +39,17 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)tapGRHandleSingleFingerAction:(UITapGestureRecognizer *_Nullable)sender;//点击事件
 -(void)tapGRUI:(BOOL)isClick;
 -(void)reset;
+
+#pragma mark —— 开始录制
+-(void)vedioShoottingOn;
+#pragma mark —— 结束录制
+-(void)vedioShoottingEnd;
+#pragma mark —— 暂停录制
+-(void)vedioShoottingSuspend;
+#pragma mark —— 继续录制
+-(void)vedioShoottingContinue;
+#pragma mark —— 取消录制
+-(void)vedioShoottingOff;
 
 @end
 

@@ -27,6 +27,7 @@
 @property(nonatomic,strong)UIView *indexView;
 @property(nonatomic,strong)JhtBannerView *bannerView;
 @property(nonatomic,strong)CustomerAVPlayerView *AVPlayerView;
+@property(nonatomic,strong)MovieCountDown *movieCountDown;
 
 @property(nonatomic,assign)CGFloat safetyTime;//小于等于这个时间点的录制的视频不允许被保存，而是应该被遗弃
 @property(nonatomic,assign)CGFloat __block time;
@@ -197,6 +198,7 @@
 //倒计时
 -(void)countDownBtnClickEvent:(UIButton *)sender{
     sender.selected = !sender.selected;
+    self.recordBtn.isCountDown = sender.selected;
 }
 
 -(void)sureFilmBtnClickEvent:(UIButton *)sender{
@@ -347,14 +349,15 @@
         //点击后的录制状态回调 是录制还是没录制
         [_recordBtn actionStartOrPauseBtnBlock:^(id data) {
             @strongify(self)
-            if ([data isKindOfClass:NSNumber.class]) {
-                NSNumber *num = (NSNumber *)data;
-                switch (num.intValue) {
+            if ([data isKindOfClass:StartOrPauseBtn.class]) {
+                StartOrPauseBtn *btn = (StartOrPauseBtn *)data;
+                switch (btn.shottingStatus) {
                     case ShottingStatus_on:{//开始录制
-                        [self.gpuImageTools vedioShoottingOn];
-                        self.deleteFilmBtn.alpha = 0;
-                        self.sureFilmBtn.alpha = 0;
-                        self.previewBtn.alpha = 0;
+                        if (self.countDownBtn.selected) {
+                            [self.movieCountDown 倒计时放大特效];
+                        }else{
+                            [self 开始录制];
+                        }
                     }break;
                     case ShottingStatus_suspend:{//暂停录制
                         [self.gpuImageTools vedioShoottingSuspend];
@@ -362,14 +365,15 @@
                         self.sureFilmBtn.alpha = 1;
                     }break;
                     case ShottingStatus_continue:{//继续录制
-                        [self.gpuImageTools vedioShoottingContinue];
-                        self.deleteFilmBtn.alpha = 0;
-                        self.sureFilmBtn.alpha = 0;
-                        self.previewBtn.alpha = 0;
+                        if (self.countDownBtn.selected) {
+                            [self.movieCountDown 倒计时放大特效];
+                        }else{
+                            [self 继续录制];
+                        }
                     }break;
-//                    case ShottingStatus_off:{//取消录制
-//                        [self.gpuImageTools vedioShoottingOff];
-//                    }break;
+    //                    case ShottingStatus_off:{//取消录制
+    //                        [self.gpuImageTools vedioShoottingOff];
+    //                    }break;
                     default:
                         break;
                 }
@@ -380,6 +384,22 @@
             [self.gpuImageTools vedioShoottingEnd];
         }];
     }return _recordBtn;
+}
+
+-(void)开始录制{
+    [self.gpuImageTools vedioShoottingOn];
+    self.deleteFilmBtn.alpha = 0;
+    self.sureFilmBtn.alpha = 0;
+    self.previewBtn.alpha = 0;
+    [self.recordBtn vedioShoottingOn];
+}
+
+-(void)继续录制{
+    [self.gpuImageTools vedioShoottingContinue];
+    self.deleteFilmBtn.alpha = 0;
+    self.sureFilmBtn.alpha = 0;
+    self.previewBtn.alpha = 0;
+    [self.recordBtn vedioShoottingContinue];
 }
 
 -(GPUImageTools *)gpuImageTools{
@@ -709,6 +729,14 @@
     }return _AVPlayerView;
 }
 
-
+-(MovieCountDown *)movieCountDown{
+    if (!_movieCountDown) {
+        _movieCountDown = MovieCountDown.new;
+        _movieCountDown.effectView = self.view;
+        [_movieCountDown actionMovieCountDownFinishBlock:^(id data) {
+            NSLog(@"我死球了");
+        }];
+    }return _movieCountDown;
+}
 
 @end

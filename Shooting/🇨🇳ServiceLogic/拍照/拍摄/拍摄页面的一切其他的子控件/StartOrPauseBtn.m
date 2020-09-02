@@ -40,16 +40,16 @@
 
 -(void)makeTimer{
     //创建方式——1
-    //    [NSTimerManager nsTimeStart:self.nsTimerManager.nsTimer
-    //                    withRunLoop:nil];
+    [NSTimerManager nsTimeStart:self.nsTimerManager.nsTimer
+                    withRunLoop:NSRunLoop.currentRunLoop];
     //创建方式——2
-    [self.nsTimerManager nsTimeStartSysAutoInRunLoop];
+//    [self.nsTimerManager nsTimeStartSysAutoInRunLoop];
 }
 
 -(void)mytimerAction{
     self.currentTime += 1;
     self.progressView.progressLabel.placeStr = @"录制中";
-    NSLog(@"KKK = %f",self.currentTime);
+    NSLog(@"KKKS = %f",self.currentTime);
     self.progressView.progress = self.currentTime / self.time;
 }
 
@@ -58,12 +58,13 @@
         _nsTimerManager = NSTimerManager.new;
         _nsTimerManager.timerStyle = TimerStyle_anticlockwise;
         _nsTimerManager.anticlockwiseTime = self.time;
+        @weakify(self)
         [_nsTimerManager actionNSTimerManagerRunningBlock:^(id data) {
+            @strongify(self)
             if ([data isKindOfClass:NSTimerManager.class]) {
                 [self mytimerAction];
             }
         }];
-        @weakify(self)
         [_nsTimerManager actionNSTimerManagerFinishBlock:^(id data) {
             @strongify(self)
             [MBProgressHUD wj_showPlainText:@"录制结束"
@@ -101,33 +102,57 @@
     self.progressView.increaseFromLast = YES;
 }
 
+#pragma mark —— 开始录制
+-(void)vedioShoottingOn{
+    [self makeTimer];
+    [MBProgressHUD wj_showPlainText:@"开始录制"
+                               view:getMainWindow()];
+    self.progressView.progressLabel.placeStr = @"录制中";
+    self.backgroundColor = kRedColor;
+    _progressView.pathFillColor = kBlueColor;
+}
+#pragma mark —— 结束录制
+-(void)vedioShoottingEnd{}
+#pragma mark —— 暂停录制
+-(void)vedioShoottingSuspend{
+    [NSTimerManager nsTimePause:self.nsTimerManager.nsTimer];
+    
+    self.progressView.progressLabel.placeStr = @"已暂停";
+    self.backgroundColor = KGreenColor;
+    _progressView.pathFillColor = kRedColor;
+}
+#pragma mark —— 继续录制
+-(void)vedioShoottingContinue{
+    [MBProgressHUD wj_showPlainText:@"继续录制"
+                               view:getMainWindow()];
+    [NSTimerManager nsTimecontinue:self.nsTimerManager.nsTimer];
+    self.progressView.progressLabel.placeStr = @"录制中";
+    self.backgroundColor = kRedColor;
+    _progressView.pathFillColor = kBlueColor;
+}
+#pragma mark —— 取消录制
+-(void)vedioShoottingOff{}
+//只管状态
 -(void)tapGRUI:(BOOL)isClick{
     self.isClickStartOrPauseBtn = isClick;//外界调用的时候，会不一致，这里进行补齐
     if (isClick) {
         if (!_nsTimerManager.nsTimer) {
             //启动 开始录制
             self.shottingStatus = ShottingStatus_on;
-            [self makeTimer];
-            [MBProgressHUD wj_showPlainText:@"开始录制"
-                                       view:getMainWindow()];
+            if (!self.isCountDown) {
+                [self vedioShoottingOn];
+            }
         }else{
             //继续录制
             self.shottingStatus = ShottingStatus_continue;
-            [MBProgressHUD wj_showPlainText:@"继续录制"
-                                       view:getMainWindow()];
-            [NSTimerManager nsTimecontinue:self.nsTimerManager.nsTimer];
+            if (!self.isCountDown) {
+                [self vedioShoottingContinue];
+            }
         }
-        self.progressView.progressLabel.placeStr = @"录制中";
-        self.backgroundColor = kRedColor;
-        _progressView.pathFillColor = kBlueColor;
     }else{
         //暂停录制
         self.shottingStatus = ShottingStatus_suspend;
-        [NSTimerManager nsTimePause:self.nsTimerManager.nsTimer];
-        
-        self.progressView.progressLabel.placeStr = @"已暂停";
-        self.backgroundColor = KGreenColor;
-        _progressView.pathFillColor = kRedColor;
+        [self vedioShoottingSuspend];
     }
 }
 #pragma mark —— UIGestureRecognizerDelegate
@@ -197,6 +222,10 @@
     if (_safetyTime == 0.0f) {
         _safetyTime = 30.0f;
     }return _safetyTime;
+}
+
+-(void)setIsCountDown:(BOOL)isCountDown{
+    _isCountDown = isCountDown;
 }
 
 //-(UILongPressGestureRecognizer *)longPressGR{//长按
