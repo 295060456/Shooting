@@ -647,17 +647,6 @@
     }return _time;
 }
 
-- (NSArray *)getData{
-    return @[
-      @{@"name":@"拍 3 分钟",
-        @"time":@"180"},
-      @{@"name":@"拍 5 分钟",
-        @"time":@"300"},
-      @{@"name":@"拍 1 分钟",
-        @"time":@"60"}
-      ];
-}
-
 -(NSArray *)timeArr{
     if (!_timeArr) {
         _timeArr = @[@"拍摄 1 分钟",

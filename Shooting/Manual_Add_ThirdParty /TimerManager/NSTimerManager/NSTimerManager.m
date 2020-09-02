@@ -39,7 +39,7 @@
 ///定时器继续
 +(void)nsTimecontinue:(NSTimer *)nsTimer{
     if (nsTimer) {
-        [nsTimer setFireDate:NSDate.date];
+        [nsTimer setFireDate:NSDate.distantPast];
     }
 }
 ///销毁定时器
@@ -57,7 +57,7 @@
             runLoop = NSRunLoop.mainRunLoop;
         }
         [runLoop addTimer:nsTimer
-                  forMode:NSDefaultRunLoopMode];
+                  forMode:NSRunLoopCommonModes];
     }else{
          NSAssert(0,@"属性 nsTimer 没有被成功创建,请检查");
     }
@@ -87,7 +87,7 @@
 /*
 *   scheduledTimerWithTimeInterval相比它的小伙伴们不仅仅是创建了NSTimer对象,
 *   还把该对象加入到了当前的runloop中
-*   runloop的模式为默认模式（NSDefaultRunLoopMode）!
+*   runloop的模式为默认模式（NSRunLoopCommonModes）!
 *   NSTimer只有被加入到runloop, 才会生效, 即NSTimer才会被真正执行
 */
 
@@ -222,8 +222,9 @@
 }
 
 -(id)target{
+    @weakify(self)
     if (!_target) {
-        _target = self;
+        _target = weak_self;
     }return _target;
 }
 
