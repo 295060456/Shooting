@@ -107,10 +107,6 @@ UITextViewDelegate
     self.isClickMKUploadingVCView = !self.isClickMKUploadingVCView;
     [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = !self.isClickMKUploadingVCView;
 }
-
--(void)actionMKUploadingBlock:(MKDataBlock)MKUploadingBlock{
-    self.MKUploadingBlock = MKUploadingBlock;
-}
 #pragma mark —— 点击事件
 -(void)releaseBtnClickEvent:(UIButton *)sender{
     if (btn.selected &&
