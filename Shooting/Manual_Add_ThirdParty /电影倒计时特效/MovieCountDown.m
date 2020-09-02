@@ -41,18 +41,15 @@
 }
 
 -(void)secountDown{
-    if (self.effectView) {
-        self.countDown.alpha = 1;
-        self.aphView.alpha = 1;
-    }else{
+    if (!self.effectView) {
         NSAssert(0,@"检查属性 effectView 不能为空");
     }
 }
 
 -(void)getCuntDown:(NSInteger)second{
-    _countDown.text = [NSString stringWithFormat:@"%ld",(long)second];
-    _countDown.alpha = 1;
-    _aphView.alpha = 0;
+    self.countDown.text = [NSString stringWithFormat:@"%ld",(long)second];
+    self.countDown.alpha = 1;
+    self.aphView.alpha = 0;
     @weakify(self)
     [UIView animateWithDuration:0.8
                      animations:^{

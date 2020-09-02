@@ -732,6 +732,8 @@
 -(MovieCountDown *)movieCountDown{
     if (!_movieCountDown) {
         _movieCountDown = MovieCountDown.new;
+        _movieCountDown.countDownTextColor = kBlueColor;
+        _movieCountDown.aphViewBackgroundColor = KLightGrayColor;
         _movieCountDown.effectView = self.view;
         @weakify(self)
         [_movieCountDown actionMovieCountDownFinishBlock:^(id data) {
