@@ -25,6 +25,7 @@
 #import "ShowAvailableFont.h"//打印全员字体
 #import "JhtBannerView.h"
 #import "ZZCircleProgress.h"
+#import "TimerManager.h"
 
 #pragma mark —— 以下是自定义的
 #import "ToolMacro.h"
@@ -33,14 +34,16 @@
 #import "NSArray+Extension.h"
 #import "NSArray+Extend.h"
 #import "NSString+Extras.h"
-#import "NSObject+Measure.h"
-#import "UIView+Extras.h"
+
 #import "UIButton+Block.h"
+
 #import "UIColor+Hex.h"
 #import "NSObject+Extras.h"
 #import "NSObject+Time.h"
 #import "NSObject+LBLaunchImage.h"
 #import "NSObject+Random.h"
+#import "NSObject+Measure.h"
+
 #import "UIControl+XY.h"
 #import "UITableViewCell+WhiteArrows.h"
 #import "UIImageView+GIF.h"//UIImageView支持GIF动画 https://github.com/pupboss/UIImageView-GIF
@@ -49,9 +52,13 @@
 #import "UIImage+Overlay.h"
 #import "UIImage+Extras.h"
 #import "UIImage+Tailor.h"
+
 #import "UIView+JHGestureBlock.h"
 #import "UIView+Chain.h"
 #import "UIView+SuspendView.h"
+#import "UIView+Measure.h"
+#import "UIView+Extras.h"
+
 #import "SuspendLab.h"
 #import "suspendBtn.h"
 #import "SuspendView.h"

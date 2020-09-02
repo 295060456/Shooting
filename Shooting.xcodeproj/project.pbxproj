@@ -284,6 +284,12 @@
 		C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFF24EFB6E200158D1E /* LZBTabBarVC.m */; };
 		C5A46C0A24EFB6E900158D1E /* LZBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0424EFB6E800158D1E /* LZBTabBar.m */; };
 		C5A46C0C24EFB6E900158D1E /* LZBTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */; };
+		C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */; };
+		C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9B24FF5D33000A26B8 /* GCD_TimerManager.m */; };
+		C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9D24FF5D3B000A26B8 /* Nanosecond_TimerManager.m */; };
+		C5C67CA224FF5D46000A26B8 /* NSTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA024FF5D46000A26B8 /* NSTimerManager.m */; };
+		C5C67CA824FF5D68000A26B8 /* MovieCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA624FF5D68000A26B8 /* MovieCountDown.m */; };
+		C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */; };
 		D1C77CE50CE1275572271736 /* Pods_ShootingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -835,6 +841,20 @@
 		C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBarItem.m; sourceTree = "<group>"; };
 		C5A46C0924EFB6E900158D1E /* LZBTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarItem.h; sourceTree = "<group>"; };
 		C5C67C4324FE382C000A26B8 /* ViewController@1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController@1.h"; sourceTree = "<group>"; };
+		C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CADisplayLink_TimerManager.m; sourceTree = "<group>"; };
+		C5C67C9824FF5D28000A26B8 /* CADisplayLink_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADisplayLink_TimerManager.h; sourceTree = "<group>"; };
+		C5C67C9A24FF5D33000A26B8 /* GCD_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD_TimerManager.h; sourceTree = "<group>"; };
+		C5C67C9B24FF5D33000A26B8 /* GCD_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCD_TimerManager.m; sourceTree = "<group>"; };
+		C5C67C9D24FF5D3B000A26B8 /* Nanosecond_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nanosecond_TimerManager.m; sourceTree = "<group>"; };
+		C5C67C9E24FF5D3C000A26B8 /* Nanosecond_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nanosecond_TimerManager.h; sourceTree = "<group>"; };
+		C5C67CA024FF5D46000A26B8 /* NSTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerManager.m; sourceTree = "<group>"; };
+		C5C67CA124FF5D46000A26B8 /* NSTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerManager.h; sourceTree = "<group>"; };
+		C5C67CA324FF5D53000A26B8 /* TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerManager.h; sourceTree = "<group>"; };
+		C5C67CA424FF5D53000A26B8 /* TimerManager_DefineStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerManager_DefineStructure.h; sourceTree = "<group>"; };
+		C5C67CA624FF5D68000A26B8 /* MovieCountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCountDown.m; sourceTree = "<group>"; };
+		C5C67CA724FF5D68000A26B8 /* MovieCountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCountDown.h; sourceTree = "<group>"; };
+		C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Measure.m"; sourceTree = "<group>"; };
+		C5C67CAA24FF5D94000A26B8 /* UIView+Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Measure.h"; sourceTree = "<group>"; };
 		CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shooting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1449,12 +1469,14 @@
 		C58F011924EA5CAC00B6D09C /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				C58F011A24EA5CAC00B6D09C /* UIView+Extras.h */,
-				C58F011B24EA5CAC00B6D09C /* UIView+Chain.m */,
-				C58F011C24EA5CAC00B6D09C /* UIView+SuspendView.m */,
 				C58F011D24EA5CAC00B6D09C /* UIView+Chain.h */,
+				C58F011B24EA5CAC00B6D09C /* UIView+Chain.m */,
+				C58F011A24EA5CAC00B6D09C /* UIView+Extras.h */,
 				C58F011E24EA5CAC00B6D09C /* UIView+Extras.m */,
+				C5C67CAA24FF5D94000A26B8 /* UIView+Measure.h */,
+				C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */,
 				C58F011F24EA5CAC00B6D09C /* UIView+SuspendView.h */,
+				C58F011C24EA5CAC00B6D09C /* UIView+SuspendView.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -1680,6 +1702,8 @@
 		C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C5C67CA524FF5D61000A26B8 /* 电影倒计时特效 */,
+				C5C67C9224FF5CFC000A26B8 /* TimerManager */,
 				C56161B424EE4F10001CD851 /* 卡片式滑动效果 */,
 				C58F046B24EBD6F000B6D09C /* UIControl+XY */,
 				C58F046A24EBD6E900B6D09C /* ECAuthorizationTools */,
@@ -2270,6 +2294,64 @@
 			path = "拍摄";
 			sourceTree = "<group>";
 		};
+		C5C67C9224FF5CFC000A26B8 /* TimerManager */ = {
+			isa = PBXGroup;
+			children = (
+				C5C67CA324FF5D53000A26B8 /* TimerManager.h */,
+				C5C67CA424FF5D53000A26B8 /* TimerManager_DefineStructure.h */,
+				C5C67C9624FF5D1F000A26B8 /* CADisplayLink_TimerManager */,
+				C5C67C9524FF5D16000A26B8 /* GCD_TimerManager(未完) */,
+				C5C67C9424FF5D0E000A26B8 /* Nanosecond_TimerManager */,
+				C5C67C9324FF5D06000A26B8 /* NSTimerManager */,
+			);
+			path = TimerManager;
+			sourceTree = "<group>";
+		};
+		C5C67C9324FF5D06000A26B8 /* NSTimerManager */ = {
+			isa = PBXGroup;
+			children = (
+				C5C67CA124FF5D46000A26B8 /* NSTimerManager.h */,
+				C5C67CA024FF5D46000A26B8 /* NSTimerManager.m */,
+			);
+			path = NSTimerManager;
+			sourceTree = "<group>";
+		};
+		C5C67C9424FF5D0E000A26B8 /* Nanosecond_TimerManager */ = {
+			isa = PBXGroup;
+			children = (
+				C5C67C9E24FF5D3C000A26B8 /* Nanosecond_TimerManager.h */,
+				C5C67C9D24FF5D3B000A26B8 /* Nanosecond_TimerManager.m */,
+			);
+			path = Nanosecond_TimerManager;
+			sourceTree = "<group>";
+		};
+		C5C67C9524FF5D16000A26B8 /* GCD_TimerManager(未完) */ = {
+			isa = PBXGroup;
+			children = (
+				C5C67C9A24FF5D33000A26B8 /* GCD_TimerManager.h */,
+				C5C67C9B24FF5D33000A26B8 /* GCD_TimerManager.m */,
+			);
+			path = "GCD_TimerManager(未完)";
+			sourceTree = "<group>";
+		};
+		C5C67C9624FF5D1F000A26B8 /* CADisplayLink_TimerManager */ = {
+			isa = PBXGroup;
+			children = (
+				C5C67C9824FF5D28000A26B8 /* CADisplayLink_TimerManager.h */,
+				C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */,
+			);
+			path = CADisplayLink_TimerManager;
+			sourceTree = "<group>";
+		};
+		C5C67CA524FF5D61000A26B8 /* 电影倒计时特效 */ = {
+			isa = PBXGroup;
+			children = (
+				C5C67CA724FF5D68000A26B8 /* MovieCountDown.h */,
+				C5C67CA624FF5D68000A26B8 /* MovieCountDown.m */,
+			);
+			path = "电影倒计时特效";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2590,6 +2672,7 @@
 				C58F046F24EBD70300B6D09C /* UIControl+XY.m in Sources */,
 				C58F019724EA5CAC00B6D09C /* ZYTextField_01.m in Sources */,
 				C58F01A524EA5CAD00B6D09C /* BaseVC+TZLocationManager.m in Sources */,
+				C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */,
 				C58F00DF24EA581F00B6D09C /* NSImage+WebCache.m in Sources */,
 				C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */,
 				C58F032224EA68B500B6D09C /* LGiOSBtn.m in Sources */,
@@ -2621,6 +2704,7 @@
 				C58F00E924EA581F00B6D09C /* BRPickerStyle.m in Sources */,
 				C58F02B024EA61C600B6D09C /* LOTShapeStar.m in Sources */,
 				C58F028F24EA61C600B6D09C /* NSValue+Compat.m in Sources */,
+				C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */,
 				C58F00D424EA581F00B6D09C /* UINavigationItem+GKCategory.m in Sources */,
 				C58F02BC24EA61C600B6D09C /* LOTTrimPathNode.m in Sources */,
 				C58F010A24EA584B00B6D09C /* LYLUnicode.m in Sources */,
@@ -2661,6 +2745,7 @@
 				C5A46C0C24EFB6E900158D1E /* LZBTabBarItem.m in Sources */,
 				C58F018624EA5CAC00B6D09C /* UIView+Extras.m in Sources */,
 				C58F019E24EA5CAD00B6D09C /* BaseVC+TZImagePickerControllerDelegate.m in Sources */,
+				C5C67CA824FF5D68000A26B8 /* MovieCountDown.m in Sources */,
 				C58F018924EA5CAC00B6D09C /* HQCollectionViewFlowLayout.m in Sources */,
 				C59D9ACE24F8EF1100A74CE9 /* CustomerGPUImagePlayerVC.m in Sources */,
 				C58F030724EA647400B6D09C /* MonitorNetwoking.m in Sources */,
@@ -2678,6 +2763,7 @@
 				C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */,
 				C58F02A224EA61C600B6D09C /* LOTPolygonAnimator.m in Sources */,
 				C58F02A424EA61C600B6D09C /* LOTGradientFillRender.m in Sources */,
+				C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */,
 				C58F01C224EA5E5E00B6D09C /* SoundBtn.m in Sources */,
 				C58F01A324EA5CAD00B6D09C /* BaseVC.m in Sources */,
 				C58F02D524EA62B500B6D09C /* suspendBtn.m in Sources */,
@@ -2720,9 +2806,11 @@
 				C58F031524EA648200B6D09C /* FMARCNetwork.m in Sources */,
 				C572A26A24FBC547000A1687 /* UIImage+SYS.m in Sources */,
 				C58F020424EA617800B6D09C /* BWItemModel.m in Sources */,
+				C5C67CA224FF5D46000A26B8 /* NSTimerManager.m in Sources */,
 				C58F029C24EA61C600B6D09C /* LOTRoundedRectAnimator.m in Sources */,
 				C58F01A924EA5CAD00B6D09C /* ViewForHeader.m in Sources */,
 				C58F02B624EA61C600B6D09C /* LOTKeyframe.m in Sources */,
+				C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */,
 				C55497B024F3AD990065510D /* MKGPUImageView.m in Sources */,
 				C58F01A024EA5CAD00B6D09C /* BaseVC+FSCustomButton.m in Sources */,
 				C58F018A24EA5CAC00B6D09C /* LMHWaterFallLayout.m in Sources */,
