@@ -13,6 +13,7 @@
 		C52EE27224FF647D0033CD47 /* 倒计时 关闭状态@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52EE26E24FF647C0033CD47 /* 倒计时 关闭状态@2x.png */; };
 		C52EE27324FF647D0033CD47 /* 倒计时 关闭状态@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52EE26F24FF647D0033CD47 /* 倒计时 关闭状态@3x.png */; };
 		C52EE27424FF647D0033CD47 /* 倒计时 开启状态@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52EE27024FF647D0033CD47 /* 倒计时 开启状态@3x.png */; };
+		C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */ = {isa = PBXBuildFile; fileRef = C53B182B24FFA336000019F2 /* 视频水印.gif */; };
 		C55497A424F38CDB0065510D /* MKShootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A324F38CDB0065510D /* MKShootVC.m */; };
 		C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A624F38D9C0065510D /* AVFounationTools.m */; };
 		C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A924F3A1F00065510D /* GPUImageTools.m */; };
@@ -326,6 +327,7 @@
 		C52EE26E24FF647C0033CD47 /* 倒计时 关闭状态@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倒计时 关闭状态@2x.png"; sourceTree = "<group>"; };
 		C52EE26F24FF647D0033CD47 /* 倒计时 关闭状态@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倒计时 关闭状态@3x.png"; sourceTree = "<group>"; };
 		C52EE27024FF647D0033CD47 /* 倒计时 开启状态@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倒计时 开启状态@3x.png"; sourceTree = "<group>"; };
+		C53B182B24FFA336000019F2 /* 视频水印.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "视频水印.gif"; sourceTree = "<group>"; };
 		C55497A224F38CDB0065510D /* MKShootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKShootVC.h; sourceTree = "<group>"; };
 		C55497A324F38CDB0065510D /* MKShootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKShootVC.m; sourceTree = "<group>"; };
 		C55497A524F38D9C0065510D /* AVFounationTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVFounationTools.h; sourceTree = "<group>"; };
@@ -1770,6 +1772,7 @@
 		C58F01C824EA5EEE00B6D09C /* GPUImage */ = {
 			isa = PBXGroup;
 			children = (
+				C53B182B24FFA336000019F2 /* 视频水印.gif */,
 				C55497AF24F3AD990065510D /* MKGPUImageView.h */,
 				C55497AE24F3AD990065510D /* MKGPUImageView.m */,
 				C58F01C924EA5F0100B6D09C /* YHGPUImageBeautifyFilter.h */,
@@ -2479,6 +2482,7 @@
 				C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */,
 				C58F047E24EBD78500B6D09C /* spark_red@2x.png in Resources */,
 				C58F048024EBD78500B6D09C /* spark_red.png in Resources */,
+				C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */,
 				C572A27624FBC6E4000A1687 /* unsure@2x.png in Resources */,
 				C59D9B1A24F9083200A74CE9 /* sure@3x.png in Resources */,
 				C58F03CE24EA789100B6D09C /* 翻转镜头@2x.png in Resources */,
