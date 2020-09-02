@@ -733,8 +733,11 @@
     if (!_movieCountDown) {
         _movieCountDown = MovieCountDown.new;
         _movieCountDown.effectView = self.view;
+        @weakify(self)
         [_movieCountDown actionMovieCountDownFinishBlock:^(id data) {
+            @strongify(self)
             NSLog(@"我死球了");
+            [self 开始录制];
         }];
     }return _movieCountDown;
 }
