@@ -90,11 +90,10 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSDate *)modificationDateOfItemAtPath:(NSString *)path
                                   error:(NSError *__autoreleasing *)error;
 #pragma mark —— 写入文件内容
-/// 给定一个NSBundle和文件类型，获取返回里面的一个实体文件
-+(id)bundle:(NSBundle *__nullable)bundle
-bundleFileName:(NSString *)bundleFileName
+/// 给定一个NSBundle地址和文件类型，获取返回里面的一个实体文件
++(id)bundleFile:(NSString *)bundleFileName
 bundleFileSuffix:(NSString *)bundleFileSuffix
-   fileType:(FileType)fileType;
+       fileType:(FileType)fileType;
 /// 将bundle里面的文件写进手机本地文件
 /// @param bundleFileName bundle文件名
 /// @param bundleFileSuffix bundle 文件后缀名
@@ -223,7 +222,7 @@ bundleFileSuffix:(NSString *)bundleFileSuffix
 ///保存视频资源文件到指定的相册路径，这里是整个App名字的相册
 +(void)saveRes:(NSURL *)movieURL;
 ///是否存在此相册判断逻辑依据
-+(BOOL)isExistFolder:(NSString *)folderName;
++(BOOL)isAlbumExistFolder:(NSString *)folderName;
 ///保存文件到系统默认的相册
 +(void)saveVideo:(NSString *)videoPath;
 +(void)saveImage:(UIImage *)image;
