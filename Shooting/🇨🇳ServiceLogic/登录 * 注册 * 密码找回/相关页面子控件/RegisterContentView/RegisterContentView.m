@@ -21,7 +21,8 @@
 #pragma mark - Lifecycle
 -(instancetype)init{
     if (self = [super init]) {
-        
+        [UIView cornerCutToCircleWithView:self
+                          AndCornerRadius:8];
     }return self;
 }
 /*

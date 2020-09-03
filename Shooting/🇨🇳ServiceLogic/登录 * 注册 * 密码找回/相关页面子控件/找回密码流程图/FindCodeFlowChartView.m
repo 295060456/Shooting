@@ -10,8 +10,6 @@
 
 @interface FlowChartSingleElementView ()
 
-@property(nonatomic,strong)UIImageView *backIMGV;
-
 @end
 
 @implementation FlowChartSingleElementView
@@ -27,7 +25,8 @@
 -(UILabel *)titleLab{
     if (!_titleLab) {
         _titleLab = UILabel.new;
-        _titleLab.font = [UIFont systemFontOfSize:20 weight:UIFontWeightHeavy];
+        _titleLab.font = [UIFont systemFontOfSize:20
+                                           weight:UIFontWeightHeavy];
         [_titleLab sizeToFit];
         [self.backIMGV addSubview:_titleLab];
         [_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -40,7 +39,8 @@
 -(UILabel *)subTitleLab{
     if (!_subTitleLab) {
         _subTitleLab = UILabel.new;
-        _subTitleLab.font = [UIFont systemFontOfSize:8 weight:UIFontWeightRegular];
+        _subTitleLab.font = [UIFont systemFontOfSize:8
+                                              weight:UIFontWeightRegular];
         [_subTitleLab sizeToFit];
         [self.backIMGV addSubview:_subTitleLab];
         [_subTitleLab mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -53,7 +53,6 @@
 -(UIImageView *)backIMGV{
     if (!_backIMGV) {
         _backIMGV = UIImageView.new;
-        _backIMGV.image = kIMG(@"di_1");
         [self addSubview:_backIMGV];
         [_backIMGV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self);
@@ -95,6 +94,15 @@
             FlowChartSingleElementView *singleElement = FlowChartSingleElementView.new;
             singleElement.titleLab.text = self.titleMutArr[t];
             singleElement.subTitleLab.text = self.subTitleMutArr[t];
+            if (self.backImageMutArr.count - 1 > self.currentFlowSerialNum) {
+                if (t > self.currentFlowSerialNum) {
+                    singleElement.backIMGV.image = self.backImageMutArr[0];
+                }else{
+                    singleElement.backIMGV.image = self.backImageMutArr[t + 1];
+                }
+            }else{
+                NSAssert(0,@"数组越界");
+            }
             [self addSubview:singleElement];
             [singleElement mas_makeConstraints:^(MASConstraintMaker *make) {
                 [singleElement mas_makeConstraints:^(MASConstraintMaker *make) {

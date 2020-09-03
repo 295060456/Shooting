@@ -79,7 +79,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.player.currentPlayerManager play];
-    self.loginContentView.alpha = 1;
+    self.loginContentView.alpha = 0.3;
     [UIView animationAlert:self.logoContentView];
 //    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
 }

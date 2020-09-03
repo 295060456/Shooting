@@ -20,6 +20,7 @@
 @property(nonatomic,assign)BOOL isPresent;
 @property(nonatomic,strong)NSMutableArray <NSString *>*titleMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*subTitleMutArr;
+@property(nonatomic,strong)NSMutableArray <UIImage *>*backImageMutArr;
 
 @end
 
@@ -77,6 +78,8 @@
     self.gk_navTitleFont = [UIFont systemFontOfSize:17
                                              weight:UIFontWeightBold];
     self.findCodeFlowChartView.alpha = 1;
+    self.findCodeFlowChartView.currentFlowSerialNum = 2;//步骤从0开始
+    
     self.tipsLab.alpha = 1;
 }
 #pragma mark —— LazyLoad
@@ -86,6 +89,7 @@
         _findCodeFlowChartView.flowNum = 3;
         _findCodeFlowChartView.titleMutArr = self.titleMutArr;
         _findCodeFlowChartView.subTitleMutArr = self.subTitleMutArr;
+        _findCodeFlowChartView.backImageMutArr = self.backImageMutArr;
         [self.view addSubview:_findCodeFlowChartView];
         [_findCodeFlowChartView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(self.view);
@@ -131,6 +135,15 @@
     }return _subTitleMutArr;
 }
 
+-(NSMutableArray<UIImage *> *)backImageMutArr{
+    if (!_backImageMutArr) {
+        _backImageMutArr = NSMutableArray.array;
+        [_backImageMutArr addObject:kIMG(@"di_1")];
+        [_backImageMutArr addObject:kIMG(@"di_2")];
+        [_backImageMutArr addObject:kIMG(@"di_3")];
+        [_backImageMutArr addObject:kIMG(@"di_4")];
+    }return _backImageMutArr;
+}
 
 
 @end
