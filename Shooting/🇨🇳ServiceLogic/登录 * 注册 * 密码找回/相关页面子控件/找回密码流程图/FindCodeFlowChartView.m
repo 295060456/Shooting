@@ -97,8 +97,12 @@
             if (self.backImageMutArr.count - 1 > self.currentFlowSerialNum) {
                 if (t > self.currentFlowSerialNum) {
                     singleElement.backIMGV.image = self.backImageMutArr[0];
+                    singleElement.titleLab.textColor = KLightGrayColor;
+                    singleElement.subTitleLab.textColor = KLightGrayColor;
                 }else{
                     singleElement.backIMGV.image = self.backImageMutArr[t + 1];
+                    singleElement.titleLab.textColor = kBlackColor;
+                    singleElement.subTitleLab.textColor = kBlackColor;
                 }
             }else{
                 NSAssert(0,@"数组越界");

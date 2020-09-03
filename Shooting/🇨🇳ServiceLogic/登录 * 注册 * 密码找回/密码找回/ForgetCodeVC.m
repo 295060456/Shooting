@@ -78,7 +78,7 @@
     self.gk_navTitleFont = [UIFont systemFontOfSize:17
                                              weight:UIFontWeightBold];
     self.findCodeFlowChartView.alpha = 1;
-    self.findCodeFlowChartView.currentFlowSerialNum = 2;//步骤从0开始
+    self.findCodeFlowChartView.currentFlowSerialNum = 1;//步骤从0开始
     
     self.tipsLab.alpha = 1;
 }
