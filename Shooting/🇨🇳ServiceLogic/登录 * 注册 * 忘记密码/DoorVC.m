@@ -9,15 +9,12 @@
 #import "DoorVC.h"
 #import "Door.h"
 
-
-
-
-
 @interface DoorVC ()
 
 @property(nonatomic,strong)LoginContentView *loginContentView;
 @property(nonatomic,strong)ZFPlayerController *player;
 @property(nonatomic,strong)ZFAVPlayerManager *playerManager;
+@property(nonatomic,strong)LogoContentView *logoContentView;
 
 @property(nonatomic,strong)id requestParams;
 @property(nonatomic,copy)MKDataBlock successBlock;
@@ -76,11 +73,12 @@
     self.view.backgroundColor = KYellowColor;
     [self.player.currentPlayerManager play];
     self.loginContentView.alpha = 1;
+   
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+     [UIView animationAlert:self.logoContentView];
 //    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
 }
 
@@ -134,6 +132,18 @@
         _player = [[ZFPlayerController alloc] initWithPlayerManager:self.playerManager
                                                       containerView:self.view];
     }return _player;
+}
+
+-(LogoContentView *)logoContentView{
+    if (!_logoContentView) {
+        _logoContentView = LogoContentView.new;
+        [self.view addSubview:_logoContentView];
+        [_logoContentView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(150, 50));
+            make.top.mas_equalTo(100);
+            make.centerX.equalTo(self.view);
+        }];
+    }return _logoContentView;
 }
 
 @end

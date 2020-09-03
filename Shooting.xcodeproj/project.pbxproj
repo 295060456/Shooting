@@ -48,6 +48,11 @@
 		C589605C2500B100002B1764 /* LoginContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589605B2500B100002B1764 /* LoginContentView.m */; };
 		C58960612500B196002B1764 /* DoorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960602500B196002B1764 /* DoorVC.m */; };
 		C58960632500D288002B1764 /* niupi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C58960622500D288002B1764 /* niupi.mp4 */; };
+		C58960672500D9A6002B1764 /* MainLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58960652500D9A6002B1764 /* MainLogo@2x.png */; };
+		C58960682500D9A6002B1764 /* MainLogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58960662500D9A6002B1764 /* MainLogo@3x.png */; };
+		C589606B2500DAB7002B1764 /* SubLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58960692500DAB7002B1764 /* SubLogo@2x.png */; };
+		C589606C2500DAB7002B1764 /* SubLogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C589606A2500DAB7002B1764 /* SubLogo@3x.png */; };
+		C589606F2500DDA3002B1764 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = C589606E2500DDA3002B1764 /* UIView+Animation.m */; };
 		C58F001224EA36F800B6D09C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001124EA36F800B6D09C /* AppDelegate.m */; };
 		C58F001524EA36F800B6D09C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001424EA36F800B6D09C /* SceneDelegate.m */; };
 		C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58F001924EA36F800B6D09C /* Main.storyboard */; };
@@ -397,6 +402,12 @@
 		C589605F2500B196002B1764 /* DoorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoorVC.h; sourceTree = "<group>"; };
 		C58960602500B196002B1764 /* DoorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoorVC.m; sourceTree = "<group>"; };
 		C58960622500D288002B1764 /* niupi.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = niupi.mp4; sourceTree = "<group>"; };
+		C58960652500D9A6002B1764 /* MainLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainLogo@2x.png"; sourceTree = "<group>"; };
+		C58960662500D9A6002B1764 /* MainLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainLogo@3x.png"; sourceTree = "<group>"; };
+		C58960692500DAB7002B1764 /* SubLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SubLogo@2x.png"; sourceTree = "<group>"; };
+		C589606A2500DAB7002B1764 /* SubLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SubLogo@3x.png"; sourceTree = "<group>"; };
+		C589606D2500DDA3002B1764 /* UIView+Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		C589606E2500DDA3002B1764 /* UIView+Animation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
 		C58F000D24EA36F800B6D09C /* Shooting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58F001024EA36F800B6D09C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C58F001124EA36F800B6D09C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1147,6 +1158,17 @@
 			path = LogoContentView;
 			sourceTree = "<group>";
 		};
+		C58960642500D943002B1764 /* 登录 * 注册 * 忘记密码 */ = {
+			isa = PBXGroup;
+			children = (
+				C58960652500D9A6002B1764 /* MainLogo@2x.png */,
+				C58960662500D9A6002B1764 /* MainLogo@3x.png */,
+				C58960692500DAB7002B1764 /* SubLogo@2x.png */,
+				C589606A2500DAB7002B1764 /* SubLogo@3x.png */,
+			);
+			path = "登录 * 注册 * 忘记密码";
+			sourceTree = "<group>";
+		};
 		C58F000424EA36F800B6D09C = {
 			isa = PBXGroup;
 			children = (
@@ -1563,6 +1585,8 @@
 				C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */,
 				C58F011F24EA5CAC00B6D09C /* UIView+SuspendView.h */,
 				C58F011C24EA5CAC00B6D09C /* UIView+SuspendView.m */,
+				C589606D2500DDA3002B1764 /* UIView+Animation.h */,
+				C589606E2500DDA3002B1764 /* UIView+Animation.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -2200,6 +2224,7 @@
 		C58F033724EA6E1600B6D09C /* ⚽️PicResource */ = {
 			isa = PBXGroup;
 			children = (
+				C58960642500D943002B1764 /* 登录 * 注册 * 忘记密码 */,
 				C59D9B1524F9082600A74CE9 /* 拍摄 */,
 				C58F03B224EA6EF600B6D09C /* other */,
 				C58F03B124EA6EF100B6D09C /* LottieResources */,
@@ -2556,6 +2581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C572A27724FBC6E4000A1687 /* unsure@3x.png in Resources */,
+				C58960672500D9A6002B1764 /* MainLogo@2x.png in Resources */,
 				C52EE27324FF647D0033CD47 /* 倒计时 关闭状态@3x.png in Resources */,
 				C58F01C024EA5E5E00B6D09C /* 带有按键音的按钮 in Resources */,
 				C58F047D24EBD78500B6D09C /* day_like_red@3x.png in Resources */,
@@ -2565,6 +2591,7 @@
 				C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */,
 				C572A27624FBC6E4000A1687 /* unsure@2x.png in Resources */,
 				C58960632500D288002B1764 /* niupi.mp4 in Resources */,
+				C58960682500D9A6002B1764 /* MainLogo@3x.png in Resources */,
 				C59D9B1A24F9083200A74CE9 /* sure@3x.png in Resources */,
 				C58F03CE24EA789100B6D09C /* 翻转镜头@2x.png in Resources */,
 				C58F03A924EA6E7600B6D09C /* ShoppingCart@3x.png in Resources */,
@@ -2589,8 +2616,10 @@
 				C58F002324EA36FA00B6D09C /* LaunchScreen.storyboard in Resources */,
 				C52EE27124FF647D0033CD47 /* 倒计时 开启状态@2x.png in Resources */,
 				C58F010B24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */,
+				C589606C2500DAB7002B1764 /* SubLogo@3x.png in Resources */,
 				C58F018224EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton in Resources */,
 				C59D9B1C24F9083200A74CE9 /* sure@2x.png in Resources */,
+				C589606B2500DAB7002B1764 /* SubLogo@2x.png in Resources */,
 				C58F03AF24EA6E7600B6D09C /* Home@2x.png in Resources */,
 				C58F03C824EA77BB00B6D09C /* back_white.png in Resources */,
 				C58F010C24EA584B00B6D09C /* 调试时候添加日志时使用,上线需要去掉 in Resources */,
@@ -2986,6 +3015,7 @@
 				C58F029E24EA61C600B6D09C /* LOTStrokeRenderer.m in Sources */,
 				C58F033524EA69D400B6D09C /* ViewController@1.m in Sources */,
 				C58F02BA24EA61C600B6D09C /* LOTShapeFill.m in Sources */,
+				C589606F2500DDA3002B1764 /* UIView+Animation.m in Sources */,
 				C572A26924FBC547000A1687 /* UIImage+YBGIF.m in Sources */,
 				C58F02A624EA61C600B6D09C /* LOTComposition.m in Sources */,
 				C58F00EC24EA581F00B6D09C /* BRAddressModel.m in Sources */,
