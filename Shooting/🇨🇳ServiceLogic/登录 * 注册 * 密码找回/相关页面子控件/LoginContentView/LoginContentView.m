@@ -11,7 +11,8 @@
 
 @interface LoginContentView ()
 
-@property(nonatomic,strong)UIButton *btn;
+@property(nonatomic,strong)UIButton *forgetCodeBtn;//忘记密码
+@property(nonatomic,strong)FSCustomButton *toRegisterBtn;//去注册
 @property(nonatomic,copy)MKDataBlock loginContentViewBlock;
 
 @end
@@ -27,12 +28,17 @@
     if (self = [super init]) {
         [UIView cornerCutToCircleWithView:self
                           AndCornerRadius:8];
+        self.backgroundColor = COLOR_RGB(255,
+                                         255,
+                                         255,
+                                         1);
     }return self;
 }
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
-    self.btn.alpha = 1;
+    self.forgetCodeBtn.alpha = 1;
+    self.toRegisterBtn.alpha = 1;
 }
 
 /*
@@ -80,19 +86,39 @@
     _loginContentViewBlock = loginContentViewBlock;
 }
 #pragma mark —— lazyLoad
--(UIButton *)btn{
-    if (!_btn) {
-        _btn = UIButton.new;
-        _btn.backgroundColor = kRedColor;
-        [_btn addTarget:self
+-(UIButton *)forgetCodeBtn{
+    if (!_forgetCodeBtn) {
+        _forgetCodeBtn = UIButton.new;
+        _forgetCodeBtn.backgroundColor = kRedColor;
+        [_forgetCodeBtn addTarget:self
                  action:@selector(btnClickEvent:)
        forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:_btn];
-        [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self addSubview:_forgetCodeBtn];
+        [_forgetCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(50, 50));
             make.center.equalTo(self);
         }];
-    }return _btn;
+    }return _forgetCodeBtn;
+}
+
+-(FSCustomButton *)toRegisterBtn{
+    if (!_toRegisterBtn) {
+        _toRegisterBtn = FSCustomButton.new;
+        _toRegisterBtn.titleLabel.numberOfLines = 0;
+        _toRegisterBtn.backgroundColor = COLOR_RGB(69,
+                                                   69,
+                                                   69,
+                                                   0.7);
+        [_toRegisterBtn setTitle:@"新\n用\n户\n注\n册"
+                        forState:UIControlStateNormal];
+        _toRegisterBtn.buttonImagePosition = FSCustomButtonImagePositionTop;
+        [_toRegisterBtn setImage:kIMG(@"用户名称")
+              forState:UIControlStateNormal];
+        [self addSubview:_toRegisterBtn];
+        [_toRegisterBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.right.bottom.equalTo(self);
+        }];
+    }return _toRegisterBtn;
 }
 
 @end

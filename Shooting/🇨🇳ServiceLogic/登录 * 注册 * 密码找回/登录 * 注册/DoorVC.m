@@ -79,7 +79,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.player.currentPlayerManager play];
-    self.loginContentView.alpha = 0.3;
+    self.loginContentView.alpha = 0.7;
     [UIView animationAlert:self.logoContentView];
 //    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
 }
@@ -118,7 +118,6 @@
 -(LoginContentView *)loginContentView{
     if (!_loginContentView) {
         _loginContentView = LoginContentView.new;
-        _loginContentView.backgroundColor = kBlueColor;
         @weakify(self)
         [_loginContentView actionLoginContentViewBlock:^(id data) {
             @strongify(self)

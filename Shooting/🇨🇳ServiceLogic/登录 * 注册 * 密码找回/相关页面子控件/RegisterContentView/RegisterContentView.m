@@ -10,6 +10,8 @@
 
 @interface RegisterContentView ()
 
+@property(nonatomic,strong)FSCustomButton *backToLoginBtn;//去注册
+
 @end
 
 @implementation RegisterContentView
@@ -23,8 +25,18 @@
     if (self = [super init]) {
         [UIView cornerCutToCircleWithView:self
                           AndCornerRadius:8];
+        self.backgroundColor = COLOR_RGB(255,
+                                         255,
+                                         255,
+                                         1);
     }return self;
 }
+
+-(void)drawRect:(CGRect)rect{
+    [super drawRect:rect];
+    self.backToLoginBtn.alpha = 1;
+}
+
 /*
  *    使用弹簧的描述时间曲线来执行动画 ,当dampingRatio == 1 时,动画会平稳的减速到最终的模型值,而不会震荡.
  *    小于1的阻尼比在达到完全停止之前会震荡的越来越多.
@@ -58,6 +70,26 @@
     } completion:^(BOOL finished) {
         
     }];
+}
+#pragma mark —— lazyLoad
+-(FSCustomButton *)backToLoginBtn{
+    if (!_backToLoginBtn) {
+        _backToLoginBtn = FSCustomButton.new;
+        _backToLoginBtn.titleLabel.numberOfLines = 0;
+        _backToLoginBtn.backgroundColor = COLOR_RGB(69,
+                                                    69,
+                                                    69,
+                                                    0.7);
+        [_backToLoginBtn setTitle:@"返\n回\n登\n录"
+                        forState:UIControlStateNormal];
+        _backToLoginBtn.buttonImagePosition = FSCustomButtonImagePositionTop;
+        [_backToLoginBtn setImage:kIMG(@"用户名称")
+              forState:UIControlStateNormal];
+        [self addSubview:_backToLoginBtn];
+        [_backToLoginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.bottom.equalTo(self);
+        }];
+    }return _backToLoginBtn;
 }
 
 @end

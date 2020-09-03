@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		063BD15EB981BAEE23911AF2 /* Pods_Shooting_ShootingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2871C6CC92ACB94D4642EEC /* Pods_Shooting_ShootingUITests.framework */; };
 		7F96368156DDD0B899DCFEA0 /* Pods_Shooting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */; };
+		C51A0BCF2501286500884016 /* 用户名称@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51A0BCD2501286500884016 /* 用户名称@2x.png */; };
+		C51A0BD02501286500884016 /* 用户名称@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51A0BCE2501286500884016 /* 用户名称@3x.png */; };
 		C52EE27124FF647D0033CD47 /* 倒计时 开启状态@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52EE26D24FF647C0033CD47 /* 倒计时 开启状态@2x.png */; };
 		C52EE27224FF647D0033CD47 /* 倒计时 关闭状态@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52EE26E24FF647C0033CD47 /* 倒计时 关闭状态@2x.png */; };
 		C52EE27324FF647D0033CD47 /* 倒计时 关闭状态@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52EE26F24FF647D0033CD47 /* 倒计时 关闭状态@3x.png */; };
@@ -344,6 +346,8 @@
 		8EF824CCB3C797C08F0AA84C /* Pods-ShootingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingTests.release.xcconfig"; path = "Target Support Files/Pods-ShootingTests/Pods-ShootingTests.release.xcconfig"; sourceTree = "<group>"; };
 		975BB3BDBE4F3C4E85B6606A /* Pods-Shooting-ShootingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shooting-ShootingUITests.release.xcconfig"; path = "Target Support Files/Pods-Shooting-ShootingUITests/Pods-Shooting-ShootingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B2871C6CC92ACB94D4642EEC /* Pods_Shooting_ShootingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shooting_ShootingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C51A0BCD2501286500884016 /* 用户名称@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "用户名称@2x.png"; sourceTree = "<group>"; };
+		C51A0BCE2501286500884016 /* 用户名称@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "用户名称@3x.png"; sourceTree = "<group>"; };
 		C52EE26D24FF647C0033CD47 /* 倒计时 开启状态@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倒计时 开启状态@2x.png"; sourceTree = "<group>"; };
 		C52EE26E24FF647C0033CD47 /* 倒计时 关闭状态@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倒计时 关闭状态@2x.png"; sourceTree = "<group>"; };
 		C52EE26F24FF647D0033CD47 /* 倒计时 关闭状态@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倒计时 关闭状态@3x.png"; sourceTree = "<group>"; };
@@ -1185,6 +1189,8 @@
 			isa = PBXGroup;
 			children = (
 				C589607D25010CC0002B1764 /* 找回密码流程图 */,
+				C51A0BCD2501286500884016 /* 用户名称@2x.png */,
+				C51A0BCE2501286500884016 /* 用户名称@3x.png */,
 				C58960652500D9A6002B1764 /* MainLogo@2x.png */,
 				C58960662500D9A6002B1764 /* MainLogo@3x.png */,
 				C58960692500DAB7002B1764 /* SubLogo@2x.png */,
@@ -2649,6 +2655,7 @@
 				C589608925010CD9002B1764 /* di_1@3x.png in Resources */,
 				C572A27724FBC6E4000A1687 /* unsure@3x.png in Resources */,
 				C58960672500D9A6002B1764 /* MainLogo@2x.png in Resources */,
+				C51A0BD02501286500884016 /* 用户名称@3x.png in Resources */,
 				C52EE27324FF647D0033CD47 /* 倒计时 关闭状态@3x.png in Resources */,
 				C589608425010CD9002B1764 /* di_2@3x.png in Resources */,
 				C58F01C024EA5E5E00B6D09C /* 带有按键音的按钮 in Resources */,
@@ -2714,6 +2721,7 @@
 				C59D9AEF24F8F08500A74CE9 /* ZZCircleProgress.bundle in Resources */,
 				C58F03CD24EA789100B6D09C /* 翻转镜头@3x.png in Resources */,
 				C58F018F24EA5CAC00B6D09C /* 专治UITableView相应链断裂 in Resources */,
+				C51A0BCF2501286500884016 /* 用户名称@2x.png in Resources */,
 				C59D9B0624F9045E00A74CE9 /* 闪光灯@3x.png in Resources */,
 				C59D9B0224F9045E00A74CE9 /* 闪光灯-关闭@2x.png in Resources */,
 				C58F03AA24EA6E7600B6D09C /* My@2x.png in Resources */,
