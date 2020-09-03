@@ -27,6 +27,7 @@
 #import "ZZCircleProgress.h"
 #import "TimerManager.h"
 #import "MovieCountDown.h"
+#import "ImageCodeView.h"
 
 #pragma mark —— 以下是自定义的
 #import "ToolMacro.h"
@@ -93,7 +94,8 @@
 #import "CustomerAVPlayerVC.h"
 #import "CustomerAVPlayerView.h"
 #import "CustomerGPUImagePlayerVC.h"
-
+///登录 * 注册 * 忘记密码
+#import "DoorVC.h"
 
 #import "MKLaunchingAdModel.h"
 

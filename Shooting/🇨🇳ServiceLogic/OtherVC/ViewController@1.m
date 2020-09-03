@@ -18,13 +18,11 @@
 @implementation ViewController_1
 
 - (void)dealloc {
-    
     NSLog(@"Running self.class = %@;NSStringFromSelector(_cmd) = '%@';__FUNCTION__ = %s", self.class, NSStringFromSelector(_cmd),__FUNCTION__);
 }
 
 #pragma mark - Lifecycle
 -(instancetype)init{
-    
     if (self = [super init]) {
         
     }return self;
@@ -32,8 +30,18 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-   
+    self.view.backgroundColor = KBrownColor;
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches
+          withEvent:(UIEvent *)event{
+    @weakify(self)
+    [DoorVC ComingFromVC:weak_self
+             comingStyle:ComingStyle_PUSH
+       presentationStyle:UIModalPresentationFullScreen
+           requestParams:nil
+                 success:^(id data) {}
+                animated:YES];
+}
 
 @end

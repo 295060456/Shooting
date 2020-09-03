@@ -42,6 +42,11 @@
 		C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A28224FBE933000A1687 /* UIImage+Tailor.m */; };
 		C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */ = {isa = PBXBuildFile; fileRef = C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */; };
 		C572A2A824FDFA71000A1687 /* CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A2A524FDFA71000A1687 /* CountDownBtn.m */; };
+		C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589604E2500AC91002B1764 /* ImageCodeView.m */; };
+		C58960562500B0E0002B1764 /* LogoContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960552500B0E0002B1764 /* LogoContentView.m */; };
+		C58960592500B0F6002B1764 /* RegisterContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960582500B0F6002B1764 /* RegisterContentView.m */; };
+		C589605C2500B100002B1764 /* LoginContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589605B2500B100002B1764 /* LoginContentView.m */; };
+		C58960612500B196002B1764 /* DoorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960602500B196002B1764 /* DoorVC.m */; };
 		C58F001224EA36F800B6D09C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001124EA36F800B6D09C /* AppDelegate.m */; };
 		C58F001524EA36F800B6D09C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001424EA36F800B6D09C /* SceneDelegate.m */; };
 		C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58F001924EA36F800B6D09C /* Main.storyboard */; };
@@ -379,6 +384,17 @@
 		C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "验证码按钮单例封装"; sourceTree = "<group>"; };
 		C572A2A524FDFA71000A1687 /* CountDownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownBtn.m; sourceTree = "<group>"; };
 		C572A2A624FDFA71000A1687 /* CountDownBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownBtn.h; sourceTree = "<group>"; };
+		C589604D2500AC91002B1764 /* ImageCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCodeView.h; sourceTree = "<group>"; };
+		C589604E2500AC91002B1764 /* ImageCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCodeView.m; sourceTree = "<group>"; };
+		C58960542500B0E0002B1764 /* LogoContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoContentView.h; sourceTree = "<group>"; };
+		C58960552500B0E0002B1764 /* LogoContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogoContentView.m; sourceTree = "<group>"; };
+		C58960572500B0F6002B1764 /* RegisterContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterContentView.h; sourceTree = "<group>"; };
+		C58960582500B0F6002B1764 /* RegisterContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterContentView.m; sourceTree = "<group>"; };
+		C589605A2500B100002B1764 /* LoginContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginContentView.h; sourceTree = "<group>"; };
+		C589605B2500B100002B1764 /* LoginContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginContentView.m; sourceTree = "<group>"; };
+		C589605D2500B139002B1764 /* Door.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
+		C589605F2500B196002B1764 /* DoorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoorVC.h; sourceTree = "<group>"; };
+		C58960602500B196002B1764 /* DoorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoorVC.m; sourceTree = "<group>"; };
 		C58F000D24EA36F800B6D09C /* Shooting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58F001024EA36F800B6D09C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C58F001124EA36F800B6D09C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1071,6 +1087,63 @@
 			path = "💰VerifyCodeButton";
 			sourceTree = "<group>";
 		};
+		C589604B2500AA2D002B1764 /* 登录 * 注册 * 忘记密码 */ = {
+			isa = PBXGroup;
+			children = (
+				C589605F2500B196002B1764 /* DoorVC.h */,
+				C58960602500B196002B1764 /* DoorVC.m */,
+				C58960502500AF5C002B1764 /* 相关页面子控件 */,
+			);
+			path = "登录 * 注册 * 忘记密码";
+			sourceTree = "<group>";
+		};
+		C589604C2500AB00002B1764 /* 图形验证码 */ = {
+			isa = PBXGroup;
+			children = (
+				C589604D2500AC91002B1764 /* ImageCodeView.h */,
+				C589604E2500AC91002B1764 /* ImageCodeView.m */,
+			);
+			path = "图形验证码";
+			sourceTree = "<group>";
+		};
+		C58960502500AF5C002B1764 /* 相关页面子控件 */ = {
+			isa = PBXGroup;
+			children = (
+				C589605D2500B139002B1764 /* Door.h */,
+				C58960532500B03A002B1764 /* LogoContentView */,
+				C58960522500AF9E002B1764 /* RegisterContentView */,
+				C58960512500AF86002B1764 /* LoginContentView */,
+			);
+			path = "相关页面子控件";
+			sourceTree = "<group>";
+		};
+		C58960512500AF86002B1764 /* LoginContentView */ = {
+			isa = PBXGroup;
+			children = (
+				C589605A2500B100002B1764 /* LoginContentView.h */,
+				C589605B2500B100002B1764 /* LoginContentView.m */,
+			);
+			path = LoginContentView;
+			sourceTree = "<group>";
+		};
+		C58960522500AF9E002B1764 /* RegisterContentView */ = {
+			isa = PBXGroup;
+			children = (
+				C58960572500B0F6002B1764 /* RegisterContentView.h */,
+				C58960582500B0F6002B1764 /* RegisterContentView.m */,
+			);
+			path = RegisterContentView;
+			sourceTree = "<group>";
+		};
+		C58960532500B03A002B1764 /* LogoContentView */ = {
+			isa = PBXGroup;
+			children = (
+				C58960542500B0E0002B1764 /* LogoContentView.h */,
+				C58960552500B0E0002B1764 /* LogoContentView.m */,
+			);
+			path = LogoContentView;
+			sourceTree = "<group>";
+		};
 		C58F000424EA36F800B6D09C = {
 			isa = PBXGroup;
 			children = (
@@ -1712,6 +1785,7 @@
 		C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C59D9AB424F8EECB00A74CE9 /* 录制成功的视频进行预览播放以决定是否舍弃 */,
 				C5C67CA524FF5D61000A26B8 /* 电影倒计时特效 */,
 				C5C67C9224FF5CFC000A26B8 /* TimerManager */,
 				C56161B424EE4F10001CD851 /* 卡片式滑动效果 */,
@@ -2112,7 +2186,8 @@
 		C58F032724EA69C800B6D09C /* 🇨🇳ServiceLogic */ = {
 			isa = PBXGroup;
 			children = (
-				C59D9AB424F8EECB00A74CE9 /* 录制成功的视频进行预览播放以决定是否舍弃 */,
+				C589604C2500AB00002B1764 /* 图形验证码 */,
+				C589604B2500AA2D002B1764 /* 登录 * 注册 * 忘记密码 */,
 				C55497AD24F3A3A20065510D /* OtherVC */,
 				C561618324EE4C72001CD851 /* 拍照 */,
 			);
@@ -2670,6 +2745,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C589605C2500B100002B1764 /* LoginContentView.m in Sources */,
 				C58F02BB24EA61C600B6D09C /* CGGeometry+LOTAdditions.m in Sources */,
 				C58F02AA24EA61C600B6D09C /* LOTAnimationCache.m in Sources */,
 				C58F029124EA61C600B6D09C /* LOTAnimatedSwitch.m in Sources */,
@@ -2691,6 +2767,7 @@
 				C58F00EA24EA581F00B6D09C /* BRBaseView.m in Sources */,
 				C58F046F24EBD70300B6D09C /* UIControl+XY.m in Sources */,
 				C58F019724EA5CAC00B6D09C /* ZYTextField_01.m in Sources */,
+				C58960562500B0E0002B1764 /* LogoContentView.m in Sources */,
 				C58F01A524EA5CAD00B6D09C /* BaseVC+TZLocationManager.m in Sources */,
 				C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */,
 				C58F00DF24EA581F00B6D09C /* NSImage+WebCache.m in Sources */,
@@ -2726,6 +2803,7 @@
 				C58F028F24EA61C600B6D09C /* NSValue+Compat.m in Sources */,
 				C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */,
 				C58F00D424EA581F00B6D09C /* UINavigationItem+GKCategory.m in Sources */,
+				C58960592500B0F6002B1764 /* RegisterContentView.m in Sources */,
 				C58F02BC24EA61C600B6D09C /* LOTTrimPathNode.m in Sources */,
 				C58F010A24EA584B00B6D09C /* LYLUnicode.m in Sources */,
 				C58F020324EA617800B6D09C /* BWShareView.m in Sources */,
@@ -2791,6 +2869,7 @@
 				C58F00CC24EA581F00B6D09C /* GKPopAnimatedTransition.m in Sources */,
 				C58F019F24EA5CAD00B6D09C /* BaseVC+AlertController.m in Sources */,
 				C58F02DE24EA62E600B6D09C /* HistoryDataListTBVCell.m in Sources */,
+				C58960612500B196002B1764 /* DoorVC.m in Sources */,
 				C58F00E024EA581F00B6D09C /* SDWebImageGIFCoder.m in Sources */,
 				C58F02B724EA61C600B6D09C /* UIColor.m in Sources */,
 				C58F019B24EA5CAD00B6D09C /* BaseVC+AFNReachability.m in Sources */,
@@ -2805,6 +2884,7 @@
 				C58F00DD24EA581F00B6D09C /* SDWebImageCoderHelper.m in Sources */,
 				C58F00DE24EA581F00B6D09C /* SDWebImageCoder.m in Sources */,
 				C58F00E724EA581F00B6D09C /* BRDatePickerView.m in Sources */,
+				C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */,
 				C58F018124EA5CAC00B6D09C /* DeleteSystemUITabBarButton.m in Sources */,
 				C58F02C424EA61C600B6D09C /* CALayer+Compat.m in Sources */,
 				C58F02D724EA62B500B6D09C /* SuspendLab.m in Sources */,
