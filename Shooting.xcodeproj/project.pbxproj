@@ -47,6 +47,7 @@
 		C58960592500B0F6002B1764 /* RegisterContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960582500B0F6002B1764 /* RegisterContentView.m */; };
 		C589605C2500B100002B1764 /* LoginContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589605B2500B100002B1764 /* LoginContentView.m */; };
 		C58960612500B196002B1764 /* DoorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960602500B196002B1764 /* DoorVC.m */; };
+		C58960632500D288002B1764 /* niupi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C58960622500D288002B1764 /* niupi.mp4 */; };
 		C58F001224EA36F800B6D09C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001124EA36F800B6D09C /* AppDelegate.m */; };
 		C58F001524EA36F800B6D09C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001424EA36F800B6D09C /* SceneDelegate.m */; };
 		C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58F001924EA36F800B6D09C /* Main.storyboard */; };
@@ -395,6 +396,7 @@
 		C589605D2500B139002B1764 /* Door.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
 		C589605F2500B196002B1764 /* DoorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoorVC.h; sourceTree = "<group>"; };
 		C58960602500B196002B1764 /* DoorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoorVC.m; sourceTree = "<group>"; };
+		C58960622500D288002B1764 /* niupi.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = niupi.mp4; sourceTree = "<group>"; };
 		C58F000D24EA36F800B6D09C /* Shooting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58F001024EA36F800B6D09C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C58F001124EA36F800B6D09C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1090,6 +1092,7 @@
 		C589604B2500AA2D002B1764 /* 登录 * 注册 * 忘记密码 */ = {
 			isa = PBXGroup;
 			children = (
+				C58960622500D288002B1764 /* niupi.mp4 */,
 				C589605F2500B196002B1764 /* DoorVC.h */,
 				C58960602500B196002B1764 /* DoorVC.m */,
 				C58960502500AF5C002B1764 /* 相关页面子控件 */,
@@ -2454,6 +2457,7 @@
 				C58F000A24EA36F800B6D09C /* Frameworks */,
 				C58F000B24EA36F800B6D09C /* Resources */,
 				81461550B44225FE0E74CAD0 /* [CP] Embed Pods Frameworks */,
+				2A4E2031CC1D17B69772896D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2492,6 +2496,7 @@
 				C58F003324EA36FA00B6D09C /* Frameworks */,
 				C58F003424EA36FA00B6D09C /* Resources */,
 				B0EC305D6B70690CCD719FB6 /* [CP] Embed Pods Frameworks */,
+				74D03E77B59FA43427B93382 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2559,6 +2564,7 @@
 				C58F048024EBD78500B6D09C /* spark_red.png in Resources */,
 				C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */,
 				C572A27624FBC6E4000A1687 /* unsure@2x.png in Resources */,
+				C58960632500D288002B1764 /* niupi.mp4 in Resources */,
 				C59D9B1A24F9083200A74CE9 /* sure@3x.png in Resources */,
 				C58F03CE24EA789100B6D09C /* 翻转镜头@2x.png in Resources */,
 				C58F03A924EA6E7600B6D09C /* ShoppingCart@3x.png in Resources */,
@@ -2660,6 +2666,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2A4E2031CC1D17B69772896D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shooting/Pods-Shooting-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shooting/Pods-Shooting-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shooting/Pods-Shooting-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5565883AB8A837686B91DA47 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2680,6 +2703,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74D03E77B59FA43427B93382 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shooting-ShootingUITests/Pods-Shooting-ShootingUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shooting-ShootingUITests/Pods-Shooting-ShootingUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shooting-ShootingUITests/Pods-Shooting-ShootingUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		81461550B44225FE0E74CAD0 /* [CP] Embed Pods Frameworks */ = {

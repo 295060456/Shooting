@@ -35,6 +35,25 @@
 #import "PPBadgeView.h"
 #import "XHLaunchAd.h"
 
-
+#pragma mark —— ZFPlayer 播放器相关
+//Core
+#import "ZFPlayer.h"
+//AVPlayer
+#import <ZFPlayer/ZFAVPlayerManager.h>
+//ijkplayer
+#import <ZFPlayer/ZFIJKPlayerManager.h>
+//ControlView
+#import <ZFPlayer/UIImageView+ZFCache.h>
+#import <ZFPlayer/UIView+ZFFrame.h>
+#import <ZFPlayer/ZFLandScapeControlView.h>
+#import <ZFPlayer/ZFLoadingView.h>
+#import <ZFPlayer/ZFNetworkSpeedMonitor.h>
+#import <ZFPlayer/ZFPlayerControlView.h>
+#import <ZFPlayer/ZFPortraitControlView.h>
+#import <ZFPlayer/ZFSliderView.h>
+#import <ZFPlayer/ZFSmallFloatControlView.h>
+#import <ZFPlayer/ZFSpeedLoadingView.h>
+#import <ZFPlayer/ZFUtilities.h>
+#import <ZFPlayer/ZFVolumeBrightnessView.h>
 
 #endif /* Pods_h */

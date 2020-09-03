@@ -9,9 +9,15 @@
 #import "DoorVC.h"
 #import "Door.h"
 
+
+
+
+
 @interface DoorVC ()
 
 @property(nonatomic,strong)LoginContentView *loginContentView;
+@property(nonatomic,strong)ZFPlayerController *player;
+@property(nonatomic,strong)ZFAVPlayerManager *playerManager;
 
 @property(nonatomic,strong)id requestParams;
 @property(nonatomic,copy)MKDataBlock successBlock;
@@ -68,12 +74,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = KYellowColor;
+    [self.player.currentPlayerManager play];
     self.loginContentView.alpha = 1;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-
+    
 //    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
 }
 
@@ -108,6 +115,25 @@
                                              SCREEN_WIDTH - 100,
                                              SCREEN_HEIGHT/ 2);
     }return _loginContentView;
+}
+
+-(ZFAVPlayerManager *)playerManager{
+    if (!_playerManager) {
+        _playerManager = ZFAVPlayerManager.new;
+        _playerManager.shouldAutoPlay = YES;
+        
+//        _playerManager.assetURL = [NSURL URLWithString:@"https://www.apple.com/105/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/films/feature/iphone-x-feature-tpl-cc-us-20170912_1280x720h.mp4"];
+
+        _playerManager.assetURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"niupi"
+                                                                                         ofType:@"mp4"]];
+    }return _playerManager;
+}
+
+-(ZFPlayerController *)player{
+    if (!_player) {
+        _player = [[ZFPlayerController alloc] initWithPlayerManager:self.playerManager
+                                                      containerView:self.view];
+    }return _player;
 }
 
 @end

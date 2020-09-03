@@ -33,6 +33,14 @@ target 'Shooting' do
   pod 'PPBadgeView' #https://github.com/jkpang/PPBadgeView iOS自定义Badge组件, 支持UIView, UITabBarItem, UIBarButtonItem以及子类
   pod 'XHLaunchAd'
   
+  pod 'ZFPlayer'
+  pod 'ZFPlayer/ControlView'
+  pod 'ZFPlayer/AVPlayer'
+  pod 'ZFPlayer/ijkplayer'
+  pod 'KTVHTTPCache' # 边下边播
+  
+#  pod 'ZFPlayer/KSYMediaPlayer'
+  
   # Pods for commentList
 
   # Pods for Shooting
