@@ -12,6 +12,7 @@
 @interface ForgetCodeVC ()
 
 @property(nonatomic,strong)FindCodeFlowChartView *findCodeFlowChartView;
+@property(nonatomic,strong)UILabel *tipsLab;
 
 @property(nonatomic,strong)id requestParams;
 @property(nonatomic,copy)MKDataBlock successBlock;
@@ -76,6 +77,7 @@
     self.gk_navTitleFont = [UIFont systemFontOfSize:17
                                              weight:UIFontWeightBold];
     self.findCodeFlowChartView.alpha = 1;
+    self.tipsLab.alpha = 1;
 }
 #pragma mark —— LazyLoad
 -(FindCodeFlowChartView *)findCodeFlowChartView{
@@ -91,6 +93,24 @@
             make.height.mas_equalTo(60);
         }];
     }return _findCodeFlowChartView;
+}
+
+-(UILabel *)tipsLab{
+    if (!_tipsLab) {
+        _tipsLab = UILabel.new;
+        _tipsLab.font = [UIFont systemFontOfSize:10
+                                          weight:UIFontWeightRegular];
+        _tipsLab.textColor = kWhiteColor;
+        _tipsLab.text = @"如用户名没有绑定手机号\n请去环球体育APP联系客服找回密码";
+        _tipsLab.numberOfLines = 0;
+        _tipsLab.textAlignment = NSTextAlignmentCenter;
+        [_tipsLab sizeToFit];
+        [self.view addSubview:_tipsLab];
+        [_tipsLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.bottom.equalTo(self.view);
+            make.width.mas_equalTo(SCREEN_WIDTH / 2);
+        }];
+    }return _tipsLab;
 }
 
 -(NSMutableArray<NSString *> *)titleMutArr{
@@ -110,5 +130,7 @@
         [_subTitleMutArr addObject:@"完成"];
     }return _subTitleMutArr;
 }
+
+
 
 @end

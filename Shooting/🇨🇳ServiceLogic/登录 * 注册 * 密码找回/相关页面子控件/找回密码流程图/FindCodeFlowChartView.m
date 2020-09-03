@@ -20,17 +20,19 @@
     [super drawRect:rect];
     self.backIMGV.alpha = 1;
     self.titleLab.alpha = 1;
+    self.subTitleLab.alpha = 1;
 }
 
 #pragma mark —— lazyLoad
 -(UILabel *)titleLab{
     if (!_titleLab) {
         _titleLab = UILabel.new;
+        _titleLab.font = [UIFont systemFontOfSize:20 weight:UIFontWeightHeavy];
         [_titleLab sizeToFit];
-        [self addSubview:_titleLab];
+        [self.backIMGV addSubview:_titleLab];
         [_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self);
-            make.top.equalTo(self);
+            make.centerX.equalTo(self.backIMGV);
+            make.bottom.equalTo(self.backIMGV.mas_centerY).offset(7);
         }];
     }return _titleLab;
 }
@@ -38,11 +40,12 @@
 -(UILabel *)subTitleLab{
     if (!_subTitleLab) {
         _subTitleLab = UILabel.new;
+        _subTitleLab.font = [UIFont systemFontOfSize:8 weight:UIFontWeightRegular];
         [_subTitleLab sizeToFit];
-        [self addSubview:_subTitleLab];
+        [self.backIMGV addSubview:_subTitleLab];
         [_subTitleLab mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self);
-            make.bottom.equalTo(self);
+            make.centerX.equalTo(self.backIMGV);
+            make.top.equalTo(self.backIMGV.mas_centerY).offset(7);
         }];
     }return _subTitleLab;
 }
@@ -50,9 +53,10 @@
 -(UIImageView *)backIMGV{
     if (!_backIMGV) {
         _backIMGV = UIImageView.new;
+        _backIMGV.image = kIMG(@"di_1");
         [self addSubview:_backIMGV];
         [_backIMGV mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.equalTo(self);
+            make.edges.equalTo(self);
         }];
     }return _backIMGV;
 }
