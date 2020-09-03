@@ -9,6 +9,8 @@
 #import "DoorVC.h"
 #import "Door.h"
 
+#import "ForgetCodeVC.h"
+
 @interface DoorVC ()
 
 @property(nonatomic,strong)LoginContentView *loginContentView;
@@ -71,14 +73,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = KYellowColor;
-    [self.player.currentPlayerManager play];
-    self.loginContentView.alpha = 1;
-   
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-     [UIView animationAlert:self.logoContentView];
+    [self.player.currentPlayerManager play];
+    self.loginContentView.alpha = 1;
+    [UIView animationAlert:self.logoContentView];
 //    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
 }
 
@@ -90,6 +92,7 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    [self.player.currentPlayerManager stop];
 //    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
 }
 
@@ -102,11 +105,25 @@
      [self.loginContentView removeLogoContentView];
 }
 
+-(void)KKK{
+    @weakify(self)
+    [ForgetCodeVC ComingFromVC:weak_self
+                   comingStyle:ComingStyle_PUSH
+             presentationStyle:UIModalPresentationFullScreen
+                 requestParams:nil
+                       success:^(id data) {}
+                      animated:YES];
+}
 #pragma mark —— LazyLoad
 -(LoginContentView *)loginContentView{
     if (!_loginContentView) {
         _loginContentView = LoginContentView.new;
         _loginContentView.backgroundColor = kBlueColor;
+        @weakify(self)
+        [_loginContentView actionLoginContentViewBlock:^(id data) {
+            @strongify(self)
+            [self KKK];
+        }];
         [self.view addSubview:_loginContentView];
         _loginContentView.frame = CGRectMake(SCREEN_WIDTH,
                                              SCREEN_HEIGHT / 3,

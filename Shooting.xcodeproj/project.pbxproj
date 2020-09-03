@@ -53,6 +53,10 @@
 		C589606B2500DAB7002B1764 /* SubLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58960692500DAB7002B1764 /* SubLogo@2x.png */; };
 		C589606C2500DAB7002B1764 /* SubLogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C589606A2500DAB7002B1764 /* SubLogo@3x.png */; };
 		C589606F2500DDA3002B1764 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = C589606E2500DDA3002B1764 /* UIView+Animation.m */; };
+		C58960732500E0FA002B1764 /* FindCodeFlowChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960722500E0FA002B1764 /* FindCodeFlowChartView.m */; };
+		C58960762500E219002B1764 /* FlowChartSingleElementPic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58960742500E219002B1764 /* FlowChartSingleElementPic@3x.png */; };
+		C58960772500E219002B1764 /* FlowChartSingleElementPic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58960752500E219002B1764 /* FlowChartSingleElementPic@2x.png */; };
+		C589607C2500E90C002B1764 /* ForgetCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C589607B2500E90C002B1764 /* ForgetCodeVC.m */; };
 		C58F001224EA36F800B6D09C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001124EA36F800B6D09C /* AppDelegate.m */; };
 		C58F001524EA36F800B6D09C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001424EA36F800B6D09C /* SceneDelegate.m */; };
 		C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58F001924EA36F800B6D09C /* Main.storyboard */; };
@@ -408,6 +412,12 @@
 		C589606A2500DAB7002B1764 /* SubLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SubLogo@3x.png"; sourceTree = "<group>"; };
 		C589606D2500DDA3002B1764 /* UIView+Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
 		C589606E2500DDA3002B1764 /* UIView+Animation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
+		C58960712500E0FA002B1764 /* FindCodeFlowChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindCodeFlowChartView.h; sourceTree = "<group>"; };
+		C58960722500E0FA002B1764 /* FindCodeFlowChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindCodeFlowChartView.m; sourceTree = "<group>"; };
+		C58960742500E219002B1764 /* FlowChartSingleElementPic@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlowChartSingleElementPic@3x.png"; sourceTree = "<group>"; };
+		C58960752500E219002B1764 /* FlowChartSingleElementPic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlowChartSingleElementPic@2x.png"; sourceTree = "<group>"; };
+		C589607A2500E90C002B1764 /* ForgetCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetCodeVC.h; sourceTree = "<group>"; };
+		C589607B2500E90C002B1764 /* ForgetCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetCodeVC.m; sourceTree = "<group>"; };
 		C58F000D24EA36F800B6D09C /* Shooting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58F001024EA36F800B6D09C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C58F001124EA36F800B6D09C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1104,8 +1114,8 @@
 			isa = PBXGroup;
 			children = (
 				C58960622500D288002B1764 /* niupi.mp4 */,
-				C589605F2500B196002B1764 /* DoorVC.h */,
-				C58960602500B196002B1764 /* DoorVC.m */,
+				C58960792500E8DA002B1764 /* 忘记密码 */,
+				C58960782500E8CC002B1764 /* 登录 * 注册 */,
 				C58960502500AF5C002B1764 /* 相关页面子控件 */,
 			);
 			path = "登录 * 注册 * 忘记密码";
@@ -1124,6 +1134,7 @@
 			isa = PBXGroup;
 			children = (
 				C589605D2500B139002B1764 /* Door.h */,
+				C58960702500E08E002B1764 /* 找回密码流程图 */,
 				C58960532500B03A002B1764 /* LogoContentView */,
 				C58960522500AF9E002B1764 /* RegisterContentView */,
 				C58960512500AF86002B1764 /* LoginContentView */,
@@ -1161,12 +1172,41 @@
 		C58960642500D943002B1764 /* 登录 * 注册 * 忘记密码 */ = {
 			isa = PBXGroup;
 			children = (
+				C58960752500E219002B1764 /* FlowChartSingleElementPic@2x.png */,
+				C58960742500E219002B1764 /* FlowChartSingleElementPic@3x.png */,
 				C58960652500D9A6002B1764 /* MainLogo@2x.png */,
 				C58960662500D9A6002B1764 /* MainLogo@3x.png */,
 				C58960692500DAB7002B1764 /* SubLogo@2x.png */,
 				C589606A2500DAB7002B1764 /* SubLogo@3x.png */,
 			);
 			path = "登录 * 注册 * 忘记密码";
+			sourceTree = "<group>";
+		};
+		C58960702500E08E002B1764 /* 找回密码流程图 */ = {
+			isa = PBXGroup;
+			children = (
+				C58960712500E0FA002B1764 /* FindCodeFlowChartView.h */,
+				C58960722500E0FA002B1764 /* FindCodeFlowChartView.m */,
+			);
+			path = "找回密码流程图";
+			sourceTree = "<group>";
+		};
+		C58960782500E8CC002B1764 /* 登录 * 注册 */ = {
+			isa = PBXGroup;
+			children = (
+				C589605F2500B196002B1764 /* DoorVC.h */,
+				C58960602500B196002B1764 /* DoorVC.m */,
+			);
+			path = "登录 * 注册";
+			sourceTree = "<group>";
+		};
+		C58960792500E8DA002B1764 /* 忘记密码 */ = {
+			isa = PBXGroup;
+			children = (
+				C589607A2500E90C002B1764 /* ForgetCodeVC.h */,
+				C589607B2500E90C002B1764 /* ForgetCodeVC.m */,
+			);
+			path = "忘记密码";
 			sourceTree = "<group>";
 		};
 		C58F000424EA36F800B6D09C = {
@@ -2601,7 +2641,9 @@
 				C58F047F24EBD78500B6D09C /* day_like@3x.png in Resources */,
 				C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */,
 				C59D9B0324F9045E00A74CE9 /* 闪光灯-关闭@3x.png in Resources */,
+				C58960772500E219002B1764 /* FlowChartSingleElementPic@2x.png in Resources */,
 				C58F03AB24EA6E7600B6D09C /* MyStore@2x.png in Resources */,
+				C58960762500E219002B1764 /* FlowChartSingleElementPic@3x.png in Resources */,
 				C58F03A824EA6E7600B6D09C /* Home@3x.png in Resources */,
 				C52EE27424FF647D0033CD47 /* 倒计时 开启状态@3x.png in Resources */,
 				C58F03B824EA6F0700B6D09C /* green_lottie_tab_discover.json in Resources */,
@@ -2882,6 +2924,7 @@
 				C58F02AF24EA61C600B6D09C /* LOTAnimatedControl.m in Sources */,
 				C58F00D824EA581F00B6D09C /* UIImage+WebP.m in Sources */,
 				C561619824EE4CA9001CD851 /* MKUploadingVC.m in Sources */,
+				C589607C2500E90C002B1764 /* ForgetCodeVC.m in Sources */,
 				C59D9AD724F8EF4100A74CE9 /* CustomerAVPlayerVC.m in Sources */,
 				C572A26B24FBC547000A1687 /* UIImage+Extras.m in Sources */,
 				C58F01AD24EA5CAD00B6D09C /* NSObject+Extras.m in Sources */,
@@ -2966,6 +3009,7 @@
 				C58F00D624EA581F00B6D09C /* GKCustomNavigationBar.m in Sources */,
 				C58F02B424EA61C600B6D09C /* LOTRenderNode.m in Sources */,
 				C58F028A24EA61C600B6D09C /* LOTBezierData.m in Sources */,
+				C58960732500E0FA002B1764 /* FindCodeFlowChartView.m in Sources */,
 				C58F001224EA36F800B6D09C /* AppDelegate.m in Sources */,
 				C58F018D24EA5CAC00B6D09C /* NSArray+Extension.m in Sources */,
 				C58F029024EA61C600B6D09C /* LOTAnimatorNode.m in Sources */,

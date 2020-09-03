@@ -7,8 +7,12 @@
 //
 
 #import "LoginContentView.h"
+#import "ForgetCodeVC.h"
 
 @interface LoginContentView ()
+
+@property(nonatomic,strong)UIButton *btn;
+@property(nonatomic,copy)MKDataBlock loginContentViewBlock;
 
 @end
 
@@ -24,6 +28,12 @@
         
     }return self;
 }
+
+-(void)drawRect:(CGRect)rect{
+    [super drawRect:rect];
+    self.btn.alpha = 1;
+}
+
 /*
  *    使用弹簧的描述时间曲线来执行动画 ,当dampingRatio == 1 时,动画会平稳的减速到最终的模型值,而不会震荡.
  *    小于1的阻尼比在达到完全停止之前会震荡的越来越多.
@@ -57,6 +67,31 @@
     } completion:^(BOOL finished) {
         
     }];
+}
+
+-(void)btnClickEvent:(UIButton *)sender{
+    if (self.loginContentViewBlock) {
+        self.loginContentViewBlock(self);
+    }
+}
+
+-(void)actionLoginContentViewBlock:(MKDataBlock)loginContentViewBlock{
+    _loginContentViewBlock = loginContentViewBlock;
+}
+#pragma mark —— lazyLoad
+-(UIButton *)btn{
+    if (!_btn) {
+        _btn = UIButton.new;
+        _btn.backgroundColor = kRedColor;
+        [_btn addTarget:self
+                 action:@selector(btnClickEvent:)
+       forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:_btn];
+        [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(50, 50));
+            make.center.equalTo(self);
+        }];
+    }return _btn;
 }
 
 @end

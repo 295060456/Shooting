@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LoginContentView : UIView
 
 -(void)showLogoContentView;
-
 -(void)removeLogoContentView;
+-(void)actionLoginContentViewBlock:(MKDataBlock)loginContentViewBlock;
 
 @end
 

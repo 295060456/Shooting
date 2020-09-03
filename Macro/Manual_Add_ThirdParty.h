@@ -97,6 +97,7 @@
 #import "CustomerGPUImagePlayerVC.h"
 ///登录 * 注册 * 忘记密码
 #import "DoorVC.h"
+#import "ForgetCodeVC.h"
 
 #import "MKLaunchingAdModel.h"
 
