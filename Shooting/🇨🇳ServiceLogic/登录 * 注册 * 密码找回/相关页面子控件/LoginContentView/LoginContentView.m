@@ -13,6 +13,7 @@
 @interface LoginContentView ()
 
 @property(nonatomic,strong)UILabel *titleLab;
+@property(nonatomic,strong)UIButton *storeCodeBtn;//记住密码
 @property(nonatomic,strong)UIButton *forgetCodeBtn;//忘记密码
 @property(nonatomic,strong)UIButton *toRegisterBtn;//去注册
 @property(nonatomic,copy)MKDataBlock loginContentViewBlock;
@@ -45,9 +46,10 @@
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
     self.titleLab.alpha = 1;
-    self.forgetCodeBtn.alpha = 1;
     self.toRegisterBtn.alpha = 1;
     [self makeInputView];
+    self.storeCodeBtn.alpha = 1;
+    self.forgetCodeBtn.alpha = 1;
 }
 
 -(void)makeInputView{
@@ -154,11 +156,15 @@
         
     }];
 }
-
+#pragma mark —— 点击事件
 -(void)btnClickEvent:(UIButton *)sender{
     if (self.loginContentViewBlock) {
         self.loginContentViewBlock(self);
     }
+}
+
+-(void)storeCodeBtnClickEvent:(UIButton *)sender{
+    
 }
 
 -(void)actionLoginContentViewBlock:(MKDataBlock)loginContentViewBlock{
@@ -169,21 +175,6 @@
     _loginContentViewKeyboardBlock = loginContentViewKeyboardBlock;
 }
 #pragma mark —— lazyLoad
--(UIButton *)forgetCodeBtn{
-    if (!_forgetCodeBtn) {
-        _forgetCodeBtn = UIButton.new;
-        _forgetCodeBtn.backgroundColor = kRedColor;
-        [_forgetCodeBtn addTarget:self
-                 action:@selector(btnClickEvent:)
-       forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:_forgetCodeBtn];
-        [_forgetCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(50, 50));
-            make.center.equalTo(self);
-        }];
-    }return _forgetCodeBtn;
-}
-
 -(UIButton *)toRegisterBtn{
     if (!_toRegisterBtn) {
         _toRegisterBtn = UIButton.new;
@@ -261,5 +252,52 @@
         _inputViewMutArr = NSMutableArray.array;
     }return _inputViewMutArr;
 }
+
+-(UIButton *)storeCodeBtn{
+    if (!_storeCodeBtn) {
+        _storeCodeBtn = UIButton.new;
+        _storeCodeBtn.titleLabel.textColor = kWhiteColor;
+        _storeCodeBtn.titleLabel.font = [UIFont systemFontOfSize:8
+                                                          weight:UIFontWeightRegular];
+        [_storeCodeBtn setTitle:@"记住密码"
+                       forState:UIControlStateNormal];
+        [_storeCodeBtn setImage:kIMG(@"记住密码")
+                       forState:UIControlStateNormal];
+        [_storeCodeBtn setImage:kIMG(@"没有记住密码")
+                       forState:UIControlStateSelected];
+        [_storeCodeBtn addTarget:self
+                          action:@selector(storeCodeBtnClickEvent:)
+                forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:_storeCodeBtn];
+        [_storeCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.titleLab.mas_left);
+            make.top.equalTo(self.inputViewMutArr.lastObject.mas_bottom).offset(5);
+        }];
+    }return _storeCodeBtn;
+}
+
+-(UIButton *)forgetCodeBtn{
+    if (!_forgetCodeBtn) {
+        _forgetCodeBtn = UIButton.new;
+        _forgetCodeBtn.titleLabel.textColor = kWhiteColor;
+        _forgetCodeBtn.titleLabel.font = [UIFont systemFontOfSize:8
+                                                          weight:UIFontWeightRegular];
+        [_forgetCodeBtn.titleLabel sizeToFit];
+        _forgetCodeBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
+        [_forgetCodeBtn setTitle:@"忘记密码"
+                       forState:UIControlStateNormal];
+        [_forgetCodeBtn setImage:kIMG(@"KKK")
+                       forState:UIControlStateNormal];
+        [_forgetCodeBtn addTarget:self
+                 action:@selector(btnClickEvent:)
+       forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:_forgetCodeBtn];
+        [_forgetCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.inputViewMutArr.lastObject.mas_bottom).offset(5);
+            make.left.equalTo(self.titleLab.mas_right).offset(-7);
+        }];
+    }return _forgetCodeBtn;
+}
+
 
 @end

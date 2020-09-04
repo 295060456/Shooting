@@ -59,6 +59,11 @@
 		C572A2A824FDFA71000A1687 /* CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A2A524FDFA71000A1687 /* CountDownBtn.m */; };
 		C57C229A250240B500FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */; };
 		C57C22AE250263F100FAAA3F /* CustomZFPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C22AD250263F100FAAA3F /* CustomZFPlayerControlView.m */; };
+		C57C22B325026BE500FAAA3F /* 记住密码@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57C22AF25026BE500FAAA3F /* 记住密码@2x.png */; };
+		C57C22B425026BE500FAAA3F /* 没有记住密码@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57C22B025026BE500FAAA3F /* 没有记住密码@3x.png */; };
+		C57C22B525026BE500FAAA3F /* 没有记住密码@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57C22B125026BE500FAAA3F /* 没有记住密码@2x.png */; };
+		C57C22B625026BE500FAAA3F /* 记住密码@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57C22B225026BE500FAAA3F /* 记住密码@3x.png */; };
+		C57C22B825026E4600FAAA3F /* KKK.png in Resources */ = {isa = PBXBuildFile; fileRef = C57C22B725026E4600FAAA3F /* KKK.png */; };
 		C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589604E2500AC91002B1764 /* ImageCodeView.m */; };
 		C58960562500B0E0002B1764 /* LogoContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960552500B0E0002B1764 /* LogoContentView.m */; };
 		C58960592500B0F6002B1764 /* RegisterContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960582500B0F6002B1764 /* RegisterContentView.m */; };
@@ -437,6 +442,11 @@
 		C57C2299250240B500FAAA3F /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		C57C22AC250263F100FAAA3F /* CustomZFPlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomZFPlayerControlView.h; sourceTree = "<group>"; };
 		C57C22AD250263F100FAAA3F /* CustomZFPlayerControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomZFPlayerControlView.m; sourceTree = "<group>"; };
+		C57C22AF25026BE500FAAA3F /* 记住密码@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "记住密码@2x.png"; sourceTree = "<group>"; };
+		C57C22B025026BE500FAAA3F /* 没有记住密码@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "没有记住密码@3x.png"; sourceTree = "<group>"; };
+		C57C22B125026BE500FAAA3F /* 没有记住密码@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "没有记住密码@2x.png"; sourceTree = "<group>"; };
+		C57C22B225026BE500FAAA3F /* 记住密码@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "记住密码@3x.png"; sourceTree = "<group>"; };
+		C57C22B725026E4600FAAA3F /* KKK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KKK.png; sourceTree = "<group>"; };
 		C589604D2500AC91002B1764 /* ImageCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCodeView.h; sourceTree = "<group>"; };
 		C589604E2500AC91002B1764 /* ImageCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCodeView.m; sourceTree = "<group>"; };
 		C58960542500B0E0002B1764 /* LogoContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoContentView.h; sourceTree = "<group>"; };
@@ -1250,6 +1260,11 @@
 				C589607D25010CC0002B1764 /* 找回密码流程图 */,
 				C51A0BF9250210BC00884016 /* Lock@2x.png */,
 				C51A0BF8250210BC00884016 /* Lock@3x.png */,
+				C57C22B725026E4600FAAA3F /* KKK.png */,
+				C57C22AF25026BE500FAAA3F /* 记住密码@2x.png */,
+				C57C22B225026BE500FAAA3F /* 记住密码@3x.png */,
+				C57C22B125026BE500FAAA3F /* 没有记住密码@2x.png */,
+				C57C22B025026BE500FAAA3F /* 没有记住密码@3x.png */,
 				C51A0BF625020E1B00884016 /* 空白图.png */,
 				C51A0BF325020B6F00884016 /* codeDecode@2x.png */,
 				C51A0BF225020B6F00884016 /* codeDecode@3x.png */,
@@ -2732,6 +2747,7 @@
 				C589608C25010DA4002B1764 /* di_4@2x.png in Resources */,
 				C58F047E24EBD78500B6D09C /* spark_red@2x.png in Resources */,
 				C58F048024EBD78500B6D09C /* spark_red.png in Resources */,
+				C57C22B625026BE500FAAA3F /* 记住密码@3x.png in Resources */,
 				C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */,
 				C572A27624FBC6E4000A1687 /* unsure@2x.png in Resources */,
 				C58960632500D288002B1764 /* niupi.mp4 in Resources */,
@@ -2745,6 +2761,7 @@
 				C59D9B0124F9045E00A74CE9 /* 闪光灯@2x.png in Resources */,
 				C51A0BE925020A3B00884016 /* closeCircle@3x.png in Resources */,
 				C58F047F24EBD78500B6D09C /* day_like@3x.png in Resources */,
+				C57C22B325026BE500FAAA3F /* 记住密码@2x.png in Resources */,
 				C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */,
 				C51A0BE825020A3B00884016 /* closeCircle@2x.png in Resources */,
 				C59D9B0324F9045E00A74CE9 /* 闪光灯-关闭@3x.png in Resources */,
@@ -2768,6 +2785,7 @@
 				C58F010B24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */,
 				C589606C2500DAB7002B1764 /* SubLogo@3x.png in Resources */,
 				C58F018224EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton in Resources */,
+				C57C22B825026E4600FAAA3F /* KKK.png in Resources */,
 				C59D9B1C24F9083200A74CE9 /* sure@2x.png in Resources */,
 				C589606B2500DAB7002B1764 /* SubLogo@2x.png in Resources */,
 				C58F03AF24EA6E7600B6D09C /* Home@2x.png in Resources */,
@@ -2777,6 +2795,7 @@
 				C58F03C624EA779100B6D09C /* MKShootVC@3x.png in Resources */,
 				C51A0BD52502032B00884016 /* 输入框样式_3.png in Resources */,
 				C572A28024FBDEF2000A1687 /* 播放@3x.png in Resources */,
+				C57C22B425026BE500FAAA3F /* 没有记住密码@3x.png in Resources */,
 				C58F020524EA617800B6D09C /* 分享控件的用法 in Resources */,
 				C589608725010CD9002B1764 /* di_3@3x.png in Resources */,
 				C58F03B924EA6F0700B6D09C /* green_lottie_tab_news.json in Resources */,
@@ -2810,6 +2829,7 @@
 				C58F03AE24EA6E7600B6D09C /* ShoppingCart@2x.png in Resources */,
 				C589608525010CD9002B1764 /* di_1@2x.png in Resources */,
 				C51A0BEC25020ADF00884016 /* codeEncode@2x.png in Resources */,
+				C57C22B525026BE500FAAA3F /* 没有记住密码@2x.png in Resources */,
 				C59D9B1B24F9083200A74CE9 /* 删除@2x.png in Resources */,
 				C58F00D924EA581F00B6D09C /* 手动集成 SDWebImage_WebP in Resources */,
 				C59D9B1D24F9083200A74CE9 /* 删除@3x.png in Resources */,
