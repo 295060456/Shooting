@@ -7,6 +7,7 @@
 //
 
 #import "RegisterContentView.h"
+#import "DoorInputView.h"
 
 @interface RegisterContentView ()
 

@@ -7,13 +7,22 @@
 //
 
 #import "LoginContentView.h"
+#import "DoorInputView.h"
 #import "ForgetCodeVC.h"
 
 @interface LoginContentView ()
 
+@property(nonatomic,strong)UILabel *titleLab;
 @property(nonatomic,strong)UIButton *forgetCodeBtn;//忘记密码
 @property(nonatomic,strong)FSCustomButton *toRegisterBtn;//去注册
 @property(nonatomic,copy)MKDataBlock loginContentViewBlock;
+
+@property(nonatomic,strong)NSMutableArray <UIImage *>*headerImgMutArr;
+@property(nonatomic,strong)NSMutableArray <UIImage *>*btnSelectedImgMutArr;
+@property(nonatomic,strong)NSMutableArray <UIImage *>*btnUnselectedImgMutArr;
+@property(nonatomic,strong)NSMutableArray <NSString *>*placeHolderMutArr;
+@property(nonatomic,strong)NSMutableArray <DoorInputViewStyle_3 *> *inputViewMutArr;
+
 
 @end
 
@@ -28,17 +37,53 @@
     if (self = [super init]) {
         [UIView cornerCutToCircleWithView:self
                           AndCornerRadius:8];
-        self.backgroundColor = COLOR_RGB(255,
-                                         255,
-                                         255,
-                                         1);
+        self.backgroundColor = kBlackColor;
     }return self;
 }
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
+    self.titleLab.alpha = 1;
     self.forgetCodeBtn.alpha = 1;
     self.toRegisterBtn.alpha = 1;
+    [self makeInputView];
+}
+
+-(void)makeInputView{
+    for (int t = 0; t < self.headerImgMutArr.count; t++) {
+        DoorInputViewStyle_3 *inputView = DoorInputViewStyle_3.new;
+        UIImageView *imgv = UIImageView.new;
+        imgv.image = self.headerImgMutArr[t];
+        inputView.inputViewWidth = 192;
+        inputView.tf.leftView = imgv;
+        inputView.tf.ZYtextFont = [UIFont systemFontOfSize:9.6
+                                                    weight:UIFontWeightRegular];
+        inputView.tf.ZYtextColor = kWhiteColor;
+        inputView.tf.ZYtintColor = kWhiteColor;
+        inputView.tf.ZYplaceholderLabelFont_1 = inputView.tf.ZYtextFont;
+        inputView.tf.ZYplaceholderLabelFont_2 = inputView.tf.ZYtextFont;
+        inputView.tf.ZYplaceholderLabelTextColor_1 = inputView.tf.ZYtextColor;
+        inputView.tf.ZYplaceholderLabelTextColor_2 = inputView.tf.ZYtextColor;
+        
+        inputView.tf.leftViewMode = UITextFieldViewModeAlways;
+        inputView.tf.placeholder = self.placeHolderMutArr[t];
+        inputView.btnSelectedIMG = self.btnSelectedImgMutArr[t];
+        inputView.btnUnSelectedIMG = self.btnUnselectedImgMutArr[t];
+        [self.inputViewMutArr addObject:inputView];
+        
+        [self addSubview:inputView];
+        [inputView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.titleLab.mas_centerX);
+            make.size.mas_equalTo(CGSizeMake(192, 32));
+            if (t == 0) {
+                make.top.equalTo(self.titleLab.mas_bottom).offset(29);
+            }else{
+                DoorInputViewStyle_3 *InputView = self.inputViewMutArr[t - 1];
+                make.top.equalTo(InputView.mas_bottom).offset(15);
+            }
+        }];
+        [self layoutIfNeeded];
+    }
 }
 
 /*
@@ -119,6 +164,63 @@
             make.top.right.bottom.equalTo(self);
         }];
     }return _toRegisterBtn;
+}
+
+-(UILabel *)titleLab{
+    if (!_titleLab) {
+        _titleLab = UILabel.new;
+        _titleLab.text = @"登录";
+        _titleLab.textColor = RGBA_COLOR(255,
+                                         255,
+                                         255,
+                                         1);
+        _titleLab.font = [UIFont systemFontOfSize:14
+                                           weight:UIFontWeightRegular];
+        [_titleLab sizeToFit];
+        [self addSubview:_titleLab];
+        [_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self).offset(-10);
+            make.top.equalTo(self).offset(20);
+        }];
+    }return _titleLab;
+}
+
+-(NSMutableArray<UIImage *> *)headerImgMutArr{
+    if (!_headerImgMutArr) {
+        _headerImgMutArr = NSMutableArray.array;
+        [_headerImgMutArr addObject:kIMG(@"用户名称")];
+        [_headerImgMutArr addObject:kIMG(@"Lock")];
+    }return _headerImgMutArr;
+}
+
+-(NSMutableArray<NSString *> *)placeHolderMutArr{
+    if (!_placeHolderMutArr) {
+        _placeHolderMutArr = NSMutableArray.array;
+        [_placeHolderMutArr addObject:@"用户名"];
+        [_placeHolderMutArr addObject:@"密码"];
+    }return _placeHolderMutArr;
+}
+
+-(NSMutableArray<UIImage *> *)btnSelectedImgMutArr{
+    if (!_btnSelectedImgMutArr) {
+        _btnSelectedImgMutArr = NSMutableArray.array;
+        [_btnSelectedImgMutArr addObject:kIMG(@"空白图")];
+        [_btnSelectedImgMutArr addObject:kIMG(@"codeDecode")];
+    }return _btnSelectedImgMutArr;
+}
+
+-(NSMutableArray<UIImage *> *)btnUnselectedImgMutArr{
+    if (!_btnUnselectedImgMutArr) {
+        _btnUnselectedImgMutArr = NSMutableArray.array;
+        [_btnUnselectedImgMutArr addObject:kIMG(@"closeCircle")];
+        [_btnUnselectedImgMutArr addObject:kIMG(@"codeEncode")];
+    }return _btnUnselectedImgMutArr;
+}
+
+-(NSMutableArray<DoorInputViewStyle_3 *> *)inputViewMutArr{
+    if (!_inputViewMutArr) {
+        _inputViewMutArr = NSMutableArray.array;
+    }return _inputViewMutArr;
 }
 
 @end

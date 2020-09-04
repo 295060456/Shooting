@@ -9,6 +9,7 @@
 #ifndef Door_h
 #define Door_h
 
+#import "DoorInputView.h"
 #import "LogoContentView.h"
 #import "RegisterContentView.h"
 #import "LoginContentView.h"
