@@ -11,6 +11,8 @@
 
 #import "ForgetCodeVC.h"
 
+ZFPlayerController *ZFPlayer;
+
 @interface DoorVC ()
 
 @property(nonatomic,strong)LoginContentView *loginContentView;
@@ -147,6 +149,7 @@
     if (!_player) {
         _player = [[ZFPlayerController alloc] initWithPlayerManager:self.playerManager
                                                       containerView:self.view];
+        ZFPlayer = _player;
     }return _player;
 }
 

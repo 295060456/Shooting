@@ -69,13 +69,21 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     }];
     return YES;
 }
-
+//系统版本低于iOS13.0的设备
 -(void)applicationDidEnterBackground:(UIApplication *)application{
-    NSLog(@"---applicationDidEnterBackground----"); //进入后台 
+    NSLog(@"---applicationDidEnterBackground----"); //进入后台
+    extern ZFPlayerController *ZFPlayer;
+    if (ZFPlayer) {
+        [ZFPlayer.currentPlayerManager pause];
+    }
 }
-
+//系统版本低于iOS13.0的设备
 -(void)applicationDidBecomeActive:(UIApplication *)application {
     NSLog(@"---applicationDidBecomeActive----");//进入前台
+    extern ZFPlayerController *ZFPlayer;
+    if (ZFPlayer) {
+        [ZFPlayer.currentPlayerManager play];
+    }
 }
 #pragma mark - UISceneSession lifecycle
 - (UISceneConfiguration *)application:(UIApplication *)application

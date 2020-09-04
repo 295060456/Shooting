@@ -41,7 +41,7 @@ static SceneDelegate *static_sceneDelegate = nil;
                                    view:nil];
     }
 }
-
+//系统版本不低于iOS13.0的设备
 - (void)scene:(UIScene *)scene
 willConnectToSession:(UISceneSession *)session
       options:(UISceneConnectionOptions *)connectionOptions  API_AVAILABLE(ios(13.0)){
@@ -62,7 +62,6 @@ willConnectToSession:(UISceneSession *)session
         [self.window setRootViewController:self.navigationController];
         [self.window makeKeyAndVisible];
     }
-    
 }
 
 - (void)sceneDidDisconnect:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
@@ -73,8 +72,11 @@ willConnectToSession:(UISceneSession *)session
 }
 
 - (void)sceneDidBecomeActive:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
-    // Called when the scene has moved from an inactive state to an active state.
-    // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+    NSLog(@"---applicationDidBecomeActive----");//进入前台
+    extern ZFPlayerController *ZFPlayer;
+    if (ZFPlayer) {
+        [ZFPlayer.currentPlayerManager play];
+    }
 }
 
 - (void)sceneWillResignActive:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
@@ -88,12 +90,12 @@ willConnectToSession:(UISceneSession *)session
 }
 
 - (void)sceneDidEnterBackground:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
-    // Called as the scene transitions from the foreground to the background.
-    // Use this method to save data, release shared resources, and store enough scene-specific state information
-    // to restore the scene back to its current state.
-
-    // Save changes in the application's managed object context when the application transitions to the background.
     [(AppDelegate *)UIApplication.sharedApplication.delegate saveContext];
+    NSLog(@"---applicationDidEnterBackground----"); //进入后台
+    extern ZFPlayerController *ZFPlayer;
+    if (ZFPlayer) {
+        [ZFPlayer.currentPlayerManager pause];
+    }
 }
 #pragma mark —— lazyLoad
 -(CustomSYSUITabBarController *)customSYSUITabBarController{
