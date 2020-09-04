@@ -10,7 +10,7 @@
 #define Manual_Add_ThirdParty_h
 
 #import "PlaySound.h"//播放自定义声音关键代码
-#import "FSCustomButton.h"
+#import "UIButton+ImageTitleSpacing.h"
 #import "AABlock.h"
 #import "YBNotificationManager.h"
 

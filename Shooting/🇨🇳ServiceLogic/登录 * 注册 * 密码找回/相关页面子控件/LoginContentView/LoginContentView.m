@@ -14,7 +14,7 @@
 
 @property(nonatomic,strong)UILabel *titleLab;
 @property(nonatomic,strong)UIButton *forgetCodeBtn;//忘记密码
-@property(nonatomic,strong)FSCustomButton *toRegisterBtn;//去注册
+@property(nonatomic,strong)UIButton *toRegisterBtn;//去注册
 @property(nonatomic,copy)MKDataBlock loginContentViewBlock;
 
 @property(nonatomic,strong)NSMutableArray <UIImage *>*headerImgMutArr;
@@ -146,9 +146,9 @@
     }return _forgetCodeBtn;
 }
 
--(FSCustomButton *)toRegisterBtn{
+-(UIButton *)toRegisterBtn{
     if (!_toRegisterBtn) {
-        _toRegisterBtn = FSCustomButton.new;
+        _toRegisterBtn = UIButton.new;
         _toRegisterBtn.titleLabel.numberOfLines = 0;
         _toRegisterBtn.backgroundColor = COLOR_RGB(69,
                                                    69,
@@ -156,7 +156,8 @@
                                                    0.7);
         [_toRegisterBtn setTitle:@"新\n用\n户\n注\n册"
                         forState:UIControlStateNormal];
-        _toRegisterBtn.buttonImagePosition = FSCustomButtonImagePositionTop;
+        [_toRegisterBtn layoutButtonWithEdgeInsetsStyle:GLButtonEdgeInsetsStyleTop
+                                        imageTitleSpace:8];
         [_toRegisterBtn setImage:kIMG(@"用户名称")
               forState:UIControlStateNormal];
         [self addSubview:_toRegisterBtn];

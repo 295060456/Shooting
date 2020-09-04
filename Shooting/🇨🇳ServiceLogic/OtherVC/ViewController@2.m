@@ -12,7 +12,8 @@
     
 }
 
-@property(nonatomic,strong)FSCustomButton *btn;
+@property(nonatomic,strong)UIButton *btn;
+@property(nonatomic,strong)UIButton *btn2;
 
 @end
 
@@ -33,20 +34,43 @@
     [super viewDidLoad];
     self.view.backgroundColor = kRedColor;
     self.btn.alpha = 1;
+    self.btn2.alpha = 1;
 }
 
--(FSCustomButton *)btn{
+-(UIButton *)btn{
     if (!_btn) {
-        _btn = FSCustomButton.new;
-        _btn.backgroundColor = kWhiteColor;
-        [_btn setTitle:@"1\n2\n3456" forState:UIControlStateNormal];
-        _btn.titleLabel.numberOfLines = 0;
-        _btn.buttonImagePosition = FSCustomButtonImagePositionTop;
+        _btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _btn.backgroundColor = kBlackColor;
+//        _btn.
         [_btn setImage:kIMG(@"播放")
               forState:UIControlStateNormal];
+        [_btn setTitle:@"1\n2\n71"
+              forState:UIControlStateNormal];
+        _btn.titleLabel.numberOfLines = 0;
         [self.view addSubview:_btn];
-        _btn.frame = CGRectMake(100, 100, 100, 200);
+        _btn.frame = CGRectMake(100, 100, 70, 200);
+        [_btn layoutButtonWithEdgeInsetsStyle:GLButtonEdgeInsetsStyleTop
+                              imageTitleSpace:150];
+        _btn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        //内边距问题
     }return _btn;
+}
+
+-(UIButton *)btn2{
+    if (!_btn2) {
+        _btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+        _btn2.backgroundColor = KBrownColor;
+        [_btn2 setImage:kIMG(@"播放")
+              forState:UIControlStateNormal];
+        [_btn2 setTitle:@"123456"
+              forState:UIControlStateNormal];
+        [self.view addSubview:_btn2];
+        _btn2.frame = CGRectMake(100, 400, 270, 70);
+        [_btn2 layoutButtonWithEdgeInsetsStyle:GLButtonEdgeInsetsStyleLeft
+                              imageTitleSpace:10];
+        _btn2.titleLabel.textAlignment = NSTextAlignmentCenter;
+        //内边距问题
+    }return _btn2;
 }
 
 

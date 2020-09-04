@@ -25,11 +25,12 @@ static char *BaseVC_FSCustomButton_backBtnCategory = "BaseVC_FSCustomButton_back
 }
 #pragma mark SET | GET
 #pragma mark —— @property(nonatomic,strong)FSCustomButton *backBtnCategory;
--(FSCustomButton *)backBtnCategory{
-    FSCustomButton *BackBtnCategory = objc_getAssociatedObject(self, BaseVC_FSCustomButton_backBtnCategory);
+-(UIButton *)backBtnCategory{
+    UIButton *BackBtnCategory = objc_getAssociatedObject(self, BaseVC_FSCustomButton_backBtnCategory);
     if (!BackBtnCategory) {
-        BackBtnCategory = FSCustomButton.new;
-        BackBtnCategory.buttonImagePosition = FSCustomButtonImagePositionLeft;
+        BackBtnCategory = UIButton.new;
+        [BackBtnCategory layoutButtonWithEdgeInsetsStyle:GLButtonEdgeInsetsStyleLeft
+                                         imageTitleSpace:8];
         [BackBtnCategory setTitleColor:kWhiteColor
                               forState:UIControlStateNormal];
         [BackBtnCategory setTitle:@"返回"
@@ -46,7 +47,7 @@ static char *BaseVC_FSCustomButton_backBtnCategory = "BaseVC_FSCustomButton_back
     }return BackBtnCategory;
 }
 
--(void)setBackBtnCategory:(FSCustomButton *)backBtnCategory{
+-(void)setBackBtnCategory:(UIButton *)backBtnCategory{
     objc_setAssociatedObject(self,
                              BaseVC_FSCustomButton_backBtnCategory,
                              backBtnCategory,

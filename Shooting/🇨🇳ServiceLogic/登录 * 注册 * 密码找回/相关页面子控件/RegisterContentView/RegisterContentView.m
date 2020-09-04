@@ -11,7 +11,7 @@
 
 @interface RegisterContentView ()
 
-@property(nonatomic,strong)FSCustomButton *backToLoginBtn;//去注册
+@property(nonatomic,strong)UIButton *backToLoginBtn;//去注册
 
 @end
 
@@ -73,9 +73,9 @@
     }];
 }
 #pragma mark —— lazyLoad
--(FSCustomButton *)backToLoginBtn{
+-(UIButton *)backToLoginBtn{
     if (!_backToLoginBtn) {
-        _backToLoginBtn = FSCustomButton.new;
+        _backToLoginBtn = UIButton.new;
         _backToLoginBtn.titleLabel.numberOfLines = 0;
         _backToLoginBtn.backgroundColor = COLOR_RGB(69,
                                                     69,
@@ -83,7 +83,8 @@
                                                     0.7);
         [_backToLoginBtn setTitle:@"返\n回\n登\n录"
                         forState:UIControlStateNormal];
-        _backToLoginBtn.buttonImagePosition = FSCustomButtonImagePositionTop;
+        [_backToLoginBtn layoutButtonWithEdgeInsetsStyle:GLButtonEdgeInsetsStyleTop
+                                         imageTitleSpace:8];
         [_backToLoginBtn setImage:kIMG(@"用户名称")
               forState:UIControlStateNormal];
         [self addSubview:_backToLoginBtn];

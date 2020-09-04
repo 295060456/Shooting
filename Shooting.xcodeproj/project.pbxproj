@@ -57,6 +57,7 @@
 		C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A28224FBE933000A1687 /* UIImage+Tailor.m */; };
 		C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */ = {isa = PBXBuildFile; fileRef = C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */; };
 		C572A2A824FDFA71000A1687 /* CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A2A524FDFA71000A1687 /* CountDownBtn.m */; };
+		C57C229A250240B500FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */; };
 		C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589604E2500AC91002B1764 /* ImageCodeView.m */; };
 		C58960562500B0E0002B1764 /* LogoContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960552500B0E0002B1764 /* LogoContentView.m */; };
 		C58960592500B0F6002B1764 /* RegisterContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960582500B0F6002B1764 /* RegisterContentView.m */; };
@@ -172,8 +173,6 @@
 		C58F01AC24EA5CAD00B6D09C /* NSObject+Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F017C24EA5CAC00B6D09C /* NSObject+Sound.m */; };
 		C58F01AD24EA5CAD00B6D09C /* NSObject+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F017F24EA5CAC00B6D09C /* NSObject+Extras.m */; };
 		C58F01AE24EA5CAD00B6D09C /* NSObject+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F018024EA5CAC00B6D09C /* NSObject+Time.m */; };
-		C58F01B624EA5DBB00B6D09C /* FSCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01B124EA5DBB00B6D09C /* FSCustomButton.m */; };
-		C58F01B724EA5DBB00B6D09C /* CALayer+FSUI.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01B224EA5DBB00B6D09C /* CALayer+FSUI.m */; };
 		C58F01BF24EA5E5E00B6D09C /* PlaySound.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01B924EA5E5E00B6D09C /* PlaySound.m */; };
 		C58F01C024EA5E5E00B6D09C /* 带有按键音的按钮 in Resources */ = {isa = PBXBuildFile; fileRef = C58F01BA24EA5E5E00B6D09C /* 带有按键音的按钮 */; };
 		C58F01C124EA5E5E00B6D09C /* Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C58F01BB24EA5E5E00B6D09C /* Sound.wav */; };
@@ -433,6 +432,8 @@
 		C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "验证码按钮单例封装"; sourceTree = "<group>"; };
 		C572A2A524FDFA71000A1687 /* CountDownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownBtn.m; sourceTree = "<group>"; };
 		C572A2A624FDFA71000A1687 /* CountDownBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownBtn.h; sourceTree = "<group>"; };
+		C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
+		C57C2299250240B500FAAA3F /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		C589604D2500AC91002B1764 /* ImageCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCodeView.h; sourceTree = "<group>"; };
 		C589604E2500AC91002B1764 /* ImageCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCodeView.m; sourceTree = "<group>"; };
 		C58960542500B0E0002B1764 /* LogoContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoContentView.h; sourceTree = "<group>"; };
@@ -662,11 +663,6 @@
 		C58F017E24EA5CAC00B6D09C /* NSObject+Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Sound.h"; sourceTree = "<group>"; };
 		C58F017F24EA5CAC00B6D09C /* NSObject+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extras.m"; sourceTree = "<group>"; };
 		C58F018024EA5CAC00B6D09C /* NSObject+Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Time.m"; sourceTree = "<group>"; };
-		C58F01B124EA5DBB00B6D09C /* FSCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCustomButton.m; sourceTree = "<group>"; };
-		C58F01B224EA5DBB00B6D09C /* CALayer+FSUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+FSUI.m"; sourceTree = "<group>"; };
-		C58F01B324EA5DBB00B6D09C /* CALayer+FSUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+FSUI.h"; sourceTree = "<group>"; };
-		C58F01B424EA5DBB00B6D09C /* FSCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCustomButton.h; sourceTree = "<group>"; };
-		C58F01B524EA5DBB00B6D09C /* FSCommenDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCommenDefine.h; sourceTree = "<group>"; };
 		C58F01B924EA5E5E00B6D09C /* PlaySound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaySound.m; sourceTree = "<group>"; };
 		C58F01BA24EA5E5E00B6D09C /* 带有按键音的按钮 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "带有按键音的按钮"; sourceTree = "<group>"; };
 		C58F01BB24EA5E5E00B6D09C /* Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound.wav; sourceTree = "<group>"; };
@@ -1980,11 +1976,8 @@
 		C58F01B024EA5DB400B6D09C /* 高度自定义的按钮 */ = {
 			isa = PBXGroup;
 			children = (
-				C58F01B324EA5DBB00B6D09C /* CALayer+FSUI.h */,
-				C58F01B224EA5DBB00B6D09C /* CALayer+FSUI.m */,
-				C58F01B524EA5DBB00B6D09C /* FSCommenDefine.h */,
-				C58F01B424EA5DBB00B6D09C /* FSCustomButton.h */,
-				C58F01B124EA5DBB00B6D09C /* FSCustomButton.m */,
+				C57C2299250240B500FAAA3F /* UIButton+ImageTitleSpacing.h */,
+				C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */,
 			);
 			path = "高度自定义的按钮";
 			sourceTree = "<group>";
@@ -2988,12 +2981,12 @@
 				C58F028E24EA61C600B6D09C /* LOTRepeaterRenderer.m in Sources */,
 				C58F029B24EA61C600B6D09C /* LOTBlockCallback.m in Sources */,
 				C58F00D724EA581F00B6D09C /* UIViewController+GKCategory.m in Sources */,
+				C57C229A250240B500FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */,
 				C56161BF24EE4F4B001CD851 /* JhtBannerScrollView.m in Sources */,
 				C58F02AD24EA61C600B6D09C /* LOTMaskContainer.m in Sources */,
 				C58F00E224EA581F00B6D09C /* SDWebImageWebPCoder.m in Sources */,
 				C58F01AB24EA5CAD00B6D09C /* BaseNavigationVC.m in Sources */,
 				C58F01AC24EA5CAD00B6D09C /* NSObject+Sound.m in Sources */,
-				C58F01B724EA5DBB00B6D09C /* CALayer+FSUI.m in Sources */,
 				C58F00D024EA581F00B6D09C /* GKNavigationBarConfigure.m in Sources */,
 				C58F00EA24EA581F00B6D09C /* BRBaseView.m in Sources */,
 				C58F046F24EBD70300B6D09C /* UIControl+XY.m in Sources */,
@@ -3137,7 +3130,6 @@
 				C58F029024EA61C600B6D09C /* LOTAnimatorNode.m in Sources */,
 				C58F028B24EA61C600B6D09C /* LOTTransformInterpolator.m in Sources */,
 				C59D9AD124F8EF1F00A74CE9 /* RepeatPlayer.m in Sources */,
-				C58F01B624EA5DBB00B6D09C /* FSCustomButton.m in Sources */,
 				C58F031524EA648200B6D09C /* FMARCNetwork.m in Sources */,
 				C572A26A24FBC547000A1687 /* UIImage+SYS.m in Sources */,
 				C58F020424EA617800B6D09C /* BWItemModel.m in Sources */,
