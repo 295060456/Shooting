@@ -64,6 +64,7 @@
 		C57C22B525026BE500FAAA3F /* 没有记住密码@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57C22B125026BE500FAAA3F /* 没有记住密码@2x.png */; };
 		C57C22B625026BE500FAAA3F /* 记住密码@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57C22B225026BE500FAAA3F /* 记住密码@3x.png */; };
 		C57C22B825026E4600FAAA3F /* KKK.png in Resources */ = {isa = PBXBuildFile; fileRef = C57C22B725026E4600FAAA3F /* KKK.png */; };
+		C57C22BB2502717C00FAAA3F /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C22BA2502717C00FAAA3F /* UIView+Gradient.m */; };
 		C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589604E2500AC91002B1764 /* ImageCodeView.m */; };
 		C58960562500B0E0002B1764 /* LogoContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960552500B0E0002B1764 /* LogoContentView.m */; };
 		C58960592500B0F6002B1764 /* RegisterContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960582500B0F6002B1764 /* RegisterContentView.m */; };
@@ -447,6 +448,8 @@
 		C57C22B125026BE500FAAA3F /* 没有记住密码@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "没有记住密码@2x.png"; sourceTree = "<group>"; };
 		C57C22B225026BE500FAAA3F /* 记住密码@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "记住密码@3x.png"; sourceTree = "<group>"; };
 		C57C22B725026E4600FAAA3F /* KKK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KKK.png; sourceTree = "<group>"; };
+		C57C22B92502717C00FAAA3F /* UIView+Gradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Gradient.h"; sourceTree = "<group>"; };
+		C57C22BA2502717C00FAAA3F /* UIView+Gradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gradient.m"; sourceTree = "<group>"; };
 		C589604D2500AC91002B1764 /* ImageCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCodeView.h; sourceTree = "<group>"; };
 		C589604E2500AC91002B1764 /* ImageCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCodeView.m; sourceTree = "<group>"; };
 		C58960542500B0E0002B1764 /* LogoContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoContentView.h; sourceTree = "<group>"; };
@@ -1744,6 +1747,8 @@
 				C58F011C24EA5CAC00B6D09C /* UIView+SuspendView.m */,
 				C589606D2500DDA3002B1764 /* UIView+Animation.h */,
 				C589606E2500DDA3002B1764 /* UIView+Animation.m */,
+				C57C22B92502717C00FAAA3F /* UIView+Gradient.h */,
+				C57C22BA2502717C00FAAA3F /* UIView+Gradient.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -3106,6 +3111,7 @@
 				C5A46C0A24EFB6E900158D1E /* LZBTabBar.m in Sources */,
 				C58F01BF24EA5E5E00B6D09C /* PlaySound.m in Sources */,
 				C58F018524EA5CAC00B6D09C /* UIView+SuspendView.m in Sources */,
+				C57C22BB2502717C00FAAA3F /* UIView+Gradient.m in Sources */,
 				C58F029224EA61C600B6D09C /* LOTPathAnimator.m in Sources */,
 				C58F02D624EA62B500B6D09C /* SuspendView.m in Sources */,
 				C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */,

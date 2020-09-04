@@ -61,6 +61,7 @@
 #import "UIView+Measure.h"
 #import "UIView+Extras.h"
 #import "UIView+Animation.h"
+#import "UIView+Gradient.h"
 
 #import "SuspendLab.h"
 #import "suspendBtn.h"

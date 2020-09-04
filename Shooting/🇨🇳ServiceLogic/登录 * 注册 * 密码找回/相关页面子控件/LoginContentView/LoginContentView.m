@@ -16,6 +16,9 @@
 @property(nonatomic,strong)UIButton *storeCodeBtn;//记住密码
 @property(nonatomic,strong)UIButton *forgetCodeBtn;//忘记密码
 @property(nonatomic,strong)UIButton *toRegisterBtn;//去注册
+@property(nonatomic,strong)UIButton *loginBtn;//登录
+@property(nonatomic,strong)UIButton *giveUpLoginBtn;
+
 @property(nonatomic,copy)MKDataBlock loginContentViewBlock;
 @property(nonatomic,copy)MKDataBlock loginContentViewKeyboardBlock;
 
@@ -50,6 +53,8 @@
     [self makeInputView];
     self.storeCodeBtn.alpha = 1;
     self.forgetCodeBtn.alpha = 1;
+    self.loginBtn.alpha = 1;
+    self.giveUpLoginBtn.alpha = 1;
 }
 
 -(void)makeInputView{
@@ -164,7 +169,15 @@
 }
 
 -(void)storeCodeBtnClickEvent:(UIButton *)sender{
-    
+    NSLog(@"存储密码");
+}
+
+-(void)giveUpLoginBtnClickEvent:(UIButton *)sender{
+    NSLog(@"先去逛逛");
+}
+
+-(void)loginBtnClickEvent:(UIButton *)sender{
+    NSLog(@"注册");
 }
 
 -(void)actionLoginContentViewBlock:(MKDataBlock)loginContentViewBlock{
@@ -297,6 +310,57 @@
             make.left.equalTo(self.titleLab.mas_right).offset(-7);
         }];
     }return _forgetCodeBtn;
+}
+
+-(UIButton *)loginBtn{
+    if (!_loginBtn) {
+        _loginBtn = UIButton.new;
+        [self addSubview:_loginBtn];
+        [_loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(192, 32));
+            make.bottom.equalTo(self).offset(-42);
+        }];
+        [self layoutIfNeeded];
+        [UIView setView:_loginBtn
+                  layer:_loginBtn.titleLabel.layer
+          gradientLayer:RGBCOLOR(247,
+                                 131,
+                                 97)
+               endColor:RGBCOLOR(245,
+                                 75,
+                                 100)];
+        [_loginBtn setTitle:@"登录"
+                   forState:UIControlStateNormal];
+        [_loginBtn setTitleColor:kWhiteColor
+                        forState:UIControlStateNormal];
+        [_loginBtn addTarget:self
+                      action:@selector(loginBtnClickEvent:)
+            forControlEvents:UIControlEventTouchUpInside];
+        [UIView cornerCutToCircleWithView:_loginBtn
+                          AndCornerRadius:16];
+    }return _loginBtn;
+}
+
+-(UIButton *)giveUpLoginBtn{
+    if (!_giveUpLoginBtn) {
+        _giveUpLoginBtn = UIButton.new;
+        _giveUpLoginBtn.titleLabel.font = [UIFont systemFontOfSize:8
+                                                            weight:UIFontWeightRegular];
+        [_giveUpLoginBtn setTitle:@"先去逛逛"
+                         forState:UIControlStateNormal];
+        [_giveUpLoginBtn.titleLabel sizeToFit];
+        _giveUpLoginBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
+        [_giveUpLoginBtn addTarget:self
+                            action:@selector(giveUpLoginBtnClickEvent:)
+                  forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:_giveUpLoginBtn];
+        [_giveUpLoginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(32, 8));
+            make.bottom.equalTo(self).offset(-26);
+        }];
+    }return _giveUpLoginBtn;
 }
 
 
