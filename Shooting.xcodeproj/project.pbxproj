@@ -58,6 +58,7 @@
 		C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */ = {isa = PBXBuildFile; fileRef = C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */; };
 		C572A2A824FDFA71000A1687 /* CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A2A524FDFA71000A1687 /* CountDownBtn.m */; };
 		C57C229A250240B500FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */; };
+		C57C22AE250263F100FAAA3F /* CustomZFPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C22AD250263F100FAAA3F /* CustomZFPlayerControlView.m */; };
 		C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589604E2500AC91002B1764 /* ImageCodeView.m */; };
 		C58960562500B0E0002B1764 /* LogoContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960552500B0E0002B1764 /* LogoContentView.m */; };
 		C58960592500B0F6002B1764 /* RegisterContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960582500B0F6002B1764 /* RegisterContentView.m */; };
@@ -434,6 +435,8 @@
 		C572A2A624FDFA71000A1687 /* CountDownBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownBtn.h; sourceTree = "<group>"; };
 		C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		C57C2299250240B500FAAA3F /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
+		C57C22AC250263F100FAAA3F /* CustomZFPlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomZFPlayerControlView.h; sourceTree = "<group>"; };
+		C57C22AD250263F100FAAA3F /* CustomZFPlayerControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomZFPlayerControlView.m; sourceTree = "<group>"; };
 		C589604D2500AC91002B1764 /* ImageCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCodeView.h; sourceTree = "<group>"; };
 		C589604E2500AC91002B1764 /* ImageCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCodeView.m; sourceTree = "<group>"; };
 		C58960542500B0E0002B1764 /* LogoContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoContentView.h; sourceTree = "<group>"; };
@@ -1278,6 +1281,8 @@
 			children = (
 				C589605F2500B196002B1764 /* DoorVC.h */,
 				C58960602500B196002B1764 /* DoorVC.m */,
+				C57C22AC250263F100FAAA3F /* CustomZFPlayerControlView.h */,
+				C57C22AD250263F100FAAA3F /* CustomZFPlayerControlView.m */,
 			);
 			path = "登录 * 注册";
 			sourceTree = "<group>";
@@ -3162,6 +3167,7 @@
 				C58F01C624EA5E7900B6D09C /* YBNotificationManager.m in Sources */,
 				C58F001524EA36F800B6D09C /* SceneDelegate.m in Sources */,
 				C59D9AB324F8E8DC00A74CE9 /* MKShootVC+VM.m in Sources */,
+				C57C22AE250263F100FAAA3F /* CustomZFPlayerControlView.m in Sources */,
 				C58F02B124EA61C600B6D09C /* LOTShapeRepeater.m in Sources */,
 				C58F030224EA645A00B6D09C /* NSObject+LBLaunchImage.m in Sources */,
 				C59D9AED24F8F08500A74CE9 /* ZZCountingLabel.m in Sources */,

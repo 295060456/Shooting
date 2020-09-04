@@ -10,6 +10,7 @@
 #import "Door.h"
 
 #import "ForgetCodeVC.h"
+#import "CustomZFPlayerControlView.h"
 
 ZFPlayerController *ZFPlayer;
 
@@ -19,6 +20,7 @@ ZFPlayerController *ZFPlayer;
 @property(nonatomic,strong)ZFPlayerController *player;
 @property(nonatomic,strong)ZFAVPlayerManager *playerManager;
 @property(nonatomic,strong)LogoContentView *logoContentView;
+@property(nonatomic,strong)CustomZFPlayerControlView *customPlayerControlView;
 
 @property(nonatomic,strong)id requestParams;
 @property(nonatomic,copy)MKDataBlock successBlock;
@@ -75,7 +77,6 @@ ZFPlayerController *ZFPlayer;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = KYellowColor;
-
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -88,13 +89,13 @@ ZFPlayerController *ZFPlayer;
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self.loginContentView showLogoContentView];
+    [self.loginContentView showLoginContentViewWithOffsetY:0];
 
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [self.player.currentPlayerManager stop];
+    [self.player.currentPlayerManager pause];
 //    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
 }
 
@@ -104,7 +105,8 @@ ZFPlayerController *ZFPlayer;
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches
           withEvent:(UIEvent *)event{
-     [self.loginContentView removeLogoContentView];
+    [self.loginContentView removeLoginContentViewWithOffsetY:0];
+    [self.view endEditing:YES];
 }
 
 -(void)KKK{
@@ -124,6 +126,19 @@ ZFPlayerController *ZFPlayer;
         [_loginContentView actionLoginContentViewBlock:^(id data) {
             @strongify(self)
             [self KKK];
+        }];
+        [_loginContentView actionLoginContentViewKeyboardBlock:^(id data) {
+            @strongify(self)
+            if ([data isKindOfClass:NSNumber.class]) {
+                NSNumber *b = (NSNumber *)data;
+                if (b.intValue > 0) {
+                    NSLog(@"开始编辑");
+                    self.logoContentView.alpha = 0;
+                }else if(b.intValue < 0){
+                    NSLog(@"正常模式");
+                    self.logoContentView.alpha = 1;
+                }else{}
+            }
         }];
         [self.view addSubview:_loginContentView];
         _loginContentView.frame = CGRectMake(SCREEN_WIDTH,
@@ -149,6 +164,7 @@ ZFPlayerController *ZFPlayer;
     if (!_player) {
         _player = [[ZFPlayerController alloc] initWithPlayerManager:self.playerManager
                                                       containerView:self.view];
+        _player.controlView = self.customPlayerControlView;
         ZFPlayer = _player;
     }return _player;
 }
@@ -163,6 +179,17 @@ ZFPlayerController *ZFPlayer;
             make.centerX.equalTo(self.view);
         }];
     }return _logoContentView;
+}
+
+-(CustomZFPlayerControlView *)customPlayerControlView{
+    if (!_customPlayerControlView) {
+        _customPlayerControlView = CustomZFPlayerControlView.new;
+        @weakify(self)
+        [_customPlayerControlView actionCustomZFPlayerControlViewBlock:^(id data) {
+            @strongify(self)
+            [self.view endEditing:YES];
+        }];
+    }return _customPlayerControlView;
 }
 
 @end

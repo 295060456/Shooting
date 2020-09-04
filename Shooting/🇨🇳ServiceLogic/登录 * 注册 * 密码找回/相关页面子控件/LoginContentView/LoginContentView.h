@@ -12,9 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginContentView : UIView
 
--(void)showLogoContentView;
--(void)removeLogoContentView;
+-(void)showLoginContentViewWithOffsetY:(CGFloat)offsetY;
+-(void)removeLoginContentViewWithOffsetY:(CGFloat)offsetY;
+
 -(void)actionLoginContentViewBlock:(MKDataBlock)loginContentViewBlock;
+-(void)actionLoginContentViewKeyboardBlock:(MKDataBlock)loginContentViewKeyboardBlock;
 
 @end
 

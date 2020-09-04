@@ -16,13 +16,13 @@
 @property(nonatomic,strong)UIButton *forgetCodeBtn;//忘记密码
 @property(nonatomic,strong)UIButton *toRegisterBtn;//去注册
 @property(nonatomic,copy)MKDataBlock loginContentViewBlock;
+@property(nonatomic,copy)MKDataBlock loginContentViewKeyboardBlock;
 
 @property(nonatomic,strong)NSMutableArray <UIImage *>*headerImgMutArr;
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnSelectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnUnselectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*placeHolderMutArr;
 @property(nonatomic,strong)NSMutableArray <DoorInputViewStyle_3 *> *inputViewMutArr;
-
 
 @end
 
@@ -38,6 +38,7 @@
         [UIView cornerCutToCircleWithView:self
                           AndCornerRadius:8];
         self.backgroundColor = kBlackColor;
+        [self keyboard];
     }return self;
 }
 
@@ -86,6 +87,38 @@
     }
 }
 
+-(void)keyboard{
+#warning 此处必须禁用IQKeyboardManager，因为框架的原因，弹出键盘的时候是整个VC全部向上抬起，一个是弹出的高度不对，第二个是弹出的逻辑不正确，就只是需要评论页向上同步弹出键盘高度即可。可是一旦禁用IQKeyboardManager这里就必须手动监听键盘弹出高度，再根据这个高度对评论页做二次约束
+    [IQKeyboardManager sharedManager].enable = NO;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillChangeFrameNotification:)
+                                                 name:UIKeyboardWillChangeFrameNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidChangeFrameNotification:)
+                                                 name:UIKeyboardDidChangeFrameNotification
+                                               object:nil];
+}
+
+-(void)keyboardWillChangeFrameNotification:(NSNotification *)notification{//键盘 弹出 和 收回 走这个方法
+    NSDictionary *userInfo = notification.userInfo;
+    CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
+    NSLog(@"KeyboardOffsetY = %f",KeyboardOffsetY);
+    NSLog(@"MMM beginFrameY = %f,endFrameY = %f",beginFrame.origin.y,endFrame.origin.y);
+    [self showLoginContentViewWithOffsetY:KeyboardOffsetY / 2];
+    if (self.loginContentViewKeyboardBlock) {
+        self.loginContentViewKeyboardBlock(@(KeyboardOffsetY));
+    }
+}
+
+-(void)keyboardDidChangeFrameNotification:(NSNotification *)notification{
+    NSLog(@"键盘弹出");
+    NSLog(@"键盘关闭");
+}
+
 /*
  *    使用弹簧的描述时间曲线来执行动画 ,当dampingRatio == 1 时,动画会平稳的减速到最终的模型值,而不会震荡.
  *    小于1的阻尼比在达到完全停止之前会震荡的越来越多.
@@ -95,7 +128,7 @@
  *    dampingRatio 阻尼
  *    velocity 速度
  */
--(void)showLogoContentView{
+-(void)showLoginContentViewWithOffsetY:(CGFloat)offsetY{
     [UIView animateWithDuration:2
                           delay:0.1
          usingSpringWithDamping:0.3
@@ -103,12 +136,13 @@
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
         self.centerX = SCREEN_WIDTH / 2;
+        self.centerY -= offsetY;
     } completion:^(BOOL finished) {
         
     }];
 }
 
--(void)removeLogoContentView{
+-(void)removeLoginContentViewWithOffsetY:(CGFloat)offsetY{
     [UIView animateWithDuration:2
                           delay:0.1
          usingSpringWithDamping:0.3
@@ -129,6 +163,10 @@
 
 -(void)actionLoginContentViewBlock:(MKDataBlock)loginContentViewBlock{
     _loginContentViewBlock = loginContentViewBlock;
+}
+
+-(void)actionLoginContentViewKeyboardBlock:(MKDataBlock)loginContentViewKeyboardBlock{
+    _loginContentViewKeyboardBlock = loginContentViewKeyboardBlock;
 }
 #pragma mark —— lazyLoad
 -(UIButton *)forgetCodeBtn{
@@ -156,14 +194,14 @@
                                                    0.7);
         [_toRegisterBtn setTitle:@"新\n用\n户\n注\n册"
                         forState:UIControlStateNormal];
-        [_toRegisterBtn layoutButtonWithEdgeInsetsStyle:GLButtonEdgeInsetsStyleTop
-                                        imageTitleSpace:8];
         [_toRegisterBtn setImage:kIMG(@"用户名称")
               forState:UIControlStateNormal];
         [self addSubview:_toRegisterBtn];
         [_toRegisterBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.right.bottom.equalTo(self);
         }];
+        [_toRegisterBtn layoutButtonWithEdgeInsetsStyle:GLButtonEdgeInsetsStyleTop
+                                        imageTitleSpace:8];
     }return _toRegisterBtn;
 }
 

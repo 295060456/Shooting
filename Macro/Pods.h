@@ -34,6 +34,7 @@
 #import <YXAlertController.h>
 #import "PPBadgeView.h"
 #import "XHLaunchAd.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
 
 #pragma mark —— ZFPlayer 播放器相关
 //Core
