@@ -21,6 +21,10 @@
 @property(nonatomic,strong)NSMutableArray <NSString *>*titleMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*subTitleMutArr;
 @property(nonatomic,strong)NSMutableArray <UIImage *>*backImageMutArr;
+///一共几个流程节点
+@property(nonatomic,assign)NSInteger flowNum;
+///当前流程序号 从0开始
+@property(nonatomic,assign)NSInteger currentFlowSerialNum;
 
 @end
 
@@ -71,22 +75,37 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    self.view.backgroundColor = KLinkColor;
     self.gk_navLeftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.backBtnCategory];
     self.gk_navLineHidden = YES;
     self.gk_navTitle = @"密码找回";
     self.gk_navTitleColor = kWhiteColor;
     self.gk_navTitleFont = [UIFont systemFontOfSize:17
                                              weight:UIFontWeightBold];
+
+    self.currentFlowSerialNum = 0;
+    self.flowNum = 3;
     self.findCodeFlowChartView.alpha = 1;
-    self.findCodeFlowChartView.currentFlowSerialNum = 1;//步骤从0开始
+    self.findCodeFlowChartView.currentFlowSerialNum = self.currentFlowSerialNum;//步骤从0开始
     
     self.tipsLab.alpha = 1;
 }
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    if (self.currentFlowSerialNum < self.flowNum - 1) {
+        self.currentFlowSerialNum += 1;
+        [self.findCodeFlowChartView removeFromSuperview];
+        self.findCodeFlowChartView = nil;
+        self.findCodeFlowChartView.currentFlowSerialNum = self.currentFlowSerialNum;
+    }
+}
+
 #pragma mark —— LazyLoad
 -(FindCodeFlowChartView *)findCodeFlowChartView{
     if (!_findCodeFlowChartView) {
         _findCodeFlowChartView = FindCodeFlowChartView.new;
-        _findCodeFlowChartView.flowNum = 3;
+        _findCodeFlowChartView.flowNum = self.flowNum;
         _findCodeFlowChartView.titleMutArr = self.titleMutArr;
         _findCodeFlowChartView.subTitleMutArr = self.subTitleMutArr;
         _findCodeFlowChartView.backImageMutArr = self.backImageMutArr;
@@ -111,7 +130,8 @@
         [_tipsLab sizeToFit];
         [self.view addSubview:_tipsLab];
         [_tipsLab mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.bottom.equalTo(self.view);
+            make.centerX.equalTo(self.view);
+            make.bottom.equalTo(self.view).offset(-21);
             make.width.mas_equalTo(SCREEN_WIDTH / 2);
         }];
     }return _tipsLab;
