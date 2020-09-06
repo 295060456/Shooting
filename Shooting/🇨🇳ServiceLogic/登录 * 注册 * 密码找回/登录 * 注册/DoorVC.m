@@ -5,18 +5,18 @@
 //  Created by Jobs on 2020/9/3.
 //  Copyright © 2020 Jobs. All rights reserved.
 //
+#import "Door.h"
+#import "CustomZFPlayerControlView.h"
 
 #import "DoorVC.h"
-#import "Door.h"
-
 #import "ForgetCodeVC.h"
-#import "CustomZFPlayerControlView.h"
 
 ZFPlayerController *ZFPlayer;
 
 @interface DoorVC ()
 
 @property(nonatomic,strong)LoginContentView *loginContentView;
+@property(nonatomic,strong)RegisterContentView *registerContentView;
 @property(nonatomic,strong)ZFPlayerController *player;
 @property(nonatomic,strong)ZFAVPlayerManager *playerManager;
 @property(nonatomic,strong)LogoContentView *logoContentView;
@@ -108,16 +108,6 @@ ZFPlayerController *ZFPlayer;
     [self.loginContentView removeLoginContentViewWithOffsetY:0];
     [self.view endEditing:YES];
 }
-
--(void)KKK{
-    @weakify(self)
-    [ForgetCodeVC ComingFromVC:weak_self
-                   comingStyle:ComingStyle_PUSH
-             presentationStyle:UIModalPresentationFullScreen
-                 requestParams:nil
-                       success:^(id data) {}
-                      animated:YES];
-}
 #pragma mark —— LazyLoad
 -(LoginContentView *)loginContentView{
     if (!_loginContentView) {
@@ -125,7 +115,25 @@ ZFPlayerController *ZFPlayer;
         @weakify(self)
         [_loginContentView actionLoginContentViewBlock:^(id data) {
             @strongify(self)
-            [self KKK];
+            if ([data isKindOfClass:UIButton.class]) {
+                UIButton *btn = (UIButton *)data;
+                if ([btn.titleLabel.text isEqualToString:@"新\n用\n户\n注\n册"]) {
+                    
+                }else if ([btn.titleLabel.text isEqualToString:@"记住密码"]){
+                    
+                }else if ([btn.titleLabel.text isEqualToString:@"忘记密码"]){
+                    [ForgetCodeVC ComingFromVC:weak_self
+                                   comingStyle:ComingStyle_PUSH
+                             presentationStyle:UIModalPresentationFullScreen
+                                 requestParams:nil
+                                       success:^(id data) {}
+                                      animated:YES];
+                }else if ([btn.titleLabel.text isEqualToString:@"登录"]){
+                    
+                }else if ([btn.titleLabel.text isEqualToString:@"先去逛逛"]){
+                    [self backBtnClickEvent:nil];
+                }else{}
+            }
         }];
         [_loginContentView actionLoginContentViewKeyboardBlock:^(id data) {
             @strongify(self)
@@ -148,6 +156,12 @@ ZFPlayerController *ZFPlayer;
     }return _loginContentView;
 }
 
+-(RegisterContentView *)registerContentView{
+    if (!_registerContentView) {
+        _registerContentView = RegisterContentView.new;
+    }return _registerContentView;
+}
+
 -(ZFAVPlayerManager *)playerManager{
     if (!_playerManager) {
         _playerManager = ZFAVPlayerManager.new;
@@ -166,6 +180,11 @@ ZFPlayerController *ZFPlayer;
                                                       containerView:self.view];
         _player.controlView = self.customPlayerControlView;
         ZFPlayer = _player;
+        @weakify(self)
+        [_player setPlayerDidToEnd:^(id<ZFPlayerMediaPlayback>  _Nonnull asset) {
+            @strongify(self)
+            [self.playerManager replay];
+        }];
     }return _player;
 }
 

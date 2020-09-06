@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark —— BaseVC+BackBtn
 @property(nonatomic,strong)UIButton *backBtnCategory;
 #pragma mark —— 子类需要覆写
--(void)backBtnClickEvent:(UIButton *)sender;
+-(void)backBtnClickEvent:(UIButton *_Nullable)sender;
+-(void)backComingStyle:(ComingStyle)ComingStyle
+             withEvent:(UIButton *_Nullable)sender;
 
 @end
 

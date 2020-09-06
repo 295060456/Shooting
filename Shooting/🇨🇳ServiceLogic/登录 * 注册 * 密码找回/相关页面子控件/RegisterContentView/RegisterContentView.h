@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RegisterContentView : UIView
 
+-(void)showRegisterContentViewWithOffsetY:(CGFloat)offsetY;
+-(void)removeRegisterContentViewWithOffsetY:(CGFloat)offsetY;
+
+-(void)actionRegisterContentViewBlock:(MKDataBlock)registerContentViewBlock;
+-(void)actionRegisterContentViewKeyboardBlock:(MKDataBlock)registerContentViewKeyboardBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

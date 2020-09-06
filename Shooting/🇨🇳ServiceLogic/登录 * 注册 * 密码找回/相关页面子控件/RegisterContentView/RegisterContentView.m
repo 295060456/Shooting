@@ -7,11 +7,12 @@
 //
 
 #import "RegisterContentView.h"
-#import "DoorInputView.h"
 
 @interface RegisterContentView ()
 
 @property(nonatomic,strong)UIButton *backToLoginBtn;//去注册
+@property(nonatomic,copy)MKDataBlock registerContentViewBlock;
+@property(nonatomic,copy)MKDataBlock registerContentViewKeyboardBlock;
 
 @end
 
@@ -30,12 +31,51 @@
                                          255,
                                          255,
                                          1);
+        [self keyboard];
     }return self;
 }
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
     self.backToLoginBtn.alpha = 1;
+    [self makeInputView];
+}
+
+-(void)makeInputView{
+//    for (int t = 0; t < self.headerImgMutArr.count; t++) {
+//        DoorInputViewStyle_3 *inputView = DoorInputViewStyle_3.new;
+//        UIImageView *imgv = UIImageView.new;
+//        imgv.image = self.headerImgMutArr[t];
+//        inputView.inputViewWidth = 192;
+//        inputView.tf.leftView = imgv;
+//        inputView.tf.ZYtextFont = [UIFont systemFontOfSize:9.6
+//                                                    weight:UIFontWeightRegular];
+//        inputView.tf.ZYtextColor = kWhiteColor;
+//        inputView.tf.ZYtintColor = kWhiteColor;
+//        inputView.tf.ZYplaceholderLabelFont_1 = inputView.tf.ZYtextFont;
+//        inputView.tf.ZYplaceholderLabelFont_2 = inputView.tf.ZYtextFont;
+//        inputView.tf.ZYplaceholderLabelTextColor_1 = inputView.tf.ZYtextColor;
+//        inputView.tf.ZYplaceholderLabelTextColor_2 = inputView.tf.ZYtextColor;
+//        
+//        inputView.tf.leftViewMode = UITextFieldViewModeAlways;
+//        inputView.tf.placeholder = self.placeHolderMutArr[t];
+//        inputView.btnSelectedIMG = self.btnSelectedImgMutArr[t];
+//        inputView.btnUnSelectedIMG = self.btnUnselectedImgMutArr[t];
+//        [self.inputViewMutArr addObject:inputView];
+//        
+//        [self addSubview:inputView];
+//        [inputView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.centerX.equalTo(self.titleLab.mas_centerX);
+//            make.size.mas_equalTo(CGSizeMake(192, 32));
+//            if (t == 0) {
+//                make.top.equalTo(self.titleLab.mas_bottom).offset(29);
+//            }else{
+//                DoorInputViewStyle_3 *InputView = self.inputViewMutArr[t - 1];
+//                make.top.equalTo(InputView.mas_bottom).offset(15);
+//            }
+//        }];
+//        [self layoutIfNeeded];
+//    }
 }
 
 /*
@@ -47,7 +87,7 @@
  *    dampingRatio 阻尼
  *    velocity 速度
  */
--(void)showLogoContentView{
+-(void)showRegisterContentViewWithOffsetY:(CGFloat)offsetY{
     [UIView animateWithDuration:2
                           delay:0.1
          usingSpringWithDamping:0.3
@@ -55,12 +95,13 @@
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
         self.centerX = SCREEN_WIDTH / 2;
+        self.centerY -= offsetY;
     } completion:^(BOOL finished) {
         
     }];
 }
 
--(void)removeLogoContentView{
+-(void)removeRegisterContentViewWithOffsetY:(CGFloat)offsetY{
     [UIView animateWithDuration:2
                           delay:0.1
          usingSpringWithDamping:0.3
@@ -71,6 +112,46 @@
     } completion:^(BOOL finished) {
         
     }];
+}
+
+-(void)keyboard{
+#warning 此处必须禁用IQKeyboardManager，因为框架的原因，弹出键盘的时候是整个VC全部向上抬起，一个是弹出的高度不对，第二个是弹出的逻辑不正确，就只是需要评论页向上同步弹出键盘高度即可。可是一旦禁用IQKeyboardManager这里就必须手动监听键盘弹出高度，再根据这个高度对评论页做二次约束
+    [IQKeyboardManager sharedManager].enable = NO;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillChangeFrameNotification:)
+                                                 name:UIKeyboardWillChangeFrameNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidChangeFrameNotification:)
+                                                 name:UIKeyboardDidChangeFrameNotification
+                                               object:nil];
+}
+
+-(void)keyboardWillChangeFrameNotification:(NSNotification *)notification{//键盘 弹出 和 收回 走这个方法
+    NSDictionary *userInfo = notification.userInfo;
+    CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
+    NSLog(@"KeyboardOffsetY = %f",KeyboardOffsetY);
+    NSLog(@"MMM beginFrameY = %f,endFrameY = %f",beginFrame.origin.y,endFrame.origin.y);
+    [self showRegisterContentViewWithOffsetY:KeyboardOffsetY / 2];
+    if (self.registerContentViewKeyboardBlock) {
+        self.registerContentViewKeyboardBlock(@(KeyboardOffsetY));
+    }
+}
+
+-(void)keyboardDidChangeFrameNotification:(NSNotification *)notification{
+    NSLog(@"键盘弹出");
+    NSLog(@"键盘关闭");
+}
+
+-(void)actionRegisterContentViewBlock:(MKDataBlock)registerContentViewBlock{
+    _registerContentViewBlock = registerContentViewBlock;
+}
+
+-(void)actionRegisterContentViewKeyboardBlock:(MKDataBlock)registerContentViewKeyboardBlock{
+    _registerContentViewKeyboardBlock = registerContentViewKeyboardBlock;
 }
 #pragma mark —— lazyLoad
 -(UIButton *)backToLoginBtn{

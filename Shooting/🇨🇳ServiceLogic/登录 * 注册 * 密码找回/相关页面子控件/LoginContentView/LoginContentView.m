@@ -182,6 +182,12 @@
                         forState:UIControlStateNormal];
         [_toRegisterBtn setImage:kIMG(@"用户名称")
               forState:UIControlStateNormal];
+        [[_toRegisterBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            NSLog(@"新用户注册");
+            if (self.loginContentViewBlock) {
+                self.loginContentViewBlock(self->_toRegisterBtn);
+            }
+        }];
         [self addSubview:_toRegisterBtn];
         [_toRegisterBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.right.bottom.equalTo(self);
@@ -262,6 +268,9 @@
                        forState:UIControlStateSelected];
         [[_storeCodeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             NSLog(@"存储密码");
+            if (self.loginContentViewBlock) {
+                self.loginContentViewBlock(self->_storeCodeBtn);
+            }
         }];
         [self addSubview:_storeCodeBtn];
         [_storeCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -285,7 +294,7 @@
                        forState:UIControlStateNormal];
         [[_forgetCodeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             if (self.loginContentViewBlock) {
-                self.loginContentViewBlock(self);
+                self.loginContentViewBlock(self->_forgetCodeBtn);
             }
         }];
         [self addSubview:_forgetCodeBtn];
@@ -320,6 +329,9 @@
                         forState:UIControlStateNormal];
         [[_loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
              NSLog(@"注册");
+            if (self.loginContentViewBlock) {
+                self.loginContentViewBlock(self->_loginBtn);
+            }
         }];
         [UIView cornerCutToCircleWithView:_loginBtn
                           AndCornerRadius:16];
@@ -337,6 +349,9 @@
         _giveUpLoginBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
         [[_giveUpLoginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             NSLog(@"先去逛逛");
+            if (self.loginContentViewBlock) {
+                self.loginContentViewBlock(self->_giveUpLoginBtn);
+            }
         }];
         [self addSubview:_giveUpLoginBtn];
         [_giveUpLoginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
