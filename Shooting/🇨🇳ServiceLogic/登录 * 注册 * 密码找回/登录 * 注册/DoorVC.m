@@ -11,16 +11,16 @@
 #import "DoorVC.h"
 #import "ForgetCodeVC.h"
 
-ZFPlayerController *ZFPlayer;
+ZFPlayerController *ZFPlayer_DoorVC;
 
 @interface DoorVC ()
 
-@property(nonatomic,strong)LoginContentView *loginContentView;
-@property(nonatomic,strong)RegisterContentView *registerContentView;
 @property(nonatomic,strong)ZFPlayerController *player;
 @property(nonatomic,strong)ZFAVPlayerManager *playerManager;
-@property(nonatomic,strong)LogoContentView *logoContentView;
 @property(nonatomic,strong)CustomZFPlayerControlView *customPlayerControlView;
+@property(nonatomic,strong)LoginContentView *loginContentView;
+@property(nonatomic,strong)RegisterContentView *registerContentView;
+@property(nonatomic,strong)LogoContentView *logoContentView;
 
 @property(nonatomic,strong)id requestParams;
 @property(nonatomic,copy)MKDataBlock successBlock;
@@ -211,7 +211,7 @@ ZFPlayerController *ZFPlayer;
         _player = [[ZFPlayerController alloc] initWithPlayerManager:self.playerManager
                                                       containerView:self.view];
         _player.controlView = self.customPlayerControlView;
-        ZFPlayer = _player;
+        ZFPlayer_DoorVC = _player;
         @weakify(self)
         [_player setPlayerDidToEnd:^(id<ZFPlayerMediaPlayback>  _Nonnull asset) {
             @strongify(self)

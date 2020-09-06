@@ -7,12 +7,23 @@
 //
 
 #import "ForgetCodeVC.h"
+#import "CustomZFPlayerControlView.h"
 #import "FindCodeFlowChartView.h"
+#import "ForgetCodeStep_01View.h"
+#import "ForgetCodeStep_02View.h"
+
+ZFPlayerController *ZFPlayer_ForgetCodeVC;
 
 @interface ForgetCodeVC ()
 
+@property(nonatomic,strong)ZFPlayerController *player;
+@property(nonatomic,strong)ZFAVPlayerManager *playerManager;
+@property(nonatomic,strong)CustomZFPlayerControlView *customPlayerControlView;
 @property(nonatomic,strong)FindCodeFlowChartView *findCodeFlowChartView;
+@property(nonatomic,strong)ForgetCodeStep_01View *step_01;
+@property(nonatomic,strong)ForgetCodeStep_02View *step_02;
 @property(nonatomic,strong)UILabel *tipsLab;
+@property(nonatomic,strong)UIButton *nextStepBtn;//下一步
 
 @property(nonatomic,strong)id requestParams;
 @property(nonatomic,copy)MKDataBlock successBlock;
@@ -89,10 +100,33 @@
     self.findCodeFlowChartView.currentFlowSerialNum = self.currentFlowSerialNum;//步骤从0开始
     
     self.tipsLab.alpha = 1;
+    self.nextStepBtn.alpha = 1;
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.player.currentPlayerManager play];
+    self.step_01.alpha = 0.7;
+    IQKeyboardManager.sharedManager.enable = NO;
+    [self.view bringSubviewToFront:self.gk_navigationBar];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.step_01 showForgetCodeStep_01ViewWithOffsetY:0];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.player.currentPlayerManager pause];
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
+    [self.view endEditing:YES];
     if (self.currentFlowSerialNum < self.flowNum - 1) {
         self.currentFlowSerialNum += 1;
         [self.findCodeFlowChartView removeFromSuperview];
@@ -137,6 +171,61 @@
     }return _tipsLab;
 }
 
+-(UIButton *)nextStepBtn{
+    if (!_nextStepBtn) {
+        _nextStepBtn = UIButton.new;
+        [self.view addSubview:_nextStepBtn];
+        [_nextStepBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.view);
+            make.size.mas_equalTo(CGSizeMake(192, 32));
+            make.bottom.equalTo(self.tipsLab.mas_top).offset(-123);
+        }];
+        [self.view layoutIfNeeded];
+        [UIView setView:_nextStepBtn
+                  layer:_nextStepBtn.titleLabel.layer
+          gradientLayer:RGBCOLOR(247,
+                                 131,
+                                 97)
+               endColor:RGBCOLOR(245,
+                                 75,
+                                 100)];
+        [_nextStepBtn setTitle:@"下一步"
+                   forState:UIControlStateNormal];
+        [_nextStepBtn setTitleColor:kWhiteColor
+                        forState:UIControlStateNormal];
+        [[_nextStepBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+             NSLog(@"下一步");
+        }];
+        [UIView cornerCutToCircleWithView:_nextStepBtn
+                          AndCornerRadius:16];
+    }return _nextStepBtn;
+}
+
+-(ForgetCodeStep_01View *)step_01{
+    if (!_step_01) {
+        _step_01 = ForgetCodeStep_01View.new;
+        @weakify(self)
+        [_step_01 actionForgetCodeStep_01ViewBlock:^(id data) {
+            @strongify(self)
+        }];
+        
+        [_step_01 actionForgetCodeStep_02ViewKeyboardBlock:^(id data) {
+            @strongify(self)
+        }];
+        [self.view addSubview:_step_01];
+        _step_01.frame = CGRectMake(SCREEN_WIDTH,
+                                    SCREEN_HEIGHT / 3,
+                                    SCREEN_WIDTH - 100,
+                                    SCREEN_HEIGHT/ 3);
+    }return _step_01;
+}
+
+-(ForgetCodeStep_02View *)step_02{
+    if (!_step_02) {
+        _step_02 = ForgetCodeStep_02View.new;
+    }return _step_02;
+}
+
 -(NSMutableArray<NSString *> *)titleMutArr{
     if (!_titleMutArr) {
         _titleMutArr = NSMutableArray.array;
@@ -165,5 +254,30 @@
     }return _backImageMutArr;
 }
 
+-(ZFAVPlayerManager *)playerManager{
+    if (!_playerManager) {
+        _playerManager = ZFAVPlayerManager.new;
+        _playerManager.shouldAutoPlay = YES;
+        
+//        _playerManager.assetURL = [NSURL URLWithString:@"https://www.apple.com/105/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/films/feature/iphone-x-feature-tpl-cc-us-20170912_1280x720h.mp4"];
+
+        _playerManager.assetURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"niupi"
+                                                                                         ofType:@"mp4"]];
+    }return _playerManager;
+}
+
+-(ZFPlayerController *)player{
+    if (!_player) {
+        _player = [[ZFPlayerController alloc] initWithPlayerManager:self.playerManager
+                                                      containerView:self.view];
+        _player.controlView = self.customPlayerControlView;
+        ZFPlayer_ForgetCodeVC = _player;
+        @weakify(self)
+        [_player setPlayerDidToEnd:^(id<ZFPlayerMediaPlayback>  _Nonnull asset) {
+            @strongify(self)
+            [self.playerManager replay];//设置循环播放
+        }];
+    }return _player;
+}
 
 @end

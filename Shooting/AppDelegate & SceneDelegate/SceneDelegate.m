@@ -73,9 +73,13 @@ willConnectToSession:(UISceneSession *)session
 
 - (void)sceneDidBecomeActive:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
     NSLog(@"---applicationDidBecomeActive----");//进入前台
-    extern ZFPlayerController *ZFPlayer;
-    if (ZFPlayer) {
-        [ZFPlayer.currentPlayerManager play];
+    extern ZFPlayerController *ZFPlayer_DoorVC;
+    extern ZFPlayerController *ZFPlayer_ForgetCodeVC;
+    if (ZFPlayer_DoorVC) {
+        [ZFPlayer_DoorVC.currentPlayerManager play];
+    }
+    if (ZFPlayer_ForgetCodeVC) {
+        [ZFPlayer_ForgetCodeVC.currentPlayerManager play];
     }
 }
 
@@ -92,9 +96,13 @@ willConnectToSession:(UISceneSession *)session
 - (void)sceneDidEnterBackground:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
     [(AppDelegate *)UIApplication.sharedApplication.delegate saveContext];
     NSLog(@"---applicationDidEnterBackground----"); //进入后台
-    extern ZFPlayerController *ZFPlayer;
-    if (ZFPlayer) {
-        [ZFPlayer.currentPlayerManager pause];
+    extern ZFPlayerController *ZFPlayer_DoorVC;
+    extern ZFPlayerController *ZFPlayer_ForgetCodeVC;
+    if (ZFPlayer_DoorVC) {
+        [ZFPlayer_DoorVC.currentPlayerManager pause];
+    }
+    if (ZFPlayer_ForgetCodeVC) {
+        [ZFPlayer_ForgetCodeVC.currentPlayerManager pause];
     }
 }
 #pragma mark —— lazyLoad
