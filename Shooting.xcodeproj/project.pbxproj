@@ -1116,11 +1116,34 @@
 			path = DoorInputViewStyle;
 			sourceTree = "<group>";
 		};
+		C5575ACB2504DE6500A2A694 /* 找回密码相关页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C5575ACC2504DE7700A2A694 /* 找回密码第一步 */,
+				C5575ACD2504DE7F00A2A694 /* 找回密码第二步 */,
+				C58960702500E08E002B1764 /* 找回密码流程图 */,
+			);
+			path = "找回密码相关页面";
+			sourceTree = "<group>";
+		};
+		C5575ACC2504DE7700A2A694 /* 找回密码第一步 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "找回密码第一步";
+			sourceTree = "<group>";
+		};
+		C5575ACD2504DE7F00A2A694 /* 找回密码第二步 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "找回密码第二步";
+			sourceTree = "<group>";
+		};
 		C561618324EE4C72001CD851 /* 拍照 */ = {
 			isa = PBXGroup;
 			children = (
 				C561618524EE4C87001CD851 /* 拍摄 */,
-				C561618424EE4C7F001CD851 /* 上传 */,
 				C561619B24EE4CB7001CD851 /* PhotoVC.h */,
 				C561619924EE4CB6001CD851 /* PhotoVC.m */,
 				C561619A24EE4CB6001CD851 /* PhotoVC+VM.h */,
@@ -1143,6 +1166,7 @@
 		C561618524EE4C87001CD851 /* 拍摄 */ = {
 			isa = PBXGroup;
 			children = (
+				C561618424EE4C7F001CD851 /* 上传 */,
 				C561618624EE4C8F001CD851 /* 拍摄页面的一切其他的子控件 */,
 				C596079524F9221E00D4C824 /* res */,
 				C55497A224F38CDB0065510D /* MKShootVC.h */,
@@ -1244,8 +1268,8 @@
 			isa = PBXGroup;
 			children = (
 				C589605D2500B139002B1764 /* Door.h */,
+				C5575ACB2504DE6500A2A694 /* 找回密码相关页面 */,
 				C51A0BD1250202C300884016 /* 输入框样式 */,
-				C58960702500E08E002B1764 /* 找回密码流程图 */,
 				C58960532500B03A002B1764 /* LogoContentView */,
 				C58960522500AF9E002B1764 /* RegisterContentView */,
 				C58960512500AF86002B1764 /* LoginContentView */,

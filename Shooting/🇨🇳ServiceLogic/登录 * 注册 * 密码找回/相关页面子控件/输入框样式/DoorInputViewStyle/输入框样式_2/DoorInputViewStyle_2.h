@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DoorInputViewStyle_2 : DoorInputViewStyle
 
+@property(nonatomic,strong)NSString *titleStr;
 @property(nonatomic,strong)ZYTextField *tf;
 @property(nonatomic,strong)ImageCodeView *imageCodeView;
 @property(nonatomic,assign)CGFloat inputViewWidth;

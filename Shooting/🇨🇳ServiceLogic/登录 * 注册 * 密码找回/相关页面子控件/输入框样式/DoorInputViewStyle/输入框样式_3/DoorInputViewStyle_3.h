@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DoorInputViewStyle_3 : DoorInputViewStyle
 
+@property(nonatomic,strong)NSString *titleStr;
 @property(nonatomic,strong)ZYTextField *tf;
 @property(nonatomic,strong)UIImage *btnSelectedIMG;
 @property(nonatomic,strong)UIImage *btnUnSelectedIMG;

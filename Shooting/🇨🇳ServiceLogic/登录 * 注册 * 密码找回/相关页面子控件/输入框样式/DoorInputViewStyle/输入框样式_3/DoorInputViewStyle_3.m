@@ -15,6 +15,7 @@ UITextFieldDelegate
 >
 
 @property(nonatomic,strong)UIButton *btn;
+@property(nonatomic,strong)UILabel *titleLab;
 
 @end
 
@@ -33,6 +34,10 @@ UITextFieldDelegate
     [super drawRect:rect];
     [UIView cornerCutToCircleWithView:self
                       AndCornerRadius:self.mj_h / 2];
+    
+    if (![NSString isNullString:self.titleStr]) {
+        self.titleLab.alpha = 1;
+    }
     self.tf.alpha = 1;
 }
 
@@ -68,6 +73,19 @@ UITextFieldDelegate
     return YES;
 }
 #pragma mark —— lazyLoad
+-(UILabel *)titleLab{
+    if (!_titleLab) {
+        _titleLab = UILabel.new;
+        _titleLab.font = [UIFont systemFontOfSize:9.6
+                                           weight:UIFontWeightRegular];
+        _titleLab.textColor = kWhiteColor;
+        [self addSubview:_titleLab];
+        [_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.equalTo(self);
+        }];
+    }return _titleLab;
+}
+
 -(ZYTextField *)tf{
     if (!_tf) {
         _tf = ZYTextField.new;
@@ -75,8 +93,13 @@ UITextFieldDelegate
         _tf.cj_delegate = self;
         [self addSubview:_tf];
         [_tf mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.bottom.equalTo(self);
+            make.left.bottom.equalTo(self);
             make.width.mas_equalTo(self.inputViewWidth * 0.86);
+            if (![NSString isNullString:self.titleStr]) {
+                make.top.equalTo(self.titleLab.mas_bottom).offset(3);
+            }else{
+                make.top.equalTo(self);
+            }
         }];
     }return _tf;
 }
@@ -99,8 +122,5 @@ UITextFieldDelegate
         }];
     }return _btn;
 }
-
-
-
 
 @end
