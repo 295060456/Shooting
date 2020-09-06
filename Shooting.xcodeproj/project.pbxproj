@@ -34,6 +34,9 @@
 		C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A924F3A1F00065510D /* GPUImageTools.m */; };
 		C55497B024F3AD990065510D /* MKGPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497AE24F3AD990065510D /* MKGPUImageView.m */; };
 		C5575AC22504AEFB00A2A694 /* niupi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C58960622500D288002B1764 /* niupi.mp4 */; };
+		C5575AC52504B62900A2A694 /* DoorInputViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575AC42504B62900A2A694 /* DoorInputViewStyle.m */; };
+		C5575AC92504B89400A2A694 /* 验证ICON@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5575AC72504B89400A2A694 /* 验证ICON@2x.png */; };
+		C5575ACA2504B89400A2A694 /* 验证ICON@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5575AC82504B89400A2A694 /* 验证ICON@3x.png */; };
 		C561618B24EE4C98001CD851 /* StartOrPauseBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C561618824EE4C97001CD851 /* StartOrPauseBtn.m */; };
 		C561618C24EE4C98001CD851 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C561618924EE4C98001CD851 /* MyCell.m */; };
 		C561619724EE4CA9001CD851 /* MKUploadingVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C561619424EE4CA9001CD851 /* MKUploadingVC+VM.m */; };
@@ -396,6 +399,10 @@
 		C55497A924F3A1F00065510D /* GPUImageTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageTools.m; sourceTree = "<group>"; };
 		C55497AE24F3AD990065510D /* MKGPUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKGPUImageView.m; sourceTree = "<group>"; };
 		C55497AF24F3AD990065510D /* MKGPUImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKGPUImageView.h; sourceTree = "<group>"; };
+		C5575AC32504B62900A2A694 /* DoorInputViewStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoorInputViewStyle.h; sourceTree = "<group>"; };
+		C5575AC42504B62900A2A694 /* DoorInputViewStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoorInputViewStyle.m; sourceTree = "<group>"; };
+		C5575AC72504B89400A2A694 /* 验证ICON@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "验证ICON@2x.png"; sourceTree = "<group>"; };
+		C5575AC82504B89400A2A694 /* 验证ICON@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "验证ICON@3x.png"; sourceTree = "<group>"; };
 		C561618724EE4C97001CD851 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
 		C561618824EE4C97001CD851 /* StartOrPauseBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartOrPauseBtn.m; sourceTree = "<group>"; };
 		C561618924EE4C98001CD851 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
@@ -1020,8 +1027,7 @@
 			isa = PBXGroup;
 			children = (
 				C51A0BE5250203CD00884016 /* DoorInputView.h */,
-				C51A0BDA2502034F00884016 /* 输入框样式_2 */,
-				C51A0BDB2502035900884016 /* 输入框样式_3 */,
+				C5575AC62504B66300A2A694 /* DoorInputViewStyle */,
 			);
 			path = "输入框样式";
 			sourceTree = "<group>";
@@ -1097,6 +1103,17 @@
 				C58960622500D288002B1764 /* niupi.mp4 */,
 			);
 			path = res;
+			sourceTree = "<group>";
+		};
+		C5575AC62504B66300A2A694 /* DoorInputViewStyle */ = {
+			isa = PBXGroup;
+			children = (
+				C5575AC32504B62900A2A694 /* DoorInputViewStyle.h */,
+				C5575AC42504B62900A2A694 /* DoorInputViewStyle.m */,
+				C51A0BDA2502034F00884016 /* 输入框样式_2 */,
+				C51A0BDB2502035900884016 /* 输入框样式_3 */,
+			);
+			path = DoorInputViewStyle;
 			sourceTree = "<group>";
 		};
 		C561618324EE4C72001CD851 /* 拍照 */ = {
@@ -1281,6 +1298,8 @@
 				C51A0BEB25020ADF00884016 /* codeEncode@3x.png */,
 				C51A0BE625020A3A00884016 /* closeCircle@2x.png */,
 				C51A0BE725020A3A00884016 /* closeCircle@3x.png */,
+				C5575AC72504B89400A2A694 /* 验证ICON@2x.png */,
+				C5575AC82504B89400A2A694 /* 验证ICON@3x.png */,
 				C51A0BCD2501286500884016 /* 用户名称@2x.png */,
 				C51A0BCE2501286500884016 /* 用户名称@3x.png */,
 				C58960652500D9A6002B1764 /* MainLogo@2x.png */,
@@ -2768,6 +2787,7 @@
 				C59D9B1A24F9083200A74CE9 /* sure@3x.png in Resources */,
 				C58F03CE24EA789100B6D09C /* 翻转镜头@2x.png in Resources */,
 				C58F03A924EA6E7600B6D09C /* ShoppingCart@3x.png in Resources */,
+				C5575ACA2504B89400A2A694 /* 验证ICON@3x.png in Resources */,
 				C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */,
 				C52EE27224FF647D0033CD47 /* 倒计时 关闭状态@2x.png in Resources */,
 				C589608625010CD9002B1764 /* di_2@2x.png in Resources */,
@@ -2799,6 +2819,7 @@
 				C589606C2500DAB7002B1764 /* SubLogo@3x.png in Resources */,
 				C58F018224EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton in Resources */,
 				C57C22B825026E4600FAAA3F /* KKK.png in Resources */,
+				C5575AC92504B89400A2A694 /* 验证ICON@2x.png in Resources */,
 				C59D9B1C24F9083200A74CE9 /* sure@2x.png in Resources */,
 				C589606B2500DAB7002B1764 /* SubLogo@2x.png in Resources */,
 				C58F03AF24EA6E7600B6D09C /* Home@2x.png in Resources */,
@@ -3126,6 +3147,7 @@
 				C58F02A224EA61C600B6D09C /* LOTPolygonAnimator.m in Sources */,
 				C58F02A424EA61C600B6D09C /* LOTGradientFillRender.m in Sources */,
 				C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */,
+				C5575AC52504B62900A2A694 /* DoorInputViewStyle.m in Sources */,
 				C58F01C224EA5E5E00B6D09C /* SoundBtn.m in Sources */,
 				C58F01A324EA5CAD00B6D09C /* BaseVC.m in Sources */,
 				C58F02D524EA62B500B6D09C /* suspendBtn.m in Sources */,

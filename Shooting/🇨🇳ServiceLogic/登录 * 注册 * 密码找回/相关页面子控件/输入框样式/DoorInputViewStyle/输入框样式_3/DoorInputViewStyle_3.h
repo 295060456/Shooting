@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DoorInputViewStyle.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DoorInputViewStyle_3 : UIView
+@interface DoorInputViewStyle_3 : DoorInputViewStyle
 
 @property(nonatomic,strong)ZYTextField *tf;
 @property(nonatomic,strong)UIImage *btnSelectedIMG;

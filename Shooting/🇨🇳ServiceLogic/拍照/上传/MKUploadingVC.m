@@ -271,7 +271,8 @@ shouldChangeTextInRange:(NSRange)range
         _textView.backgroundColor = COLOR_RGB(33, 38, 50, 1);
         _textView.delegate = self;
         _textView.attributedPlaceholder = [[NSMutableAttributedString alloc] initWithString:@"主人来两句嘛！~~~"
-                                                                                 attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15 weight:UIFontWeightRegular],
+                                                                                 attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15
+                                                                                                                                    weight:UIFontWeightRegular],
                                                                                               NSForegroundColorAttributeName:kWhiteColor}];
         _textView.placeholderTextColor = kWhiteColor;
         _textView.textColor = kWhiteColor;

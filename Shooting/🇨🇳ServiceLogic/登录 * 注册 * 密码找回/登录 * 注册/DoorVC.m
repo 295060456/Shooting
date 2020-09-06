@@ -84,6 +84,7 @@ ZFPlayerController *ZFPlayer;
     [self.player.currentPlayerManager play];
     self.loginContentView.alpha = 0.7;
     [UIView animationAlert:self.logoContentView];
+    IQKeyboardManager.sharedManager.enable = NO;
 //    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
 }
 
@@ -152,7 +153,7 @@ ZFPlayerController *ZFPlayer;
         _loginContentView.frame = CGRectMake(SCREEN_WIDTH,
                                              SCREEN_HEIGHT / 3,
                                              SCREEN_WIDTH - 100,
-                                             SCREEN_HEIGHT/ 2);
+                                             SCREEN_HEIGHT/ 3);
     }return _loginContentView;
 }
 
@@ -189,7 +190,7 @@ ZFPlayerController *ZFPlayer;
         _registerContentView.frame = CGRectMake(SCREEN_WIDTH,
                                              SCREEN_HEIGHT / 3,
                                              SCREEN_WIDTH - 100,
-                                             SCREEN_HEIGHT/ 2);
+                                             SCREEN_HEIGHT/ 3);
     }return _registerContentView;
 }
 
@@ -225,7 +226,7 @@ ZFPlayerController *ZFPlayer;
         [self.view addSubview:_logoContentView];
         [_logoContentView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(150, 50));
-            make.top.mas_equalTo(100);
+            make.bottom.equalTo(self.loginContentView.mas_top).offset(-50);
             make.centerX.equalTo(self.view);
         }];
     }return _logoContentView;

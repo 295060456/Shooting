@@ -58,7 +58,8 @@
 
 -(void)drawRect:(CGRect)rect {
     [super drawRect:rect];
-    CGSize cSize = [@"A" sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:20]}];//计算单个字所需空间
+    CGSize cSize = [@"A" sizeWithAttributes:@{NSFontAttributeName:self.font,
+                                              NSForegroundColorAttributeName:self.color}];//计算单个字所需空间
     int width = rect.size.width / self.CodeStr.length - cSize.width;//间距
     int height = rect.size.height - cSize.height;//可浮动高度
     CGPoint point;
@@ -71,7 +72,8 @@
         unichar c = [self.CodeStr characterAtIndex:i];
         NSString *textC = [NSString stringWithFormat:@"%C", c];
         [textC drawAtPoint:point
-            withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:20]}];
+            withAttributes:@{NSFontAttributeName:self.font,
+                             NSForegroundColorAttributeName:self.color}];
     }
     
     //干扰线
@@ -101,6 +103,19 @@
                                                                  action:@selector(changeCode:)];
         [self addGestureRecognizer:_changeCodeTap];
     }return _changeCodeTap;
+}
+
+-(UIColor *)color{
+    if (!_color) {
+        _color = kWhiteColor;
+    }return _color;
+}
+
+-(UIFont *)font{
+    if (!_font) {
+        _font = [UIFont systemFontOfSize:9.6
+                                  weight:UIFontWeightRegular];
+    }return _font;
 }
 
 @end

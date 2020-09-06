@@ -1,29 +1,25 @@
 //
-//  DoorInputViewStyle_3.m
+//  DoorInputViewStyle_2.m
 //  Shooting
 //
 //  Created by Jobs on 2020/9/4.
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "DoorInputViewStyle_3.h"
+#import "DoorInputViewStyle_2.h"
 
-@interface DoorInputViewStyle_3 ()
+@interface DoorInputViewStyle_2 ()
 <
 UITextFieldDelegate
 ,CJTextFieldDeleteDelegate
 >
 
-@property(nonatomic,strong)UIButton *btn;
-
 @end
 
-@implementation DoorInputViewStyle_3
+@implementation DoorInputViewStyle_2
 
 -(instancetype)init{
     if (self = [super init]) {
-        [UIView cornerCutToCircleWithView:self
-                          AndCornerRadius:self.mj_h / 2];
         self.backgroundColor = COLOR_RGB(39,
                                          37,
                                          37,
@@ -33,14 +29,11 @@ UITextFieldDelegate
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
+    [UIView cornerCutToCircleWithView:self
+                      AndCornerRadius:self.mj_h / 2];
     self.tf.alpha = 1;
+    self.imageCodeView.alpha = 1;
 }
-
--(void)clickBtnEvent:(UIButton *)sender{
-    sender.selected = !sender.selected;
-    
-}
-
 #pragma mark —— CJTextFieldDeleteDelegate
 - (void)cjTextFieldDeleteBackward:(CJTextField *)textField{
     
@@ -77,31 +70,21 @@ UITextFieldDelegate
         [self addSubview:_tf];
         [_tf mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.bottom.equalTo(self);
-            make.width.mas_equalTo(self.inputViewWidth * 0.86);
+            make.width.mas_equalTo(self.inputViewWidth * 0.7);
         }];
     }return _tf;
 }
 
--(UIButton *)btn{
-    if (!_btn) {
-        _btn = UIButton.new;
-        [_btn addTarget:self
-                 action:@selector(clickBtnEvent:)
-       forControlEvents:UIControlEventTouchUpInside];
-        [_btn setImage:self.btnSelectedIMG
-              forState:UIControlStateSelected];
-        [_btn setImage:self.btnUnSelectedIMG
-              forState:UIControlStateNormal];
-        [self addSubview:_btn];
-        [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(16, 16));
-            make.centerY.equalTo(self);
-            make.left.equalTo(self.tf.mas_right);
+-(ImageCodeView *)imageCodeView{
+    if (!_imageCodeView) {
+        _imageCodeView = ImageCodeView.new;
+        [self addSubview:_imageCodeView];
+        [_imageCodeView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.bottom.right.equalTo(self);
+            make.width.mas_equalTo(self.inputViewWidth * 0.27);
         }];
-    }return _btn;
+        [self layoutIfNeeded];
+    }return _imageCodeView;
 }
-
-
-
 
 @end

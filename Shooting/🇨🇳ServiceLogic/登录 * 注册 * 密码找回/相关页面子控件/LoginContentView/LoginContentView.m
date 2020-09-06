@@ -10,7 +10,9 @@
 #import "DoorInputView.h"
 #import "ForgetCodeVC.h"
 
-@interface LoginContentView ()
+@interface LoginContentView (){
+    CGFloat k;
+}
 
 @property(nonatomic,strong)UILabel *titleLab;
 @property(nonatomic,strong)UIButton *storeCodeBtn;//记住密码
@@ -27,6 +29,7 @@
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnUnselectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*placeHolderMutArr;
 @property(nonatomic,strong)NSMutableArray <DoorInputViewStyle_3 *> *inputViewMutArr;
+@property(nonatomic,assign)BOOL isOpen;
 
 @end
 
@@ -62,7 +65,7 @@
         DoorInputViewStyle_3 *inputView = DoorInputViewStyle_3.new;
         UIImageView *imgv = UIImageView.new;
         imgv.image = self.headerImgMutArr[t];
-        inputView.inputViewWidth = 192;
+        inputView.inputViewWidth = 250;
         inputView.tf.leftView = imgv;
         inputView.tf.ZYtextFont = [UIFont systemFontOfSize:9.6
                                                     weight:UIFontWeightRegular];
@@ -81,8 +84,8 @@
         
         [self addSubview:inputView];
         [inputView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self.titleLab.mas_centerX);
-            make.size.mas_equalTo(CGSizeMake(192, 32));
+            make.right.equalTo(self.toRegisterBtn.mas_left).offset(-10);
+            make.size.mas_equalTo(CGSizeMake(250, 32));
             if (t == 0) {
                 make.top.equalTo(self.titleLab.mas_bottom).offset(29);
             }else{
@@ -109,21 +112,32 @@
 }
 
 -(void)keyboardWillChangeFrameNotification:(NSNotification *)notification{//键盘 弹出 和 收回 走这个方法
-    NSDictionary *userInfo = notification.userInfo;
-    CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-    CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
-    NSLog(@"KeyboardOffsetY = %f",KeyboardOffsetY);
-    NSLog(@"MMM beginFrameY = %f,endFrameY = %f",beginFrame.origin.y,endFrame.origin.y);
-    [self showLoginContentViewWithOffsetY:KeyboardOffsetY / 2];
-    if (self.loginContentViewKeyboardBlock) {
-        self.loginContentViewKeyboardBlock(@(KeyboardOffsetY));
+    if (self.isOpen){
+        NSDictionary *userInfo = notification.userInfo;
+        CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+        CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+        CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
+        NSLog(@"KeyboardOffsetY = %f",KeyboardOffsetY);
+        NSLog(@"MMM beginFrameY = %f,endFrameY = %f",beginFrame.origin.y,endFrame.origin.y);
+        CGFloat offset = 100;
+        if (KeyboardOffsetY > 0) {
+            k = endFrame.origin.y - self.mj_h - offset;
+            [self showLoginContentViewWithOffsetY:k];
+        }else{
+            [self showLoginContentViewWithOffsetY:-k];
+        }
+        
+        if (self.loginContentViewKeyboardBlock) {
+            self.loginContentViewKeyboardBlock(@(KeyboardOffsetY));
+        }
     }
 }
 
 -(void)keyboardDidChangeFrameNotification:(NSNotification *)notification{
-    NSLog(@"键盘弹出");
-    NSLog(@"键盘关闭");
+    if (self.isOpen) {
+        NSLog(@"键盘弹出");
+        NSLog(@"键盘关闭");
+    }
 }
 
 /*
@@ -145,7 +159,7 @@
         self.centerX = SCREEN_WIDTH / 2;
         self.centerY -= offsetY;
     } completion:^(BOOL finished) {
-        
+        self.isOpen = YES;
     }];
 }
 
@@ -158,7 +172,7 @@
                      animations:^{
         self.mj_x = -self.mj_w;
     } completion:^(BOOL finished) {
-        
+        self.isOpen = NO;
     }];
 }
 

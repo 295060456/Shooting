@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy)NSArray *CodeArr;
 @property(nonatomic,copy)NSString *CodeStr;
 
+@property(nonatomic,strong)UIColor *color;
+@property(nonatomic,strong)UIFont *font;
+
 @end
 
 NS_ASSUME_NONNULL_END
