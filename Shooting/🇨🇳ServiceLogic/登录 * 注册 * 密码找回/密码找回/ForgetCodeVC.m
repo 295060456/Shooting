@@ -37,6 +37,7 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
 @property(nonatomic,assign)NSInteger flowNum;
 ///当前流程序号 从0开始
 @property(nonatomic,assign)NSInteger currentFlowSerialNum;
+@property(nonatomic,assign)int Step;
 
 @end
 
@@ -188,13 +189,34 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
         [_nextStepBtn setTitleColor:kWhiteColor
                         forState:UIControlStateNormal];
         [[_nextStepBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-             NSLog(@"下一步");
+            switch (self.Step) {
+                case 0:{
+                    NSLog(@"下一步");
+                    [self.step_01 removeForgetCodeStep_01ViewWithOffsetY:0];
+                    [self.step_02 showForgetCodeStep_02ViewWithOffsetY:0];
+                }break;
+                case 1:{
+                    [self.step_02  removeForgetCodeStep_02ViewWithOffsetY:0];
+                    [UIView animationAlert:self.successBtn];
+                    [self->_nextStepBtn setTitle:@"去登陆"
+                                        forState:UIControlStateNormal];
+                    [[self->_nextStepBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+                        NSLog(@"去登陆");
+                        [self backBtnClickEvent:x];
+                    }];
+                }break;
+                    
+                default:
+                    break;
+            }
+
             if (self.currentFlowSerialNum < self.flowNum - 1) {
                 self.currentFlowSerialNum += 1;
                 [self.findCodeFlowChartView removeFromSuperview];
                 self.findCodeFlowChartView = nil;
                 self.findCodeFlowChartView.currentFlowSerialNum = self.currentFlowSerialNum;
             }
+            self.Step += 1;
         }];
         [UIView cornerCutToCircleWithView:_nextStepBtn
                           AndCornerRadius:16];
@@ -227,17 +249,14 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
         _step_02 = ForgetCodeStep_02View.new;
         @weakify(self)
         [_step_02 actionForgetCodeStep_02ViewBlock:^(id data) {
-            @strongify(self)
-            [self.step_02 removeForgetCodeStep_02ViewWithOffsetY:0];
-            self.successBtn.alpha = 1;
-            [[self.nextStepBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-                NSLog(@"去登陆");
-            }];
+//            @strongify(self)
+
         }];
         
         [_step_02 actionForgetCodeStep_02ViewKeyboardBlock:^(id data) {
 //            @strongify(self)
         }];
+        [self.view addSubview:_step_02];
         _step_02.frame = CGRectMake(SCREEN_WIDTH,
                                     SCREEN_HEIGHT / 3,
                                     SCREEN_WIDTH - 100,

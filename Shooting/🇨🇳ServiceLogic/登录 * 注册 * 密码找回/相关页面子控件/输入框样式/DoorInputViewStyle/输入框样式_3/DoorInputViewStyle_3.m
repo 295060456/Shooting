@@ -34,11 +34,6 @@ UITextFieldDelegate
     }
     self.tf.alpha = 1;
 }
-
--(void)clickBtnEvent:(UIButton *)sender{
-    sender.selected = !sender.selected;
-}
-
 #pragma mark —— CJTextFieldDeleteDelegate
 - (void)cjTextFieldDeleteBackward:(CJTextField *)textField{
     
@@ -103,13 +98,14 @@ UITextFieldDelegate
 -(UIButton *)btn{
     if (!_btn) {
         _btn = UIButton.new;
-        [_btn addTarget:self
-                 action:@selector(clickBtnEvent:)
-       forControlEvents:UIControlEventTouchUpInside];
         [_btn setImage:self.btnSelectedIMG
               forState:UIControlStateSelected];
         [_btn setImage:self.btnUnSelectedIMG
               forState:UIControlStateNormal];
+        [[_btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            NSLog(@"");
+            x.selected = !x.selected;
+        }];
         [self addSubview:_btn];
         [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(16, 16));
