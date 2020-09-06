@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "CJTextField.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ZYTextField : CJTextField
 
@@ -15,6 +16,5 @@
 @property(nonatomic,strong)UIFont *ZYplaceholderLabelFont_2;//占位文字字体 聚焦状态
 
 @property(nonatomic,assign)CGFloat offset;
-
 
 @end

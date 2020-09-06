@@ -49,13 +49,13 @@ UITextFieldDelegate
 //- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField;
 //告诉委托人在指定的文本字段中开始编辑
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
-
+    
 }
 //询问委托人是否应在指定的文本字段中停止编辑
 //- (BOOL)textFieldShouldEndEditing:(UITextField *)textField;
 //告诉委托人对指定的文本字段停止编辑
 - (void)textFieldDidEndEditing:(UITextField *)textField{
-
+    [self.tf isValidate:@""];
 }
 //告诉委托人对指定的文本字段停止编辑
 //- (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason;
