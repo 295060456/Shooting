@@ -105,7 +105,6 @@ ZFPlayerController *ZFPlayer;
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches
           withEvent:(UIEvent *)event{
-    [self.loginContentView removeLoginContentViewWithOffsetY:0];
     [self.view endEditing:YES];
 }
 #pragma mark —— LazyLoad
@@ -118,7 +117,8 @@ ZFPlayerController *ZFPlayer;
             if ([data isKindOfClass:UIButton.class]) {
                 UIButton *btn = (UIButton *)data;
                 if ([btn.titleLabel.text isEqualToString:@"新\n用\n户\n注\n册"]) {
-                    
+                    [self.registerContentView showRegisterContentViewWithOffsetY:0];
+                    [self.loginContentView removeLoginContentViewWithOffsetY:0];
                 }else if ([btn.titleLabel.text isEqualToString:@"记住密码"]){
                     
                 }else if ([btn.titleLabel.text isEqualToString:@"忘记密码"]){
@@ -159,6 +159,37 @@ ZFPlayerController *ZFPlayer;
 -(RegisterContentView *)registerContentView{
     if (!_registerContentView) {
         _registerContentView = RegisterContentView.new;
+        _registerContentView.alpha = 0.7;
+        @weakify(self)
+        [_registerContentView actionRegisterContentViewBlock:^(id data) {
+            @strongify(self)
+            if ([data isKindOfClass:UIButton.class]) {
+                UIButton *btn = (UIButton *)data;
+                if ([btn.titleLabel.text isEqualToString:@"返\n回\n登\n录"]) {
+                    [self.loginContentView showLoginContentViewWithOffsetY:0];
+                    [self.registerContentView removeRegisterContentViewWithOffsetY:0];
+                }else{}
+            }
+        }];
+        
+        [_registerContentView actionRegisterContentViewKeyboardBlock:^(id data) {
+            @strongify(self)
+            if ([data isKindOfClass:NSNumber.class]) {
+                NSNumber *b = (NSNumber *)data;
+                if (b.intValue > 0) {
+                    NSLog(@"开始编辑");
+                    self.logoContentView.alpha = 0;
+                }else if(b.intValue < 0){
+                    NSLog(@"正常模式");
+                    self.logoContentView.alpha = 1;
+                }else{}
+            }
+        }];
+        [self.view addSubview:_registerContentView];
+        _registerContentView.frame = CGRectMake(SCREEN_WIDTH,
+                                             SCREEN_HEIGHT / 3,
+                                             SCREEN_WIDTH - 100,
+                                             SCREEN_HEIGHT/ 2);
     }return _registerContentView;
 }
 
@@ -183,7 +214,7 @@ ZFPlayerController *ZFPlayer;
         @weakify(self)
         [_player setPlayerDidToEnd:^(id<ZFPlayerMediaPlayback>  _Nonnull asset) {
             @strongify(self)
-            [self.playerManager replay];
+            [self.playerManager replay];//设置循环播放
         }];
     }return _player;
 }

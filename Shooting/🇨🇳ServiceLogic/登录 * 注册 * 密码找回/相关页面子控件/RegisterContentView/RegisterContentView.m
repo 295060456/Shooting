@@ -27,10 +27,7 @@
     if (self = [super init]) {
         [UIView cornerCutToCircleWithView:self
                           AndCornerRadius:8];
-        self.backgroundColor = COLOR_RGB(255,
-                                         255,
-                                         255,
-                                         1);
+        self.backgroundColor = kBlackColor;
         [self keyboard];
     }return self;
 }
@@ -108,7 +105,7 @@
           initialSpringVelocity:10
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-        self.mj_x = SCREEN_WIDTH;
+        self.mj_x = -self.mj_w;;
     } completion:^(BOOL finished) {
         
     }];
@@ -170,11 +167,16 @@
               forState:UIControlStateNormal];
         [[_backToLoginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             NSLog(@"返回登录");
+            if (self.registerContentViewBlock) {
+                self.registerContentViewBlock(self->_backToLoginBtn);
+            }
         }];
         [self addSubview:_backToLoginBtn];
         [_backToLoginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.bottom.equalTo(self);
         }];
+        [_backToLoginBtn layoutButtonWithEdgeInsetsStyle:GLButtonEdgeInsetsStyleTop
+                                         imageTitleSpace:8];
     }return _backToLoginBtn;
 }
 

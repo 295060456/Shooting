@@ -156,7 +156,7 @@
           initialSpringVelocity:10
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-        self.mj_x = SCREEN_WIDTH;
+        self.mj_x = -self.mj_w;
     } completion:^(BOOL finished) {
         
     }];
