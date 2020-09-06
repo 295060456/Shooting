@@ -87,6 +87,9 @@
                                          imageTitleSpace:8];
         [_backToLoginBtn setImage:kIMG(@"用户名称")
               forState:UIControlStateNormal];
+        [[_backToLoginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            NSLog(@"返回登录");
+        }];
         [self addSubview:_backToLoginBtn];
         [_backToLoginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.bottom.equalTo(self);

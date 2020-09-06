@@ -161,24 +161,6 @@
         
     }];
 }
-#pragma mark —— 点击事件
--(void)btnClickEvent:(UIButton *)sender{
-    if (self.loginContentViewBlock) {
-        self.loginContentViewBlock(self);
-    }
-}
-
--(void)storeCodeBtnClickEvent:(UIButton *)sender{
-    NSLog(@"存储密码");
-}
-
--(void)giveUpLoginBtnClickEvent:(UIButton *)sender{
-    NSLog(@"先去逛逛");
-}
-
--(void)loginBtnClickEvent:(UIButton *)sender{
-    NSLog(@"注册");
-}
 
 -(void)actionLoginContentViewBlock:(MKDataBlock)loginContentViewBlock{
     _loginContentViewBlock = loginContentViewBlock;
@@ -278,9 +260,9 @@
                        forState:UIControlStateNormal];
         [_storeCodeBtn setImage:kIMG(@"没有记住密码")
                        forState:UIControlStateSelected];
-        [_storeCodeBtn addTarget:self
-                          action:@selector(storeCodeBtnClickEvent:)
-                forControlEvents:UIControlEventTouchUpInside];
+        [[_storeCodeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            NSLog(@"存储密码");
+        }];
         [self addSubview:_storeCodeBtn];
         [_storeCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.titleLab.mas_left);
@@ -301,9 +283,11 @@
                        forState:UIControlStateNormal];
         [_forgetCodeBtn setImage:kIMG(@"KKK")
                        forState:UIControlStateNormal];
-        [_forgetCodeBtn addTarget:self
-                 action:@selector(btnClickEvent:)
-       forControlEvents:UIControlEventTouchUpInside];
+        [[_forgetCodeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            if (self.loginContentViewBlock) {
+                self.loginContentViewBlock(self);
+            }
+        }];
         [self addSubview:_forgetCodeBtn];
         [_forgetCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.inputViewMutArr.lastObject.mas_bottom).offset(5);
@@ -334,9 +318,9 @@
                    forState:UIControlStateNormal];
         [_loginBtn setTitleColor:kWhiteColor
                         forState:UIControlStateNormal];
-        [_loginBtn addTarget:self
-                      action:@selector(loginBtnClickEvent:)
-            forControlEvents:UIControlEventTouchUpInside];
+        [[_loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+             NSLog(@"注册");
+        }];
         [UIView cornerCutToCircleWithView:_loginBtn
                           AndCornerRadius:16];
     }return _loginBtn;
@@ -351,9 +335,9 @@
                          forState:UIControlStateNormal];
         [_giveUpLoginBtn.titleLabel sizeToFit];
         _giveUpLoginBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
-        [_giveUpLoginBtn addTarget:self
-                            action:@selector(giveUpLoginBtnClickEvent:)
-                  forControlEvents:UIControlEventTouchUpInside];
+        [[_giveUpLoginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            NSLog(@"先去逛逛");
+        }];
         [self addSubview:_giveUpLoginBtn];
         [_giveUpLoginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self);

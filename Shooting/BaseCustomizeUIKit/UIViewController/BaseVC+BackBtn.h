@@ -1,5 +1,5 @@
 //
-//  BaseVC+FSCustomButton.h
+//  BaseVC+BackBtn.h
 //  MonkeyKingVideo
 //
 //  Created by Jobs on 2020/8/4.
@@ -10,9 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BaseVC (FSCustomButton)
+@interface BaseVC (BackBtn)
 
-#pragma mark —— BaseVC+FSCustomButton
+#pragma mark —— BaseVC+BackBtn
 @property(nonatomic,strong)UIButton *backBtnCategory;
 #pragma mark —— 子类需要覆写
 -(void)backBtnClickEvent:(UIButton *)sender;

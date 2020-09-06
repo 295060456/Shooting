@@ -167,7 +167,7 @@
 		C58F019D24EA5CAD00B6D09C /* BaseVC+BRPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F015924EA5CAC00B6D09C /* BaseVC+BRPickerView.m */; };
 		C58F019E24EA5CAD00B6D09C /* BaseVC+TZImagePickerControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F015A24EA5CAC00B6D09C /* BaseVC+TZImagePickerControllerDelegate.m */; };
 		C58F019F24EA5CAD00B6D09C /* BaseVC+AlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F015D24EA5CAC00B6D09C /* BaseVC+AlertController.m */; };
-		C58F01A024EA5CAD00B6D09C /* BaseVC+FSCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F015E24EA5CAC00B6D09C /* BaseVC+FSCustomButton.m */; };
+		C58F01A024EA5CAD00B6D09C /* BaseVC+BackBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F015E24EA5CAC00B6D09C /* BaseVC+BackBtn.m */; };
 		C58F01A124EA5CAD00B6D09C /* BaseVC+BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F015F24EA5CAC00B6D09C /* BaseVC+BWShareView.m */; };
 		C58F01A224EA5CAD00B6D09C /* BaseVC+JXCategoryListContentViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F016024EA5CAC00B6D09C /* BaseVC+JXCategoryListContentViewDelegate.m */; };
 		C58F01A324EA5CAD00B6D09C /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F016324EA5CAC00B6D09C /* BaseVC.m */; };
@@ -652,7 +652,7 @@
 		C58F015B24EA5CAC00B6D09C /* BaseVC+TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+TZLocationManager.h"; sourceTree = "<group>"; };
 		C58F015C24EA5CAC00B6D09C /* BaseVC+OpenURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+OpenURL.h"; sourceTree = "<group>"; };
 		C58F015D24EA5CAC00B6D09C /* BaseVC+AlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+AlertController.m"; sourceTree = "<group>"; };
-		C58F015E24EA5CAC00B6D09C /* BaseVC+FSCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+FSCustomButton.m"; sourceTree = "<group>"; };
+		C58F015E24EA5CAC00B6D09C /* BaseVC+BackBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+BackBtn.m"; sourceTree = "<group>"; };
 		C58F015F24EA5CAC00B6D09C /* BaseVC+BWShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+BWShareView.m"; sourceTree = "<group>"; };
 		C58F016024EA5CAC00B6D09C /* BaseVC+JXCategoryListContentViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+JXCategoryListContentViewDelegate.m"; sourceTree = "<group>"; };
 		C58F016124EA5CAC00B6D09C /* BaseVC+AFNReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+AFNReachability.h"; sourceTree = "<group>"; };
@@ -664,7 +664,7 @@
 		C58F016724EA5CAC00B6D09C /* BaseVC+GifImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+GifImageView.h"; sourceTree = "<group>"; };
 		C58F016824EA5CAC00B6D09C /* BaseVC+BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+BRPickerView.h"; sourceTree = "<group>"; };
 		C58F016924EA5CAC00B6D09C /* BaseVC+BWShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+BWShareView.h"; sourceTree = "<group>"; };
-		C58F016A24EA5CAC00B6D09C /* BaseVC+FSCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+FSCustomButton.h"; sourceTree = "<group>"; };
+		C58F016A24EA5CAC00B6D09C /* BaseVC+BackBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+BackBtn.h"; sourceTree = "<group>"; };
 		C58F016B24EA5CAC00B6D09C /* BaseVC+AlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+AlertController.h"; sourceTree = "<group>"; };
 		C58F016C24EA5CAC00B6D09C /* BaseVC+OpenURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+OpenURL.m"; sourceTree = "<group>"; };
 		C58F017324EA5CAC00B6D09C /* ViewForHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewForHeader.m; sourceTree = "<group>"; };
@@ -1094,7 +1094,6 @@
 		C561618324EE4C72001CD851 /* 拍照 */ = {
 			isa = PBXGroup;
 			children = (
-				C572A2A324FDFA67000A1687 /* 💰VerifyCodeButton */,
 				C561618524EE4C87001CD851 /* 拍摄 */,
 				C561618424EE4C7F001CD851 /* 上传 */,
 				C561619B24EE4CB7001CD851 /* PhotoVC.h */,
@@ -1121,7 +1120,6 @@
 			children = (
 				C561618624EE4C8F001CD851 /* 拍摄页面的一切其他的子控件 */,
 				C596079524F9221E00D4C824 /* res */,
-				C55497AB24F3A3050065510D /* 视频处理工具 */,
 				C55497A224F38CDB0065510D /* MKShootVC.h */,
 				C55497A324F38CDB0065510D /* MKShootVC.m */,
 				C561619024EE4C9F001CD851 /* MKShootVC+VM.h */,
@@ -1897,8 +1895,8 @@
 				C58F015924EA5CAC00B6D09C /* BaseVC+BRPickerView.m */,
 				C58F016924EA5CAC00B6D09C /* BaseVC+BWShareView.h */,
 				C58F015F24EA5CAC00B6D09C /* BaseVC+BWShareView.m */,
-				C58F016A24EA5CAC00B6D09C /* BaseVC+FSCustomButton.h */,
-				C58F015E24EA5CAC00B6D09C /* BaseVC+FSCustomButton.m */,
+				C58F016A24EA5CAC00B6D09C /* BaseVC+BackBtn.h */,
+				C58F015E24EA5CAC00B6D09C /* BaseVC+BackBtn.m */,
 				C58F016724EA5CAC00B6D09C /* BaseVC+GifImageView.h */,
 				C58F015824EA5CAC00B6D09C /* BaseVC+GifImageView.m */,
 				C58F015624EA5CAC00B6D09C /* BaseVC+JPImageresizerView.h */,
@@ -1974,6 +1972,8 @@
 		C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C55497AB24F3A3050065510D /* 视频处理工具 */,
+				C572A2A324FDFA67000A1687 /* 💰VerifyCodeButton */,
 				C59D9AB424F8EECB00A74CE9 /* 录制成功的视频进行预览播放以决定是否舍弃 */,
 				C5C67CA524FF5D61000A26B8 /* 电影倒计时特效 */,
 				C5C67C9224FF5CFC000A26B8 /* TimerManager */,
@@ -3170,7 +3170,7 @@
 				C58F02B624EA61C600B6D09C /* LOTKeyframe.m in Sources */,
 				C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */,
 				C55497B024F3AD990065510D /* MKGPUImageView.m in Sources */,
-				C58F01A024EA5CAD00B6D09C /* BaseVC+FSCustomButton.m in Sources */,
+				C58F01A024EA5CAD00B6D09C /* BaseVC+BackBtn.m in Sources */,
 				C58F018A24EA5CAC00B6D09C /* LMHWaterFallLayout.m in Sources */,
 				C58F02A124EA61C600B6D09C /* LOTKeypath.m in Sources */,
 				C58F02E324EA632800B6D09C /* FileFolderHandleTool.m in Sources */,
@@ -3408,7 +3408,7 @@
 					"$(PROJECT_DIR)/Other/Sys/libstdc++/iPhone-Device",
 					"$(PROJECT_DIR)/Other/Sys/libstdc++/iPhone-Simulator",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MonkeyKingVideo.Shooting;
+				PRODUCT_BUNDLE_IDENTIFIER = MonkeyKingVideo.Shooting0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "-Wno-ambiguous-macro";
@@ -3433,7 +3433,7 @@
 					"$(PROJECT_DIR)/Other/Sys/libstdc++/iPhone-Device",
 					"$(PROJECT_DIR)/Other/Sys/libstdc++/iPhone-Simulator",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MonkeyKingVideo.Shooting;
+				PRODUCT_BUNDLE_IDENTIFIER = MonkeyKingVideo.Shooting0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "-Wno-ambiguous-macro";
