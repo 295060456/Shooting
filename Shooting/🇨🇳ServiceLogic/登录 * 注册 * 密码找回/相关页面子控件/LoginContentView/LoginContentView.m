@@ -44,7 +44,7 @@
     if (self = [super init]) {
         [UIView cornerCutToCircleWithView:self
                           AndCornerRadius:8];
-        self.backgroundColor = kBlackColor;
+        self.backgroundColor = KLightGrayColor;
         [self keyboard];
     }return self;
 }
@@ -81,7 +81,7 @@
         inputView.btnSelectedIMG = self.btnSelectedImgMutArr[t];
         inputView.btnUnSelectedIMG = self.btnUnselectedImgMutArr[t];
         [self.inputViewMutArr addObject:inputView];
-        
+
         [self addSubview:inputView];
         [inputView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.toRegisterBtn.mas_left).offset(-10);
@@ -94,6 +94,8 @@
             }
         }];
         [self layoutIfNeeded];
+        [UIView cornerCutToCircleWithView:inputView.tf
+                          AndCornerRadius:inputView.tf.mj_h / 2];
     }
 }
 
@@ -188,10 +190,8 @@
     if (!_toRegisterBtn) {
         _toRegisterBtn = UIButton.new;
         _toRegisterBtn.titleLabel.numberOfLines = 0;
-        _toRegisterBtn.backgroundColor = COLOR_RGB(69,
-                                                   69,
-                                                   69,
-                                                   0.7);
+        _toRegisterBtn.backgroundColor =kBlackColor;
+        _toRegisterBtn.alpha = 0.7f;
         [_toRegisterBtn setTitle:@"新\n用\n户\n注\n册"
                         forState:UIControlStateNormal];
         [_toRegisterBtn setImage:kIMG(@"用户名称")
@@ -271,8 +271,8 @@
 -(UIButton *)storeCodeBtn{
     if (!_storeCodeBtn) {
         _storeCodeBtn = UIButton.new;
-        _storeCodeBtn.titleLabel.textColor = kWhiteColor;
-        _storeCodeBtn.titleLabel.font = [UIFont systemFontOfSize:8
+        _storeCodeBtn.titleLabel.textColor = KLightGrayColor;
+        _storeCodeBtn.titleLabel.font = [UIFont systemFontOfSize:10
                                                           weight:UIFontWeightRegular];
         [_storeCodeBtn setTitle:@"记住密码"
                        forState:UIControlStateNormal];
@@ -288,7 +288,7 @@
         }];
         [self addSubview:_storeCodeBtn];
         [_storeCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(self.titleLab.mas_left);
+            make.right.equalTo(self.titleLab.mas_left).offset(-30);
             make.top.equalTo(self.inputViewMutArr.lastObject.mas_bottom).offset(5);
         }];
     }return _storeCodeBtn;
@@ -297,8 +297,8 @@
 -(UIButton *)forgetCodeBtn{
     if (!_forgetCodeBtn) {
         _forgetCodeBtn = UIButton.new;
-        _forgetCodeBtn.titleLabel.textColor = kWhiteColor;
-        _forgetCodeBtn.titleLabel.font = [UIFont systemFontOfSize:8
+        _forgetCodeBtn.titleLabel.textColor = KLightGrayColor;
+        _forgetCodeBtn.titleLabel.font = [UIFont systemFontOfSize:10
                                                           weight:UIFontWeightRegular];
         [_forgetCodeBtn.titleLabel sizeToFit];
         _forgetCodeBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
@@ -355,8 +355,9 @@
 -(UIButton *)giveUpLoginBtn{
     if (!_giveUpLoginBtn) {
         _giveUpLoginBtn = UIButton.new;
-        _giveUpLoginBtn.titleLabel.font = [UIFont systemFontOfSize:8
+        _giveUpLoginBtn.titleLabel.font = [UIFont systemFontOfSize:10
                                                             weight:UIFontWeightRegular];
+        _giveUpLoginBtn.titleLabel.textColor = KLightGrayColor;
         [_giveUpLoginBtn setTitle:@"先去逛逛"
                          forState:UIControlStateNormal];
         [_giveUpLoginBtn.titleLabel sizeToFit];

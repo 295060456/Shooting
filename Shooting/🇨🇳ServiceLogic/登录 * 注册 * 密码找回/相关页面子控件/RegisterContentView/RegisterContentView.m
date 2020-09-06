@@ -40,7 +40,7 @@
     if (self = [super init]) {
         [UIView cornerCutToCircleWithView:self
                           AndCornerRadius:8];
-        self.backgroundColor = kBlackColor;
+        self.backgroundColor = KLightGrayColor;
         [self keyboard];
     }return self;
 }
@@ -86,6 +86,8 @@
             }
         }];
         [self layoutIfNeeded];
+        [UIView cornerCutToCircleWithView:inputView.tf
+                          AndCornerRadius:inputView.tf.mj_h / 2];
     }
 
     DoorInputViewStyle_2 *inputView = DoorInputViewStyle_2.new;
@@ -114,6 +116,8 @@
     }];
     [self.inputViewMutArr addObject:inputView];
     [self layoutIfNeeded];
+    [UIView cornerCutToCircleWithView:inputView.tf
+                      AndCornerRadius:inputView.tf.mj_h / 2];
 }
 
 /*
@@ -208,10 +212,8 @@
     if (!_backToLoginBtn) {
         _backToLoginBtn = UIButton.new;
         _backToLoginBtn.titleLabel.numberOfLines = 0;
-        _backToLoginBtn.backgroundColor = COLOR_RGB(69,
-                                                    69,
-                                                    69,
-                                                    0.7);
+        _backToLoginBtn.backgroundColor = kBlackColor;
+        _backToLoginBtn.alpha = 0.7f;
         [_backToLoginBtn setTitle:@"返\n回\n登\n录"
                         forState:UIControlStateNormal];
         [_backToLoginBtn layoutButtonWithEdgeInsetsStyle:GLButtonEdgeInsetsStyleTop

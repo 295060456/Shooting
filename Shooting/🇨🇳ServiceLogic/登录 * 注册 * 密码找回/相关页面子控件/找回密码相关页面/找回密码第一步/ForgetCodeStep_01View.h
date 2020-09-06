@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)removeForgetCodeStep_01ViewWithOffsetY:(CGFloat)offsetY;
 
 -(void)actionForgetCodeStep_01ViewBlock:(MKDataBlock)forgetCodeStep_01ViewBlock;
--(void)actionForgetCodeStep_02ViewKeyboardBlock:(MKDataBlock)forgetCodeStep_01ViewKeyboardBlock;
+-(void)actionForgetCodeStep_01ViewKeyboardBlock:(MKDataBlock)forgetCodeStep_01ViewKeyboardBlock;
 
 @end
 

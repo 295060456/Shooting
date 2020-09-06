@@ -7,6 +7,7 @@
 //
 
 #import "ForgetCodeStep_01View.h"
+#import "DoorInputView.h"
 
 @interface ForgetCodeStep_01View ()
 
@@ -14,6 +15,13 @@
 
 @property(nonatomic,copy)MKDataBlock forgetCodeStep_01ViewBlock;
 @property(nonatomic,copy)MKDataBlock forgetCodeStep_01ViewKeyboardBlock;
+
+@property(nonatomic,strong)NSMutableArray <UIImage *>*headerImgMutArr;
+@property(nonatomic,strong)NSMutableArray <UIImage *>*btnSelectedImgMutArr;
+@property(nonatomic,strong)NSMutableArray <UIImage *>*btnUnselectedImgMutArr;
+@property(nonatomic,strong)NSMutableArray <NSString *>*placeHolderMutArr;
+@property(nonatomic,strong)NSMutableArray <DoorInputViewStyle_3 *> *inputViewMutArr;
+@property(nonatomic,strong)NSMutableArray <NSString *>*titleStrMutArr;
 
 @end
 
@@ -25,16 +33,59 @@
 
 -(instancetype)init{
     if (self = [super init]) {
+         self.backgroundColor = KLightGrayColor;
+        [self keyboard];
         [UIView cornerCutToCircleWithView:self
                           AndCornerRadius:8];
-        self.backgroundColor = kBlackColor;
-        [self keyboard];
     }return self;
+}
+
+-(void)drawRect:(CGRect)rect{
+    [super drawRect:rect];
+    [self makeInputView];
+}
+
+-(void)makeInputView{
+    for (int t = 0; t < self.headerImgMutArr.count; t++) {
+        DoorInputViewStyle_3 *inputView = DoorInputViewStyle_3.new;
+        inputView.titleStr = self.titleStrMutArr[t];
+        UIImageView *imgv = UIImageView.new;
+        imgv.image = self.headerImgMutArr[t];
+        inputView.inputViewWidth = 250;
+        inputView.tf.leftView = imgv;
+        inputView.tf.ZYtextFont = [UIFont systemFontOfSize:9.6
+                                                    weight:UIFontWeightRegular];
+        inputView.tf.ZYtextColor = kWhiteColor;
+        inputView.tf.ZYtintColor = kWhiteColor;
+        inputView.tf.ZYplaceholderLabelFont_1 = inputView.tf.ZYtextFont;
+        inputView.tf.ZYplaceholderLabelFont_2 = inputView.tf.ZYtextFont;
+        inputView.tf.ZYplaceholderLabelTextColor_1 = inputView.tf.ZYtextColor;
+        inputView.tf.ZYplaceholderLabelTextColor_2 = inputView.tf.ZYtextColor;
+        
+        inputView.tf.leftViewMode = UITextFieldViewModeAlways;
+        inputView.tf.placeholder = self.placeHolderMutArr[t];
+        inputView.btnSelectedIMG = self.btnSelectedImgMutArr[t];
+        inputView.btnUnSelectedIMG = self.btnUnselectedImgMutArr[t];
+        [self.inputViewMutArr addObject:inputView];
+        
+        [self addSubview:inputView];
+        [inputView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(250, 42));
+            if (t == 0) {
+                make.top.equalTo(self).offset(50);
+            }else{
+                make.bottom.equalTo(self.mas_bottom).offset(-30);
+            }
+        }];
+        [self layoutIfNeeded];
+        [UIView cornerCutToCircleWithView:inputView.tf
+                          AndCornerRadius:15];
+    }
 }
 
 -(void)keyboard{
 #warning 此处必须禁用IQKeyboardManager，因为框架的原因，弹出键盘的时候是整个VC全部向上抬起，一个是弹出的高度不对，第二个是弹出的逻辑不正确，就只是需要评论页向上同步弹出键盘高度即可。可是一旦禁用IQKeyboardManager这里就必须手动监听键盘弹出高度，再根据这个高度对评论页做二次约束
-    [IQKeyboardManager sharedManager].enable = NO;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillChangeFrameNotification:)
                                                  name:UIKeyboardWillChangeFrameNotification
@@ -115,8 +166,54 @@
     _forgetCodeStep_01ViewBlock = forgetCodeStep_01ViewBlock;
 }
 
--(void)actionForgetCodeStep_02ViewKeyboardBlock:(MKDataBlock)forgetCodeStep_01ViewKeyboardBlock{
+-(void)actionForgetCodeStep_01ViewKeyboardBlock:(MKDataBlock)forgetCodeStep_01ViewKeyboardBlock{
     _forgetCodeStep_01ViewKeyboardBlock = forgetCodeStep_01ViewKeyboardBlock;
+}
+#pragma mark —— lazyLoad
+-(NSMutableArray<UIImage *> *)headerImgMutArr{
+    if (!_headerImgMutArr) {
+        _headerImgMutArr = NSMutableArray.array;
+        [_headerImgMutArr addObject:kIMG(@"用户名称")];
+        [_headerImgMutArr addObject:kIMG(@"手机ICON")];
+    }return _headerImgMutArr;
+}
+
+-(NSMutableArray<NSString *> *)placeHolderMutArr{
+    if (!_placeHolderMutArr) {
+        _placeHolderMutArr = NSMutableArray.array;
+        [_placeHolderMutArr addObject:@"4-11位字母或数字的用户名"];
+        [_placeHolderMutArr addObject:@"6-12位字母或数字的密码"];
+    }return _placeHolderMutArr;
+}
+
+-(NSMutableArray<UIImage *> *)btnSelectedImgMutArr{
+    if (!_btnSelectedImgMutArr) {
+        _btnSelectedImgMutArr = NSMutableArray.array;
+        [_btnSelectedImgMutArr addObject:kIMG(@"空白图")];
+        [_btnSelectedImgMutArr addObject:kIMG(@"codeDecode")];
+    }return _btnSelectedImgMutArr;
+}
+
+-(NSMutableArray<UIImage *> *)btnUnselectedImgMutArr{
+    if (!_btnUnselectedImgMutArr) {
+        _btnUnselectedImgMutArr = NSMutableArray.array;
+        [_btnUnselectedImgMutArr addObject:kIMG(@"closeCircle")];
+        [_btnUnselectedImgMutArr addObject:kIMG(@"codeEncode")];
+    }return _btnUnselectedImgMutArr;
+}
+
+-(NSMutableArray<DoorInputViewStyle_3 *> *)inputViewMutArr{
+    if (!_inputViewMutArr) {
+        _inputViewMutArr = NSMutableArray.array;
+    }return _inputViewMutArr;
+}
+
+-(NSMutableArray<NSString *> *)titleStrMutArr{
+    if (!_titleStrMutArr) {
+        _titleStrMutArr = NSMutableArray.array;
+        [_titleStrMutArr addObject:@"用户名"];
+        [_titleStrMutArr addObject:@"手机号码"];
+    }return _titleStrMutArr;
 }
 
 @end

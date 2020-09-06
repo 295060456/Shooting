@@ -24,6 +24,7 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
 @property(nonatomic,strong)ForgetCodeStep_02View *step_02;
 @property(nonatomic,strong)UILabel *tipsLab;
 @property(nonatomic,strong)UIButton *nextStepBtn;//下一步
+@property(nonatomic,strong)UIButton *successBtn;
 
 @property(nonatomic,strong)id requestParams;
 @property(nonatomic,copy)MKDataBlock successBlock;
@@ -93,14 +94,6 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
     self.gk_navTitleColor = kWhiteColor;
     self.gk_navTitleFont = [UIFont systemFontOfSize:17
                                              weight:UIFontWeightBold];
-
-    self.currentFlowSerialNum = 0;
-    self.flowNum = 3;
-    self.findCodeFlowChartView.alpha = 1;
-    self.findCodeFlowChartView.currentFlowSerialNum = self.currentFlowSerialNum;//步骤从0开始
-    
-    self.tipsLab.alpha = 1;
-    self.nextStepBtn.alpha = 1;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -109,6 +102,13 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
     self.step_01.alpha = 0.7;
     IQKeyboardManager.sharedManager.enable = NO;
     [self.view bringSubviewToFront:self.gk_navigationBar];
+    self.currentFlowSerialNum = 0;
+    self.flowNum = 3;
+    self.findCodeFlowChartView.alpha = 1;
+    self.findCodeFlowChartView.currentFlowSerialNum = self.currentFlowSerialNum;//步骤从0开始
+    
+    self.tipsLab.alpha = 1;
+    self.nextStepBtn.alpha = 1;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -127,12 +127,6 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
-    if (self.currentFlowSerialNum < self.flowNum - 1) {
-        self.currentFlowSerialNum += 1;
-        [self.findCodeFlowChartView removeFromSuperview];
-        self.findCodeFlowChartView = nil;
-        self.findCodeFlowChartView.currentFlowSerialNum = self.currentFlowSerialNum;
-    }
 }
 
 #pragma mark —— LazyLoad
@@ -195,6 +189,12 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
                         forState:UIControlStateNormal];
         [[_nextStepBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
              NSLog(@"下一步");
+            if (self.currentFlowSerialNum < self.flowNum - 1) {
+                self.currentFlowSerialNum += 1;
+                [self.findCodeFlowChartView removeFromSuperview];
+                self.findCodeFlowChartView = nil;
+                self.findCodeFlowChartView.currentFlowSerialNum = self.currentFlowSerialNum;
+            }
         }];
         [UIView cornerCutToCircleWithView:_nextStepBtn
                           AndCornerRadius:16];
@@ -207,22 +207,41 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
         @weakify(self)
         [_step_01 actionForgetCodeStep_01ViewBlock:^(id data) {
             @strongify(self)
+            [self.step_02 showForgetCodeStep_02ViewWithOffsetY:0];
+            [self.step_01 removeForgetCodeStep_01ViewWithOffsetY:0];
         }];
         
-        [_step_01 actionForgetCodeStep_02ViewKeyboardBlock:^(id data) {
-            @strongify(self)
+        [_step_01 actionForgetCodeStep_01ViewKeyboardBlock:^(id data) {
+//            @strongify(self)
         }];
         [self.view addSubview:_step_01];
         _step_01.frame = CGRectMake(SCREEN_WIDTH,
                                     SCREEN_HEIGHT / 3,
                                     SCREEN_WIDTH - 100,
-                                    SCREEN_HEIGHT/ 3);
+                                    175);
     }return _step_01;
 }
 
 -(ForgetCodeStep_02View *)step_02{
     if (!_step_02) {
         _step_02 = ForgetCodeStep_02View.new;
+        @weakify(self)
+        [_step_02 actionForgetCodeStep_02ViewBlock:^(id data) {
+            @strongify(self)
+            [self.step_02 removeForgetCodeStep_02ViewWithOffsetY:0];
+            self.successBtn.alpha = 1;
+            [[self.nextStepBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+                NSLog(@"去登陆");
+            }];
+        }];
+        
+        [_step_02 actionForgetCodeStep_02ViewKeyboardBlock:^(id data) {
+//            @strongify(self)
+        }];
+        _step_02.frame = CGRectMake(SCREEN_WIDTH,
+                                    SCREEN_HEIGHT / 3,
+                                    SCREEN_WIDTH - 100,
+                                    219);
     }return _step_02;
 }
 
@@ -278,6 +297,27 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
             [self.playerManager replay];//设置循环播放
         }];
     }return _player;
+}
+
+-(UIButton *)successBtn{
+    if (!_successBtn) {
+        _successBtn = UIButton.new;
+        [_successBtn setTitle:@"密码修改成功"
+                     forState:UIControlStateNormal];
+        _successBtn.titleLabel.font = [UIFont systemFontOfSize:17
+                                                        weight:UIFontWeightLight];
+        [_successBtn setImage:kIMG(@"密码修改成功")
+                     forState:UIControlStateNormal];
+        [[_successBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            NSLog(@"密码修改成功");
+        }];
+        [self.view addSubview:_successBtn];
+        [_successBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self.view);
+        }];
+        [_successBtn layoutButtonWithEdgeInsetsStyle:GLButtonEdgeInsetsStyleTop
+                                         imageTitleSpace:8];
+    }return _successBtn;
 }
 
 @end

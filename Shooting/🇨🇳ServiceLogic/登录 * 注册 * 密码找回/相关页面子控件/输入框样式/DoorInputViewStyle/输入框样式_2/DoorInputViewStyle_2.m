@@ -22,19 +22,14 @@ UITextFieldDelegate
 
 -(instancetype)init{
     if (self = [super init]) {
-        self.backgroundColor = COLOR_RGB(39,
-                                         37,
-                                         37,
-                                         1);
+        
     }return self;
 }
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
-    [UIView cornerCutToCircleWithView:self
-                      AndCornerRadius:self.mj_h / 2];
     if (![NSString isNullString:self.titleStr]) {
-        self.titleLab.alpha = 1;
+        self.titleLab.text = self.titleStr;
     }
     self.tf.alpha = 1;
     self.imageCodeView.alpha = 1;
@@ -85,6 +80,8 @@ UITextFieldDelegate
         _tf = ZYTextField.new;
         _tf.delegate = self;
         _tf.cj_delegate = self;
+        _tf.backgroundColor = kBlackColor;
+        _tf.alpha = 0.7;
         [self addSubview:_tf];
         [_tf mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.bottom.equalTo(self);
@@ -101,6 +98,7 @@ UITextFieldDelegate
 -(ImageCodeView *)imageCodeView{
     if (!_imageCodeView) {
         _imageCodeView = ImageCodeView.new;
+        _imageCodeView.alpha = 1;
         [self addSubview:_imageCodeView];
         [_imageCodeView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.bottom.right.equalTo(self);

@@ -39,6 +39,10 @@
 		C5575ACA2504B89400A2A694 /* 验证ICON@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5575AC82504B89400A2A694 /* 验证ICON@3x.png */; };
 		C5575AD02504E1FA00A2A694 /* ForgetCodeStep_01View.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575ACF2504E1FA00A2A694 /* ForgetCodeStep_01View.m */; };
 		C5575AD32504E20C00A2A694 /* ForgetCodeStep_02View.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575AD22504E20C00A2A694 /* ForgetCodeStep_02View.m */; };
+		C5575AD62504FB8100A2A694 /* 密码修改成功@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5575AD42504FB8100A2A694 /* 密码修改成功@2x.png */; };
+		C5575AD72504FB8100A2A694 /* 密码修改成功@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5575AD52504FB8100A2A694 /* 密码修改成功@3x.png */; };
+		C5575ADA2505022600A2A694 /* 手机ICON@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5575AD82505022600A2A694 /* 手机ICON@3x.png */; };
+		C5575ADB2505022600A2A694 /* 手机ICON@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5575AD92505022600A2A694 /* 手机ICON@2x.png */; };
 		C561618B24EE4C98001CD851 /* StartOrPauseBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C561618824EE4C97001CD851 /* StartOrPauseBtn.m */; };
 		C561618C24EE4C98001CD851 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C561618924EE4C98001CD851 /* MyCell.m */; };
 		C561619724EE4CA9001CD851 /* MKUploadingVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C561619424EE4CA9001CD851 /* MKUploadingVC+VM.m */; };
@@ -409,6 +413,10 @@
 		C5575ACF2504E1FA00A2A694 /* ForgetCodeStep_01View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetCodeStep_01View.m; sourceTree = "<group>"; };
 		C5575AD12504E20C00A2A694 /* ForgetCodeStep_02View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetCodeStep_02View.h; sourceTree = "<group>"; };
 		C5575AD22504E20C00A2A694 /* ForgetCodeStep_02View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetCodeStep_02View.m; sourceTree = "<group>"; };
+		C5575AD42504FB8100A2A694 /* 密码修改成功@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "密码修改成功@2x.png"; sourceTree = "<group>"; };
+		C5575AD52504FB8100A2A694 /* 密码修改成功@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "密码修改成功@3x.png"; sourceTree = "<group>"; };
+		C5575AD82505022600A2A694 /* 手机ICON@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机ICON@3x.png"; sourceTree = "<group>"; };
+		C5575AD92505022600A2A694 /* 手机ICON@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机ICON@2x.png"; sourceTree = "<group>"; };
 		C561618724EE4C97001CD851 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
 		C561618824EE4C97001CD851 /* StartOrPauseBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartOrPauseBtn.m; sourceTree = "<group>"; };
 		C561618924EE4C98001CD851 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
@@ -1318,24 +1326,28 @@
 			isa = PBXGroup;
 			children = (
 				C589607D25010CC0002B1764 /* 找回密码流程图 */,
-				C51A0BF9250210BC00884016 /* Lock@2x.png */,
-				C51A0BF8250210BC00884016 /* Lock@3x.png */,
-				C57C22B725026E4600FAAA3F /* KKK.png */,
 				C57C22AF25026BE500FAAA3F /* 记住密码@2x.png */,
 				C57C22B225026BE500FAAA3F /* 记住密码@3x.png */,
+				C51A0BF625020E1B00884016 /* 空白图.png */,
 				C57C22B125026BE500FAAA3F /* 没有记住密码@2x.png */,
 				C57C22B025026BE500FAAA3F /* 没有记住密码@3x.png */,
-				C51A0BF625020E1B00884016 /* 空白图.png */,
-				C51A0BF325020B6F00884016 /* codeDecode@2x.png */,
-				C51A0BF225020B6F00884016 /* codeDecode@3x.png */,
-				C51A0BEA25020ADF00884016 /* codeEncode@2x.png */,
-				C51A0BEB25020ADF00884016 /* codeEncode@3x.png */,
-				C51A0BE625020A3A00884016 /* closeCircle@2x.png */,
-				C51A0BE725020A3A00884016 /* closeCircle@3x.png */,
+				C5575AD42504FB8100A2A694 /* 密码修改成功@2x.png */,
+				C5575AD52504FB8100A2A694 /* 密码修改成功@3x.png */,
+				C5575AD92505022600A2A694 /* 手机ICON@2x.png */,
+				C5575AD82505022600A2A694 /* 手机ICON@3x.png */,
 				C5575AC72504B89400A2A694 /* 验证ICON@2x.png */,
 				C5575AC82504B89400A2A694 /* 验证ICON@3x.png */,
 				C51A0BCD2501286500884016 /* 用户名称@2x.png */,
 				C51A0BCE2501286500884016 /* 用户名称@3x.png */,
+				C51A0BE625020A3A00884016 /* closeCircle@2x.png */,
+				C51A0BE725020A3A00884016 /* closeCircle@3x.png */,
+				C51A0BF325020B6F00884016 /* codeDecode@2x.png */,
+				C51A0BF225020B6F00884016 /* codeDecode@3x.png */,
+				C51A0BEA25020ADF00884016 /* codeEncode@2x.png */,
+				C51A0BEB25020ADF00884016 /* codeEncode@3x.png */,
+				C57C22B725026E4600FAAA3F /* KKK.png */,
+				C51A0BF9250210BC00884016 /* Lock@2x.png */,
+				C51A0BF8250210BC00884016 /* Lock@3x.png */,
 				C58960652500D9A6002B1764 /* MainLogo@2x.png */,
 				C58960662500D9A6002B1764 /* MainLogo@3x.png */,
 				C58960692500DAB7002B1764 /* SubLogo@2x.png */,
@@ -2807,6 +2819,7 @@
 				C51A0BD02501286500884016 /* 用户名称@3x.png in Resources */,
 				C52EE27324FF647D0033CD47 /* 倒计时 关闭状态@3x.png in Resources */,
 				C589608425010CD9002B1764 /* di_2@3x.png in Resources */,
+				C5575ADB2505022600A2A694 /* 手机ICON@2x.png in Resources */,
 				C58F01C024EA5E5E00B6D09C /* 带有按键音的按钮 in Resources */,
 				C58F047D24EBD78500B6D09C /* day_like_red@3x.png in Resources */,
 				C51A0BF425020B6F00884016 /* codeDecode@3x.png in Resources */,
@@ -2849,6 +2862,7 @@
 				C58F03AD24EA6E7600B6D09C /* MyStore@3x.png in Resources */,
 				C58F002324EA36FA00B6D09C /* LaunchScreen.storyboard in Resources */,
 				C52EE27124FF647D0033CD47 /* 倒计时 开启状态@2x.png in Resources */,
+				C5575AD62504FB8100A2A694 /* 密码修改成功@2x.png in Resources */,
 				C58F010B24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */,
 				C589606C2500DAB7002B1764 /* SubLogo@3x.png in Resources */,
 				C58F018224EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton in Resources */,
@@ -2864,6 +2878,7 @@
 				C51A0BD52502032B00884016 /* 输入框样式_3.png in Resources */,
 				C572A28024FBDEF2000A1687 /* 播放@3x.png in Resources */,
 				C57C22B425026BE500FAAA3F /* 没有记住密码@3x.png in Resources */,
+				C5575ADA2505022600A2A694 /* 手机ICON@3x.png in Resources */,
 				C58F020524EA617800B6D09C /* 分享控件的用法 in Resources */,
 				C589608725010CD9002B1764 /* di_3@3x.png in Resources */,
 				C58F03B924EA6F0700B6D09C /* green_lottie_tab_news.json in Resources */,
@@ -2880,6 +2895,7 @@
 				C58F03C024EA76C600B6D09C /* nodata.png in Resources */,
 				C572A26F24FBC5A2000A1687 /* 加号@3x.png in Resources */,
 				C59D9B0424F9045E00A74CE9 /* 闪光灯-自动@2x.png in Resources */,
+				C5575AD72504FB8100A2A694 /* 密码修改成功@3x.png in Resources */,
 				C59D9AEF24F8F08500A74CE9 /* ZZCircleProgress.bundle in Resources */,
 				C58F03CD24EA789100B6D09C /* 翻转镜头@3x.png in Resources */,
 				C58F018F24EA5CAC00B6D09C /* 专治UITableView相应链断裂 in Resources */,
