@@ -25,9 +25,10 @@
 #import "ShowAvailableFont.h"//打印全员字体
 #import "JhtBannerView.h"
 #import "ZZCircleProgress.h"
-#import "TimerManager.h"
 #import "MovieCountDown.h"
 #import "ImageCodeView.h"
+#import "TimerManager.h"
+#import "UIButton+CountDownBtn.h"
 
 #pragma mark —— 以下是自定义的
 #import "ToolMacro.h"

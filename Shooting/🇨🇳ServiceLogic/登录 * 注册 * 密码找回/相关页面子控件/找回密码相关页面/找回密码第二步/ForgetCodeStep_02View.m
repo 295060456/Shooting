@@ -6,8 +6,8 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "ForgetCodeStep_02View.h"
 #import "DoorInputView.h"
+#import "ForgetCodeStep_02View.h"
 
 @interface ForgetCodeStep_02View ()
 
@@ -20,7 +20,7 @@
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnSelectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnUnselectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*placeHolderMutArr;
-@property(nonatomic,strong)NSMutableArray <DoorInputViewStyle_3 *> *inputViewMutArr;
+@property(nonatomic,strong)NSMutableArray <DoorInputViewStyle *> *inputViewMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*titleStrMutArr;
 
 @end
@@ -89,41 +89,69 @@
 
 -(void)makeInputView{
     for (int t = 0; t < self.headerImgMutArr.count; t++) {
-        DoorInputViewStyle_3 *inputView = DoorInputViewStyle_3.new;
-        inputView.titleStr = self.titleStrMutArr[t];
-        UIImageView *imgv = UIImageView.new;
-        imgv.image = self.headerImgMutArr[t];
-        inputView.inputViewWidth = 250;
-        inputView.tf.leftView = imgv;
-        inputView.tf.ZYtextFont = [UIFont systemFontOfSize:9.6
-                                                    weight:UIFontWeightRegular];
-        inputView.tf.ZYtextColor = kWhiteColor;
-        inputView.tf.ZYtintColor = kWhiteColor;
-        inputView.tf.ZYplaceholderLabelFont_1 = inputView.tf.ZYtextFont;
-        inputView.tf.ZYplaceholderLabelFont_2 = inputView.tf.ZYtextFont;
-        inputView.tf.ZYplaceholderLabelTextColor_1 = inputView.tf.ZYtextColor;
-        inputView.tf.ZYplaceholderLabelTextColor_2 = inputView.tf.ZYtextColor;
-        
-        inputView.tf.leftViewMode = UITextFieldViewModeAlways;
-        inputView.tf.placeholder = self.placeHolderMutArr[t];
-        inputView.btnSelectedIMG = self.btnSelectedImgMutArr[t];
-        inputView.btnUnSelectedIMG = self.btnUnselectedImgMutArr[t];
-        [self.inputViewMutArr addObject:inputView];
-        
-        [self addSubview:inputView];
-        [inputView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self);
-            make.size.mas_equalTo(CGSizeMake(250, 42));
-            if (t == 0) {
+        if (t == 0) {
+            DoorInputViewStyle_1 *inputView = DoorInputViewStyle_1.new;
+            inputView.titleStr = self.titleStrMutArr[t];
+            UIImageView *imgv = UIImageView.new;
+            imgv.image = self.headerImgMutArr[t];
+            inputView.inputViewWidth = 250;
+            inputView.tf.leftView = imgv;
+            inputView.tf.ZYtextFont = [UIFont systemFontOfSize:9.6
+                                                        weight:UIFontWeightRegular];
+            inputView.tf.ZYtextColor = kWhiteColor;
+            inputView.tf.ZYtintColor = kWhiteColor;
+            inputView.tf.ZYplaceholderLabelFont_1 = inputView.tf.ZYtextFont;
+            inputView.tf.ZYplaceholderLabelFont_2 = inputView.tf.ZYtextFont;
+            inputView.tf.ZYplaceholderLabelTextColor_1 = inputView.tf.ZYtextColor;
+            inputView.tf.ZYplaceholderLabelTextColor_2 = inputView.tf.ZYtextColor;
+            
+            inputView.tf.leftViewMode = UITextFieldViewModeAlways;
+            inputView.tf.placeholder = self.placeHolderMutArr[t];
+            [self.inputViewMutArr addObject:inputView];
+            
+            [self addSubview:inputView];
+            [inputView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.equalTo(self).offset(50);
-            }else{
-                DoorInputViewStyle_3 *InputView = self.inputViewMutArr[t - 1];
+                make.centerX.equalTo(self);
+                make.size.mas_equalTo(CGSizeMake(250, 42));
+            }];
+            [self layoutIfNeeded];
+            [UIView cornerCutToCircleWithView:inputView.tf
+                              AndCornerRadius:15];
+            
+        }else{
+            DoorInputViewStyle_3 *inputView = DoorInputViewStyle_3.new;
+            inputView.titleStr = self.titleStrMutArr[t];
+            UIImageView *imgv = UIImageView.new;
+            imgv.image = self.headerImgMutArr[t];
+            inputView.inputViewWidth = 250;
+            inputView.tf.leftView = imgv;
+            inputView.tf.ZYtextFont = [UIFont systemFontOfSize:9.6
+                                                        weight:UIFontWeightRegular];
+            inputView.tf.ZYtextColor = kWhiteColor;
+            inputView.tf.ZYtintColor = kWhiteColor;
+            inputView.tf.ZYplaceholderLabelFont_1 = inputView.tf.ZYtextFont;
+            inputView.tf.ZYplaceholderLabelFont_2 = inputView.tf.ZYtextFont;
+            inputView.tf.ZYplaceholderLabelTextColor_1 = inputView.tf.ZYtextColor;
+            inputView.tf.ZYplaceholderLabelTextColor_2 = inputView.tf.ZYtextColor;
+            
+            inputView.tf.leftViewMode = UITextFieldViewModeAlways;
+            inputView.tf.placeholder = self.placeHolderMutArr[t];
+            inputView.btnSelectedIMG = self.btnSelectedImgMutArr[t];
+            inputView.btnUnSelectedIMG = self.btnUnselectedImgMutArr[t];
+            [self.inputViewMutArr addObject:inputView];
+            
+            [self addSubview:inputView];
+            [inputView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerX.equalTo(self);
+                make.size.mas_equalTo(CGSizeMake(250, 42));
+                DoorInputViewStyle_3 *InputView = (DoorInputViewStyle_3 *)self.inputViewMutArr[t - 1];
                 make.top.equalTo(InputView.mas_bottom).offset(15);
-            }
-        }];
-        [self layoutIfNeeded];
-        [UIView cornerCutToCircleWithView:inputView.tf
-                          AndCornerRadius:15];
+            }];
+            [self layoutIfNeeded];
+            [UIView cornerCutToCircleWithView:inputView.tf
+                              AndCornerRadius:15];
+        }
     }
 }
 
@@ -207,7 +235,7 @@
     }return _btnUnselectedImgMutArr;
 }
 
--(NSMutableArray<DoorInputViewStyle_3 *> *)inputViewMutArr{
+-(NSMutableArray<DoorInputViewStyle *> *)inputViewMutArr{
     if (!_inputViewMutArr) {
         _inputViewMutArr = NSMutableArray.array;
     }return _inputViewMutArr;

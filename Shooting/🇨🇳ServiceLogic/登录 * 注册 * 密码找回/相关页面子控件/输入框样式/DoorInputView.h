@@ -9,6 +9,7 @@
 #ifndef Header_h
 #define Header_h
 
+#import "DoorInputViewStyle_1.h"
 #import "DoorInputViewStyle_2.h"
 #import "DoorInputViewStyle_3.h"
 
