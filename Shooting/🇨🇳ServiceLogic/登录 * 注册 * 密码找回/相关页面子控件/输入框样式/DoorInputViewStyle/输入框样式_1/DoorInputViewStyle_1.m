@@ -97,46 +97,36 @@ UITextFieldDelegate
 
 -(UIButton *)countDownBtn{
     if (!_countDownBtn) {
-        _countDownBtn = UIButton.new;
-        _countDownBtn.titleBeginStr = @"";
-        _countDownBtn.titleColor = [UIColor blueColor];
-        _countDownBtn.bgCountDownColor = [UIColor redColor];
-        _countDownBtn.bgEndColor = KLightGrayColor;
+        _countDownBtn = [[UIButton alloc] initWithType:CountDownBtnType_countDown
+                                               runType:CountDownBtnRunType_manual
+                                      layerBorderWidth:0
+                                     layerCornerRadius:0
+                                      layerBorderColor:nil
+                                            titleColor:kWhiteColor
+                                         titleBeginStr:@"发送验证码"
+                                        titleLabelFont:[UIFont systemFontOfSize:8
+                                                                         weight:UIFontWeightRegular]];
+        _countDownBtn.titleBeginStr = @"发送验证码";
+        _countDownBtn.titleRuningStr = @"重新发送\n";
+        _countDownBtn.titleLabel.numberOfLines = 0;
+        _countDownBtn.titleEndStr = @"重新发送";
+        _countDownBtn.backgroundColor = KLightGrayColor;
+        _countDownBtn.titleColor = kWhiteColor;
+        _countDownBtn.bgCountDownColor = KLightGrayColor;//倒计时的时候此btn的背景色
+        _countDownBtn.bgEndColor = KLightGrayColor;//倒计时完全结束后的背景色
         _countDownBtn.layerCornerRadius = 6;
-        _countDownBtn.titleRuningStr = @"重新发送";
-        _countDownBtn.bgCountDownColor = KLightGrayColor;
-        _countDownBtn.bgEndColor = KLightGrayColor;
-        _countDownBtn.countDownBtnType = CountDownBtnType_countDown;
         _countDownBtn.showTimeType = ShowTimeType_SS;
-        @weakify(self)
-        [_countDownBtn actionCountDownBlock:^(id data) {
-//            @strongify(self)
-        }];
-        
-        [_countDownBtn timeFailBeginFrom:10];//
-        
         _countDownBtn.titleLabelFont = [UIFont systemFontOfSize:8
                                                          weight:UIFontWeightRegular];
-//
-//        -(void)actionCountDownBlock:(MKDataBlock)countDownBlock;//倒计时需要触发调用的方法
-//        -(void)timeFailBeginFrom:(NSInteger)timeCount;//倒计时时间次数
+        _countDownBtn.countDownBtnNewLineType = CountDownBtnNewLineType_newLine;
         
-//        @property(nonatomic,strong)NSTimerManager *nsTimerManager;
-//        @property(nonatomic,strong)NSString *titleBeginStr;
-//        @property(nonatomic,strong)NSString *titleRuningStr;//倒计时过程中显示的非时间文字
-//        @property(nonatomic,strong)NSString *titleEndStr;
-//        @property(nonatomic,strong)UIColor *titleColor;
-//        //倒计时开始前的背景色直接对此控件进行赋值 backgroundColor
-//        @property(nonatomic,strong)UIColor *bgCountDownColor;//倒计时的时候此btn的背景色
-//        @property(nonatomic,strong)UIColor *bgEndColor;//倒计时完全结束后的背景色
-//        @property(nonatomic,strong)UIColor *layerBorderColor;
-//        @property(nonatomic,strong)UIFont *titleLabelFont;
-//        @property(nonatomic,assign)CGFloat layerCornerRadius;
-//        @property(nonatomic,assign)CGFloat layerBorderWidth;
-//        @property(nonatomic,assign)ShowTimeType showTimeType;//时间显示风格
-//        @property(nonatomic,assign)long count;// 倒计时
-//        @property(nonatomic,assign)ButtonType buttonType;
-//        @property(nonatomic,copy)MKDataBlock countDownBlock;
+        [_countDownBtn timeFailBeginFrom:5];//注销这句话就是手动启动，放开这句话就是自启动
+        
+//        @weakify(self)
+        [_countDownBtn actionCountDownClickEventBlock:^(id data) {
+//            @strongify(self)
+            NSLog(@"MMP");
+        }];
         [self addSubview:_countDownBtn];
         [_countDownBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self);

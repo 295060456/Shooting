@@ -117,7 +117,7 @@
             }];
             [self layoutIfNeeded];
             [UIView cornerCutToCircleWithView:inputView.tf
-                              AndCornerRadius:15];
+                              AndCornerRadius:11];
             
         }else{
             DoorInputViewStyle_3 *inputView = DoorInputViewStyle_3.new;
