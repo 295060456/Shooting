@@ -225,6 +225,17 @@ ZFPlayerController *ZFPlayer_DoorVC;
     }return _player;
 }
 
+-(CustomZFPlayerControlView *)customPlayerControlView{
+    if (!_customPlayerControlView) {
+        _customPlayerControlView = CustomZFPlayerControlView.new;
+        @weakify(self)
+        [_customPlayerControlView actionCustomZFPlayerControlViewBlock:^(id data) {
+            @strongify(self)
+            [self.view endEditing:YES];
+        }];
+    }return _customPlayerControlView;
+}
+
 -(LogoContentView *)logoContentView{
     if (!_logoContentView) {
         _logoContentView = LogoContentView.new;
@@ -235,17 +246,6 @@ ZFPlayerController *ZFPlayer_DoorVC;
             make.centerX.equalTo(self.view);
         }];
     }return _logoContentView;
-}
-
--(CustomZFPlayerControlView *)customPlayerControlView{
-    if (!_customPlayerControlView) {
-        _customPlayerControlView = CustomZFPlayerControlView.new;
-        @weakify(self)
-        [_customPlayerControlView actionCustomZFPlayerControlViewBlock:^(id data) {
-            @strongify(self)
-            [self.view endEditing:YES];
-        }];
-    }return _customPlayerControlView;
 }
 
 @end
