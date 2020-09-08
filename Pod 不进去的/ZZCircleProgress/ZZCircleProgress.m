@@ -41,19 +41,25 @@
 }
 //初始化
 -(instancetype)initWithFrame:(CGRect)frame
-                pathBackColor:(UIColor *)pathBackColor
-                pathFillColor:(UIColor *)pathFillColor
-                   startAngle:(CGFloat)startAngle
-                  strokeWidth:(CGFloat)strokeWidth {
+               pathBackColor:(UIColor *)pathBackColor
+               pathFillColor:(UIColor *)pathFillColor
+                  startAngle:(CGFloat)startAngle
+                 strokeWidth:(CGFloat)strokeWidth
+                   cycleTime:(CGFloat)cycleTime
+                  safetyTime:(CGFloat)safetyTime{
     if (self = [super initWithFrame:frame]) {
-        [self initialization];
+        self.cycleTime = cycleTime;
+        self.safetyTime = safetyTime;
         self.pathBackColor = pathBackColor;
         self.pathFillColor = pathFillColor;
         _startAngle = ZZCircleDegreeToRadian(startAngle);
+        
+        [self initialization];
         _strokeWidth = strokeWidth;
-    }
-    return self;
+        
+    }return self;
 }
+
 //初始化数据
 -(void)initialization {
     self.backgroundColor = [UIColor clearColor];
@@ -298,7 +304,7 @@
     if (_progress<_lastProgress && _increaseFromLast == YES) {
         clockwise = NO;
     }
-    UIBezierPath *imagePath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(_realWidth/2.0, _realWidth/2.0)
+    UIBezierPath *imagePath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(_realWidth / 2.0, _realWidth / 2.0)
                                                              radius:_radius
                                                          startAngle:_increaseFromLast == YES ? (2 * M_PI - _reduceAngle) * _lastProgress + _startAngle : _startAngle
                                                            endAngle:0
@@ -309,19 +315,33 @@
 }
 
 -(UIBezierPath *)getNewBezierPath {
-    return [UIBezierPath bezierPathWithArcCenter:CGPointMake(_realWidth/2.0, _realWidth/2.0)
+    return [UIBezierPath bezierPathWithArcCenter:CGPointMake(_realWidth / 2.0, _realWidth / 2.0)
                                           radius:_radius
                                       startAngle:_startAngle
-                                        endAngle:(2*M_PI-_reduceAngle+_startAngle)
+                                        endAngle:(2 * M_PI - _reduceAngle + _startAngle)
                                        clockwise:YES];
 }
 
 -(UIBezierPath *)getPointBezierPath {
-    return [UIBezierPath bezierPathWithArcCenter:CGPointMake(_realWidth/2.0, _realWidth/2.0)
-                                          radius:_radius
-                                      startAngle:4
-                                        endAngle:4.001
-                                       clockwise:YES];
+    
+    CGFloat scaleBase = 0;
+    CGFloat startAngle = 0;
+    CGFloat endAngle = 0;
+    
+    if (self.cycleTime != 0) {
+        CGFloat offset = 0.001;
+        scaleBase = 2 * M_PI / self.cycleTime;
+        startAngle = scaleBase * self.safetyTime;
+        endAngle = startAngle + offset;
+        
+        return [UIBezierPath bezierPathWithArcCenter:CGPointMake(_realWidth / 2.0, _realWidth / 2.0)
+                                              radius:_radius
+                                          startAngle:startAngle
+                                            endAngle:endAngle
+                                           clockwise:YES];
+    }else{
+        return nil;
+    }
 }
 
 - (void)animationDidStop:(CAAnimation *)anim
@@ -342,7 +362,11 @@
 -(void)initSubviews {
     
     [self.layer addSublayer:self.backLayer];//跑道
-    [self.layer addSublayer:self.pointLayer];//点
+    
+    if (self.cycleTime != 0) {
+        [self.layer addSublayer:self.pointLayer];//点
+    }
+    
     [self.layer addSublayer:self.progressLayer];//已经走过的距离
     
     [self addSubview:self.pointImage];
@@ -356,12 +380,14 @@
     self.realWidth = MIN(ZZCircleSelfWidth, ZZCircleSelfHeight);
     self.radius = _realWidth/2.0 - _strokeWidth/2.0;
     
-    self.pointLayer.frame = CGRectMake(0,
-                                       0,
-                                       _realWidth,
-                                       _realWidth);
-    self.pointLayer.lineWidth = _strokeWidth;
-    self.pointLayer.path = [self getPointBezierPath].CGPath;
+    if (self.cycleTime != 0) {
+        self.pointLayer.frame = CGRectMake(0,
+                                           0,
+                                           _realWidth,
+                                           _realWidth);
+        self.pointLayer.lineWidth = _strokeWidth;
+        self.pointLayer.path = [self getPointBezierPath].CGPath;
+    }
     
     self.backLayer.frame = CGRectMake(0,
                                       0,
