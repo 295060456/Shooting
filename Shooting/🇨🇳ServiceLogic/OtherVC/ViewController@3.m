@@ -32,4 +32,8 @@
     self.view.backgroundColor = kRedColor;
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [UIDevice platformString];
+}
+
 @end

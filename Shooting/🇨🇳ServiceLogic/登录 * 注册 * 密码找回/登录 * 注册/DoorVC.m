@@ -201,8 +201,13 @@ ZFPlayerController *ZFPlayer_DoorVC;
         
 //        _playerManager.assetURL = [NSURL URLWithString:@"https://www.apple.com/105/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/films/feature/iphone-x-feature-tpl-cc-us-20170912_1280x720h.mp4"];
 
-        _playerManager.assetURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"niupi"
-                                                                                         ofType:@"mp4"]];
+        if ([[UIDevice platformString] containsString:@"iPhone 11"]) {
+            _playerManager.assetURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"iph_X"
+                                                                                             ofType:@"mp4"]];
+        }else{
+            _playerManager.assetURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"非iph_X"
+                                                                                             ofType:@"mp4"]];
+        }
     }return _playerManager;
 }
 

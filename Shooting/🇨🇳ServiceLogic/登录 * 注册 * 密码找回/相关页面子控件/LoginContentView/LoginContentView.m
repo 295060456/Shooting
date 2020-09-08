@@ -85,7 +85,8 @@
         [self addSubview:inputView];
         [inputView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.toRegisterBtn.mas_left).offset(-10);
-            make.size.mas_equalTo(CGSizeMake(250, 32));
+            make.height.mas_equalTo(32);
+            make.left.equalTo(self).offset(10);
             if (t == 0) {
                 make.top.equalTo(self.titleLab.mas_bottom).offset(29);
             }else{

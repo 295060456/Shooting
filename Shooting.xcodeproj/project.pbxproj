@@ -31,7 +31,6 @@
 		C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A624F38D9C0065510D /* AVFounationTools.m */; };
 		C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A924F3A1F00065510D /* GPUImageTools.m */; };
 		C55497B024F3AD990065510D /* MKGPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497AE24F3AD990065510D /* MKGPUImageView.m */; };
-		C5575AC22504AEFB00A2A694 /* niupi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C58960622500D288002B1764 /* niupi.mp4 */; };
 		C5575AC52504B62900A2A694 /* DoorInputViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575AC42504B62900A2A694 /* DoorInputViewStyle.m */; };
 		C5575AC92504B89400A2A694 /* 验证ICON@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5575AC72504B89400A2A694 /* 验证ICON@2x.png */; };
 		C5575ACA2504B89400A2A694 /* 验证ICON@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5575AC82504B89400A2A694 /* 验证ICON@3x.png */; };
@@ -345,6 +344,12 @@
 		C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */; };
 		C5E5C6242505E116001E69DA /* DoorInputViewStyle_1.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575ADD250517F300A2A694 /* DoorInputViewStyle_1.m */; };
 		C5E5C6252505E1E4001E69DA /* UIButton+CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575AE2250518AA00A2A694 /* UIButton+CountDownBtn.m */; };
+		C5E5C63625077431001E69DA /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C63325077431001E69DA /* UIView+Frame.m */; };
+		C5E5C63925077436001E69DA /* WGradientProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C63725077436001E69DA /* WGradientProgress.m */; };
+		C5E5C642250787A5001E69DA /* 非iph_X.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C641250787A5001E69DA /* 非iph_X.mp4 */; };
+		C5E5C64425078860001E69DA /* iph_X.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C64325078860001E69DA /* iph_X.mp4 */; };
+		C5E5C6492507963B001E69DA /* UIDevice+XMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C6462507963B001E69DA /* UIDevice+XMUtils.m */; };
+		C5E5C64A2507963B001E69DA /* iOS 获取手机型号、系统版本.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C6472507963B001E69DA /* iOS 获取手机型号、系统版本.png */; };
 		D1C77CE50CE1275572271736 /* Pods_ShootingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -484,7 +489,6 @@
 		C589605D2500B139002B1764 /* Door.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
 		C589605F2500B196002B1764 /* DoorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoorVC.h; sourceTree = "<group>"; };
 		C58960602500B196002B1764 /* DoorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoorVC.m; sourceTree = "<group>"; };
-		C58960622500D288002B1764 /* niupi.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = niupi.mp4; sourceTree = "<group>"; };
 		C58960652500D9A6002B1764 /* MainLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainLogo@2x.png"; sourceTree = "<group>"; };
 		C58960662500D9A6002B1764 /* MainLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainLogo@3x.png"; sourceTree = "<group>"; };
 		C58960692500DAB7002B1764 /* SubLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SubLogo@2x.png"; sourceTree = "<group>"; };
@@ -984,6 +988,17 @@
 		C5C67CA724FF5D68000A26B8 /* MovieCountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCountDown.h; sourceTree = "<group>"; };
 		C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Measure.m"; sourceTree = "<group>"; };
 		C5C67CAA24FF5D94000A26B8 /* UIView+Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Measure.h"; sourceTree = "<group>"; };
+		C5E5C63325077431001E69DA /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		C5E5C63425077431001E69DA /* GlobalCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalCommon.h; sourceTree = "<group>"; };
+		C5E5C63525077431001E69DA /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		C5E5C63725077436001E69DA /* WGradientProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGradientProgress.m; sourceTree = "<group>"; };
+		C5E5C63825077436001E69DA /* WGradientProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGradientProgress.h; sourceTree = "<group>"; };
+		C5E5C63D25077E05001E69DA /* Question */ = {isa = PBXFileReference; lastKnownFileType = text; path = Question; sourceTree = "<group>"; };
+		C5E5C641250787A5001E69DA /* 非iph_X.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "非iph_X.mp4"; sourceTree = "<group>"; };
+		C5E5C64325078860001E69DA /* iph_X.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = iph_X.mp4; sourceTree = "<group>"; };
+		C5E5C6462507963B001E69DA /* UIDevice+XMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+XMUtils.m"; sourceTree = "<group>"; };
+		C5E5C6472507963B001E69DA /* iOS 获取手机型号、系统版本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS 获取手机型号、系统版本.png"; sourceTree = "<group>"; };
+		C5E5C6482507963B001E69DA /* UIDevice+XMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+XMUtils.h"; sourceTree = "<group>"; };
 		CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shooting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1116,7 +1131,8 @@
 		C5575ABF25049FE100A2A694 /* res */ = {
 			isa = PBXGroup;
 			children = (
-				C58960622500D288002B1764 /* niupi.mp4 */,
+				C5E5C641250787A5001E69DA /* 非iph_X.mp4 */,
+				C5E5C64325078860001E69DA /* iph_X.mp4 */,
 			);
 			path = res;
 			sourceTree = "<group>";
@@ -1278,6 +1294,7 @@
 		C589604B2500AA2D002B1764 /* 登录 * 注册 * 密码找回 */ = {
 			isa = PBXGroup;
 			children = (
+				C5E5C63D25077E05001E69DA /* Question */,
 				C5575ABF25049FE100A2A694 /* res */,
 				C58960792500E8DA002B1764 /* 密码找回 */,
 				C58960782500E8CC002B1764 /* 登录 * 注册 */,
@@ -2058,6 +2075,7 @@
 		C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C5E5C64525079634001E69DA /* UIDevice+XMUtils */,
 				C55497AB24F3A3050065510D /* 视频处理工具 */,
 				C572A2A324FDFA67000A1687 /* 💰VerifyCodeButton */,
 				C59D9AB424F8EECB00A74CE9 /* 录制成功的视频进行预览播放以决定是否舍弃 */,
@@ -2458,6 +2476,7 @@
 		C58F032724EA69C800B6D09C /* 🇨🇳ServiceLogic */ = {
 			isa = PBXGroup;
 			children = (
+				C5E5C630250773FE001E69DA /* 水平进度条 */,
 				C589604C2500AB00002B1764 /* 图形验证码 */,
 				C589604B2500AA2D002B1764 /* 登录 * 注册 * 密码找回 */,
 				C55497AD24F3A3A20065510D /* OtherVC */,
@@ -2715,6 +2734,44 @@
 			path = "电影倒计时特效";
 			sourceTree = "<group>";
 		};
+		C5E5C630250773FE001E69DA /* 水平进度条 */ = {
+			isa = PBXGroup;
+			children = (
+				C5E5C6312507741F001E69DA /* WGradientProgress */,
+			);
+			path = "水平进度条";
+			sourceTree = "<group>";
+		};
+		C5E5C6312507741F001E69DA /* WGradientProgress */ = {
+			isa = PBXGroup;
+			children = (
+				C5E5C63825077436001E69DA /* WGradientProgress.h */,
+				C5E5C63725077436001E69DA /* WGradientProgress.m */,
+				C5E5C63225077429001E69DA /* Lib */,
+			);
+			path = WGradientProgress;
+			sourceTree = "<group>";
+		};
+		C5E5C63225077429001E69DA /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				C5E5C63525077431001E69DA /* UIView+Frame.h */,
+				C5E5C63325077431001E69DA /* UIView+Frame.m */,
+				C5E5C63425077431001E69DA /* GlobalCommon.h */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		C5E5C64525079634001E69DA /* UIDevice+XMUtils */ = {
+			isa = PBXGroup;
+			children = (
+				C5E5C6472507963B001E69DA /* iOS 获取手机型号、系统版本.png */,
+				C5E5C6482507963B001E69DA /* UIDevice+XMUtils.h */,
+				C5E5C6462507963B001E69DA /* UIDevice+XMUtils.m */,
+			);
+			path = "UIDevice+XMUtils";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2825,7 +2882,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5575AC22504AEFB00A2A694 /* niupi.mp4 in Resources */,
 				C589608925010CD9002B1764 /* di_1@3x.png in Resources */,
 				C572A27724FBC6E4000A1687 /* unsure@3x.png in Resources */,
 				C58960672500D9A6002B1764 /* MainLogo@2x.png in Resources */,
@@ -2861,10 +2917,12 @@
 				C589608825010CD9002B1764 /* di_3@2x.png in Resources */,
 				C58F03AB24EA6E7600B6D09C /* MyStore@2x.png in Resources */,
 				C58F03A824EA6E7600B6D09C /* Home@3x.png in Resources */,
+				C5E5C64425078860001E69DA /* iph_X.mp4 in Resources */,
 				C52EE27424FF647D0033CD47 /* 倒计时 开启状态@3x.png in Resources */,
 				C589608D25010DA4002B1764 /* di_4@3x.png in Resources */,
 				C58F03B824EA6F0700B6D09C /* green_lottie_tab_discover.json in Resources */,
 				C58F03AC24EA6E7600B6D09C /* My@3x.png in Resources */,
+				C5E5C642250787A5001E69DA /* 非iph_X.mp4 in Resources */,
 				C59D9AA724F8C79500A74CE9 /* video.gif in Resources */,
 				C58F047C24EBD78500B6D09C /* day_like@2x.png in Resources */,
 				C58F03B024EA6E7600B6D09C /* 摄像机.png in Resources */,
@@ -2911,6 +2969,7 @@
 				C58F03CD24EA789100B6D09C /* 翻转镜头@3x.png in Resources */,
 				C58F018F24EA5CAC00B6D09C /* 专治UITableView相应链断裂 in Resources */,
 				C51A0BCF2501286500884016 /* 用户名称@2x.png in Resources */,
+				C5E5C64A2507963B001E69DA /* iOS 获取手机型号、系统版本.png in Resources */,
 				C59D9B0624F9045E00A74CE9 /* 闪光灯@3x.png in Resources */,
 				C59D9B0224F9045E00A74CE9 /* 闪光灯-关闭@2x.png in Resources */,
 				C58F03AA24EA6E7600B6D09C /* My@2x.png in Resources */,
@@ -3113,6 +3172,7 @@
 				C58F019724EA5CAC00B6D09C /* ZYTextField_01.m in Sources */,
 				C58960562500B0E0002B1764 /* LogoContentView.m in Sources */,
 				C58F01A524EA5CAD00B6D09C /* BaseVC+TZLocationManager.m in Sources */,
+				C5E5C63625077431001E69DA /* UIView+Frame.m in Sources */,
 				C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */,
 				C58F00DF24EA581F00B6D09C /* NSImage+WebCache.m in Sources */,
 				C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */,
@@ -3228,6 +3288,7 @@
 				C572A27A24FBD44A000A1687 /* UIImage+Overlay.m in Sources */,
 				C58F019824EA5CAC00B6D09C /* CALayer+Transition.m in Sources */,
 				C561619E24EE4CB7001CD851 /* PhotoVC+VM.m in Sources */,
+				C5E5C6492507963B001E69DA /* UIDevice+XMUtils.m in Sources */,
 				C58F019624EA5CAC00B6D09C /* ZYTextField.m in Sources */,
 				C58F00DB24EA581F00B6D09C /* SDWebImageCodersManager.m in Sources */,
 				C58F00DD24EA581F00B6D09C /* SDWebImageCoderHelper.m in Sources */,
@@ -3309,6 +3370,7 @@
 				C58F02A024EA61C600B6D09C /* LOTMask.m in Sources */,
 				C58F02A324EA61C600B6D09C /* LOTShapePath.m in Sources */,
 				C58F018724EA5CAC00B6D09C /* UIColor+Hex.m in Sources */,
+				C5E5C63925077436001E69DA /* WGradientProgress.m in Sources */,
 				C58F01CB24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m in Sources */,
 				C55497A424F38CDB0065510D /* MKShootVC.m in Sources */,
 				C5575AD02504E1FA00A2A694 /* ForgetCodeStep_01View.m in Sources */,

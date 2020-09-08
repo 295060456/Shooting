@@ -29,6 +29,7 @@
 #import "ImageCodeView.h"
 #import "TimerManager.h"
 #import "UIButton+CountDownBtn.h"
+#import "UIDevice+XMUtils.h"
 
 #pragma mark —— 以下是自定义的
 #import "ToolMacro.h"
