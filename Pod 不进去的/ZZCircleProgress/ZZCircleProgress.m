@@ -79,8 +79,7 @@
         _backLayer.lineWidth = _strokeWidth;
         _backLayer.strokeColor = _pathBackColor.CGColor;
         _backLayer.lineCap = kCALineCapSquare;
-    }
-    return _backLayer;
+    }return _backLayer;
 }
 
 -(CAShapeLayer *)pointLayer{
@@ -100,8 +99,7 @@
         _progressLayer.lineWidth = _strokeWidth;
         _progressLayer.strokeColor = _pathFillColor.CGColor;
         _progressLayer.lineCap = kCALineCapSquare;
-    }
-    return _progressLayer;
+    }return _progressLayer;
 }
 
 -(UIImageView *)pointImage {
@@ -114,8 +112,7 @@
         _pointImage.image = [UIImage imageNamed:@"circle_point1"
                                        inBundle:resourcesBundle
                   compatibleWithTraitCollection:nil];
-    }
-    return _pointImage;
+    }return _pointImage;
 }
 
 -(ZZCountingLabel *)progressLabel {
@@ -125,8 +122,7 @@
         _progressLabel.textAlignment = NSTextAlignmentCenter;
         _progressLabel.font = [UIFont systemFontOfSize:22];
         _progressLabel.text = @"0%";
-    }
-    return _progressLabel;
+    }return _progressLabel;
 }
 #pragma Set
 -(void)setStartAngle:(CGFloat)startAngle {
