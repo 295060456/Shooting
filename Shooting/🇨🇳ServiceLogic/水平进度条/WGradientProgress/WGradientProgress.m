@@ -73,7 +73,7 @@
     }
     [self.gradLayer setColors:copyArray];
     
-//    [self simulateProgress];
+    [self simulateProgress];
 }
 
 -(void)showOnParent:(UIView *)parentView{
@@ -84,10 +84,10 @@
 
 -(void)makeTimer{
     //创建方式——1
-    //    [NSTimerManager nsTimeStart:self.nsTimerManager.nsTimer
-    //                    withRunLoop:nil];
+    [NSTimerManager nsTimeStart:self.nsTimerManager.nsTimer
+                    withRunLoop:nil];
     //创建方式——2
-    [self.nsTimerManager nsTimeStartSysAutoInRunLoop];
+//    [self.nsTimerManager nsTimeStartSysAutoInRunLoop];
 }
 
 -(void)hide{
@@ -113,28 +113,28 @@
                                  self.height);
 }
 
-//- (void)simulateProgress{
-//    if (self.progress == 0) {
-//        CGFloat increment = (arc4random() % 5) / 10.0f + 0.1;
-//        CGFloat progress  = [self progress] + increment;
-//        [self setProgress:progress];
-//    }
-//    double delayInSeconds = 2.0;
-//    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-//    @weakify(self)
-//    dispatch_after(popTime,
-//                   dispatch_get_main_queue(),
-//                   ^(void){
-//        @strongify(self)
-//        CGFloat increment = (arc4random() % 5) / 10.0f + 0.1;
-//        CGFloat progress  = self.progress + increment;
-//        NSLog(@"progress:%@", @(progress));
-//        self.progress = progress;
-//        if (progress < 1.0) {
-//            [self simulateProgress];
-//        }
-//    });
-//}
+- (void)simulateProgress{
+    if (self.progress == 0) {
+        CGFloat increment = (arc4random() % 5) / 10.0f + 0.1;
+        CGFloat progress  = [self progress] + increment;
+        [self setProgress:progress];
+    }
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    @weakify(self)
+    dispatch_after(popTime,
+                   dispatch_get_main_queue(),
+                   ^(void){
+        @strongify(self)
+        CGFloat increment = (arc4random() % 5) / 10.0f + 0.1;
+        CGFloat progress  = self.progress + increment;
+        NSLog(@"progress:%@", @(progress));
+        self.progress = progress;
+        if (progress < 1.0) {
+            [self simulateProgress];
+        }
+    });
+}
 
 #pragma mark —— lazyLoad
 -(NSTimerManager *)nsTimerManager{

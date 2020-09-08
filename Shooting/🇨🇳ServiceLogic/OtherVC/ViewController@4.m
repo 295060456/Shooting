@@ -34,7 +34,7 @@
     [super viewDidLoad];
     
     self.gradProg.alpha = 1;
-    [self simulateProgress];
+//    [self simulateProgress];
 }
 
 - (void)simulateProgress{
