@@ -80,6 +80,7 @@
 -(void)setTitleStr:(NSString *)titleStr{
     _titleStr = titleStr;
     _titleLab.text = _titleStr;
+//    [self.titleLab sizeToFit];
 }
 
 @end

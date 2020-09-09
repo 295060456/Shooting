@@ -17,7 +17,7 @@
 }
 
 @property(nonatomic,strong)WGradientProgress *gradProg;
-@property(nonatomic,strong)WGradientProgressView *__block progressLab;
+@property(nonatomic,strong)WGradientProgressView *__block progressView;
 
 @end
 
@@ -48,13 +48,14 @@
         _gradProg = WGradientProgress.new;
         _gradProg.isShowRoad = YES;
         _gradProg.isShowFence = YES;
+        _gradProg.length_timeInterval = 1;
+        
         @weakify(self)
         [_gradProg actionWGradientProgressBlock:^(NSNumber *data,
                                                   CAGradientLayer *data2) {
             @strongify(self)
-            self.progressLab.titleStr = [NSString stringWithFormat:@"%.2f",data.floatValue];
-            self.progressLab.centerX = data2.frame.size.width;
-            [self.view layoutIfNeeded];
+            self.progressView.titleStr = [NSString stringWithFormat:@"%.2f",data.floatValue];
+            self.progressView.centerX = data2.frame.size.width;
             NSLog(@"");
         }];
         
@@ -66,25 +67,25 @@
             make.bottom.equalTo(self.view.mas_bottom).offset(-100);
         }];
         [self.view layoutIfNeeded];
-        self.progressLab.centerX = 0;
+        self.progressView.centerX = 0;
         [_gradProg showOnParent:self.view];
     }return _gradProg;
 }
 
--(WGradientProgressView *)progressLab{
-    if (!_progressLab) {
-        _progressLab = WGradientProgressView.new;
-        _progressLab.titleStr = @"1234";
-        _progressLab.titleFont = [UIFont systemFontOfSize:6.4
+-(WGradientProgressView *)progressView{
+    if (!_progressView) {
+        _progressView = WGradientProgressView.new;
+        _progressView.titleStr = @"1234";
+        _progressView.titleFont = [UIFont systemFontOfSize:6.4
                                                    weight:UIFontWeightRegular];
-        _progressLab.titleColor = kWhiteColor;
-        _progressLab.img = kIMG(@"水平进度条");
-        [self.view addSubview:_progressLab];
-        [_progressLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        _progressView.titleColor = kWhiteColor;
+        _progressView.img = kIMG(@"水平进度条");
+        [self.view addSubview:_progressView];
+        [_progressView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(25, 25));
             make.bottom.equalTo(self.gradProg.mas_top);
         }];
-    }return _progressLab;
+    }return _progressView;
 }
 
 
