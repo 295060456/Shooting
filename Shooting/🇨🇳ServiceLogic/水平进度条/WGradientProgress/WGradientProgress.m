@@ -14,8 +14,8 @@
 
 @property(nonatomic,strong)CAGradientLayer *gradLayer;
 @property(nonatomic,strong)CALayer *mask;
-@property(nonatomic,strong)NSTimer *timer;
 @property(nonatomic,strong)UIView *parentView;
+@property(nonatomic,strong)NSTimerManager *nsTimerManager;
 
 @end
 
@@ -24,12 +24,12 @@
 -(instancetype)init{
     if (self = [super init]) {
         self.progress = 0;
-        [self setupTimer];
+        [self makeTimer];
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     }return self;
 }
 
-- (void)showOnParent:(UIView *)parentView{
+-(void)showOnParent:(UIView *)parentView{
     self.parentView = parentView;
     self.frame = CGRectMake(parentView.mj_x,
                             parentView.mj_y,
@@ -37,20 +37,21 @@
                             1);
     [parentView addSubview:self];
     [self initBottomLayer];
-    [self startTimer];
+    [NSTimerManager nsTimeStart:self.nsTimerManager.nsTimer
+                    withRunLoop:NSRunLoop.currentRunLoop];
+    
     [self simulateProgress];
 }
 
-- (void)hide{
-    [self pauseTimer];
+-(void)hide{
+    [NSTimerManager nsTimePause:self.nsTimerManager.nsTimer];
     if ([self superview]) {
         [self removeFromSuperview];
     }
     self.parentView = nil;
 }
 
-#pragma mark -- setter / getter
-- (void)setProgress:(CGFloat)progress{
+-(void)setProgress:(CGFloat)progress{
     if (progress < 0) {
         progress = 0;
     }
@@ -59,18 +60,19 @@
     }
     _progress = progress;
     CGFloat maskWidth = progress * self.width;
-    self.mask.frame = CGRectMake(0, 0, maskWidth, self.height);
+    self.mask.frame = CGRectMake(0,
+                                 0,
+                                 maskWidth,
+                                 self.height);
 }
 
-- (void)initBottomLayer{
+-(void)initBottomLayer{
     if (self.gradLayer == nil) {
         self.gradLayer = [CAGradientLayer layer];
         self.gradLayer.frame = self.bounds;
     }
     self.gradLayer.startPoint = CGPointMake(0, 0.5);
     self.gradLayer.endPoint = CGPointMake(1, 0.5);
-    
-    //create colors, important section
     NSMutableArray *colors = [NSMutableArray array];
     for (NSInteger deg = 0; deg <= 360; deg += 5) {
         
@@ -83,47 +85,17 @@
     }
     [self.gradLayer setColors:[NSArray arrayWithArray:colors]];
     self.mask = [CALayer layer];
-    [self.mask setFrame:CGRectMake(self.gradLayer.frame.origin.x, self.gradLayer.frame.origin.y,
-                                   self.progress * self.width, self.height)];
+    [self.mask setFrame:CGRectMake(self.gradLayer.frame.origin.x,
+                                   self.gradLayer.frame.origin.y,
+                                   self.progress * self.width,
+                                   self.height)];
     self.mask.borderColor = [[UIColor blueColor] CGColor];
     self.mask.borderWidth = 2;
     [self.gradLayer setMask:self.mask];
     [self.layer addSublayer:self.gradLayer];
 }
 
-- (void)setupTimer{
-    CGFloat interval = 0.03;
-    if (self.timer == nil) {
-         self.timer = [NSTimer timerWithTimeInterval:interval target:self
-                                            selector:@selector(timerFunc)
-                                            userInfo:nil repeats:YES];
-    }
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
-}
-
-
-- (void)startTimer{
-    //start timer
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
-    [self.timer setFireDate:[NSDate date]];
-}
-
-- (void)pauseTimer{
-    [self.timer setFireDate:[NSDate distantFuture]];
-}
-//
-- (void)timerFunc{
-    CAGradientLayer *gradLayer = self.gradLayer;
-    NSMutableArray *copyArray = [NSMutableArray arrayWithArray:[gradLayer colors]];
-    UIColor *lastColor = [copyArray lastObject];
-    [copyArray removeLastObject];
-    if (lastColor) {
-        [copyArray insertObject:lastColor atIndex:0];
-    }
-    [self.gradLayer setColors:copyArray];
-}
-
-- (void)simulateProgress{
+-(void)simulateProgress{
     if (self.progress == 0) {
         CGFloat increment = (arc4random() % 5) / 10.0f + 0.1;
         CGFloat progress  = [self progress] + increment;
@@ -144,6 +116,47 @@
             [self simulateProgress];
         }
     });
+}
+
+-(void)makeTimer{
+    //创建方式——1
+        [NSTimerManager nsTimeStart:self.nsTimerManager.nsTimer
+                        withRunLoop:nil];
+    //创建方式——2
+//    [self.nsTimerManager nsTimeStartSysAutoInRunLoop];
+}
+
+-(void)timerFunc{
+    CAGradientLayer *gradLayer = self.gradLayer;
+    NSMutableArray *copyArray = [NSMutableArray arrayWithArray:[gradLayer colors]];
+    UIColor *lastColor = [copyArray lastObject];
+    [copyArray removeLastObject];
+    if (lastColor) {
+        [copyArray insertObject:lastColor
+                        atIndex:0];
+    }
+    [self.gradLayer setColors:copyArray];
+}
+#pragma mark —— lazyLoad
+-(NSTimerManager *)nsTimerManager{
+    if (!_nsTimerManager) {
+        _nsTimerManager = NSTimerManager.new;
+        _nsTimerManager.timeInterval = 0.03;
+        _nsTimerManager.timerStyle = TimerStyle_clockwise;
+        @weakify(self)
+        [_nsTimerManager actionNSTimerManagerRunningBlock:^(id data) {
+            NSLog(@"你好");
+            @strongify(self)
+            if ([data isKindOfClass:NSTimerManager.class]) {
+//                NSTimerManager *timerManager = (NSTimerManager *)data;
+//                timerManager.anticlockwiseTime;
+                [self timerFunc];
+            }
+        }];
+        [_nsTimerManager actionNSTimerManagerFinishBlock:^(id data) {
+            NSLog(@"我死球了");
+        }];
+    }return _nsTimerManager;
 }
 
 @end
