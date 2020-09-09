@@ -32,29 +32,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = kRedColor;
     
     self.gradProg.alpha = 1;
-//    [self simulateProgress];
-}
 
-- (void)simulateProgress{
-    if (self.gradProg.progress == 0) {
-        CGFloat increment = (arc4random() % 5) / 10.0f + 0.1;
-        CGFloat progress  = [self.gradProg progress] + increment;
-        [self.gradProg setProgress:progress];
-    }
-    double delayInSeconds = 2.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        
-        CGFloat increment = (arc4random() % 5) / 10.0f + 0.1;
-        CGFloat progress  = [self.gradProg progress] + increment;
-        NSLog(@"progress:%@", @(progress));
-        [self.gradProg setProgress:progress];
-        if (progress < 1.0) {
-            [self simulateProgress];
-        }
-    });
 }
 
 -(WGradientProgress *)gradProg{
@@ -68,9 +49,10 @@
             make.bottom.equalTo(self.view.mas_bottom).offset(-100);
         }];
         [self.view layoutIfNeeded];
-        [_gradProg showOnParent:self.view];
+         [_gradProg showOnParent:self.view];
     }return _gradProg;
 }
+
 
 
 @end

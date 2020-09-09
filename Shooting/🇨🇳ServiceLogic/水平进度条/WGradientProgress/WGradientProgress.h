@@ -12,7 +12,8 @@
 
 @property(nonatomic,assign)CGFloat progress;
 
--(void)showOnParent:(UIView *)parentView;
--(void)hide;
+- (void)showOnParent:(UIView *)parentView;
+
+- (void)hide;
 
 @end
