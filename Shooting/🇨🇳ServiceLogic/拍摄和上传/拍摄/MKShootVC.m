@@ -114,14 +114,14 @@
     [self hideNavLine];
     
     [[self.backBtnCategory rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        [self alertControllerStyle:SYS_AlertController
-                  showActionSheetTitle:nil
-                               message:nil
-                       isSeparateStyle:YES
-                           btnTitleArr:@[@"重新拍摄",@"退出",@"取消"]
-                        alertBtnAction:@[@"reShoot",@"exit",@"reShoot"]
-                                sender:nil
-                          alertVCBlock:^(id data) {
+        [self alertControllerStyle:YX_AlertController
+              showActionSheetTitle:nil
+                           message:nil
+                   isSeparateStyle:YES
+                       btnTitleArr:@[@"重新拍摄",@"退出",@"取消"]
+                    alertBtnAction:@[@"reShoot",@"exit",@"reShoot"]
+                            sender:nil
+                      alertVCBlock:^(id data) {
             //DIY
         }];
     }];
