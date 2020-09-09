@@ -344,7 +344,6 @@
 		C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */; };
 		C5E5C6242505E116001E69DA /* DoorInputViewStyle_1.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575ADD250517F300A2A694 /* DoorInputViewStyle_1.m */; };
 		C5E5C6252505E1E4001E69DA /* UIButton+CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575AE2250518AA00A2A694 /* UIButton+CountDownBtn.m */; };
-		C5E5C63625077431001E69DA /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C63325077431001E69DA /* UIView+Frame.m */; };
 		C5E5C63925077436001E69DA /* WGradientProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C63725077436001E69DA /* WGradientProgress.m */; };
 		C5E5C642250787A5001E69DA /* 非iph_X.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C641250787A5001E69DA /* 非iph_X.mp4 */; };
 		C5E5C64425078860001E69DA /* iph_X.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C64325078860001E69DA /* iph_X.mp4 */; };
@@ -988,9 +987,6 @@
 		C5C67CA724FF5D68000A26B8 /* MovieCountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCountDown.h; sourceTree = "<group>"; };
 		C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Measure.m"; sourceTree = "<group>"; };
 		C5C67CAA24FF5D94000A26B8 /* UIView+Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Measure.h"; sourceTree = "<group>"; };
-		C5E5C63325077431001E69DA /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
-		C5E5C63425077431001E69DA /* GlobalCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalCommon.h; sourceTree = "<group>"; };
-		C5E5C63525077431001E69DA /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		C5E5C63725077436001E69DA /* WGradientProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGradientProgress.m; sourceTree = "<group>"; };
 		C5E5C63825077436001E69DA /* WGradientProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGradientProgress.h; sourceTree = "<group>"; };
 		C5E5C63D25077E05001E69DA /* Question */ = {isa = PBXFileReference; lastKnownFileType = text; path = Question; sourceTree = "<group>"; };
@@ -2737,29 +2733,10 @@
 		C5E5C630250773FE001E69DA /* 水平进度条 */ = {
 			isa = PBXGroup;
 			children = (
-				C5E5C6312507741F001E69DA /* WGradientProgress */,
-			);
-			path = "水平进度条";
-			sourceTree = "<group>";
-		};
-		C5E5C6312507741F001E69DA /* WGradientProgress */ = {
-			isa = PBXGroup;
-			children = (
 				C5E5C63825077436001E69DA /* WGradientProgress.h */,
 				C5E5C63725077436001E69DA /* WGradientProgress.m */,
-				C5E5C63225077429001E69DA /* Lib */,
 			);
-			path = WGradientProgress;
-			sourceTree = "<group>";
-		};
-		C5E5C63225077429001E69DA /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				C5E5C63525077431001E69DA /* UIView+Frame.h */,
-				C5E5C63325077431001E69DA /* UIView+Frame.m */,
-				C5E5C63425077431001E69DA /* GlobalCommon.h */,
-			);
-			path = Lib;
+			path = "水平进度条";
 			sourceTree = "<group>";
 		};
 		C5E5C64525079634001E69DA /* UIDevice+XMUtils */ = {
@@ -3172,7 +3149,6 @@
 				C58F019724EA5CAC00B6D09C /* ZYTextField_01.m in Sources */,
 				C58960562500B0E0002B1764 /* LogoContentView.m in Sources */,
 				C58F01A524EA5CAD00B6D09C /* BaseVC+TZLocationManager.m in Sources */,
-				C5E5C63625077431001E69DA /* UIView+Frame.m in Sources */,
 				C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */,
 				C58F00DF24EA581F00B6D09C /* NSImage+WebCache.m in Sources */,
 				C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */,

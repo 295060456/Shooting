@@ -7,8 +7,6 @@
 //
 
 #import "WGradientProgress.h"
-#import "UIView+Frame.h"
-#import "GlobalCommon.h"
 
 @interface WGradientProgress ()
 
