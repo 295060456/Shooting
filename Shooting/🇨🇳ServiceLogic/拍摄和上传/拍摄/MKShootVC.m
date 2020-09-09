@@ -29,6 +29,7 @@
 @property(nonatomic,strong)CustomerAVPlayerView *AVPlayerView;
 @property(nonatomic,strong)MovieCountDown *movieCountDown;
 @property(nonatomic,strong)WGradientProgress *__block gradProg;
+@property(nonatomic,strong)WGradientProgressView *progressView;
 
 @property(nonatomic,assign)CGFloat safetyTime;//小于等于这个时间点的录制的视频不允许被保存，而是应该被遗弃
 @property(nonatomic,assign)CGFloat __block time;
@@ -145,6 +146,7 @@
     [self.gpuImageTools LIVE];
     self.recordBtn.alpha = 1;
     self.gradProg.alpha = 1;
+    self.progressView.alpha = 1;
     self.bannerView.alpha = 1;
     self.indexView.alpha = 1;
     [self.view bringSubviewToFront:self.gk_navigationBar];
@@ -636,7 +638,7 @@
     if (!_deleteFilmBtn) {
         _deleteFilmBtn = UIButton.new;
         _deleteFilmBtn.alpha = 0;
-        [_deleteFilmBtn setImage:kIMG(@"删除")
+        [_deleteFilmBtn setImage:kIMG(@"删除视频")
                         forState:UIControlStateNormal];
         [[_deleteFilmBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             NSLog(@"删除作品？");
@@ -654,8 +656,8 @@
         [self.view addSubview:_deleteFilmBtn];
         [_deleteFilmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.recordBtn);
-            make.size.mas_equalTo(CGSizeMake(SCALING_RATIO(30), SCALING_RATIO(20)));
-            make.left.equalTo(self.recordBtn.mas_right).offset(SCALING_RATIO(10));
+            make.size.mas_equalTo(CGSizeMake(SCALING_RATIO(36), SCALING_RATIO(36)));
+            make.right.equalTo(self.recordBtn.mas_left).offset(SCALING_RATIO(-32));
         }];
     }return _deleteFilmBtn;
 }
@@ -664,7 +666,7 @@
     if (!_sureFilmBtn) {
         _sureFilmBtn = UIButton.new;
         _sureFilmBtn.alpha = 0;
-        [_sureFilmBtn setImage:kIMG(@"sure")
+        [_sureFilmBtn setImage:kIMG(@"保存视频")
                         forState:UIControlStateNormal];
         [[_sureFilmBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             NSLog(@"结束录制 —— 这个作品我要了");
@@ -685,8 +687,8 @@
         [self.view addSubview:_sureFilmBtn];
         [_sureFilmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.recordBtn);
-            make.size.mas_equalTo(CGSizeMake(SCALING_RATIO(30), SCALING_RATIO(20)));
-            make.left.equalTo(self.deleteFilmBtn.mas_right).offset(SCALING_RATIO(10));
+            make.size.mas_equalTo(CGSizeMake(SCALING_RATIO(36), SCALING_RATIO(36)));
+            make.left.equalTo(self.recordBtn.mas_right).offset(SCALING_RATIO(32));
         }];
     }return _sureFilmBtn;
 }
@@ -810,6 +812,21 @@
         [self.view layoutIfNeeded];
         [_gradProg showOnParent];
     }return _gradProg;
+}
+
+-(WGradientProgressView *)progressView{
+    if (!_progressView) {
+        _progressView = WGradientProgressView.new;
+        _progressView.titleStr = @"30s";
+        _progressView.titleFont = [UIFont systemFontOfSize:6.4
+                                                   weight:UIFontWeightRegular];
+        [self.view addSubview:_progressView];
+        [_progressView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(25, 25));
+            make.bottom.equalTo(self.gradProg.mas_top);
+            make.left.mas_equalTo(self.safetyTime * SCREEN_WIDTH / self.time - 25 / 2);
+        }];
+    }return _progressView;
 }
 
 @end

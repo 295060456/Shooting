@@ -351,6 +351,10 @@
 		C5E5C64A2507963B001E69DA /* iOS 获取手机型号、系统版本.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C6472507963B001E69DA /* iOS 获取手机型号、系统版本.png */; };
 		C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C6692508BEFB001E69DA /* 水平进度条.png */; };
 		C5E5C66D2508C486001E69DA /* WGradientProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C66C2508C486001E69DA /* WGradientProgressView.m */; };
+		C5E5C67225091081001E69DA /* 保存视频@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C66E25091080001E69DA /* 保存视频@3x.png */; };
+		C5E5C67325091081001E69DA /* 删除视频@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C66F25091081001E69DA /* 删除视频@2x.png */; };
+		C5E5C67425091081001E69DA /* 删除视频@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C67025091081001E69DA /* 删除视频@3x.png */; };
+		C5E5C67525091081001E69DA /* 保存视频@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C67125091081001E69DA /* 保存视频@2x.png */; };
 		D1C77CE50CE1275572271736 /* Pods_ShootingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -1000,6 +1004,10 @@
 		C5E5C6692508BEFB001E69DA /* 水平进度条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水平进度条.png"; sourceTree = "<group>"; };
 		C5E5C66B2508C486001E69DA /* WGradientProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGradientProgressView.h; sourceTree = "<group>"; };
 		C5E5C66C2508C486001E69DA /* WGradientProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGradientProgressView.m; sourceTree = "<group>"; };
+		C5E5C66E25091080001E69DA /* 保存视频@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "保存视频@3x.png"; sourceTree = "<group>"; };
+		C5E5C66F25091081001E69DA /* 删除视频@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "删除视频@2x.png"; sourceTree = "<group>"; };
+		C5E5C67025091081001E69DA /* 删除视频@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "删除视频@3x.png"; sourceTree = "<group>"; };
+		C5E5C67125091081001E69DA /* 保存视频@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "保存视频@2x.png"; sourceTree = "<group>"; };
 		CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shooting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -2659,6 +2667,10 @@
 			isa = PBXGroup;
 			children = (
 				C59D9AFA24F9044A00A74CE9 /* 闪光灯 */,
+				C5E5C67125091081001E69DA /* 保存视频@2x.png */,
+				C5E5C66E25091080001E69DA /* 保存视频@3x.png */,
+				C5E5C66F25091081001E69DA /* 删除视频@2x.png */,
+				C5E5C67025091081001E69DA /* 删除视频@3x.png */,
 				C52EE26E24FF647C0033CD47 /* 倒计时 关闭状态@2x.png */,
 				C52EE26F24FF647D0033CD47 /* 倒计时 关闭状态@3x.png */,
 				C52EE26D24FF647C0033CD47 /* 倒计时 开启状态@2x.png */,
@@ -2923,9 +2935,11 @@
 				C58F018224EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton in Resources */,
 				C57C22B825026E4600FAAA3F /* KKK.png in Resources */,
 				C5575AC92504B89400A2A694 /* 验证ICON@2x.png in Resources */,
+				C5E5C67425091081001E69DA /* 删除视频@3x.png in Resources */,
 				C59D9B1C24F9083200A74CE9 /* sure@2x.png in Resources */,
 				C589606B2500DAB7002B1764 /* SubLogo@2x.png in Resources */,
 				C58F03AF24EA6E7600B6D09C /* Home@2x.png in Resources */,
+				C5E5C67525091081001E69DA /* 保存视频@2x.png in Resources */,
 				C58F03C824EA77BB00B6D09C /* back_white.png in Resources */,
 				C58F010C24EA584B00B6D09C /* 调试时候添加日志时使用,上线需要去掉 in Resources */,
 				C572A26E24FBC5A2000A1687 /* 加号@2x.png in Resources */,
@@ -2964,11 +2978,13 @@
 				C58F048124EBD78500B6D09C /* spark_red@3x.png in Resources */,
 				C572A27C24FBDD86000A1687 /* Settings.bundle in Resources */,
 				C58F00EF24EA581F00B6D09C /* Pod里面的Bug in Resources */,
+				C5E5C67225091081001E69DA /* 保存视频@3x.png in Resources */,
 				C58F002024EA36FA00B6D09C /* Assets.xcassets in Resources */,
 				C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */,
 				C58F03AE24EA6E7600B6D09C /* ShoppingCart@2x.png in Resources */,
 				C589608525010CD9002B1764 /* di_1@2x.png in Resources */,
 				C51A0BEC25020ADF00884016 /* codeEncode@2x.png in Resources */,
+				C5E5C67325091081001E69DA /* 删除视频@2x.png in Resources */,
 				C57C22B525026BE500FAAA3F /* 没有记住密码@2x.png in Resources */,
 				C59D9B1B24F9083200A74CE9 /* 删除@2x.png in Resources */,
 				C58F00D924EA581F00B6D09C /* 手动集成 SDWebImage_WebP in Resources */,
