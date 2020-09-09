@@ -35,7 +35,7 @@
     self.view.backgroundColor = kRedColor;
     
     self.gradProg.alpha = 1;
-
+    [self.gradProg setTransformRadians:0.8];
 }
 
 -(WGradientProgress *)gradProg{

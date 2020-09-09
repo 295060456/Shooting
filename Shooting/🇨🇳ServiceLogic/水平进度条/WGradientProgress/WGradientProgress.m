@@ -16,6 +16,7 @@
 @property(nonatomic,strong)CALayer *mask;
 @property(nonatomic,strong)UIView *parentView;
 @property(nonatomic,strong)NSTimerManager *nsTimerManager;
+@property(nonatomic,strong)NSMutableArray *colors;
 
 @end
 
@@ -23,10 +24,14 @@
 
 -(instancetype)init{
     if (self = [super init]) {
-        self.progress = 0;
         [self makeTimer];
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     }return self;
+}
+///旋转 以适应不同方向的直线型进度条
+-(void)setTransformRadians:(CGFloat)transformRadians{
+    [UIView setTransform:transformRadians
+                 forView:self];
 }
 
 -(void)showOnParent:(UIView *)parentView{
@@ -36,7 +41,7 @@
                             parentView.mj_w,
                             1);
     [parentView addSubview:self];
-    [self initBottomLayer];
+     self.gradLayer.hidden = NO;
     [NSTimerManager nsTimeStart:self.nsTimerManager.nsTimer
                     withRunLoop:NSRunLoop.currentRunLoop];
     
@@ -64,35 +69,6 @@
                                  0,
                                  maskWidth,
                                  self.height);
-}
-
--(void)initBottomLayer{
-    if (self.gradLayer == nil) {
-        self.gradLayer = [CAGradientLayer layer];
-        self.gradLayer.frame = self.bounds;
-    }
-    self.gradLayer.startPoint = CGPointMake(0, 0.5);
-    self.gradLayer.endPoint = CGPointMake(1, 0.5);
-    NSMutableArray *colors = [NSMutableArray array];
-    for (NSInteger deg = 0; deg <= 360; deg += 5) {
-        
-        UIColor *color;
-        color = [UIColor colorWithHue:1.0 * deg / 360.0
-                           saturation:1.0
-                           brightness:1.0
-                                alpha:1.0];
-        [colors addObject:(id)[color CGColor]];
-    }
-    [self.gradLayer setColors:[NSArray arrayWithArray:colors]];
-    self.mask = [CALayer layer];
-    [self.mask setFrame:CGRectMake(self.gradLayer.frame.origin.x,
-                                   self.gradLayer.frame.origin.y,
-                                   self.progress * self.width,
-                                   self.height)];
-    self.mask.borderColor = [[UIColor blueColor] CGColor];
-    self.mask.borderWidth = 2;
-    [self.gradLayer setMask:self.mask];
-    [self.layer addSublayer:self.gradLayer];
 }
 
 -(void)simulateProgress{
@@ -157,6 +133,46 @@
             NSLog(@"我死球了");
         }];
     }return _nsTimerManager;
+}
+
+-(NSMutableArray *)colors{
+    if (!_colors) {
+        _colors = NSMutableArray.array;
+        for (NSInteger deg = 0; deg <= 360; deg += 5) {
+            UIColor *color;
+            color = [UIColor colorWithHue:1.0 * deg / 360.0
+                               saturation:1.0
+                               brightness:1.0
+                                    alpha:1.0];
+            [_colors addObject:(id)[color
+                                    CGColor]];
+        }
+    }return _colors;;
+}
+
+-(CAGradientLayer *)gradLayer{
+    if (!_gradLayer) {
+        _gradLayer = CAGradientLayer.layer;
+        _gradLayer.frame = self.bounds;
+        _gradLayer.startPoint = CGPointMake(0, 0.5);
+        _gradLayer.endPoint = CGPointMake(1, 0.5);
+        [_gradLayer setColors:[NSArray arrayWithArray:self.colors]];
+        [self.layer addSublayer:_gradLayer];
+        [_gradLayer setMask:self.mask];
+    }return _gradLayer;
+}
+//
+-(CALayer *)mask{
+    if (!_mask) {
+        _mask = CALayer.layer;
+        [_mask setFrame:CGRectMake(self.gradLayer.frame.origin.x,
+                                   self.gradLayer.frame.origin.y,
+                                   self.progress * self.width,
+                                   self.height)];
+        _mask.borderColor = [[UIColor blueColor] CGColor];
+        _mask.borderWidth = 2;
+        
+    }return _mask;
 }
 
 @end
