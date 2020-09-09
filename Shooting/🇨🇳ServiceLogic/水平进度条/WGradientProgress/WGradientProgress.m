@@ -73,13 +73,17 @@
     }
     [self.gradLayer setColors:copyArray];
     
-    [self simulateProgress];
+    [self.gradLayer setNeedsDisplay];
+    [self.gradLayer displayIfNeeded];
+    
+    
 }
 
 -(void)showOnParent:(UIView *)parentView{
     self.parentView = parentView;
     [self initBottomLayer];
     [self makeTimer];
+    [self simulateProgress];
 }
 
 -(void)makeTimer{
