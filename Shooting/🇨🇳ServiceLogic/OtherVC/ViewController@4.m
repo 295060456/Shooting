@@ -35,21 +35,24 @@
     self.view.backgroundColor = kRedColor;
     
     self.gradProg.alpha = 1;
-    [self.gradProg setTransformRadians:0.8];
+//    [self.gradProg setTransformRadians:1];
+
 }
 
 -(WGradientProgress *)gradProg{
     if (!_gradProg) {
         _gradProg = WGradientProgress.new;
+        _gradProg.isShowRoad = YES;
+        _gradProg.isShowFence = YES;
         [self.view addSubview:_gradProg];
         [_gradProg mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
             make.width.mas_equalTo(SCREEN_WIDTH);
-            make.height.mas_equalTo(1);
+            make.height.mas_equalTo(5);
             make.bottom.equalTo(self.view.mas_bottom).offset(-100);
         }];
         [self.view layoutIfNeeded];
-         [_gradProg showOnParent:self.view];
+        [_gradProg showOnParent:self.view];
     }return _gradProg;
 }
 
