@@ -349,6 +349,8 @@
 		C5E5C64425078860001E69DA /* iph_X.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C64325078860001E69DA /* iph_X.mp4 */; };
 		C5E5C6492507963B001E69DA /* UIDevice+XMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C6462507963B001E69DA /* UIDevice+XMUtils.m */; };
 		C5E5C64A2507963B001E69DA /* iOS 获取手机型号、系统版本.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C6472507963B001E69DA /* iOS 获取手机型号、系统版本.png */; };
+		C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C6692508BEFB001E69DA /* 水平进度条.png */; };
+		C5E5C66D2508C486001E69DA /* WGradientProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C66C2508C486001E69DA /* WGradientProgressView.m */; };
 		D1C77CE50CE1275572271736 /* Pods_ShootingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -995,6 +997,9 @@
 		C5E5C6462507963B001E69DA /* UIDevice+XMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+XMUtils.m"; sourceTree = "<group>"; };
 		C5E5C6472507963B001E69DA /* iOS 获取手机型号、系统版本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS 获取手机型号、系统版本.png"; sourceTree = "<group>"; };
 		C5E5C6482507963B001E69DA /* UIDevice+XMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+XMUtils.h"; sourceTree = "<group>"; };
+		C5E5C6692508BEFB001E69DA /* 水平进度条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水平进度条.png"; sourceTree = "<group>"; };
+		C5E5C66B2508C486001E69DA /* WGradientProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGradientProgressView.h; sourceTree = "<group>"; };
+		C5E5C66C2508C486001E69DA /* WGradientProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGradientProgressView.m; sourceTree = "<group>"; };
 		CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shooting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -2733,8 +2738,11 @@
 		C5E5C630250773FE001E69DA /* 水平进度条 */ = {
 			isa = PBXGroup;
 			children = (
+				C5E5C6692508BEFB001E69DA /* 水平进度条.png */,
 				C5E5C63825077436001E69DA /* WGradientProgress.h */,
 				C5E5C63725077436001E69DA /* WGradientProgress.m */,
+				C5E5C66B2508C486001E69DA /* WGradientProgressView.h */,
+				C5E5C66C2508C486001E69DA /* WGradientProgressView.m */,
 			);
 			path = "水平进度条";
 			sourceTree = "<group>";
@@ -2931,6 +2939,7 @@
 				C58F03B724EA6F0700B6D09C /* green_lottie_tab_mine.json in Resources */,
 				C58F00CF24EA581F00B6D09C /* GKNavigationBar.bundle in Resources */,
 				C58F00E824EA581F00B6D09C /* BRPickerView.bundle in Resources */,
+				C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */,
 				C51A0BF525020B6F00884016 /* codeDecode@2x.png in Resources */,
 				C51A0BED25020ADF00884016 /* codeEncode@3x.png in Resources */,
 				C58F01C124EA5E5E00B6D09C /* Sound.wav in Resources */,
@@ -3237,6 +3246,7 @@
 				C5A46C0A24EFB6E900158D1E /* LZBTabBar.m in Sources */,
 				C58F01BF24EA5E5E00B6D09C /* PlaySound.m in Sources */,
 				C58F018524EA5CAC00B6D09C /* UIView+SuspendView.m in Sources */,
+				C5E5C66D2508C486001E69DA /* WGradientProgressView.m in Sources */,
 				C57C22BB2502717C00FAAA3F /* UIView+Gradient.m in Sources */,
 				C58F029224EA61C600B6D09C /* LOTPathAnimator.m in Sources */,
 				C58F02D624EA62B500B6D09C /* SuspendView.m in Sources */,

@@ -12,10 +12,11 @@
 
 @property(nonatomic,strong)CALayer *roadLayer;//跑道 即将运行的轨迹
 @property(nonatomic,strong)CALayer *fenceLayer;//栅栏
-@property(nonatomic,strong)CAGradientLayer *gradLayer;//通过改变layer的宽度来实现进度 运动员
+@property(nonatomic,strong)CAGradientLayer *__block gradLayer;//通过改变layer的宽度来实现进度 运动员
 @property(nonatomic,strong)NSTimerManager *nsTimerManager_color;//主管线条颜色的翻滚
 @property(nonatomic,strong)NSTimerManager *nsTimerManager_length;//主管线条长度的递增
 @property(nonatomic,strong)NSMutableArray *colors;
+@property(nonatomic,copy)TwoDataBlock WGradientProgressBlock;
 
 @end
 
@@ -23,6 +24,7 @@
 
 -(instancetype)init{
     if (self = [super init]) {
+        self.backgroundColor = KBrownColor;
         [self makeTimer];
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     }return self;
@@ -31,6 +33,10 @@
 -(void)setTransformRadians:(CGFloat)transformRadians{
     [UIView setTransform:transformRadians
                  forView:self];
+}
+
+-(void)actionWGradientProgressBlock:(TwoDataBlock)WGradientProgressBlock{
+    _WGradientProgressBlock = WGradientProgressBlock;
 }
 
 -(void)showOnParent:(UIView *)parentView{
@@ -164,7 +170,14 @@
             if ([data isKindOfClass:NSTimerManager.class]) {
 //                NSTimerManager *timerManager = (NSTimerManager *)data;
 //                timerManager.anticlockwiseTime;
-                [self simulateProgress];
+                
+                if (self.progress < 1) {
+                    [self simulateProgress];
+                    
+                    if (self.WGradientProgressBlock) {
+                        self.WGradientProgressBlock(@(self.progress),self.gradLayer);
+                    }
+                }
             }
         }];
         [_nsTimerManager_length actionNSTimerManagerFinishBlock:^(id data) {
