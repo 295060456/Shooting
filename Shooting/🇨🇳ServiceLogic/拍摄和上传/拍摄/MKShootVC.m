@@ -28,7 +28,7 @@
 @property(nonatomic,strong)JhtBannerView *bannerView;
 @property(nonatomic,strong)CustomerAVPlayerView *AVPlayerView;
 @property(nonatomic,strong)MovieCountDown *movieCountDown;
-@property(nonatomic,strong)WGradientProgress *gradProg;
+@property(nonatomic,strong)WGradientProgress *__block gradProg;
 
 @property(nonatomic,assign)CGFloat safetyTime;//小于等于这个时间点的录制的视频不允许被保存，而是应该被遗弃
 @property(nonatomic,assign)CGFloat __block time;
@@ -121,8 +121,8 @@
                         alertBtnAction:@[@"reShoot",@"exit",@"reShoot"]
                                 sender:nil
                           alertVCBlock:^(id data) {
-                //DIY
-            }];
+            //DIY
+        }];
     }];
 
     [self.view addSubview:self.gpuImageTools.GPUImageView];
@@ -178,8 +178,10 @@
     self.recordBtn.hidden = result;
     self.indexView.hidden = result;
 }
-
--(void)reShoot{}
+///重新拍摄
+-(void)reShoot{
+    
+}
 ///确认删除
 -(void)sure{
     
@@ -195,6 +197,24 @@
     [self delTmpRes];
     
     [self.gradProg reset];
+}
+
+-(void)开始录制{
+    [self.gpuImageTools vedioShoottingOn];
+    self.deleteFilmBtn.alpha = 0;
+    self.sureFilmBtn.alpha = 0;
+    self.previewBtn.alpha = 0;
+    [self.recordBtn vedioShoottingOn];
+    [self.gradProg start];
+}
+
+-(void)继续录制{
+    [self.gpuImageTools vedioShoottingContinue];
+    self.deleteFilmBtn.alpha = 0;
+    self.sureFilmBtn.alpha = 0;
+    self.previewBtn.alpha = 0;
+    [self.recordBtn vedioShoottingContinue];
+    [self.gradProg resume];
 }
 ///功能性的 删除tmp文件夹下的文件
 -(void)delTmpRes{
@@ -358,24 +378,6 @@
             [self.gpuImageTools vedioShoottingEnd];
         }];
     }return _recordBtn;
-}
-
--(void)开始录制{
-    [self.gpuImageTools vedioShoottingOn];
-    self.deleteFilmBtn.alpha = 0;
-    self.sureFilmBtn.alpha = 0;
-    self.previewBtn.alpha = 0;
-    [self.recordBtn vedioShoottingOn];
-    [self.gradProg start];
-}
-
--(void)继续录制{
-    [self.gpuImageTools vedioShoottingContinue];
-    self.deleteFilmBtn.alpha = 0;
-    self.sureFilmBtn.alpha = 0;
-    self.previewBtn.alpha = 0;
-    [self.recordBtn vedioShoottingContinue];
-    [self.gradProg resume];
 }
 
 -(GPUImageTools *)gpuImageTools{
@@ -602,6 +604,9 @@
                 self.recordBtn.time = self.time;
                 self.recordBtn.progressView.cycleTime = self.time;
                 self.recordBtn.progressView.safetyTime = self.safetyTime;
+                self.gradProg = nil;
+                self.gradProg.alpha = 1;
+//                self.gradProg.fenceLayer_x = self.safetyTime * SCREEN_WIDTH / self.time;
                 NSLog(@"self.time = %f",self.time);
             }
         }];
@@ -784,6 +789,9 @@
         _gradProg.isShowRoad = YES;
         _gradProg.isShowFence = YES;
         _gradProg.length_timeInterval = 1;
+        _gradProg.fenceLayerColor = kWhiteColor;
+        _gradProg.increment = 1 / self.time;
+        _gradProg.fenceLayer_x = self.safetyTime * SCREEN_WIDTH / self.time;
         
 //        @weakify(self)
         [_gradProg actionWGradientProgressBlock:^(NSNumber *data,
