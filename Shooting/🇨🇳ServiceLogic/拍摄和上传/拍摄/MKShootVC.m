@@ -28,6 +28,7 @@
 @property(nonatomic,strong)JhtBannerView *bannerView;
 @property(nonatomic,strong)CustomerAVPlayerView *AVPlayerView;
 @property(nonatomic,strong)MovieCountDown *movieCountDown;
+@property(nonatomic,strong)WGradientProgress *gradProg;
 
 @property(nonatomic,assign)CGFloat safetyTime;//小于等于这个时间点的录制的视频不允许被保存，而是应该被遗弃
 @property(nonatomic,assign)CGFloat __block time;
@@ -143,6 +144,7 @@
     [super viewDidAppear:animated];
     [self.gpuImageTools LIVE];
     self.recordBtn.alpha = 1;
+    self.gradProg.alpha = 1;
     self.bannerView.alpha = 1;
     self.indexView.alpha = 1;
     [self.view bringSubviewToFront:self.gk_navigationBar];
@@ -178,7 +180,7 @@
 }
 
 -(void)reShoot{}
-
+///确认删除
 -(void)sure{
     
     self.deleteFilmBtn.alpha = 0;
@@ -191,6 +193,8 @@
     [MBProgressHUD wj_showPlainText:@"开始录制"
                                view:getMainWindow()];
     [self delTmpRes];
+    
+    [self.gradProg reset];
 }
 ///功能性的 删除tmp文件夹下的文件
 -(void)delTmpRes{
@@ -202,7 +206,7 @@
                                    view:getMainWindow()];
     }
 }
-
+///继续录制
 -(void)shoottingContinue{
     [self.recordBtn tapGRUI:YES];
     [self.gpuImageTools vedioShoottingContinue];
@@ -210,6 +214,7 @@
     self.deleteFilmBtn.alpha = 0;
     self.sureFilmBtn.alpha = 0;
     self.previewBtn.alpha = 0;
+    [self.gradProg resume];
 }
 
 -(void)exit{
@@ -330,6 +335,7 @@
                         [self.gpuImageTools vedioShoottingSuspend];
                         self.deleteFilmBtn.alpha = 1;
                         self.sureFilmBtn.alpha = 1;
+                        [self.gradProg pause];
                     }break;
                     case ShottingStatus_continue:{//继续录制
                         if (self.countDownBtn.selected) {
@@ -340,6 +346,7 @@
                     }break;
     //                    case ShottingStatus_off:{//取消录制
     //                        [self.gpuImageTools vedioShoottingOff];
+//                        [self.gradProg reset];
     //                    }break;
                     default:
                         break;
@@ -359,6 +366,7 @@
     self.sureFilmBtn.alpha = 0;
     self.previewBtn.alpha = 0;
     [self.recordBtn vedioShoottingOn];
+    [self.gradProg start];
 }
 
 -(void)继续录制{
@@ -367,6 +375,7 @@
     self.sureFilmBtn.alpha = 0;
     self.previewBtn.alpha = 0;
     [self.recordBtn vedioShoottingContinue];
+    [self.gradProg resume];
 }
 
 -(GPUImageTools *)gpuImageTools{
@@ -566,7 +575,8 @@
 -(JhtBannerView *)bannerView{
     if (!_bannerView) {
         _bannerView = [[JhtBannerView alloc] initWithFrame:CGRectMake([NSObject measureSubview:SCREEN_WIDTH * 2 / 3 superview:SCREEN_WIDTH],
-                                                                      SCREEN_HEIGHT - SCALING_RATIO(98),
+//                                                                      SCREEN_HEIGHT - SCALING_RATIO(98),
+                                                                      self.gradProg.mj_y + self.gradProg.mj_h,
                                                                       SCREEN_WIDTH * 2 / 3,
                                                                       SCALING_RATIO(40))];
         
@@ -766,6 +776,32 @@
             [self 开始录制];
         }];
     }return _movieCountDown;
+}
+
+-(WGradientProgress *)gradProg{
+    if (!_gradProg) {
+        _gradProg = WGradientProgress.new;
+        _gradProg.isShowRoad = YES;
+        _gradProg.isShowFence = YES;
+        _gradProg.length_timeInterval = 1;
+        
+//        @weakify(self)
+        [_gradProg actionWGradientProgressBlock:^(NSNumber *data,
+                                                  CAGradientLayer *data2) {
+//            @strongify(self)
+//            NSLog(@"");
+        }];
+        
+        [self.view addSubview:_gradProg];
+        [_gradProg mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.view);
+            make.width.mas_equalTo(SCREEN_WIDTH);
+            make.height.mas_equalTo(5);
+            make.top.equalTo(self.recordBtn.mas_bottom).offset(10);
+        }];
+        [self.view layoutIfNeeded];
+        [_gradProg showOnParent];
+    }return _gradProg;
 }
 
 @end

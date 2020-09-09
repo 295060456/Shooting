@@ -13,7 +13,7 @@
 #import "UIView+Measure.h"
 
 @interface ViewController_4 (){
-    
+    BOOL d;
 }
 
 @property(nonatomic,strong)WGradientProgress *gradProg;
@@ -36,16 +36,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = kRedColor;
+    self.view.backgroundColor = kRedColor;
     
     self.gradProg.alpha = 1;
 //    [self.gradProg setTransformRadians:1];
+    [self.gradProg start];//启动定时器
+}
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches
+          withEvent:(UIEvent *)event{
+    d = !d;
+    if (d) {
+        [self.gradProg pause];
+    }else{
+//        [self.gradProg resume];
+        [self.gradProg reset];
+    }
 }
 
 -(WGradientProgress *)gradProg{
     if (!_gradProg) {
         _gradProg = WGradientProgress.new;
+        
         _gradProg.isShowRoad = YES;
         _gradProg.isShowFence = YES;
         _gradProg.length_timeInterval = 1;
@@ -55,8 +67,17 @@
                                                   CAGradientLayer *data2) {
             @strongify(self)
             self.progressView.titleStr = [NSString stringWithFormat:@"%.2f",data.floatValue];
-            self.progressView.centerX = data2.frame.size.width;
-            NSLog(@"");
+            
+            NSLog(@"SSS = %f",data2.frame.size.width);
+            
+            [self.progressView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.size.mas_equalTo(CGSizeMake(25, 25));
+                make.bottom.equalTo(self.gradProg.mas_top);
+                make.left.mas_equalTo(data2.frame.size.width + 25);
+            }];
+            
+//            self.progressView.centerX = data2.frame.size.width;
+//            NSLog(@"");
         }];
         
         [self.view addSubview:_gradProg];
@@ -68,7 +89,8 @@
         }];
         [self.view layoutIfNeeded];
         self.progressView.centerX = 0;
-        [_gradProg showOnParent:self.view];
+        [_gradProg showOnParent];
+//        [_gradProg start];//启动定时器
     }return _gradProg;
 }
 
@@ -84,6 +106,7 @@
         [_progressView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(25, 25));
             make.bottom.equalTo(self.gradProg.mas_top);
+            make.left.mas_equalTo(- (25 / 2));
         }];
     }return _progressView;
 }
