@@ -123,6 +123,7 @@
                             sender:nil
                       alertVCBlock:^(id data) {
             //DIY
+            NSLog(@"");
         }];
     }];
 
@@ -401,6 +402,7 @@
                                   alertBtnAction:@[@"pushToSysConfig"]
                                     alertVCBlock:^(id data) {
                           //DIY
+                          NSLog(@"");
                       }];
                   };
 
@@ -643,14 +645,29 @@
         [[_deleteFilmBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             NSLog(@"删除作品？");
             [self.gpuImageTools vedioShoottingSuspend];
-            [self alertControllerStyle:SYS_AlertController
+            [self alertControllerStyle:YX_AlertController
                     showAlertViewTitle:@"删除作品？"
                                message:nil
                        isSeparateStyle:NO
                            btnTitleArr:@[@"确认",@"继续录制"]
                         alertBtnAction:@[@"sure",@"shoottingContinue"]
                           alertVCBlock:^(id data) {
-                //DIY
+                if ([data isKindOfClass:YXAlertController.class]) {
+                    YXAlertController *yxAlertController = (YXAlertController *)data;
+                    yxAlertController.layout.doneActionTitleColor = COLOR_HEX(0x1F242F, 0.8);
+                    yxAlertController.layout.cancelActionBackgroundColor = COLOR_HEX(0x1F242F, 0.8);
+                    yxAlertController.layout.doneActionBackgroundColor = COLOR_HEX(0x1F242F, 0.8);
+                    yxAlertController.layout.lineColor = COLOR_HEX(0x1F242F, 0.8);
+                    yxAlertController.layout.messageFont = [UIFont systemFontOfSize:14
+                                                                             weight:UIFontWeightMedium];
+                    yxAlertController.layout.cancelActionTitleFont = [UIFont systemFontOfSize:14
+                                                                                       weight:UIFontWeightRegular];
+                    yxAlertController.layout.doneActionTitleFont = [UIFont systemFontOfSize:14
+                                                                                     weight:UIFontWeightRegular];
+                    yxAlertController.layout.topViewBackgroundColor = COLOR_HEX(0x1F242F, 0.8);
+                    yxAlertController.layout.titleColor = kWhiteColor;
+                    [yxAlertController layoutSettings];
+                }
             }];
         }];
         [self.view addSubview:_deleteFilmBtn];
@@ -727,6 +744,7 @@
                             alertBtnAction:@[@"OK"]
                               alertVCBlock:^(id data) {
                     //DIY
+                    NSLog(@"");
                 }];
             }];
             
