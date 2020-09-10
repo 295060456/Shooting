@@ -127,7 +127,7 @@ UITextViewDelegate
 }
 
 -(void)OK{}
-
+///选择相册文件
 -(void)choosePicBtnClickEvent:(UIButton *)sender{
     self.imagePickerVC = Nil;
     [NSObject feedbackGenerator];

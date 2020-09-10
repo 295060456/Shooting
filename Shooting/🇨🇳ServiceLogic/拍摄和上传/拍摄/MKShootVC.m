@@ -18,6 +18,7 @@
 @interface MKShootVC ()
 
 #pragma mark —— UI
+@property(nonatomic,strong)UIButton *backBtn;
 @property(nonatomic,strong)UIButton *overturnBtn;//镜头翻转
 @property(nonatomic,strong)UIButton *flashLightBtn;//闪光灯
 @property(nonatomic,strong)UIButton *countDownBtn;//开始录制的时候是否允许有倒计时;默认无
@@ -106,27 +107,13 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:kIMG(@"MKShootVC")];
     
-    self.gk_navLeftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.backBtnCategory];
+    self.gk_navLeftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.backBtn];
     self.gk_navRightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.flashLightBtn],
                                        [[UIBarButtonItem alloc] initWithCustomView:self.overturnBtn],
                                        [[UIBarButtonItem alloc] initWithCustomView:self.countDownBtn]];
     self.gk_navTitle = @"";
     [self hideNavLine];
     
-    [[self.backBtnCategory rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        [self alertControllerStyle:YX_AlertController
-              showActionSheetTitle:nil
-                           message:nil
-                   isSeparateStyle:YES
-                       btnTitleArr:@[@"重新拍摄",@"退出",@"取消"]
-                    alertBtnAction:@[@"reShoot",@"exit",@"reShoot"]
-                            sender:nil
-                      alertVCBlock:^(id data) {
-            //DIY
-            NSLog(@"");
-        }];
-    }];
-
     [self.view addSubview:self.gpuImageTools.GPUImageView];
 }
 
@@ -846,5 +833,33 @@
         }];
     }return _progressView;
 }
+
+-(UIButton *)backBtn{
+    if (!_backBtn) {
+        _backBtn = UIButton.new;
+        [_backBtn layoutButtonWithEdgeInsetsStyle:GLButtonEdgeInsetsStyleLeft
+                                  imageTitleSpace:8];
+        [_backBtn setTitleColor:kWhiteColor
+                       forState:UIControlStateNormal];
+        [_backBtn setTitle:@"返回"
+                  forState:UIControlStateNormal];
+        [_backBtn setImage:kIMG(@"back_white")
+                         forState:UIControlStateNormal];
+        [[_backBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            [self alertControllerStyle:SYS_AlertController
+                  showActionSheetTitle:nil
+                               message:nil
+                       isSeparateStyle:YES
+                           btnTitleArr:@[@"重新拍摄",@"退出",@"取消"]
+                        alertBtnAction:@[@"reShoot",@"exit",@"reShoot"]
+                                sender:nil
+                          alertVCBlock:^(id data) {
+                //DIY
+                NSLog(@"");
+            }];
+        }];
+    }return _backBtn;
+}
+
 
 @end
