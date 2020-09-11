@@ -30,7 +30,7 @@
 #import "JPImageresizerView.h"
 #import "GPUImage.h"
 #import "SZTextView.h"
-#import "AWRichText.h"
+//#import "AWRichText.h"
 #import <YXAlertController.h>
 #import "PPBadgeView.h"
 #import "XHLaunchAd.h"
