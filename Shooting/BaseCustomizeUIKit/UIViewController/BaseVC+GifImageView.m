@@ -7,6 +7,7 @@
 //
 
 #import "BaseVC+GifImageView.h"
+#import "SDWebImageManager.h"
 #import <objc/runtime.h>
 
 @implementation BaseVC (GifImageView)

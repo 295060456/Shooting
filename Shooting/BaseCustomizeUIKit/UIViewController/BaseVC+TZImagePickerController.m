@@ -8,7 +8,8 @@
 
 #import "BaseVC+TZImagePickerController.h"
 #import "BaseVC+TZImagePickerControllerDelegate.h"
-#import "BaseVC+AlertController.h"
+#import "BaseVC+SYSAlertController.h"
+#import "BaseVC+SPAlertController.h"
 #import "BaseVC+TZLocationManager.h"
 #import <objc/runtime.h>
 
@@ -78,12 +79,12 @@ static char *BaseVC_TZImagePickerController_asset = "BaseVC_TZImagePickerControl
             return self.imagePickerVC;
         }else{
             NSLog(@"相册不可用:%lu",(unsigned long)status);
-            [self showAlertViewTitle:@"获取相册权限"
-                             message:nil
-                     isSeparateStyle:YES
-                         btnTitleArr:@[@"去获取"]
-                      alertBtnAction:@[@"pushToSysConfig"]
-                        alertVCBlock:^(id data) {
+            [self showSYSAlertViewTitle:@"获取相册权限"
+                                message:nil
+                        isSeparateStyle:YES
+                            btnTitleArr:@[@"去获取"]
+                         alertBtnAction:@[@"pushToSysConfig"]
+                           alertVCBlock:^(id data) {
                 //DIY
             }];
             return nil;
@@ -109,14 +110,13 @@ static char *BaseVC_TZImagePickerController_asset = "BaseVC_TZImagePickerControl
             }
         }else{
             NSLog(@"摄像头不可用:%lu",(unsigned long)status);
-            [self showAlertViewTitle:@"获取摄像头权限"
-                             message:nil
-                     isSeparateStyle:YES
-                         btnTitleArr:@[@"去获取"]
-                      alertBtnAction:@[@"pushToSysConfig"]
-                        alertVCBlock:^(id data) {
+            [self showSYSAlertViewTitle:@"获取摄像头权限"
+                                message:nil
+                        isSeparateStyle:YES
+                            btnTitleArr:@[@"去获取"]
+                         alertBtnAction:@[@"pushToSysConfig"]
+                           alertVCBlock:^(id data) {
                 //DIY
-                
             }];
         }return nil;
     }];

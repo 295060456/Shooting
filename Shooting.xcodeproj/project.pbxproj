@@ -169,7 +169,7 @@
 		C58F019C24EA5CAD00B6D09C /* BaseVC+GifImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F015824EA5CAC00B6D09C /* BaseVC+GifImageView.m */; };
 		C58F019D24EA5CAD00B6D09C /* BaseVC+BRPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F015924EA5CAC00B6D09C /* BaseVC+BRPickerView.m */; };
 		C58F019E24EA5CAD00B6D09C /* BaseVC+TZImagePickerControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F015A24EA5CAC00B6D09C /* BaseVC+TZImagePickerControllerDelegate.m */; };
-		C58F019F24EA5CAD00B6D09C /* BaseVC+AlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F015D24EA5CAC00B6D09C /* BaseVC+AlertController.m */; };
+		C58F019F24EA5CAD00B6D09C /* BaseVC+SYSAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F015D24EA5CAC00B6D09C /* BaseVC+SYSAlertController.m */; };
 		C58F01A024EA5CAD00B6D09C /* BaseVC+BackBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F015E24EA5CAC00B6D09C /* BaseVC+BackBtn.m */; };
 		C58F01A124EA5CAD00B6D09C /* BaseVC+BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F015F24EA5CAC00B6D09C /* BaseVC+BWShareView.m */; };
 		C58F01A224EA5CAD00B6D09C /* BaseVC+JXCategoryListContentViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F016024EA5CAC00B6D09C /* BaseVC+JXCategoryListContentViewDelegate.m */; };
@@ -332,6 +332,8 @@
 		C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFF24EFB6E200158D1E /* LZBTabBarVC.m */; };
 		C5A46C0A24EFB6E900158D1E /* LZBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0424EFB6E800158D1E /* LZBTabBar.m */; };
 		C5A46C0C24EFB6E900158D1E /* LZBTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */; };
+		C5AA4873250B5E68009F583F /* BaseVC+SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA4872250B5E68009F583F /* BaseVC+SPAlertController.m */; };
+		C5AA48ED250BB847009F583F /* UIViewController+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA48EB250BB847009F583F /* UIViewController+Shake.m */; };
 		C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */; };
 		C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9B24FF5D33000A26B8 /* GCD_TimerManager.m */; };
 		C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9D24FF5D3B000A26B8 /* Nanosecond_TimerManager.m */; };
@@ -684,7 +686,7 @@
 		C58F015A24EA5CAC00B6D09C /* BaseVC+TZImagePickerControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZImagePickerControllerDelegate.m"; sourceTree = "<group>"; };
 		C58F015B24EA5CAC00B6D09C /* BaseVC+TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+TZLocationManager.h"; sourceTree = "<group>"; };
 		C58F015C24EA5CAC00B6D09C /* BaseVC+OpenURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+OpenURL.h"; sourceTree = "<group>"; };
-		C58F015D24EA5CAC00B6D09C /* BaseVC+AlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+AlertController.m"; sourceTree = "<group>"; };
+		C58F015D24EA5CAC00B6D09C /* BaseVC+SYSAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+SYSAlertController.m"; sourceTree = "<group>"; };
 		C58F015E24EA5CAC00B6D09C /* BaseVC+BackBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+BackBtn.m"; sourceTree = "<group>"; };
 		C58F015F24EA5CAC00B6D09C /* BaseVC+BWShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+BWShareView.m"; sourceTree = "<group>"; };
 		C58F016024EA5CAC00B6D09C /* BaseVC+JXCategoryListContentViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+JXCategoryListContentViewDelegate.m"; sourceTree = "<group>"; };
@@ -698,7 +700,7 @@
 		C58F016824EA5CAC00B6D09C /* BaseVC+BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+BRPickerView.h"; sourceTree = "<group>"; };
 		C58F016924EA5CAC00B6D09C /* BaseVC+BWShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+BWShareView.h"; sourceTree = "<group>"; };
 		C58F016A24EA5CAC00B6D09C /* BaseVC+BackBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+BackBtn.h"; sourceTree = "<group>"; };
-		C58F016B24EA5CAC00B6D09C /* BaseVC+AlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+AlertController.h"; sourceTree = "<group>"; };
+		C58F016B24EA5CAC00B6D09C /* BaseVC+SYSAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+SYSAlertController.h"; sourceTree = "<group>"; };
 		C58F016C24EA5CAC00B6D09C /* BaseVC+OpenURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+OpenURL.m"; sourceTree = "<group>"; };
 		C58F017324EA5CAC00B6D09C /* ViewForHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewForHeader.m; sourceTree = "<group>"; };
 		C58F017424EA5CAC00B6D09C /* ViewForFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewForFooter.m; sourceTree = "<group>"; };
@@ -977,6 +979,10 @@
 		C5A46C0524EFB6E800158D1E /* LZBTabBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarDelegate.h; sourceTree = "<group>"; };
 		C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBarItem.m; sourceTree = "<group>"; };
 		C5A46C0924EFB6E900158D1E /* LZBTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarItem.h; sourceTree = "<group>"; };
+		C5AA4871250B5E68009F583F /* BaseVC+SPAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaseVC+SPAlertController.h"; sourceTree = "<group>"; };
+		C5AA4872250B5E68009F583F /* BaseVC+SPAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+SPAlertController.m"; sourceTree = "<group>"; };
+		C5AA48EB250BB847009F583F /* UIViewController+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Shake.m"; sourceTree = "<group>"; };
+		C5AA48EC250BB847009F583F /* UIViewController+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Shake.h"; sourceTree = "<group>"; };
 		C5C67C4324FE382C000A26B8 /* ViewController@1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController@1.h"; sourceTree = "<group>"; };
 		C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CADisplayLink_TimerManager.m; sourceTree = "<group>"; };
 		C5C67C9824FF5D28000A26B8 /* CADisplayLink_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADisplayLink_TimerManager.h; sourceTree = "<group>"; };
@@ -2008,6 +2014,8 @@
 				C5AA4870250B59F3009F583F /* Alert */,
 				C58F015724EA5CAC00B6D09C /* BaseVC.h */,
 				C58F016324EA5CAC00B6D09C /* BaseVC.m */,
+				C5AA48EC250BB847009F583F /* UIViewController+Shake.h */,
+				C5AA48EB250BB847009F583F /* UIViewController+Shake.m */,
 				C58F016124EA5CAC00B6D09C /* BaseVC+AFNReachability.h */,
 				C58F015424EA5CAC00B6D09C /* BaseVC+AFNReachability.m */,
 				C58F016824EA5CAC00B6D09C /* BaseVC+BRPickerView.h */,
@@ -2701,8 +2709,10 @@
 		C5AA4870250B59F3009F583F /* Alert */ = {
 			isa = PBXGroup;
 			children = (
-				C58F016B24EA5CAC00B6D09C /* BaseVC+AlertController.h */,
-				C58F015D24EA5CAC00B6D09C /* BaseVC+AlertController.m */,
+				C58F016B24EA5CAC00B6D09C /* BaseVC+SYSAlertController.h */,
+				C58F015D24EA5CAC00B6D09C /* BaseVC+SYSAlertController.m */,
+				C5AA4871250B5E68009F583F /* BaseVC+SPAlertController.h */,
+				C5AA4872250B5E68009F583F /* BaseVC+SPAlertController.m */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -3306,7 +3316,7 @@
 				C5E5C6242505E116001E69DA /* DoorInputViewStyle_1.m in Sources */,
 				C58F02B524EA61C600B6D09C /* LOTShapeRectangle.m in Sources */,
 				C58F00CC24EA581F00B6D09C /* GKPopAnimatedTransition.m in Sources */,
-				C58F019F24EA5CAD00B6D09C /* BaseVC+AlertController.m in Sources */,
+				C58F019F24EA5CAD00B6D09C /* BaseVC+SYSAlertController.m in Sources */,
 				C58F02DE24EA62E600B6D09C /* HistoryDataListTBVCell.m in Sources */,
 				C58960612500B196002B1764 /* DoorVC.m in Sources */,
 				C58F00E024EA581F00B6D09C /* SDWebImageGIFCoder.m in Sources */,
@@ -3354,6 +3364,7 @@
 				C58F01A924EA5CAD00B6D09C /* ViewForHeader.m in Sources */,
 				C58F02B624EA61C600B6D09C /* LOTKeyframe.m in Sources */,
 				C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */,
+				C5AA4873250B5E68009F583F /* BaseVC+SPAlertController.m in Sources */,
 				C55497B024F3AD990065510D /* MKGPUImageView.m in Sources */,
 				C58F01A024EA5CAD00B6D09C /* BaseVC+BackBtn.m in Sources */,
 				C58F018A24EA5CAC00B6D09C /* LMHWaterFallLayout.m in Sources */,
@@ -3398,6 +3409,7 @@
 				C58F019D24EA5CAD00B6D09C /* BaseVC+BRPickerView.m in Sources */,
 				C58F00E624EA581F00B6D09C /* NSDate+BRPickerView.m in Sources */,
 				C561618C24EE4C98001CD851 /* MyCell.m in Sources */,
+				C5AA48ED250BB847009F583F /* UIViewController+Shake.m in Sources */,
 				C58F02A024EA61C600B6D09C /* LOTMask.m in Sources */,
 				C58F02A324EA61C600B6D09C /* LOTShapePath.m in Sources */,
 				C58F018724EA5CAC00B6D09C /* UIColor+Hex.m in Sources */,

@@ -6,10 +6,10 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "BaseVC+AlertController.h"
+#import "BaseVC+SYSAlertController.h"
 #import <objc/runtime.h>
 
-@implementation BaseVC (AlertController)
+@implementation BaseVC (SYSAlertController)
 
 ///屏幕正中央 isSeparateStyle如果为YES 那么有实质性进展的键位在右侧，否则在左侧
 -(void)showAlertViewTitle:(nullable NSString *)title
