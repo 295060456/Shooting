@@ -14,11 +14,6 @@ typedef enum : NSUInteger {
     ComingStyle_PRESENT
 } ComingStyle;
 
-typedef enum : NSUInteger {
-    SYS_AlertController = 0,//UIAlertController
-    YX_AlertController//Pod
-} AlertControllerStyle;
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseVC : UIViewController

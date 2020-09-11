@@ -2005,12 +2005,11 @@
 		C58F015224EA5CAC00B6D09C /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C5AA4870250B59F3009F583F /* Alert */,
 				C58F015724EA5CAC00B6D09C /* BaseVC.h */,
 				C58F016324EA5CAC00B6D09C /* BaseVC.m */,
 				C58F016124EA5CAC00B6D09C /* BaseVC+AFNReachability.h */,
 				C58F015424EA5CAC00B6D09C /* BaseVC+AFNReachability.m */,
-				C58F016B24EA5CAC00B6D09C /* BaseVC+AlertController.h */,
-				C58F015D24EA5CAC00B6D09C /* BaseVC+AlertController.m */,
 				C58F016824EA5CAC00B6D09C /* BaseVC+BRPickerView.h */,
 				C58F015924EA5CAC00B6D09C /* BaseVC+BRPickerView.m */,
 				C58F016924EA5CAC00B6D09C /* BaseVC+BWShareView.h */,
@@ -2697,6 +2696,15 @@
 				C59D9B1924F9083200A74CE9 /* 删除@3x.png */,
 			);
 			path = "拍摄";
+			sourceTree = "<group>";
+		};
+		C5AA4870250B59F3009F583F /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				C58F016B24EA5CAC00B6D09C /* BaseVC+AlertController.h */,
+				C58F015D24EA5CAC00B6D09C /* BaseVC+AlertController.m */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		C5C67C9224FF5CFC000A26B8 /* TimerManager */ = {
