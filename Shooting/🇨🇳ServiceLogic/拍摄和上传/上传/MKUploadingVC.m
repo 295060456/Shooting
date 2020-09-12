@@ -166,6 +166,7 @@ UITextViewDelegate
                                                 isSeparateStyle:NO
                                                     btnTitleArr:@[@"确认"]
                                                  alertBtnAction:@[@"sure"]
+                                                       targetVC:self
                                                    alertVCBlock:^(id data) {
                                     //DIY
                                 }];

@@ -51,6 +51,7 @@
 #import "NSObject+Measure.h"
 #import "NSObject+SYSAlertController.h"
 #import "NSObject+SPAlertController.h"
+#import "NSObject+Shake.h"
 
 #import "UIControl+XY.h"
 #import "UITableViewCell+WhiteArrows.h"

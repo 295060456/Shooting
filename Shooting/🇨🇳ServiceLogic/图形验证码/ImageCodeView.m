@@ -20,6 +20,8 @@
 
 @implementation ImageCodeView
 
+@synthesize CodeStr = _CodeStr;//不加这句会报错
+
 - (void)dealloc {
     NSLog(@"Running self.class = %@;NSStringFromSelector(_cmd) = '%@';__FUNCTION__ = %s", self.class, NSStringFromSelector(_cmd),__FUNCTION__);
 }
@@ -38,22 +40,6 @@
 - (void)setupUI{
     self.backgroundColor = ARC_COLOR;
     self.changeCodeTap.enabled = YES;
-    [self getStrCode];
-}
-///随机生成验证码字符串
--(void)getStrCode{
-    self.backgroundColor = ARC_COLOR;
-    NSMutableString *tmpStr = [[NSMutableString alloc] initWithCapacity:5];
-    for (int i = 0; i < CODE_LENGTH; i++) {
-        NSInteger index = arc4random() % (self.CodeArr.count-1);
-        [tmpStr appendString:[self.CodeArr objectAtIndex:index]];
-    }
-    self.CodeStr = [NSString stringWithFormat:@"%@",tmpStr];
-}
-///刷新验证码
--(void)changeCode:(UITapGestureRecognizer *)sender{
-    [self getStrCode];
-    [self setNeedsDisplay];
 }
 
 -(void)drawRect:(CGRect)rect {
@@ -75,7 +61,7 @@
             withAttributes:@{NSFontAttributeName:self.font,
                              NSForegroundColorAttributeName:self.color}];
     }
-    
+
     //干扰线
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, 1.0);
@@ -90,7 +76,41 @@
         CGContextStrokePath(context);
     }
 }
+///随机生成验证码字符串
+-(void)getStrCode{
+    self.backgroundColor = ARC_COLOR;
+    NSMutableString *tmpStr = [[NSMutableString alloc] initWithCapacity:5];
+    for (int i = 0; i < CODE_LENGTH; i++) {
+        NSInteger index = arc4random() % (self.CodeArr.count - 1);
+        [tmpStr appendString:[self.CodeArr objectAtIndex:index]];
+    }
+    _CodeStr = [NSString stringWithFormat:@"%@",tmpStr];
+}
+///刷新验证码
+-(void)changeCode:(UITapGestureRecognizer *)sender{
+    @weakify(self)
+    [NSObject getAuthCode_networking:^(id data) {
+        @strongify(self)
+        if ([data isKindOfClass:NSString.class]) {
+            NSString *str = (NSString *)data;
+            self.CodeStr = str;
+            NSLog(@"我是验证码：%@",self.CodeStr);
+            [self setNeedsDisplay];
+        }
+    }];
+}
+
+-(void)setCodeStr:(NSString *)CodeStr{
+    _CodeStr = CodeStr;
+    [self setNeedsDisplay];
+}
 #pragma mark —— lazyLoad
+-(NSString *)CodeStr{
+    if (!_CodeStr) {
+        [self getStrCode];
+    }return _CodeStr;
+}
+
 -(NSArray *)CodeArr{
     if (!_CodeArr) {
         _CodeArr = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"a",@"b",@"c",@"d",@"e",@"f",@"g",@"h",@"i",@"j",@"k",@"l",@"m",@"n",@"o",@"p",@"q",@"r",@"s",@"t",@"u",@"v",@"w",@"x",@"y",@"z"];
