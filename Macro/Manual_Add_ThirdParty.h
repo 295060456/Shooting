@@ -49,6 +49,8 @@
 #import "NSObject+LBLaunchImage.h"
 #import "NSObject+Random.h"
 #import "NSObject+Measure.h"
+#import "NSObject+SYSAlertController.h"
+#import "NSObject+SPAlertController.h"
 
 #import "UIControl+XY.h"
 #import "UITableViewCell+WhiteArrows.h"
