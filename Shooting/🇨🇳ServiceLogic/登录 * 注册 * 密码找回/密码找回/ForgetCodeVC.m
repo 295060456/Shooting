@@ -452,6 +452,17 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
     }return _player;
 }
 
+-(CustomZFPlayerControlView *)customPlayerControlView{
+    if (!_customPlayerControlView) {
+        _customPlayerControlView = CustomZFPlayerControlView.new;
+        @weakify(self)
+        [_customPlayerControlView actionCustomZFPlayerControlViewBlock:^(id data) {
+            @strongify(self)
+            [self.view endEditing:YES];
+        }];
+    }return _customPlayerControlView;
+}
+
 -(UIButton *)successBtn{
     if (!_successBtn) {
         _successBtn = UIButton.new;

@@ -115,10 +115,11 @@ UITextFieldDelegate
         _countDownBtn.titleRuningStr = @"重新发送\n";
         _countDownBtn.titleLabel.numberOfLines = 0;
         _countDownBtn.titleEndStr = @"重新发送";
-        _countDownBtn.backgroundColor = KLightGrayColor;
+        _countDownBtn.backgroundColor = kBlackColor;
+        _countDownBtn.alpha = 0.7f;
         _countDownBtn.titleColor = kWhiteColor;
-        _countDownBtn.bgCountDownColor = KLightGrayColor;//倒计时的时候此btn的背景色
-        _countDownBtn.bgEndColor = KLightGrayColor;//倒计时完全结束后的背景色
+        _countDownBtn.bgCountDownColor = kBlackColor;//倒计时的时候此btn的背景色
+        _countDownBtn.bgEndColor = kBlackColor;//倒计时完全结束后的背景色
         _countDownBtn.layerCornerRadius = 6;
         _countDownBtn.showTimeType = ShowTimeType_SS;
         _countDownBtn.titleLabelFont = [UIFont systemFontOfSize:8
@@ -137,9 +138,15 @@ UITextFieldDelegate
         [self addSubview:_countDownBtn];
         [_countDownBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self);
-            make.top.bottom.equalTo(self.tf);
+            make.bottom.equalTo(self.tf);
+            make.height.mas_equalTo(self.inputViewHeight - 14);
             make.width.mas_equalTo(self.inputViewWidth * 0.27);
         }];
+  
+        [self layoutIfNeeded];
+        [UIView appointCornerCutToCircleWithTargetView:_countDownBtn
+                                     byRoundingCorners:UIRectCornerTopRight | UIRectCornerBottomRight
+                                           cornerRadii:CGSizeMake(self.inputViewHeight / 2, self.inputViewHeight / 2)];
 
     }return _countDownBtn;
 }

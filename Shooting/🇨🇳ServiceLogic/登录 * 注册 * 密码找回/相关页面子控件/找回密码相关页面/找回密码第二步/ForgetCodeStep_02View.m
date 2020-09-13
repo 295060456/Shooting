@@ -107,6 +107,7 @@
             UIImageView *imgv = UIImageView.new;
             imgv.image = self.headerImgMutArr[t];
             inputView.inputViewWidth = 250;
+            inputView.inputViewHeight = 42;
             inputView.tf.leftView = imgv;
             inputView.tf.ZYtextFont = [UIFont systemFontOfSize:9.6
                                                         weight:UIFontWeightRegular];
@@ -135,9 +136,14 @@
                 make.size.mas_equalTo(CGSizeMake(250, 42));
             }];
             [self layoutIfNeeded];
-            [UIView cornerCutToCircleWithView:inputView.tf
-                              AndCornerRadius:11];
+//有点意思
+            [UIView appointCornerCutToCircleWithTargetView:inputView
+                                         byRoundingCorners:UIRectCornerBottomLeft
+                                               cornerRadii:CGSizeMake((inputView.tf.mj_h) / 4, (inputView.tf.mj_h) / 4)];
             
+            [UIView appointCornerCutToCircleWithTargetView:inputView.tf
+                                         byRoundingCorners:UIRectCornerTopLeft
+                                               cornerRadii:CGSizeMake((inputView.tf.mj_h) / 4, (inputView.tf.mj_h) / 4)];
         }else{
             DoorInputViewStyle_3 *inputView = DoorInputViewStyle_3.new;
             inputView.titleStr = self.titleStrMutArr[t];
@@ -169,7 +175,7 @@
             }];
             [self layoutIfNeeded];
             [UIView cornerCutToCircleWithView:inputView.tf
-                              AndCornerRadius:15];
+                              AndCornerRadius:(inputView.tf.mj_h - 12) / 2];
         }
     }
 }
