@@ -7,11 +7,13 @@
 //
 
 #import "BaseVC.h"
+#import "Door.h"
 
 NS_ASSUME_NONNULL_BEGIN
 //注册和登录共用一个控制器DoorVC；忘记密码单独一个控制器
 @interface DoorVC : BaseVC
 
+@property(nonatomic,strong)LoginContentView *loginContentView;
 @property(nonatomic,strong)NSString *captchaKey;
 
 + (instancetype)ComingFromVC:(UIViewController *)rootVC

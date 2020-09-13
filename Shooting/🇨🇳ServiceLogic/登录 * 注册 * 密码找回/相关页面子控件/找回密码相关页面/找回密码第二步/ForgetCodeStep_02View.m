@@ -6,22 +6,24 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "DoorInputView.h"
 #import "ForgetCodeStep_02View.h"
 
-@interface ForgetCodeStep_02View ()
+@interface ForgetCodeStep_02View (){
+    CGFloat k;
+}
 
-@property(nonatomic,assign)BOOL isOpen;
-
-@property(nonatomic,copy)MKDataBlock forgetCodeStep_02ViewBlock;
 @property(nonatomic,copy)MKDataBlock forgetCodeStep_02ViewKeyboardBlock;
+@property(nonatomic,copy)MKDataBlock forgetCodeStep_02inputViewBlock;
 
 @property(nonatomic,strong)NSMutableArray <UIImage *>*headerImgMutArr;
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnSelectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnUnselectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*placeHolderMutArr;
-@property(nonatomic,strong)NSMutableArray <DoorInputViewStyle *> *inputViewMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*titleStrMutArr;
+
+@property(nonatomic,assign)BOOL isOpen;
+@property(nonatomic,assign)BOOL isEdit;//本页面是否当下正处于编辑状态
+@property(nonatomic,assign)CGRect registerContentViewRect;
 
 @end
 
@@ -38,6 +40,12 @@
         self.backgroundColor = KLightGrayColor;
         [self keyboard];
     }return self;
+}
+
+-(void)drawRect:(CGRect)rect{
+    [super drawRect:rect];
+    [self makeInputView];
+    self.registerContentViewRect = self.frame;
 }
 
 -(void)keyboard{
@@ -61,17 +69,26 @@
         CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
         NSLog(@"KeyboardOffsetY = %f",KeyboardOffsetY);
         NSLog(@"MMM beginFrameY = %f,endFrameY = %f",beginFrame.origin.y,endFrame.origin.y);
-        CGFloat offset = 100;
-//        if (KeyboardOffsetY > 0) {
-//            k = endFrame.origin.y - self.mj_h - offset;
-//            [self showLoginContentViewWithOffsetY:k];
-//        }else{
-//            [self showLoginContentViewWithOffsetY:-k];
-//        }
-//
-//        if (self.loginContentViewKeyboardBlock) {
-//            self.loginContentViewKeyboardBlock(@(KeyboardOffsetY));
-//        }
+        CGFloat offset = 200;
+        if (KeyboardOffsetY > 0) {//弹出
+            self.isEdit = YES;
+            k = endFrame.origin.y - self.mj_h - offset;
+        }else if (KeyboardOffsetY < 0){//回落
+            self.isEdit = NO;
+        }else{
+//界面上有多个输入框，当放弃一个输入框焦点的同同时激活一个输入框焦点，此时虽然走这个方法但是键盘的起始位置和终点位置重合，表现出来就是KeyboardOffsetY == 0
+            self.isEdit = YES;//(50 164.333; 275 270.667)
+        }
+        
+        if (self.isEdit) {
+            if (self.registerContentViewRect.origin.y == self.mj_y) {
+                [self showForgetCodeStep_02ViewWithOffsetY:k];
+            }
+        }else{
+            if (self.registerContentViewRect.origin.y != self.mj_y) {
+                [self showForgetCodeStep_02ViewWithOffsetY:-k];
+            }
+        }
     }
 }
 
@@ -80,11 +97,6 @@
         NSLog(@"键盘弹出");
         NSLog(@"键盘关闭");
     }
-}
-
--(void)drawRect:(CGRect)rect{
-    [super drawRect:rect];
-    [self makeInputView];
 }
 
 -(void)makeInputView{
@@ -108,7 +120,14 @@
             inputView.tf.leftViewMode = UITextFieldViewModeAlways;
             inputView.tf.placeholder = self.placeHolderMutArr[t];
             [self.inputViewMutArr addObject:inputView];
-            
+            @weakify(self)
+            [inputView actionBlockdoorInputViewStyle_1:^(id data) {
+                @strongify(self)
+                if (self.forgetCodeStep_02inputViewBlock) {
+                    self.forgetCodeStep_02inputViewBlock(data);
+                }
+            }];
+       
             [self addSubview:inputView];
             [inputView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.equalTo(self).offset(50);
@@ -191,12 +210,12 @@
     }];
 }
 
--(void)actionForgetCodeStep_02ViewBlock:(MKDataBlock)forgetCodeStep_02ViewBlock{
-    _forgetCodeStep_02ViewBlock = forgetCodeStep_02ViewBlock;
-}
-
 -(void)actionForgetCodeStep_02ViewKeyboardBlock:(MKDataBlock)forgetCodeStep_02ViewKeyboardBlock{
     _forgetCodeStep_02ViewKeyboardBlock = forgetCodeStep_02ViewKeyboardBlock;
+}
+
+-(void)acrtionBlockForgetCodeStep_02inputView:(MKDataBlock)forgetCodeStep_02inputViewBlock{
+    _forgetCodeStep_02inputViewBlock = forgetCodeStep_02inputViewBlock;
 }
 #pragma mark —— lazyLoad
 -(NSMutableArray<UIImage *> *)headerImgMutArr{

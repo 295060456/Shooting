@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UIButton *countDownBtn;
 @property(nonatomic,assign)CGFloat inputViewWidth;
 
+-(void)actionBlockdoorInputViewStyle_1:(MKDataBlock)doorInputViewStyle_1Block;
+
 @end
 
 NS_ASSUME_NONNULL_END

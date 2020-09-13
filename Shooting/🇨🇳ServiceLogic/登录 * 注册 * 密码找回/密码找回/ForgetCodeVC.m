@@ -166,6 +166,99 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
     }return _tipsLab;
 }
 
+-(void)startStep_01{
+    CustomSYSUITabBarController *tbvc = [SceneDelegate sharedInstance].customSYSUITabBarController;
+    
+    DoorInputViewStyle_3 *用户名 = self.step_01.inputViewMutArr[0];
+    DoorInputViewStyle_3 *手机号码 = self.step_01.inputViewMutArr[1];
+    
+    if (![NSString isNullString:手机号码.tf.text] &&
+        ![NSString isNullString:用户名.tf.text]) {
+        
+        if (用户名.tf.text.length < 4 &&
+            用户名.tf.text.length > 11) {
+            [NSObject showSYSAlertViewTitle:@"请输入4-11位字母或数字的用户名"
+                                    message:@""
+                            isSeparateStyle:NO
+                                btnTitleArr:@[@"好的"]
+                             alertBtnAction:@[@""]
+                                   targetVC:tbvc
+                               alertVCBlock:^(id data) {
+                //DIY
+            }];
+        }else{
+            
+            if (手机号码.tf.text.length < 4 &&
+                手机号码.tf.text.length > 11) {
+                [NSObject showSYSAlertViewTitle:@"请输入4-11位字母或数字的手机号码"
+                                        message:@""
+                                isSeparateStyle:NO
+                                    btnTitleArr:@[@"好的"]
+                                 alertBtnAction:@[@""]
+                                       targetVC:tbvc
+                                   alertVCBlock:^(id data) {
+                    //DIY
+                }];
+            }else{
+//                [self MKLoginCheckIdentity_netWorkingWithTel:手机号码.tf.text
+//                                                     account:用户名.tf.text];
+            }
+        }
+    }else{
+        [NSObject showSYSAlertViewTitle:@"请完善资料"
+                                message:@""
+                        isSeparateStyle:NO
+                            btnTitleArr:@[@"好的"]
+                         alertBtnAction:@[@""]
+                               targetVC:tbvc
+                           alertVCBlock:^(id data) {
+            //DIY
+        }];
+    }
+}
+
+-(void)startStep_02{
+    CustomSYSUITabBarController *tbvc = [SceneDelegate sharedInstance].customSYSUITabBarController;
+    
+    DoorInputViewStyle_3 *用户名 = self.step_01.inputViewMutArr[0];
+//                    DoorInputViewStyle_3 *手机号码 = self.step_01.inputViewMutArr[1];
+    
+    DoorInputViewStyle_1 *验证码 = (DoorInputViewStyle_1 *)self.step_02.inputViewMutArr[0];
+    DoorInputViewStyle_3 *新密码 = (DoorInputViewStyle_3 *)self.step_02.inputViewMutArr[1];
+    DoorInputViewStyle_3 *新密码确认 = (DoorInputViewStyle_3 *)self.step_02.inputViewMutArr[2];
+    if (![NSString isNullString:验证码.tf.text] &&
+        ![NSString isNullString:新密码.tf.text] &&
+        ![NSString isNullString:新密码确认.tf.text]) {
+        if (新密码确认.tf.text.length < 6 &&
+            新密码确认.tf.text.length > 12) {
+            [NSObject showSYSAlertViewTitle:@"两次密码输入不一致"
+                                    message:@"请重新输入"
+                            isSeparateStyle:NO
+                                btnTitleArr:@[@"好的"]
+                             alertBtnAction:@[@""]
+                                   targetVC:tbvc
+                               alertVCBlock:^(id data) {
+                //DIY
+            }];
+        }else{
+//            [self MKLoginChangePassword_netWorkingWithAccount:用户名.tf.text
+//                                                      smsCode:验证码.tf.text
+//                                                     password:新密码.tf.text
+//                                              confirmPassword:新密码确认.tf.text];
+        }
+    }else{
+        [NSObject showSYSAlertViewTitle:@"请完善资料"
+                                message:@""
+                        isSeparateStyle:NO
+                            btnTitleArr:@[@"好的"]
+                         alertBtnAction:@[@""]
+                               targetVC:tbvc
+                           alertVCBlock:^(id data) {
+            //DIY
+        }];
+    }
+}
+
 -(UIButton *)nextStepBtn{
     if (!_nextStepBtn) {
         _nextStepBtn = UIButton.new;
@@ -189,15 +282,44 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
         [_nextStepBtn setTitleColor:kWhiteColor
                         forState:UIControlStateNormal];
         [[_nextStepBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            [self.view endEditing:YES];
+            
             switch (self.Step) {
                 case 0:{
                     NSLog(@"下一步");
                     [self.step_01 removeForgetCodeStep_01ViewWithOffsetY:0];
                     [self.step_02 showForgetCodeStep_02ViewWithOffsetY:0];
+//                    [self startStep_01];//加了判断的 不能删
+                    
+                    {//
+                        DoorInputViewStyle_3 *用户名 = self.step_01.inputViewMutArr[0];
+                        DoorInputViewStyle_3 *手机号码 = self.step_01.inputViewMutArr[1];
+//                        [self MKLoginCheckIdentity_netWorkingWithTel:手机号码.tf.text
+//                                                             account:用户名.tf.text];
+//                        //成功了 跳转下一步 的同时请求验证码接口
+//                        [self MKLoginSendSmsCode_netWorkingWithTel:手机号码.tf.text];
+                    }
                 }break;
                 case 1:{
                     [self.step_02  removeForgetCodeStep_02ViewWithOffsetY:0];
                     [UIView animationAlert:self.successBtn];
+                    
+                    {
+                        DoorInputViewStyle_3 *用户名 = self.step_01.inputViewMutArr[0];
+    //                    DoorInputViewStyle_3 *手机号码 = self.step_01.inputViewMutArr[1];
+                        
+                        DoorInputViewStyle_1 *验证码 = (DoorInputViewStyle_1 *)self.step_02.inputViewMutArr[0];
+                        DoorInputViewStyle_3 *新密码 = (DoorInputViewStyle_3 *)self.step_02.inputViewMutArr[1];
+                        DoorInputViewStyle_3 *新密码确认 = (DoorInputViewStyle_3 *)self.step_02.inputViewMutArr[2];
+                        
+//                        [self MKLoginChangePassword_netWorkingWithAccount:用户名.tf.text
+//                                                                  smsCode:验证码.tf.text
+//                                                                 password:新密码.tf.text
+//                                                          confirmPassword:新密码确认.tf.text];
+                    }
+                
+//                    [self startStep_02];//加了判断的 不能删
+                    
                     [self->_nextStepBtn setTitle:@"去登陆"
                                         forState:UIControlStateNormal];
                     [[self->_nextStepBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -247,14 +369,21 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
 -(ForgetCodeStep_02View *)step_02{
     if (!_step_02) {
         _step_02 = ForgetCodeStep_02View.new;
+        _step_02.alpha = 0.7;
         @weakify(self)
-        [_step_02 actionForgetCodeStep_02ViewBlock:^(id data) {
-//            @strongify(self)
-
-        }];
-        
         [_step_02 actionForgetCodeStep_02ViewKeyboardBlock:^(id data) {
 //            @strongify(self)
+        }];
+        
+        [_step_02 acrtionBlockForgetCodeStep_02inputView:^(id data) {
+            @strongify(self)
+            //请求验证码
+            DoorInputViewStyle_3 *手机号码 = self.step_01.inputViewMutArr[1];
+            if ([NSString isNullString:手机号码.tf.text]) {
+//                [self MKLoginSendSmsCode_netWorkingWithTel:手机号码.tf.text];
+            }else{
+                NSLog(@"手机号为空");
+            }
         }];
         [self.view addSubview:_step_02];
         _step_02.frame = CGRectMake(SCREEN_WIDTH,

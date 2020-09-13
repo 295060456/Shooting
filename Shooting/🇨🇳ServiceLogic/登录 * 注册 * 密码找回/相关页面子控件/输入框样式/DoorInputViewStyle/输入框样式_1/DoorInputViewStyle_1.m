@@ -15,6 +15,7 @@ UITextFieldDelegate
 >
 
 @property(nonatomic,strong)UILabel *titleLab;
+@property(nonatomic,copy)MKDataBlock doorInputViewStyle_1Block;
 
 @end
 
@@ -60,6 +61,10 @@ UITextFieldDelegate
 //询问委托人文本字段是否应处理按下返回按钮
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     return YES;
+}
+
+-(void)actionBlockdoorInputViewStyle_1:(MKDataBlock)doorInputViewStyle_1Block{
+    _doorInputViewStyle_1Block = doorInputViewStyle_1Block;
 }
 #pragma mark —— lazyLoad
 -(UILabel *)titleLab{
@@ -120,12 +125,14 @@ UITextFieldDelegate
                                                          weight:UIFontWeightRegular];
         _countDownBtn.countDownBtnNewLineType = CountDownBtnNewLineType_newLine;
         
-        [_countDownBtn timeFailBeginFrom:5];//注销这句话就是手动启动，放开这句话就是自启动
+        [_countDownBtn timeFailBeginFrom:30];//注销这句话就是手动启动，放开这句话就是自启动
         
-//        @weakify(self)
+        @weakify(self)
         [_countDownBtn actionCountDownClickEventBlock:^(id data) {
-//            @strongify(self)
-            NSLog(@"MMP");
+            @strongify(self)
+            if (self.doorInputViewStyle_1Block) {
+                self.doorInputViewStyle_1Block(data);
+            }
         }];
         [self addSubview:_countDownBtn];
         [_countDownBtn mas_makeConstraints:^(MASConstraintMaker *make) {

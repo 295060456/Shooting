@@ -7,17 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DoorInputView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ForgetCodeStep_02View : UIView
 
+@property(nonatomic,strong)NSMutableArray <DoorInputViewStyle *> *inputViewMutArr;
+
 -(void)showForgetCodeStep_02ViewWithOffsetY:(CGFloat)offsetY;
 -(void)removeForgetCodeStep_02ViewWithOffsetY:(CGFloat)offsetY;
 
--(void)actionForgetCodeStep_02ViewBlock:(MKDataBlock)forgetCodeStep_02ViewBlock;
 -(void)actionForgetCodeStep_02ViewKeyboardBlock:(MKDataBlock)forgetCodeStep_02ViewKeyboardBlock;
-
+-(void)acrtionBlockForgetCodeStep_02inputView:(MKDataBlock)forgetCodeStep_02inputViewBlock;
 
 @end
 

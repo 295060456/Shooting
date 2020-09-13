@@ -6,12 +6,11 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "DoorInputView.h"
 #import "ForgetCodeStep_01View.h"
 
-@interface ForgetCodeStep_01View ()
-
-@property(nonatomic,assign)BOOL isOpen;
+@interface ForgetCodeStep_01View (){
+    CGFloat k;
+}
 
 @property(nonatomic,copy)MKDataBlock forgetCodeStep_01ViewBlock;
 @property(nonatomic,copy)MKDataBlock forgetCodeStep_01ViewKeyboardBlock;
@@ -20,8 +19,11 @@
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnSelectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnUnselectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*placeHolderMutArr;
-@property(nonatomic,strong)NSMutableArray <DoorInputViewStyle_3 *> *inputViewMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*titleStrMutArr;
+
+@property(nonatomic,assign)BOOL isOpen;
+@property(nonatomic,assign)BOOL isEdit;//本页面是否当下正处于编辑状态
+@property(nonatomic,assign)CGRect registerContentViewRect;
 
 @end
 
@@ -43,6 +45,7 @@
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
     [self makeInputView];
+    self.registerContentViewRect = self.frame;
 }
 
 -(void)makeInputView{
@@ -67,6 +70,10 @@
         inputView.btnSelectedIMG = self.btnSelectedImgMutArr[t];
         inputView.btnUnSelectedIMG = self.btnUnselectedImgMutArr[t];
         [self.inputViewMutArr addObject:inputView];
+        
+        if (t == 1) {
+            inputView.tf.keyboardType = UIKeyboardTypePhonePad;
+        }
         
         [self addSubview:inputView];
         [inputView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -105,17 +112,27 @@
         CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
         NSLog(@"KeyboardOffsetY = %f",KeyboardOffsetY);
         NSLog(@"MMM beginFrameY = %f,endFrameY = %f",beginFrame.origin.y,endFrame.origin.y);
-        CGFloat offset = 100;
-//        if (KeyboardOffsetY > 0) {
-//            k = endFrame.origin.y - self.mj_h - offset;
-//            [self showLoginContentViewWithOffsetY:k];
-//        }else{
-//            [self showLoginContentViewWithOffsetY:-k];
-//        }
-//
-//        if (self.loginContentViewKeyboardBlock) {
-//            self.loginContentViewKeyboardBlock(@(KeyboardOffsetY));
-//        }
+        CGFloat offset = 300;
+
+        if (KeyboardOffsetY > 0) {//弹出
+            self.isEdit = YES;
+            k = endFrame.origin.y - self.mj_h - offset;
+        }else if (KeyboardOffsetY < 0){//回落
+            self.isEdit = NO;
+        }else{
+//界面上有多个输入框，当放弃一个输入框焦点的同同时激活一个输入框焦点，此时虽然走这个方法但是键盘的起始位置和终点位置重合，表现出来就是KeyboardOffsetY == 0
+            self.isEdit = YES;//(50 164.333; 275 270.667)
+        }
+        
+        if (self.isEdit) {
+            if (self.registerContentViewRect.origin.y == self.mj_y) {
+                [self showForgetCodeStep_01ViewWithOffsetY:k];
+            }
+        }else{
+            if (self.registerContentViewRect.origin.y != self.mj_y) {
+                [self showForgetCodeStep_01ViewWithOffsetY:-k];
+            }
+        }
     }
 }
 
@@ -125,7 +142,6 @@
         NSLog(@"键盘关闭");
     }
 }
-
 /*
  *    使用弹簧的描述时间曲线来执行动画 ,当dampingRatio == 1 时,动画会平稳的减速到最终的模型值,而不会震荡.
  *    小于1的阻尼比在达到完全停止之前会震荡的越来越多.

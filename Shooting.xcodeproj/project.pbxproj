@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		063BD15EB981BAEE23911AF2 /* Pods_Shooting_ShootingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2871C6CC92ACB94D4642EEC /* Pods_Shooting_ShootingUITests.framework */; };
 		7F96368156DDD0B899DCFEA0 /* Pods_Shooting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */; };
+		C50FFB2A250E4D2E003E5DBA /* 开屏广告.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C50FFB29250E4D2E003E5DBA /* 开屏广告.jpg */; };
 		C51A0BCF2501286500884016 /* 用户名称@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51A0BCD2501286500884016 /* 用户名称@2x.png */; };
 		C51A0BD02501286500884016 /* 用户名称@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51A0BCE2501286500884016 /* 用户名称@3x.png */; };
 		C51A0BE1250203B000884016 /* DoorInputViewStyle_2.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A0BE0250203B000884016 /* DoorInputViewStyle_2.m */; };
@@ -392,6 +393,9 @@
 		8EF824CCB3C797C08F0AA84C /* Pods-ShootingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingTests.release.xcconfig"; path = "Target Support Files/Pods-ShootingTests/Pods-ShootingTests.release.xcconfig"; sourceTree = "<group>"; };
 		975BB3BDBE4F3C4E85B6606A /* Pods-Shooting-ShootingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shooting-ShootingUITests.release.xcconfig"; path = "Target Support Files/Pods-Shooting-ShootingUITests/Pods-Shooting-ShootingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B2871C6CC92ACB94D4642EEC /* Pods_Shooting_ShootingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shooting_ShootingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C50FFB29250E4D2E003E5DBA /* 开屏广告.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "开屏广告.jpg"; sourceTree = "<group>"; };
+		C50FFB2C250E50BA003E5DBA /* XHLaunchAdManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdManager.m; sourceTree = "<group>"; };
+		C50FFB2D250E50BB003E5DBA /* XHLaunchAdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdManager.h; sourceTree = "<group>"; };
 		C51A0BCD2501286500884016 /* 用户名称@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "用户名称@2x.png"; sourceTree = "<group>"; };
 		C51A0BCE2501286500884016 /* 用户名称@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "用户名称@3x.png"; sourceTree = "<group>"; };
 		C51A0BD22502032B00884016 /* 输入框样式_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "输入框样式_3.png"; sourceTree = "<group>"; };
@@ -1806,6 +1810,8 @@
 			children = (
 				C58F001024EA36F800B6D09C /* AppDelegate.h */,
 				C58F001124EA36F800B6D09C /* AppDelegate.m */,
+				C50FFB2D250E50BB003E5DBA /* XHLaunchAdManager.h */,
+				C50FFB2C250E50BA003E5DBA /* XHLaunchAdManager.m */,
 				C58F001324EA36F800B6D09C /* SceneDelegate.h */,
 				C58F001424EA36F800B6D09C /* SceneDelegate.m */,
 				C58F02F724EA63F300B6D09C /* SceneDelegate+LaunchingAd.h */,
@@ -2529,6 +2535,7 @@
 		C58F033724EA6E1600B6D09C /* ⚽️PicResource */ = {
 			isa = PBXGroup;
 			children = (
+				C50FFB29250E4D2E003E5DBA /* 开屏广告.jpg */,
 				C58960642500D943002B1764 /* 登录 * 注册 * 密码找回 */,
 				C59D9B1524F9082600A74CE9 /* 拍摄 */,
 				C58F03B224EA6EF600B6D09C /* other */,
@@ -3042,6 +3049,7 @@
 				C5E3A12F250A47180030AAE4 /* 状态选中@3x.png in Resources */,
 				C51A0BFB250210BC00884016 /* Lock@2x.png in Resources */,
 				C51A0BFA250210BC00884016 /* Lock@3x.png in Resources */,
+				C50FFB2A250E4D2E003E5DBA /* 开屏广告.jpg in Resources */,
 				C58F048124EBD78500B6D09C /* spark_red@3x.png in Resources */,
 				C572A27C24FBDD86000A1687 /* Settings.bundle in Resources */,
 				C58F00EF24EA581F00B6D09C /* Pod里面的Bug in Resources */,

@@ -5,7 +5,7 @@
 //  Created by Jobs on 2020/9/3.
 //  Copyright © 2020 Jobs. All rights reserved.
 //
-#import "Door.h"
+
 //#import "DoorVC+VM.h"
 #import "CustomZFPlayerControlView.h"
 
@@ -19,7 +19,6 @@ ZFPlayerController *ZFPlayer_DoorVC;
 @property(nonatomic,strong)ZFPlayerController *player;
 @property(nonatomic,strong)ZFAVPlayerManager *playerManager;
 @property(nonatomic,strong)CustomZFPlayerControlView *customPlayerControlView;
-@property(nonatomic,strong)LoginContentView *loginContentView;
 @property(nonatomic,strong)RegisterContentView *registerContentView;
 @property(nonatomic,strong)LogoContentView *logoContentView;
 
@@ -142,8 +141,9 @@ ZFPlayerController *ZFPlayer_DoorVC;
                     [self.view endEditing:YES];
                     DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.loginContentView.inputViewMutArr[0];
                     DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.loginContentView.inputViewMutArr[1];
-//                    [self login_networkingWithUserName:用户名.tf.text
-//                                              passWord:密码.tf.text
+                    
+//                    [self login_networkingWithUserName:lowerMD5_64Salt(用户名.tf.text)
+//                                              passWord:lowerMD5_64Salt(密码.tf.text)
 //                                            originType:originType_Apple];
                 }else if ([btn.titleLabel.text isEqualToString:@"先去逛逛"]){
                     [self backBtnClickEvent:nil];
@@ -188,15 +188,16 @@ ZFPlayerController *ZFPlayer_DoorVC;
                 }else if ([btn.titleLabel.text isEqualToString:@"注册"]) {
                     [self.loginContentView showLoginContentViewWithOffsetY:0];
                     [self.registerContentView removeRegisterContentViewWithOffsetY:0];
-                    //注册成功跳登录
+                    //注册成功即登录
                     DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[0];
                     DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[1];
                     DoorInputViewStyle_3 *确认密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[2];
 //                    DoorInputViewStyle_2 *填写验证码 = (DoorInputViewStyle_2 *)self.registerContentView.inputViewMutArr[3];
-                    
 //                    [self register_networkingWithAccount:用户名.tf.text
-//                                                password:lowerMD5_Salt(密码.tf.text)
-//                                         confirmPassword:lowerMD5_Salt(确认密码.tf.text)
+//                                                password:lowerMD5_64Salt(密码.tf.text)
+//                                         confirmPassword:lowerMD5_64Salt(确认密码.tf.text)
+//                                              captchaKey:self.captchaKey
+//                                                 imgCode:填写验证码.tf.text
 //                                              originType:originType_Apple];//来源:0、苹果；1、安卓；2、H5
                 }else{}
             }
