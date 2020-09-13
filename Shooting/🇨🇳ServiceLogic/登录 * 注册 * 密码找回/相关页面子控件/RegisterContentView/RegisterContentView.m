@@ -217,6 +217,142 @@
     }
 }
 
+-(void)startToRegisterBtn{
+    DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.inputViewMutArr[0];
+    DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[1];
+    DoorInputViewStyle_3 *确认密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[2];
+    DoorInputViewStyle_2 *填写验证码 = (DoorInputViewStyle_2 *)self.inputViewMutArr[3];
+    
+    CustomSYSUITabBarController *tbvc = [SceneDelegate sharedInstance].customSYSUITabBarController;
+    
+    if ([NSString isNullString:用户名.tf.text]) {
+        [NSObject showSYSAlertViewTitle:@"请输入用户名"
+                                message:@""
+                        isSeparateStyle:NO
+                            btnTitleArr:@[@"好的"]
+                         alertBtnAction:@[@""]
+                               targetVC:tbvc
+                           alertVCBlock:^(id data) {
+            //DIY
+        }];
+    }
+    if ([NSString isNullString:密码.tf.text]) {
+        [NSObject showSYSAlertViewTitle:@"请输入密码"
+                                message:@""
+                        isSeparateStyle:NO
+                            btnTitleArr:@[@"好的"]
+                         alertBtnAction:@[@""]
+                               targetVC:tbvc
+                           alertVCBlock:^(id data) {
+            //DIY
+        }];
+    }
+    if ([NSString isNullString:确认密码.tf.text]) {
+        [NSObject showSYSAlertViewTitle:@"请输入确认密码"
+                                message:@""
+                        isSeparateStyle:NO
+                            btnTitleArr:@[@"好的"]
+                         alertBtnAction:@[@""]
+                               targetVC:tbvc
+                           alertVCBlock:^(id data) {
+            //DIY
+        }];
+    }
+    if ([NSString isNullString:填写验证码.tf.text]) {
+        [NSObject showSYSAlertViewTitle:@"请输入验证码"
+                                message:@""
+                        isSeparateStyle:NO
+                            btnTitleArr:@[@"好的"]
+                         alertBtnAction:@[@""]
+                               targetVC:tbvc
+                           alertVCBlock:^(id data) {
+            //DIY
+        }];
+    }
+    
+    if (![NSString isNullString:用户名.tf.text] &&
+        ![NSString isNullString:密码.tf.text] &&
+        ![NSString isNullString:确认密码.tf.text] &&
+        ![NSString isNullString:填写验证码.tf.text]) {
+        if ([密码.tf.text isEqualToString:确认密码.tf.text]) {
+            if ([填写验证码.tf.text isEqualToString:填写验证码.imageCodeView.CodeStr]) {
+                
+                //自定义的一些内层规则
+                if (用户名.tf.text.length < 4 || 用户名.tf.text.length > 11) {
+                    [NSObject showSYSAlertViewTitle:@"请输入4~11位字母或数字的用户名"
+                                            message:nil
+                                    isSeparateStyle:NO
+                                        btnTitleArr:@[@"好的"]
+                                     alertBtnAction:@[@""]
+                                           targetVC:tbvc
+                                       alertVCBlock:^(id data) {
+                        //DIY
+                    }];
+                }else{
+                    if (密码.tf.text.length < 6 || 密码.tf.text.length > 12) {
+                        [NSObject showSYSAlertViewTitle:@"请输入6~12位字母或数字的密码"
+                                                message:nil
+                                        isSeparateStyle:NO
+                                            btnTitleArr:@[@"好的"]
+                                         alertBtnAction:@[@""]
+                                               targetVC:tbvc
+                                           alertVCBlock:^(id data) {
+                            //DIY
+                        }];
+                    }else{
+                        if (确认密码.tf.text.length < 6 || 确认密码.tf.text.length > 12) {
+                            [NSObject showSYSAlertViewTitle:@"请输入6~12位字母或数字的确认密码"
+                                                    message:nil
+                                            isSeparateStyle:NO
+                                                btnTitleArr:@[@"好的"]
+                                             alertBtnAction:@[@""]
+                                                   targetVC:tbvc
+                                               alertVCBlock:^(id data) {
+                                //DIY
+                            }];
+                        }else{
+                            //各种判断过滤在内层做处理，在外层就直接用最终结果
+                            if (self.registerContentViewBlock) {
+                                self.registerContentViewBlock(self->_toRegisterBtn);
+                            }
+                        }
+                    }
+                }
+            }else{
+                [NSObject showSYSAlertViewTitle:@"验证码不正确"
+                                        message:@"请重新输入"
+                                isSeparateStyle:NO
+                                    btnTitleArr:@[@"好的"]
+                                 alertBtnAction:@[@"reInputAuthCode"]
+                                       targetVC:tbvc
+                                   alertVCBlock:^(id data) {
+                    //DIY
+                }];
+            }
+        }else{
+            [NSObject showSYSAlertViewTitle:@"两次密码输入不对等"
+                                    message:@"请重新输入"
+                            isSeparateStyle:NO
+                                btnTitleArr:@[@"好的"]
+                             alertBtnAction:@[@"reInputCode"]
+                                   targetVC:tbvc
+                               alertVCBlock:^(id data) {
+                //DIY
+            }];
+        }
+    }else{
+        [NSObject showSYSAlertViewTitle:@"请完善注册信息"
+                                message:nil
+                        isSeparateStyle:NO
+                            btnTitleArr:@[@"好的"]
+                         alertBtnAction:@[@""]
+                               targetVC:tbvc
+                           alertVCBlock:^(id data) {
+            //DIY
+        }];
+    }
+}
+
 -(void)keyboardDidChangeFrameNotification:(NSNotification *)notification{
     if (self.isOpen) {
         NSLog(@"键盘弹出");
@@ -291,92 +427,13 @@
         [[_toRegisterBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             [self endEditing:YES];
             NSLog(@"注册");
-            
-            DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.inputViewMutArr[0];
-            DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[1];
-            DoorInputViewStyle_3 *确认密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[2];
-            DoorInputViewStyle_2 *填写验证码 = (DoorInputViewStyle_2 *)self.inputViewMutArr[3];
-            
-            CustomSYSUITabBarController *tbvc = [SceneDelegate sharedInstance].customSYSUITabBarController;
-            
-            if ([NSString isNullString:用户名.tf.text]) {
-                [NSObject showSYSAlertViewTitle:@"请输入用户名"
-                                        message:@""
-                                isSeparateStyle:NO
-                                    btnTitleArr:@[@"好的"]
-                                 alertBtnAction:@[@""]
-                                       targetVC:tbvc
-                                   alertVCBlock:^(id data) {
-                    //DIY
-                }];
-            }
-            if ([NSString isNullString:密码.tf.text]) {
-                [NSObject showSYSAlertViewTitle:@"请输入密码"
-                                        message:@""
-                                isSeparateStyle:NO
-                                    btnTitleArr:@[@"好的"]
-                                 alertBtnAction:@[@""]
-                                       targetVC:tbvc
-                                   alertVCBlock:^(id data) {
-                    //DIY
-                }];
-            }
-            if ([NSString isNullString:确认密码.tf.text]) {
-                [NSObject showSYSAlertViewTitle:@"请输入确认密码"
-                                        message:@""
-                                isSeparateStyle:NO
-                                    btnTitleArr:@[@"好的"]
-                                 alertBtnAction:@[@""]
-                                       targetVC:tbvc
-                                   alertVCBlock:^(id data) {
-                    //DIY
-                }];
-            }
-            if ([NSString isNullString:填写验证码.tf.text]) {
-                [NSObject showSYSAlertViewTitle:@"请输入验证码"
-                                        message:@""
-                                isSeparateStyle:NO
-                                    btnTitleArr:@[@"好的"]
-                                 alertBtnAction:@[@""]
-                                       targetVC:tbvc
-                                   alertVCBlock:^(id data) {
-                    //DIY
-                }];
+#warning message
+            //各种判断过滤在内层做处理，在外层就直接用最终结果
+            if (self.registerContentViewBlock) {
+                self.registerContentViewBlock(self->_toRegisterBtn);
             }
             
-            if (![NSString isNullString:用户名.tf.text] &&
-                ![NSString isNullString:密码.tf.text] &&
-                ![NSString isNullString:确认密码.tf.text] &&
-                ![NSString isNullString:填写验证码.tf.text]) {
-                if ([密码.tf.text isEqualToString:确认密码.tf.text]) {
-                    if ([填写验证码.tf.text isEqualToString:填写验证码.imageCodeView.CodeStr]) {
-                        //各种判断过滤在内层做处理，在外层就直接用最终结果
-                        if (self.registerContentViewBlock) {
-                            self.registerContentViewBlock(self->_toRegisterBtn);
-                        }
-                    }else{
-                        [NSObject showSYSAlertViewTitle:@"验证码不正确"
-                                                message:@"请重新输入"
-                                        isSeparateStyle:NO
-                                            btnTitleArr:@[@"好的"]
-                                         alertBtnAction:@[@"reInputAuthCode"]
-                                               targetVC:tbvc
-                                           alertVCBlock:^(id data) {
-                            //DIY
-                        }];
-                    }
-                }else{
-                    [NSObject showSYSAlertViewTitle:@"两次密码输入不对等"
-                                            message:@"请重新输入"
-                                    isSeparateStyle:NO
-                                        btnTitleArr:@[@"好的"]
-                                     alertBtnAction:@[@"reInputCode"]
-                                           targetVC:tbvc
-                                       alertVCBlock:^(id data) {
-                        //DIY
-                    }];
-                }
-            }
+//            [self startToRegisterBtn];//加了判断的 不能删
         }];
     }return _toRegisterBtn;
 }

@@ -157,7 +157,6 @@
         NSLog(@"键盘关闭");
     }
 }
-
 /*
  *    使用弹簧的描述时间曲线来执行动画 ,当dampingRatio == 1 时,动画会平稳的减速到最终的模型值,而不会震荡.
  *    小于1的阻尼比在达到完全停止之前会震荡的越来越多.
@@ -335,6 +334,79 @@
     }return _forgetCodeBtn;
 }
 
+-(void)startToRegisterBtn{
+    DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.inputViewMutArr[0];
+    DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[1];
+               
+    CustomSYSUITabBarController *tbvc = [SceneDelegate sharedInstance].customSYSUITabBarController;
+    
+    if ([NSString isNullString:用户名.tf.text]) {
+        [NSObject showSYSAlertViewTitle:@"请输入用户名"
+                                message:@""
+                        isSeparateStyle:NO
+                            btnTitleArr:@[@"好的"]
+                         alertBtnAction:@[@""]
+                               targetVC:tbvc
+                           alertVCBlock:^(id data) {
+            //DIY
+        }];
+    }
+    if ([NSString isNullString:密码.tf.text]) {
+        [NSObject showSYSAlertViewTitle:@"请输入密码"
+                                message:@""
+                        isSeparateStyle:NO
+                            btnTitleArr:@[@"好的"]
+                         alertBtnAction:@[@""]
+                               targetVC:tbvc
+                           alertVCBlock:^(id data) {
+            //DIY
+        }];
+    }
+    
+    if (![NSString isNullString:用户名.tf.text] &&
+        ![NSString isNullString:密码.tf.text]) {
+        //自定义的一些内层规则
+        if (用户名.tf.text.length < 4 || 用户名.tf.text.length > 11) {
+            [NSObject showSYSAlertViewTitle:@"请输入4~11位字母或数字的用户名"
+                                    message:nil
+                            isSeparateStyle:NO
+                                btnTitleArr:@[@"好的"]
+                             alertBtnAction:@[@""]
+                                   targetVC:tbvc
+                               alertVCBlock:^(id data) {
+                //DIY
+            }];
+        }else{
+            if (密码.tf.text.length < 6 || 密码.tf.text.length > 12) {
+                [NSObject showSYSAlertViewTitle:@"请输入6~12位字母或数字的密码"
+                                        message:nil
+                                isSeparateStyle:NO
+                                    btnTitleArr:@[@"好的"]
+                                 alertBtnAction:@[@""]
+                                       targetVC:tbvc
+                                   alertVCBlock:^(id data) {
+                    //DIY
+                }];
+            }else{
+                //各种判断过滤在内层做处理，在外层就直接用最终结果
+                if (self.loginContentViewBlock) {
+                    self.loginContentViewBlock(self->_loginBtn);
+                }
+            }
+        }
+    }else{
+        [NSObject showSYSAlertViewTitle:@"请完善登录信息"
+                                message:nil
+                        isSeparateStyle:NO
+                            btnTitleArr:@[@"好的"]
+                         alertBtnAction:@[@""]
+                               targetVC:tbvc
+                           alertVCBlock:^(id data) {
+            //DIY
+        }];
+    }
+}
+
 -(UIButton *)loginBtn{
     if (!_loginBtn) {
         _loginBtn = UIButton.new;
@@ -358,10 +430,14 @@
         [_loginBtn setTitleColor:kWhiteColor
                         forState:UIControlStateNormal];
         [[_loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-             NSLog(@"注册");
+            [self endEditing:YES];
+            NSLog(@"登录");
+            //各种判断过滤在内层做处理，在外层就直接用最终结果
             if (self.loginContentViewBlock) {
                 self.loginContentViewBlock(self->_loginBtn);
             }
+#warning message
+//            [self startToRegisterBtn];//加了判断的 不能删
         }];
         [UIView cornerCutToCircleWithView:_loginBtn
                           AndCornerRadius:16];
