@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)ZYTextField *tf;
 @property(nonatomic,strong)ImageCodeView *imageCodeView;
 @property(nonatomic,assign)CGFloat inputViewWidth;
+@property(nonatomic,assign)CGFloat inputViewHeight;
+
+-(void)actionBlockDoorInputViewStyle_2:(MKDataBlock)doorInputViewStyle_2Block;
 
 @end
 

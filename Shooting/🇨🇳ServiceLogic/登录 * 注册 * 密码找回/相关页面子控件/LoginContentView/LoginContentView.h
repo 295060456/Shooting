@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DoorInputView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginContentView : UIView
+
+@property(nonatomic,strong)NSMutableArray <DoorInputViewStyle_3 *> *inputViewMutArr;
 
 -(void)showLoginContentViewWithOffsetY:(CGFloat)offsetY;
 -(void)removeLoginContentViewWithOffsetY:(CGFloat)offsetY;

@@ -7,7 +7,6 @@
 //
 
 #import "LoginContentView.h"
-#import "DoorInputView.h"
 #import "ForgetCodeVC.h"
 
 @interface LoginContentView (){
@@ -28,7 +27,6 @@
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnSelectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnUnselectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*placeHolderMutArr;
-@property(nonatomic,strong)NSMutableArray <DoorInputViewStyle_3 *> *inputViewMutArr;
 @property(nonatomic,assign)BOOL isOpen;
 
 @end

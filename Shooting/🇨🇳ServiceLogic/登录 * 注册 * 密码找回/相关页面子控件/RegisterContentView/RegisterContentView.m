@@ -19,6 +19,7 @@
 @property(nonatomic,strong)UIButton *toRegisterBtn;//去注册
 @property(nonatomic,copy)MKDataBlock registerContentViewBlock;
 @property(nonatomic,copy)MKDataBlock registerContentViewKeyboardBlock;
+@property(nonatomic,copy)MKDataBlock registerContentViewAuthcodeBlock;
 
 @property(nonatomic,strong)NSMutableArray <UIImage *>*headerImgMutArr;
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnSelectedImgMutArr;
@@ -79,7 +80,7 @@
             make.left.equalTo(self.backToLoginBtn.mas_right).offset(10);
             make.size.mas_equalTo(CGSizeMake(250, 32));
             if (t == 0) {
-                make.top.equalTo(self.titleLab.mas_bottom).offset(29);
+                make.top.equalTo(self.titleLab.mas_bottom).offset(9);
             }else{
                 DoorInputViewStyle_3 *InputView = (DoorInputViewStyle_3 *)self.inputViewMutArr[t - 1];
                 make.top.equalTo(InputView.mas_bottom).offset(15);
@@ -91,9 +92,17 @@
     }
 
     DoorInputViewStyle_2 *inputView = DoorInputViewStyle_2.new;
+    @weakify(self)
+    [inputView actionBlockDoorInputViewStyle_2:^(id data) {
+        @strongify(self)
+        if (self.registerContentViewAuthcodeBlock) {
+            self.registerContentViewAuthcodeBlock(data);
+        }
+    }];
     UIImageView *imgv = UIImageView.new;
     imgv.image = self.headerImgMutArr.lastObject;
     inputView.inputViewWidth = 250;
+    inputView.inputViewHeight = 32;
     inputView.tf.leftView = imgv;
     inputView.tf.ZYtextFont = [UIFont systemFontOfSize:9.6
                                                 weight:UIFontWeightRegular];
@@ -116,10 +125,9 @@
     }];
     [self.inputViewMutArr addObject:inputView];
     [self layoutIfNeeded];
-    [UIView cornerCutToCircleWithView:inputView.tf
-                      AndCornerRadius:inputView.tf.mj_h / 2];
+    [UIView cornerCutToCircleWithView:inputView
+                      AndCornerRadius:inputView.mj_h / 2];
 }
-
 /*
  *    使用弹簧的描述时间曲线来执行动画 ,当dampingRatio == 1 时,动画会平稳的减速到最终的模型值,而不会震荡.
  *    小于1的阻尼比在达到完全停止之前会震荡的越来越多.
@@ -207,6 +215,11 @@
 -(void)actionRegisterContentViewKeyboardBlock:(MKDataBlock)registerContentViewKeyboardBlock{
     _registerContentViewKeyboardBlock = registerContentViewKeyboardBlock;
 }
+
+-(void)actionRegisterContentViewAuthcodeBlock:(MKDataBlock)registerContentViewAuthcodeBlock{
+    _registerContentViewAuthcodeBlock = registerContentViewAuthcodeBlock;
+}
+
 #pragma mark —— lazyLoad
 -(UIButton *)backToLoginBtn{
     if (!_backToLoginBtn) {

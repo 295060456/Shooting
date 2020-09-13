@@ -15,6 +15,7 @@ UITextFieldDelegate
 >
 
 @property(nonatomic,strong)UILabel *titleLab;
+@property(nonatomic,copy)MKDataBlock doorInputViewStyle_2Block;
 
 @end
 
@@ -61,6 +62,10 @@ UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     return YES;
 }
+
+-(void)actionBlockDoorInputViewStyle_2:(MKDataBlock)doorInputViewStyle_2Block{
+    _doorInputViewStyle_2Block = doorInputViewStyle_2Block;
+}
 #pragma mark —— lazyLoad
 -(UILabel *)titleLab{
     if (!_titleLab) {
@@ -85,13 +90,14 @@ UITextFieldDelegate
         [self addSubview:_tf];
         [_tf mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.bottom.equalTo(self);
-            make.width.mas_equalTo(self.inputViewWidth * 0.7);
+            make.width.mas_equalTo(self.inputViewWidth * 0.66);
             if (![NSString isNullString:self.titleStr]) {
                 make.top.equalTo(self.titleLab.mas_bottom).offset(3);
             }else{
                 make.top.equalTo(self);
             }
         }];
+        [self layoutIfNeeded];
     }return _tf;
 }
 
@@ -99,12 +105,23 @@ UITextFieldDelegate
     if (!_imageCodeView) {
         _imageCodeView = ImageCodeView.new;
         _imageCodeView.alpha = 1;
+        @weakify(self)
+        [_imageCodeView actionBlockImageCodeView:^(id data) {
+            @strongify(self)
+            if (self.doorInputViewStyle_2Block) {
+                self.doorInputViewStyle_2Block(data);
+            }
+        }];
         [self addSubview:_imageCodeView];
         [_imageCodeView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.bottom.right.equalTo(self);
-            make.width.mas_equalTo(self.inputViewWidth * 0.27);
+            make.top.bottom.equalTo(self);
+            make.left.equalTo(self.tf.mas_right).offset(5);
+            make.width.mas_equalTo(50);
         }];
         [self layoutIfNeeded];
+        [UIView appointCornerCutToCircleWithTargetView:_imageCodeView
+                                     byRoundingCorners:UIRectCornerTopRight | UIRectCornerBottomRight
+                                           cornerRadii:CGSizeMake(self.inputViewHeight / 2, self.inputViewHeight / 2)];
     }return _imageCodeView;
 }
 

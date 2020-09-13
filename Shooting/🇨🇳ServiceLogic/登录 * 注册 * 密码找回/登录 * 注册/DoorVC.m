@@ -6,6 +6,7 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 #import "Door.h"
+//#import "DoorVC+VM.h"
 #import "CustomZFPlayerControlView.h"
 
 #import "DoorVC.h"
@@ -119,6 +120,14 @@ ZFPlayerController *ZFPlayer_DoorVC;
                 UIButton *btn = (UIButton *)data;
                 if ([btn.titleLabel.text isEqualToString:@"新\n用\n户\n注\n册"]) {
                     [self.registerContentView showRegisterContentViewWithOffsetY:0];
+//                    [NSObject getAuthCode_networking:^(id data) {
+//                        if ([data isKindOfClass:NSDictionary.class]) {
+//                            NSDictionary *dic = (NSDictionary *)data;
+//                            DoorInputViewStyle_2 *doorInputViewStyle_2 = (DoorInputViewStyle_2 *)self.registerContentView.inputViewMutArr.lastObject;
+//                            doorInputViewStyle_2.imageCodeView.CodeStr = dic[@"imgCode"];
+//                            self.captchaKey = dic[@"captchaKey"];
+//                        }
+//                    }];
                     [self.loginContentView removeLoginContentViewWithOffsetY:0];
                 }else if ([btn.titleLabel.text isEqualToString:@"记住密码"]){
                     
@@ -130,10 +139,17 @@ ZFPlayerController *ZFPlayer_DoorVC;
                                        success:^(id data) {}
                                       animated:YES];
                 }else if ([btn.titleLabel.text isEqualToString:@"登录"]){
-                    
+                    [self.view endEditing:YES];
+                    DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.loginContentView.inputViewMutArr[0];
+                    DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.loginContentView.inputViewMutArr[1];
+//                    [self login_networkingWithUserName:用户名.tf.text
+//                                              passWord:密码.tf.text
+//                                            originType:originType_Apple];
                 }else if ([btn.titleLabel.text isEqualToString:@"先去逛逛"]){
                     [self backBtnClickEvent:nil];
-                }else{}
+                }else{
+                    
+                }
             }
         }];
         [_loginContentView actionLoginContentViewKeyboardBlock:^(id data) {
@@ -169,6 +185,19 @@ ZFPlayerController *ZFPlayer_DoorVC;
                 if ([btn.titleLabel.text isEqualToString:@"返\n回\n登\n录"]) {
                     [self.loginContentView showLoginContentViewWithOffsetY:0];
                     [self.registerContentView removeRegisterContentViewWithOffsetY:0];
+                }else if ([btn.titleLabel.text isEqualToString:@"注册"]) {
+                    [self.loginContentView showLoginContentViewWithOffsetY:0];
+                    [self.registerContentView removeRegisterContentViewWithOffsetY:0];
+                    //注册成功跳登录
+                    DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[0];
+                    DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[1];
+                    DoorInputViewStyle_3 *确认密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[2];
+//                    DoorInputViewStyle_2 *填写验证码 = (DoorInputViewStyle_2 *)self.registerContentView.inputViewMutArr[3];
+                    
+//                    [self register_networkingWithAccount:用户名.tf.text
+//                                                password:lowerMD5_Salt(密码.tf.text)
+//                                         confirmPassword:lowerMD5_Salt(确认密码.tf.text)
+//                                              originType:originType_Apple];//来源:0、苹果；1、安卓；2、H5
                 }else{}
             }
         }];
@@ -186,12 +215,32 @@ ZFPlayerController *ZFPlayer_DoorVC;
                 }else{}
             }
         }];
+        
+        [_registerContentView actionRegisterContentViewAuthcodeBlock:^(id data) {
+            @strongify(self)
+            if ([data isKindOfClass:NSDictionary.class]) {
+                NSDictionary *dic = (NSDictionary *)data;
+                self.captchaKey = dic[@"captchaKey"];
+            }
+        }];
+        
         [self.view addSubview:_registerContentView];
         _registerContentView.frame = CGRectMake(SCREEN_WIDTH,
                                              SCREEN_HEIGHT / 3,
                                              SCREEN_WIDTH - 100,
                                              SCREEN_HEIGHT/ 3);
     }return _registerContentView;
+}
+
+-(void)reInputAuthCode{
+    
+}
+
+-(void)reInputCode{
+    DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[1];
+    DoorInputViewStyle_3 *确认密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[2];
+    密码.tf.text = @"";
+    确认密码.tf.text = @"";
 }
 
 -(ZFAVPlayerManager *)playerManager{
