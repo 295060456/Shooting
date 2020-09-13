@@ -26,6 +26,8 @@
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnUnselectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*placeHolderMutArr;
 @property(nonatomic,assign)BOOL isOpen;
+@property(nonatomic,assign)BOOL isEdit;//本页面是否当下正处于编辑状态
+@property(nonatomic,assign)CGRect registerContentViewRect;
 
 @end
 
@@ -51,6 +53,7 @@
     self.backToLoginBtn.alpha = 1;
     [self makeInputView];
     self.toRegisterBtn.alpha = 1;
+    self.registerContentViewRect = self.frame;
 }
 
 -(void)makeInputView{
@@ -188,11 +191,24 @@
         NSLog(@"MMM beginFrameY = %f,endFrameY = %f",beginFrame.origin.y,endFrame.origin.y);
         
         CGFloat offset = 100;
-        if (KeyboardOffsetY > 0) {
+        if (KeyboardOffsetY > 0) {//弹出
+            self.isEdit = YES;
             k = endFrame.origin.y - self.mj_h - offset;
-            [self showRegisterContentViewWithOffsetY:k];
+        }else if (KeyboardOffsetY < 0){//回落
+            self.isEdit = NO;
         }else{
-            [self showRegisterContentViewWithOffsetY:-k];
+//界面上有多个输入框，当放弃一个输入框焦点的同同时激活一个输入框焦点，此时虽然走这个方法但是键盘的起始位置和终点位置重合，表现出来就是KeyboardOffsetY == 0
+            self.isEdit = YES;//(50 164.333; 275 270.667)
+        }
+        
+        if (self.isEdit) {
+            if (self.registerContentViewRect.origin.y == self.mj_y) {
+                [self showRegisterContentViewWithOffsetY:k];
+            }
+        }else{
+            if (self.registerContentViewRect.origin.y != self.mj_y) {
+                [self showRegisterContentViewWithOffsetY:-k];
+            }
         }
 
         if (self.registerContentViewKeyboardBlock) {
