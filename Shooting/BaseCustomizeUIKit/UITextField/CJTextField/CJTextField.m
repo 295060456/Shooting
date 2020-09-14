@@ -16,6 +16,12 @@
         [self shakeAnimationForView:self];
     }
 }
+///输入的为空，抖动动画
+-(void)isEmptyText{
+    if ([NSString isNullString:self.text]) {
+        [self shakeAnimationForView:self];
+    }
+}
 
 -(void)shakeAnimationForView:(UIView *)view{
     CALayer *lay_lb = [view layer];
