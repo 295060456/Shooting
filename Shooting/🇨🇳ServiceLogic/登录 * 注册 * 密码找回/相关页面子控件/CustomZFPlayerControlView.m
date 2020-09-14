@@ -16,14 +16,42 @@
 
 @implementation CustomZFPlayerControlView
 
-- (void)gestureSingleTapped:(ZFPlayerGestureControl *)gestureControl{
+-(void)actionCustomZFPlayerControlViewBlock:(MKDataBlock)CustomZFPlayerControlViewBlock{
+    _CustomZFPlayerControlViewBlock = CustomZFPlayerControlViewBlock;
+}
+
+-(void)gestureSingleTapped:(ZFPlayerGestureControl *)gestureControl{
     if (self.CustomZFPlayerControlViewBlock) {
         self.CustomZFPlayerControlViewBlock(@1);
     }
 }
 
--(void)actionCustomZFPlayerControlViewBlock:(MKDataBlock)CustomZFPlayerControlViewBlock{
-    _CustomZFPlayerControlViewBlock = CustomZFPlayerControlViewBlock;
+-(void)gestureDoubleTapped:(ZFPlayerGestureControl *)gestureControl{
+    
+}
+
+-(void)gestureBeganPan:(ZFPlayerGestureControl *)gestureControl
+          panDirection:(ZFPanDirection)direction
+           panLocation:(ZFPanLocation)location{
+    
+}
+
+-(void)gestureChangedPan:(ZFPlayerGestureControl *)gestureControl
+            panDirection:(ZFPanDirection)direction
+             panLocation:(ZFPanLocation)location
+            withVelocity:(CGPoint)velocity{
+    
+}
+
+-(void)gestureEndedPan:(ZFPlayerGestureControl *)gestureControl
+          panDirection:(ZFPanDirection)direction
+           panLocation:(ZFPanLocation)location{
+    
+}
+
+-(void)gesturePinched:(ZFPlayerGestureControl *)gestureControl
+                scale:(float)scale{
+    
 }
 
 @end
