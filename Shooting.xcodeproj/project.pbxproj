@@ -23,6 +23,7 @@
 		C51A0BF725020E1B00884016 /* 空白图.png in Resources */ = {isa = PBXBuildFile; fileRef = C51A0BF625020E1B00884016 /* 空白图.png */; };
 		C51A0BFA250210BC00884016 /* Lock@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51A0BF8250210BC00884016 /* Lock@3x.png */; };
 		C51A0BFB250210BC00884016 /* Lock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51A0BF9250210BC00884016 /* Lock@2x.png */; };
+		C52E89722510B4820070356F /* UITextField+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C52E89702510B4820070356F /* UITextField+Extend.m */; };
 		C52EE27124FF647D0033CD47 /* 倒计时 开启状态@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52EE26D24FF647C0033CD47 /* 倒计时 开启状态@2x.png */; };
 		C52EE27224FF647D0033CD47 /* 倒计时 关闭状态@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52EE26E24FF647C0033CD47 /* 倒计时 关闭状态@2x.png */; };
 		C52EE27324FF647D0033CD47 /* 倒计时 关闭状态@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52EE26F24FF647D0033CD47 /* 倒计时 关闭状态@3x.png */; };
@@ -414,6 +415,8 @@
 		C51A0BF625020E1B00884016 /* 空白图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "空白图.png"; sourceTree = "<group>"; };
 		C51A0BF8250210BC00884016 /* Lock@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lock@3x.png"; sourceTree = "<group>"; };
 		C51A0BF9250210BC00884016 /* Lock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lock@2x.png"; sourceTree = "<group>"; };
+		C52E89702510B4820070356F /* UITextField+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extend.m"; sourceTree = "<group>"; };
+		C52E89712510B4820070356F /* UITextField+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extend.h"; sourceTree = "<group>"; };
 		C52EE26D24FF647C0033CD47 /* 倒计时 开启状态@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倒计时 开启状态@2x.png"; sourceTree = "<group>"; };
 		C52EE26E24FF647C0033CD47 /* 倒计时 关闭状态@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倒计时 关闭状态@2x.png"; sourceTree = "<group>"; };
 		C52EE26F24FF647D0033CD47 /* 倒计时 关闭状态@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倒计时 关闭状态@3x.png"; sourceTree = "<group>"; };
@@ -1119,6 +1122,15 @@
 				C51A0BE3250203BD00884016 /* DoorInputViewStyle_3.m */,
 			);
 			path = "输入框样式_3";
+			sourceTree = "<group>";
+		};
+		C52E896F2510B4780070356F /* UITextField+Extend */ = {
+			isa = PBXGroup;
+			children = (
+				C52E89712510B4820070356F /* UITextField+Extend.h */,
+				C52E89702510B4820070356F /* UITextField+Extend.m */,
+			);
+			path = "UITextField+Extend";
 			sourceTree = "<group>";
 		};
 		C55497A024F38CB20065510D /* GPUImage */ = {
@@ -1979,6 +1991,7 @@
 		C58F014124EA5CAC00B6D09C /* UITextField */ = {
 			isa = PBXGroup;
 			children = (
+				C52E896F2510B4780070356F /* UITextField+Extend */,
 				C58F014224EA5CAC00B6D09C /* HQTextField */,
 				C58F014524EA5CAC00B6D09C /* CJTextField */,
 				C58F014824EA5CAC00B6D09C /* ZYTextField */,
@@ -3256,6 +3269,7 @@
 				C58F032224EA68B500B6D09C /* LGiOSBtn.m in Sources */,
 				C58F018424EA5CAC00B6D09C /* UIView+Chain.m in Sources */,
 				C58F019424EA5CAC00B6D09C /* HQTextField.m in Sources */,
+				C52E89722510B4820070356F /* UITextField+Extend.m in Sources */,
 				C58F01AA24EA5CAD00B6D09C /* ViewForFooter.m in Sources */,
 				C58F019124EA5CAC00B6D09C /* TBVCell_style_02.m in Sources */,
 				C58F02B324EA61C600B6D09C /* LOTPathInterpolator.m in Sources */,
