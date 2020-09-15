@@ -323,7 +323,7 @@
                                         message:@"请重新输入"
                                 isSeparateStyle:NO
                                     btnTitleArr:@[@"好的"]
-                                 alertBtnAction:@[@"reInputAuthCode"]
+                                 alertBtnAction:@[@""]
                                        targetVC:tbvc
                                    alertVCBlock:^(id data) {
                     //DIY
@@ -334,7 +334,7 @@
                                     message:@"请重新输入"
                             isSeparateStyle:NO
                                 btnTitleArr:@[@"好的"]
-                             alertBtnAction:@[@"reInputCode"]
+                             alertBtnAction:@[@""]
                                    targetVC:tbvc
                                alertVCBlock:^(id data) {
                 //DIY

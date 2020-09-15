@@ -98,8 +98,6 @@ UITextViewDelegate
     [self choosePicBtnClickEvent:nil];
 }
 
--(void)OK{}
-
 -(void)KK{
     if (self.imgData && ![NSString isNullString:self.textView.text]) {
         self.releaseBtn.userInteractionEnabled = YES;
@@ -349,7 +347,7 @@ shouldChangeTextInRange:(NSRange)range
                                             message:nil
                                     isSeparateStyle:NO
                                         btnTitleArr:@[@"确定"]
-                                     alertBtnAction:@[@"OK"]
+                                     alertBtnAction:@[@""]
                                            targetVC:self
                                        alertVCBlock:^(id data) {
                         //DIY
