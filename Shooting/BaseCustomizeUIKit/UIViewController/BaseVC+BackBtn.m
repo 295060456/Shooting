@@ -53,7 +53,9 @@ static char *BaseVC_BackBtn_backBtnCategory = "BaseVC_BackBtn_backBtnCategory";
                          forState:UIControlStateNormal];
         [BackBtnCategory setImage:kIMG(@"back_white")
                          forState:UIControlStateNormal];
+        @weakify(self)
         [[BackBtnCategory rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
             [self backBtnClickEvent:x];
         }];
         objc_setAssociatedObject(self,

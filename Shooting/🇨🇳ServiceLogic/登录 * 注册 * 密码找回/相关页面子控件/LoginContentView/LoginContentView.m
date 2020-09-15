@@ -211,8 +211,10 @@
                         forState:UIControlStateNormal];
         [_toRegisterBtn setImage:kIMG(@"用户名称")
               forState:UIControlStateNormal];
+        @weakify(self)
         [[_toRegisterBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             NSLog(@"新用户注册");
+            @strongify(self)
             if (self.loginContentViewBlock) {
                 self.loginContentViewBlock(self->_toRegisterBtn);
             }
@@ -295,8 +297,10 @@
                        forState:UIControlStateNormal];
         [_storeCodeBtn setImage:kIMG(@"没有记住密码")
                        forState:UIControlStateSelected];
+        @weakify(self)
         [[_storeCodeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             NSLog(@"存储密码");
+            strongify(sel@f)
             if (self.loginContentViewBlock) {
                 self.loginContentViewBlock(self->_storeCodeBtn);
             }
@@ -321,7 +325,9 @@
                        forState:UIControlStateNormal];
         [_forgetCodeBtn setImage:kIMG(@"KKK")
                        forState:UIControlStateNormal];
+        @weakify(self)
         [[_forgetCodeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
             if (self.loginContentViewBlock) {
                 self.loginContentViewBlock(self->_forgetCodeBtn);
             }
@@ -429,7 +435,9 @@
                    forState:UIControlStateNormal];
         [_loginBtn setTitleColor:kWhiteColor
                         forState:UIControlStateNormal];
+        @weakify(self)
         [[_loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
             [self endEditing:YES];
             NSLog(@"登录");
             //各种判断过滤在内层做处理，在外层就直接用最终结果
@@ -454,10 +462,12 @@
                          forState:UIControlStateNormal];
         [_giveUpLoginBtn.titleLabel sizeToFit];
         _giveUpLoginBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
+        @weakify(self)
         [[_giveUpLoginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
             NSLog(@"先去逛逛");
             if (self.loginContentViewBlock) {
-                self.loginContentViewBlock(self->_giveUpLoginBtn);
+                self.loginContentViewBlock(self->_giveUpLoginBtn)\
             }
         }];
         [self addSubview:_giveUpLoginBtn];

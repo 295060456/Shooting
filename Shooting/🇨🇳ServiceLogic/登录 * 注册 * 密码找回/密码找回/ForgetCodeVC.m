@@ -281,7 +281,9 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
                    forState:UIControlStateNormal];
         [_nextStepBtn setTitleColor:kWhiteColor
                         forState:UIControlStateNormal];
+        @weakify(self)
         [[_nextStepBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
             [self.view endEditing:YES];
             
             switch (self.Step) {
@@ -322,7 +324,9 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
                     
                     [self->_nextStepBtn setTitle:@"去登陆"
                                         forState:UIControlStateNormal];
+                    @weakify(self)
                     [[self->_nextStepBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+                        @strongify(self)
                         NSLog(@"去登陆");
                         [self backBtnClickEvent:x];
                     }];
@@ -472,7 +476,9 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
                                                         weight:UIFontWeightLight];
         [_successBtn setImage:kIMG(@"密码修改成功")
                      forState:UIControlStateNormal];
+        @weakify(self)
         [[_successBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
             NSLog(@"密码修改成功");
         }];
         [self.view addSubview:_successBtn];

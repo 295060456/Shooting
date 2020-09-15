@@ -53,7 +53,9 @@
         _agreementBtn.titleLabel.textColor = RGBCOLOR(78, 110, 255);
         [_agreementBtn sizeToFit];
         [_agreementBtn.titleLabel adjustsFontSizeToFitWidth];
+        @weakify(self)
         [[_agreementBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
             if (self.agreementViewBtnBlock) {
                 self.agreementViewBtnBlock(x);
             }

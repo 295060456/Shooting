@@ -385,8 +385,10 @@
                                          imageTitleSpace:8];
         [_backToLoginBtn setImage:kIMG(@"用户名称")
               forState:UIControlStateNormal];
+        @weakify(self)
         [[_backToLoginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             NSLog(@"返回登录");
+            @strongify(self)
             if (self.registerContentViewBlock) {
                 self.registerContentViewBlock(self->_backToLoginBtn);
             }
@@ -424,7 +426,9 @@
                         forState:UIControlStateNormal];
         [_toRegisterBtn setTitleColor:kWhiteColor
                         forState:UIControlStateNormal];
+        @weakify(self)
         [[_toRegisterBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
             [self endEditing:YES];
             NSLog(@"注册");
 #warning message

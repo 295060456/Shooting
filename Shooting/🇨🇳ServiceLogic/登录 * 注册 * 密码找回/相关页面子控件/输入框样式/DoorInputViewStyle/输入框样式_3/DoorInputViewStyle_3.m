@@ -102,7 +102,9 @@ UITextFieldDelegate
               forState:UIControlStateSelected];
         [_btn setImage:self.btnUnSelectedIMG
               forState:UIControlStateNormal];
+        @weakify(self)
         [[_btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
             NSLog(@"");
             x.selected = !x.selected;
         }];
