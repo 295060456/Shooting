@@ -39,12 +39,12 @@
                           AndCornerRadius:8];
         self.backgroundColor = KLightGrayColor;
         [self keyboard];
+        [self makeInputView];
     }return self;
 }
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
-    [self makeInputView];
     self.registerContentViewRect = self.frame;
 }
 
@@ -146,6 +146,9 @@
                                                cornerRadii:CGSizeMake((inputView.tf.mj_h) / 4, (inputView.tf.mj_h) / 4)];
         }else{
             DoorInputViewStyle_3 *inputView = DoorInputViewStyle_3.new;
+            
+            inputView.isShowSecurityMode = YES;
+            
             inputView.titleStr = self.titleStrMutArr[t];
             UIImageView *imgv = UIImageView.new;
             imgv.image = self.headerImgMutArr[t];

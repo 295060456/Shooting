@@ -16,6 +16,7 @@ UITextFieldDelegate
 
 @property(nonatomic,strong)UILabel *titleLab;
 @property(nonatomic,copy)MKDataBlock doorInputViewStyle_1Block;
+@property(nonatomic,assign)int time;
 
 @end
 
@@ -23,7 +24,10 @@ UITextFieldDelegate
 
 -(instancetype)init{
     if (self = [super init]) {
-        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(doorInputViewStyle_1Notification:)
+                                                     name:@"短信验证码时间"
+                                                   object:nil];
     }return self;
 }
 
@@ -33,7 +37,6 @@ UITextFieldDelegate
         self.titleLab.text = self.titleStr;
     }
     self.tf.alpha = 1;
-    self.countDownBtn.alpha = 1;
 }
 #pragma mark —— CJTextFieldDeleteDelegate
 - (void)cjTextFieldDeleteBackward:(CJTextField *)textField{
@@ -50,7 +53,7 @@ UITextFieldDelegate
 //- (BOOL)textFieldShouldEndEditing:(UITextField *)textField;
 //告诉委托人对指定的文本字段停止编辑
 - (void)textFieldDidEndEditing:(UITextField *)textField{
-    [self.tf isValidate:@""];
+    [self.tf isEmptyText];
 }
 //告诉委托人对指定的文本字段停止编辑
 //- (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason;
@@ -65,6 +68,12 @@ UITextFieldDelegate
 
 -(void)actionBlockdoorInputViewStyle_1:(MKDataBlock)doorInputViewStyle_1Block{
     _doorInputViewStyle_1Block = doorInputViewStyle_1Block;
+}
+
+-(void)doorInputViewStyle_1Notification:(NSNotification *)notification{
+    NSString *info = notification.object;
+    self.time = info.intValue;
+    self.countDownBtn.alpha = 1;
 }
 #pragma mark —— lazyLoad
 -(UILabel *)titleLab{
@@ -105,28 +114,23 @@ UITextFieldDelegate
         _countDownBtn = [[UIButton alloc] initWithType:CountDownBtnType_countDown
                                                runType:CountDownBtnRunType_manual
                                       layerBorderWidth:0
-                                     layerCornerRadius:0
+                                     layerCornerRadius:6
                                       layerBorderColor:nil
                                             titleColor:kWhiteColor
                                          titleBeginStr:@"发送验证码"
                                         titleLabelFont:[UIFont systemFontOfSize:8
                                                                          weight:UIFontWeightRegular]];
-        _countDownBtn.titleBeginStr = @"发送验证码";
         _countDownBtn.titleRuningStr = @"重新发送\n";
         _countDownBtn.titleLabel.numberOfLines = 0;
         _countDownBtn.titleEndStr = @"重新发送";
         _countDownBtn.backgroundColor = kBlackColor;
         _countDownBtn.alpha = 0.7f;
-        _countDownBtn.titleColor = kWhiteColor;
         _countDownBtn.bgCountDownColor = kBlackColor;//倒计时的时候此btn的背景色
         _countDownBtn.bgEndColor = kBlackColor;//倒计时完全结束后的背景色
-        _countDownBtn.layerCornerRadius = 6;
         _countDownBtn.showTimeType = ShowTimeType_SS;
-        _countDownBtn.titleLabelFont = [UIFont systemFontOfSize:8
-                                                         weight:UIFontWeightRegular];
         _countDownBtn.countDownBtnNewLineType = CountDownBtnNewLineType_newLine;
         
-        [_countDownBtn timeFailBeginFrom:30];//注销这句话就是手动启动，放开这句话就是自启动
+        [_countDownBtn timeFailBeginFrom:self.time];//注销这句话就是手动启动，放开这句话就是自启动
         
         @weakify(self)
         [_countDownBtn actionCountDownClickEventBlock:^(id data) {

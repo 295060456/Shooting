@@ -27,6 +27,7 @@
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnSelectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnUnselectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*placeHolderMutArr;
+@property(nonatomic,strong)NSMutableArray *historyDataMutArr;
 @property(nonatomic,assign)BOOL isOpen;
 @property(nonatomic,assign)BOOL isEdit;//本页面是否当下正处于编辑状态
 @property(nonatomic,assign)CGRect registerContentViewRect;
@@ -62,8 +63,22 @@
 }
 
 -(void)makeInputView{
+    
+    if (GetUserDefaultValueForKey(@"Acc")) {
+        [self.historyDataMutArr addObject:GetUserDefaultValueForKey(@"Acc")];
+    }
+    
+    if (GetUserDefaultValueForKey(@"Password")) {
+        [self.historyDataMutArr addObject:GetUserDefaultValueForKey(@"Password")];
+    }
+    
     for (int t = 0; t < self.headerImgMutArr.count; t++) {
         DoorInputViewStyle_3 *inputView = DoorInputViewStyle_3.new;
+        
+        if (t == 1) {
+            inputView.isShowSecurityMode = YES;
+        }
+        
         UIImageView *imgv = UIImageView.new;
         imgv.image = self.headerImgMutArr[t];
         inputView.inputViewWidth = 250;
@@ -72,6 +87,7 @@
                                                     weight:UIFontWeightRegular];
         inputView.tf.ZYtextColor = kWhiteColor;
         inputView.tf.ZYtintColor = kWhiteColor;
+        
         inputView.tf.ZYplaceholderLabelFont_1 = inputView.tf.ZYtextFont;
         inputView.tf.ZYplaceholderLabelFont_2 = inputView.tf.ZYtextFont;
         inputView.tf.ZYplaceholderLabelTextColor_1 = inputView.tf.ZYtextColor;
@@ -83,6 +99,11 @@
         inputView.btnUnSelectedIMG = self.btnUnselectedImgMutArr[t];
         [self.inputViewMutArr addObject:inputView];
 
+        if (GetUserDefaultValueForKey(@"Acc") &&
+            GetUserDefaultValueForKey(@"Password")) {
+            inputView.tf.text = self.historyDataMutArr[t];
+        }
+        
         [self addSubview:inputView];
         [inputView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.toRegisterBtn.mas_left).offset(-10);
@@ -192,7 +213,20 @@
         self.isOpen = NO;
     }];
 }
-
+///记住账户和密码：前提条件（登录成功以后）
+-(void)storeAcc_Code{
+    if (self.storeCodeBtn.selected) {
+        DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.inputViewMutArr[0];
+        DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[1];
+        if (![NSString isNullString:用户名.tf.text] && ![NSString isNullString:密码.tf.text]) {
+            //存密码
+            SetUserDefaultKeyWithValue(@"Acc", 用户名.tf.text);
+            SetUserDefaultKeyWithValue(@"Password", 密码.tf.text);
+            UserDefaultSynchronize;
+        }
+    }
+}
+///各种按钮的点击事件回调
 -(void)actionLoginContentViewBlock:(MKDataBlock)loginContentViewBlock{
     _loginContentViewBlock = loginContentViewBlock;
 }
@@ -215,6 +249,7 @@
         [[_toRegisterBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             NSLog(@"新用户注册");
             @strongify(self)
+            [self endEditing:YES];
             if (self.loginContentViewBlock) {
                 self.loginContentViewBlock(self->_toRegisterBtn);
             }
@@ -258,8 +293,8 @@
 -(NSMutableArray<NSString *> *)placeHolderMutArr{
     if (!_placeHolderMutArr) {
         _placeHolderMutArr = NSMutableArray.array;
-        [_placeHolderMutArr addObject:@"用户名"];
-        [_placeHolderMutArr addObject:@"密码"];
+        [_placeHolderMutArr addObject:@"4-11位字母或数字的用户名"];
+        [_placeHolderMutArr addObject:@"6-12位字母或数字的密码"];
     }return _placeHolderMutArr;
 }
 
@@ -291,16 +326,19 @@
         _storeCodeBtn.titleLabel.textColor = KLightGrayColor;
         _storeCodeBtn.titleLabel.font = [UIFont systemFontOfSize:10
                                                           weight:UIFontWeightRegular];
+        _storeCodeBtn.selected = YES;
         [_storeCodeBtn setTitle:@"记住密码"
                        forState:UIControlStateNormal];
         [_storeCodeBtn setImage:kIMG(@"记住密码")
-                       forState:UIControlStateNormal];
-        [_storeCodeBtn setImage:kIMG(@"没有记住密码")
                        forState:UIControlStateSelected];
+        [_storeCodeBtn setImage:kIMG(@"没有记住密码")
+                       forState:UIControlStateNormal];
         @weakify(self)
         [[_storeCodeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
             NSLog(@"存储密码");
-            strongify(sel@f)
+            self.storeCodeBtn.selected = !self.storeCodeBtn.selected;
+            
             if (self.loginContentViewBlock) {
                 self.loginContentViewBlock(self->_storeCodeBtn);
             }
@@ -440,12 +478,7 @@
             @strongify(self)
             [self endEditing:YES];
             NSLog(@"登录");
-            //各种判断过滤在内层做处理，在外层就直接用最终结果
-            if (self.loginContentViewBlock) {
-                self.loginContentViewBlock(self->_loginBtn);
-            }
-#warning message
-//            [self startToRegisterBtn];//加了判断的 不能删
+            [self startToRegisterBtn];//加了判断的 不能删
         }];
         [UIView cornerCutToCircleWithView:_loginBtn
                           AndCornerRadius:16];
@@ -467,7 +500,7 @@
             @strongify(self)
             NSLog(@"先去逛逛");
             if (self.loginContentViewBlock) {
-                self.loginContentViewBlock(self->_giveUpLoginBtn)\
+                self.loginContentViewBlock(self->_giveUpLoginBtn);
             }
         }];
         [self addSubview:_giveUpLoginBtn];
@@ -479,5 +512,10 @@
     }return _giveUpLoginBtn;
 }
 
+-(NSMutableArray *)historyDataMutArr{
+    if (!_historyDataMutArr) {
+        _historyDataMutArr = NSMutableArray.array;
+    }return _historyDataMutArr;
+}
 
 @end

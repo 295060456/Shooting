@@ -16,11 +16,12 @@ ZFPlayerController *ZFPlayer_DoorVC;
 
 @interface DoorVC ()
 
+@property(nonatomic,strong)UIButton *backBtn;
 @property(nonatomic,strong)ZFPlayerController *player;
 @property(nonatomic,strong)ZFAVPlayerManager *playerManager;
-@property(nonatomic,strong)CustomZFPlayerControlView *customPlayerControlView;
-@property(nonatomic,strong)RegisterContentView *registerContentView;
-@property(nonatomic,strong)LogoContentView *logoContentView;
+@property(nonatomic,strong,nullable)CustomZFPlayerControlView *customPlayerControlView;
+@property(nonatomic,strong,nullable)RegisterContentView *registerContentView;//注册页面
+@property(nonatomic,strong,nullable)LogoContentView *logoContentView;
 
 @property(nonatomic,strong)id requestParams;
 @property(nonatomic,copy)MKDataBlock successBlock;
@@ -33,6 +34,22 @@ ZFPlayerController *ZFPlayer_DoorVC;
 
 - (void)dealloc {
     NSLog(@"Running self.class = %@;NSStringFromSelector(_cmd) = '%@';__FUNCTION__ = %s", self.class, NSStringFromSelector(_cmd),__FUNCTION__);
+
+    [_logoContentView removeFromSuperview];
+    [_loginContentView removeFromSuperview];
+    [_registerContentView removeFromSuperview];
+    [_backBtn removeFromSuperview];
+    _logoContentView = nil;
+    _loginContentView = nil;
+    _registerContentView = nil;
+    _backBtn = nil;
+    
+    [_customPlayerControlView removeFromSuperview];
+    _customPlayerControlView = nil;
+    [_player.currentPlayerManager stop];
+    _playerManager = nil;
+    _player = nil;
+    PrintRetainCount(self);
 }
 
 + (instancetype)ComingFromVC:(UIViewController *)rootVC
@@ -82,6 +99,7 @@ ZFPlayerController *ZFPlayer_DoorVC;
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.player.currentPlayerManager play];
+    [UIView animationAlert:self.backBtn];
     self.loginContentView.alpha = 0.7;
     [UIView animationAlert:self.logoContentView];
     IQKeyboardManager.sharedManager.enable = NO;
@@ -141,10 +159,7 @@ ZFPlayerController *ZFPlayer_DoorVC;
                     [self.view endEditing:YES];
                     DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.loginContentView.inputViewMutArr[0];
                     DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.loginContentView.inputViewMutArr[1];
-                    
-//                    [self login_networkingWithUserName:lowerMD5_64Salt(用户名.tf.text)
-//                                              passWord:lowerMD5_64Salt(密码.tf.text)
-//                                            originType:originType_Apple];
+
                 }else if ([btn.titleLabel.text isEqualToString:@"先去逛逛"]){
                     [self backBtnClickEvent:nil];
                 }else{
@@ -189,16 +204,10 @@ ZFPlayerController *ZFPlayer_DoorVC;
                     [self.loginContentView showLoginContentViewWithOffsetY:0];
                     [self.registerContentView removeRegisterContentViewWithOffsetY:0];
                     //注册成功即登录
-                    DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[0];
-                    DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[1];
-                    DoorInputViewStyle_3 *确认密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[2];
+//                    DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[0];
+//                    DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[1];
+//                    DoorInputViewStyle_3 *确认密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[2];
 //                    DoorInputViewStyle_2 *填写验证码 = (DoorInputViewStyle_2 *)self.registerContentView.inputViewMutArr[3];
-//                    [self register_networkingWithAccount:用户名.tf.text
-//                                                password:lowerMD5_64Salt(密码.tf.text)
-//                                         confirmPassword:lowerMD5_64Salt(确认密码.tf.text)
-//                                              captchaKey:self.captchaKey
-//                                                 imgCode:填写验证码.tf.text
-//                                              originType:originType_Apple];//来源:0、苹果；1、安卓；2、H5
                 }else{}
             }
         }];
@@ -296,6 +305,26 @@ ZFPlayerController *ZFPlayer_DoorVC;
             make.centerX.equalTo(self.view);
         }];
     }return _logoContentView;
+}
+
+-(UIButton *)backBtn{
+    if (!_backBtn) {
+        _backBtn = UIButton.new;
+        [_backBtn setImage:kIMG(@"登录注册关闭")
+                  forState:UIControlStateNormal];
+        @weakify(self)
+        [[_backBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
+            [self backBtnClickEvent:x];
+        }];
+        [self.view addSubview:_backBtn];
+        [_backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(50, 50));
+            make.top.mas_equalTo(@50);
+            make.right.equalTo(self.view).offset(-25);
+        }];
+        
+    }return _backBtn;
 }
 
 @end

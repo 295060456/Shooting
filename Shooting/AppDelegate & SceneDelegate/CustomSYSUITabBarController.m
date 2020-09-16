@@ -12,7 +12,7 @@
 #import "ViewController@1.h"
 #import "ViewController@2.h"
 
-//#import "ViewController@5.h"
+#import "ViewController@5.h"
 #import "PhotoVC.h"//拍照
 
 #import "ViewController@3.h"
@@ -183,7 +183,7 @@ CGFloat LZB_TABBAR_HEIGHT;
         [_viewControllerMutArr addObject:ViewController_2.new];
         [_viewControllerMutArr addObject:PhotoVC.new];
         [_viewControllerMutArr addObject:ViewController_3.new];
-        [_viewControllerMutArr addObject:ViewController_4.new];
+        [_viewControllerMutArr addObject:ViewController_5.new];
     }return _viewControllerMutArr;
 }
 

@@ -14,8 +14,8 @@ UITextFieldDelegate
 ,CJTextFieldDeleteDelegate
 >
 
-@property(nonatomic,strong)UIButton *btn;
 @property(nonatomic,strong)UILabel *titleLab;
+@property(nonatomic,strong)UIButton *securityModeBtn;
 
 @end
 
@@ -33,6 +33,11 @@ UITextFieldDelegate
         self.titleLab.text = self.titleStr;
     }
     self.tf.alpha = 1;
+    if (self.isShowSecurityMode) {
+        self.securityModeBtn.alpha = self.isShowSecurityMode;
+        self.securityModeBtn.selected = self.isShowSecurityMode;
+        self.tf.secureTextEntry = self.isShowSecurityMode;
+    }
 }
 #pragma mark —— CJTextFieldDeleteDelegate
 - (void)cjTextFieldDeleteBackward:(CJTextField *)textField{
@@ -49,7 +54,7 @@ UITextFieldDelegate
 //- (BOOL)textFieldShouldEndEditing:(UITextField *)textField;
 //告诉委托人对指定的文本字段停止编辑
 - (void)textFieldDidEndEditing:(UITextField *)textField{
-    [self.tf isValidate:@""];
+    [self.tf isEmptyText];
 }
 //告诉委托人对指定的文本字段停止编辑
 //- (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason;
@@ -95,26 +100,26 @@ UITextFieldDelegate
     }return _tf;
 }
 
--(UIButton *)btn{
-    if (!_btn) {
-        _btn = UIButton.new;
-        [_btn setImage:self.btnSelectedIMG
-              forState:UIControlStateSelected];
-        [_btn setImage:self.btnUnSelectedIMG
-              forState:UIControlStateNormal];
+-(UIButton *)securityModeBtn{
+    if (!_securityModeBtn) {
+        _securityModeBtn = UIButton.new;
+        [_securityModeBtn setImage:self.btnSelectedIMG
+                          forState:UIControlStateNormal];
+        [_securityModeBtn setImage:self.btnUnSelectedIMG
+                          forState:UIControlStateSelected];
         @weakify(self)
-        [[_btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [[_securityModeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self)
-            NSLog(@"");
             x.selected = !x.selected;
+            [self.tf setIsShowSecurityMode:x.selected];
         }];
-        [self addSubview:_btn];
-        [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(16, 16));
-            make.centerY.equalTo(self);
-            make.left.equalTo(self.tf.mas_right);
+        [self.tf addSubview:_securityModeBtn];
+        [_securityModeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.tf).offset(-20);
+            make.size.mas_equalTo(CGSizeMake(20, 20));
+            make.centerY.equalTo(self.tf);
         }];
-    }return _btn;
+    }return _securityModeBtn;
 }
 
 @end

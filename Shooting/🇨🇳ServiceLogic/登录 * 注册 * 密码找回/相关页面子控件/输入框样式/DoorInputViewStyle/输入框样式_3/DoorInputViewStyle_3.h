@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UIImage *btnSelectedIMG;
 @property(nonatomic,strong)UIImage *btnUnSelectedIMG;
 @property(nonatomic,assign)CGFloat inputViewWidth;
+@property(nonatomic,assign)BOOL isShowSecurityMode;
 
 @end
 

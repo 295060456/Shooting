@@ -63,6 +63,11 @@
 		C572A28024FBDEF2000A1687 /* 播放@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C572A27E24FBDEF2000A1687 /* 播放@3x.png */; };
 		C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A28224FBE933000A1687 /* UIImage+Tailor.m */; };
 		C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */ = {isa = PBXBuildFile; fileRef = C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */; };
+		C57AC031251104E3009EE44D /* testVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C57AC030251104E3009EE44D /* testVC.m */; };
+		C57AC0382511DC43009EE44D /* closeCircle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57AC0362511DC42009EE44D /* closeCircle@3x.png */; };
+		C57AC0392511DC43009EE44D /* closeCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57AC0372511DC42009EE44D /* closeCircle@2x.png */; };
+		C57AC0482511DFF0009EE44D /* 登录注册关闭@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57AC0462511DFF0009EE44D /* 登录注册关闭@2x.png */; };
+		C57AC0492511DFF0009EE44D /* 登录注册关闭@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57AC0472511DFF0009EE44D /* 登录注册关闭@3x.png */; };
 		C57C229A250240B500FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */; };
 		C57C22AE250263F100FAAA3F /* CustomZFPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C22AD250263F100FAAA3F /* CustomZFPlayerControlView.m */; };
 		C57C22B325026BE500FAAA3F /* 记住密码@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57C22AF25026BE500FAAA3F /* 记住密码@2x.png */; };
@@ -486,6 +491,12 @@
 		C572A28124FBE933000A1687 /* UIImage+Tailor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tailor.h"; sourceTree = "<group>"; };
 		C572A28224FBE933000A1687 /* UIImage+Tailor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tailor.m"; sourceTree = "<group>"; };
 		C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "验证码按钮单例封装"; sourceTree = "<group>"; };
+		C57AC02F251104E3009EE44D /* testVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testVC.h; sourceTree = "<group>"; };
+		C57AC030251104E3009EE44D /* testVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testVC.m; sourceTree = "<group>"; };
+		C57AC0362511DC42009EE44D /* closeCircle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeCircle@3x.png"; sourceTree = "<group>"; };
+		C57AC0372511DC42009EE44D /* closeCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeCircle@2x.png"; sourceTree = "<group>"; };
+		C57AC0462511DFF0009EE44D /* 登录注册关闭@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录注册关闭@2x.png"; sourceTree = "<group>"; };
+		C57AC0472511DFF0009EE44D /* 登录注册关闭@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录注册关闭@3x.png"; sourceTree = "<group>"; };
 		C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		C57C2299250240B500FAAA3F /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		C57C22AC250263F100FAAA3F /* CustomZFPlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomZFPlayerControlView.h; sourceTree = "<group>"; };
@@ -1174,6 +1185,8 @@
 				C58F032A24EA69D400B6D09C /* ViewController@4.m */,
 				C58F032D24EA69D400B6D09C /* ViewController@5.h */,
 				C58F033124EA69D400B6D09C /* ViewController@5.m */,
+				C57AC02F251104E3009EE44D /* testVC.h */,
+				C57AC030251104E3009EE44D /* testVC.m */,
 			);
 			path = OtherVC;
 			sourceTree = "<group>";
@@ -1409,6 +1422,8 @@
 			isa = PBXGroup;
 			children = (
 				C589607D25010CC0002B1764 /* 找回密码流程图 */,
+				C57AC0462511DFF0009EE44D /* 登录注册关闭@2x.png */,
+				C57AC0472511DFF0009EE44D /* 登录注册关闭@3x.png */,
 				C57C22AF25026BE500FAAA3F /* 记住密码@2x.png */,
 				C57C22B225026BE500FAAA3F /* 记住密码@3x.png */,
 				C51A0BF625020E1B00884016 /* 空白图.png */,
@@ -2020,6 +2035,8 @@
 		C58F014824EA5CAC00B6D09C /* ZYTextField */ = {
 			isa = PBXGroup;
 			children = (
+				C57AC0372511DC42009EE44D /* closeCircle@2x.png */,
+				C57AC0362511DC42009EE44D /* closeCircle@3x.png */,
 				C58F014C24EA5CAC00B6D09C /* ZYTextField.h */,
 				C58F014A24EA5CAC00B6D09C /* ZYTextField.m */,
 				C58F014924EA5CAC00B6D09C /* ZYTextField_01.h */,
@@ -2993,6 +3010,8 @@
 				C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */,
 				C51A0BE825020A3B00884016 /* closeCircle@2x.png in Resources */,
 				C59D9B0324F9045E00A74CE9 /* 闪光灯-关闭@3x.png in Resources */,
+				C57AC0392511DC43009EE44D /* closeCircle@2x.png in Resources */,
+				C57AC0482511DFF0009EE44D /* 登录注册关闭@2x.png in Resources */,
 				C589608825010CD9002B1764 /* di_3@2x.png in Resources */,
 				C58F03AB24EA6E7600B6D09C /* MyStore@2x.png in Resources */,
 				C58F03A824EA6E7600B6D09C /* Home@3x.png in Resources */,
@@ -3042,6 +3061,7 @@
 				C51A0BF525020B6F00884016 /* codeDecode@2x.png in Resources */,
 				C51A0BED25020ADF00884016 /* codeEncode@3x.png in Resources */,
 				C58F01C124EA5E5E00B6D09C /* Sound.wav in Resources */,
+				C57AC0382511DC43009EE44D /* closeCircle@3x.png in Resources */,
 				C59D9B0524F9045E00A74CE9 /* 闪光灯-自动@3x.png in Resources */,
 				C51A0BF725020E1B00884016 /* 空白图.png in Resources */,
 				C58F048224EBD78500B6D09C /* day_like_red@2x.png in Resources */,
@@ -3072,6 +3092,7 @@
 				C58F03AE24EA6E7600B6D09C /* ShoppingCart@2x.png in Resources */,
 				C589608525010CD9002B1764 /* di_1@2x.png in Resources */,
 				C51A0BEC25020ADF00884016 /* codeEncode@2x.png in Resources */,
+				C57AC0492511DFF0009EE44D /* 登录注册关闭@3x.png in Resources */,
 				C5E5C67325091081001E69DA /* 删除视频@2x.png in Resources */,
 				C57C22B525026BE500FAAA3F /* 没有记住密码@2x.png in Resources */,
 				C59D9B1B24F9083200A74CE9 /* 删除@2x.png in Resources */,
@@ -3423,6 +3444,7 @@
 				C58F018A24EA5CAC00B6D09C /* LMHWaterFallLayout.m in Sources */,
 				C58F02A124EA61C600B6D09C /* LOTKeypath.m in Sources */,
 				C58F02E324EA632800B6D09C /* FileFolderHandleTool.m in Sources */,
+				C57AC031251104E3009EE44D /* testVC.m in Sources */,
 				C58F02B824EA61C600B6D09C /* LOTRadialGradientLayer.m in Sources */,
 				C58F00E524EA581F00B6D09C /* BRDatePickerView+BR.m in Sources */,
 				C5AA490F250C8F04009F583F /* NSObject+SYSAlertController.m in Sources */,

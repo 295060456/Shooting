@@ -45,6 +45,26 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
 
 - (void)dealloc {
     NSLog(@"Running self.class = %@;NSStringFromSelector(_cmd) = '%@';__FUNCTION__ = %s", self.class, NSStringFromSelector(_cmd),__FUNCTION__);
+
+    [_step_01 removeFromSuperview];
+    [_step_02 removeFromSuperview];
+    [_findCodeFlowChartView removeFromSuperview];
+    [_successBtn removeFromSuperview];
+    [_tipsLab removeFromSuperview];
+    [_nextStepBtn removeFromSuperview];
+    _step_01 = nil;
+    _step_02 = nil;
+    _findCodeFlowChartView = nil;
+    _successBtn = nil;
+    _tipsLab = nil;
+    _nextStepBtn = nil;
+    
+    [_customPlayerControlView removeFromSuperview];
+    _customPlayerControlView = nil;
+    [_player.currentPlayerManager stop];
+    _playerManager = nil;
+    _player = nil;
+    PrintRetainCount(self);
 }
 
 + (instancetype)ComingFromVC:(UIViewController *)rootVC
