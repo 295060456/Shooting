@@ -31,6 +31,7 @@
 @property(nonatomic,assign)BOOL isOpen;
 @property(nonatomic,assign)BOOL isEdit;//本页面是否当下正处于编辑状态
 @property(nonatomic,assign)CGRect registerContentViewRect;
+@property(nonatomic,assign)BOOL allowClickBtn;
 
 @end
 
@@ -62,6 +63,37 @@
     self.registerContentViewRect = self.frame;
 }
 
+-(BOOL)judgementAcc:(NSString *)string{
+    if (string.length >= 4) {
+        return YES;
+    }return NO;
+}
+
+-(BOOL)judgementCode:(NSString *)string{
+    if (string.length >= 6) {
+        return YES;
+    }return NO;
+}
+/// 需求：在用户名中输入满4位，同时在密码中输入满6位
+/// @param placeholder 用于定位是哪个TF
+/// @param judgementStr 需要判定的字符
+-(void)tfPlaceholder:(NSString *)placeholder
+        judgementStr:(NSString *)judgementStr{
+    if ([placeholder isEqualToString:self.placeHolderMutArr[0]]) {//用户名
+        self.allowClickBtn = [self judgementAcc:judgementStr];
+    }else if ([placeholder isEqualToString:self.placeHolderMutArr[1]]){//密码
+        self.allowClickBtn = [self judgementCode:judgementStr];
+    }else{}
+    
+    self.loginBtn.enabled = self.allowClickBtn;
+    
+    if (self.allowClickBtn) {
+        self.loginBtn.alpha = 1;
+    }else{
+        self.loginBtn.alpha = .7;
+    }
+}
+
 -(void)makeInputView{
     
     if (GetUserDefaultValueForKey(@"Acc")) {
@@ -74,6 +106,33 @@
     
     for (int t = 0; t < self.headerImgMutArr.count; t++) {
         DoorInputViewStyle_3 *inputView = DoorInputViewStyle_3.new;
+        @weakify(self)
+        [inputView actionBlockDoorInputViewStyle_3:^(DoorInputViewStyle_3 *data,
+                                                     ZYTextField *data2,//目前受影响的TF
+                                                     NSString *data3,//正向输入的值
+                                                     NSString *data4) {//调用方法名，决定是删除还是加字符
+            @strongify(self)
+            NSString *str;
+            //删除的话：系统先走textField:shouldChangeCharactersInRange:replacementString: 再走cjTextFieldDeleteBackward:
+            if ([data4 isEqualToString:@"cjTextFieldDeleteBackward:"]) {
+                NSLog(@"");
+                str = data2.text;//最新的值，已经被删除过后的值
+            }else if ([data4 isEqualToString:@"textFieldDidEndEditing:"]){
+                NSLog(@"");
+                str = data2.text;//最新的值，已经被删除过后的值
+            }else if ([data4 isEqualToString:@"textField:shouldChangeCharactersInRange:replacementString:"]){
+                NSLog(@"");
+                if ([NSString isNullString:data3]) {//删除
+                    str = [data2.text substringWithRange:NSMakeRange(0, data2.text.length - 1)];//删除：新值 = 旧值（data2.text） - 最后的一个字符
+                }else{
+                    //正向输入
+                    str = [data2.text stringByAppendingString:data3];
+                }
+            }else{}
+            
+            [self tfPlaceholder:data2.placeholder
+                   judgementStr:str];
+        }];
         
         if (t == 1) {
             inputView.isShowSecurityMode = YES;
@@ -102,8 +161,9 @@
         if (GetUserDefaultValueForKey(@"Acc") &&
             GetUserDefaultValueForKey(@"Password")) {
             inputView.tf.text = self.historyDataMutArr[t];
+            [self tfPlaceholder:inputView.tf.placeholder
+                   judgementStr:inputView.tf.text];
         }
-        
         [self addSubview:inputView];
         [inputView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.toRegisterBtn.mas_left).offset(-10);
@@ -454,6 +514,7 @@
 -(UIButton *)loginBtn{
     if (!_loginBtn) {
         _loginBtn = UIButton.new;
+        _loginBtn.enabled = NO;
         [self addSubview:_loginBtn];
         [_loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self);
@@ -463,12 +524,14 @@
         [self layoutIfNeeded];
         [UIView setView:_loginBtn
                   layer:_loginBtn.titleLabel.layer
-          gradientLayer:RGBCOLOR(247,
-                                 131,
-                                 97)
-               endColor:RGBCOLOR(245,
-                                 75,
-                                 100)];
+          gradientLayer:COLOR_RGB(247,
+                                  131,
+                                  97,
+                                  1)
+               endColor:COLOR_RGB(245,
+                                  75,
+                                  100,
+                                  1)];
         [_loginBtn setTitle:@"登录"
                    forState:UIControlStateNormal];
         [_loginBtn setTitleColor:kWhiteColor
