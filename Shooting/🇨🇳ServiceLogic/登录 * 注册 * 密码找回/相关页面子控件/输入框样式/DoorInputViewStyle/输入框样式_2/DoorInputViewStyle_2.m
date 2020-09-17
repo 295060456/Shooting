@@ -15,7 +15,8 @@ UITextFieldDelegate
 >
 
 @property(nonatomic,strong)UILabel *titleLab;
-@property(nonatomic,copy)MKDataBlock doorInputViewStyle_2Block;
+@property(nonatomic,copy)MKDataBlock doorInputViewStyle_2ImageCodeBlock;
+@property(nonatomic,copy)FourDataBlock doorInputViewStyle_2Block;
 
 @end
 
@@ -37,35 +38,63 @@ UITextFieldDelegate
 }
 #pragma mark —— CJTextFieldDeleteDelegate
 - (void)cjTextFieldDeleteBackward:(CJTextField *)textField{
-    
+    if (self.doorInputViewStyle_2Block) {
+        self.doorInputViewStyle_2Block(self,
+                                       textField,
+                                       @"",
+                                       NSStringFromSelector(_cmd));
+    }
 }
 #pragma mark —— UITextFieldDelegate
 //询问委托人是否应该在指定的文本字段中开始编辑
-//- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField;
-//告诉委托人在指定的文本字段中开始编辑
-- (void)textFieldDidBeginEditing:(UITextField *)textField{
-
+- (BOOL)textFieldShouldBeginEditing:(ZYTextField *)textField{
+    return textField.isEditting = YES;
 }
+//告诉委托人在指定的文本字段中开始编辑
+//- (void)textFieldDidBeginEditing:(ZYTextField *)textField{}
 //询问委托人是否应在指定的文本字段中停止编辑
-//- (BOOL)textFieldShouldEndEditing:(UITextField *)textField;
+- (BOOL)textFieldShouldEndEditing:(ZYTextField *)textField{
+    textField.isEditting = NO;
+    return YES;
+}
 //告诉委托人对指定的文本字段停止编辑
-- (void)textFieldDidEndEditing:(UITextField *)textField{
+- (void)textFieldDidEndEditing:(ZYTextField *)textField{
     [self.tf isEmptyText];
+    if (self.doorInputViewStyle_2Block) {
+        self.doorInputViewStyle_2Block(self,
+                                       textField,
+                                       @"",
+                                       NSStringFromSelector(_cmd));
+    }
 }
 //告诉委托人对指定的文本字段停止编辑
 //- (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason;
 //询问委托人是否应该更改指定的文本
-//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
+- (BOOL)textField:(UITextField *)textField
+shouldChangeCharactersInRange:(NSRange)range
+replacementString:(NSString *)string{
+    if (self.doorInputViewStyle_2Block) {
+        self.doorInputViewStyle_2Block(self,
+                                       textField,
+                                       string,
+                                       NSStringFromSelector(_cmd));
+    }return YES;
+}
 //询问委托人是否应删除文本字段的当前内容
 //- (BOOL)textFieldShouldClear:(UITextField *)textField;
 //询问委托人文本字段是否应处理按下返回按钮
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+- (BOOL)textFieldShouldReturn:(ZYTextField *)textField{
     [self endEditing:YES];
+    textField.isEditting = NO;
     return YES;
 }
 
--(void)actionBlockDoorInputViewStyle_2:(MKDataBlock)doorInputViewStyle_2Block{
+-(void)actionBlockDoorInputViewStyle_2:(FourDataBlock)doorInputViewStyle_2Block{
     _doorInputViewStyle_2Block = doorInputViewStyle_2Block;
+}
+
+-(void)actionBlockDoorInputViewStyle_2ImageCode:(MKDataBlock)doorInputViewStyle_2ImageCodeBlock{
+    _doorInputViewStyle_2ImageCodeBlock = doorInputViewStyle_2ImageCodeBlock;
 }
 #pragma mark —— lazyLoad
 -(UILabel *)titleLab{
@@ -86,6 +115,8 @@ UITextFieldDelegate
         _tf = ZYTextField.new;
         _tf.delegate = self;
         _tf.cj_delegate = self;
+        _tf.returnKeyType = UIReturnKeyDone;
+        _tf.keyboardAppearance = UIKeyboardAppearanceAlert;
         _tf.backgroundColor = kBlackColor;
         _tf.alpha = 0.7;
         [self addSubview:_tf];
@@ -105,12 +136,13 @@ UITextFieldDelegate
 -(ImageCodeView *)imageCodeView{
     if (!_imageCodeView) {
         _imageCodeView = ImageCodeView.new;
-        _imageCodeView.alpha = 1;
+        _imageCodeView.alpha = 0.7;
+        _imageCodeView.bgColor = kBlackColor;
         @weakify(self)
         [_imageCodeView actionBlockImageCodeView:^(id data) {
             @strongify(self)
-            if (self.doorInputViewStyle_2Block) {
-                self.doorInputViewStyle_2Block(data);
+            if (self.doorInputViewStyle_2ImageCodeBlock) {
+                self.doorInputViewStyle_2ImageCodeBlock(data);
             }
         }];
         [self addSubview:_imageCodeView];

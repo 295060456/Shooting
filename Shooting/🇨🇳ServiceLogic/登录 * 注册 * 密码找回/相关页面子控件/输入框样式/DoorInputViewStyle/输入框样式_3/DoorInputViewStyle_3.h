@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)CGFloat inputViewWidth;
 @property(nonatomic,assign)BOOL isShowSecurityMode;
 
+-(void)actionBlockDoorInputViewStyle_3:(FourDataBlock)doorInputViewStyle_3Block;//监测输入字符回调
+
 @end
 
 NS_ASSUME_NONNULL_END

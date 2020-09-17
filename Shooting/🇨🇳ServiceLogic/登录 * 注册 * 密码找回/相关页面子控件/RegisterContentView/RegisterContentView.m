@@ -10,9 +10,7 @@
 
 @class DoorInputViewStyle;
 
-@interface RegisterContentView (){
-    CGFloat k;
-}
+@interface RegisterContentView ()
 
 @property(nonatomic,strong)UILabel *titleLab;
 @property(nonatomic,strong)UIButton *backToLoginBtn;//返回登录
@@ -25,7 +23,7 @@
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnSelectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnUnselectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*placeHolderMutArr;
-@property(nonatomic,assign)BOOL isOpen;
+@property(nonatomic,assign)BOOL isOpen;//本页面是否正在激活状态
 @property(nonatomic,assign)BOOL isEdit;//本页面是否当下正处于编辑状态
 @property(nonatomic,assign)CGRect registerContentViewRect;
 
@@ -59,6 +57,11 @@
 -(void)makeInputView{
     for (int t = 0; t < self.headerImgMutArr.count - 1; t++) {
         DoorInputViewStyle_3 *inputView = DoorInputViewStyle_3.new;
+        
+        if (t == 1 || t == 2) {
+            inputView.isShowSecurityMode = YES;
+        }
+        
         UIImageView *imgv = UIImageView.new;
         imgv.image = self.headerImgMutArr[t];
         inputView.inputViewWidth = 250;
@@ -96,7 +99,7 @@
 
     DoorInputViewStyle_2 *inputView = DoorInputViewStyle_2.new;
     @weakify(self)
-    [inputView actionBlockDoorInputViewStyle_2:^(id data) {
+    [inputView actionBlockDoorInputViewStyle_2ImageCode:^(id data) {
         @strongify(self)
         if (self.registerContentViewAuthcodeBlock) {
             self.registerContentViewAuthcodeBlock(data);
@@ -187,32 +190,30 @@
         CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
         CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
         CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
-        NSLog(@"KeyboardOffsetY = %f",KeyboardOffsetY);
-        NSLog(@"MMM beginFrameY = %f,endFrameY = %f",beginFrame.origin.y,endFrame.origin.y);
         
         CGFloat offset = 100;
-        if (KeyboardOffsetY > 0) {//弹出
-            self.isEdit = YES;
-            k = endFrame.origin.y - self.mj_h - offset;
-        }else if (KeyboardOffsetY < 0){//回落
-            self.isEdit = NO;
-        }else{
-//界面上有多个输入框，当放弃一个输入框焦点的同同时激活一个输入框焦点，此时虽然走这个方法但是键盘的起始位置和终点位置重合，表现出来就是KeyboardOffsetY == 0
-            self.isEdit = YES;//(50 164.333; 275 270.667)
-        }
         
-        if (self.isEdit) {
-            if (self.registerContentViewRect.origin.y == self.mj_y) {
-                [self showRegisterContentViewWithOffsetY:k];
-            }
-        }else{
-            if (self.registerContentViewRect.origin.y != self.mj_y) {
-                [self showRegisterContentViewWithOffsetY:-k];
-            }
-        }
+        DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.inputViewMutArr[0];
+        DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[1];
+        DoorInputViewStyle_3 *确认密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[2];
+        DoorInputViewStyle_2 *填写验证码 = (DoorInputViewStyle_2 *)self.inputViewMutArr[3];
 
-        if (self.registerContentViewKeyboardBlock) {
-            self.registerContentViewKeyboardBlock(@(KeyboardOffsetY));
+        self.isEdit = 用户名.tf.isEditting | 密码.tf.isEditting | 确认密码.tf.isEditting| 填写验证码.tf.isEditting;
+        
+        if (self.isOpen) {
+            if (self.isEdit) {
+                if (self.registerContentViewRect.origin.y == self.mj_y) {
+                    [self showRegisterContentViewWithOffsetY:offset];
+                }
+            }else{
+                if (self.registerContentViewRect.origin.y != self.mj_y) {
+                    [self showRegisterContentViewWithOffsetY:-offset];
+                }
+            }
+
+            if (self.registerContentViewKeyboardBlock) {
+                self.registerContentViewKeyboardBlock(@(KeyboardOffsetY));
+            }
         }
     }
 }
@@ -276,7 +277,6 @@
         ![NSString isNullString:填写验证码.tf.text]) {
         if ([密码.tf.text isEqualToString:确认密码.tf.text]) {
             if ([填写验证码.tf.text isEqualToString:填写验证码.imageCodeView.CodeStr]) {
-                
                 //自定义的一些内层规则
                 if (用户名.tf.text.length < 4 || 用户名.tf.text.length > 11) {
                     [NSObject showSYSAlertViewTitle:@"请输入4~11位字母或数字的用户名"
@@ -389,6 +389,7 @@
         [[_backToLoginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             NSLog(@"返回登录");
             @strongify(self)
+            [self endEditing:YES];
             if (self.registerContentViewBlock) {
                 self.registerContentViewBlock(self->_backToLoginBtn);
             }
@@ -474,10 +475,10 @@
 -(NSMutableArray<NSString *> *)placeHolderMutArr{
     if (!_placeHolderMutArr) {
         _placeHolderMutArr = NSMutableArray.array;
-        [_placeHolderMutArr addObject:@"用户名"];
-        [_placeHolderMutArr addObject:@"密码"];
-        [_placeHolderMutArr addObject:@"确认密码"];
-        [_placeHolderMutArr addObject:@"填写验证码"];
+        [_placeHolderMutArr addObject:@"4-11位紫米或数字的用户名"];
+        [_placeHolderMutArr addObject:@"6-12位字母或数字的密码"];
+        [_placeHolderMutArr addObject:@"确认6-12位字母或数字的密码"];
+        [_placeHolderMutArr addObject:@"请输入验证码"];
     }return _placeHolderMutArr;
 }
 

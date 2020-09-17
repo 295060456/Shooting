@@ -9,9 +9,7 @@
 #import "LoginContentView.h"
 #import "ForgetCodeVC.h"
 
-@interface LoginContentView (){
-    CGFloat k;
-}
+@interface LoginContentView ()
 
 @property(nonatomic,strong)UILabel *titleLab;
 @property(nonatomic,strong)UIButton *storeCodeBtn;//记住密码
@@ -28,7 +26,7 @@
 @property(nonatomic,strong)NSMutableArray <UIImage *>*btnUnselectedImgMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*placeHolderMutArr;
 @property(nonatomic,strong)NSMutableArray *historyDataMutArr;
-@property(nonatomic,assign)BOOL isOpen;
+@property(nonatomic,assign)BOOL isOpen;//本页面是否正在激活状态
 @property(nonatomic,assign)BOOL isEdit;//本页面是否当下正处于编辑状态
 @property(nonatomic,assign)CGRect registerContentViewRect;
 @property(nonatomic,assign)BOOL allowClickBtn;
@@ -197,32 +195,28 @@
 }
 
 -(void)keyboardWillChangeFrameNotification:(NSNotification *)notification{//键盘 弹出 和 收回 走这个方法
+    NSDictionary *userInfo = notification.userInfo;
+    CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
+    
+    CGFloat offset = 80;
+    
+    DoorInputViewStyle_3 *用户名 = self.inputViewMutArr[0];
+    DoorInputViewStyle_3 *密码 = self.inputViewMutArr[1];
+    
+    self.isEdit = 用户名.tf.isEditting | 密码.tf.isEditting;
+    
+    NSLog(@"SSS = %d",self.isEdit);
+    
     if (self.isOpen){
-        NSDictionary *userInfo = notification.userInfo;
-        CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-        CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-        CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
-        NSLog(@"KeyboardOffsetY = %f",KeyboardOffsetY);
-        NSLog(@"MMM beginFrameY = %f,endFrameY = %f",beginFrame.origin.y,endFrame.origin.y);
-        CGFloat offset = 100;
-
-        if (KeyboardOffsetY > 0) {//弹出
-            self.isEdit = YES;
-            k = endFrame.origin.y - self.mj_h - offset;
-        }else if (KeyboardOffsetY < 0){//回落
-            self.isEdit = NO;
-        }else{
-//界面上有多个输入框，当放弃一个输入框焦点的同同时激活一个输入框焦点，此时虽然走这个方法但是键盘的起始位置和终点位置重合，表现出来就是KeyboardOffsetY == 0
-            self.isEdit = YES;//(50 164.333; 275 270.667)
-        }
-        
         if (self.isEdit) {
             if (self.registerContentViewRect.origin.y == self.mj_y) {
-                [self showLoginContentViewWithOffsetY:k];
+                [self showLoginContentViewWithOffsetY:offset];
             }
         }else{
             if (self.registerContentViewRect.origin.y != self.mj_y) {
-                [self showLoginContentViewWithOffsetY:-k];
+                [self showLoginContentViewWithOffsetY:-offset];
             }
         }
         

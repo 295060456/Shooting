@@ -63,7 +63,6 @@
 		C572A28024FBDEF2000A1687 /* 播放@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C572A27E24FBDEF2000A1687 /* 播放@3x.png */; };
 		C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A28224FBE933000A1687 /* UIImage+Tailor.m */; };
 		C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */ = {isa = PBXBuildFile; fileRef = C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */; };
-		C57AC031251104E3009EE44D /* testVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C57AC030251104E3009EE44D /* testVC.m */; };
 		C57AC0382511DC43009EE44D /* closeCircle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57AC0362511DC42009EE44D /* closeCircle@3x.png */; };
 		C57AC0392511DC43009EE44D /* closeCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57AC0372511DC42009EE44D /* closeCircle@2x.png */; };
 		C57AC0482511DFF0009EE44D /* 登录注册关闭@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57AC0462511DFF0009EE44D /* 登录注册关闭@2x.png */; };
@@ -76,6 +75,8 @@
 		C57C22B625026BE500FAAA3F /* 记住密码@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57C22B225026BE500FAAA3F /* 记住密码@3x.png */; };
 		C57C22B825026E4600FAAA3F /* KKK.png in Resources */ = {isa = PBXBuildFile; fileRef = C57C22B725026E4600FAAA3F /* KKK.png */; };
 		C57C22BB2502717C00FAAA3F /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C22BA2502717C00FAAA3F /* UIView+Gradient.m */; };
+		C57D5B1825134D950073F90B /* DoorVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C57D5B1725134D950073F90B /* DoorVC+VM.m */; };
+		C57D5B1B25134E290073F90B /* NSObject+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = C57D5B1A25134E290073F90B /* NSObject+Login.m */; };
 		C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589604E2500AC91002B1764 /* ImageCodeView.m */; };
 		C58960562500B0E0002B1764 /* LogoContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960552500B0E0002B1764 /* LogoContentView.m */; };
 		C58960592500B0F6002B1764 /* RegisterContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960582500B0F6002B1764 /* RegisterContentView.m */; };
@@ -344,7 +345,6 @@
 		C5AA490E250C8F04009F583F /* NSObject+SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA490B250C8F04009F583F /* NSObject+SPAlertController.m */; };
 		C5AA490F250C8F04009F583F /* NSObject+SYSAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA490C250C8F04009F583F /* NSObject+SYSAlertController.m */; };
 		C5B5EF26250CCE3E00DCDA93 /* NSObject+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B5EF24250CCE3E00DCDA93 /* NSObject+Shake.m */; };
-		C5B5EF29250CCE5F00DCDA93 /* NSObject+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B5EF28250CCE5F00DCDA93 /* NSObject+Login.m */; };
 		C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */; };
 		C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9B24FF5D33000A26B8 /* GCD_TimerManager.m */; };
 		C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9D24FF5D3B000A26B8 /* Nanosecond_TimerManager.m */; };
@@ -508,6 +508,10 @@
 		C57C22B725026E4600FAAA3F /* KKK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KKK.png; sourceTree = "<group>"; };
 		C57C22B92502717C00FAAA3F /* UIView+Gradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Gradient.h"; sourceTree = "<group>"; };
 		C57C22BA2502717C00FAAA3F /* UIView+Gradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gradient.m"; sourceTree = "<group>"; };
+		C57D5B1625134D950073F90B /* DoorVC+VM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DoorVC+VM.h"; sourceTree = "<group>"; };
+		C57D5B1725134D950073F90B /* DoorVC+VM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DoorVC+VM.m"; sourceTree = "<group>"; };
+		C57D5B1925134E280073F90B /* NSObject+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Login.h"; sourceTree = "<group>"; };
+		C57D5B1A25134E290073F90B /* NSObject+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Login.m"; sourceTree = "<group>"; };
 		C589604D2500AC91002B1764 /* ImageCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCodeView.h; sourceTree = "<group>"; };
 		C589604E2500AC91002B1764 /* ImageCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCodeView.m; sourceTree = "<group>"; };
 		C58960542500B0E0002B1764 /* LogoContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoContentView.h; sourceTree = "<group>"; };
@@ -1011,8 +1015,6 @@
 		C5AA490D250C8F04009F583F /* NSObject+SPAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SPAlertController.h"; sourceTree = "<group>"; };
 		C5B5EF24250CCE3E00DCDA93 /* NSObject+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Shake.m"; sourceTree = "<group>"; };
 		C5B5EF25250CCE3E00DCDA93 /* NSObject+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Shake.h"; sourceTree = "<group>"; };
-		C5B5EF27250CCE5F00DCDA93 /* NSObject+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Login.h"; sourceTree = "<group>"; };
-		C5B5EF28250CCE5F00DCDA93 /* NSObject+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Login.m"; sourceTree = "<group>"; };
 		C5C67C4324FE382C000A26B8 /* ViewController@1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController@1.h"; sourceTree = "<group>"; };
 		C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CADisplayLink_TimerManager.m; sourceTree = "<group>"; };
 		C5C67C9824FF5D28000A26B8 /* CADisplayLink_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADisplayLink_TimerManager.h; sourceTree = "<group>"; };
@@ -1466,8 +1468,12 @@
 		C58960782500E8CC002B1764 /* 登录 * 注册 */ = {
 			isa = PBXGroup;
 			children = (
+				C57D5B1925134E280073F90B /* NSObject+Login.h */,
+				C57D5B1A25134E290073F90B /* NSObject+Login.m */,
 				C589605F2500B196002B1764 /* DoorVC.h */,
 				C58960602500B196002B1764 /* DoorVC.m */,
+				C57D5B1625134D950073F90B /* DoorVC+VM.h */,
+				C57D5B1725134D950073F90B /* DoorVC+VM.m */,
 			);
 			path = "登录 * 注册";
 			sourceTree = "<group>";
@@ -2131,8 +2137,6 @@
 			isa = PBXGroup;
 			children = (
 				C5AA4909250C8EFB009F583F /* NSObject+Alert */,
-				C5B5EF27250CCE5F00DCDA93 /* NSObject+Login.h */,
-				C5B5EF28250CCE5F00DCDA93 /* NSObject+Login.m */,
 				C58F017B24EA5CAC00B6D09C /* NSObject+Extras.h */,
 				C58F017F24EA5CAC00B6D09C /* NSObject+Extras.m */,
 				C5B5EF25250CCE3E00DCDA93 /* NSObject+Shake.h */,
@@ -3344,7 +3348,6 @@
 				C58F019C24EA5CAD00B6D09C /* BaseVC+GifImageView.m in Sources */,
 				C58F00E424EA581F00B6D09C /* BRStringPickerView.m in Sources */,
 				C58F02DF24EA62E600B6D09C /* HistoryDataListTBV.m in Sources */,
-				C5B5EF29250CCE5F00DCDA93 /* NSObject+Login.m in Sources */,
 				C58F02B924EA61C600B6D09C /* LOTValueCallback.m in Sources */,
 				C58F033624EA69D400B6D09C /* ViewController@5.m in Sources */,
 				C58F018C24EA5CAC00B6D09C /* UIImageView+GIF.m in Sources */,
@@ -3444,10 +3447,10 @@
 				C58F018A24EA5CAC00B6D09C /* LMHWaterFallLayout.m in Sources */,
 				C58F02A124EA61C600B6D09C /* LOTKeypath.m in Sources */,
 				C58F02E324EA632800B6D09C /* FileFolderHandleTool.m in Sources */,
-				C57AC031251104E3009EE44D /* testVC.m in Sources */,
 				C58F02B824EA61C600B6D09C /* LOTRadialGradientLayer.m in Sources */,
 				C58F00E524EA581F00B6D09C /* BRDatePickerView+BR.m in Sources */,
 				C5AA490F250C8F04009F583F /* NSObject+SYSAlertController.m in Sources */,
+				C57D5B1825134D950073F90B /* DoorVC+VM.m in Sources */,
 				C58F02C224EA61C600B6D09C /* LOTPointInterpolator.m in Sources */,
 				C58F028C24EA61C600B6D09C /* LOTNumberInterpolator.m in Sources */,
 				C58F03BE24EA72BF00B6D09C /* ShowAvailableFont.m in Sources */,
@@ -3467,6 +3470,7 @@
 				C59D9AB324F8E8DC00A74CE9 /* MKShootVC+VM.m in Sources */,
 				C57C22AE250263F100FAAA3F /* CustomZFPlayerControlView.m in Sources */,
 				C58F02B124EA61C600B6D09C /* LOTShapeRepeater.m in Sources */,
+				C57D5B1B25134E290073F90B /* NSObject+Login.m in Sources */,
 				C58F030224EA645A00B6D09C /* NSObject+LBLaunchImage.m in Sources */,
 				C59D9AED24F8F08500A74CE9 /* ZZCountingLabel.m in Sources */,
 				C58F00E324EA581F00B6D09C /* BRResultModel.m in Sources */,

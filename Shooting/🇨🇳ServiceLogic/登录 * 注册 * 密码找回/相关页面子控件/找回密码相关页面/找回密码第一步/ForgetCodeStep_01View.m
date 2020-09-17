@@ -8,9 +8,7 @@
 
 #import "ForgetCodeStep_01View.h"
 
-@interface ForgetCodeStep_01View (){
-    CGFloat k;
-}
+@interface ForgetCodeStep_01View ()
 
 @property(nonatomic,copy)MKDataBlock forgetCodeStep_01ViewBlock;
 @property(nonatomic,copy)MKDataBlock forgetCodeStep_01ViewKeyboardBlock;
@@ -105,32 +103,28 @@
 }
 
 -(void)keyboardWillChangeFrameNotification:(NSNotification *)notification{//键盘 弹出 和 收回 走这个方法
+    NSDictionary *userInfo = notification.userInfo;
+    CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
+    
+    CGFloat offset = 80;
+    
+    DoorInputViewStyle_3 *用户名 = self.inputViewMutArr[0];
+    DoorInputViewStyle_3 *手机号码 = self.inputViewMutArr[1];
+    
+    self.isEdit = 用户名.tf.isEditting | 手机号码.tf.isEditting;
+    
+    NSLog(@"SSS = %d",self.isEdit);
+    
     if (self.isOpen){
-        NSDictionary *userInfo = notification.userInfo;
-        CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-        CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-        CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
-        NSLog(@"KeyboardOffsetY = %f",KeyboardOffsetY);
-        NSLog(@"MMM beginFrameY = %f,endFrameY = %f",beginFrame.origin.y,endFrame.origin.y);
-        CGFloat offset = 300;
-
-        if (KeyboardOffsetY > 0) {//弹出
-            self.isEdit = YES;
-            k = endFrame.origin.y - self.mj_h - offset;
-        }else if (KeyboardOffsetY < 0){//回落
-            self.isEdit = NO;
-        }else{
-//界面上有多个输入框，当放弃一个输入框焦点的同同时激活一个输入框焦点，此时虽然走这个方法但是键盘的起始位置和终点位置重合，表现出来就是KeyboardOffsetY == 0
-            self.isEdit = YES;//(50 164.333; 275 270.667)
-        }
-        
         if (self.isEdit) {
             if (self.registerContentViewRect.origin.y == self.mj_y) {
-                [self showForgetCodeStep_01ViewWithOffsetY:k];
+                [self showForgetCodeStep_01ViewWithOffsetY:offset];
             }
         }else{
             if (self.registerContentViewRect.origin.y != self.mj_y) {
-                [self showForgetCodeStep_01ViewWithOffsetY:-k];
+                [self showForgetCodeStep_01ViewWithOffsetY:-offset];
             }
         }
     }
@@ -198,7 +192,7 @@
     if (!_placeHolderMutArr) {
         _placeHolderMutArr = NSMutableArray.array;
         [_placeHolderMutArr addObject:@"4-11位字母或数字的用户名"];
-        [_placeHolderMutArr addObject:@"6-12位字母或数字的密码"];
+        [_placeHolderMutArr addObject:@"请输入11位手机号码"];
     }return _placeHolderMutArr;
 }
 

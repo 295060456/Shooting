@@ -20,7 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)CGFloat inputViewWidth;
 @property(nonatomic,assign)CGFloat inputViewHeight;
 
--(void)actionBlockdoorInputViewStyle_1:(MKDataBlock)doorInputViewStyle_1Block;
+-(void)actionBlockdoorInputViewStyle_1:(FourDataBlock)doorInputViewStyle_1Block;//监测输入字符回调
+-(void)actionBlockDoorInputViewStyle_1CountDownBtnClick:(MKDataBlock)doorInputViewStyle_1CountDownBtnClickBlock;//验证码按钮点击事件回调
 
 @end
 

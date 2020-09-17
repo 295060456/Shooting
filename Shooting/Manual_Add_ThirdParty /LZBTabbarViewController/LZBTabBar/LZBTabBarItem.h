@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Lottie.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

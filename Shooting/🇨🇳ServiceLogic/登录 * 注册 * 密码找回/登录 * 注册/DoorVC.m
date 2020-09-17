@@ -6,8 +6,9 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-//#import "DoorVC+VM.h"
+#import "DoorVC+VM.h"
 #import "CustomZFPlayerControlView.h"
+#import "NSObject+Login.h"
 
 #import "DoorVC.h"
 #import "ForgetCodeVC.h"
@@ -93,7 +94,7 @@ ZFPlayerController *ZFPlayer_DoorVC;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = KYellowColor;
+//    self.view.backgroundColor = KYellowColor;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -131,20 +132,22 @@ ZFPlayerController *ZFPlayer_DoorVC;
     if (!_loginContentView) {
         _loginContentView = LoginContentView.new;
         @weakify(self)
+//        [_loginContentView ];
+        
         [_loginContentView actionLoginContentViewBlock:^(id data) {
             @strongify(self)
             if ([data isKindOfClass:UIButton.class]) {
                 UIButton *btn = (UIButton *)data;
                 if ([btn.titleLabel.text isEqualToString:@"新\n用\n户\n注\n册"]) {
                     [self.registerContentView showRegisterContentViewWithOffsetY:0];
-//                    [NSObject getAuthCode_networking:^(id data) {
-//                        if ([data isKindOfClass:NSDictionary.class]) {
-//                            NSDictionary *dic = (NSDictionary *)data;
-//                            DoorInputViewStyle_2 *doorInputViewStyle_2 = (DoorInputViewStyle_2 *)self.registerContentView.inputViewMutArr.lastObject;
-//                            doorInputViewStyle_2.imageCodeView.CodeStr = dic[@"imgCode"];
-//                            self.captchaKey = dic[@"captchaKey"];
-//                        }
-//                    }];
+                    [NSObject getAuthCode_networking:^(id data) {
+                        if ([data isKindOfClass:NSDictionary.class]) {
+                            NSDictionary *dic = (NSDictionary *)data;
+                            DoorInputViewStyle_2 *doorInputViewStyle_2 = (DoorInputViewStyle_2 *)self.registerContentView.inputViewMutArr.lastObject;
+                            doorInputViewStyle_2.imageCodeView.CodeStr = dic[@"imgCode"];
+                            self.captchaKey = dic[@"captchaKey"];
+                        }
+                    }];
                     [self.loginContentView removeLoginContentViewWithOffsetY:0];
                 }else if ([btn.titleLabel.text isEqualToString:@"记住密码"]){
                     
@@ -159,7 +162,10 @@ ZFPlayerController *ZFPlayer_DoorVC;
                     [self.view endEditing:YES];
                     DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.loginContentView.inputViewMutArr[0];
                     DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.loginContentView.inputViewMutArr[1];
-
+                    
+                    [self login_networkingWithUserName:用户名.tf.text
+                                              passWord:密码.tf.text//lowerMD5_32Salt(密码.tf.text)//md5_32bits(密码.tf.text, YES)
+                                            originType:originType_Apple];
                 }else if ([btn.titleLabel.text isEqualToString:@"先去逛逛"]){
                     [self backBtnClickEvent:nil];
                 }else{
@@ -201,13 +207,17 @@ ZFPlayerController *ZFPlayer_DoorVC;
                     [self.loginContentView showLoginContentViewWithOffsetY:0];
                     [self.registerContentView removeRegisterContentViewWithOffsetY:0];
                 }else if ([btn.titleLabel.text isEqualToString:@"注册"]) {
-                    [self.loginContentView showLoginContentViewWithOffsetY:0];
-                    [self.registerContentView removeRegisterContentViewWithOffsetY:0];
                     //注册成功即登录
-//                    DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[0];
-//                    DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[1];
-//                    DoorInputViewStyle_3 *确认密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[2];
-//                    DoorInputViewStyle_2 *填写验证码 = (DoorInputViewStyle_2 *)self.registerContentView.inputViewMutArr[3];
+                    DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[0];
+                    DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[1];
+                    DoorInputViewStyle_3 *确认密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[2];
+                    DoorInputViewStyle_2 *填写验证码 = (DoorInputViewStyle_2 *)self.registerContentView.inputViewMutArr[3];
+                    [self register_networkingWithAccount:用户名.tf.text
+                                                password:密码.tf.text
+                                         confirmPassword:确认密码.tf.text
+                                              captchaKey:self.captchaKey
+                                                 imgCode:填写验证码.tf.text
+                                              originType:originType_Apple];//来源:0、苹果；1、安卓；2、H5
                 }else{}
             }
         }];
@@ -242,10 +252,6 @@ ZFPlayerController *ZFPlayer_DoorVC;
     }return _registerContentView;
 }
 
--(void)reInputAuthCode{
-    
-}
-
 -(void)reInputCode{
     DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[1];
     DoorInputViewStyle_3 *确认密码 = (DoorInputViewStyle_3 *)self.registerContentView.inputViewMutArr[2];
@@ -260,7 +266,14 @@ ZFPlayerController *ZFPlayer_DoorVC;
         
 //        _playerManager.assetURL = [NSURL URLWithString:@"https://www.apple.com/105/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/films/feature/iphone-x-feature-tpl-cc-us-20170912_1280x720h.mp4"];
 
-        if ([[UIDevice platformString] containsString:@"iPhone 11"]) {
+//        if ([[UIDevice platformString] containsString:@"iPhone 11"]) {
+//            _playerManager.assetURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"iph_X"
+//                                                                                             ofType:@"mp4"]];
+//        }else{
+//            _playerManager.assetURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"非iph_X"
+//                                                                                             ofType:@"mp4"]];
+//        }
+        if (kStatusBarHeight>20.0) {
             _playerManager.assetURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"iph_X"
                                                                                              ofType:@"mp4"]];
         }else{
@@ -272,11 +285,11 @@ ZFPlayerController *ZFPlayer_DoorVC;
 
 -(ZFPlayerController *)player{
     if (!_player) {
+        @weakify(self)
         _player = [[ZFPlayerController alloc] initWithPlayerManager:self.playerManager
                                                       containerView:self.view];
         _player.controlView = self.customPlayerControlView;
         ZFPlayer_DoorVC = _player;
-        @weakify(self)
         [_player setPlayerDidToEnd:^(id<ZFPlayerMediaPlayback>  _Nonnull asset) {
             @strongify(self)
             [self.playerManager replay];//设置循环播放

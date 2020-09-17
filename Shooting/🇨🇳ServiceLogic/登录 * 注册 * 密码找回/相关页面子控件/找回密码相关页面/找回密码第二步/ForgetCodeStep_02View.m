@@ -8,9 +8,7 @@
 
 #import "ForgetCodeStep_02View.h"
 
-@interface ForgetCodeStep_02View (){
-    CGFloat k;
-}
+@interface ForgetCodeStep_02View ()
 
 @property(nonatomic,copy)MKDataBlock forgetCodeStep_02ViewKeyboardBlock;
 @property(nonatomic,copy)MKDataBlock forgetCodeStep_02inputViewBlock;
@@ -62,31 +60,29 @@
 }
 
 -(void)keyboardWillChangeFrameNotification:(NSNotification *)notification{//键盘 弹出 和 收回 走这个方法
+    NSDictionary *userInfo = notification.userInfo;
+    CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
+    
+    CGFloat offset = 80;
+    
+    DoorInputViewStyle_1 *验证码 = (DoorInputViewStyle_1 *)self.inputViewMutArr[0];
+    DoorInputViewStyle_3 *新密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[1];
+    DoorInputViewStyle_3 *确认新密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[2];
+    
+    self.isEdit = 验证码.tf.isEditting | 新密码.tf.isEditting | 确认新密码.tf.isEditting;
+    
+    NSLog(@"SSS = %d",self.isEdit);
+    
     if (self.isOpen){
-        NSDictionary *userInfo = notification.userInfo;
-        CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-        CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-        CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
-        NSLog(@"KeyboardOffsetY = %f",KeyboardOffsetY);
-        NSLog(@"MMM beginFrameY = %f,endFrameY = %f",beginFrame.origin.y,endFrame.origin.y);
-        CGFloat offset = 200;
-        if (KeyboardOffsetY > 0) {//弹出
-            self.isEdit = YES;
-            k = endFrame.origin.y - self.mj_h - offset;
-        }else if (KeyboardOffsetY < 0){//回落
-            self.isEdit = NO;
-        }else{
-//界面上有多个输入框，当放弃一个输入框焦点的同同时激活一个输入框焦点，此时虽然走这个方法但是键盘的起始位置和终点位置重合，表现出来就是KeyboardOffsetY == 0
-            self.isEdit = YES;//(50 164.333; 275 270.667)
-        }
-        
         if (self.isEdit) {
             if (self.registerContentViewRect.origin.y == self.mj_y) {
-                [self showForgetCodeStep_02ViewWithOffsetY:k];
+                [self showForgetCodeStep_02ViewWithOffsetY:offset];
             }
         }else{
             if (self.registerContentViewRect.origin.y != self.mj_y) {
-                [self showForgetCodeStep_02ViewWithOffsetY:-k];
+                [self showForgetCodeStep_02ViewWithOffsetY:-offset];
             }
         }
     }
@@ -122,7 +118,7 @@
             inputView.tf.placeholder = self.placeHolderMutArr[t];
             [self.inputViewMutArr addObject:inputView];
             @weakify(self)
-            [inputView actionBlockdoorInputViewStyle_1:^(id data) {
+            [inputView actionBlockDoorInputViewStyle_1CountDownBtnClick:^(id data) {
                 @strongify(self)
                 if (self.forgetCodeStep_02inputViewBlock) {
                     self.forgetCodeStep_02inputViewBlock(data);

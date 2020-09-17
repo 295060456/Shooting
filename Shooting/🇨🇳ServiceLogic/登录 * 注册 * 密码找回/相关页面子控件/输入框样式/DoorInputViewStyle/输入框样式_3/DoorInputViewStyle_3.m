@@ -16,6 +16,7 @@ UITextFieldDelegate
 
 @property(nonatomic,strong)UILabel *titleLab;
 @property(nonatomic,strong)UIButton *securityModeBtn;
+@property(nonatomic,copy)FourDataBlock doorInputViewStyle_3Block;
 
 @end
 
@@ -39,33 +40,63 @@ UITextFieldDelegate
         self.tf.secureTextEntry = self.isShowSecurityMode;
     }
 }
+//删除的话：系统先走textField:shouldChangeCharactersInRange:replacementString: 再走cjTextFieldDeleteBackward:
 #pragma mark —— CJTextFieldDeleteDelegate
 - (void)cjTextFieldDeleteBackward:(CJTextField *)textField{
-    
+    if (self.doorInputViewStyle_3Block) {
+        self.doorInputViewStyle_3Block(self,
+                                       textField,
+                                       @"",
+                                       NSStringFromSelector(_cmd));
+    }
 }
 #pragma mark —— UITextFieldDelegate
 //询问委托人是否应该在指定的文本字段中开始编辑
-//- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField;
+- (BOOL)textFieldShouldBeginEditing:(ZYTextField *)textField{
+    return textField.isEditting = YES;
+}
 //告诉委托人在指定的文本字段中开始编辑
-- (void)textFieldDidBeginEditing:(UITextField *)textField{
-    
-}
+//- (void)textFieldDidBeginEditing:(UITextField *)textField{}
 //询问委托人是否应在指定的文本字段中停止编辑
-//- (BOOL)textFieldShouldEndEditing:(UITextField *)textField;
-//告诉委托人对指定的文本字段停止编辑
-- (void)textFieldDidEndEditing:(UITextField *)textField{
-    [self.tf isEmptyText];
+- (BOOL)textFieldShouldEndEditing:(ZYTextField *)textField{
+    textField.isEditting = NO;
+    return YES;
 }
 //告诉委托人对指定的文本字段停止编辑
-//- (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason;
+- (void)textFieldDidEndEditing:(ZYTextField *)textField{
+    [self.tf isEmptyText];
+    if (self.doorInputViewStyle_3Block) {
+        self.doorInputViewStyle_3Block(self,
+                                       textField,
+                                       @"",
+                                       NSStringFromSelector(_cmd));
+    }
+}
+//告诉委托人对指定的文本字段停止编辑
+//- (void)textFieldDidEndEditing:(UITextField *)textField
+//reason:(UITextFieldDidEndEditingReason)reason{}
 //询问委托人是否应该更改指定的文本
-//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
+- (BOOL)textField:(ZYTextField *)textField
+shouldChangeCharactersInRange:(NSRange)range
+replacementString:(NSString *)string{
+    if (self.doorInputViewStyle_3Block) {
+        self.doorInputViewStyle_3Block(self,
+                                       textField,
+                                       string,
+                                       NSStringFromSelector(_cmd));
+    }return YES;
+}
 //询问委托人是否应删除文本字段的当前内容
-//- (BOOL)textFieldShouldClear:(UITextField *)textField;
+//- (BOOL)textFieldShouldClear:(UITextField *)textField
 //询问委托人文本字段是否应处理按下返回按钮
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+- (BOOL)textFieldShouldReturn:(ZYTextField *)textField{
     [self endEditing:YES];
+    textField.isEditting = NO;
     return YES;
+}
+
+-(void)actionBlockDoorInputViewStyle_3:(FourDataBlock)doorInputViewStyle_3Block{
+    _doorInputViewStyle_3Block = doorInputViewStyle_3Block;
 }
 #pragma mark —— lazyLoad
 -(UILabel *)titleLab{
@@ -86,6 +117,8 @@ UITextFieldDelegate
         _tf = ZYTextField.new;
         _tf.delegate = self;
         _tf.backgroundColor = kBlackColor;
+        _tf.returnKeyType = UIReturnKeyDone;
+        _tf.keyboardAppearance = UIKeyboardAppearanceAlert;
         _tf.alpha = 0.7;
         _tf.cj_delegate = self;
         [self addSubview:_tf];

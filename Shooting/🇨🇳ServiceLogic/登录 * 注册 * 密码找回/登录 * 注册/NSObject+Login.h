@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///登录模块 在适当的时候调用
 +(void)Login;
 ///权限校验
-+(void)checkAuthority:(MKDataBlock)checkRes;
++(void)checkAuthorityWithType:(MKLoginAuthorityType)type :(MKDataBlock)checkRes;
+///随机生成4位随机数
++(void)getAuthCode_networking:(MKDataBlock)authCodeBlock;
 
 @end
 
