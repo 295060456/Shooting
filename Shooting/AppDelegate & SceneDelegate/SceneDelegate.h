@@ -12,7 +12,6 @@
 
 @interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
 
-@property(nonatomic,strong)RACSignal *reqSignal;
 @property(nonatomic,strong)UIWindow *window;
 @property(nonatomic,strong)UIWindowScene *windowScene;
 @property(nonatomic,strong)CustomSYSUITabBarController *customSYSUITabBarController;

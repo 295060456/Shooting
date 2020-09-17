@@ -40,29 +40,10 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches
           withEvent:(UIEvent *)event{
-    self.spaVC = [self SPAlertControllerWithType:SPAlertControllerInitType_2
-                                           title:@"123"
-                                         message:@"14556"
-                                 customAlertView:nil
-                                customHeaderView:nil
-                        customActionSequenceView:nil
-                                  preferredStyle:SPAlertControllerStyleActionSheet
-                                   animationType:SPAlertAnimationTypeFromTop
-                             alertActionTitleArr:@[@"1",@"2"]
-                             alertActionStyleArr:@[@(SPAlertActionStyleDestructive),@(SPAlertActionStyleCancel)]
-                                  alertBtnAction:@[@"1",@"2"]
-                                    alertVCBlock:^(id data, id data2) {
-//        SPAlertController *vc = (SPAlertController *)data;
-        NSMutableArray <SPAlertAction *>*mutArr = (NSMutableArray *)data2;
-        SPAlertAction *spaAction = mutArr[0];
-        
-    }];
-    
+
     Ivar ivar = class_getInstanceVariable([SPAlertController class], "_headerView");//必须是下划线接属性
     UIView *view = object_getIvar(self.spaVC, ivar);
     view.backgroundColor = kRedColor;
-    
-
 
 }
 

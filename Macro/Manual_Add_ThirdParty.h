@@ -80,8 +80,6 @@
 #import "BaseVC+TZImagePickerController.h"
 #import "BaseVC+TZImagePickerControllerDelegate.h"
 #import "BaseVC+TZLocationManager.h"
-#import "BaseVC+SYSAlertController.h"
-#import "BaseVC+SPAlertController.h"
 #import "BaseVC+AFNReachability.h"
 #import "BaseVC+BackBtn.h"
 #import "BaseVC+JXCategoryListContentViewDelegate.h"
