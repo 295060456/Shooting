@@ -35,21 +35,6 @@ ZFPlayerController *ZFPlayer_DoorVC;
 
 - (void)dealloc {
     NSLog(@"Running self.class = %@;NSStringFromSelector(_cmd) = '%@';__FUNCTION__ = %s", self.class, NSStringFromSelector(_cmd),__FUNCTION__);
-
-    [_logoContentView removeFromSuperview];
-    [_loginContentView removeFromSuperview];
-    [_registerContentView removeFromSuperview];
-    [_backBtn removeFromSuperview];
-    _logoContentView = nil;
-    _loginContentView = nil;
-    _registerContentView = nil;
-    _backBtn = nil;
-    
-    [_customPlayerControlView removeFromSuperview];
-    _customPlayerControlView = nil;
-    [_player.currentPlayerManager stop];
-    _playerManager = nil;
-    _player = nil;
     PrintRetainCount(self);
 }
 
@@ -328,6 +313,23 @@ ZFPlayerController *ZFPlayer_DoorVC;
         @weakify(self)
         [[_backBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self)
+            
+            [self->_logoContentView removeFromSuperview];
+            [self->_loginContentView removeFromSuperview];
+            [self->_registerContentView removeFromSuperview];
+            [self->_backBtn removeFromSuperview];
+            
+            self->_logoContentView = nil;
+            self->_loginContentView = nil;
+            self->_registerContentView = nil;
+            self->_backBtn = nil;
+            
+            [self->_customPlayerControlView removeFromSuperview];
+            self->_customPlayerControlView = nil;
+            [self->_player.currentPlayerManager stop];
+            self->_playerManager = nil;
+            self->_player = nil;
+            
             [self backBtnClickEvent:x];
         }];
         [self.view addSubview:_backBtn];
