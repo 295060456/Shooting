@@ -17,6 +17,7 @@ UITextFieldDelegate
 @property(nonatomic,strong)UILabel *titleLab;
 @property(nonatomic,copy)MKDataBlock doorInputViewStyle_2ImageCodeBlock;
 @property(nonatomic,copy)FourDataBlock doorInputViewStyle_2Block;
+@property(nonatomic,assign)BOOL isOK;
 
 @end
 
@@ -30,11 +31,15 @@ UITextFieldDelegate
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
-    if (![NSString isNullString:self.titleStr]) {
-        self.titleLab.text = self.titleStr;
+    if (!self.isOK) {
+        if (![NSString isNullString:self.titleStr]) {
+            self.titleLab.text = self.titleStr;
+        }
+        self.tf.alpha = 1;
+        self.imageCodeView.alpha = 1;
+        self.isOK = YES;
     }
-    self.tf.alpha = 1;
-    self.imageCodeView.alpha = 1;
+
 }
 #pragma mark —— CJTextFieldDeleteDelegate
 - (void)cjTextFieldDeleteBackward:(CJTextField *)textField{

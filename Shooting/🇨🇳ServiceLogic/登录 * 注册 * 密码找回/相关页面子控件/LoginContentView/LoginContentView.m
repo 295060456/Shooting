@@ -30,6 +30,7 @@
 @property(nonatomic,assign)BOOL isEdit;//本页面是否当下正处于编辑状态
 @property(nonatomic,assign)CGRect registerContentViewRect;
 @property(nonatomic,assign)BOOL allowClickBtn;
+@property(nonatomic,assign)BOOL isOK;
 
 @end
 
@@ -51,14 +52,17 @@
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
-    self.titleLab.alpha = 1;
-    self.toRegisterBtn.alpha = 1;
-    [self makeInputView];
-    self.storeCodeBtn.alpha = 1;
-    self.forgetCodeBtn.alpha = 1;
-    self.loginBtn.alpha = 1;
-    self.giveUpLoginBtn.alpha = 1;
-    self.registerContentViewRect = self.frame;
+    if (!self.isOK) {
+        self.titleLab.alpha = 1;
+        self.toRegisterBtn.alpha = 1;
+        [self makeInputView];
+        self.storeCodeBtn.alpha = 1;
+        self.forgetCodeBtn.alpha = 1;
+        self.loginBtn.alpha = 1;
+        self.giveUpLoginBtn.alpha = 1;
+        self.registerContentViewRect = self.frame;
+        self.isOK = YES;
+    }
 }
 
 -(BOOL)judgementAcc:(NSString *)string{

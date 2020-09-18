@@ -17,6 +17,7 @@ UITextFieldDelegate
 @property(nonatomic,strong)UILabel *titleLab;
 @property(nonatomic,strong)UIButton *securityModeBtn;
 @property(nonatomic,copy)FourDataBlock doorInputViewStyle_3Block;
+@property(nonatomic,assign)BOOL isOK;
 
 @end
 
@@ -30,14 +31,17 @@ UITextFieldDelegate
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
-    if (![NSString isNullString:self.titleStr]) {
-        self.titleLab.text = self.titleStr;
-    }
-    self.tf.alpha = 1;
-    if (self.isShowSecurityMode) {
-        self.securityModeBtn.alpha = self.isShowSecurityMode;
-        self.securityModeBtn.selected = self.isShowSecurityMode;
-        self.tf.secureTextEntry = self.isShowSecurityMode;
+    if (!self.isOK) {
+        if (![NSString isNullString:self.titleStr]) {
+            self.titleLab.text = self.titleStr;
+        }
+        self.tf.alpha = 1;
+        if (self.isShowSecurityMode) {
+            self.securityModeBtn.alpha = self.isShowSecurityMode;
+            self.securityModeBtn.selected = self.isShowSecurityMode;
+            self.tf.secureTextEntry = self.isShowSecurityMode;
+        }
+        self.isOK = YES;
     }
 }
 //删除的话：系统先走textField:shouldChangeCharactersInRange:replacementString: 再走cjTextFieldDeleteBackward:

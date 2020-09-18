@@ -22,6 +22,7 @@
 @property(nonatomic,assign)BOOL isOpen;
 @property(nonatomic,assign)BOOL isEdit;//本页面是否当下正处于编辑状态
 @property(nonatomic,assign)CGRect registerContentViewRect;
+@property(nonatomic,assign)BOOL isOK;
 
 @end
 
@@ -42,8 +43,11 @@
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
-    [self makeInputView];
-    self.registerContentViewRect = self.frame;
+    if (self.isOK) {
+        [self makeInputView];
+        self.registerContentViewRect = self.frame;
+        self.isOK= YES;
+    }
 }
 
 -(void)makeInputView{

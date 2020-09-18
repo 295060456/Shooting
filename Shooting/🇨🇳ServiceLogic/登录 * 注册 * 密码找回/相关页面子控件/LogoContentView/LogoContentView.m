@@ -12,6 +12,7 @@
 
 @property(nonatomic,strong)UIImageView *mainImgV;
 @property(nonatomic,strong)UIImageView *subImgV;
+@property(nonatomic,assign)BOOL isOK;
 
 @end
 
@@ -24,14 +25,18 @@
 #pragma mark - Lifecycle
 -(instancetype)init{
     if (self = [super init]) {
-        
+        self.mainImgV.alpha = 1;
+        self.subImgV.alpha = 1;
     }return self;
 }
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
-    self.mainImgV.alpha = 1;
-    self.subImgV.alpha = 1;
+    if (!self.isOK) {
+        self.mainImgV.alpha = 1;
+        self.subImgV.alpha = 1;
+        self.isOK = YES;
+    }
 }
 
 #pragma mark —— lazyLoad

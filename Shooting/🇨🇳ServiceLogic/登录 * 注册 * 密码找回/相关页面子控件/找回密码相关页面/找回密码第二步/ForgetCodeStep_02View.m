@@ -21,6 +21,7 @@
 
 @property(nonatomic,assign)BOOL isOpen;
 @property(nonatomic,assign)BOOL isEdit;//本页面是否当下正处于编辑状态
+@property(nonatomic,assign)BOOL isOK;
 @property(nonatomic,assign)CGRect registerContentViewRect;
 
 @end
@@ -43,7 +44,10 @@
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
-    self.registerContentViewRect = self.frame;
+    if (self.isOK) {
+        self.registerContentViewRect = self.frame;
+        self.isOK = YES;
+    }
 }
 
 -(void)keyboard{

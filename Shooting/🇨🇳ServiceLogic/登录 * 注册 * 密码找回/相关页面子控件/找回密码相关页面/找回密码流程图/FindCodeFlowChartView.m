@@ -10,15 +10,20 @@
 
 @interface FlowChartSingleElementView ()
 
+@property(nonatomic,assign)BOOL isOK;
+
 @end
 
 @implementation FlowChartSingleElementView
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
-    self.backIMGV.alpha = 1;
-    self.titleLab.alpha = 1;
-    self.subTitleLab.alpha = 1;
+    if (!self.isOK) {
+        self.backIMGV.alpha = 1;
+        self.titleLab.alpha = 1;
+        self.subTitleLab.alpha = 1;
+        self.isOK = YES;
+    }
 }
 
 #pragma mark —— lazyLoad
