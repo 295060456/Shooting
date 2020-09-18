@@ -64,6 +64,7 @@ UITextViewDelegate
     [super viewWillAppear:animated];
     self.isClickMKUploadingVCView = NO;
     [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
+    [self ff];
 }
 
 -(void)viewWillLayoutSubviews{
@@ -75,6 +76,61 @@ UITextViewDelegate
     [super viewDidLayoutSubviews];
     NSLog(@"");
 }
+
+-(void)ff{
+    NSMutableArray *dataMutArr = [self autoChoiceRes];
+    PHAsset *phAsset = (PHAsset *)dataMutArr.lastObject;
+    
+    [FileFolderHandleTool getVedioFromPHAsset:phAsset
+                                     complete:^(id data) {
+        if ([data isKindOfClass:AVURLAsset.class]) {
+            self.urlAsset = (AVURLAsset *)data;
+            NSURL *url = self.urlAsset.URL;
+            self.vedioData = [NSData dataWithContentsOfURL:url];
+            [GPUImageTools.new getImage:url.absoluteString];
+        }
+    }];
+}
+///进来以后直接选择最后一个资源文件，直接绕开TZ
+-(NSMutableArray *)autoChoiceRes{
+/*
+ PHAsset: 代表照片库中的一个资源，跟 ALAsset 类似，通过 PHAsset 可以获取和保存资源
+ PHFetchOptions: 获取资源时的参数，可以传 nil，即使用系统默认值
+ PHFetchResult: 表示一系列的资源集合，也可以是相册的集合
+ PHAssetCollection: 表示一个相册或者一个时刻，或者是一个「智能相册（系统提供的特定的一系列相册，例如：最近删除，视频列表，收藏等等，如下图所示）
+ PHImageManager: 用于处理资源的加载，加载图片的过程带有缓存处理，可以通过传入一个 PHImageRequestOptions 控制资源的输出尺寸，同异步获取，是否获取iCloud图片等
+ PHCachingImageManager: 继承 PHImageManager ，对Photos的图片或视频资源提供了加载或生成预览缩略图和全尺寸图片的方法，针对预处理巨量的资源进行了优化。
+ PHImageRequestOptions: 如上面所说，控制加载图片时的一系列参数
+*/
+
+    //获取所有的系统相册
+    PHFetchResult *smartAlbums = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum
+                                                                          subtype:PHAssetCollectionSubtypeAlbumRegular
+                                                                          options:nil];
+    NSMutableArray <PHFetchResult *>*dataMutArr = NSMutableArray.array;
+    //将smartAlbums中的相册添加到数组中(最近添加，相机胶卷,视频...)
+    for (PHAssetCollection *collection in smartAlbums) {
+        //如果不想显示 ‘最近添加’ ‘收藏’等 可以这样做
+        if (collection.assetCollectionSubtype == PHAssetCollectionSubtypeSmartAlbumRecentlyAdded ||
+            collection.assetCollectionSubtype == PHAssetCollectionSubtypeSmartAlbumFavorites) {
+            continue;
+        }
+        //遍历所有相册，只显示有视频或照片的相册
+        PHFetchOptions *fetchOptions = PHFetchOptions.new;
+        fetchOptions.predicate = [NSPredicate predicateWithFormat:@"mediaType == %d || mediaType == %d", PHAssetMediaTypeImage,PHAssetMediaTypeVideo];
+        //按创建时间排序
+        fetchOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate"
+                                                                       ascending:YES]];
+        
+        PHFetchResult *assetResults = [PHAsset fetchAssetsInAssetCollection:collection
+                                                                    options:fetchOptions];
+        if (assetResults.count > 0) {
+            [dataMutArr addObject:assetResults];
+        }
+    }return dataMutArr;
+}
+
+
 ///发布成功以后做的事情
 -(void)afterRelease{
     [self deleteButtonRemoveSelf:self.choosePicBtn];

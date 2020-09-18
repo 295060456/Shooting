@@ -489,8 +489,6 @@
 		C572A28124FBE933000A1687 /* UIImage+Tailor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tailor.h"; sourceTree = "<group>"; };
 		C572A28224FBE933000A1687 /* UIImage+Tailor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tailor.m"; sourceTree = "<group>"; };
 		C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "验证码按钮单例封装"; sourceTree = "<group>"; };
-		C57AC02F251104E3009EE44D /* testVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testVC.h; sourceTree = "<group>"; };
-		C57AC030251104E3009EE44D /* testVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testVC.m; sourceTree = "<group>"; };
 		C57AC0362511DC42009EE44D /* closeCircle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeCircle@3x.png"; sourceTree = "<group>"; };
 		C57AC0372511DC42009EE44D /* closeCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeCircle@2x.png"; sourceTree = "<group>"; };
 		C57AC0462511DFF0009EE44D /* 登录注册关闭@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录注册关闭@2x.png"; sourceTree = "<group>"; };
@@ -1181,8 +1179,6 @@
 				C58F032A24EA69D400B6D09C /* ViewController@4.m */,
 				C58F032D24EA69D400B6D09C /* ViewController@5.h */,
 				C58F033124EA69D400B6D09C /* ViewController@5.m */,
-				C57AC02F251104E3009EE44D /* testVC.h */,
-				C57AC030251104E3009EE44D /* testVC.m */,
 			);
 			path = OtherVC;
 			sourceTree = "<group>";
@@ -2149,6 +2145,8 @@
 		C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C5E5C630250773FE001E69DA /* 水平进度条 */,
+				C589604C2500AB00002B1764 /* 图形验证码 */,
 				C5E5C64525079634001E69DA /* UIDevice+XMUtils */,
 				C55497AB24F3A3050065510D /* 视频处理工具 */,
 				C572A2A324FDFA67000A1687 /* 💰VerifyCodeButton */,
@@ -2550,8 +2548,6 @@
 		C58F032724EA69C800B6D09C /* 🇨🇳ServiceLogic */ = {
 			isa = PBXGroup;
 			children = (
-				C5E5C630250773FE001E69DA /* 水平进度条 */,
-				C589604C2500AB00002B1764 /* 图形验证码 */,
 				C589604B2500AA2D002B1764 /* 登录 * 注册 * 密码找回 */,
 				C55497AD24F3A3A20065510D /* OtherVC */,
 				C561618324EE4C72001CD851 /* 拍摄和上传 */,
@@ -3668,7 +3664,7 @@
 					"$(PROJECT_DIR)/Other/Sys/libstdc++/iPhone-Device",
 					"$(PROJECT_DIR)/Other/Sys/libstdc++/iPhone-Simulator",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MonkeyKingVideo.Shooting0;
+				PRODUCT_BUNDLE_IDENTIFIER = MonkeyKingVideo.Shooting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "-Wno-ambiguous-macro";
