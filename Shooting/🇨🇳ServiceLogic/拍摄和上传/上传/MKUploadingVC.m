@@ -64,7 +64,7 @@ UITextViewDelegate
     [super viewWillAppear:animated];
     self.isClickMKUploadingVCView = NO;
     [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
-    [self ff];
+//    [self ff];
 }
 
 -(void)viewWillLayoutSubviews{
