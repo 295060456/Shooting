@@ -355,6 +355,7 @@
 		C5E3A12F250A47180030AAE4 /* 状态选中@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E3A12B250A47180030AAE4 /* 状态选中@3x.png */; };
 		C5E3A13A250B21890030AAE4 /* del_Photo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E3A138250B21880030AAE4 /* del_Photo@3x.png */; };
 		C5E3A13B250B21890030AAE4 /* del_Photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E3A139250B21890030AAE4 /* del_Photo@2x.png */; };
+		C5E3C7742517824B00F9A150 /* UIImage+screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E3C7732517824B00F9A150 /* UIImage+screenshot.m */; };
 		C5E5C6242505E116001E69DA /* DoorInputViewStyle_1.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575ADD250517F300A2A694 /* DoorInputViewStyle_1.m */; };
 		C5E5C6252505E1E4001E69DA /* UIButton+CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575AE2250518AA00A2A694 /* UIButton+CountDownBtn.m */; };
 		C5E5C63925077436001E69DA /* WGradientProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C63725077436001E69DA /* WGradientProgress.m */; };
@@ -1028,6 +1029,8 @@
 		C5E3A12B250A47180030AAE4 /* 状态选中@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "状态选中@3x.png"; sourceTree = "<group>"; };
 		C5E3A138250B21880030AAE4 /* del_Photo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "del_Photo@3x.png"; sourceTree = "<group>"; };
 		C5E3A139250B21890030AAE4 /* del_Photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "del_Photo@2x.png"; sourceTree = "<group>"; };
+		C5E3C7722517824B00F9A150 /* UIImage+screenshot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+screenshot.h"; sourceTree = "<group>"; };
+		C5E3C7732517824B00F9A150 /* UIImage+screenshot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+screenshot.m"; sourceTree = "<group>"; };
 		C5E5C63725077436001E69DA /* WGradientProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGradientProgress.m; sourceTree = "<group>"; };
 		C5E5C63825077436001E69DA /* WGradientProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGradientProgress.h; sourceTree = "<group>"; };
 		C5E5C63D25077E05001E69DA /* Question */ = {isa = PBXFileReference; lastKnownFileType = text; path = Question; sourceTree = "<group>"; };
@@ -2098,6 +2101,8 @@
 				C572A27924FBD44A000A1687 /* UIImage+Overlay.m */,
 				C572A28124FBE933000A1687 /* UIImage+Tailor.h */,
 				C572A28224FBE933000A1687 /* UIImage+Tailor.m */,
+				C5E3C7722517824B00F9A150 /* UIImage+screenshot.h */,
+				C5E3C7732517824B00F9A150 /* UIImage+screenshot.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -3428,6 +3433,7 @@
 				C5AA490F250C8F04009F583F /* NSObject+SYSAlertController.m in Sources */,
 				C57D5B1825134D950073F90B /* DoorVC+VM.m in Sources */,
 				C58F02C224EA61C600B6D09C /* LOTPointInterpolator.m in Sources */,
+				C5E3C7742517824B00F9A150 /* UIImage+screenshot.m in Sources */,
 				C58F028C24EA61C600B6D09C /* LOTNumberInterpolator.m in Sources */,
 				C58F03BE24EA72BF00B6D09C /* ShowAvailableFont.m in Sources */,
 				C58F029F24EA61C600B6D09C /* LOTLayer.m in Sources */,
