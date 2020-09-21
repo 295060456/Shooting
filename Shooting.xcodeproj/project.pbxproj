@@ -142,7 +142,6 @@
 		C58F00EC24EA581F00B6D09C /* BRAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F00C324EA581F00B6D09C /* BRAddressModel.m */; };
 		C58F00ED24EA581F00B6D09C /* BRAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F00C624EA581F00B6D09C /* BRAddressPickerView.m */; };
 		C58F00EE24EA581F00B6D09C /* BaseGPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F00C824EA581F00B6D09C /* BaseGPUImageView.m */; };
-		C58F00EF24EA581F00B6D09C /* Pod里面的Bug in Resources */ = {isa = PBXBuildFile; fileRef = C58F00C924EA581F00B6D09C /* Pod里面的Bug */; };
 		C58F010A24EA584B00B6D09C /* LYLUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F00FC24EA584B00B6D09C /* LYLUnicode.m */; };
 		C58F010B24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */ = {isa = PBXBuildFile; fileRef = C58F00FD24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 */; };
 		C58F010C24EA584B00B6D09C /* 调试时候添加日志时使用,上线需要去掉 in Resources */ = {isa = PBXBuildFile; fileRef = C58F010124EA584B00B6D09C /* 调试时候添加日志时使用,上线需要去掉 */; };
@@ -1144,7 +1143,7 @@
 		C55497A024F38CB20065510D /* GPUImage */ = {
 			isa = PBXGroup;
 			children = (
-				C58F01C824EA5EEE00B6D09C /* GPUImage */,
+				C58F01C824EA5EEE00B6D09C /* GPUImage一些准备活动 */,
 				C55497A824F3A1F00065510D /* GPUImageTools.h */,
 				C55497A924F3A1F00065510D /* GPUImageTools.m */,
 			);
@@ -1521,13 +1520,13 @@
 		C58F000F24EA36F800B6D09C /* Shooting */ = {
 			isa = PBXGroup;
 			children = (
+				C58F002424EA36FA00B6D09C /* Info.plist */,
 				C58F033724EA6E1600B6D09C /* ⚽️PicResource */,
 				C58F031824EA65F200B6D09C /* BaseModel */,
 				C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */,
 				C58F011024EA5BD500B6D09C /* BaseCustomizeUIKit */,
 				C58F010F24EA5B6C00B6D09C /* AppDelegate & SceneDelegate */,
 				C58F032724EA69C800B6D09C /* 🇨🇳ServiceLogic */,
-				C58F002424EA36FA00B6D09C /* Info.plist */,
 			);
 			path = Shooting;
 			sourceTree = "<group>";
@@ -1590,7 +1589,6 @@
 				C59D9AE724F8F07B00A74CE9 /* ZZCircleProgress */,
 				C58F00AB24EA581F00B6D09C /* BRPickerView */,
 				C58F007224EA581F00B6D09C /* GKNavigationBar */,
-				C58F00C724EA581F00B6D09C /* MKGPUImageView */,
 				C58F009224EA581F00B6D09C /* SDWebImage */,
 			);
 			path = "Pods 不进去的";
@@ -1765,9 +1763,9 @@
 		C58F00C724EA581F00B6D09C /* MKGPUImageView */ = {
 			isa = PBXGroup;
 			children = (
+				C58F00CA24EA581F00B6D09C /* BaseGPUImageView.h */,
 				C58F00C824EA581F00B6D09C /* BaseGPUImageView.m */,
 				C58F00C924EA581F00B6D09C /* Pod里面的Bug */,
-				C58F00CA24EA581F00B6D09C /* BaseGPUImageView.h */,
 			);
 			path = MKGPUImageView;
 			sourceTree = "<group>";
@@ -2210,16 +2208,17 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
-		C58F01C824EA5EEE00B6D09C /* GPUImage */ = {
+		C58F01C824EA5EEE00B6D09C /* GPUImage一些准备活动 */ = {
 			isa = PBXGroup;
 			children = (
+				C58F00C724EA581F00B6D09C /* MKGPUImageView */,
 				C53B182B24FFA336000019F2 /* 视频水印.gif */,
 				C55497AF24F3AD990065510D /* MKGPUImageView.h */,
 				C55497AE24F3AD990065510D /* MKGPUImageView.m */,
 				C58F01C924EA5F0100B6D09C /* YHGPUImageBeautifyFilter.h */,
 				C58F01CA24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m */,
 			);
-			path = GPUImage;
+			path = "GPUImage一些准备活动";
 			sourceTree = "<group>";
 		};
 		C58F01CC24EA5FF600B6D09C /* LZBTabbarViewController */ = {
@@ -3072,7 +3071,6 @@
 				C50FFB2A250E4D2E003E5DBA /* 开屏广告.jpg in Resources */,
 				C58F048124EBD78500B6D09C /* spark_red@3x.png in Resources */,
 				C572A27C24FBDD86000A1687 /* Settings.bundle in Resources */,
-				C58F00EF24EA581F00B6D09C /* Pod里面的Bug in Resources */,
 				C5E5C67225091081001E69DA /* 保存视频@3x.png in Resources */,
 				C58F002024EA36FA00B6D09C /* Assets.xcassets in Resources */,
 				C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */,

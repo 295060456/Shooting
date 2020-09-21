@@ -51,6 +51,9 @@ willConnectToSession:(UISceneSession *)session
         //在这里手动创建新的window
         if (@available(iOS 13.0, *)) {
             self.windowScene = (UIWindowScene *)scene;
+            
+            [self.window setRootViewController:self.navigationController];
+            [self.window makeKeyAndVisible];
         }
     
 //#pragma mark —— 启动图
@@ -58,10 +61,6 @@ willConnectToSession:(UISceneSession *)session
 //        [self fixedAdPicsUrl];
 ////        [self localAdPic];
     
-    if (@available(iOS 13.0, *)){
-        [self.window setRootViewController:self.navigationController];
-        [self.window makeKeyAndVisible];
-    }
 }
 
 - (void)sceneDidDisconnect:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
