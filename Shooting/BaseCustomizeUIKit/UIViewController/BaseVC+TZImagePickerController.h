@@ -44,7 +44,8 @@ TZImagePickerControllerDelegate
 ///点选的图片
 -(void)GettingPicBlock:(MMDataBlock)block;
 ///访问相册 —— 选择图片
--(void)choosePic:(TZImagePickerControllerType)tzImagePickerControllerType;
+-(void)choosePic:(TZImagePickerControllerType)tzImagePickerControllerType
+imagePickerVCBlock:(MKDataBlock _Nullable)imagePickerVCBlock;
 ///访问摄像头
 -(void)camera:(MKDataBlock)doSthBlock;
 

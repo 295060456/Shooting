@@ -49,7 +49,8 @@ static char *BaseVC_TZImagePickerController_asset = "BaseVC_TZImagePickerControl
     self.picBlock = block;
 }
 ///访问相册 —— 选择图片
--(void)choosePic:(TZImagePickerControllerType)tzImagePickerControllerType{
+-(void)choosePic:(TZImagePickerControllerType)tzImagePickerControllerType
+imagePickerVCBlock:(MKDataBlock _Nullable)imagePickerVCBlock{
     self.tzImagePickerControllerType = tzImagePickerControllerType;
     @weakify(self)
     [ECAuthorizationTools checkAndRequestAccessForType:ECPrivacyType_Photos
@@ -73,6 +74,10 @@ static char *BaseVC_TZImagePickerController_asset = "BaseVC_TZImagePickerControl
 //            self.imagePickerVC.cropRect = CGRectMake(left, top, widthHeight, widthHeight);
 //            self.imagePickerVC.scaleAspectFillCrop = YES;
 
+            if (imagePickerVCBlock) {
+                imagePickerVCBlock(self.imagePickerVC);
+            }
+            
             [self presentViewController:self.imagePickerVC
                                      animated:YES
                                    completion:nil];
