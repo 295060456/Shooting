@@ -63,6 +63,7 @@
 #import "UIImage+Extras.h"
 #import "UIImage+Tailor.h"
 #import "UIImage+screenshot.h"
+#import "LoadingImage.h"
 
 #import "UIView+JHGestureBlock.h"
 #import "UIView+Chain.h"

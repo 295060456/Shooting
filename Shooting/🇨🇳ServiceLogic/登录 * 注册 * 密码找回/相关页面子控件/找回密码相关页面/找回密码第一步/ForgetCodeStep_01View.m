@@ -187,8 +187,8 @@
 -(NSMutableArray<UIImage *> *)headerImgMutArr{
     if (!_headerImgMutArr) {
         _headerImgMutArr = NSMutableArray.array;
-        [_headerImgMutArr addObject:kIMG(@"用户名称")];
-        [_headerImgMutArr addObject:kIMG(@"手机ICON")];
+        [_headerImgMutArr addObject:KIMG(@"用户名称")];
+        [_headerImgMutArr addObject:KIMG(@"手机ICON")];
     }return _headerImgMutArr;
 }
 
@@ -203,16 +203,16 @@
 -(NSMutableArray<UIImage *> *)btnSelectedImgMutArr{
     if (!_btnSelectedImgMutArr) {
         _btnSelectedImgMutArr = NSMutableArray.array;
-        [_btnSelectedImgMutArr addObject:kIMG(@"空白图")];
-        [_btnSelectedImgMutArr addObject:kIMG(@"codeDecode")];
+        [_btnSelectedImgMutArr addObject:KIMG(@"空白图")];
+        [_btnSelectedImgMutArr addObject:KIMG(@"codeDecode")];
     }return _btnSelectedImgMutArr;
 }
 
 -(NSMutableArray<UIImage *> *)btnUnselectedImgMutArr{
     if (!_btnUnselectedImgMutArr) {
         _btnUnselectedImgMutArr = NSMutableArray.array;
-        [_btnUnselectedImgMutArr addObject:kIMG(@"closeCircle")];
-        [_btnUnselectedImgMutArr addObject:kIMG(@"codeEncode")];
+        [_btnUnselectedImgMutArr addObject:KIMG(@"closeCircle")];
+        [_btnUnselectedImgMutArr addObject:KIMG(@"codeEncode")];
     }return _btnUnselectedImgMutArr;
 }
 

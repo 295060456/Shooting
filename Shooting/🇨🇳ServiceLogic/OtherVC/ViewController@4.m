@@ -101,7 +101,7 @@
         _progressView.titleFont = [UIFont systemFontOfSize:6.4
                                                    weight:UIFontWeightRegular];
         _progressView.titleColor = kWhiteColor;
-        _progressView.img = kIMG(@"水平进度条");
+        _progressView.img = KIMG(@"水平进度条");
         [self.view addSubview:_progressView];
         [_progressView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(25, 25));

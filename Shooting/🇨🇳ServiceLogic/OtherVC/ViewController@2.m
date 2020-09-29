@@ -52,7 +52,7 @@
         _btn = [UIButton buttonWithType:UIButtonTypeCustom];
         _btn.backgroundColor = kBlackColor;
 //        _btn.
-        [_btn setImage:kIMG(@"播放")
+        [_btn setImage:KIMG(@"播放")
               forState:UIControlStateNormal];
         [_btn setTitle:@"1\n2\n71"
               forState:UIControlStateNormal];
@@ -70,7 +70,7 @@
     if (!_btn2) {
         _btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
         _btn2.backgroundColor = KBrownColor;
-        [_btn2 setImage:kIMG(@"播放")
+        [_btn2 setImage:KIMG(@"播放")
               forState:UIControlStateNormal];
         [_btn2 setTitle:@"123456"
               forState:UIControlStateNormal];

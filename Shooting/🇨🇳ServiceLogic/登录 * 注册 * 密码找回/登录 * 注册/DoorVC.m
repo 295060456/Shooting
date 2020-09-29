@@ -308,7 +308,7 @@ ZFPlayerController *ZFPlayer_DoorVC;
 -(UIButton *)backBtn{
     if (!_backBtn) {
         _backBtn = UIButton.new;
-        [_backBtn setImage:kIMG(@"登录注册关闭")
+        [_backBtn setImage:KIMG(@"登录注册关闭")
                   forState:UIControlStateNormal];
         @weakify(self)
         [[_backBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {

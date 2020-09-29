@@ -43,7 +43,7 @@
 -(UIImageView *)mainImgV{
     if (!_mainImgV) {
         _mainImgV = UIImageView.new;
-        _mainImgV.image = kIMG(@"MainLogo");
+        _mainImgV.image = KIMG(@"MainLogo");
         [self addSubview:_mainImgV];
         [_mainImgV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.bottom.left.equalTo(self);
@@ -55,7 +55,7 @@
 -(UIImageView *)subImgV{
     if (!_subImgV) {
         _subImgV = UIImageView.new;
-        _subImgV.image = kIMG(@"SubLogo");
+        _subImgV.image = KIMG(@"SubLogo");
         [self addSubview:_subImgV];
         [_subImgV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.bottom.right.equalTo(self);

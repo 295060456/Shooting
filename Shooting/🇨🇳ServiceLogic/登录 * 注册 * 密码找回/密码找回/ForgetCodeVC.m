@@ -438,10 +438,10 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
 -(NSMutableArray<UIImage *> *)backImageMutArr{
     if (!_backImageMutArr) {
         _backImageMutArr = NSMutableArray.array;
-        [_backImageMutArr addObject:kIMG(@"di_1")];
-        [_backImageMutArr addObject:kIMG(@"di_2")];
-        [_backImageMutArr addObject:kIMG(@"di_3")];
-        [_backImageMutArr addObject:kIMG(@"di_4")];
+        [_backImageMutArr addObject:KIMG(@"di_1")];
+        [_backImageMutArr addObject:KIMG(@"di_2")];
+        [_backImageMutArr addObject:KIMG(@"di_3")];
+        [_backImageMutArr addObject:KIMG(@"di_4")];
     }return _backImageMutArr;
 }
 
@@ -494,7 +494,7 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
                      forState:UIControlStateNormal];
         _successBtn.titleLabel.font = [UIFont systemFontOfSize:17
                                                         weight:UIFontWeightLight];
-        [_successBtn setImage:kIMG(@"密码修改成功")
+        [_successBtn setImage:KIMG(@"密码修改成功")
                      forState:UIControlStateNormal];
         @weakify(self)
         [[_successBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {

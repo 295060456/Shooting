@@ -962,6 +962,7 @@
 		C58F047B24EBD78500B6D09C /* day_like_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "day_like_red@2x.png"; sourceTree = "<group>"; };
 		C58F048324EBD79000B6D09C /* RBCLikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCLikeButton.m; sourceTree = "<group>"; };
 		C58F048424EBD79000B6D09C /* RBCLikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCLikeButton.h; sourceTree = "<group>"; };
+		C58FDF4A25233EE100E020D3 /* LoadingImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingImage.h; sourceTree = "<group>"; };
 		C59D9AA224F8C3BC00A74CE9 /* NSObject+Random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Random.h"; sourceTree = "<group>"; };
 		C59D9AA324F8C3BC00A74CE9 /* NSObject+Random.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Random.m"; sourceTree = "<group>"; };
 		C59D9AA524F8C79500A74CE9 /* video.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = video.gif; sourceTree = "<group>"; };
@@ -2089,6 +2090,7 @@
 		C58F016D24EA5CAC00B6D09C /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				C58FDF4A25233EE100E020D3 /* LoadingImage.h */,
 				C572A26424FBC546000A1687 /* UIImage+Extras.h */,
 				C572A26824FBC547000A1687 /* UIImage+Extras.m */,
 				C572A26524FBC546000A1687 /* UIImage+SYS.h */,

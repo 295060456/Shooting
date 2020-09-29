@@ -301,7 +301,7 @@
         _toRegisterBtn.alpha = 0.7f;
         [_toRegisterBtn setTitle:@"新\n用\n户\n注\n册"
                         forState:UIControlStateNormal];
-        [_toRegisterBtn setImage:kIMG(@"用户名称")
+        [_toRegisterBtn setImage:KIMG(@"用户名称")
               forState:UIControlStateNormal];
         @weakify(self)
         [[_toRegisterBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -343,8 +343,8 @@
 -(NSMutableArray<UIImage *> *)headerImgMutArr{
     if (!_headerImgMutArr) {
         _headerImgMutArr = NSMutableArray.array;
-        [_headerImgMutArr addObject:kIMG(@"用户名称")];
-        [_headerImgMutArr addObject:kIMG(@"Lock")];
+        [_headerImgMutArr addObject:KIMG(@"用户名称")];
+        [_headerImgMutArr addObject:KIMG(@"Lock")];
     }return _headerImgMutArr;
 }
 
@@ -359,16 +359,16 @@
 -(NSMutableArray<UIImage *> *)btnSelectedImgMutArr{
     if (!_btnSelectedImgMutArr) {
         _btnSelectedImgMutArr = NSMutableArray.array;
-        [_btnSelectedImgMutArr addObject:kIMG(@"空白图")];
-        [_btnSelectedImgMutArr addObject:kIMG(@"codeDecode")];
+        [_btnSelectedImgMutArr addObject:KIMG(@"空白图")];
+        [_btnSelectedImgMutArr addObject:KIMG(@"codeDecode")];
     }return _btnSelectedImgMutArr;
 }
 
 -(NSMutableArray<UIImage *> *)btnUnselectedImgMutArr{
     if (!_btnUnselectedImgMutArr) {
         _btnUnselectedImgMutArr = NSMutableArray.array;
-        [_btnUnselectedImgMutArr addObject:kIMG(@"closeCircle")];
-        [_btnUnselectedImgMutArr addObject:kIMG(@"codeEncode")];
+        [_btnUnselectedImgMutArr addObject:KIMG(@"closeCircle")];
+        [_btnUnselectedImgMutArr addObject:KIMG(@"codeEncode")];
     }return _btnUnselectedImgMutArr;
 }
 
@@ -387,9 +387,9 @@
         _storeCodeBtn.selected = YES;
         [_storeCodeBtn setTitle:@"记住密码"
                        forState:UIControlStateNormal];
-        [_storeCodeBtn setImage:kIMG(@"记住密码")
+        [_storeCodeBtn setImage:KIMG(@"记住密码")
                        forState:UIControlStateSelected];
-        [_storeCodeBtn setImage:kIMG(@"没有记住密码")
+        [_storeCodeBtn setImage:KIMG(@"没有记住密码")
                        forState:UIControlStateNormal];
         @weakify(self)
         [[_storeCodeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -419,7 +419,7 @@
         _forgetCodeBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
         [_forgetCodeBtn setTitle:@"忘记密码"
                        forState:UIControlStateNormal];
-        [_forgetCodeBtn setImage:kIMG(@"KKK")
+        [_forgetCodeBtn setImage:KIMG(@"KKK")
                        forState:UIControlStateNormal];
         @weakify(self)
         [[_forgetCodeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
