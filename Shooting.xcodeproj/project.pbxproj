@@ -342,6 +342,7 @@
 		C5AA490E250C8F04009F583F /* NSObject+SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA490B250C8F04009F583F /* NSObject+SPAlertController.m */; };
 		C5AA490F250C8F04009F583F /* NSObject+SYSAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA490C250C8F04009F583F /* NSObject+SYSAlertController.m */; };
 		C5B5EF26250CCE3E00DCDA93 /* NSObject+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B5EF24250CCE3E00DCDA93 /* NSObject+Shake.m */; };
+		C5B7DE932524581200BC4E9D /* BaseVC+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B7DE922524581200BC4E9D /* BaseVC+MJRefresh.m */; };
 		C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */; };
 		C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9B24FF5D33000A26B8 /* GCD_TimerManager.m */; };
 		C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9D24FF5D3B000A26B8 /* Nanosecond_TimerManager.m */; };
@@ -1008,6 +1009,8 @@
 		C5AA490D250C8F04009F583F /* NSObject+SPAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SPAlertController.h"; sourceTree = "<group>"; };
 		C5B5EF24250CCE3E00DCDA93 /* NSObject+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Shake.m"; sourceTree = "<group>"; };
 		C5B5EF25250CCE3E00DCDA93 /* NSObject+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Shake.h"; sourceTree = "<group>"; };
+		C5B7DE912524581200BC4E9D /* BaseVC+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+MJRefresh.h"; sourceTree = "<group>"; };
+		C5B7DE922524581200BC4E9D /* BaseVC+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+MJRefresh.m"; sourceTree = "<group>"; };
 		C5C67C4324FE382C000A26B8 /* ViewController@1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController@1.h"; sourceTree = "<group>"; };
 		C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CADisplayLink_TimerManager.m; sourceTree = "<group>"; };
 		C5C67C9824FF5D28000A26B8 /* CADisplayLink_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADisplayLink_TimerManager.h; sourceTree = "<group>"; };
@@ -2059,6 +2062,8 @@
 			children = (
 				C58F015724EA5CAC00B6D09C /* BaseVC.h */,
 				C58F016324EA5CAC00B6D09C /* BaseVC.m */,
+				C5B7DE912524581200BC4E9D /* BaseVC+MJRefresh.h */,
+				C5B7DE922524581200BC4E9D /* BaseVC+MJRefresh.m */,
 				C5AA48EC250BB847009F583F /* UIViewController+Shake.h */,
 				C5AA48EB250BB847009F583F /* UIViewController+Shake.m */,
 				C58F016124EA5CAC00B6D09C /* BaseVC+AFNReachability.h */,
@@ -3301,6 +3306,7 @@
 				C561619724EE4CA9001CD851 /* MKUploadingVC+VM.m in Sources */,
 				C58F031424EA648200B6D09C /* FMHttpResonse.m in Sources */,
 				C58F00E124EA581F00B6D09C /* SDWebImageImageIOCoder.m in Sources */,
+				C5B7DE932524581200BC4E9D /* BaseVC+MJRefresh.m in Sources */,
 				C58F00E924EA581F00B6D09C /* BRPickerStyle.m in Sources */,
 				C58F02B024EA61C600B6D09C /* LOTShapeStar.m in Sources */,
 				C58F028F24EA61C600B6D09C /* NSValue+Compat.m in Sources */,

@@ -24,17 +24,18 @@
 #import "SDWebImage-umbrella.h"//不支持图片后处理
 //#import "MBProgressHUD.h"
 #import "MBProgressHUD+WJExtension.h"
-#import "BaseVC+JPImageresizerView.h"
 //#import "JPImageresizerView-umbrella.h"
 #import "JPImageresizerView.h"
 #import "GPUImage.h"
 #import "SZTextView.h"
-//#import "AWRichText.h"
 #import <YXAlertController.h>
 #import "PPBadgeView.h"
 #import "XHLaunchAd.h"
 #import <IQKeyboardManager/IQKeyboardManager.h>
 #import "SPAlertController.h"
+
+#import "BaseVC+JPImageresizerView.h"
+#import "BaseVC+MJRefresh.h"
 
 #pragma mark —— ZFPlayer 播放器相关
 //Core
