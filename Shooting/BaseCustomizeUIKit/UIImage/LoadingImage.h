@@ -16,7 +16,7 @@ static inline UIImage *__nullable KIMG(NSString *__nonnull imgName){
 }
 /// 读取自定义Bundle文件里面的图片 输出 UIImage *
 /// @param pathForResource 自定义 Bundle 的名字
-/// @param folderName 如果在此自定义Bundle下还存在文件夹，不管几级都在此写，属于中间路径，函数内部是进行字符串拼接
+/// @param folderName 如果在此自定义Bundle下还存在文件夹，不管几级都在此写，属于中间路径，函数内部是进行字符串拼接;如果没有则传nil
 /// @param fileFullNameWithSuffix  目标图片的名字，如果不带后缀名，函数内部直接强制加 @".png" 后缀
 static inline UIImage *__nullable KBuddleIMG(NSString *__nonnull pathForResource,
                                              NSString *__nullable folderName,

@@ -43,7 +43,7 @@
 -(UIImageView *)mainImgV{
     if (!_mainImgV) {
         _mainImgV = UIImageView.new;
-        _mainImgV.image = KIMG(@"MainLogo");
+        _mainImgV.image = KBuddleIMG(@"登录 * 注册 * 密码找回", nil, @"MainLogo");
         [self addSubview:_mainImgV];
         [_mainImgV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.bottom.left.equalTo(self);
@@ -55,7 +55,7 @@
 -(UIImageView *)subImgV{
     if (!_subImgV) {
         _subImgV = UIImageView.new;
-        _subImgV.image = KIMG(@"SubLogo");
+        _subImgV.image = KBuddleIMG(@"登录 * 注册 * 密码找回", nil, @"SubLogo");
         [self addSubview:_subImgV];
         [_subImgV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.bottom.right.equalTo(self);

@@ -438,10 +438,10 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
 -(NSMutableArray<UIImage *> *)backImageMutArr{
     if (!_backImageMutArr) {
         _backImageMutArr = NSMutableArray.array;
-        [_backImageMutArr addObject:KIMG(@"di_1")];
-        [_backImageMutArr addObject:KIMG(@"di_2")];
-        [_backImageMutArr addObject:KIMG(@"di_3")];
-        [_backImageMutArr addObject:KIMG(@"di_4")];
+        [_backImageMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", @"找回密码流程图", @"di_1")];
+        [_backImageMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", @"找回密码流程图", @"di_2")];
+        [_backImageMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", @"找回密码流程图", @"di_3")];
+        [_backImageMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", @"找回密码流程图", @"di_4")];
     }return _backImageMutArr;
 }
 
@@ -494,7 +494,7 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
                      forState:UIControlStateNormal];
         _successBtn.titleLabel.font = [UIFont systemFontOfSize:17
                                                         weight:UIFontWeightLight];
-        [_successBtn setImage:KIMG(@"密码修改成功")
+        [_successBtn setImage:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, @"密码修改成功")
                      forState:UIControlStateNormal];
         @weakify(self)
         [[_successBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
