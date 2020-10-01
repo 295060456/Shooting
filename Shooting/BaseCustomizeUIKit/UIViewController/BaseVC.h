@@ -22,7 +22,7 @@ UIGestureRecognizerDelegate
 ,UINavigationControllerDelegate
 >
 
-#pragma mark ——RACSignal
+#pragma mark —— RACSignal
 @property(nonatomic,strong)RACSignal *reqSignal;
 
 @property(nonatomic,assign)BOOL isRequestFinish;//数据请求是否完毕 !!!
