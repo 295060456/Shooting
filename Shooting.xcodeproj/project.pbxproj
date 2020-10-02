@@ -37,8 +37,6 @@
 		C572A27C24FBDD86000A1687 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C572A27B24FBDD86000A1687 /* Settings.bundle */; };
 		C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A28224FBE933000A1687 /* UIImage+Tailor.m */; };
 		C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */ = {isa = PBXBuildFile; fileRef = C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */; };
-		C57AC0382511DC43009EE44D /* closeCircle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57AC0362511DC42009EE44D /* closeCircle@3x.png */; };
-		C57AC0392511DC43009EE44D /* closeCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57AC0372511DC42009EE44D /* closeCircle@2x.png */; };
 		C57C229A250240B500FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */; };
 		C57C22AE250263F100FAAA3F /* CustomZFPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C22AD250263F100FAAA3F /* CustomZFPlayerControlView.m */; };
 		C57C22BB2502717C00FAAA3F /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C22BA2502717C00FAAA3F /* UIView+Gradient.m */; };
@@ -219,8 +217,6 @@
 		C58F02D524EA62B500B6D09C /* suspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02CD24EA62B500B6D09C /* suspendBtn.m */; };
 		C58F02D624EA62B500B6D09C /* SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02D024EA62B500B6D09C /* SuspendView.m */; };
 		C58F02D724EA62B500B6D09C /* SuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02D424EA62B500B6D09C /* SuspendLab.m */; };
-		C58F02DE24EA62E600B6D09C /* HistoryDataListTBVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02DC24EA62E600B6D09C /* HistoryDataListTBVCell.m */; };
-		C58F02DF24EA62E600B6D09C /* HistoryDataListTBV.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02DD24EA62E600B6D09C /* HistoryDataListTBV.m */; };
 		C58F02E324EA632800B6D09C /* FileFolderHandleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02E224EA632800B6D09C /* FileFolderHandleTool.m */; };
 		C58F02FB24EA63F300B6D09C /* MKLaunchingAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02F824EA63F300B6D09C /* MKLaunchingAdModel.m */; };
 		C58F02FC24EA63F300B6D09C /* SceneDelegate+LaunchingAd.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02FA24EA63F300B6D09C /* SceneDelegate+LaunchingAd.m */; };
@@ -253,6 +249,10 @@
 		C58F048124EBD78500B6D09C /* spark_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F047A24EBD78500B6D09C /* spark_red@3x.png */; };
 		C58F048224EBD78500B6D09C /* day_like_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F047B24EBD78500B6D09C /* day_like_red@2x.png */; };
 		C58F048524EBD79000B6D09C /* RBCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F048324EBD79000B6D09C /* RBCLikeButton.m */; };
+		C59B9E142526F0D20039B485 /* ZYTextField.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C59B9E132526F0D20039B485 /* ZYTextField.bundle */; };
+		C59B9E172526F1500039B485 /* ZYTextField+HistoryDataList.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9E152526F1500039B485 /* ZYTextField+HistoryDataList.m */; };
+		C59B9E3A2526F1DF0039B485 /* UITableView+XSAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9E362526F1DF0039B485 /* UITableView+XSAnimationKit.m */; };
+		C59B9E3B2526F1DF0039B485 /* TableViewAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9E392526F1DF0039B485 /* TableViewAnimationKit.m */; };
 		C59D9AA424F8C3BC00A74CE9 /* NSObject+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AA324F8C3BC00A74CE9 /* NSObject+Random.m */; };
 		C59D9AA724F8C79500A74CE9 /* video.gif in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AA524F8C79500A74CE9 /* video.gif */; };
 		C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AA624F8C79500A74CE9 /* watermark.bmp */; };
@@ -279,8 +279,6 @@
 		C5B7E1FA252469B600BC4E9D /* 拍摄*上传.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5B7E1F9252469B600BC4E9D /* 拍摄*上传.bundle */; };
 		C5B7E1FD25246A7000BC4E9D /* WhiteRightArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B7E1FB25246A7000BC4E9D /* WhiteRightArrow@3x.png */; };
 		C5B7E1FE25246A7000BC4E9D /* WhiteRightArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B7E1FC25246A7000BC4E9D /* WhiteRightArrow@2x.png */; };
-		C5B7E20125246AB000BC4E9D /* 登录注册关闭@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B7E1FF25246AB000BC4E9D /* 登录注册关闭@3x.png */; };
-		C5B7E20225246AB000BC4E9D /* 登录注册关闭@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B7E20025246AB000BC4E9D /* 登录注册关闭@2x.png */; };
 		C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */; };
 		C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9B24FF5D33000A26B8 /* GCD_TimerManager.m */; };
 		C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9D24FF5D3B000A26B8 /* Nanosecond_TimerManager.m */; };
@@ -392,8 +390,6 @@
 		C572A28124FBE933000A1687 /* UIImage+Tailor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tailor.h"; sourceTree = "<group>"; };
 		C572A28224FBE933000A1687 /* UIImage+Tailor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tailor.m"; sourceTree = "<group>"; };
 		C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "验证码按钮单例封装"; sourceTree = "<group>"; };
-		C57AC0362511DC42009EE44D /* closeCircle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeCircle@3x.png"; sourceTree = "<group>"; };
-		C57AC0372511DC42009EE44D /* closeCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeCircle@2x.png"; sourceTree = "<group>"; };
 		C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		C57C2299250240B500FAAA3F /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		C57C22AC250263F100FAAA3F /* CustomZFPlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomZFPlayerControlView.h; sourceTree = "<group>"; };
@@ -772,10 +768,6 @@
 		C58F02D124EA62B500B6D09C /* SuspendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendView.h; sourceTree = "<group>"; };
 		C58F02D324EA62B500B6D09C /* SuspendLab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendLab.h; sourceTree = "<group>"; };
 		C58F02D424EA62B500B6D09C /* SuspendLab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendLab.m; sourceTree = "<group>"; };
-		C58F02DA24EA62E600B6D09C /* HistoryDataListTBVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryDataListTBVCell.h; sourceTree = "<group>"; };
-		C58F02DB24EA62E600B6D09C /* HistoryDataListTBV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryDataListTBV.h; sourceTree = "<group>"; };
-		C58F02DC24EA62E600B6D09C /* HistoryDataListTBVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDataListTBVCell.m; sourceTree = "<group>"; };
-		C58F02DD24EA62E600B6D09C /* HistoryDataListTBV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDataListTBV.m; sourceTree = "<group>"; };
 		C58F02E124EA632800B6D09C /* FileFolderHandleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileFolderHandleTool.h; sourceTree = "<group>"; };
 		C58F02E224EA632800B6D09C /* FileFolderHandleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileFolderHandleTool.m; sourceTree = "<group>"; };
 		C58F02F724EA63F300B6D09C /* SceneDelegate+LaunchingAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SceneDelegate+LaunchingAd.h"; sourceTree = "<group>"; };
@@ -830,6 +822,15 @@
 		C58F048324EBD79000B6D09C /* RBCLikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCLikeButton.m; sourceTree = "<group>"; };
 		C58F048424EBD79000B6D09C /* RBCLikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCLikeButton.h; sourceTree = "<group>"; };
 		C58FDF4A25233EE100E020D3 /* LoadingImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingImage.h; sourceTree = "<group>"; };
+		C59B9E132526F0D20039B485 /* ZYTextField.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYTextField.bundle; sourceTree = "<group>"; };
+		C59B9E152526F1500039B485 /* ZYTextField+HistoryDataList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZYTextField+HistoryDataList.m"; sourceTree = "<group>"; };
+		C59B9E162526F1500039B485 /* ZYTextField+HistoryDataList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZYTextField+HistoryDataList.h"; sourceTree = "<group>"; };
+		C59B9E342526F1DE0039B485 /* TableViewAnimationKitConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKitConfig.h; sourceTree = "<group>"; };
+		C59B9E352526F1DE0039B485 /* UITableView+XSAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XSAnimationKit.h"; sourceTree = "<group>"; };
+		C59B9E362526F1DF0039B485 /* UITableView+XSAnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XSAnimationKit.m"; sourceTree = "<group>"; };
+		C59B9E372526F1DF0039B485 /* TableViewAnimationKitHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKitHeaders.h; sourceTree = "<group>"; };
+		C59B9E382526F1DF0039B485 /* TableViewAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKit.h; sourceTree = "<group>"; };
+		C59B9E392526F1DF0039B485 /* TableViewAnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewAnimationKit.m; sourceTree = "<group>"; };
 		C59D9AA224F8C3BC00A74CE9 /* NSObject+Random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Random.h"; sourceTree = "<group>"; };
 		C59D9AA324F8C3BC00A74CE9 /* NSObject+Random.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Random.m"; sourceTree = "<group>"; };
 		C59D9AA524F8C79500A74CE9 /* video.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = video.gif; sourceTree = "<group>"; };
@@ -874,8 +875,6 @@
 		C5B7E1F9252469B600BC4E9D /* 拍摄*上传.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "拍摄*上传.bundle"; sourceTree = "<group>"; };
 		C5B7E1FB25246A7000BC4E9D /* WhiteRightArrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WhiteRightArrow@3x.png"; sourceTree = "<group>"; };
 		C5B7E1FC25246A7000BC4E9D /* WhiteRightArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WhiteRightArrow@2x.png"; sourceTree = "<group>"; };
-		C5B7E1FF25246AB000BC4E9D /* 登录注册关闭@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录注册关闭@3x.png"; sourceTree = "<group>"; };
-		C5B7E20025246AB000BC4E9D /* 登录注册关闭@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录注册关闭@2x.png"; sourceTree = "<group>"; };
 		C5C67C4324FE382C000A26B8 /* ViewController@1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController@1.h"; sourceTree = "<group>"; };
 		C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CADisplayLink_TimerManager.m; sourceTree = "<group>"; };
 		C5C67C9824FF5D28000A26B8 /* CADisplayLink_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADisplayLink_TimerManager.h; sourceTree = "<group>"; };
@@ -1788,9 +1787,8 @@
 		C58F013624EA5CAC00B6D09C /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				C58F013824EA5CAC00B6D09C /* 专治UITableView相应链断裂 */,
-				C58F013724EA5CAC00B6D09C /* BaseTableViewer.h */,
-				C58F013924EA5CAC00B6D09C /* BaseTableViewer.m */,
+				C59B9E332526F1C90039B485 /* 专治UITableView相应链断裂 */,
+				C59B9E322526F1BE0039B485 /* TableViewAnimationKit */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -1842,12 +1840,11 @@
 		C58F014824EA5CAC00B6D09C /* ZYTextField */ = {
 			isa = PBXGroup;
 			children = (
-				C5B7E20025246AB000BC4E9D /* 登录注册关闭@2x.png */,
-				C5B7E1FF25246AB000BC4E9D /* 登录注册关闭@3x.png */,
-				C57AC0372511DC42009EE44D /* closeCircle@2x.png */,
-				C57AC0362511DC42009EE44D /* closeCircle@3x.png */,
+				C59B9E132526F0D20039B485 /* ZYTextField.bundle */,
 				C58F014C24EA5CAC00B6D09C /* ZYTextField.h */,
 				C58F014A24EA5CAC00B6D09C /* ZYTextField.m */,
+				C59B9E162526F1500039B485 /* ZYTextField+HistoryDataList.h */,
+				C59B9E152526F1500039B485 /* ZYTextField+HistoryDataList.m */,
 			);
 			path = ZYTextField;
 			sourceTree = "<group>";
@@ -1979,7 +1976,6 @@
 				C58F02FD24EA645100B6D09C /* LBLaunchImageAd. */,
 				C58F02E424EA634200B6D09C /* 高仿抖音点赞动画 */,
 				C58F02E024EA632200B6D09C /* 文件夹操作 */,
-				C58F02D924EA62E600B6D09C /* HistoryDataList */,
 				C58F02CB24EA62A800B6D09C /* Suspend */,
 				C58F020624EA61B000B6D09C /* Lottie-iOS(OC) */,
 				C58F01FA24EA617000B6D09C /* 分享控件 */,
@@ -2255,17 +2251,6 @@
 			path = SuspendLab;
 			sourceTree = "<group>";
 		};
-		C58F02D924EA62E600B6D09C /* HistoryDataList */ = {
-			isa = PBXGroup;
-			children = (
-				C58F02DA24EA62E600B6D09C /* HistoryDataListTBVCell.h */,
-				C58F02DB24EA62E600B6D09C /* HistoryDataListTBV.h */,
-				C58F02DC24EA62E600B6D09C /* HistoryDataListTBVCell.m */,
-				C58F02DD24EA62E600B6D09C /* HistoryDataListTBV.m */,
-			);
-			path = HistoryDataList;
-			sourceTree = "<group>";
-		};
 		C58F02E024EA632200B6D09C /* 文件夹操作 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2443,6 +2428,29 @@
 				C59D9AA624F8C79500A74CE9 /* watermark.bmp */,
 			);
 			path = res;
+			sourceTree = "<group>";
+		};
+		C59B9E322526F1BE0039B485 /* TableViewAnimationKit */ = {
+			isa = PBXGroup;
+			children = (
+				C59B9E382526F1DF0039B485 /* TableViewAnimationKit.h */,
+				C59B9E392526F1DF0039B485 /* TableViewAnimationKit.m */,
+				C59B9E342526F1DE0039B485 /* TableViewAnimationKitConfig.h */,
+				C59B9E372526F1DF0039B485 /* TableViewAnimationKitHeaders.h */,
+				C59B9E352526F1DE0039B485 /* UITableView+XSAnimationKit.h */,
+				C59B9E362526F1DF0039B485 /* UITableView+XSAnimationKit.m */,
+			);
+			path = TableViewAnimationKit;
+			sourceTree = "<group>";
+		};
+		C59B9E332526F1C90039B485 /* 专治UITableView相应链断裂 */ = {
+			isa = PBXGroup;
+			children = (
+				C58F013824EA5CAC00B6D09C /* 专治UITableView相应链断裂 */,
+				C58F013724EA5CAC00B6D09C /* BaseTableViewer.h */,
+				C58F013924EA5CAC00B6D09C /* BaseTableViewer.m */,
+			);
+			path = "专治UITableView相应链断裂";
 			sourceTree = "<group>";
 		};
 		C59D9AB424F8EECB00A74CE9 /* 录制成功的视频进行预览播放以决定是否舍弃 */ = {
@@ -2719,7 +2727,6 @@
 				C5B7E1F82524699100BC4E9D /* Others.bundle in Resources */,
 				C58F01C024EA5E5E00B6D09C /* 带有按键音的按钮 in Resources */,
 				C58F047D24EBD78500B6D09C /* day_like_red@3x.png in Resources */,
-				C5B7E20225246AB000BC4E9D /* 登录注册关闭@2x.png in Resources */,
 				C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */,
 				C58F047E24EBD78500B6D09C /* spark_red@2x.png in Resources */,
 				C58F048024EBD78500B6D09C /* spark_red.png in Resources */,
@@ -2727,7 +2734,6 @@
 				C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */,
 				C58F047F24EBD78500B6D09C /* day_like@3x.png in Resources */,
 				C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */,
-				C57AC0392511DC43009EE44D /* closeCircle@2x.png in Resources */,
 				C5E5C64425078860001E69DA /* iph_X.mp4 in Resources */,
 				C58F03B824EA6F0700B6D09C /* green_lottie_tab_discover.json in Resources */,
 				C5E5C642250787A5001E69DA /* 非iph_X.mp4 in Resources */,
@@ -2748,8 +2754,7 @@
 				C58F00E824EA581F00B6D09C /* BRPickerView.bundle in Resources */,
 				C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */,
 				C58F01C124EA5E5E00B6D09C /* Sound.wav in Resources */,
-				C5B7E20125246AB000BC4E9D /* 登录注册关闭@3x.png in Resources */,
-				C57AC0382511DC43009EE44D /* closeCircle@3x.png in Resources */,
+				C59B9E142526F0D20039B485 /* ZYTextField.bundle in Resources */,
 				C58F048224EBD78500B6D09C /* day_like_red@2x.png in Resources */,
 				C59D9AEF24F8F08500A74CE9 /* ZZCircleProgress.bundle in Resources */,
 				C58F018F24EA5CAC00B6D09C /* 专治UITableView相应链断裂 in Resources */,
@@ -2988,6 +2993,7 @@
 				C58F020324EA617800B6D09C /* BWShareView.m in Sources */,
 				C58F02AB24EA61C600B6D09C /* LOTLayerGroup.m in Sources */,
 				C59D9ADD24F8EF4D00A74CE9 /* CustomerAVPlayerView.m in Sources */,
+				C59B9E3A2526F1DF0039B485 /* UITableView+XSAnimationKit.m in Sources */,
 				C58F029924EA61C600B6D09C /* LOTRenderGroup.m in Sources */,
 				C58F02AF24EA61C600B6D09C /* LOTAnimatedControl.m in Sources */,
 				C58F00D824EA581F00B6D09C /* UIImage+WebP.m in Sources */,
@@ -3006,7 +3012,6 @@
 				C58F00D324EA581F00B6D09C /* UIScrollView+GKCategory.m in Sources */,
 				C58F019C24EA5CAD00B6D09C /* BaseVC+GifImageView.m in Sources */,
 				C58F00E424EA581F00B6D09C /* BRStringPickerView.m in Sources */,
-				C58F02DF24EA62E600B6D09C /* HistoryDataListTBV.m in Sources */,
 				C58F02B924EA61C600B6D09C /* LOTValueCallback.m in Sources */,
 				C58F033624EA69D400B6D09C /* ViewController@5.m in Sources */,
 				C58F018C24EA5CAC00B6D09C /* UIImageView+GIF.m in Sources */,
@@ -3051,7 +3056,6 @@
 				C5E5C6242505E116001E69DA /* DoorInputViewStyle_1.m in Sources */,
 				C58F02B524EA61C600B6D09C /* LOTShapeRectangle.m in Sources */,
 				C58F00CC24EA581F00B6D09C /* GKPopAnimatedTransition.m in Sources */,
-				C58F02DE24EA62E600B6D09C /* HistoryDataListTBVCell.m in Sources */,
 				C58960612500B196002B1764 /* DoorVC.m in Sources */,
 				C58F00E024EA581F00B6D09C /* SDWebImageGIFCoder.m in Sources */,
 				C58F02B724EA61C600B6D09C /* UIColor.m in Sources */,
@@ -3064,6 +3068,7 @@
 				C58F019824EA5CAC00B6D09C /* CALayer+Transition.m in Sources */,
 				C561619E24EE4CB7001CD851 /* PhotoVC+VM.m in Sources */,
 				C5E5C6492507963B001E69DA /* UIDevice+XMUtils.m in Sources */,
+				C59B9E172526F1500039B485 /* ZYTextField+HistoryDataList.m in Sources */,
 				C58F019624EA5CAC00B6D09C /* ZYTextField.m in Sources */,
 				C58F00DB24EA581F00B6D09C /* SDWebImageCodersManager.m in Sources */,
 				C58F00DD24EA581F00B6D09C /* SDWebImageCoderHelper.m in Sources */,
@@ -3157,6 +3162,7 @@
 				C5575AD02504E1FA00A2A694 /* ForgetCodeStep_01View.m in Sources */,
 				C58F02BE24EA61C600B6D09C /* LOTAssetGroup.m in Sources */,
 				C58F00DA24EA581F00B6D09C /* SDWebImageFrame.m in Sources */,
+				C59B9E3B2526F1DF0039B485 /* TableViewAnimationKit.m in Sources */,
 				C5EB98E0250A2290007660B3 /* AgreementView.m in Sources */,
 				C5E5C6252505E1E4001E69DA /* UIButton+CountDownBtn.m in Sources */,
 				C56161C224EE4F52001CD851 /* JhtBannerView.m in Sources */,
