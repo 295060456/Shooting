@@ -80,7 +80,8 @@ typedef NS_ENUM(NSUInteger, IntervalStyle) {
 +(NSDate *)dateByTimeInterval:(NSTimeInterval)interval;
 /// NSString * ---> NSTimeInterval
 +(NSTimeInterval)timeIntervalByDateStr:(NSString *_Nullable)dateStr
-                         timeFormatter:(NSString *_Nullable)timeFormatter;
+                         timeFormatter:(NSString *_Nullable)timeFormatter
+                         intervalStyle:(IntervalStyle)intervalStyle;
 /// NSTimeInterval ---> NSString *
 +(NSString *)timeIntervalByInterval:(NSTimeInterval)interval;
 /// NSString * ---> NSString *   格式转换为   小时：分钟：秒
@@ -112,7 +113,7 @@ typedef NS_ENUM(NSUInteger, IntervalStyle) {
 /// @param NSString *endTime （可以不用给定）结束时间
 /// @param timeFormatter 时间格式：缺省值@"yyyy-MM-dd HH:mm:ss"
 +(TimeFormatterModel *)timeIntervalstartDate:(NSString *_Nonnull)startTime
-                               endDate:(NSString *_Nullable)endTime
+                                     endDate:(NSString *_Nullable)endTime
                                timeFormatter:(NSString *_Nullable)timeFormatter;
 ///  在当前日期时间加上 某个时间段(传负数即返回当前时间之前x月x日的时间)  https://blog.csdn.net/autom_lishun/article/details/79094241
 /// @param year 当前时间若干年后 （传负数为当前时间若干年前）

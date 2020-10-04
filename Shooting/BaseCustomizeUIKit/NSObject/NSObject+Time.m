@@ -100,8 +100,14 @@
 }
 /// NSString * ---> NSTimeInterval
 +(NSTimeInterval)timeIntervalByDateStr:(NSString *_Nullable)dateStr
-                         timeFormatter:(NSString *_Nullable)timeFormatter{
-    NSTimeInterval interval = [[NSObject strByDate:dateStr timeFormatter:timeFormatter] timeIntervalSince1970];
+                         timeFormatter:(NSString *_Nullable)timeFormatter
+                         intervalStyle:(IntervalStyle)intervalStyle{
+    NSTimeInterval interval = 0;
+    if (intervalStyle == intervalBySec) {
+        interval = [[NSObject strByDate:dateStr timeFormatter:timeFormatter] timeIntervalSince1970];
+    }else if (intervalStyle == intervalByMilliSec){
+        interval = [[NSObject strByDate:dateStr timeFormatter:timeFormatter] timeIntervalSince1970] * 1000;
+    }else{}
     return interval;
 }
 /// NSTimeInterval ---> NSString *
@@ -369,7 +375,6 @@
     UserDefaultSynchronize;
     return flag;
 }
-
 
 @end
 
