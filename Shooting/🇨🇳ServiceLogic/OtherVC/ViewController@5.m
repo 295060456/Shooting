@@ -30,5 +30,13 @@
     self.view.backgroundColor = kRedColor;
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches
+          withEvent:(UIEvent *)event{
+//    @weakify(self)
+    [NetworkingAPI requestVedioWithBlock:^(id data) {
+//        @strongify(self)
+        NSLog(@"");
+    }];
+}
 
 @end

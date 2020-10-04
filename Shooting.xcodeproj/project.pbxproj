@@ -223,9 +223,6 @@
 		C58F030224EA645A00B6D09C /* NSObject+LBLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02FE24EA645A00B6D09C /* NSObject+LBLaunchImage.m */; };
 		C58F030324EA645A00B6D09C /* LBLaunchImageAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02FF24EA645A00B6D09C /* LBLaunchImageAdView.m */; };
 		C58F030724EA647400B6D09C /* MonitorNetwoking.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F030524EA647400B6D09C /* MonitorNetwoking.m */; };
-		C58F031424EA648200B6D09C /* FMHttpResonse.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F030B24EA648200B6D09C /* FMHttpResonse.m */; };
-		C58F031524EA648200B6D09C /* FMARCNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F031024EA648200B6D09C /* FMARCNetwork.m */; };
-		C58F031624EA648200B6D09C /* FMHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F031324EA648200B6D09C /* FMHttpRequest.m */; };
 		C58F031B24EA65F200B6D09C /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F031924EA65F200B6D09C /* BaseModel.m */; };
 		C58F032224EA68B500B6D09C /* LGiOSBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F032124EA68B500B6D09C /* LGiOSBtn.m */; };
 		C58F033224EA69D400B6D09C /* ViewController@2.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F032924EA69D400B6D09C /* ViewController@2.m */; };
@@ -296,6 +293,19 @@
 		C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C6692508BEFB001E69DA /* 水平进度条.png */; };
 		C5E5C66D2508C486001E69DA /* WGradientProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C66C2508C486001E69DA /* WGradientProgressView.m */; };
 		C5EB98E0250A2290007660B3 /* AgreementView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EB98DF250A2290007660B3 /* AgreementView.m */; };
+		C5F4513925299CA900066AAB /* ZBURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4512D25299CA900066AAB /* ZBURLRequest.m */; };
+		C5F4513A25299CA900066AAB /* ZBRequestEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4512E25299CA900066AAB /* ZBRequestEngine.m */; };
+		C5F4513B25299CA900066AAB /* ZBNetworking in Resources */ = {isa = PBXBuildFile; fileRef = C5F4512F25299CA900066AAB /* ZBNetworking */; };
+		C5F4513C25299CA900066AAB /* ZBRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4513025299CA900066AAB /* ZBRequestManager.m */; };
+		C5F4513D25299CA900066AAB /* ZBCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4513225299CA900066AAB /* ZBCacheManager.m */; };
+		C5F4513E25299CA900066AAB /* NSString+ZBUTF8Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4513425299CA900066AAB /* NSString+ZBUTF8Encoding.m */; };
+		C5F4514D25299D1F00066AAB /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4514225299D1E00066AAB /* DataManager.m */; };
+		C5F4514E25299D1F00066AAB /* URL_Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4514425299D1E00066AAB /* URL_Manager.m */; };
+		C5F4514F25299D1F00066AAB /* RequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4514925299D1E00066AAB /* RequestTool.m */; };
+		C5F4515025299D1F00066AAB /* NetworkingAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4514C25299D1F00066AAB /* NetworkingAPI.m */; };
+		C5F451782529A0B300066AAB /* FMARCNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F451712529A00900066AAB /* FMARCNetwork.m */; };
+		C5F451792529A0B700066AAB /* FMHttpResonse.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4516C2529A00900066AAB /* FMHttpResonse.m */; };
+		C5F4517A2529A0BD00066AAB /* FMHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F451742529A00900066AAB /* FMHttpRequest.m */; };
 		D1C77CE50CE1275572271736 /* Pods_ShootingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -780,14 +790,6 @@
 		C58F030124EA645A00B6D09C /* LBLaunchImageAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBLaunchImageAdView.h; sourceTree = "<group>"; };
 		C58F030524EA647400B6D09C /* MonitorNetwoking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorNetwoking.m; sourceTree = "<group>"; };
 		C58F030624EA647400B6D09C /* MonitorNetwoking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorNetwoking.h; sourceTree = "<group>"; };
-		C58F030A24EA648200B6D09C /* FMHttpResonse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMHttpResonse.h; sourceTree = "<group>"; };
-		C58F030B24EA648200B6D09C /* FMHttpResonse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMHttpResonse.m; sourceTree = "<group>"; };
-		C58F030C24EA648200B6D09C /* ZFMRACNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFMRACNetworkTool.h; sourceTree = "<group>"; };
-		C58F030E24EA648200B6D09C /* FMHttpConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMHttpConstant.h; sourceTree = "<group>"; };
-		C58F031024EA648200B6D09C /* FMARCNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMARCNetwork.m; sourceTree = "<group>"; };
-		C58F031124EA648200B6D09C /* FMHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMHttpRequest.h; sourceTree = "<group>"; };
-		C58F031224EA648200B6D09C /* FMARCNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMARCNetwork.h; sourceTree = "<group>"; };
-		C58F031324EA648200B6D09C /* FMHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMHttpRequest.m; sourceTree = "<group>"; };
 		C58F031924EA65F200B6D09C /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		C58F031A24EA65F200B6D09C /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		C58F032024EA68B500B6D09C /* LGiOSBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGiOSBtn.h; sourceTree = "<group>"; };
@@ -905,6 +907,36 @@
 		C5E5C66C2508C486001E69DA /* WGradientProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGradientProgressView.m; sourceTree = "<group>"; };
 		C5EB98DE250A2290007660B3 /* AgreementView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgreementView.h; sourceTree = "<group>"; };
 		C5EB98DF250A2290007660B3 /* AgreementView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgreementView.m; sourceTree = "<group>"; };
+		C5F4512C25299CA900066AAB /* ZBRequestConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBRequestConst.h; sourceTree = "<group>"; };
+		C5F4512D25299CA900066AAB /* ZBURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBURLRequest.m; sourceTree = "<group>"; };
+		C5F4512E25299CA900066AAB /* ZBRequestEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBRequestEngine.m; sourceTree = "<group>"; };
+		C5F4512F25299CA900066AAB /* ZBNetworking */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZBNetworking; sourceTree = "<group>"; };
+		C5F4513025299CA900066AAB /* ZBRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBRequestManager.m; sourceTree = "<group>"; };
+		C5F4513125299CA900066AAB /* NSString+ZBUTF8Encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZBUTF8Encoding.h"; sourceTree = "<group>"; };
+		C5F4513225299CA900066AAB /* ZBCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBCacheManager.m; sourceTree = "<group>"; };
+		C5F4513325299CA900066AAB /* ZBURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBURLRequest.h; sourceTree = "<group>"; };
+		C5F4513425299CA900066AAB /* NSString+ZBUTF8Encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZBUTF8Encoding.m"; sourceTree = "<group>"; };
+		C5F4513525299CA900066AAB /* ZBRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBRequestManager.h; sourceTree = "<group>"; };
+		C5F4513625299CA900066AAB /* ZBRequestEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBRequestEngine.h; sourceTree = "<group>"; };
+		C5F4513725299CA900066AAB /* ZBNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBNetworking.h; sourceTree = "<group>"; };
+		C5F4513825299CA900066AAB /* ZBCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBCacheManager.h; sourceTree = "<group>"; };
+		C5F4514125299D1E00066AAB /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		C5F4514225299D1E00066AAB /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		C5F4514425299D1E00066AAB /* URL_Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URL_Manager.m; sourceTree = "<group>"; };
+		C5F4514525299D1E00066AAB /* URL_Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL_Manager.h; sourceTree = "<group>"; };
+		C5F4514725299D1E00066AAB /* NetworkingConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingConstant.h; sourceTree = "<group>"; };
+		C5F4514825299D1E00066AAB /* RequestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestTool.h; sourceTree = "<group>"; };
+		C5F4514925299D1E00066AAB /* RequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestTool.m; sourceTree = "<group>"; };
+		C5F4514B25299D1F00066AAB /* NetworkingAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingAPI.h; sourceTree = "<group>"; };
+		C5F4514C25299D1F00066AAB /* NetworkingAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingAPI.m; sourceTree = "<group>"; };
+		C5F4516B2529A00900066AAB /* FMHttpResonse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMHttpResonse.h; sourceTree = "<group>"; };
+		C5F4516C2529A00900066AAB /* FMHttpResonse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMHttpResonse.m; sourceTree = "<group>"; };
+		C5F4516D2529A00900066AAB /* ZFMRACNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFMRACNetworkTool.h; sourceTree = "<group>"; };
+		C5F4516F2529A00900066AAB /* FMHttpConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMHttpConstant.h; sourceTree = "<group>"; };
+		C5F451712529A00900066AAB /* FMARCNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMARCNetwork.m; sourceTree = "<group>"; };
+		C5F451722529A00900066AAB /* FMHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMHttpRequest.h; sourceTree = "<group>"; };
+		C5F451732529A00900066AAB /* FMARCNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMARCNetwork.h; sourceTree = "<group>"; };
+		C5F451742529A00900066AAB /* FMHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMHttpRequest.m; sourceTree = "<group>"; };
 		CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shooting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1328,11 +1360,11 @@
 			isa = PBXGroup;
 			children = (
 				C58F002424EA36FA00B6D09C /* Info.plist */,
+				C58F010F24EA5B6C00B6D09C /* AppDelegate & SceneDelegate */,
+				C58F011024EA5BD500B6D09C /* BaseCustomizeUIKit */,
 				C58F033724EA6E1600B6D09C /* ⚽️PicResource */,
 				C58F031824EA65F200B6D09C /* BaseModel */,
 				C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */,
-				C58F011024EA5BD500B6D09C /* BaseCustomizeUIKit */,
-				C58F010F24EA5B6C00B6D09C /* AppDelegate & SceneDelegate */,
 				C58F032724EA69C800B6D09C /* 🇨🇳ServiceLogic */,
 			);
 			path = Shooting;
@@ -1971,7 +2003,6 @@
 				C58F046A24EBD6E900B6D09C /* ECAuthorizationTools */,
 				C58F03BB24EA728000B6D09C /* iOS打印全员字体 */,
 				C58F031F24EA68B500B6D09C /* 高仿iOS长按删除+抖动 */,
-				C58F030824EA648200B6D09C /* 🌍ZFMRACNetworkTool */,
 				C58F030424EA647400B6D09C /* 网络数据实时监测 */,
 				C58F02FD24EA645100B6D09C /* LBLaunchImageAd. */,
 				C58F02E424EA634200B6D09C /* 高仿抖音点赞动画 */,
@@ -1982,6 +2013,7 @@
 				C58F01CC24EA5FF600B6D09C /* LZBTabbarViewController */,
 				C58F01B824EA5E5E00B6D09C /* SoundBtn */,
 				C58F01B024EA5DB400B6D09C /* 高度自定义的按钮 */,
+				C5F4512A25299C9900066AAB /* 网络请求框架 */,
 			);
 			path = "Manual_Add_ThirdParty ";
 			sourceTree = "<group>";
@@ -2290,45 +2322,6 @@
 			path = "网络数据实时监测";
 			sourceTree = "<group>";
 		};
-		C58F030824EA648200B6D09C /* 🌍ZFMRACNetworkTool */ = {
-			isa = PBXGroup;
-			children = (
-				C58F030924EA648200B6D09C /* Response */,
-				C58F030C24EA648200B6D09C /* ZFMRACNetworkTool.h */,
-				C58F030D24EA648200B6D09C /* Constant */,
-				C58F030F24EA648200B6D09C /* Request */,
-			);
-			path = "🌍ZFMRACNetworkTool";
-			sourceTree = "<group>";
-		};
-		C58F030924EA648200B6D09C /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				C58F030A24EA648200B6D09C /* FMHttpResonse.h */,
-				C58F030B24EA648200B6D09C /* FMHttpResonse.m */,
-			);
-			path = Response;
-			sourceTree = "<group>";
-		};
-		C58F030D24EA648200B6D09C /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-				C58F030E24EA648200B6D09C /* FMHttpConstant.h */,
-			);
-			path = Constant;
-			sourceTree = "<group>";
-		};
-		C58F030F24EA648200B6D09C /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				C58F031024EA648200B6D09C /* FMARCNetwork.m */,
-				C58F031124EA648200B6D09C /* FMHttpRequest.h */,
-				C58F031224EA648200B6D09C /* FMARCNetwork.h */,
-				C58F031324EA648200B6D09C /* FMHttpRequest.m */,
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
 		C58F031824EA65F200B6D09C /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -2350,6 +2343,7 @@
 		C58F032724EA69C800B6D09C /* 🇨🇳ServiceLogic */ = {
 			isa = PBXGroup;
 			children = (
+				C5F4513F25299D1400066AAB /* 网络请求 */,
 				C589604B2500AA2D002B1764 /* 登录 * 注册 * 密码找回 */,
 				C561618324EE4C72001CD851 /* 拍摄和上传 */,
 				C55497AD24F3A3A20065510D /* OtherVC */,
@@ -2614,6 +2608,122 @@
 			path = "已阅读并同意上传须知";
 			sourceTree = "<group>";
 		};
+		C5F4512A25299C9900066AAB /* 网络请求框架 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F451692529A00900066AAB /* 🌍ZFMRACNetworkTool */,
+				C5F4512B25299CA900066AAB /* ZBNetworking */,
+			);
+			path = "网络请求框架";
+			sourceTree = "<group>";
+		};
+		C5F4512B25299CA900066AAB /* ZBNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4512F25299CA900066AAB /* ZBNetworking */,
+				C5F4514725299D1E00066AAB /* NetworkingConstant.h */,
+				C5F4513125299CA900066AAB /* NSString+ZBUTF8Encoding.h */,
+				C5F4513425299CA900066AAB /* NSString+ZBUTF8Encoding.m */,
+				C5F4513825299CA900066AAB /* ZBCacheManager.h */,
+				C5F4513225299CA900066AAB /* ZBCacheManager.m */,
+				C5F4513725299CA900066AAB /* ZBNetworking.h */,
+				C5F4512C25299CA900066AAB /* ZBRequestConst.h */,
+				C5F4513625299CA900066AAB /* ZBRequestEngine.h */,
+				C5F4512E25299CA900066AAB /* ZBRequestEngine.m */,
+				C5F4513525299CA900066AAB /* ZBRequestManager.h */,
+				C5F4513025299CA900066AAB /* ZBRequestManager.m */,
+				C5F4513325299CA900066AAB /* ZBURLRequest.h */,
+				C5F4512D25299CA900066AAB /* ZBURLRequest.m */,
+			);
+			path = ZBNetworking;
+			sourceTree = "<group>";
+		};
+		C5F4513F25299D1400066AAB /* 网络请求 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4514025299D1E00066AAB /* 存取页面数据 */,
+				C5F4514625299D1E00066AAB /* 请求的公共配置文件 */,
+				C5F4514A25299D1F00066AAB /* App 的所有网络请求Api */,
+				C5F4514325299D1E00066AAB /* URL_Manager */,
+			);
+			path = "网络请求";
+			sourceTree = "<group>";
+		};
+		C5F4514025299D1E00066AAB /* 存取页面数据 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4514125299D1E00066AAB /* DataManager.h */,
+				C5F4514225299D1E00066AAB /* DataManager.m */,
+			);
+			path = "存取页面数据";
+			sourceTree = "<group>";
+		};
+		C5F4514325299D1E00066AAB /* URL_Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4514425299D1E00066AAB /* URL_Manager.m */,
+				C5F4514525299D1E00066AAB /* URL_Manager.h */,
+			);
+			path = URL_Manager;
+			sourceTree = "<group>";
+		};
+		C5F4514625299D1E00066AAB /* 请求的公共配置文件 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4514825299D1E00066AAB /* RequestTool.h */,
+				C5F4514925299D1E00066AAB /* RequestTool.m */,
+			);
+			path = "请求的公共配置文件";
+			sourceTree = "<group>";
+		};
+		C5F4514A25299D1F00066AAB /* App 的所有网络请求Api */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4514B25299D1F00066AAB /* NetworkingAPI.h */,
+				C5F4514C25299D1F00066AAB /* NetworkingAPI.m */,
+			);
+			path = "App 的所有网络请求Api";
+			sourceTree = "<group>";
+		};
+		C5F451692529A00900066AAB /* 🌍ZFMRACNetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4516D2529A00900066AAB /* ZFMRACNetworkTool.h */,
+				C5F4516E2529A00900066AAB /* Constant */,
+				C5F451702529A00900066AAB /* Request */,
+				C5F4516A2529A00900066AAB /* Response */,
+			);
+			path = "🌍ZFMRACNetworkTool";
+			sourceTree = "<group>";
+		};
+		C5F4516A2529A00900066AAB /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4516B2529A00900066AAB /* FMHttpResonse.h */,
+				C5F4516C2529A00900066AAB /* FMHttpResonse.m */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		C5F4516E2529A00900066AAB /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4516F2529A00900066AAB /* FMHttpConstant.h */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		C5F451702529A00900066AAB /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				C5F451732529A00900066AAB /* FMARCNetwork.h */,
+				C5F451712529A00900066AAB /* FMARCNetwork.m */,
+				C5F451722529A00900066AAB /* FMHttpRequest.h */,
+				C5F451742529A00900066AAB /* FMHttpRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2753,6 +2863,7 @@
 				C58F00CF24EA581F00B6D09C /* GKNavigationBar.bundle in Resources */,
 				C58F00E824EA581F00B6D09C /* BRPickerView.bundle in Resources */,
 				C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */,
+				C5F4513B25299CA900066AAB /* ZBNetworking in Resources */,
 				C58F01C124EA5E5E00B6D09C /* Sound.wav in Resources */,
 				C59B9E142526F0D20039B485 /* ZYTextField.bundle in Resources */,
 				C58F048224EBD78500B6D09C /* day_like_red@2x.png in Resources */,
@@ -2944,6 +3055,7 @@
 				C56161BF24EE4F4B001CD851 /* JhtBannerScrollView.m in Sources */,
 				C58F02AD24EA61C600B6D09C /* LOTMaskContainer.m in Sources */,
 				C58F00E224EA581F00B6D09C /* SDWebImageWebPCoder.m in Sources */,
+				C5F4514F25299D1F00066AAB /* RequestTool.m in Sources */,
 				C58F01AB24EA5CAD00B6D09C /* BaseNavigationVC.m in Sources */,
 				C58F01AC24EA5CAD00B6D09C /* NSObject+Sound.m in Sources */,
 				C58F00D024EA581F00B6D09C /* GKNavigationBarConfigure.m in Sources */,
@@ -2952,6 +3064,7 @@
 				C58960562500B0E0002B1764 /* LogoContentView.m in Sources */,
 				C58F01A524EA5CAD00B6D09C /* BaseVC+TZLocationManager.m in Sources */,
 				C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */,
+				C5F451792529A0B700066AAB /* FMHttpResonse.m in Sources */,
 				C58F00DF24EA581F00B6D09C /* NSImage+WebCache.m in Sources */,
 				C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */,
 				C58F032224EA68B500B6D09C /* LGiOSBtn.m in Sources */,
@@ -2964,8 +3077,10 @@
 				C561618B24EE4C98001CD851 /* StartOrPauseBtn.m in Sources */,
 				C58F02FC24EA63F300B6D09C /* SceneDelegate+LaunchingAd.m in Sources */,
 				C58F02BD24EA61C600B6D09C /* LOTShapeGradientFill.m in Sources */,
+				C5F4514D25299D1F00066AAB /* DataManager.m in Sources */,
 				C58F01A424EA5CAD00B6D09C /* BaseVC+JPImageresizerView.m in Sources */,
 				C58F02A724EA61C600B6D09C /* LOTFillRenderer.m in Sources */,
+				C5F4513A25299CA900066AAB /* ZBRequestEngine.m in Sources */,
 				C56161C524EE5019001CD851 /* NSObject+Measure.m in Sources */,
 				C58F031B24EA65F200B6D09C /* BaseModel.m in Sources */,
 				C58F01F924EA60D100B6D09C /* CustomSYSUITabBarController.m in Sources */,
@@ -2979,7 +3094,6 @@
 				C58F047324EBD70F00B6D09C /* ECAuthorizationTools.m in Sources */,
 				C58F019A24EA5CAD00B6D09C /* BaseVC+TZImagePickerController.m in Sources */,
 				C561619724EE4CA9001CD851 /* MKUploadingVC+VM.m in Sources */,
-				C58F031424EA648200B6D09C /* FMHttpResonse.m in Sources */,
 				C58F00E124EA581F00B6D09C /* SDWebImageImageIOCoder.m in Sources */,
 				C5B7DE932524581200BC4E9D /* BaseVC+MJRefresh.m in Sources */,
 				C58F00E924EA581F00B6D09C /* BRPickerStyle.m in Sources */,
@@ -3004,6 +3118,8 @@
 				C58F01AD24EA5CAD00B6D09C /* NSObject+Extras.m in Sources */,
 				C58F00EE24EA581F00B6D09C /* BaseGPUImageView.m in Sources */,
 				C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */,
+				C5F4515025299D1F00066AAB /* NetworkingAPI.m in Sources */,
+				C5F4514E25299D1F00066AAB /* URL_Manager.m in Sources */,
 				C58F018E24EA5CAC00B6D09C /* NSArray+Extend.m in Sources */,
 				C561619D24EE4CB7001CD851 /* PhotoVC.m in Sources */,
 				C58F02C024EA61C600B6D09C /* LOTBezierPath.m in Sources */,
@@ -3013,6 +3129,7 @@
 				C58F019C24EA5CAD00B6D09C /* BaseVC+GifImageView.m in Sources */,
 				C58F00E424EA581F00B6D09C /* BRStringPickerView.m in Sources */,
 				C58F02B924EA61C600B6D09C /* LOTValueCallback.m in Sources */,
+				C5F4513C25299CA900066AAB /* ZBRequestManager.m in Sources */,
 				C58F033624EA69D400B6D09C /* ViewController@5.m in Sources */,
 				C58F018C24EA5CAC00B6D09C /* UIImageView+GIF.m in Sources */,
 				C58F00ED24EA581F00B6D09C /* BRAddressPickerView.m in Sources */,
@@ -3078,6 +3195,7 @@
 				C58F018124EA5CAC00B6D09C /* DeleteSystemUITabBarButton.m in Sources */,
 				C58F02C424EA61C600B6D09C /* CALayer+Compat.m in Sources */,
 				C58F02D724EA62B500B6D09C /* SuspendLab.m in Sources */,
+				C5F4513E25299CA900066AAB /* NSString+ZBUTF8Encoding.m in Sources */,
 				C58F00D224EA581F00B6D09C /* UIBarButtonItem+GKCategory.m in Sources */,
 				C58F01A624EA5CAD00B6D09C /* BaseVC+OpenURL.m in Sources */,
 				C51A0BE1250203B000884016 /* DoorInputViewStyle_2.m in Sources */,
@@ -3094,8 +3212,8 @@
 				C58F018D24EA5CAC00B6D09C /* NSArray+Extension.m in Sources */,
 				C58F029024EA61C600B6D09C /* LOTAnimatorNode.m in Sources */,
 				C58F028B24EA61C600B6D09C /* LOTTransformInterpolator.m in Sources */,
+				C5F4517A2529A0BD00066AAB /* FMHttpRequest.m in Sources */,
 				C59D9AD124F8EF1F00A74CE9 /* RepeatPlayer.m in Sources */,
-				C58F031524EA648200B6D09C /* FMARCNetwork.m in Sources */,
 				C572A26A24FBC547000A1687 /* UIImage+SYS.m in Sources */,
 				C5575AD32504E20C00A2A694 /* ForgetCodeStep_02View.m in Sources */,
 				C58F020424EA617800B6D09C /* BWItemModel.m in Sources */,
@@ -3124,8 +3242,8 @@
 				C58F018B24EA5CAC00B6D09C /* UIButton+Block.m in Sources */,
 				C59D9AA424F8C3BC00A74CE9 /* NSObject+Random.m in Sources */,
 				C56161BB24EE4F43001CD851 /* JhtBannerCardView.m in Sources */,
+				C5F451782529A0B300066AAB /* FMARCNetwork.m in Sources */,
 				C58F00CB24EA581F00B6D09C /* GKTransitionDelegateHandler.m in Sources */,
-				C58F031624EA648200B6D09C /* FMHttpRequest.m in Sources */,
 				C58F029824EA61C600B6D09C /* UIColor+Expanded.m in Sources */,
 				C5A46C0124EFB6E200158D1E /* UIViewController+LZBTabBarVCItem.m in Sources */,
 				C58F01C624EA5E7900B6D09C /* YBNotificationManager.m in Sources */,
@@ -3148,10 +3266,12 @@
 				C58F02A624EA61C600B6D09C /* LOTComposition.m in Sources */,
 				C58F00EC24EA581F00B6D09C /* BRAddressModel.m in Sources */,
 				C58F029324EA61C600B6D09C /* LOTAnimationTransitionController.m in Sources */,
+				C5F4513D25299CA900066AAB /* ZBCacheManager.m in Sources */,
 				C58F020224EA617800B6D09C /* BWItemCollectionViewCell.m in Sources */,
 				C58F019D24EA5CAD00B6D09C /* BaseVC+BRPickerView.m in Sources */,
 				C58F00E624EA581F00B6D09C /* NSDate+BRPickerView.m in Sources */,
 				C561618C24EE4C98001CD851 /* MyCell.m in Sources */,
+				C5F4513925299CA900066AAB /* ZBURLRequest.m in Sources */,
 				C5AA48ED250BB847009F583F /* UIViewController+Shake.m in Sources */,
 				C58F02A024EA61C600B6D09C /* LOTMask.m in Sources */,
 				C58F02A324EA61C600B6D09C /* LOTShapePath.m in Sources */,

@@ -11,4 +11,6 @@
 
 #import <objc/runtime.h>
 
+#import "NetworkingAPI.h"
+
 #endif /* Other_h */
