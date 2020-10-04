@@ -28,6 +28,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = kRedColor;
+    [DataManager sharedInstance].tag = ReuseIdentifier;
+    /**
+     公共配置
+     插件机制
+     证书设置
+     */
+    [RequestTool setupPublicParameters];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches

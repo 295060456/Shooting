@@ -6,6 +6,7 @@ target 'Shooting' do
   use_frameworks!
 
 #  pod 'WMZBanner'
+  pod 'DoraemonKit' # https://github.com/didi/DoraemonKit 滴滴打车出的工具
   pod 'Masonry'
   pod 'AFNetworking'
   pod 'TZImagePickerController'

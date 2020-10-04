@@ -411,5 +411,9 @@ static URL_Manager *static_URL_Manager = nil;
 -(NSString *)ImgBaseURL{
     return @"";
 }
+#pragma mark —— 测试接口安全性
+-(NSString *)testInterfaceSecurity{
+    return @"http://172.24.142.27:9013/demo/demo";
+}
 
 @end

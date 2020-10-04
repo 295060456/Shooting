@@ -306,6 +306,28 @@
 		C5F451782529A0B300066AAB /* FMARCNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F451712529A00900066AAB /* FMARCNetwork.m */; };
 		C5F451792529A0B700066AAB /* FMHttpResonse.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4516C2529A00900066AAB /* FMHttpResonse.m */; };
 		C5F4517A2529A0BD00066AAB /* FMHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F451742529A00900066AAB /* FMHttpRequest.m */; };
+		C5F452292529A6D900066AAB /* 凯撒加密解密 in Resources */ = {isa = PBXBuildFile; fileRef = C5F451F32529A6D900066AAB /* 凯撒加密解密 */; };
+		C5F4522A2529A6D900066AAB /* DES in Resources */ = {isa = PBXBuildFile; fileRef = C5F451F62529A6D900066AAB /* DES */; };
+		C5F4522B2529A6D900066AAB /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F451FB2529A6D900066AAB /* NSString+Base64.m */; };
+		C5F4522C2529A6D900066AAB /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F451FE2529A6D900066AAB /* NSData+Base64.m */; };
+		C5F4522D2529A6D900066AAB /* Base64 in Resources */ = {isa = PBXBuildFile; fileRef = C5F451FF2529A6D900066AAB /* Base64 */; };
+		C5F4522E2529A6D900066AAB /* GTMBase64.md in Resources */ = {isa = PBXBuildFile; fileRef = C5F452012529A6D900066AAB /* GTMBase64.md */; };
+		C5F4522F2529A6D900066AAB /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F452042529A6D900066AAB /* GTMBase64.m */; };
+		C5F452302529A6D900066AAB /* RSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F452062529A6D900066AAB /* RSAUtil.m */; };
+		C5F452312529A6D900066AAB /* RSA in Resources */ = {isa = PBXBuildFile; fileRef = C5F452072529A6D900066AAB /* RSA */; };
+		C5F452322529A6D900066AAB /* SHA-1 in Resources */ = {isa = PBXBuildFile; fileRef = C5F4520C2529A6D900066AAB /* SHA-1 */; };
+		C5F452332529A6D900066AAB /* SHA-384 in Resources */ = {isa = PBXBuildFile; fileRef = C5F4520E2529A6D900066AAB /* SHA-384 */; };
+		C5F452342529A6D900066AAB /* SHA-256 in Resources */ = {isa = PBXBuildFile; fileRef = C5F452112529A6D900066AAB /* SHA-256 */; };
+		C5F452352529A6D900066AAB /* SHA-224 in Resources */ = {isa = PBXBuildFile; fileRef = C5F452142529A6D900066AAB /* SHA-224 */; };
+		C5F452362529A6D900066AAB /* SHA in Resources */ = {isa = PBXBuildFile; fileRef = C5F452162529A6D900066AAB /* SHA */; };
+		C5F452372529A6D900066AAB /* SHA-512 in Resources */ = {isa = PBXBuildFile; fileRef = C5F452182529A6D900066AAB /* SHA-512 */; };
+		C5F452382529A6D900066AAB /* AES.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4521B2529A6D900066AAB /* AES.m */; };
+		C5F452392529A6D900066AAB /* AESCipher in Resources */ = {isa = PBXBuildFile; fileRef = C5F4521D2529A6D900066AAB /* AESCipher */; };
+		C5F4523A2529A6D900066AAB /* AESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4521E2529A6D900066AAB /* AESCipher.m */; };
+		C5F4523B2529A6D900066AAB /* MD5 in Resources */ = {isa = PBXBuildFile; fileRef = C5F452232529A6D900066AAB /* MD5 */; };
+		C5F4523C2529A6D900066AAB /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F452272529A6D900066AAB /* NSData+CommonCrypto.m */; };
+		C5F4523D2529A6D900066AAB /* HASH in Resources */ = {isa = PBXBuildFile; fileRef = C5F452282529A6D900066AAB /* HASH */; };
+		C5F452412529BABF00066AAB /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4523F2529BABF00066AAB /* AESCrypt.m */; };
 		D1C77CE50CE1275572271736 /* Pods_ShootingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -937,6 +959,46 @@
 		C5F451722529A00900066AAB /* FMHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMHttpRequest.h; sourceTree = "<group>"; };
 		C5F451732529A00900066AAB /* FMARCNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMARCNetwork.h; sourceTree = "<group>"; };
 		C5F451742529A00900066AAB /* FMHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMHttpRequest.m; sourceTree = "<group>"; };
+		C5F451F32529A6D900066AAB /* 凯撒加密解密 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "凯撒加密解密"; sourceTree = "<group>"; };
+		C5F451F42529A6D900066AAB /* CaesarCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaesarCipher.h; sourceTree = "<group>"; };
+		C5F451F62529A6D900066AAB /* DES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DES; sourceTree = "<group>"; };
+		C5F451F72529A6D900066AAB /* DES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DES.h; sourceTree = "<group>"; };
+		C5F451F82529A6D900066AAB /* Cryptography.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cryptography.h; sourceTree = "<group>"; };
+		C5F451FB2529A6D900066AAB /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		C5F451FC2529A6D900066AAB /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		C5F451FD2529A6D900066AAB /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		C5F451FE2529A6D900066AAB /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		C5F451FF2529A6D900066AAB /* Base64 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Base64; sourceTree = "<group>"; };
+		C5F452012529A6D900066AAB /* GTMBase64.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = GTMBase64.md; sourceTree = "<group>"; };
+		C5F452022529A6D900066AAB /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		C5F452032529A6D900066AAB /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		C5F452042529A6D900066AAB /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		C5F452062529A6D900066AAB /* RSAUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAUtil.m; sourceTree = "<group>"; };
+		C5F452072529A6D900066AAB /* RSA */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RSA; sourceTree = "<group>"; };
+		C5F452082529A6D900066AAB /* RSAUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAUtil.h; sourceTree = "<group>"; };
+		C5F4520B2529A6D900066AAB /* SHA-1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHA-1.h"; sourceTree = "<group>"; };
+		C5F4520C2529A6D900066AAB /* SHA-1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SHA-1"; sourceTree = "<group>"; };
+		C5F4520E2529A6D900066AAB /* SHA-384 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SHA-384"; sourceTree = "<group>"; };
+		C5F4520F2529A6D900066AAB /* SHA-384.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHA-384.h"; sourceTree = "<group>"; };
+		C5F452112529A6D900066AAB /* SHA-256 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SHA-256"; sourceTree = "<group>"; };
+		C5F452122529A6D900066AAB /* SHA-256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHA-256.h"; sourceTree = "<group>"; };
+		C5F452142529A6D900066AAB /* SHA-224 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SHA-224"; sourceTree = "<group>"; };
+		C5F452152529A6D900066AAB /* SHA-224.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHA-224.h"; sourceTree = "<group>"; };
+		C5F452162529A6D900066AAB /* SHA */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SHA; sourceTree = "<group>"; };
+		C5F452182529A6D900066AAB /* SHA-512 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SHA-512"; sourceTree = "<group>"; };
+		C5F452192529A6D900066AAB /* SHA-512.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHA-512.h"; sourceTree = "<group>"; };
+		C5F4521B2529A6D900066AAB /* AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AES.m; sourceTree = "<group>"; };
+		C5F4521D2529A6D900066AAB /* AESCipher */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AESCipher; sourceTree = "<group>"; };
+		C5F4521E2529A6D900066AAB /* AESCipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCipher.m; sourceTree = "<group>"; };
+		C5F4521F2529A6D900066AAB /* AESCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCipher.h; sourceTree = "<group>"; };
+		C5F452202529A6D900066AAB /* AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AES.h; sourceTree = "<group>"; };
+		C5F452232529A6D900066AAB /* MD5 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MD5; sourceTree = "<group>"; };
+		C5F452242529A6D900066AAB /* MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5.h; sourceTree = "<group>"; };
+		C5F452262529A6D900066AAB /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		C5F452272529A6D900066AAB /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		C5F452282529A6D900066AAB /* HASH */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HASH; sourceTree = "<group>"; };
+		C5F4523F2529BABF00066AAB /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
+		C5F452402529BABF00066AAB /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
 		CD3297D3C7766875E3C6A23D /* Pods_ShootingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shooting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1061,6 +1123,8 @@
 		C55497AD24F3A3A20065510D /* OtherVC */ = {
 			isa = PBXGroup;
 			children = (
+				C58F032D24EA69D400B6D09C /* ViewController@5.h */,
+				C58F033124EA69D400B6D09C /* ViewController@5.m */,
 				C5C67C4324FE382C000A26B8 /* ViewController@1.h */,
 				C58F033024EA69D400B6D09C /* ViewController@1.m */,
 				C58F032824EA69D400B6D09C /* ViewController@2.h */,
@@ -1069,8 +1133,6 @@
 				C58F032B24EA69D400B6D09C /* ViewController@3.m */,
 				C58F032F24EA69D400B6D09C /* ViewController@4.h */,
 				C58F032A24EA69D400B6D09C /* ViewController@4.m */,
-				C58F032D24EA69D400B6D09C /* ViewController@5.h */,
-				C58F033124EA69D400B6D09C /* ViewController@5.m */,
 			);
 			path = OtherVC;
 			sourceTree = "<group>";
@@ -1990,6 +2052,7 @@
 		C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C5F451F02529A6D100066AAB /* 加密体系 */,
 				C5E5C630250773FE001E69DA /* 水平进度条 */,
 				C589604C2500AB00002B1764 /* 图形验证码 */,
 				C5E5C64525079634001E69DA /* UIDevice+XMUtils */,
@@ -2724,6 +2787,205 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		C5F451F02529A6D100066AAB /* 加密体系 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F451F12529A6D900066AAB /* 加密算法 */,
+				C5F452212529A6D900066AAB /* HASH 信息摘要 */,
+			);
+			path = "加密体系";
+			sourceTree = "<group>";
+		};
+		C5F451F12529A6D900066AAB /* 加密算法 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F451F82529A6D900066AAB /* Cryptography.h */,
+				C5F452052529A6D900066AAB /* 非对称加密RSA */,
+				C5F451F22529A6D900066AAB /* 凯撒加密解密 */,
+				C5F4521A2529A6D900066AAB /* AES */,
+				C5F451F92529A6D900066AAB /* Base64 */,
+				C5F451F52529A6D900066AAB /* DES */,
+				C5F452092529A6D900066AAB /* SHA */,
+			);
+			path = "加密算法";
+			sourceTree = "<group>";
+		};
+		C5F451F22529A6D900066AAB /* 凯撒加密解密 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F451F32529A6D900066AAB /* 凯撒加密解密 */,
+				C5F451F42529A6D900066AAB /* CaesarCipher.h */,
+			);
+			path = "凯撒加密解密";
+			sourceTree = "<group>";
+		};
+		C5F451F52529A6D900066AAB /* DES */ = {
+			isa = PBXGroup;
+			children = (
+				C5F451F62529A6D900066AAB /* DES */,
+				C5F451F72529A6D900066AAB /* DES.h */,
+			);
+			path = DES;
+			sourceTree = "<group>";
+		};
+		C5F451F92529A6D900066AAB /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F451FA2529A6D900066AAB /* 系统拓展 */,
+				C5F451FF2529A6D900066AAB /* Base64 */,
+				C5F452002529A6D900066AAB /* GTMBase64 第三方 */,
+			);
+			path = Base64;
+			sourceTree = "<group>";
+		};
+		C5F451FA2529A6D900066AAB /* 系统拓展 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F451FB2529A6D900066AAB /* NSString+Base64.m */,
+				C5F451FC2529A6D900066AAB /* NSData+Base64.h */,
+				C5F451FD2529A6D900066AAB /* NSString+Base64.h */,
+				C5F451FE2529A6D900066AAB /* NSData+Base64.m */,
+			);
+			path = "系统拓展";
+			sourceTree = "<group>";
+		};
+		C5F452002529A6D900066AAB /* GTMBase64 第三方 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F452012529A6D900066AAB /* GTMBase64.md */,
+				C5F452022529A6D900066AAB /* GTMBase64.h */,
+				C5F452032529A6D900066AAB /* GTMDefines.h */,
+				C5F452042529A6D900066AAB /* GTMBase64.m */,
+			);
+			path = "GTMBase64 第三方";
+			sourceTree = "<group>";
+		};
+		C5F452052529A6D900066AAB /* 非对称加密RSA */ = {
+			isa = PBXGroup;
+			children = (
+				C5F452072529A6D900066AAB /* RSA */,
+				C5F452082529A6D900066AAB /* RSAUtil.h */,
+				C5F452062529A6D900066AAB /* RSAUtil.m */,
+			);
+			path = "非对称加密RSA";
+			sourceTree = "<group>";
+		};
+		C5F452092529A6D900066AAB /* SHA */ = {
+			isa = PBXGroup;
+			children = (
+				C5F452162529A6D900066AAB /* SHA */,
+				C5F4520A2529A6D900066AAB /* SHA-1 */,
+				C5F452132529A6D900066AAB /* SHA-224 */,
+				C5F452102529A6D900066AAB /* SHA-256 */,
+				C5F4520D2529A6D900066AAB /* SHA-384 */,
+				C5F452172529A6D900066AAB /* SHA-512 */,
+			);
+			path = SHA;
+			sourceTree = "<group>";
+		};
+		C5F4520A2529A6D900066AAB /* SHA-1 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4520B2529A6D900066AAB /* SHA-1.h */,
+				C5F4520C2529A6D900066AAB /* SHA-1 */,
+			);
+			path = "SHA-1";
+			sourceTree = "<group>";
+		};
+		C5F4520D2529A6D900066AAB /* SHA-384 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4520E2529A6D900066AAB /* SHA-384 */,
+				C5F4520F2529A6D900066AAB /* SHA-384.h */,
+			);
+			path = "SHA-384";
+			sourceTree = "<group>";
+		};
+		C5F452102529A6D900066AAB /* SHA-256 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F452112529A6D900066AAB /* SHA-256 */,
+				C5F452122529A6D900066AAB /* SHA-256.h */,
+			);
+			path = "SHA-256";
+			sourceTree = "<group>";
+		};
+		C5F452132529A6D900066AAB /* SHA-224 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F452142529A6D900066AAB /* SHA-224 */,
+				C5F452152529A6D900066AAB /* SHA-224.h */,
+			);
+			path = "SHA-224";
+			sourceTree = "<group>";
+		};
+		C5F452172529A6D900066AAB /* SHA-512 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F452182529A6D900066AAB /* SHA-512 */,
+				C5F452192529A6D900066AAB /* SHA-512.h */,
+			);
+			path = "SHA-512";
+			sourceTree = "<group>";
+		};
+		C5F4521A2529A6D900066AAB /* AES */ = {
+			isa = PBXGroup;
+			children = (
+				C5F452202529A6D900066AAB /* AES.h */,
+				C5F4521B2529A6D900066AAB /* AES.m */,
+				C5F4521C2529A6D900066AAB /* AESCipher */,
+			);
+			path = AES;
+			sourceTree = "<group>";
+		};
+		C5F4521C2529A6D900066AAB /* AESCipher */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4523E2529BAB300066AAB /* old */,
+				C5F4521D2529A6D900066AAB /* AESCipher */,
+				C5F452402529BABF00066AAB /* AESCrypt.h */,
+				C5F4523F2529BABF00066AAB /* AESCrypt.m */,
+			);
+			path = AESCipher;
+			sourceTree = "<group>";
+		};
+		C5F452212529A6D900066AAB /* HASH 信息摘要 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F452282529A6D900066AAB /* HASH */,
+				C5F452252529A6D900066AAB /* 系统拓展 */,
+				C5F452222529A6D900066AAB /* MD5 */,
+			);
+			path = "HASH 信息摘要";
+			sourceTree = "<group>";
+		};
+		C5F452222529A6D900066AAB /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F452232529A6D900066AAB /* MD5 */,
+				C5F452242529A6D900066AAB /* MD5.h */,
+			);
+			path = MD5;
+			sourceTree = "<group>";
+		};
+		C5F452252529A6D900066AAB /* 系统拓展 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F452262529A6D900066AAB /* NSData+CommonCrypto.h */,
+				C5F452272529A6D900066AAB /* NSData+CommonCrypto.m */,
+			);
+			path = "系统拓展";
+			sourceTree = "<group>";
+		};
+		C5F4523E2529BAB300066AAB /* old */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4521F2529A6D900066AAB /* AESCipher.h */,
+				C5F4521E2529A6D900066AAB /* AESCipher.m */,
+			);
+			path = old;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2835,43 +3097,57 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5B7E1F82524699100BC4E9D /* Others.bundle in Resources */,
+				C5F452332529A6D900066AAB /* SHA-384 in Resources */,
 				C58F01C024EA5E5E00B6D09C /* 带有按键音的按钮 in Resources */,
 				C58F047D24EBD78500B6D09C /* day_like_red@3x.png in Resources */,
 				C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */,
 				C58F047E24EBD78500B6D09C /* spark_red@2x.png in Resources */,
 				C58F048024EBD78500B6D09C /* spark_red.png in Resources */,
 				C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */,
+				C5F452352529A6D900066AAB /* SHA-224 in Resources */,
 				C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */,
 				C58F047F24EBD78500B6D09C /* day_like@3x.png in Resources */,
 				C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */,
 				C5E5C64425078860001E69DA /* iph_X.mp4 in Resources */,
 				C58F03B824EA6F0700B6D09C /* green_lottie_tab_discover.json in Resources */,
+				C5F4522E2529A6D900066AAB /* GTMBase64.md in Resources */,
 				C5E5C642250787A5001E69DA /* 非iph_X.mp4 in Resources */,
 				C59D9AA724F8C79500A74CE9 /* video.gif in Resources */,
+				C5F4523B2529A6D900066AAB /* MD5 in Resources */,
+				C5F452392529A6D900066AAB /* AESCipher in Resources */,
 				C5B7E1FE25246A7000BC4E9D /* WhiteRightArrow@2x.png in Resources */,
 				C58F047C24EBD78500B6D09C /* day_like@2x.png in Resources */,
 				C58F047024EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 in Resources */,
 				C58F03BA24EA6F0700B6D09C /* green_lottie_tab_home.json in Resources */,
+				C5F4522A2529A6D900066AAB /* DES in Resources */,
 				C58F002324EA36FA00B6D09C /* LaunchScreen.storyboard in Resources */,
+				C5F452362529A6D900066AAB /* SHA in Resources */,
 				C58F010B24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */,
 				C58F018224EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton in Resources */,
+				C5F452342529A6D900066AAB /* SHA-256 in Resources */,
 				C58F010C24EA584B00B6D09C /* 调试时候添加日志时使用,上线需要去掉 in Resources */,
 				C58F020524EA617800B6D09C /* 分享控件的用法 in Resources */,
 				C5B7E1FA252469B600BC4E9D /* 拍摄*上传.bundle in Resources */,
 				C58F03B924EA6F0700B6D09C /* green_lottie_tab_news.json in Resources */,
+				C5F452322529A6D900066AAB /* SHA-1 in Resources */,
 				C58F03B724EA6F0700B6D09C /* green_lottie_tab_mine.json in Resources */,
 				C58F00CF24EA581F00B6D09C /* GKNavigationBar.bundle in Resources */,
+				C5F4523D2529A6D900066AAB /* HASH in Resources */,
 				C58F00E824EA581F00B6D09C /* BRPickerView.bundle in Resources */,
+				C5F4522D2529A6D900066AAB /* Base64 in Resources */,
 				C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */,
 				C5F4513B25299CA900066AAB /* ZBNetworking in Resources */,
+				C5F452312529A6D900066AAB /* RSA in Resources */,
 				C58F01C124EA5E5E00B6D09C /* Sound.wav in Resources */,
 				C59B9E142526F0D20039B485 /* ZYTextField.bundle in Resources */,
 				C58F048224EBD78500B6D09C /* day_like_red@2x.png in Resources */,
 				C59D9AEF24F8F08500A74CE9 /* ZZCircleProgress.bundle in Resources */,
+				C5F452292529A6D900066AAB /* 凯撒加密解密 in Resources */,
 				C58F018F24EA5CAC00B6D09C /* 专治UITableView相应链断裂 in Resources */,
 				C5E5C64A2507963B001E69DA /* iOS 获取手机型号、系统版本.png in Resources */,
 				C58F048124EBD78500B6D09C /* spark_red@3x.png in Resources */,
 				C5B7E1FD25246A7000BC4E9D /* WhiteRightArrow@3x.png in Resources */,
+				C5F452372529A6D900066AAB /* SHA-512 in Resources */,
 				C572A27C24FBDD86000A1687 /* Settings.bundle in Resources */,
 				C58F002024EA36FA00B6D09C /* Assets.xcassets in Resources */,
 				C5B7E1F62524696300BC4E9D /* 登录 * 注册 * 密码找回.bundle in Resources */,
@@ -3078,6 +3354,7 @@
 				C58F02FC24EA63F300B6D09C /* SceneDelegate+LaunchingAd.m in Sources */,
 				C58F02BD24EA61C600B6D09C /* LOTShapeGradientFill.m in Sources */,
 				C5F4514D25299D1F00066AAB /* DataManager.m in Sources */,
+				C5F452302529A6D900066AAB /* RSAUtil.m in Sources */,
 				C58F01A424EA5CAD00B6D09C /* BaseVC+JPImageresizerView.m in Sources */,
 				C58F02A724EA61C600B6D09C /* LOTFillRenderer.m in Sources */,
 				C5F4513A25299CA900066AAB /* ZBRequestEngine.m in Sources */,
@@ -3115,10 +3392,12 @@
 				C589607C2500E90C002B1764 /* ForgetCodeVC.m in Sources */,
 				C59D9AD724F8EF4100A74CE9 /* CustomerAVPlayerVC.m in Sources */,
 				C572A26B24FBC547000A1687 /* UIImage+Extras.m in Sources */,
+				C5F4522C2529A6D900066AAB /* NSData+Base64.m in Sources */,
 				C58F01AD24EA5CAD00B6D09C /* NSObject+Extras.m in Sources */,
 				C58F00EE24EA581F00B6D09C /* BaseGPUImageView.m in Sources */,
 				C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */,
 				C5F4515025299D1F00066AAB /* NetworkingAPI.m in Sources */,
+				C5F4522F2529A6D900066AAB /* GTMBase64.m in Sources */,
 				C5F4514E25299D1F00066AAB /* URL_Manager.m in Sources */,
 				C58F018E24EA5CAC00B6D09C /* NSArray+Extend.m in Sources */,
 				C561619D24EE4CB7001CD851 /* PhotoVC.m in Sources */,
@@ -3127,6 +3406,7 @@
 				C58F029424EA61C600B6D09C /* LOTAsset.m in Sources */,
 				C58F00D324EA581F00B6D09C /* UIScrollView+GKCategory.m in Sources */,
 				C58F019C24EA5CAD00B6D09C /* BaseVC+GifImageView.m in Sources */,
+				C5F452412529BABF00066AAB /* AESCrypt.m in Sources */,
 				C58F00E424EA581F00B6D09C /* BRStringPickerView.m in Sources */,
 				C58F02B924EA61C600B6D09C /* LOTValueCallback.m in Sources */,
 				C5F4513C25299CA900066AAB /* ZBRequestManager.m in Sources */,
@@ -3216,11 +3496,13 @@
 				C59D9AD124F8EF1F00A74CE9 /* RepeatPlayer.m in Sources */,
 				C572A26A24FBC547000A1687 /* UIImage+SYS.m in Sources */,
 				C5575AD32504E20C00A2A694 /* ForgetCodeStep_02View.m in Sources */,
+				C5F4523C2529A6D900066AAB /* NSData+CommonCrypto.m in Sources */,
 				C58F020424EA617800B6D09C /* BWItemModel.m in Sources */,
 				C5C67CA224FF5D46000A26B8 /* NSTimerManager.m in Sources */,
 				C58F029C24EA61C600B6D09C /* LOTRoundedRectAnimator.m in Sources */,
 				C58F01A924EA5CAD00B6D09C /* ViewForHeader.m in Sources */,
 				C58F02B624EA61C600B6D09C /* LOTKeyframe.m in Sources */,
+				C5F4523A2529A6D900066AAB /* AESCipher.m in Sources */,
 				C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */,
 				C55497B024F3AD990065510D /* MKGPUImageView.m in Sources */,
 				C58F01A024EA5CAD00B6D09C /* BaseVC+BackBtn.m in Sources */,
@@ -3231,6 +3513,7 @@
 				C58F00E524EA581F00B6D09C /* BRDatePickerView+BR.m in Sources */,
 				C5AA490F250C8F04009F583F /* NSObject+SYSAlertController.m in Sources */,
 				C57D5B1825134D950073F90B /* DoorVC+VM.m in Sources */,
+				C5F4522B2529A6D900066AAB /* NSString+Base64.m in Sources */,
 				C58F02C224EA61C600B6D09C /* LOTPointInterpolator.m in Sources */,
 				C5E3C7742517824B00F9A150 /* UIImage+screenshot.m in Sources */,
 				C58F028C24EA61C600B6D09C /* LOTNumberInterpolator.m in Sources */,
@@ -3290,6 +3573,7 @@
 				C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */,
 				C58F02A824EA61C600B6D09C /* LOTSizeInterpolator.m in Sources */,
 				C58F00EB24EA581F00B6D09C /* NSBundle+BRPickerView.m in Sources */,
+				C5F452382529A6D900066AAB /* AES.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

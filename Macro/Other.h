@@ -11,6 +11,10 @@
 
 #import <objc/runtime.h>
 
+//网络请求接口
 #import "NetworkingAPI.h"
+//加密体系
+#import "AESCipher.h"
+#import "AESCrypt.h"
 
 #endif /* Other_h */

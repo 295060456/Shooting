@@ -214,6 +214,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 -(NSString *)ImgBaseURL;
 
+#pragma mark —— 测试接口安全性
+-(NSString *)testInterfaceSecurity;
+
 @end
 
 NS_ASSUME_NONNULL_END

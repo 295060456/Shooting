@@ -6,6 +6,10 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
+#ifdef DEBUG
+#import <DoraemonKit/DoraemonManager.h>
+#endif
+
 #import "AppDelegate.h"
 #import "CustomSYSUITabBarController.h"
 
@@ -67,6 +71,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         configure.gk_navItemLeftSpace = 12.0f;
         configure.gk_navItemRightSpace = 12.0f;
     }];
+    
+#ifdef DEBUG
+       [[DoraemonManager shareInstance] install];
+#endif
     
 #pragma mark —— 配置键盘全局
 //    IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager]; // 获取类库的单例变量

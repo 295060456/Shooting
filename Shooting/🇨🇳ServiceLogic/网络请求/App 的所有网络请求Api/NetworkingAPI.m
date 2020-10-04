@@ -12,11 +12,24 @@
 +(void)requestVedioWithBlock:(MKDataBlock)successBlock{
     
     NSDictionary *parameters = @{};
-    NSDictionary *headers = @{};
+    
+    NSString *currentTime = [NSObject dateConversionTimeStamp:NSDate.date
+                                                timeFormatStr:nil
+                                                intervalStyle:intervalBySec];
+    
+    NSString *str = [AESCrypt aesEncryptStringWithContent:[NSString stringWithFormat:@"%@||%@||%@",@"hqlive",@"123",currentTime]
+                                                      key:@"c1kgVioySoUVimtw"];
+    
+    
+    NSDictionary *headers = @{// key : c1kgVioySoUVimtwxJnAlhhX9Fgchoe2
+        @"hq-reqId":@"123",
+        @"hq-timestamp":currentTime,//获取当前北京时间（Unix时间戳，精确到毫秒）
+        @"hq-signature":str//签名字符串，使用 '||'进行以下规则拼接后进行AES加密 flag||reqId||timestamp 注明：flag值为hqlive
+    };
     
     [ZBRequestManager requestWithConfig:^(ZBURLRequest * _Nullable request) {
         
-        request.URLString = append(@"%@%@",server_URL,[URL_Manager sharedInstance].MKVideosRecommendVideosPOST);
+        request.URLString = [URL_Manager sharedInstance].testInterfaceSecurity;
         
         NSLog(@"request.URLString = %@",request.URLString);
         
