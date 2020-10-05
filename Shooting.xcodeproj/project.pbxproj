@@ -13,6 +13,7 @@
 		C51A0BE4250203BD00884016 /* DoorInputViewStyle_3.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A0BE3250203BD00884016 /* DoorInputViewStyle_3.m */; };
 		C52E89722510B4820070356F /* UITextField+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C52E89702510B4820070356F /* UITextField+Extend.m */; };
 		C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */ = {isa = PBXBuildFile; fileRef = C53B182B24FFA336000019F2 /* 视频水印.gif */; };
+		C54F858F252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */; };
 		C55497A424F38CDB0065510D /* MKShootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A324F38CDB0065510D /* MKShootVC.m */; };
 		C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A624F38D9C0065510D /* AVFounationTools.m */; };
 		C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A924F3A1F00065510D /* GPUImageTools.m */; };
@@ -368,6 +369,8 @@
 		C52E89702510B4820070356F /* UITextField+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extend.m"; sourceTree = "<group>"; };
 		C52E89712510B4820070356F /* UITextField+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extend.h"; sourceTree = "<group>"; };
 		C53B182B24FFA336000019F2 /* 视频水印.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "视频水印.gif"; sourceTree = "<group>"; };
+		C54F858D252B613E00EE3DD0 /* UITableView+WWFoldableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+WWFoldableTableView.h"; sourceTree = "<group>"; };
+		C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+WWFoldableTableView.m"; sourceTree = "<group>"; };
 		C55497A224F38CDB0065510D /* MKShootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKShootVC.h; sourceTree = "<group>"; };
 		C55497A324F38CDB0065510D /* MKShootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKShootVC.m; sourceTree = "<group>"; };
 		C55497A524F38D9C0065510D /* AVFounationTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVFounationTools.h; sourceTree = "<group>"; };
@@ -1090,6 +1093,15 @@
 				C52E89702510B4820070356F /* UITextField+Extend.m */,
 			);
 			path = "UITextField+Extend";
+			sourceTree = "<group>";
+		};
+		C54F858C252B613500EE3DD0 /* UITableView 折叠功能 */ = {
+			isa = PBXGroup;
+			children = (
+				C54F858D252B613E00EE3DD0 /* UITableView+WWFoldableTableView.h */,
+				C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */,
+			);
+			path = "UITableView 折叠功能";
 			sourceTree = "<group>";
 		};
 		C55497A024F38CB20065510D /* GPUImage */ = {
@@ -1881,6 +1893,7 @@
 		C58F013624EA5CAC00B6D09C /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				C54F858C252B613500EE3DD0 /* UITableView 折叠功能 */,
 				C59B9E332526F1C90039B485 /* 专治UITableView相应链断裂 */,
 				C59B9E322526F1BE0039B485 /* TableViewAnimationKit */,
 			);
@@ -3447,6 +3460,7 @@
 				C58F02A424EA61C600B6D09C /* LOTGradientFillRender.m in Sources */,
 				C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */,
 				C5575AC52504B62900A2A694 /* DoorInputViewStyle.m in Sources */,
+				C54F858F252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */,
 				C58F01C224EA5E5E00B6D09C /* SoundBtn.m in Sources */,
 				C58F01A324EA5CAD00B6D09C /* BaseVC.m in Sources */,
 				C58F02D524EA62B500B6D09C /* suspendBtn.m in Sources */,
