@@ -13,6 +13,8 @@
 		C51A0BE4250203BD00884016 /* DoorInputViewStyle_3.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A0BE3250203BD00884016 /* DoorInputViewStyle_3.m */; };
 		C52E89722510B4820070356F /* UITextField+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C52E89702510B4820070356F /* UITextField+Extend.m */; };
 		C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */ = {isa = PBXBuildFile; fileRef = C53B182B24FFA336000019F2 /* 视频水印.gif */; };
+		C546C3E1252C2407003694FF /* UIScrollView+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = C546C3DE252C2406003694FF /* UIScrollView+FDFullscreenPopGesture.m */; };
+		C546C3E2252C2407003694FF /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = C546C3DF252C2407003694FF /* UINavigationController+FDFullscreenPopGesture.m */; };
 		C54F858F252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */; };
 		C55497A424F38CDB0065510D /* MKShootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A324F38CDB0065510D /* MKShootVC.m */; };
 		C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A624F38D9C0065510D /* AVFounationTools.m */; };
@@ -369,6 +371,10 @@
 		C52E89702510B4820070356F /* UITextField+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extend.m"; sourceTree = "<group>"; };
 		C52E89712510B4820070356F /* UITextField+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extend.h"; sourceTree = "<group>"; };
 		C53B182B24FFA336000019F2 /* 视频水印.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "视频水印.gif"; sourceTree = "<group>"; };
+		C546C3DD252C2406003694FF /* UIScrollView+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		C546C3DE252C2406003694FF /* UIScrollView+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		C546C3DF252C2407003694FF /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		C546C3E0252C2407003694FF /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		C54F858D252B613E00EE3DD0 /* UITableView+WWFoldableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+WWFoldableTableView.h"; sourceTree = "<group>"; };
 		C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+WWFoldableTableView.m"; sourceTree = "<group>"; };
 		C55497A224F38CDB0065510D /* MKShootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKShootVC.h; sourceTree = "<group>"; };
@@ -1095,6 +1101,17 @@
 			path = "UITextField+Extend";
 			sourceTree = "<group>";
 		};
+		C546C3DC252C23FF003694FF /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				C546C3E0252C2407003694FF /* UINavigationController+FDFullscreenPopGesture.h */,
+				C546C3DF252C2407003694FF /* UINavigationController+FDFullscreenPopGesture.m */,
+				C546C3DD252C2406003694FF /* UIScrollView+FDFullscreenPopGesture.h */,
+				C546C3DE252C2406003694FF /* UIScrollView+FDFullscreenPopGesture.m */,
+			);
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
 		C54F858C252B613500EE3DD0 /* UITableView 折叠功能 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1499,6 +1516,7 @@
 		C58F007124EA580B00B6D09C /* Pods 不进去的 */ = {
 			isa = PBXGroup;
 			children = (
+				C546C3DC252C23FF003694FF /* FDFullscreenPopGesture */,
 				C59D9AE724F8F07B00A74CE9 /* ZZCircleProgress */,
 				C58F00AB24EA581F00B6D09C /* BRPickerView */,
 				C58F007224EA581F00B6D09C /* GKNavigationBar */,
@@ -3405,6 +3423,7 @@
 				C589607C2500E90C002B1764 /* ForgetCodeVC.m in Sources */,
 				C59D9AD724F8EF4100A74CE9 /* CustomerAVPlayerVC.m in Sources */,
 				C572A26B24FBC547000A1687 /* UIImage+Extras.m in Sources */,
+				C546C3E2252C2407003694FF /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				C5F4522C2529A6D900066AAB /* NSData+Base64.m in Sources */,
 				C58F01AD24EA5CAD00B6D09C /* NSObject+Extras.m in Sources */,
 				C58F00EE24EA581F00B6D09C /* BaseGPUImageView.m in Sources */,
@@ -3525,6 +3544,7 @@
 				C58F02E324EA632800B6D09C /* FileFolderHandleTool.m in Sources */,
 				C58F02B824EA61C600B6D09C /* LOTRadialGradientLayer.m in Sources */,
 				C58F00E524EA581F00B6D09C /* BRDatePickerView+BR.m in Sources */,
+				C546C3E1252C2407003694FF /* UIScrollView+FDFullscreenPopGesture.m in Sources */,
 				C5AA490F250C8F04009F583F /* NSObject+SYSAlertController.m in Sources */,
 				C57D5B1825134D950073F90B /* DoorVC+VM.m in Sources */,
 				C5F4522B2529A6D900066AAB /* NSString+Base64.m in Sources */,
