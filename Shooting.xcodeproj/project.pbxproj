@@ -375,6 +375,10 @@
 		C546C3DE252C2406003694FF /* UIScrollView+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		C546C3DF252C2407003694FF /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		C546C3E0252C2407003694FF /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		C5470F6225309C1100651ACE /* MacroDef_Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Size.h; sourceTree = "<group>"; };
+		C5470F6325309C1100651ACE /* MacroDef_Sys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Sys.h; sourceTree = "<group>"; };
+		C5470F6425309C1100651ACE /* MacroDef_Cor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Cor.h; sourceTree = "<group>"; };
+		C5470F6525309C1100651ACE /* MacroDef_Func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Func.h; sourceTree = "<group>"; };
 		C54F858D252B613E00EE3DD0 /* UITableView+WWFoldableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+WWFoldableTableView.h"; sourceTree = "<group>"; };
 		C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+WWFoldableTableView.m"; sourceTree = "<group>"; };
 		C55497A224F38CDB0065510D /* MKShootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKShootVC.h; sourceTree = "<group>"; };
@@ -476,7 +480,6 @@
 		C58F003A24EA36FA00B6D09C /* ShootingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShootingUITests.m; sourceTree = "<group>"; };
 		C58F003C24EA36FA00B6D09C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C58F004924EA571D00B6D09C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		C58F004A24EA575900B6D09C /* ToolMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolMacro.h; sourceTree = "<group>"; };
 		C58F004B24EA576400B6D09C /* AABlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AABlock.h; sourceTree = "<group>"; };
 		C58F004C24EA577400B6D09C /* Other.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Other.h; sourceTree = "<group>"; };
 		C58F004D24EA577400B6D09C /* Pods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pods.h; sourceTree = "<group>"; };
@@ -1112,6 +1115,17 @@
 			path = FDFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
+		C5470F5E25309C0300651ACE /* 各项宏定义 */ = {
+			isa = PBXGroup;
+			children = (
+				C5470F6425309C1100651ACE /* MacroDef_Cor.h */,
+				C5470F6525309C1100651ACE /* MacroDef_Func.h */,
+				C5470F6225309C1100651ACE /* MacroDef_Size.h */,
+				C5470F6325309C1100651ACE /* MacroDef_Sys.h */,
+			);
+			path = "各项宏定义";
+			sourceTree = "<group>";
+		};
 		C54F858C252B613500EE3DD0 /* UITableView 折叠功能 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1482,10 +1496,10 @@
 		C58F004824EA56F700B6D09C /* Macro */ = {
 			isa = PBXGroup;
 			children = (
+				C5470F5E25309C0300651ACE /* 各项宏定义 */,
 				C58F01C724EA5E8900B6D09C /* APIKey.h */,
 				C58F01C324EA5E7200B6D09C /* Notification */,
 				C58F010E24EA5B2300B6D09C /* DefineStructure.h */,
-				C58F004A24EA575900B6D09C /* ToolMacro.h */,
 				C58F004924EA571D00B6D09C /* PrefixHeader.pch */,
 				C58F004B24EA576400B6D09C /* AABlock.h */,
 				C58F004E24EA577400B6D09C /* Manual_Add_ThirdParty.h */,

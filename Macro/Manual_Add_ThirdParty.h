@@ -34,7 +34,11 @@
 #import "WGradientProgressView.h"
 
 #pragma mark —— 以下是自定义的
-#import "ToolMacro.h"
+#import "MacroDef_Sys.h"
+#import "MacroDef_Cor.h"
+#import "MacroDef_Size.h"
+#import "MacroDef_Func.h"
+
 #import "CALayer+Anim.h"
 #import "CALayer+Transition.h"
 #import "NSArray+Extension.h"

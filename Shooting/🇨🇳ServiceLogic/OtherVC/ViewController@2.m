@@ -51,7 +51,7 @@
     if (!_btn) {
         _btn = [UIButton buttonWithType:UIButtonTypeCustom];
         _btn.backgroundColor = kBlackColor;
-        [_btn setImage:KBuddleIMG(@"拍摄*上传", nil, @"播放")
+        [_btn setImage:KBuddleIMG(@"拍摄*上传", nil,nil, @"播放")
               forState:UIControlStateNormal];
         [_btn setTitle:@"1\n2\n71"
               forState:UIControlStateNormal];
@@ -69,7 +69,7 @@
     if (!_btn2) {
         _btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
         _btn2.backgroundColor = KBrownColor;
-        [_btn2 setImage:KBuddleIMG(@"拍摄*上传", nil, @"播放")
+        [_btn2 setImage:KBuddleIMG(@"拍摄*上传", nil,nil, @"播放")
               forState:UIControlStateNormal];
         [_btn2 setTitle:@"123456"
               forState:UIControlStateNormal];

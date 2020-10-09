@@ -301,7 +301,7 @@
         _toRegisterBtn.alpha = 0.7f;
         [_toRegisterBtn setTitle:@"新\n用\n户\n注\n册"
                         forState:UIControlStateNormal];
-        [_toRegisterBtn setImage:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, @"用户名称")
+        [_toRegisterBtn setImage:KBuddleIMG(@"登录 * 注册 * 密码找回", nil,nil, @"用户名称")
               forState:UIControlStateNormal];
         @weakify(self)
         [[_toRegisterBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -343,8 +343,8 @@
 -(NSMutableArray<UIImage *> *)headerImgMutArr{
     if (!_headerImgMutArr) {
         _headerImgMutArr = NSMutableArray.array;
-        [_headerImgMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, @"用户名称")];
-        [_headerImgMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, @"Lock")];
+        [_headerImgMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, nil,@"用户名称")];
+        [_headerImgMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", nil,nil, @"Lock")];
     }return _headerImgMutArr;
 }
 
@@ -359,16 +359,16 @@
 -(NSMutableArray<UIImage *> *)btnSelectedImgMutArr{
     if (!_btnSelectedImgMutArr) {
         _btnSelectedImgMutArr = NSMutableArray.array;
-        [_btnSelectedImgMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, @"空白图")];
-        [_btnSelectedImgMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, @"codeDecode")];
+        [_btnSelectedImgMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", nil,nil, @"空白图")];
+        [_btnSelectedImgMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回",nil, nil, @"codeDecode")];
     }return _btnSelectedImgMutArr;
 }
 
 -(NSMutableArray<UIImage *> *)btnUnselectedImgMutArr{
     if (!_btnUnselectedImgMutArr) {
         _btnUnselectedImgMutArr = NSMutableArray.array;
-        [_btnUnselectedImgMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, @"closeCircle")];
-        [_btnUnselectedImgMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, @"codeEncode")];
+        [_btnUnselectedImgMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回", nil,nil, @"closeCircle")];
+        [_btnUnselectedImgMutArr addObject:KBuddleIMG(@"登录 * 注册 * 密码找回",nil, nil, @"codeEncode")];
     }return _btnUnselectedImgMutArr;
 }
 
@@ -387,9 +387,9 @@
         _storeCodeBtn.selected = YES;
         [_storeCodeBtn setTitle:@"记住密码"
                        forState:UIControlStateNormal];
-        [_storeCodeBtn setImage:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, @"记住密码")
+        [_storeCodeBtn setImage:KBuddleIMG(@"登录 * 注册 * 密码找回", nil,nil, @"记住密码")
                        forState:UIControlStateSelected];
-        [_storeCodeBtn setImage:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, @"没有记住密码")
+        [_storeCodeBtn setImage:KBuddleIMG(@"登录 * 注册 * 密码找回", nil,nil, @"没有记住密码")
                        forState:UIControlStateNormal];
         @weakify(self)
         [[_storeCodeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -419,7 +419,7 @@
         _forgetCodeBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
         [_forgetCodeBtn setTitle:@"忘记密码"
                        forState:UIControlStateNormal];
-        [_forgetCodeBtn setImage:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, @"KKK")
+        [_forgetCodeBtn setImage:KBuddleIMG(@"登录 * 注册 * 密码找回", nil,nil, @"KKK")
                        forState:UIControlStateNormal];
         @weakify(self)
         [[_forgetCodeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
