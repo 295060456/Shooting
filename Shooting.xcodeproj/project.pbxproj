@@ -53,6 +53,8 @@
 		C589606F2500DDA3002B1764 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = C589606E2500DDA3002B1764 /* UIView+Animation.m */; };
 		C58960732500E0FA002B1764 /* FindCodeFlowChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960722500E0FA002B1764 /* FindCodeFlowChartView.m */; };
 		C589607C2500E90C002B1764 /* ForgetCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C589607B2500E90C002B1764 /* ForgetCodeVC.m */; };
+		C58C61932532B4020092BF89 /* RBCLikeButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C58C61912532B4020092BF89 /* RBCLikeButton.bundle */; };
+		C58C61942532B4020092BF89 /* RBCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C61922532B4020092BF89 /* RBCLikeButton.m */; };
 		C58F001224EA36F800B6D09C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001124EA36F800B6D09C /* AppDelegate.m */; };
 		C58F001524EA36F800B6D09C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001424EA36F800B6D09C /* SceneDelegate.m */; };
 		C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58F001924EA36F800B6D09C /* Main.storyboard */; };
@@ -241,14 +243,6 @@
 		C58F046F24EBD70300B6D09C /* UIControl+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F046D24EBD70300B6D09C /* UIControl+XY.m */; };
 		C58F047024EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 in Resources */ = {isa = PBXBuildFile; fileRef = C58F046E24EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 */; };
 		C58F047324EBD70F00B6D09C /* ECAuthorizationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F047224EBD70E00B6D09C /* ECAuthorizationTools.m */; };
-		C58F047C24EBD78500B6D09C /* day_like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F047524EBD78500B6D09C /* day_like@2x.png */; };
-		C58F047D24EBD78500B6D09C /* day_like_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F047624EBD78500B6D09C /* day_like_red@3x.png */; };
-		C58F047E24EBD78500B6D09C /* spark_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F047724EBD78500B6D09C /* spark_red@2x.png */; };
-		C58F047F24EBD78500B6D09C /* day_like@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F047824EBD78500B6D09C /* day_like@3x.png */; };
-		C58F048024EBD78500B6D09C /* spark_red.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F047924EBD78500B6D09C /* spark_red.png */; };
-		C58F048124EBD78500B6D09C /* spark_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F047A24EBD78500B6D09C /* spark_red@3x.png */; };
-		C58F048224EBD78500B6D09C /* day_like_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F047B24EBD78500B6D09C /* day_like_red@2x.png */; };
-		C58F048524EBD79000B6D09C /* RBCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F048324EBD79000B6D09C /* RBCLikeButton.m */; };
 		C59B9E142526F0D20039B485 /* ZYTextField.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C59B9E132526F0D20039B485 /* ZYTextField.bundle */; };
 		C59B9E172526F1500039B485 /* ZYTextField+HistoryDataList.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9E152526F1500039B485 /* ZYTextField+HistoryDataList.m */; };
 		C59B9E3A2526F1DF0039B485 /* UITableView+XSAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9E362526F1DF0039B485 /* UITableView+XSAnimationKit.m */; };
@@ -462,6 +456,9 @@
 		C58960722500E0FA002B1764 /* FindCodeFlowChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindCodeFlowChartView.m; sourceTree = "<group>"; };
 		C589607A2500E90C002B1764 /* ForgetCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetCodeVC.h; sourceTree = "<group>"; };
 		C589607B2500E90C002B1764 /* ForgetCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetCodeVC.m; sourceTree = "<group>"; };
+		C58C61902532B4020092BF89 /* RBCLikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCLikeButton.h; sourceTree = "<group>"; };
+		C58C61912532B4020092BF89 /* RBCLikeButton.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RBCLikeButton.bundle; sourceTree = "<group>"; };
+		C58C61922532B4020092BF89 /* RBCLikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCLikeButton.m; sourceTree = "<group>"; };
 		C58F000D24EA36F800B6D09C /* Shooting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58F001024EA36F800B6D09C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C58F001124EA36F800B6D09C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -848,15 +845,6 @@
 		C58F046E24EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOS小技巧：用runtime 解决UIButton 重复点击问题"; sourceTree = "<group>"; };
 		C58F047124EBD70E00B6D09C /* ECAuthorizationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECAuthorizationTools.h; sourceTree = "<group>"; };
 		C58F047224EBD70E00B6D09C /* ECAuthorizationTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECAuthorizationTools.m; sourceTree = "<group>"; };
-		C58F047524EBD78500B6D09C /* day_like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "day_like@2x.png"; sourceTree = "<group>"; };
-		C58F047624EBD78500B6D09C /* day_like_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "day_like_red@3x.png"; sourceTree = "<group>"; };
-		C58F047724EBD78500B6D09C /* spark_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spark_red@2x.png"; sourceTree = "<group>"; };
-		C58F047824EBD78500B6D09C /* day_like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "day_like@3x.png"; sourceTree = "<group>"; };
-		C58F047924EBD78500B6D09C /* spark_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark_red.png; sourceTree = "<group>"; };
-		C58F047A24EBD78500B6D09C /* spark_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spark_red@3x.png"; sourceTree = "<group>"; };
-		C58F047B24EBD78500B6D09C /* day_like_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "day_like_red@2x.png"; sourceTree = "<group>"; };
-		C58F048324EBD79000B6D09C /* RBCLikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCLikeButton.m; sourceTree = "<group>"; };
-		C58F048424EBD79000B6D09C /* RBCLikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCLikeButton.h; sourceTree = "<group>"; };
 		C58FDF4A25233EE100E020D3 /* LoadingImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingImage.h; sourceTree = "<group>"; };
 		C59B9E132526F0D20039B485 /* ZYTextField.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYTextField.bundle; sourceTree = "<group>"; };
 		C59B9E152526F1500039B485 /* ZYTextField+HistoryDataList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZYTextField+HistoryDataList.m"; sourceTree = "<group>"; };
@@ -2403,9 +2391,9 @@
 		C58F02E424EA634200B6D09C /* 高仿抖音点赞动画 */ = {
 			isa = PBXGroup;
 			children = (
-				C58F047424EBD77700B6D09C /* resource */,
-				C58F048424EBD79000B6D09C /* RBCLikeButton.h */,
-				C58F048324EBD79000B6D09C /* RBCLikeButton.m */,
+				C58C61912532B4020092BF89 /* RBCLikeButton.bundle */,
+				C58C61902532B4020092BF89 /* RBCLikeButton.h */,
+				C58C61922532B4020092BF89 /* RBCLikeButton.m */,
 			);
 			path = "高仿抖音点赞动画";
 			sourceTree = "<group>";
@@ -2507,20 +2495,6 @@
 				C58F046D24EBD70300B6D09C /* UIControl+XY.m */,
 			);
 			path = "UIControl+XY";
-			sourceTree = "<group>";
-		};
-		C58F047424EBD77700B6D09C /* resource */ = {
-			isa = PBXGroup;
-			children = (
-				C58F047B24EBD78500B6D09C /* day_like_red@2x.png */,
-				C58F047624EBD78500B6D09C /* day_like_red@3x.png */,
-				C58F047524EBD78500B6D09C /* day_like@2x.png */,
-				C58F047824EBD78500B6D09C /* day_like@3x.png */,
-				C58F047924EBD78500B6D09C /* spark_red.png */,
-				C58F047724EBD78500B6D09C /* spark_red@2x.png */,
-				C58F047A24EBD78500B6D09C /* spark_red@3x.png */,
-			);
-			path = resource;
 			sourceTree = "<group>";
 		};
 		C596079524F9221E00D4C824 /* res */ = {
@@ -3144,14 +3118,10 @@
 				C5B7E1F82524699100BC4E9D /* Others.bundle in Resources */,
 				C5F452332529A6D900066AAB /* SHA-384 in Resources */,
 				C58F01C024EA5E5E00B6D09C /* 带有按键音的按钮 in Resources */,
-				C58F047D24EBD78500B6D09C /* day_like_red@3x.png in Resources */,
 				C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */,
-				C58F047E24EBD78500B6D09C /* spark_red@2x.png in Resources */,
-				C58F048024EBD78500B6D09C /* spark_red.png in Resources */,
 				C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */,
 				C5F452352529A6D900066AAB /* SHA-224 in Resources */,
 				C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */,
-				C58F047F24EBD78500B6D09C /* day_like@3x.png in Resources */,
 				C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */,
 				C5E5C64425078860001E69DA /* iph_X.mp4 in Resources */,
 				C58F03B824EA6F0700B6D09C /* green_lottie_tab_discover.json in Resources */,
@@ -3161,8 +3131,8 @@
 				C5F4523B2529A6D900066AAB /* MD5 in Resources */,
 				C5F452392529A6D900066AAB /* AESCipher in Resources */,
 				C5B7E1FE25246A7000BC4E9D /* WhiteRightArrow@2x.png in Resources */,
-				C58F047C24EBD78500B6D09C /* day_like@2x.png in Resources */,
 				C58F047024EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 in Resources */,
+				C58C61932532B4020092BF89 /* RBCLikeButton.bundle in Resources */,
 				C58F03BA24EA6F0700B6D09C /* green_lottie_tab_home.json in Resources */,
 				C5F4522A2529A6D900066AAB /* DES in Resources */,
 				C58F002324EA36FA00B6D09C /* LaunchScreen.storyboard in Resources */,
@@ -3185,12 +3155,10 @@
 				C5F452312529A6D900066AAB /* RSA in Resources */,
 				C58F01C124EA5E5E00B6D09C /* Sound.wav in Resources */,
 				C59B9E142526F0D20039B485 /* ZYTextField.bundle in Resources */,
-				C58F048224EBD78500B6D09C /* day_like_red@2x.png in Resources */,
 				C59D9AEF24F8F08500A74CE9 /* ZZCircleProgress.bundle in Resources */,
 				C5F452292529A6D900066AAB /* 凯撒加密解密 in Resources */,
 				C58F018F24EA5CAC00B6D09C /* 专治UITableView相应链断裂 in Resources */,
 				C5E5C64A2507963B001E69DA /* iOS 获取手机型号、系统版本.png in Resources */,
-				C58F048124EBD78500B6D09C /* spark_red@3x.png in Resources */,
 				C5B7E1FD25246A7000BC4E9D /* WhiteRightArrow@3x.png in Resources */,
 				C5F452372529A6D900066AAB /* SHA-512 in Resources */,
 				C572A27C24FBDD86000A1687 /* Settings.bundle in Resources */,
@@ -3407,6 +3375,7 @@
 				C58F031B24EA65F200B6D09C /* BaseModel.m in Sources */,
 				C58F01F924EA60D100B6D09C /* CustomSYSUITabBarController.m in Sources */,
 				C58F01A224EA5CAD00B6D09C /* BaseVC+JXCategoryListContentViewDelegate.m in Sources */,
+				C58C61942532B4020092BF89 /* RBCLikeButton.m in Sources */,
 				C58F019224EA5CAC00B6D09C /* TBVCell_style_01.m in Sources */,
 				C58F02C324EA61C600B6D09C /* UIBezierPath.m in Sources */,
 				C59D9AEE24F8F08500A74CE9 /* ZZCircleProgress.m in Sources */,
@@ -3505,7 +3474,6 @@
 				C58F02B724EA61C600B6D09C /* UIColor.m in Sources */,
 				C51A0BE4250203BD00884016 /* DoorInputViewStyle_3.m in Sources */,
 				C58F019B24EA5CAD00B6D09C /* BaseVC+AFNReachability.m in Sources */,
-				C58F048524EBD79000B6D09C /* RBCLikeButton.m in Sources */,
 				C58F02C124EA61C600B6D09C /* LOTColorInterpolator.m in Sources */,
 				C58F029624EA61C600B6D09C /* LOTLayerContainer.m in Sources */,
 				C572A27A24FBD44A000A1687 /* UIImage+Overlay.m in Sources */,
