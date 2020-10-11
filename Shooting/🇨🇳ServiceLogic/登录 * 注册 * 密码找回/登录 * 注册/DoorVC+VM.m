@@ -86,7 +86,11 @@
             //注册成功即登录
             if ([response.reqResult isKindOfClass:NSDictionary.class]) {
                 //登录成功走以下代码
-                [MBProgressHUD wj_showError:@"登录成功"];
+                [WHToast showErrorWithMessage:@"登录成功"
+                                     duration:2
+                                finishHandler:^{
+                  
+                }];
                 self.loginContentView = nil;
                 [self backBtnClickEvent:nil];
             }else if ([response.reqResult isKindOfClass:NSString.class]){

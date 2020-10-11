@@ -177,9 +177,12 @@
 
     [self.recordBtn.progressView reset];
     [self.recordBtn reset];
-
-    [MBProgressHUD wj_showPlainText:@"开始录制"
-                               view:getMainWindow()];
+    
+    [WHToast showErrorWithMessage:@"开始录制"
+                         duration:2
+                    finishHandler:^{
+      
+    }];
     [self delTmpRes];
     
     [self.gradProg reset];
@@ -208,8 +211,11 @@
                                                     error:nil];
     if (success) {
         NSLog(@"删除作品成功");
-        [MBProgressHUD wj_showPlainText:@"删除作品成功"
-                                   view:getMainWindow()];
+        [WHToast showErrorWithMessage:@"删除作品成功"
+                             duration:2
+                        finishHandler:^{
+          
+        }];
     }
 }
 ///继续录制
@@ -669,8 +675,11 @@
             NSLog(@"结束录制 —— 这个作品我要了");
             //判定规则：小于3秒的被遗弃，不允许被保存
             if (self.recordBtn.currentTime <= self.recordBtn.safetyTime) {
-                [MBProgressHUD wj_showPlainText:[NSString stringWithFormat:@"不能保存录制时间低于%.2f秒的视频",self.recordBtn.safetyTime]
-                                           view:getMainWindow()];
+                [WHToast showErrorWithMessage:[NSString stringWithFormat:@"不能保存录制时间低于%.2f秒的视频",self.recordBtn.safetyTime]
+                                     duration:2
+                                finishHandler:^{
+                  
+                }];
             }else{
                 [self.gpuImageTools vedioShoottingEnd];
                 [self.recordBtn reset];

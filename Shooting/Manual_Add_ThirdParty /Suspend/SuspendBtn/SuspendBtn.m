@@ -6,14 +6,14 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "suspendBtn.h"
+#import "SuspendBtn.h"
 #import "UIView+SuspendView.h"
 
-@interface suspendBtn ()
+@interface SuspendBtn ()
 
 @end
 
-@implementation suspendBtn
+@implementation SuspendBtn
 
 -(instancetype)init{
     if (self = [super init]) {

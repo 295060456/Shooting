@@ -22,8 +22,7 @@
 #import <IQKeyboardManager/IQKeyboardManager.h>
 #import <LYEmptyView/LYEmptyViewHeader.h>
 #import "SDWebImage-umbrella.h"//不支持图片后处理
-//#import "MBProgressHUD.h"
-#import "MBProgressHUD+WJExtension.h"
+#import "WHToast.h"
 //#import "JPImageresizerView-umbrella.h"
 #import "JPImageresizerView.h"
 #import "GPUImage.h"

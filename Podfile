@@ -20,7 +20,7 @@ target 'Shooting' do
   pod 'IQKeyboardManager'
   pod 'LYEmptyView'
   pod 'SDWebImage'
-  pod 'MBProgressHUD+WJExtension'
+  pod 'WHToast' # https://github.com/remember17/WHToast 一个轻量级的提示控件，没有任何依赖
   pod 'LYXAlertController'
   pod 'SPAlertController'# https://github.com/SPStore/SPAlertController 深度定制AlertController
   pod 'JSONModel'

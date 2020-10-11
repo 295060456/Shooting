@@ -388,8 +388,11 @@ shouldChangeTextInRange:(NSRange)range
                                                 videoArticle:self.textView.text
                                                     urlAsset:self.urlAsset];
                     }else{
-                        [MBProgressHUD wj_showPlainText:@"单个文件大小需要在300M以内"
-                                                   view:self.view];
+                        [WHToast showErrorWithMessage:@"单个文件大小需要在300M以内"
+                                             duration:2
+                                        finishHandler:^{
+                          
+                        }];
                     }
                 }else{
         //            @weakify(self)

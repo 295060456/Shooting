@@ -72,8 +72,12 @@
         }];
         [_nsTimerManager actionNSTimerManagerFinishBlock:^(id data) {
             @strongify(self)
-            [MBProgressHUD wj_showPlainText:@"录制结束"
-                                       view:getMainWindow()];
+            [WHToast showErrorWithMessage:@"录制结束"
+                                 duration:2
+                            finishHandler:^{
+              
+            }];
+            
             if (self.finishWorkBlock) {
                 self.finishWorkBlock(@1);
             }
@@ -110,8 +114,12 @@
 #pragma mark —— 开始录制
 -(void)vedioShoottingOn{
     [self makeTimer];
-    [MBProgressHUD wj_showPlainText:@"开始录制"
-                               view:getMainWindow()];
+    [WHToast showErrorWithMessage:@"开始录制"
+                         duration:2
+                    finishHandler:^{
+      
+    }];
+    
     self.progressView.progressLabel.placeStr = @"录制中";
     self.backgroundColor = kRedColor;
     _progressView.pathFillColor = kBlueColor;
@@ -121,15 +129,18 @@
 #pragma mark —— 暂停录制
 -(void)vedioShoottingSuspend{
     [NSTimerManager nsTimePause:self.nsTimerManager.nsTimer];
-    
     self.progressView.progressLabel.placeStr = @"已暂停";
     self.backgroundColor = KGreenColor;
     _progressView.pathFillColor = kRedColor;
 }
 #pragma mark —— 继续录制
 -(void)vedioShoottingContinue{
-    [MBProgressHUD wj_showPlainText:@"继续录制"
-                               view:getMainWindow()];
+    [WHToast showErrorWithMessage:@"继续录制"
+                         duration:2
+                    finishHandler:^{
+      
+    }];
+    
     [NSTimerManager nsTimecontinue:self.nsTimerManager.nsTimer];
     self.progressView.progressLabel.placeStr = @"录制中";
     self.backgroundColor = kRedColor;

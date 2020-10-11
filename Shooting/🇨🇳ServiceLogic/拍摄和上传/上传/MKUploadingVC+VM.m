@@ -35,12 +35,18 @@
         if ([response.reqResult isKindOfClass:NSDictionary.class]) {
             NSDictionary *dic = (NSDictionary *)response.reqResult;
             if ([dic[@"code"] intValue] == 200) {
-                [MBProgressHUD wj_showPlainText:@"发布成功"
-                                           view:getMainWindow()];
+                [WHToast showErrorWithMessage:@"发布成功"
+                                     duration:2
+                                finishHandler:^{
+                  
+                }];
                 [self afterRelease];
             }else{
-                [MBProgressHUD wj_showPlainText:@"服务器异常"
-                                           view:getMainWindow()];
+                [WHToast showErrorWithMessage:@"服务器异常"
+                                     duration:2
+                                finishHandler:^{
+                  
+                }];
             }
         }
     }];

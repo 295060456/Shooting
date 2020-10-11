@@ -33,6 +33,7 @@
 		C56161BF24EE4F4B001CD851 /* JhtBannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161BD24EE4F4B001CD851 /* JhtBannerScrollView.m */; };
 		C56161C224EE4F52001CD851 /* JhtBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161C124EE4F52001CD851 /* JhtBannerView.m */; };
 		C56161C524EE5019001CD851 /* NSObject+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161C424EE5019001CD851 /* NSObject+Measure.m */; };
+		C56A27F225333E27004B9395 /* SuspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C56A27F125333E27004B9395 /* SuspendBtn.m */; };
 		C572A26924FBC547000A1687 /* UIImage+YBGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A26324FBC546000A1687 /* UIImage+YBGIF.m */; };
 		C572A26A24FBC547000A1687 /* UIImage+SYS.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A26624FBC546000A1687 /* UIImage+SYS.m */; };
 		C572A26B24FBC547000A1687 /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A26824FBC547000A1687 /* UIImage+Extras.m */; };
@@ -220,7 +221,6 @@
 		C58F02C224EA61C600B6D09C /* LOTPointInterpolator.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F028224EA61C500B6D09C /* LOTPointInterpolator.m */; };
 		C58F02C324EA61C600B6D09C /* UIBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F028424EA61C500B6D09C /* UIBezierPath.m */; };
 		C58F02C424EA61C600B6D09C /* CALayer+Compat.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F028724EA61C600B6D09C /* CALayer+Compat.m */; };
-		C58F02D524EA62B500B6D09C /* suspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02CD24EA62B500B6D09C /* suspendBtn.m */; };
 		C58F02D624EA62B500B6D09C /* SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02D024EA62B500B6D09C /* SuspendView.m */; };
 		C58F02D724EA62B500B6D09C /* SuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02D424EA62B500B6D09C /* SuspendLab.m */; };
 		C58F02E324EA632800B6D09C /* FileFolderHandleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02E224EA632800B6D09C /* FileFolderHandleTool.m */; };
@@ -418,6 +418,8 @@
 		C56161C124EE4F52001CD851 /* JhtBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhtBannerView.m; sourceTree = "<group>"; };
 		C56161C324EE5019001CD851 /* NSObject+Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Measure.h"; sourceTree = "<group>"; };
 		C56161C424EE5019001CD851 /* NSObject+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Measure.m"; sourceTree = "<group>"; };
+		C56A27F025333E27004B9395 /* SuspendBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendBtn.h; sourceTree = "<group>"; };
+		C56A27F125333E27004B9395 /* SuspendBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendBtn.m; sourceTree = "<group>"; };
 		C572A26324FBC546000A1687 /* UIImage+YBGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YBGIF.m"; sourceTree = "<group>"; };
 		C572A26424FBC546000A1687 /* UIImage+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extras.h"; sourceTree = "<group>"; };
 		C572A26524FBC546000A1687 /* UIImage+SYS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SYS.h"; sourceTree = "<group>"; };
@@ -806,8 +808,6 @@
 		C58F028524EA61C500B6D09C /* LOTAnimationView_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOTAnimationView_Internal.h; sourceTree = "<group>"; };
 		C58F028624EA61C500B6D09C /* LOTValueDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOTValueDelegate.h; sourceTree = "<group>"; };
 		C58F028724EA61C600B6D09C /* CALayer+Compat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Compat.m"; sourceTree = "<group>"; };
-		C58F02CD24EA62B500B6D09C /* suspendBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = suspendBtn.m; sourceTree = "<group>"; };
-		C58F02CE24EA62B500B6D09C /* suspendBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = suspendBtn.h; sourceTree = "<group>"; };
 		C58F02D024EA62B500B6D09C /* SuspendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendView.m; sourceTree = "<group>"; };
 		C58F02D124EA62B500B6D09C /* SuspendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendView.h; sourceTree = "<group>"; };
 		C58F02D324EA62B500B6D09C /* SuspendLab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendLab.h; sourceTree = "<group>"; };
@@ -2360,8 +2360,8 @@
 		C58F02CC24EA62B500B6D09C /* SuspendBtn */ = {
 			isa = PBXGroup;
 			children = (
-				C58F02CD24EA62B500B6D09C /* suspendBtn.m */,
-				C58F02CE24EA62B500B6D09C /* suspendBtn.h */,
+				C56A27F025333E27004B9395 /* SuspendBtn.h */,
+				C56A27F125333E27004B9395 /* SuspendBtn.m */,
 			);
 			path = SuspendBtn;
 			sourceTree = "<group>";
@@ -3369,6 +3369,7 @@
 				C58F019124EA5CAC00B6D09C /* TBVCell_style_02.m in Sources */,
 				C58F02B324EA61C600B6D09C /* LOTPathInterpolator.m in Sources */,
 				C561618B24EE4C98001CD851 /* StartOrPauseBtn.m in Sources */,
+				C56A27F225333E27004B9395 /* SuspendBtn.m in Sources */,
 				C58F02FC24EA63F300B6D09C /* SceneDelegate+LaunchingAd.m in Sources */,
 				C58F02BD24EA61C600B6D09C /* LOTShapeGradientFill.m in Sources */,
 				C5F4514D25299D1F00066AAB /* DataManager.m in Sources */,
@@ -3471,7 +3472,6 @@
 				C54F858F252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */,
 				C58F01C224EA5E5E00B6D09C /* SoundBtn.m in Sources */,
 				C58F01A324EA5CAD00B6D09C /* BaseVC.m in Sources */,
-				C58F02D524EA62B500B6D09C /* suspendBtn.m in Sources */,
 				C5E5C6242505E116001E69DA /* DoorInputViewStyle_1.m in Sources */,
 				C58F02B524EA61C600B6D09C /* LOTShapeRectangle.m in Sources */,
 				C58F00CC24EA581F00B6D09C /* GKPopAnimatedTransition.m in Sources */,
