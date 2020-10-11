@@ -55,6 +55,7 @@
 		C589607C2500E90C002B1764 /* ForgetCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C589607B2500E90C002B1764 /* ForgetCodeVC.m */; };
 		C58C61932532B4020092BF89 /* RBCLikeButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C58C61912532B4020092BF89 /* RBCLikeButton.bundle */; };
 		C58C61942532B4020092BF89 /* RBCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C61922532B4020092BF89 /* RBCLikeButton.m */; };
+		C58C61FC2532FD860092BF89 /* UIView+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C61FB2532FD850092BF89 /* UIView+Rotate.m */; };
 		C58F001224EA36F800B6D09C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001124EA36F800B6D09C /* AppDelegate.m */; };
 		C58F001524EA36F800B6D09C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001424EA36F800B6D09C /* SceneDelegate.m */; };
 		C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58F001924EA36F800B6D09C /* Main.storyboard */; };
@@ -459,6 +460,8 @@
 		C58C61902532B4020092BF89 /* RBCLikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCLikeButton.h; sourceTree = "<group>"; };
 		C58C61912532B4020092BF89 /* RBCLikeButton.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RBCLikeButton.bundle; sourceTree = "<group>"; };
 		C58C61922532B4020092BF89 /* RBCLikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCLikeButton.m; sourceTree = "<group>"; };
+		C58C61FA2532FD850092BF89 /* UIView+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Rotate.h"; sourceTree = "<group>"; };
+		C58C61FB2532FD850092BF89 /* UIView+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Rotate.m"; sourceTree = "<group>"; };
 		C58F000D24EA36F800B6D09C /* Shooting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58F001024EA36F800B6D09C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C58F001124EA36F800B6D09C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1836,18 +1839,20 @@
 		C58F011924EA5CAC00B6D09C /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				C589606D2500DDA3002B1764 /* UIView+Animation.h */,
+				C589606E2500DDA3002B1764 /* UIView+Animation.m */,
 				C58F011D24EA5CAC00B6D09C /* UIView+Chain.h */,
 				C58F011B24EA5CAC00B6D09C /* UIView+Chain.m */,
 				C58F011A24EA5CAC00B6D09C /* UIView+Extras.h */,
 				C58F011E24EA5CAC00B6D09C /* UIView+Extras.m */,
-				C5C67CAA24FF5D94000A26B8 /* UIView+Measure.h */,
-				C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */,
-				C58F011F24EA5CAC00B6D09C /* UIView+SuspendView.h */,
-				C58F011C24EA5CAC00B6D09C /* UIView+SuspendView.m */,
-				C589606D2500DDA3002B1764 /* UIView+Animation.h */,
-				C589606E2500DDA3002B1764 /* UIView+Animation.m */,
 				C57C22B92502717C00FAAA3F /* UIView+Gradient.h */,
 				C57C22BA2502717C00FAAA3F /* UIView+Gradient.m */,
+				C5C67CAA24FF5D94000A26B8 /* UIView+Measure.h */,
+				C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */,
+				C58C61FA2532FD850092BF89 /* UIView+Rotate.h */,
+				C58C61FB2532FD850092BF89 /* UIView+Rotate.m */,
+				C58F011F24EA5CAC00B6D09C /* UIView+SuspendView.h */,
+				C58F011C24EA5CAC00B6D09C /* UIView+SuspendView.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -3460,6 +3465,7 @@
 				C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */,
 				C58F02A224EA61C600B6D09C /* LOTPolygonAnimator.m in Sources */,
 				C58F02A424EA61C600B6D09C /* LOTGradientFillRender.m in Sources */,
+				C58C61FC2532FD860092BF89 /* UIView+Rotate.m in Sources */,
 				C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */,
 				C5575AC52504B62900A2A694 /* DoorInputViewStyle.m in Sources */,
 				C54F858F252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */,
