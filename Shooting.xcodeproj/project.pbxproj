@@ -45,6 +45,7 @@
 		C57C22BB2502717C00FAAA3F /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C22BA2502717C00FAAA3F /* UIView+Gradient.m */; };
 		C57D5B1825134D950073F90B /* DoorVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C57D5B1725134D950073F90B /* DoorVC+VM.m */; };
 		C57D5B1B25134E290073F90B /* NSObject+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = C57D5B1A25134E290073F90B /* NSObject+Login.m */; };
+		C57F0D20253336ED0080EEF0 /* NSObject+OpenURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C57F0D1F253336ED0080EEF0 /* NSObject+OpenURL.m */; };
 		C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589604E2500AC91002B1764 /* ImageCodeView.m */; };
 		C58960562500B0E0002B1764 /* LogoContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960552500B0E0002B1764 /* LogoContentView.m */; };
 		C58960592500B0F6002B1764 /* RegisterContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960582500B0F6002B1764 /* RegisterContentView.m */; };
@@ -140,7 +141,6 @@
 		C58F01A324EA5CAD00B6D09C /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F016324EA5CAC00B6D09C /* BaseVC.m */; };
 		C58F01A424EA5CAD00B6D09C /* BaseVC+JPImageresizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F016424EA5CAC00B6D09C /* BaseVC+JPImageresizerView.m */; };
 		C58F01A524EA5CAD00B6D09C /* BaseVC+TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F016524EA5CAC00B6D09C /* BaseVC+TZLocationManager.m */; };
-		C58F01A624EA5CAD00B6D09C /* BaseVC+OpenURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F016C24EA5CAC00B6D09C /* BaseVC+OpenURL.m */; };
 		C58F01A924EA5CAD00B6D09C /* ViewForHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F017324EA5CAC00B6D09C /* ViewForHeader.m */; };
 		C58F01AA24EA5CAD00B6D09C /* ViewForFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F017424EA5CAC00B6D09C /* ViewForFooter.m */; };
 		C58F01AB24EA5CAD00B6D09C /* BaseNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F017824EA5CAC00B6D09C /* BaseNavigationVC.m */; };
@@ -440,6 +440,8 @@
 		C57D5B1725134D950073F90B /* DoorVC+VM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DoorVC+VM.m"; sourceTree = "<group>"; };
 		C57D5B1925134E280073F90B /* NSObject+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Login.h"; sourceTree = "<group>"; };
 		C57D5B1A25134E290073F90B /* NSObject+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Login.m"; sourceTree = "<group>"; };
+		C57F0D1E253336ED0080EEF0 /* NSObject+OpenURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+OpenURL.h"; sourceTree = "<group>"; };
+		C57F0D1F253336ED0080EEF0 /* NSObject+OpenURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OpenURL.m"; sourceTree = "<group>"; };
 		C589604D2500AC91002B1764 /* ImageCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCodeView.h; sourceTree = "<group>"; };
 		C589604E2500AC91002B1764 /* ImageCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCodeView.m; sourceTree = "<group>"; };
 		C58960542500B0E0002B1764 /* LogoContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoContentView.h; sourceTree = "<group>"; };
@@ -629,7 +631,6 @@
 		C58F015924EA5CAC00B6D09C /* BaseVC+BRPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+BRPickerView.m"; sourceTree = "<group>"; };
 		C58F015A24EA5CAC00B6D09C /* BaseVC+TZImagePickerControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZImagePickerControllerDelegate.m"; sourceTree = "<group>"; };
 		C58F015B24EA5CAC00B6D09C /* BaseVC+TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+TZLocationManager.h"; sourceTree = "<group>"; };
-		C58F015C24EA5CAC00B6D09C /* BaseVC+OpenURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+OpenURL.h"; sourceTree = "<group>"; };
 		C58F015E24EA5CAC00B6D09C /* BaseVC+BackBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+BackBtn.m"; sourceTree = "<group>"; };
 		C58F015F24EA5CAC00B6D09C /* BaseVC+BWShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+BWShareView.m"; sourceTree = "<group>"; };
 		C58F016024EA5CAC00B6D09C /* BaseVC+JXCategoryListContentViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+JXCategoryListContentViewDelegate.m"; sourceTree = "<group>"; };
@@ -643,7 +644,6 @@
 		C58F016824EA5CAC00B6D09C /* BaseVC+BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+BRPickerView.h"; sourceTree = "<group>"; };
 		C58F016924EA5CAC00B6D09C /* BaseVC+BWShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+BWShareView.h"; sourceTree = "<group>"; };
 		C58F016A24EA5CAC00B6D09C /* BaseVC+BackBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+BackBtn.h"; sourceTree = "<group>"; };
-		C58F016C24EA5CAC00B6D09C /* BaseVC+OpenURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+OpenURL.m"; sourceTree = "<group>"; };
 		C58F017324EA5CAC00B6D09C /* ViewForHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewForHeader.m; sourceTree = "<group>"; };
 		C58F017424EA5CAC00B6D09C /* ViewForFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewForFooter.m; sourceTree = "<group>"; };
 		C58F017524EA5CAC00B6D09C /* ViewForFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewForFooter.h; sourceTree = "<group>"; };
@@ -2015,8 +2015,6 @@
 				C58F016424EA5CAC00B6D09C /* BaseVC+JPImageresizerView.m */,
 				C58F015524EA5CAC00B6D09C /* BaseVC+JXCategoryListContentViewDelegate.h */,
 				C58F016024EA5CAC00B6D09C /* BaseVC+JXCategoryListContentViewDelegate.m */,
-				C58F015C24EA5CAC00B6D09C /* BaseVC+OpenURL.h */,
-				C58F016C24EA5CAC00B6D09C /* BaseVC+OpenURL.m */,
 				C58F016224EA5CAC00B6D09C /* BaseVC+TZImagePickerController.h */,
 				C58F015324EA5CAC00B6D09C /* BaseVC+TZImagePickerController.m */,
 				C58F016624EA5CAC00B6D09C /* BaseVC+TZImagePickerControllerDelegate.h */,
@@ -2071,6 +2069,8 @@
 			isa = PBXGroup;
 			children = (
 				C5AA4909250C8EFB009F583F /* NSObject+Alert */,
+				C57F0D1E253336ED0080EEF0 /* NSObject+OpenURL.h */,
+				C57F0D1F253336ED0080EEF0 /* NSObject+OpenURL.m */,
 				C58F017B24EA5CAC00B6D09C /* NSObject+Extras.h */,
 				C58F017F24EA5CAC00B6D09C /* NSObject+Extras.m */,
 				C56161C324EE5019001CD851 /* NSObject+Measure.h */,
@@ -3498,7 +3498,6 @@
 				C58F02D724EA62B500B6D09C /* SuspendLab.m in Sources */,
 				C5F4513E25299CA900066AAB /* NSString+ZBUTF8Encoding.m in Sources */,
 				C58F00D224EA581F00B6D09C /* UIBarButtonItem+GKCategory.m in Sources */,
-				C58F01A624EA5CAD00B6D09C /* BaseVC+OpenURL.m in Sources */,
 				C51A0BE1250203B000884016 /* DoorInputViewStyle_2.m in Sources */,
 				C5B5EF26250CCE3E00DCDA93 /* NSObject+Shake.m in Sources */,
 				C58F019924EA5CAD00B6D09C /* CALayer+Anim.m in Sources */,
@@ -3570,6 +3569,7 @@
 				C572A26924FBC547000A1687 /* UIImage+YBGIF.m in Sources */,
 				C58F02A624EA61C600B6D09C /* LOTComposition.m in Sources */,
 				C58F00EC24EA581F00B6D09C /* BRAddressModel.m in Sources */,
+				C57F0D20253336ED0080EEF0 /* NSObject+OpenURL.m in Sources */,
 				C58F029324EA61C600B6D09C /* LOTAnimationTransitionController.m in Sources */,
 				C5F4513D25299CA900066AAB /* ZBCacheManager.m in Sources */,
 				C58F020224EA617800B6D09C /* BWItemCollectionViewCell.m in Sources */,

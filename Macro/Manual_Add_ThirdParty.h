@@ -57,6 +57,7 @@
 #import "NSObject+SPAlertController.h"
 #import "NSObject+Shake.h"
 #import "NSObject+Login.h"
+#import "NSObject+OpenURL.h"
 
 #import "UIControl+XY.h"
 #import "UITableViewCell+WhiteArrows.h"
@@ -93,7 +94,6 @@
 #import "BaseVC+BRPickerView.h"
 #import "BaseVC+GifImageView.h"
 #import "BaseVC+JPImageresizerView.h"
-#import "BaseVC+OpenURL.h"
 #import "BaseVC+BWShareView.h"
 
 #import "AppDelegate.h"
