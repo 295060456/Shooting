@@ -49,7 +49,7 @@ UITextViewDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:KBuddleIMG(@"Others", nil, nil,@"nodata")];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:KBuddleIMG(nil, @"Others", nil,@"nodata")];
     self.backView.alpha = 1;
     self.textView.alpha = 1;
     self.choosePicBtn.alpha = 1;
@@ -199,7 +199,7 @@ UITextViewDelegate
                     if ([arg isKindOfClass:UIImage.class]) {
                         self.imgData = (UIImage *)arg;
                         [self.choosePicBtn setImage:[UIImage addImage:[UIImage cropSquareImage:self.imgData]
-                                                            withImage:KBuddleIMG(@"拍摄*上传", nil, nil,@"播放")
+                                                            withImage:KBuddleIMG(nil,@"拍摄*上传", nil,@"播放")
                                                     image2Coefficient:3]
                                            forState:UIControlStateNormal];
                         self.choosePicBtn.iconBtn.hidden = NO;
@@ -252,7 +252,7 @@ UITextViewDelegate
 }
 #pragma mark - DZDeleteButtonDelegate
 - (void)deleteButtonRemoveSelf:(LGiOSBtn *_Nonnull)button{
-    [button setImage:KBuddleIMG(@"Others", nil, nil,@"加号")
+    [button setImage:KBuddleIMG(nil,@"Others",  nil,@"加号")
             forState:UIControlStateNormal];
     button.iconBtn.hidden = YES;
     button.shaking = NO;

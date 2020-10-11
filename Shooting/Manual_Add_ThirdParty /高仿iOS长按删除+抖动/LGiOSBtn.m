@@ -29,7 +29,10 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        [self setImage:KBuddleIMG(@"Others",nil, nil, @"加号")
+        [self setImage:KBuddleIMG(nil,
+                                  @"Others",
+                                  nil,
+                                  @"加号")
               forState:UIControlStateNormal];
         [self addLongPressGestureRecognizer];
         self.iconBtn.hidden = YES;
@@ -38,7 +41,10 @@
 
 - (instancetype)initWithCoder:(NSCoder *)coder{
     if (self = [super initWithCoder:coder]) {
-        [self setImage:KBuddleIMG(@"Others",nil, nil, @"加号")
+        [self setImage:KBuddleIMG(nil,
+                                  @"Others",
+                                  nil,
+                                  @"加号")
               forState:UIControlStateNormal];
         [self addLongPressGestureRecognizer];
         self.iconBtn.hidden = YES;
@@ -47,7 +53,10 @@
 
 - (instancetype)init{
     if (self = [super init]) {
-        [self setImage:KBuddleIMG(@"Others",nil, nil, @"加号")
+        [self setImage:KBuddleIMG(nil,
+                                  @"Others",
+                                  nil,
+                                  @"加号")
               forState:UIControlStateNormal];
         [self addLongPressGestureRecognizer];
         self.iconBtn.hidden = YES;
@@ -94,7 +103,7 @@
 }
 
 - (void)longClick {
-    if (![self.imageView.image isEqual:KBuddleIMG(@"Others",nil, nil, @"加号")]) {
+    if (![self.imageView.image isEqual:KBuddleIMG(nil,@"Others", nil, @"加号")]) {
         if (self.shaking) return;
         self.shaking = YES;
     }
@@ -113,7 +122,7 @@
 #pragma mark —— lazyLoad
 - (UIImageView *)iconBtn {
     if (!_iconBtn) {
-        _iconBtn = [[UIImageView alloc] initWithImage:KBuddleIMG(@"拍摄*上传", nil, nil,@"del_Photo")];
+        _iconBtn = [[UIImageView alloc] initWithImage:KBuddleIMG(nil,@"拍摄*上传", nil,@"del_Photo")];
         _iconBtn.userInteractionEnabled = YES;
         _iconBtn.ableRespose = YES;
         [_iconBtn addGestureRecognizer:self.iconBtnTap];

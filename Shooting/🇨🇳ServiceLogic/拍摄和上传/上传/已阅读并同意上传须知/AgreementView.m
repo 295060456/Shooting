@@ -44,9 +44,9 @@
         _agreementBtn.selected = YES;
         [_agreementBtn setTitle:@"已阅读并同意"
                        forState:UIControlStateNormal];
-        [_agreementBtn setImage:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, nil,@"状态未选中")
+        [_agreementBtn setImage:KBuddleIMG(nil, @"登录 * 注册 * 密码找回",nil,@"状态未选中")
                        forState:UIControlStateNormal];
-        [_agreementBtn setImage:KBuddleIMG(@"登录 * 注册 * 密码找回", nil, nil,@"状态选中")
+        [_agreementBtn setImage:KBuddleIMG(nil,@"登录 * 注册 * 密码找回",nil,@"状态选中")
                        forState:UIControlStateSelected];
         _agreementBtn.titleLabel.font = [UIFont systemFontOfSize:10.2
                                                           weight:UIFontWeightRegular];
