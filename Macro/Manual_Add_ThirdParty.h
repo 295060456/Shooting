@@ -15,7 +15,6 @@
 #import "YBNotificationManager.h"
 
 #import "BWShareView.h"
-#import "Lottie.h"
 #import "RBCLikeButton.h"//高仿抖音点赞动画
 #import "ZYTextField.h"
 #import "FileFolderHandleTool.h"
