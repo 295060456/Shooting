@@ -19,37 +19,37 @@
                           videoArticle:(NSString *)videoArticle
                               urlAsset:(AVURLAsset *)urlAsset{
     
-    self.reqSignal = [[FMARCNetwork sharedInstance] uploadViedoNetworkPath:@""
-                                                                    params:@{
-                                                                        @"videoSize":@(data.length),
-                                                                        @"videoArticle":videoArticle,
-                                                                        @"videoTime":@([GPUImageTools getVedioDuringTimeWithUrlAsset:urlAsset])//获取视频文件的总时长
-                                                                    }
-                                                                 fileDatas:@[data]
-                                                                   nameArr:@[@"file"]
-                                                                  mimeType:@"mp4"];
-    @weakify(self)
-    [self.reqSignal subscribeNext:^(FMHttpResonse *response) {
-        @strongify(self)
-        NSLog(@"%@",response.reqResult);
-        if ([response.reqResult isKindOfClass:NSDictionary.class]) {
-            NSDictionary *dic = (NSDictionary *)response.reqResult;
-            if ([dic[@"code"] intValue] == 200) {
-                [WHToast showErrorWithMessage:@"发布成功"
-                                     duration:2
-                                finishHandler:^{
-                  
-                }];
-                [self afterRelease];
-            }else{
-                [WHToast showErrorWithMessage:@"服务器异常"
-                                     duration:2
-                                finishHandler:^{
-                  
-                }];
-            }
-        }
-    }];
+//    self.reqSignal = [[FMARCNetwork sharedInstance] uploadViedoNetworkPath:@""
+//                                                                    params:@{
+//                                                                        @"videoSize":@(data.length),
+//                                                                        @"videoArticle":videoArticle,
+//                                                                        @"videoTime":@([GPUImageTools getVedioDuringTimeWithUrlAsset:urlAsset])//获取视频文件的总时长
+//                                                                    }
+//                                                                 fileDatas:@[data]
+//                                                                   nameArr:@[@"file"]
+//                                                                  mimeType:@"mp4"];
+//    @weakify(self)
+//    [self.reqSignal subscribeNext:^(FMHttpResonse *response) {
+//        @strongify(self)
+//        NSLog(@"%@",response.reqResult);
+//        if ([response.reqResult isKindOfClass:NSDictionary.class]) {
+//            NSDictionary *dic = (NSDictionary *)response.reqResult;
+//            if ([dic[@"code"] intValue] == 200) {
+//                [WHToast showErrorWithMessage:@"发布成功"
+//                                     duration:2
+//                                finishHandler:^{
+//                  
+//                }];
+//                [self afterRelease];
+//            }else{
+//                [WHToast showErrorWithMessage:@"服务器异常"
+//                                     duration:2
+//                                finishHandler:^{
+//                  
+//                }];
+//            }
+//        }
+//    }];
 }
 
 @end

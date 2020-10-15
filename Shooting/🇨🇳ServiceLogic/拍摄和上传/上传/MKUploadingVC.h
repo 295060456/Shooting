@@ -6,11 +6,11 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "BaseVC.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKUploadingVC : BaseVC
+@interface MKUploadingVC : UIViewController
 
 ///发布成功以后做的事情
 -(void)afterRelease;

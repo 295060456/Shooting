@@ -33,9 +33,6 @@
 #import <IQKeyboardManager/IQKeyboardManager.h>
 #import "SPAlertController.h"
 
-#import "BaseVC+JPImageresizerView.h"
-#import "BaseVC+MJRefresh.h"
-
 #pragma mark —— ZFPlayer 播放器相关
 //Core
 #import "ZFPlayer.h"

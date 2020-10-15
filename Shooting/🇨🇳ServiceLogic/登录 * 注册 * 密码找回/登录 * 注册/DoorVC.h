@@ -6,12 +6,12 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "BaseVC.h"
+#import <UIKit/UIKit.h>
 #import "Door.h"
 
 NS_ASSUME_NONNULL_BEGIN
 //注册和登录共用一个控制器DoorVC；忘记密码单独一个控制器
-@interface DoorVC : BaseVC
+@interface DoorVC : UIViewController
 
 @property(nonatomic,strong,nullable)LoginContentView *loginContentView;//登录页面
 @property(nonatomic,strong)NSString *captchaKey;

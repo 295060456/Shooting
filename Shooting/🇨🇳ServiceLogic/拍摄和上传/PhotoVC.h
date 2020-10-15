@@ -6,11 +6,11 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "BaseVC.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PhotoVC : BaseVC
+@interface PhotoVC : UIViewController
 
 + (instancetype)ComingFromVC:(UIViewController *)rootVC
                  comingStyle:(ComingStyle)comingStyle

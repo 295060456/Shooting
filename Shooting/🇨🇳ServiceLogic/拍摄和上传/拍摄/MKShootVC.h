@@ -6,12 +6,12 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "BaseVC.h"
+#import <UIKit/UIKit.h>
 #import "StartOrPauseBtn.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKShootVC : BaseVC
+@interface MKShootVC : UIViewController
 
 @property(nonatomic,strong)GPUImageTools *gpuImageTools;
 @property(nonatomic,strong,nullable)__block StartOrPauseBtn *recordBtn;//录制的按钮
