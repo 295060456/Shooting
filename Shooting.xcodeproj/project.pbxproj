@@ -58,7 +58,6 @@
 		C589607C2500E90C002B1764 /* ForgetCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C589607B2500E90C002B1764 /* ForgetCodeVC.m */; };
 		C58C61932532B4020092BF89 /* RBCLikeButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C58C61912532B4020092BF89 /* RBCLikeButton.bundle */; };
 		C58C61942532B4020092BF89 /* RBCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C61922532B4020092BF89 /* RBCLikeButton.m */; };
-		C58C61FC2532FD860092BF89 /* UIView+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C61FB2532FD850092BF89 /* UIView+Rotate.m */; };
 		C58F001224EA36F800B6D09C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001124EA36F800B6D09C /* AppDelegate.m */; };
 		C58F001524EA36F800B6D09C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001424EA36F800B6D09C /* SceneDelegate.m */; };
 		C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58F001924EA36F800B6D09C /* Main.storyboard */; };
@@ -405,8 +404,6 @@
 		C58C61902532B4020092BF89 /* RBCLikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCLikeButton.h; sourceTree = "<group>"; };
 		C58C61912532B4020092BF89 /* RBCLikeButton.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RBCLikeButton.bundle; sourceTree = "<group>"; };
 		C58C61922532B4020092BF89 /* RBCLikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCLikeButton.m; sourceTree = "<group>"; };
-		C58C61FA2532FD850092BF89 /* UIView+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Rotate.h"; sourceTree = "<group>"; };
-		C58C61FB2532FD850092BF89 /* UIView+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Rotate.m"; sourceTree = "<group>"; };
 		C58F000D24EA36F800B6D09C /* Shooting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58F001024EA36F800B6D09C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C58F001124EA36F800B6D09C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1686,8 +1683,6 @@
 				C57C22BA2502717C00FAAA3F /* UIView+Gradient.m */,
 				C5C67CAA24FF5D94000A26B8 /* UIView+Measure.h */,
 				C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */,
-				C58C61FA2532FD850092BF89 /* UIView+Rotate.h */,
-				C58C61FB2532FD850092BF89 /* UIView+Rotate.m */,
 				C58F011F24EA5CAC00B6D09C /* UIView+SuspendView.h */,
 				C58F011C24EA5CAC00B6D09C /* UIView+SuspendView.m */,
 			);
@@ -3105,7 +3100,6 @@
 				C5E5C66D2508C486001E69DA /* WGradientProgressView.m in Sources */,
 				C57C22BB2502717C00FAAA3F /* UIView+Gradient.m in Sources */,
 				C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */,
-				C58C61FC2532FD860092BF89 /* UIView+Rotate.m in Sources */,
 				C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */,
 				C5575AC52504B62900A2A694 /* DoorInputViewStyle.m in Sources */,
 				C5914BAC25384CD0007777A6 /* UIViewController+BaseVC.m in Sources */,

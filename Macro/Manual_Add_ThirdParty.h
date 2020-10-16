@@ -76,7 +76,6 @@
 #import "UIView+Extras.h"
 #import "UIView+Animation.h"
 #import "UIView+Gradient.h"
-#import "UIView+Rotate.h"
 
 #import "SuspendLab.h"
 #import "suspendBtn.h"
