@@ -36,6 +36,7 @@
 		C56161BF24EE4F4B001CD851 /* JhtBannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161BD24EE4F4B001CD851 /* JhtBannerScrollView.m */; };
 		C56161C224EE4F52001CD851 /* JhtBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161C124EE4F52001CD851 /* JhtBannerView.m */; };
 		C56161C524EE5019001CD851 /* NSObject+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161C424EE5019001CD851 /* NSObject+Measure.m */; };
+		C562D60B2540095C009DFA21 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C562D60A2540095C009DFA21 /* CollectionViewCell.m */; };
 		C572A26924FBC547000A1687 /* UIImage+YBGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A26324FBC546000A1687 /* UIImage+YBGIF.m */; };
 		C572A26A24FBC547000A1687 /* UIImage+SYS.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A26624FBC546000A1687 /* UIImage+SYS.m */; };
 		C572A26B24FBC547000A1687 /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A26824FBC547000A1687 /* UIImage+Extras.m */; };
@@ -362,6 +363,8 @@
 		C56161C124EE4F52001CD851 /* JhtBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhtBannerView.m; sourceTree = "<group>"; };
 		C56161C324EE5019001CD851 /* NSObject+Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Measure.h"; sourceTree = "<group>"; };
 		C56161C424EE5019001CD851 /* NSObject+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Measure.m"; sourceTree = "<group>"; };
+		C562D6092540095C009DFA21 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		C562D60A2540095C009DFA21 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		C572A26324FBC546000A1687 /* UIImage+YBGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YBGIF.m"; sourceTree = "<group>"; };
 		C572A26424FBC546000A1687 /* UIImage+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extras.h"; sourceTree = "<group>"; };
 		C572A26524FBC546000A1687 /* UIImage+SYS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SYS.h"; sourceTree = "<group>"; };
@@ -1159,6 +1162,15 @@
 			path = JhtBannerCardView;
 			sourceTree = "<group>";
 		};
+		C562D6082540095C009DFA21 /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C562D6092540095C009DFA21 /* CollectionViewCell.h */,
+				C562D60A2540095C009DFA21 /* CollectionViewCell.m */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
 		C572A2A324FDFA67000A1687 /* 💰VerifyCodeButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1621,6 +1633,7 @@
 		C58F011024EA5BD500B6D09C /* BaseCustomizeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				C562D6082540095C009DFA21 /* UICollectionViewCell */,
 				C58F017224EA5CAC00B6D09C /* 👌UITableViewHeaderFooterView */,
 				C58F014D24EA5CAC00B6D09C /* CALayer */,
 				C58F013124EA5CAC00B6D09C /* NSArray */,
@@ -1760,14 +1773,14 @@
 		C58F013A24EA5CAC00B6D09C /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				C5B7E1FC25246A7000BC4E9D /* WhiteRightArrow@2x.png */,
-				C5B7E1FB25246A7000BC4E9D /* WhiteRightArrow@3x.png */,
 				C58F014024EA5CAC00B6D09C /* TBVCell_style_01.h */,
 				C58F013D24EA5CAC00B6D09C /* TBVCell_style_01.m */,
 				C58F013E24EA5CAC00B6D09C /* TBVCell_style_02.h */,
 				C58F013B24EA5CAC00B6D09C /* TBVCell_style_02.m */,
 				C58F013C24EA5CAC00B6D09C /* UITableViewCell+WhiteArrows.h */,
 				C58F013F24EA5CAC00B6D09C /* UITableViewCell+WhiteArrows.m */,
+				C5B7E1FC25246A7000BC4E9D /* WhiteRightArrow@2x.png */,
+				C5B7E1FB25246A7000BC4E9D /* WhiteRightArrow@3x.png */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -3124,6 +3137,7 @@
 				C5914BAE25384CD0007777A6 /* UIViewController+NavigationBarHiddenMgr.m in Sources */,
 				C58F00DD24EA581F00B6D09C /* SDWebImageCoderHelper.m in Sources */,
 				C58F00DE24EA581F00B6D09C /* SDWebImageCoder.m in Sources */,
+				C562D60B2540095C009DFA21 /* CollectionViewCell.m in Sources */,
 				C58F00E724EA581F00B6D09C /* BRDatePickerView.m in Sources */,
 				C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */,
 				C58F018124EA5CAC00B6D09C /* DeleteSystemUITabBarButton.m in Sources */,
