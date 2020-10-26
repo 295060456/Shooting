@@ -230,9 +230,9 @@
 -(NSMutableArray<UIImage *> *)headerImgMutArr{
     if (!_headerImgMutArr) {
         _headerImgMutArr = NSMutableArray.array;
-        [_headerImgMutArr addObject:KBuddleIMG(nil,@"登录 * 注册 * 密码找回", nil, @"验证ICON")];
-        [_headerImgMutArr addObject:KBuddleIMG(nil,@"登录 * 注册 * 密码找回",nil, @"Lock")];
-        [_headerImgMutArr addObject:KBuddleIMG(nil,@"登录 * 注册 * 密码找回",nil, @"Lock")];
+        [_headerImgMutArr addObject:KBuddleIMG(@"⚽️PicResource",@"登录 * 注册 * 密码找回", nil, @"验证ICON")];
+        [_headerImgMutArr addObject:KBuddleIMG(@"⚽️PicResource",@"登录 * 注册 * 密码找回",nil, @"Lock")];
+        [_headerImgMutArr addObject:KBuddleIMG(@"⚽️PicResource",@"登录 * 注册 * 密码找回",nil, @"Lock")];
     }return _headerImgMutArr;
 }
 
@@ -248,18 +248,18 @@
 -(NSMutableArray<UIImage *> *)btnSelectedImgMutArr{
     if (!_btnSelectedImgMutArr) {
         _btnSelectedImgMutArr = NSMutableArray.array;
-        [_btnSelectedImgMutArr addObject:KBuddleIMG(nil,@"登录 * 注册 * 密码找回", nil, @"空白图")];
-        [_btnSelectedImgMutArr addObject:KBuddleIMG(nil,@"登录 * 注册 * 密码找回", nil, @"codeDecode")];
-        [_btnSelectedImgMutArr addObject:KBuddleIMG(nil,@"登录 * 注册 * 密码找回",nil, @"codeDecode")];
+        [_btnSelectedImgMutArr addObject:KBuddleIMG(@"⚽️PicResource",@"登录 * 注册 * 密码找回", nil, @"空白图")];
+        [_btnSelectedImgMutArr addObject:KBuddleIMG(@"⚽️PicResource",@"登录 * 注册 * 密码找回", nil, @"codeDecode")];
+        [_btnSelectedImgMutArr addObject:KBuddleIMG(@"⚽️PicResource",@"登录 * 注册 * 密码找回",nil, @"codeDecode")];
     }return _btnSelectedImgMutArr;
 }
 
 -(NSMutableArray<UIImage *> *)btnUnselectedImgMutArr{
     if (!_btnUnselectedImgMutArr) {
         _btnUnselectedImgMutArr = NSMutableArray.array;
-        [_btnUnselectedImgMutArr addObject:KBuddleIMG(nil,@"登录 * 注册 * 密码找回",nil, @"closeCircle")];
-        [_btnUnselectedImgMutArr addObject:KBuddleIMG(nil,@"登录 * 注册 * 密码找回",nil, @"codeEncode")];
-        [_btnUnselectedImgMutArr addObject:KBuddleIMG(nil,@"登录 * 注册 * 密码找回",nil, @"codeEncode")];
+        [_btnUnselectedImgMutArr addObject:KBuddleIMG(@"⚽️PicResource",@"登录 * 注册 * 密码找回",nil, @"closeCircle")];
+        [_btnUnselectedImgMutArr addObject:KBuddleIMG(@"⚽️PicResource",@"登录 * 注册 * 密码找回",nil, @"codeEncode")];
+        [_btnUnselectedImgMutArr addObject:KBuddleIMG(@"⚽️PicResource",@"登录 * 注册 * 密码找回",nil, @"codeEncode")];
     }return _btnUnselectedImgMutArr;
 }
 

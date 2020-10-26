@@ -105,7 +105,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:KBuddleIMG(nil,@"拍摄*上传",nil, @"MKShootVC")];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:KBuddleIMG(@"⚽️PicResource",@"拍摄*上传",nil, @"MKShootVC")];
     
     self.gk_navLeftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.backBtn];
     self.gk_navRightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.flashLightBtn],
@@ -504,7 +504,7 @@
 -(UIButton *)overturnBtn{
     if (!_overturnBtn) {
         _overturnBtn = UIButton.new;
-        [_overturnBtn setImage:KBuddleIMG(nil,@"拍摄*上传",nil, @"翻转镜头")
+        [_overturnBtn setImage:KBuddleIMG(@"⚽️PicResource",@"拍摄*上传",nil, @"翻转镜头")
                       forState:UIControlStateNormal];
         @weakify(self)
         [[_overturnBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -518,9 +518,9 @@
 -(UIButton *)flashLightBtn{
     if (!_flashLightBtn) {
         _flashLightBtn = UIButton.new;
-        [_flashLightBtn setImage:KBuddleIMG(nil,@"拍摄*上传",@"闪光灯", @"闪光灯-关闭")
+        [_flashLightBtn setImage:KBuddleIMG(@"⚽️PicResource",@"拍摄*上传",@"闪光灯", @"闪光灯-关闭")
                       forState:UIControlStateNormal];
-        [_flashLightBtn setImage:KBuddleIMG(nil,@"拍摄*上传",@"闪光灯", @"闪光灯")
+        [_flashLightBtn setImage:KBuddleIMG(@"⚽️PicResource",@"拍摄*上传",@"闪光灯", @"闪光灯")
                       forState:UIControlStateSelected];
         @weakify(self)
         [[_flashLightBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -534,9 +534,9 @@
 -(UIButton *)countDownBtn{
     if (!_countDownBtn) {
         _countDownBtn = UIButton.new;
-        [_countDownBtn setImage:KBuddleIMG(nil,@"拍摄*上传",nil, @"倒计时 关闭状态")
+        [_countDownBtn setImage:KBuddleIMG(@"⚽️PicResource",@"拍摄*上传",nil, @"倒计时 关闭状态")
                        forState:UIControlStateNormal];
-        [_countDownBtn setImage:KBuddleIMG(nil,@"拍摄*上传",nil, @"倒计时 开启状态")
+        [_countDownBtn setImage:KBuddleIMG(@"⚽️PicResource",@"拍摄*上传",nil, @"倒计时 开启状态")
                        forState:UIControlStateSelected];
         @weakify(self)
         [[_countDownBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -637,7 +637,7 @@
     if (!_deleteFilmBtn) {
         _deleteFilmBtn = UIButton.new;
         _deleteFilmBtn.alpha = 0;
-        [_deleteFilmBtn setImage:KBuddleIMG(nil,@"拍摄*上传",nil, @"删除视频")
+        [_deleteFilmBtn setImage:KBuddleIMG(@"⚽️PicResource",@"拍摄*上传",nil, @"删除视频")
                         forState:UIControlStateNormal];
         @weakify(self)
         [[_deleteFilmBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -667,7 +667,7 @@
     if (!_sureFilmBtn) {
         _sureFilmBtn = UIButton.new;
         _sureFilmBtn.alpha = 0;
-        [_sureFilmBtn setImage:KBuddleIMG(nil, @"拍摄*上传",nil, @"保存视频")
+        [_sureFilmBtn setImage:KBuddleIMG(@"⚽️PicResource", @"拍摄*上传",nil, @"保存视频")
                         forState:UIControlStateNormal];
         @weakify(self)
         [[_sureFilmBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -845,7 +845,7 @@
                        forState:UIControlStateNormal];
         [_backBtn setTitle:@"返回"
                   forState:UIControlStateNormal];
-        [_backBtn setImage:KBuddleIMG(nil,@"Others",nil, @"back_white")
+        [_backBtn setImage:KBuddleIMG(@"⚽️PicResource",@"Others",nil, @"back_white")
                          forState:UIControlStateNormal];
         @weakify(self)
         [[_backBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {

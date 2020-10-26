@@ -155,7 +155,7 @@
     //形变范围
     //    explosionCell.scaleRange = 0.02;
     //粒子内容
-    explosionCell.contents = (id)[KBuddleIMG(nil,
+    explosionCell.contents = (id)[KBuddleIMG(@"⚽️PicResource",
                                              @"RBCLikeButton",
                                              nil,
                                              @"spark_red")

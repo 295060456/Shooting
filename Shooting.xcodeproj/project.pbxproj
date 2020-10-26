@@ -37,6 +37,7 @@
 		C56161C224EE4F52001CD851 /* JhtBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161C124EE4F52001CD851 /* JhtBannerView.m */; };
 		C56161C524EE5019001CD851 /* NSObject+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161C424EE5019001CD851 /* NSObject+Measure.m */; };
 		C562D60B2540095C009DFA21 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C562D60A2540095C009DFA21 /* CollectionViewCell.m */; };
+		C56E428E2547188A00B9F555 /* ⚽️PicResource in Resources */ = {isa = PBXBuildFile; fileRef = C56E428D2547188A00B9F555 /* ⚽️PicResource */; };
 		C57278B82540974C002373D7 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C57278B32540974B002373D7 /* NavigationBar.m */; };
 		C57278B92540974C002373D7 /* BaseNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C57278B62540974B002373D7 /* BaseNavigationVC.m */; };
 		C57278C525409771002373D7 /* UIViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C57278C425409771002373D7 /* UIViewController+NavigationBar.m */; };
@@ -165,10 +166,6 @@
 		C58F033424EA69D400B6D09C /* ViewController@3.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F032B24EA69D400B6D09C /* ViewController@3.m */; };
 		C58F033524EA69D400B6D09C /* ViewController@1.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F033024EA69D400B6D09C /* ViewController@1.m */; };
 		C58F033624EA69D400B6D09C /* ViewController@5.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F033124EA69D400B6D09C /* ViewController@5.m */; };
-		C58F03B724EA6F0700B6D09C /* green_lottie_tab_mine.json in Resources */ = {isa = PBXBuildFile; fileRef = C58F03B324EA6F0700B6D09C /* green_lottie_tab_mine.json */; };
-		C58F03B824EA6F0700B6D09C /* green_lottie_tab_discover.json in Resources */ = {isa = PBXBuildFile; fileRef = C58F03B424EA6F0700B6D09C /* green_lottie_tab_discover.json */; };
-		C58F03B924EA6F0700B6D09C /* green_lottie_tab_news.json in Resources */ = {isa = PBXBuildFile; fileRef = C58F03B524EA6F0700B6D09C /* green_lottie_tab_news.json */; };
-		C58F03BA24EA6F0700B6D09C /* green_lottie_tab_home.json in Resources */ = {isa = PBXBuildFile; fileRef = C58F03B624EA6F0700B6D09C /* green_lottie_tab_home.json */; };
 		C58F03BE24EA72BF00B6D09C /* ShowAvailableFont.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F03BD24EA72BF00B6D09C /* ShowAvailableFont.m */; };
 		C58F046F24EBD70300B6D09C /* UIControl+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F046D24EBD70300B6D09C /* UIControl+XY.m */; };
 		C58F047024EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 in Resources */ = {isa = PBXBuildFile; fileRef = C58F046E24EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 */; };
@@ -210,9 +207,6 @@
 		C5AEEAE025384197000E1C5F /* UIView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEADD25384196000E1C5F /* UIView+Extras.m */; };
 		C5AEEAE125384197000E1C5F /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEADE25384196000E1C5F /* UIView+Animation.m */; };
 		C5B5EF26250CCE3E00DCDA93 /* NSObject+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B5EF24250CCE3E00DCDA93 /* NSObject+Shake.m */; };
-		C5B7E1F62524696300BC4E9D /* 登录 * 注册 * 密码找回.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5B7E1F52524696300BC4E9D /* 登录 * 注册 * 密码找回.bundle */; };
-		C5B7E1F82524699100BC4E9D /* Others.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5B7E1F72524699100BC4E9D /* Others.bundle */; };
-		C5B7E1FA252469B600BC4E9D /* 拍摄*上传.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5B7E1F9252469B600BC4E9D /* 拍摄*上传.bundle */; };
 		C5B7E1FD25246A7000BC4E9D /* WhiteRightArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B7E1FB25246A7000BC4E9D /* WhiteRightArrow@3x.png */; };
 		C5B7E1FE25246A7000BC4E9D /* WhiteRightArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B7E1FC25246A7000BC4E9D /* WhiteRightArrow@2x.png */; };
 		C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */; };
@@ -369,6 +363,7 @@
 		C56161C424EE5019001CD851 /* NSObject+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Measure.m"; sourceTree = "<group>"; };
 		C562D6092540095C009DFA21 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		C562D60A2540095C009DFA21 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		C56E428D2547188A00B9F555 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "⚽️PicResource"; path = "Shooting/⚽️PicResource"; sourceTree = "<group>"; };
 		C57278B32540974B002373D7 /* NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBar.m; sourceTree = "<group>"; };
 		C57278B42540974B002373D7 /* NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBar.h; sourceTree = "<group>"; };
 		C57278B62540974B002373D7 /* BaseNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationVC.m; sourceTree = "<group>"; };
@@ -631,10 +626,6 @@
 		C58F032F24EA69D400B6D09C /* ViewController@4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController@4.h"; sourceTree = "<group>"; };
 		C58F033024EA69D400B6D09C /* ViewController@1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController@1.m"; sourceTree = "<group>"; };
 		C58F033124EA69D400B6D09C /* ViewController@5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController@5.m"; sourceTree = "<group>"; };
-		C58F03B324EA6F0700B6D09C /* green_lottie_tab_mine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_lottie_tab_mine.json; sourceTree = "<group>"; };
-		C58F03B424EA6F0700B6D09C /* green_lottie_tab_discover.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_lottie_tab_discover.json; sourceTree = "<group>"; };
-		C58F03B524EA6F0700B6D09C /* green_lottie_tab_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_lottie_tab_news.json; sourceTree = "<group>"; };
-		C58F03B624EA6F0700B6D09C /* green_lottie_tab_home.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_lottie_tab_home.json; sourceTree = "<group>"; };
 		C58F03BC24EA72BF00B6D09C /* ShowAvailableFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowAvailableFont.h; sourceTree = "<group>"; };
 		C58F03BD24EA72BF00B6D09C /* ShowAvailableFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowAvailableFont.m; sourceTree = "<group>"; };
 		C58F046C24EBD70300B6D09C /* UIControl+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+XY.h"; sourceTree = "<group>"; };
@@ -715,9 +706,6 @@
 		C5AEEADF25384196000E1C5F /* UIView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extras.h"; sourceTree = "<group>"; };
 		C5B5EF24250CCE3E00DCDA93 /* NSObject+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Shake.m"; sourceTree = "<group>"; };
 		C5B5EF25250CCE3E00DCDA93 /* NSObject+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Shake.h"; sourceTree = "<group>"; };
-		C5B7E1F52524696300BC4E9D /* 登录 * 注册 * 密码找回.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "登录 * 注册 * 密码找回.bundle"; sourceTree = "<group>"; };
-		C5B7E1F72524699100BC4E9D /* Others.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Others.bundle; sourceTree = "<group>"; };
-		C5B7E1F9252469B600BC4E9D /* 拍摄*上传.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "拍摄*上传.bundle"; sourceTree = "<group>"; };
 		C5B7E1FB25246A7000BC4E9D /* WhiteRightArrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WhiteRightArrow@3x.png"; sourceTree = "<group>"; };
 		C5B7E1FC25246A7000BC4E9D /* WhiteRightArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WhiteRightArrow@2x.png"; sourceTree = "<group>"; };
 		C5C67C4324FE382C000A26B8 /* ViewController@1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController@1.h"; sourceTree = "<group>"; };
@@ -1350,6 +1338,7 @@
 		C58F000424EA36F800B6D09C = {
 			isa = PBXGroup;
 			children = (
+				C56E428D2547188A00B9F555 /* ⚽️PicResource */,
 				C58F004824EA56F700B6D09C /* Macro */,
 				C58F000F24EA36F800B6D09C /* Shooting */,
 				1AD6F263795BF1A29595997A /* Pods */,
@@ -1376,7 +1365,6 @@
 				C58F002424EA36FA00B6D09C /* Info.plist */,
 				C58F010F24EA5B6C00B6D09C /* AppDelegate & SceneDelegate */,
 				C58F011024EA5BD500B6D09C /* BaseCustomizeUIKit */,
-				C58F033724EA6E1600B6D09C /* ⚽️PicResource */,
 				C58F031824EA65F200B6D09C /* BaseModel */,
 				C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */,
 				C58F032724EA69C800B6D09C /* 🇨🇳ServiceLogic */,
@@ -2187,28 +2175,6 @@
 			path = "🇨🇳ServiceLogic";
 			sourceTree = "<group>";
 		};
-		C58F033724EA6E1600B6D09C /* ⚽️PicResource */ = {
-			isa = PBXGroup;
-			children = (
-				C58F03B124EA6EF100B6D09C /* LottieResources */,
-				C5B7E1F52524696300BC4E9D /* 登录 * 注册 * 密码找回.bundle */,
-				C5B7E1F72524699100BC4E9D /* Others.bundle */,
-				C5B7E1F9252469B600BC4E9D /* 拍摄*上传.bundle */,
-			);
-			path = "⚽️PicResource";
-			sourceTree = "<group>";
-		};
-		C58F03B124EA6EF100B6D09C /* LottieResources */ = {
-			isa = PBXGroup;
-			children = (
-				C58F03B424EA6F0700B6D09C /* green_lottie_tab_discover.json */,
-				C58F03B624EA6F0700B6D09C /* green_lottie_tab_home.json */,
-				C58F03B324EA6F0700B6D09C /* green_lottie_tab_mine.json */,
-				C58F03B524EA6F0700B6D09C /* green_lottie_tab_news.json */,
-			);
-			path = LottieResources;
-			sourceTree = "<group>";
-		};
 		C58F03BB24EA728000B6D09C /* iOS打印全员字体 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2853,7 +2819,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5B7E1F82524699100BC4E9D /* Others.bundle in Resources */,
 				C5F452332529A6D900066AAB /* SHA-384 in Resources */,
 				C58F01C024EA5E5E00B6D09C /* 带有按键音的按钮 in Resources */,
 				C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */,
@@ -2862,7 +2827,6 @@
 				C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */,
 				C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */,
 				C5E5C64425078860001E69DA /* iph_X.mp4 in Resources */,
-				C58F03B824EA6F0700B6D09C /* green_lottie_tab_discover.json in Resources */,
 				C5F4522E2529A6D900066AAB /* GTMBase64.md in Resources */,
 				C5E5C642250787A5001E69DA /* 非iph_X.mp4 in Resources */,
 				C59D9AA724F8C79500A74CE9 /* video.gif in Resources */,
@@ -2871,7 +2835,6 @@
 				C5B7E1FE25246A7000BC4E9D /* WhiteRightArrow@2x.png in Resources */,
 				C58F047024EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 in Resources */,
 				C58C61932532B4020092BF89 /* RBCLikeButton.bundle in Resources */,
-				C58F03BA24EA6F0700B6D09C /* green_lottie_tab_home.json in Resources */,
 				C5F4522A2529A6D900066AAB /* DES in Resources */,
 				C58F002324EA36FA00B6D09C /* LaunchScreen.storyboard in Resources */,
 				C5F452362529A6D900066AAB /* SHA in Resources */,
@@ -2880,12 +2843,10 @@
 				C5F452342529A6D900066AAB /* SHA-256 in Resources */,
 				C58F010C24EA584B00B6D09C /* 调试时候添加日志时使用,上线需要去掉 in Resources */,
 				C58F020524EA617800B6D09C /* 分享控件的用法 in Resources */,
-				C5B7E1FA252469B600BC4E9D /* 拍摄*上传.bundle in Resources */,
-				C58F03B924EA6F0700B6D09C /* green_lottie_tab_news.json in Resources */,
 				C5F452322529A6D900066AAB /* SHA-1 in Resources */,
-				C58F03B724EA6F0700B6D09C /* green_lottie_tab_mine.json in Resources */,
 				C58F00CF24EA581F00B6D09C /* GKNavigationBar.bundle in Resources */,
 				C5F4523D2529A6D900066AAB /* HASH in Resources */,
+				C56E428E2547188A00B9F555 /* ⚽️PicResource in Resources */,
 				C58F00E824EA581F00B6D09C /* BRPickerView.bundle in Resources */,
 				C5F4522D2529A6D900066AAB /* Base64 in Resources */,
 				C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */,
@@ -2901,7 +2862,6 @@
 				C5F452372529A6D900066AAB /* SHA-512 in Resources */,
 				C572A27C24FBDD86000A1687 /* Settings.bundle in Resources */,
 				C58F002024EA36FA00B6D09C /* Assets.xcassets in Resources */,
-				C5B7E1F62524696300BC4E9D /* 登录 * 注册 * 密码找回.bundle in Resources */,
 				C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */,
 				C58F00D924EA581F00B6D09C /* 手动集成 SDWebImage_WebP in Resources */,
 			);

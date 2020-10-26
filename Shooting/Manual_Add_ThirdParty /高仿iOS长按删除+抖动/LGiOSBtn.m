@@ -29,7 +29,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        [self setImage:KBuddleIMG(nil,
+        [self setImage:KBuddleIMG(@"⚽️PicResource",
                                   @"Others",
                                   nil,
                                   @"加号")
@@ -41,7 +41,7 @@
 
 - (instancetype)initWithCoder:(NSCoder *)coder{
     if (self = [super initWithCoder:coder]) {
-        [self setImage:KBuddleIMG(nil,
+        [self setImage:KBuddleIMG(@"⚽️PicResource",
                                   @"Others",
                                   nil,
                                   @"加号")
@@ -53,7 +53,7 @@
 
 - (instancetype)init{
     if (self = [super init]) {
-        [self setImage:KBuddleIMG(nil,
+        [self setImage:KBuddleIMG(@"⚽️PicResource",
                                   @"Others",
                                   nil,
                                   @"加号")
@@ -103,7 +103,7 @@
 }
 
 - (void)longClick {
-    if (![self.imageView.image isEqual:KBuddleIMG(nil,@"Others", nil, @"加号")]) {
+    if (![self.imageView.image isEqual:KBuddleIMG(@"⚽️PicResource",@"Others", nil, @"加号")]) {
         if (self.shaking) return;
         self.shaking = YES;
     }
@@ -122,7 +122,7 @@
 #pragma mark —— lazyLoad
 - (UIImageView *)iconBtn {
     if (!_iconBtn) {
-        _iconBtn = [[UIImageView alloc] initWithImage:KBuddleIMG(nil,@"拍摄*上传", nil,@"del_Photo")];
+        _iconBtn = [[UIImageView alloc] initWithImage:KBuddleIMG(@"⚽️PicResource",@"拍摄*上传", nil,@"del_Photo")];
         _iconBtn.userInteractionEnabled = YES;
         _iconBtn.ableRespose = YES;
         [_iconBtn addGestureRecognizer:self.iconBtnTap];
