@@ -89,6 +89,7 @@
 #import "UIViewController+GifImageView.h"
 #import "UIViewController+JPImageresizerView.h"
 #import "UIViewController+JXCategoryListContentViewDelegate.h"
+#import "UIViewController+JXPagerViewListViewDelegate.h"
 #import "UIViewController+MJRefresh.h"
 #import "UIViewController+Shake.h"
 #import "UIViewController+TZImagePickerController.h"

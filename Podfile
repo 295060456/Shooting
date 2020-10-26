@@ -29,6 +29,7 @@ def func
     pod 'BRPickerView'
     pod 'GKNavigationBar'
     pod 'JXCategoryView'
+    pod 'JXPagingView/Pager' # https://github.com/pujiaxin33/JXPagingView NO_SMP
     pod 'YYKit'
     pod 'IQKeyboardManager'
     pod 'LYEmptyView'

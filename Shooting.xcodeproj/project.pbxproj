@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -47,6 +47,7 @@
 		C572A27C24FBDD86000A1687 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C572A27B24FBDD86000A1687 /* Settings.bundle */; };
 		C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A28224FBE933000A1687 /* UIImage+Tailor.m */; };
 		C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */ = {isa = PBXBuildFile; fileRef = C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */; };
+		C5766EA02546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5766E9E2546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */; };
 		C57C229A250240B500FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */; };
 		C57C22AE250263F100FAAA3F /* CustomZFPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C22AD250263F100FAAA3F /* CustomZFPlayerControlView.m */; };
 		C57C22BB2502717C00FAAA3F /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C22BA2502717C00FAAA3F /* UIView+Gradient.m */; };
@@ -386,6 +387,8 @@
 		C572A28124FBE933000A1687 /* UIImage+Tailor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tailor.h"; sourceTree = "<group>"; };
 		C572A28224FBE933000A1687 /* UIImage+Tailor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tailor.m"; sourceTree = "<group>"; };
 		C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "验证码按钮单例封装"; sourceTree = "<group>"; };
+		C5766E9E2546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JXPagerViewListViewDelegate.m"; sourceTree = "<group>"; };
+		C5766E9F2546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JXPagerViewListViewDelegate.h"; sourceTree = "<group>"; };
 		C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		C57C2299250240B500FAAA3F /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		C57C22AC250263F100FAAA3F /* CustomZFPlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomZFPlayerControlView.h; sourceTree = "<group>"; };
@@ -1226,6 +1229,30 @@
 			path = "💰VerifyCodeButton";
 			sourceTree = "<group>";
 		};
+		C5766E442546B80E00C382C8 /* UIViewController+TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				C5914BA025384CCF007777A6 /* UIViewController+TZImagePickerController.h */,
+				C5914B8B25384CCD007777A6 /* UIViewController+TZImagePickerController.m */,
+				C5914B9D25384CCF007777A6 /* UIViewController+TZImagePickerControllerDelegate.h */,
+				C5914B9025384CCE007777A6 /* UIViewController+TZImagePickerControllerDelegate.m */,
+				C5914B8F25384CCE007777A6 /* UIViewController+TZLocationManager.h */,
+				C5914B9625384CCE007777A6 /* UIViewController+TZLocationManager.m */,
+			);
+			path = "UIViewController+TZImagePickerController";
+			sourceTree = "<group>";
+		};
+		C5766E9A2546B82C00C382C8 /* UIViewController+JXCategory */ = {
+			isa = PBXGroup;
+			children = (
+				C5766E9F2546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.h */,
+				C5766E9E2546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */,
+				C5914B9825384CCE007777A6 /* UIViewController+JXCategoryListContentViewDelegate.h */,
+				C5914B8E25384CCD007777A6 /* UIViewController+JXCategoryListContentViewDelegate.m */,
+			);
+			path = "UIViewController+JXCategory";
+			sourceTree = "<group>";
+		};
 		C589604B2500AA2D002B1764 /* 登录 * 注册 * 密码找回 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1882,6 +1909,8 @@
 		C58F015224EA5CAC00B6D09C /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C5766E9A2546B82C00C382C8 /* UIViewController+JXCategory */,
+				C5766E442546B80E00C382C8 /* UIViewController+TZImagePickerController */,
 				C57278C325409771002373D7 /* UIViewController+NavigationBar.h */,
 				C57278C425409771002373D7 /* UIViewController+NavigationBar.m */,
 				C5914B9F25384CCF007777A6 /* UIViewController+BackBtn.h */,
@@ -1896,18 +1925,10 @@
 				C5914B9325384CCE007777A6 /* UIViewController+GifImageView.m */,
 				C5914B9225384CCE007777A6 /* UIViewController+JPImageresizerView.h */,
 				C5914B9B25384CCF007777A6 /* UIViewController+JPImageresizerView.m */,
-				C5914B9825384CCE007777A6 /* UIViewController+JXCategoryListContentViewDelegate.h */,
-				C5914B8E25384CCD007777A6 /* UIViewController+JXCategoryListContentViewDelegate.m */,
 				C5914BA225384CCF007777A6 /* UIViewController+MJRefresh.h */,
 				C5914B8A25384CCD007777A6 /* UIViewController+MJRefresh.m */,
 				C5914BA325384CCF007777A6 /* UIViewController+Shake.h */,
 				C5914B8D25384CCD007777A6 /* UIViewController+Shake.m */,
-				C5914BA025384CCF007777A6 /* UIViewController+TZImagePickerController.h */,
-				C5914B8B25384CCD007777A6 /* UIViewController+TZImagePickerController.m */,
-				C5914B9D25384CCF007777A6 /* UIViewController+TZImagePickerControllerDelegate.h */,
-				C5914B9025384CCE007777A6 /* UIViewController+TZImagePickerControllerDelegate.m */,
-				C5914B8F25384CCE007777A6 /* UIViewController+TZLocationManager.h */,
-				C5914B9625384CCE007777A6 /* UIViewController+TZLocationManager.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -3164,6 +3185,7 @@
 				C58F02E324EA632800B6D09C /* FileFolderHandleTool.m in Sources */,
 				C58F00E524EA581F00B6D09C /* BRDatePickerView+BR.m in Sources */,
 				C546C3E1252C2407003694FF /* UIScrollView+FDFullscreenPopGesture.m in Sources */,
+				C5766EA02546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */,
 				C5AA490F250C8F04009F583F /* NSObject+SYSAlertController.m in Sources */,
 				C57D5B1825134D950073F90B /* DoorVC+VM.m in Sources */,
 				C5F4522B2529A6D900066AAB /* NSString+Base64.m in Sources */,
