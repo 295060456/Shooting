@@ -55,6 +55,8 @@
 		C57D5B1825134D950073F90B /* DoorVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C57D5B1725134D950073F90B /* DoorVC+VM.m */; };
 		C57D5B1B25134E290073F90B /* NSObject+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = C57D5B1A25134E290073F90B /* NSObject+Login.m */; };
 		C57F0D20253336ED0080EEF0 /* NSObject+OpenURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C57F0D1F253336ED0080EEF0 /* NSObject+OpenURL.m */; };
+		C5850AEB25483DA1001E6676 /* ViewForTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C5850AE625483DA1001E6676 /* ViewForTableViewHeader.m */; };
+		C5850AEC25483DA1001E6676 /* ViewForTableViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C5850AE925483DA1001E6676 /* ViewForTableViewFooter.m */; };
 		C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589604E2500AC91002B1764 /* ImageCodeView.m */; };
 		C58960562500B0E0002B1764 /* LogoContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960552500B0E0002B1764 /* LogoContentView.m */; };
 		C58960592500B0F6002B1764 /* RegisterContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960582500B0F6002B1764 /* RegisterContentView.m */; };
@@ -136,8 +138,6 @@
 		C58F019624EA5CAC00B6D09C /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F014A24EA5CAC00B6D09C /* ZYTextField.m */; };
 		C58F019824EA5CAC00B6D09C /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F014E24EA5CAC00B6D09C /* CALayer+Transition.m */; };
 		C58F019924EA5CAD00B6D09C /* CALayer+Anim.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F014F24EA5CAC00B6D09C /* CALayer+Anim.m */; };
-		C58F01A924EA5CAD00B6D09C /* ViewForHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F017324EA5CAC00B6D09C /* ViewForHeader.m */; };
-		C58F01AA24EA5CAD00B6D09C /* ViewForFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F017424EA5CAC00B6D09C /* ViewForFooter.m */; };
 		C58F01AC24EA5CAD00B6D09C /* NSObject+Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F017C24EA5CAC00B6D09C /* NSObject+Sound.m */; };
 		C58F01AD24EA5CAD00B6D09C /* NSObject+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F017F24EA5CAC00B6D09C /* NSObject+Extras.m */; };
 		C58F01AE24EA5CAD00B6D09C /* NSObject+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F018024EA5CAC00B6D09C /* NSObject+Time.m */; };
@@ -396,6 +396,10 @@
 		C57D5B1A25134E290073F90B /* NSObject+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Login.m"; sourceTree = "<group>"; };
 		C57F0D1E253336ED0080EEF0 /* NSObject+OpenURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+OpenURL.h"; sourceTree = "<group>"; };
 		C57F0D1F253336ED0080EEF0 /* NSObject+OpenURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OpenURL.m"; sourceTree = "<group>"; };
+		C5850AE625483DA1001E6676 /* ViewForTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewForTableViewHeader.m; sourceTree = "<group>"; };
+		C5850AE725483DA1001E6676 /* ViewForTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewForTableViewHeader.h; sourceTree = "<group>"; };
+		C5850AE925483DA1001E6676 /* ViewForTableViewFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewForTableViewFooter.m; sourceTree = "<group>"; };
+		C5850AEA25483DA1001E6676 /* ViewForTableViewFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewForTableViewFooter.h; sourceTree = "<group>"; };
 		C589604D2500AC91002B1764 /* ImageCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCodeView.h; sourceTree = "<group>"; };
 		C589604E2500AC91002B1764 /* ImageCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCodeView.m; sourceTree = "<group>"; };
 		C58960542500B0E0002B1764 /* LogoContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoContentView.h; sourceTree = "<group>"; };
@@ -570,10 +574,6 @@
 		C58F014F24EA5CAC00B6D09C /* CALayer+Anim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Anim.m"; sourceTree = "<group>"; };
 		C58F015024EA5CAC00B6D09C /* CALayer+Anim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Anim.h"; sourceTree = "<group>"; };
 		C58F015124EA5CAC00B6D09C /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
-		C58F017324EA5CAC00B6D09C /* ViewForHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewForHeader.m; sourceTree = "<group>"; };
-		C58F017424EA5CAC00B6D09C /* ViewForFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewForFooter.m; sourceTree = "<group>"; };
-		C58F017524EA5CAC00B6D09C /* ViewForFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewForFooter.h; sourceTree = "<group>"; };
-		C58F017624EA5CAC00B6D09C /* ViewForHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewForHeader.h; sourceTree = "<group>"; };
 		C58F017B24EA5CAC00B6D09C /* NSObject+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extras.h"; sourceTree = "<group>"; };
 		C58F017C24EA5CAC00B6D09C /* NSObject+Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Sound.m"; sourceTree = "<group>"; };
 		C58F017D24EA5CAC00B6D09C /* NSObject+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Time.h"; sourceTree = "<group>"; };
@@ -1241,6 +1241,33 @@
 			path = "UIViewController+JXCategory";
 			sourceTree = "<group>";
 		};
+		C5850AE425483DA1001E6676 /* UITableViewHeaderFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				C5850AE525483DA1001E6676 /* ViewForTableViewHeader */,
+				C5850AE825483DA1001E6676 /* ViewForTableViewFooter */,
+			);
+			path = UITableViewHeaderFooterView;
+			sourceTree = "<group>";
+		};
+		C5850AE525483DA1001E6676 /* ViewForTableViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				C5850AE625483DA1001E6676 /* ViewForTableViewHeader.m */,
+				C5850AE725483DA1001E6676 /* ViewForTableViewHeader.h */,
+			);
+			path = ViewForTableViewHeader;
+			sourceTree = "<group>";
+		};
+		C5850AE825483DA1001E6676 /* ViewForTableViewFooter */ = {
+			isa = PBXGroup;
+			children = (
+				C5850AE925483DA1001E6676 /* ViewForTableViewFooter.m */,
+				C5850AEA25483DA1001E6676 /* ViewForTableViewFooter.h */,
+			);
+			path = ViewForTableViewFooter;
+			sourceTree = "<group>";
+		};
 		C589604B2500AA2D002B1764 /* 登录 * 注册 * 密码找回 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1689,10 +1716,10 @@
 		C58F011024EA5BD500B6D09C /* BaseCustomizeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				C5850AE425483DA1001E6676 /* UITableViewHeaderFooterView */,
 				C57278B22540974B002373D7 /* UINavigationBar */,
 				C57278B52540974B002373D7 /* UINavigationController */,
 				C562D6082540095C009DFA21 /* UICollectionViewCell */,
-				C58F017224EA5CAC00B6D09C /* 👌UITableViewHeaderFooterView */,
 				C58F014D24EA5CAC00B6D09C /* CALayer */,
 				C58F013124EA5CAC00B6D09C /* NSArray */,
 				C58F017A24EA5CAC00B6D09C /* NSObject */,
@@ -1939,17 +1966,6 @@
 				C5E3C7732517824B00F9A150 /* UIImage+screenshot.m */,
 			);
 			path = UIImage;
-			sourceTree = "<group>";
-		};
-		C58F017224EA5CAC00B6D09C /* 👌UITableViewHeaderFooterView */ = {
-			isa = PBXGroup;
-			children = (
-				C58F017324EA5CAC00B6D09C /* ViewForHeader.m */,
-				C58F017424EA5CAC00B6D09C /* ViewForFooter.m */,
-				C58F017524EA5CAC00B6D09C /* ViewForFooter.h */,
-				C58F017624EA5CAC00B6D09C /* ViewForHeader.h */,
-			);
-			path = "👌UITableViewHeaderFooterView";
 			sourceTree = "<group>";
 		};
 		C58F017A24EA5CAC00B6D09C /* NSObject */ = {
@@ -3011,7 +3027,6 @@
 				C58F018424EA5CAC00B6D09C /* UIView+Chain.m in Sources */,
 				C58F019424EA5CAC00B6D09C /* HQTextField.m in Sources */,
 				C52E89722510B4820070356F /* UITextField+Extend.m in Sources */,
-				C58F01AA24EA5CAD00B6D09C /* ViewForFooter.m in Sources */,
 				C58F019124EA5CAC00B6D09C /* TBVCell_style_02.m in Sources */,
 				C561618B24EE4C98001CD851 /* StartOrPauseBtn.m in Sources */,
 				C58F02FC24EA63F300B6D09C /* SceneDelegate+LaunchingAd.m in Sources */,
@@ -3027,6 +3042,7 @@
 				C58F019224EA5CAC00B6D09C /* TBVCell_style_01.m in Sources */,
 				C59D9AEE24F8F08500A74CE9 /* ZZCircleProgress.m in Sources */,
 				C58F00DC24EA581F00B6D09C /* UIImage+WebP_Diff.m in Sources */,
+				C5850AEC25483DA1001E6676 /* ViewForTableViewFooter.m in Sources */,
 				C58F00D124EA581F00B6D09C /* UINavigationController+GKCategory.m in Sources */,
 				C58F047324EBD70F00B6D09C /* ECAuthorizationTools.m in Sources */,
 				C561619724EE4CA9001CD851 /* MKUploadingVC+VM.m in Sources */,
@@ -3117,6 +3133,7 @@
 				C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */,
 				C58F018124EA5CAC00B6D09C /* DeleteSystemUITabBarButton.m in Sources */,
 				C5F4513E25299CA900066AAB /* NSString+ZBUTF8Encoding.m in Sources */,
+				C5850AEB25483DA1001E6676 /* ViewForTableViewHeader.m in Sources */,
 				C58F00D224EA581F00B6D09C /* UIBarButtonItem+GKCategory.m in Sources */,
 				C51A0BE1250203B000884016 /* DoorInputViewStyle_2.m in Sources */,
 				C5B5EF26250CCE3E00DCDA93 /* NSObject+Shake.m in Sources */,
@@ -3137,7 +3154,6 @@
 				C5F4523C2529A6D900066AAB /* NSData+CommonCrypto.m in Sources */,
 				C58F020424EA617800B6D09C /* BWItemModel.m in Sources */,
 				C5C67CA224FF5D46000A26B8 /* NSTimerManager.m in Sources */,
-				C58F01A924EA5CAD00B6D09C /* ViewForHeader.m in Sources */,
 				C5F4523A2529A6D900066AAB /* AESCipher.m in Sources */,
 				C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */,
 				C55497B024F3AD990065510D /* MKGPUImageView.m in Sources */,

@@ -56,7 +56,7 @@ def func
     pod 'ZFPlayer/ControlView'
     pod 'ZFPlayer/AVPlayer'
     pod 'ZFPlayer/ijkplayer'
-    pod 'KTVHTTPCache' # 边下边播
+#    pod 'KTVHTTPCache' # 边下边播
   #  pod 'ZFPlayer/KSYMediaPlayer'
   end
 

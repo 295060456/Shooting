@@ -95,7 +95,6 @@
 #import "UIViewController+TZImagePickerController.h"
 #import "UIViewController+TZImagePickerControllerDelegate.h"
 #import "UIViewController+TZLocationManager.h"
-//#import "UIViewController+NavigationBarHiddenMgr.h"
 //UINavigationController
 #import "BaseNavigationVC.h"
 
@@ -118,6 +117,9 @@
 #import "ForgetCodeVC.h"
 
 #import "MKLaunchingAdModel.h"
+
+#import "ViewForTableViewFooter.h"
+#import "ViewForTableViewHeader.h"
 
 
 #endif /* Manual_Add_ThirdParty_h */
