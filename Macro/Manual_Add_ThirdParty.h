@@ -21,7 +21,6 @@
 #import "ZFMRACNetworkTool.h"//网络请求 RAC+MVVM
 #import "LGiOSBtn.h"
 #import "ECAuthorizationTools.h"
-#import "ShowAvailableFont.h"//打印全员字体
 #import "JhtBannerView.h"
 #import "ZZCircleProgress.h"
 #import "MovieCountDown.h"
@@ -43,6 +42,8 @@
 #import "NSArray+Extension.h"
 #import "NSArray+Extend.h"
 #import "NSString+Extras.h"
+
+#import "UIFont+Extras.h"
 
 #import "UIButton+Block.h"
 

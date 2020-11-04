@@ -22,6 +22,7 @@
 		C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */ = {isa = PBXBuildFile; fileRef = C53B182B24FFA336000019F2 /* 视频水印.gif */; };
 		C546C3E1252C2407003694FF /* UIScrollView+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = C546C3DE252C2406003694FF /* UIScrollView+FDFullscreenPopGesture.m */; };
 		C546C3E2252C2407003694FF /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = C546C3DF252C2407003694FF /* UINavigationController+FDFullscreenPopGesture.m */; };
+		C54B3CEB25526022003BE195 /* UIFont+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3CEA25526022003BE195 /* UIFont+Extras.m */; };
 		C54F858F252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */; };
 		C55497A424F38CDB0065510D /* MKShootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A324F38CDB0065510D /* MKShootVC.m */; };
 		C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A624F38D9C0065510D /* AVFounationTools.m */; };
@@ -170,7 +171,6 @@
 		C58F033424EA69D400B6D09C /* ViewController@3.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F032B24EA69D400B6D09C /* ViewController@3.m */; };
 		C58F033524EA69D400B6D09C /* ViewController@1.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F033024EA69D400B6D09C /* ViewController@1.m */; };
 		C58F033624EA69D400B6D09C /* ViewController@5.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F033124EA69D400B6D09C /* ViewController@5.m */; };
-		C58F03BE24EA72BF00B6D09C /* ShowAvailableFont.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F03BD24EA72BF00B6D09C /* ShowAvailableFont.m */; };
 		C58F046F24EBD70300B6D09C /* UIControl+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F046D24EBD70300B6D09C /* UIControl+XY.m */; };
 		C58F047024EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 in Resources */ = {isa = PBXBuildFile; fileRef = C58F046E24EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 */; };
 		C58F047324EBD70F00B6D09C /* ECAuthorizationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F047224EBD70E00B6D09C /* ECAuthorizationTools.m */; };
@@ -330,6 +330,8 @@
 		C5470F6325309C1100651ACE /* MacroDef_Sys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Sys.h; sourceTree = "<group>"; };
 		C5470F6425309C1100651ACE /* MacroDef_Cor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Cor.h; sourceTree = "<group>"; };
 		C5470F6525309C1100651ACE /* MacroDef_Func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Func.h; sourceTree = "<group>"; };
+		C54B3CE925526022003BE195 /* UIFont+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extras.h"; sourceTree = "<group>"; };
+		C54B3CEA25526022003BE195 /* UIFont+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extras.m"; sourceTree = "<group>"; };
 		C54F858D252B613E00EE3DD0 /* UITableView+WWFoldableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+WWFoldableTableView.h"; sourceTree = "<group>"; };
 		C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+WWFoldableTableView.m"; sourceTree = "<group>"; };
 		C55497A224F38CDB0065510D /* MKShootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKShootVC.h; sourceTree = "<group>"; };
@@ -639,8 +641,6 @@
 		C58F032F24EA69D400B6D09C /* ViewController@4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController@4.h"; sourceTree = "<group>"; };
 		C58F033024EA69D400B6D09C /* ViewController@1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController@1.m"; sourceTree = "<group>"; };
 		C58F033124EA69D400B6D09C /* ViewController@5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController@5.m"; sourceTree = "<group>"; };
-		C58F03BC24EA72BF00B6D09C /* ShowAvailableFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowAvailableFont.h; sourceTree = "<group>"; };
-		C58F03BD24EA72BF00B6D09C /* ShowAvailableFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowAvailableFont.m; sourceTree = "<group>"; };
 		C58F046C24EBD70300B6D09C /* UIControl+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+XY.h"; sourceTree = "<group>"; };
 		C58F046D24EBD70300B6D09C /* UIControl+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+XY.m"; sourceTree = "<group>"; };
 		C58F046E24EBD70300B6D09C /* iOS小技巧：用runtime 解决UIButton 重复点击问题 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOS小技巧：用runtime 解决UIButton 重复点击问题"; sourceTree = "<group>"; };
@@ -1003,6 +1003,15 @@
 				C5470F6325309C1100651ACE /* MacroDef_Sys.h */,
 			);
 			path = "各项宏定义";
+			sourceTree = "<group>";
+		};
+		C54B3CE825526022003BE195 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				C54B3CE925526022003BE195 /* UIFont+Extras.h */,
+				C54B3CEA25526022003BE195 /* UIFont+Extras.m */,
+			);
+			path = UIFont;
 			sourceTree = "<group>";
 		};
 		C54F858C252B613500EE3DD0 /* UITableView 折叠功能 */ = {
@@ -1787,6 +1796,7 @@
 		C58F011024EA5BD500B6D09C /* BaseCustomizeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				C54B3CE825526022003BE195 /* UIFont */,
 				C530B0E5254D9ACD00EDEDC8 /* UICollectionReusableView 用作基类 */,
 				C530B0D9254D9ACD00EDEDC8 /* UICollectionView */,
 				C530B0DF254D9ACD00EDEDC8 /* UICollectionViewCell */,
@@ -2067,7 +2077,6 @@
 				C56161B424EE4F10001CD851 /* 卡片式滑动效果 */,
 				C58F046B24EBD6F000B6D09C /* UIControl+XY */,
 				C58F046A24EBD6E900B6D09C /* ECAuthorizationTools */,
-				C58F03BB24EA728000B6D09C /* iOS打印全员字体 */,
 				C58F031F24EA68B500B6D09C /* 高仿iOS长按删除+抖动 */,
 				C58F030424EA647400B6D09C /* 网络数据实时监测 */,
 				C58F02FD24EA645100B6D09C /* LBLaunchImageAd. */,
@@ -2251,15 +2260,6 @@
 				C55497AD24F3A3A20065510D /* OtherVC */,
 			);
 			path = "🇨🇳ServiceLogic";
-			sourceTree = "<group>";
-		};
-		C58F03BB24EA728000B6D09C /* iOS打印全员字体 */ = {
-			isa = PBXGroup;
-			children = (
-				C58F03BC24EA72BF00B6D09C /* ShowAvailableFont.h */,
-				C58F03BD24EA72BF00B6D09C /* ShowAvailableFont.m */,
-			);
-			path = "iOS打印全员字体";
 			sourceTree = "<group>";
 		};
 		C58F046A24EBD6E900B6D09C /* ECAuthorizationTools */ = {
@@ -3224,6 +3224,7 @@
 				C530B0F3254D9ACD00EDEDC8 /* CollectionView.m in Sources */,
 				C55497B024F3AD990065510D /* MKGPUImageView.m in Sources */,
 				C58F02E324EA632800B6D09C /* FileFolderHandleTool.m in Sources */,
+				C54B3CEB25526022003BE195 /* UIFont+Extras.m in Sources */,
 				C58F00E524EA581F00B6D09C /* BRDatePickerView+BR.m in Sources */,
 				C546C3E1252C2407003694FF /* UIScrollView+FDFullscreenPopGesture.m in Sources */,
 				C5766EA02546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */,
@@ -3231,7 +3232,6 @@
 				C57D5B1825134D950073F90B /* DoorVC+VM.m in Sources */,
 				C5F4522B2529A6D900066AAB /* NSString+Base64.m in Sources */,
 				C5E3C7742517824B00F9A150 /* UIImage+screenshot.m in Sources */,
-				C58F03BE24EA72BF00B6D09C /* ShowAvailableFont.m in Sources */,
 				C58F00CE24EA581F00B6D09C /* GKBaseAnimatedTransition.m in Sources */,
 				C58F033424EA69D400B6D09C /* ViewController@3.m in Sources */,
 				C58F018B24EA5CAC00B6D09C /* UIButton+Block.m in Sources */,
