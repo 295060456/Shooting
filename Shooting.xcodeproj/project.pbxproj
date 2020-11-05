@@ -56,7 +56,6 @@
 		C572A27A24FBD44A000A1687 /* UIImage+Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A27924FBD44A000A1687 /* UIImage+Overlay.m */; };
 		C572A27C24FBDD86000A1687 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C572A27B24FBDD86000A1687 /* Settings.bundle */; };
 		C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A28224FBE933000A1687 /* UIImage+Tailor.m */; };
-		C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */ = {isa = PBXBuildFile; fileRef = C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */; };
 		C5766EA02546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5766E9E2546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */; };
 		C57C229A250240B500FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */; };
 		C57C22AE250263F100FAAA3F /* CustomZFPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C22AD250263F100FAAA3F /* CustomZFPlayerControlView.m */; };
@@ -388,6 +387,8 @@
 		C56161C124EE4F52001CD851 /* JhtBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhtBannerView.m; sourceTree = "<group>"; };
 		C56161C324EE5019001CD851 /* NSObject+Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Measure.h"; sourceTree = "<group>"; };
 		C56161C424EE5019001CD851 /* NSObject+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Measure.m"; sourceTree = "<group>"; };
+		C56208F82553FFE900FE435F /* 验证码按钮单例封装.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "验证码按钮单例封装.md"; sourceTree = "<group>"; };
+		C56208F92553FFF900FE435F /* 高度自定义的按钮.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "高度自定义的按钮.md"; sourceTree = "<group>"; };
 		C56E428D2547188A00B9F555 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "⚽️PicResource"; path = "Shooting/⚽️PicResource"; sourceTree = "<group>"; };
 		C57278B32540974B002373D7 /* NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBar.m; sourceTree = "<group>"; };
 		C57278B42540974B002373D7 /* NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBar.h; sourceTree = "<group>"; };
@@ -406,7 +407,6 @@
 		C572A27B24FBDD86000A1687 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C572A28124FBE933000A1687 /* UIImage+Tailor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tailor.h"; sourceTree = "<group>"; };
 		C572A28224FBE933000A1687 /* UIImage+Tailor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tailor.m"; sourceTree = "<group>"; };
-		C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "验证码按钮单例封装"; sourceTree = "<group>"; };
 		C5766E9E2546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JXPagerViewListViewDelegate.m"; sourceTree = "<group>"; };
 		C5766E9F2546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JXPagerViewListViewDelegate.h"; sourceTree = "<group>"; };
 		C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
@@ -1307,7 +1307,7 @@
 		C572A2A324FDFA67000A1687 /* 💰VerifyCodeButton */ = {
 			isa = PBXGroup;
 			children = (
-				C572A2A424FDFA71000A1687 /* 验证码按钮单例封装 */,
+				C56208F82553FFE900FE435F /* 验证码按钮单例封装.md */,
 				C5575AE3250518AA00A2A694 /* UIButton+CountDownBtn.h */,
 				C5575AE2250518AA00A2A694 /* UIButton+CountDownBtn.m */,
 			);
@@ -2113,6 +2113,7 @@
 		C58F01B024EA5DB400B6D09C /* 高度自定义的按钮 */ = {
 			isa = PBXGroup;
 			children = (
+				C56208F92553FFF900FE435F /* 高度自定义的按钮.md */,
 				C57C2299250240B500FAAA3F /* UIButton+ImageTitleSpacing.h */,
 				C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */,
 			);
@@ -2917,7 +2918,6 @@
 			files = (
 				C5F452332529A6D900066AAB /* SHA-384 in Resources */,
 				C58F01C024EA5E5E00B6D09C /* 带有按键音的按钮 in Resources */,
-				C572A2A724FDFA71000A1687 /* 验证码按钮单例封装 in Resources */,
 				C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */,
 				C5F452352529A6D900066AAB /* SHA-224 in Resources */,
 				C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */,
