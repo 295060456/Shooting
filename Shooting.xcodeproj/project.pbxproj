@@ -989,6 +989,24 @@
 			path = "UICollectionView 实现类似于UITableView的悬停效果";
 			sourceTree = "<group>";
 		};
+		C531CC7D255A8250005304F6 /* TBVCell_style_01 */ = {
+			isa = PBXGroup;
+			children = (
+				C58F014024EA5CAC00B6D09C /* TBVCell_style_01.h */,
+				C58F013D24EA5CAC00B6D09C /* TBVCell_style_01.m */,
+			);
+			path = TBVCell_style_01;
+			sourceTree = "<group>";
+		};
+		C531CC84255A8255005304F6 /* TBVCell_style_02 */ = {
+			isa = PBXGroup;
+			children = (
+				C58F013E24EA5CAC00B6D09C /* TBVCell_style_02.h */,
+				C58F013B24EA5CAC00B6D09C /* TBVCell_style_02.m */,
+			);
+			path = TBVCell_style_02;
+			sourceTree = "<group>";
+		};
 		C546C3DC252C23FF003694FF /* FDFullscreenPopGesture */ = {
 			isa = PBXGroup;
 			children = (
@@ -1947,10 +1965,8 @@
 		C58F013A24EA5CAC00B6D09C /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				C58F014024EA5CAC00B6D09C /* TBVCell_style_01.h */,
-				C58F013D24EA5CAC00B6D09C /* TBVCell_style_01.m */,
-				C58F013E24EA5CAC00B6D09C /* TBVCell_style_02.h */,
-				C58F013B24EA5CAC00B6D09C /* TBVCell_style_02.m */,
+				C531CC7D255A8250005304F6 /* TBVCell_style_01 */,
+				C531CC84255A8255005304F6 /* TBVCell_style_02 */,
 				C58F013C24EA5CAC00B6D09C /* UITableViewCell+WhiteArrows.h */,
 				C58F013F24EA5CAC00B6D09C /* UITableViewCell+WhiteArrows.m */,
 				C5B7E1FC25246A7000BC4E9D /* WhiteRightArrow@2x.png */,
