@@ -19,7 +19,7 @@
 @property(nonatomic,strong)MKLaunchingAdModel *launchingAdModel;
 @property(nonatomic,strong)NSString *launchingAdPathStr;
 
-+ (SceneDelegate *)sharedInstance;
++ (instancetype)sharedInstance;
 
 @end
 
