@@ -228,7 +228,7 @@
     DoorInputViewStyle_3 *确认密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[2];
     DoorInputViewStyle_2 *填写验证码 = (DoorInputViewStyle_2 *)self.inputViewMutArr[3];
     
-    CustomSYSUITabBarController *tbvc = [SceneDelegate sharedInstance].customSYSUITabBarController;
+    CustomSYSUITabBarController *tbvc = [ShootingSceneDelegate sharedInstance].customSYSUITabBarController;
     
     if ([NSString isNullString:用户名.tf.text]) {
         [NSObject showSYSAlertViewTitle:@"请输入用户名"

@@ -1,16 +1,16 @@
 //
-//  SceneDelegate+LaunchingAd.h
+//  ShootingSceneDelegate+LaunchingAd.h
 //  MonkeyKingVideo
 //
 //  Created by Jobs on 2020/7/21.
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "SceneDelegate.h"
+#import "ShootingSceneDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SceneDelegate (LaunchingAd)
+@interface ShootingSceneDelegate (LaunchingAd)
 ///如果需要网络请求得到URL
 -(void)netWorkingAd;
 ///如果直接是固定的图片Url

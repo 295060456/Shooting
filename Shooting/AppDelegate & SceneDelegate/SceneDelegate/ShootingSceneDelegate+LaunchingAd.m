@@ -1,14 +1,14 @@
 //
-//  SceneDelegate+LaunchingAd.m
+//  ShootingSceneDelegate+LaunchingAd.m
 //  MonkeyKingVideo
 //
 //  Created by Jobs on 2020/7/21.
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "SceneDelegate+LaunchingAd.h"
+#import "ShootingSceneDelegate+LaunchingAd.h"
 
-@implementation SceneDelegate (LaunchingAd)
+@implementation ShootingSceneDelegate (LaunchingAd)
 ///如果需要网络请求得到URL
 -(void)netWorkingAd{
 

@@ -187,7 +187,7 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
 }
 
 -(void)startStep_01{
-    CustomSYSUITabBarController *tbvc = [SceneDelegate sharedInstance].customSYSUITabBarController;
+    CustomSYSUITabBarController *tbvc = [ShootingSceneDelegate sharedInstance].customSYSUITabBarController;
     
     DoorInputViewStyle_3 *用户名 = self.step_01.inputViewMutArr[0];
     DoorInputViewStyle_3 *手机号码 = self.step_01.inputViewMutArr[1];
@@ -238,7 +238,7 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
 }
 
 -(void)startStep_02{
-    CustomSYSUITabBarController *tbvc = [SceneDelegate sharedInstance].customSYSUITabBarController;
+    CustomSYSUITabBarController *tbvc = [ShootingSceneDelegate sharedInstance].customSYSUITabBarController;
     
     DoorInputViewStyle_3 *用户名 = self.step_01.inputViewMutArr[0];
 //                    DoorInputViewStyle_3 *手机号码 = self.step_01.inputViewMutArr[1];

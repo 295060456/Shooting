@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ShootingAppDelegate.h
 //  MonkeyKingVideo
 //
 //  Created by Jobs on 2020/6/16.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface AppDelegate : UIResponder<UIApplicationDelegate>
+@interface ShootingAppDelegate : UIResponder<UIApplicationDelegate>
 
 @property(readonly,strong)NSPersistentCloudKitContainer *persistentContainer;
 

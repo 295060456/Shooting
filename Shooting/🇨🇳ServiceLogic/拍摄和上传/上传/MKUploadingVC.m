@@ -63,7 +63,7 @@ UITextViewDelegate
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.isClickMKUploadingVCView = NO;
-    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
+    [ShootingSceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
 //    [self ff];
 }
 
@@ -135,14 +135,14 @@ UITextViewDelegate
 -(void)afterRelease{
     [self deleteButtonRemoveSelf:self.choosePicBtn];
     [self btnClickEvent:self.agreementView.agreementBtn];
-    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
+    [ShootingSceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
     self.textView.text = @"";
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches
           withEvent:(UIEvent *)event{
     self.isClickMKUploadingVCView = !self.isClickMKUploadingVCView;
-    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = !self.isClickMKUploadingVCView;
+    [ShootingSceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = !self.isClickMKUploadingVCView;
 }
 #pragma mark —— 点击事件
 -(void)btnClickEvent:(UIButton *)sender{

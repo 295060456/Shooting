@@ -1,28 +1,28 @@
 //
-//  SceneDelegate.m
+//  ShootingSceneDelegate.m
 //  MonkeyKingVideo
 //
 //  Created by Jobs on 2020/6/16.
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "AppDelegate.h"
-#import "SceneDelegate.h"
-#import "SceneDelegate+LaunchingAd.h"
+#import "ShootingAppDelegate.h"
+#import "ShootingSceneDelegate.h"
+#import "ShootingSceneDelegate+LaunchingAd.h"
 
 API_AVAILABLE(ios(13.0))
 
-@interface SceneDelegate ()
+@interface ShootingSceneDelegate ()
 
 @end
 
-@implementation SceneDelegate
+@implementation ShootingSceneDelegate
 
-static SceneDelegate *static_sceneDelegate = nil;
+static ShootingSceneDelegate *static_sceneDelegate = nil;
 +(instancetype)sharedInstance{
     @synchronized(self){
         if (!static_sceneDelegate) {
-            static_sceneDelegate = SceneDelegate.new;
+            static_sceneDelegate = ShootingSceneDelegate.new;
         }
     }return static_sceneDelegate;
 }
@@ -96,7 +96,7 @@ willConnectToSession:(UISceneSession *)session
 }
 
 - (void)sceneDidEnterBackground:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
-    [(AppDelegate *)UIApplication.sharedApplication.delegate saveContext];
+    [(ShootingAppDelegate *)UIApplication.sharedApplication.delegate saveContext];
     NSLog(@"---applicationDidEnterBackground----"); //进入后台
     extern ZFPlayerController *ZFPlayer_DoorVC;
     extern ZFPlayerController *ZFPlayer_ForgetCodeVC;

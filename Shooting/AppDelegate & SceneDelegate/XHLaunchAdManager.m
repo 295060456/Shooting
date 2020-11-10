@@ -48,7 +48,7 @@
 - (instancetype)init{
     self = [super init];
     if (self) {
-        //在UIApplicationDidFinishLaunching时初始化开屏广告,做到对业务层无干扰,当然你也可以直接在AppDelegate didFinishLaunchingWithOptions方法中初始化
+        //在UIApplicationDidFinishLaunching时初始化开屏广告,做到对业务层无干扰,当然你也可以直接在ShootingAppDelegate didFinishLaunchingWithOptions方法中初始化
         [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidFinishLaunchingNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
             //初始化开屏广告
             [self setupXHLaunchAd];

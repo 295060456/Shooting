@@ -12,7 +12,7 @@
 
 #pragma mark —— 登录模块 在适当的时候调用
 +(void)Login{
-    CustomSYSUITabBarController *tbvc = [SceneDelegate sharedInstance].customSYSUITabBarController;
+    CustomSYSUITabBarController *tbvc = [ShootingSceneDelegate sharedInstance].customSYSUITabBarController;
     @weakify(tbvc)
     [DoorVC ComingFromVC:weak_tbvc
              comingStyle:ComingStyle_PUSH

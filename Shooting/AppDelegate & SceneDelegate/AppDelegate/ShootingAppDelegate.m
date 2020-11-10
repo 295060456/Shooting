@@ -1,5 +1,5 @@
 //
-//  AppDelegate.m
+//  ShootingAppDelegate.m
 //  MonkeyKingVideo
 //
 //  Created by Jobs on 2020/6/16.
@@ -10,22 +10,22 @@
 #import <DoraemonKit/DoraemonManager.h>
 #endif
 
-#import "AppDelegate.h"
+#import "ShootingAppDelegate.h"
 #import "CustomSYSUITabBarController.h"
 
-@interface AppDelegate ()
+@interface ShootingAppDelegate ()
 
 @property(nonatomic,strong)CustomSYSUITabBarController *customSYSUITabBarController;
 
 @end
 
-@implementation AppDelegate
+@implementation ShootingAppDelegate
 
-static AppDelegate *static_appDelegate = nil;
+static ShootingAppDelegate *static_appDelegate = nil;
 +(instancetype)sharedInstance{
     @synchronized(self){
         if (!static_appDelegate) {
-            static_appDelegate = AppDelegate.new;
+            static_appDelegate = ShootingAppDelegate.new;
         }
     }return static_appDelegate;
 }

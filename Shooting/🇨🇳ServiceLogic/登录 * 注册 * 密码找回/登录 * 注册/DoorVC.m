@@ -89,7 +89,7 @@ ZFPlayerController *ZFPlayer_DoorVC;
     self.loginContentView.alpha = 0.7;
     [UIView animationAlert:self.logoContentView];
     IQKeyboardManager.sharedManager.enable = NO;
-//    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
+//    [ShootingSceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -101,7 +101,7 @@ ZFPlayerController *ZFPlayer_DoorVC;
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self.player.currentPlayerManager pause];
-//    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
+//    [ShootingSceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
 }
 
 -(void)viewDidDisappear:(BOOL)animated{

@@ -99,8 +99,8 @@
 //UINavigationController
 #import "BaseNavigationVC.h"
 
-#import "AppDelegate.h"
-#import "SceneDelegate.h"
+#import "ShootingAppDelegate.h"
+#import "ShootingSceneDelegate.h"
 #import <VideoToolbox/VideoToolbox.h>//FFmpeg 需要
 
 #import "APIKey.h"

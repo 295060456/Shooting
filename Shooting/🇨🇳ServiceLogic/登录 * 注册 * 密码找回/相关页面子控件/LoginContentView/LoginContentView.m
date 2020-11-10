@@ -440,7 +440,7 @@
     DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.inputViewMutArr[0];
     DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[1];
                
-    CustomSYSUITabBarController *tbvc = [SceneDelegate sharedInstance].customSYSUITabBarController;
+    CustomSYSUITabBarController *tbvc = [ShootingSceneDelegate sharedInstance].customSYSUITabBarController;
     
     if ([NSString isNullString:用户名.tf.text]) {
         [NSObject showSYSAlertViewTitle:@"请输入用户名"

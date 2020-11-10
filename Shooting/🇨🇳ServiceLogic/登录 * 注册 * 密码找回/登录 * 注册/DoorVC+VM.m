@@ -42,7 +42,7 @@
 //                [self.loginContentView storeAcc_Code];
 //                [self backBtnClickEvent:nil];
 //            }else if ([response.reqResult isKindOfClass:NSString.class]){
-//                CustomSYSUITabBarController *tbvc = [SceneDelegate sharedInstance].customSYSUITabBarController;
+//                CustomSYSUITabBarController *tbvc = [ShootingSceneDelegate sharedInstance].customSYSUITabBarController;
 //                [NSObject showSYSAlertViewTitle:response.reqResult
 //                                        message:@"请重新登录"
 //                                isSeparateStyle:NO
@@ -94,7 +94,7 @@
 //                self.loginContentView = nil;
 //                [self backBtnClickEvent:nil];
 //            }else if ([response.reqResult isKindOfClass:NSString.class]){
-//                CustomSYSUITabBarController *tbvc = [SceneDelegate sharedInstance].customSYSUITabBarController;
+//                CustomSYSUITabBarController *tbvc = [ShootingSceneDelegate sharedInstance].customSYSUITabBarController;
 //                [NSObject showSYSAlertViewTitle:response.reqResult
 //                                        message:@"请重新登录"
 //                                isSeparateStyle:NO

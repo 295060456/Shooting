@@ -1,5 +1,5 @@
 //
-//  SceneDelegate.h
+//  ShootingSceneDelegate.h
 //  MonkeyKingVideo
 //
 //  Created by Jobs on 2020/6/16.
@@ -10,7 +10,7 @@
 #import "CustomSYSUITabBarController.h"
 #import "MKLaunchingAdModel.h"
 
-@interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
+@interface ShootingSceneDelegate : UIResponder <UIWindowSceneDelegate>
 
 @property(nonatomic,strong)UIWindow *window;
 @property(nonatomic,strong)UIWindowScene *windowScene;

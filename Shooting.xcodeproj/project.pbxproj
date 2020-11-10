@@ -74,8 +74,8 @@
 		C589607C2500E90C002B1764 /* ForgetCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C589607B2500E90C002B1764 /* ForgetCodeVC.m */; };
 		C58C61932532B4020092BF89 /* RBCLikeButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C58C61912532B4020092BF89 /* RBCLikeButton.bundle */; };
 		C58C61942532B4020092BF89 /* RBCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C61922532B4020092BF89 /* RBCLikeButton.m */; };
-		C58F001224EA36F800B6D09C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001124EA36F800B6D09C /* AppDelegate.m */; };
-		C58F001524EA36F800B6D09C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001424EA36F800B6D09C /* SceneDelegate.m */; };
+		C58F001224EA36F800B6D09C /* ShootingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001124EA36F800B6D09C /* ShootingAppDelegate.m */; };
+		C58F001524EA36F800B6D09C /* ShootingSceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001424EA36F800B6D09C /* ShootingSceneDelegate.m */; };
 		C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58F001924EA36F800B6D09C /* Main.storyboard */; };
 		C58F001E24EA36F800B6D09C /* Shooting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C58F001C24EA36F800B6D09C /* Shooting.xcdatamodeld */; };
 		C58F002024EA36FA00B6D09C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C58F001F24EA36FA00B6D09C /* Assets.xcassets */; };
@@ -161,7 +161,7 @@
 		C58F020524EA617800B6D09C /* 分享控件的用法 in Resources */ = {isa = PBXBuildFile; fileRef = C58F020124EA617800B6D09C /* 分享控件的用法 */; };
 		C58F02E324EA632800B6D09C /* FileFolderHandleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02E224EA632800B6D09C /* FileFolderHandleTool.m */; };
 		C58F02FB24EA63F300B6D09C /* MKLaunchingAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02F824EA63F300B6D09C /* MKLaunchingAdModel.m */; };
-		C58F02FC24EA63F300B6D09C /* SceneDelegate+LaunchingAd.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02FA24EA63F300B6D09C /* SceneDelegate+LaunchingAd.m */; };
+		C58F02FC24EA63F300B6D09C /* ShootingSceneDelegate+LaunchingAd.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02FA24EA63F300B6D09C /* ShootingSceneDelegate+LaunchingAd.m */; };
 		C58F030224EA645A00B6D09C /* NSObject+LBLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02FE24EA645A00B6D09C /* NSObject+LBLaunchImage.m */; };
 		C58F030324EA645A00B6D09C /* LBLaunchImageAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02FF24EA645A00B6D09C /* LBLaunchImageAdView.m */; };
 		C58F030724EA647400B6D09C /* MonitorNetwoking.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F030524EA647400B6D09C /* MonitorNetwoking.m */; };
@@ -444,10 +444,10 @@
 		C58C61912532B4020092BF89 /* RBCLikeButton.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RBCLikeButton.bundle; sourceTree = "<group>"; };
 		C58C61922532B4020092BF89 /* RBCLikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCLikeButton.m; sourceTree = "<group>"; };
 		C58F000D24EA36F800B6D09C /* Shooting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooting.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C58F001024EA36F800B6D09C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C58F001124EA36F800B6D09C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C58F001324EA36F800B6D09C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		C58F001424EA36F800B6D09C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		C58F001024EA36F800B6D09C /* ShootingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShootingAppDelegate.h; sourceTree = "<group>"; };
+		C58F001124EA36F800B6D09C /* ShootingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShootingAppDelegate.m; sourceTree = "<group>"; };
+		C58F001324EA36F800B6D09C /* ShootingSceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShootingSceneDelegate.h; sourceTree = "<group>"; };
+		C58F001424EA36F800B6D09C /* ShootingSceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShootingSceneDelegate.m; sourceTree = "<group>"; };
 		C58F001A24EA36F800B6D09C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C58F001D24EA36F800B6D09C /* Shooting.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shooting.xcdatamodel; sourceTree = "<group>"; };
 		C58F001F24EA36FA00B6D09C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -624,10 +624,10 @@
 		C58F020124EA617800B6D09C /* 分享控件的用法 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "分享控件的用法"; sourceTree = "<group>"; };
 		C58F02E124EA632800B6D09C /* FileFolderHandleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileFolderHandleTool.h; sourceTree = "<group>"; };
 		C58F02E224EA632800B6D09C /* FileFolderHandleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileFolderHandleTool.m; sourceTree = "<group>"; };
-		C58F02F724EA63F300B6D09C /* SceneDelegate+LaunchingAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SceneDelegate+LaunchingAd.h"; sourceTree = "<group>"; };
+		C58F02F724EA63F300B6D09C /* ShootingSceneDelegate+LaunchingAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShootingSceneDelegate+LaunchingAd.h"; sourceTree = "<group>"; };
 		C58F02F824EA63F300B6D09C /* MKLaunchingAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLaunchingAdModel.m; sourceTree = "<group>"; };
 		C58F02F924EA63F300B6D09C /* MKLaunchingAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKLaunchingAdModel.h; sourceTree = "<group>"; };
-		C58F02FA24EA63F300B6D09C /* SceneDelegate+LaunchingAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SceneDelegate+LaunchingAd.m"; sourceTree = "<group>"; };
+		C58F02FA24EA63F300B6D09C /* ShootingSceneDelegate+LaunchingAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShootingSceneDelegate+LaunchingAd.m"; sourceTree = "<group>"; };
 		C58F02FE24EA645A00B6D09C /* NSObject+LBLaunchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LBLaunchImage.m"; sourceTree = "<group>"; };
 		C58F02FF24EA645A00B6D09C /* LBLaunchImageAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBLaunchImageAdView.m; sourceTree = "<group>"; };
 		C58F030024EA645A00B6D09C /* NSObject+LBLaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LBLaunchImage.h"; sourceTree = "<group>"; };
@@ -1287,8 +1287,8 @@
 		C57278C92540980E002373D7 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				C58F001024EA36F800B6D09C /* AppDelegate.h */,
-				C58F001124EA36F800B6D09C /* AppDelegate.m */,
+				C58F001024EA36F800B6D09C /* ShootingAppDelegate.h */,
+				C58F001124EA36F800B6D09C /* ShootingAppDelegate.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1296,10 +1296,10 @@
 		C57278CA25409818002373D7 /* SceneDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				C58F02F724EA63F300B6D09C /* SceneDelegate+LaunchingAd.h */,
-				C58F02FA24EA63F300B6D09C /* SceneDelegate+LaunchingAd.m */,
-				C58F001324EA36F800B6D09C /* SceneDelegate.h */,
-				C58F001424EA36F800B6D09C /* SceneDelegate.m */,
+				C58F001324EA36F800B6D09C /* ShootingSceneDelegate.h */,
+				C58F001424EA36F800B6D09C /* ShootingSceneDelegate.m */,
+				C58F02F724EA63F300B6D09C /* ShootingSceneDelegate+LaunchingAd.h */,
+				C58F02FA24EA63F300B6D09C /* ShootingSceneDelegate+LaunchingAd.m */,
 			);
 			path = SceneDelegate;
 			sourceTree = "<group>";
@@ -3110,7 +3110,7 @@
 				C52E89722510B4820070356F /* UITextField+Extend.m in Sources */,
 				C58F019124EA5CAC00B6D09C /* TBVCell_style_02.m in Sources */,
 				C561618B24EE4C98001CD851 /* StartOrPauseBtn.m in Sources */,
-				C58F02FC24EA63F300B6D09C /* SceneDelegate+LaunchingAd.m in Sources */,
+				C58F02FC24EA63F300B6D09C /* ShootingSceneDelegate+LaunchingAd.m in Sources */,
 				C5F4514D25299D1F00066AAB /* DataManager.m in Sources */,
 				C5F452302529A6D900066AAB /* RSAUtil.m in Sources */,
 				C5F4513A25299CA900066AAB /* ZBRequestEngine.m in Sources */,
@@ -3227,7 +3227,7 @@
 				C5914BA425384CD0007777A6 /* UIViewController+MJRefresh.m in Sources */,
 				C58F00D624EA581F00B6D09C /* GKCustomNavigationBar.m in Sources */,
 				C58960732500E0FA002B1764 /* FindCodeFlowChartView.m in Sources */,
-				C58F001224EA36F800B6D09C /* AppDelegate.m in Sources */,
+				C58F001224EA36F800B6D09C /* ShootingAppDelegate.m in Sources */,
 				C58F018D24EA5CAC00B6D09C /* NSArray+Extension.m in Sources */,
 				C5914BA625384CD0007777A6 /* UIViewController+Shake.m in Sources */,
 				C5F4517A2529A0BD00066AAB /* FMHttpRequest.m in Sources */,
@@ -3262,7 +3262,7 @@
 				C5914BA925384CD0007777A6 /* UIViewController+BRPickerView.m in Sources */,
 				C5914BA525384CD0007777A6 /* UIViewController+TZImagePickerController.m in Sources */,
 				C58F01C624EA5E7900B6D09C /* YBNotificationManager.m in Sources */,
-				C58F001524EA36F800B6D09C /* SceneDelegate.m in Sources */,
+				C58F001524EA36F800B6D09C /* ShootingSceneDelegate.m in Sources */,
 				C54B3FCA255297C5003BE195 /* UILabel+Extra.m in Sources */,
 				C59D9AB324F8E8DC00A74CE9 /* MKShootVC+VM.m in Sources */,
 				C57C22AE250263F100FAAA3F /* CustomZFPlayerControlView.m in Sources */,

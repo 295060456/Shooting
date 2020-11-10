@@ -126,7 +126,7 @@
     }
     self.isClickMyGPUImageView = NO;
     self.gk_navigationBar.hidden = NO;
-    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
+    [ShootingSceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -149,7 +149,7 @@
     if (self.MKShootVCBlock) {
         self.MKShootVCBlock(@NO);
     }
-    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
+    [ShootingSceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
 }
 #pragma mark —— 切换滤镜功能
 -(void)changeFilter{
