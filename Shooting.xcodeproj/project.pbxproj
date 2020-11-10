@@ -389,7 +389,7 @@
 		C56161C424EE5019001CD851 /* NSObject+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Measure.m"; sourceTree = "<group>"; };
 		C56208F82553FFE900FE435F /* 验证码按钮单例封装.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "验证码按钮单例封装.md"; sourceTree = "<group>"; };
 		C56208F92553FFF900FE435F /* 高度自定义的按钮.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "高度自定义的按钮.md"; sourceTree = "<group>"; };
-		C56E428D2547188A00B9F555 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "⚽️PicResource"; path = "Shooting/⚽️PicResource"; sourceTree = "<group>"; };
+		C56E428D2547188A00B9F555 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "⚽️PicResource"; sourceTree = "<group>"; };
 		C57278B32540974B002373D7 /* NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBar.m; sourceTree = "<group>"; };
 		C57278B42540974B002373D7 /* NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBar.h; sourceTree = "<group>"; };
 		C57278B62540974B002373D7 /* BaseNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationVC.m; sourceTree = "<group>"; };
@@ -1462,12 +1462,11 @@
 		C58F000424EA36F800B6D09C = {
 			isa = PBXGroup;
 			children = (
-				C56E428D2547188A00B9F555 /* ⚽️PicResource */,
-				C58F004824EA56F700B6D09C /* Macro */,
 				C58F000F24EA36F800B6D09C /* Shooting */,
+				C58F002E24EA36FA00B6D09C /* ShootingTests */,
+				C58F003924EA36FA00B6D09C /* ShootingUITests */,
 				1AD6F263795BF1A29595997A /* Pods */,
 				C58F007124EA580B00B6D09C /* Pods 不进去的 */,
-				C58F007024EA57E400B6D09C /* Other */,
 				AEFC22584925A075C4EC097C /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -1486,12 +1485,15 @@
 		C58F000F24EA36F800B6D09C /* Shooting */ = {
 			isa = PBXGroup;
 			children = (
-				C58F002424EA36FA00B6D09C /* Info.plist */,
+				C56E428D2547188A00B9F555 /* ⚽️PicResource */,
+				C58F004824EA56F700B6D09C /* 🌹Macro */,
 				C58F010F24EA5B6C00B6D09C /* AppDelegate & SceneDelegate */,
 				C58F011024EA5BD500B6D09C /* BaseCustomizeUIKit */,
 				C58F031824EA65F200B6D09C /* BaseModel */,
 				C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */,
 				C58F032724EA69C800B6D09C /* 🇨🇳ServiceLogic */,
+				C58F002424EA36FA00B6D09C /* Info.plist */,
+				C58F007024EA57E400B6D09C /* Other */,
 			);
 			path = Shooting;
 			sourceTree = "<group>";
@@ -1514,12 +1516,12 @@
 			path = ShootingUITests;
 			sourceTree = "<group>";
 		};
-		C58F004824EA56F700B6D09C /* Macro */ = {
+		C58F004824EA56F700B6D09C /* 🌹Macro */ = {
 			isa = PBXGroup;
 			children = (
 				C5470F5E25309C0300651ACE /* 各项宏定义 */,
-				C58F01C724EA5E8900B6D09C /* APIKey.h */,
 				C58F01C324EA5E7200B6D09C /* Notification */,
+				C58F01C724EA5E8900B6D09C /* APIKey.h */,
 				C58F010E24EA5B2300B6D09C /* DefineStructure.h */,
 				C58F004924EA571D00B6D09C /* PrefixHeader.pch */,
 				C58F004B24EA576400B6D09C /* AABlock.h */,
@@ -1528,7 +1530,7 @@
 				C58F004D24EA577400B6D09C /* Pods.h */,
 				C572A27B24FBDD86000A1687 /* Settings.bundle */,
 			);
-			path = Macro;
+			path = "🌹Macro";
 			sourceTree = "<group>";
 		};
 		C58F007024EA57E400B6D09C /* Other */ = {
@@ -1536,8 +1538,6 @@
 			children = (
 				C58F00FF24EA584B00B6D09C /* Log */,
 				C58F000E24EA36F800B6D09C /* Products */,
-				C58F002E24EA36FA00B6D09C /* ShootingTests */,
-				C58F003924EA36FA00B6D09C /* ShootingUITests */,
 				C58F00F024EA584B00B6D09C /* Sys */,
 				C58F001C24EA36F800B6D09C /* Shooting.xcdatamodeld */,
 				C58F001F24EA36FA00B6D09C /* Assets.xcassets */,
@@ -3465,7 +3465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K92UCMVH8G;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Macro/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/🌹Macro/PrefixHeader.pch";
 				INFOPLIST_FILE = Shooting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3490,7 +3490,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K92UCMVH8G;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Macro/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/🌹Macro/PrefixHeader.pch";
 				INFOPLIST_FILE = Shooting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
