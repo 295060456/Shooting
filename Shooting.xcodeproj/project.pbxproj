@@ -2875,6 +2875,7 @@
 		C58F000524EA36F800B6D09C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = Shooting;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = Jobs;
 				TargetAttributes = {
