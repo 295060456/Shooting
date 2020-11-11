@@ -30,6 +30,9 @@
 		C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A624F38D9C0065510D /* AVFounationTools.m */; };
 		C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A924F3A1F00065510D /* GPUImageTools.m */; };
 		C55497B024F3AD990065510D /* MKGPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497AE24F3AD990065510D /* MKGPUImageView.m */; };
+		C556972E255BFD95005C1361 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5569729255BFD95005C1361 /* NSString+Extras.m */; };
+		C556972F255BFD95005C1361 /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C556972A255BFD95005C1361 /* NSString+Time.m */; };
+		C5569730255BFD95005C1361 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C556972B255BFD95005C1361 /* TimeModel.m */; };
 		C5575AC52504B62900A2A694 /* DoorInputViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575AC42504B62900A2A694 /* DoorInputViewStyle.m */; };
 		C5575AD02504E1FA00A2A694 /* ForgetCodeStep_01View.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575ACF2504E1FA00A2A694 /* ForgetCodeStep_01View.m */; };
 		C5575AD32504E20C00A2A694 /* ForgetCodeStep_02View.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575AD22504E20C00A2A694 /* ForgetCodeStep_02View.m */; };
@@ -125,7 +128,6 @@
 		C58F010D24EA584B00B6D09C /* NSlogToDocumentFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F010224EA584B00B6D09C /* NSlogToDocumentFolder.m */; };
 		C58F018124EA5CAC00B6D09C /* DeleteSystemUITabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F011324EA5CAC00B6D09C /* DeleteSystemUITabBarButton.m */; };
 		C58F018224EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton in Resources */ = {isa = PBXBuildFile; fileRef = C58F011524EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton */; };
-		C58F018324EA5CAC00B6D09C /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F011724EA5CAC00B6D09C /* NSString+Extras.m */; };
 		C58F018424EA5CAC00B6D09C /* UIView+Chain.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F011B24EA5CAC00B6D09C /* UIView+Chain.m */; };
 		C58F018524EA5CAC00B6D09C /* UIView+SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F011C24EA5CAC00B6D09C /* UIView+SuspendView.m */; };
 		C58F018724EA5CAC00B6D09C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F012124EA5CAC00B6D09C /* UIColor+Hex.m */; };
@@ -347,6 +349,12 @@
 		C55497A924F3A1F00065510D /* GPUImageTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageTools.m; sourceTree = "<group>"; };
 		C55497AE24F3AD990065510D /* MKGPUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKGPUImageView.m; sourceTree = "<group>"; };
 		C55497AF24F3AD990065510D /* MKGPUImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKGPUImageView.h; sourceTree = "<group>"; };
+		C5569728255BFD95005C1361 /* NSString+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Time.h"; sourceTree = "<group>"; };
+		C5569729255BFD95005C1361 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
+		C556972A255BFD95005C1361 /* NSString+Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Time.m"; sourceTree = "<group>"; };
+		C556972B255BFD95005C1361 /* TimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
+		C556972C255BFD95005C1361 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
+		C556972D255BFD95005C1361 /* TimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
 		C5575AC32504B62900A2A694 /* DoorInputViewStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoorInputViewStyle.h; sourceTree = "<group>"; };
 		C5575AC42504B62900A2A694 /* DoorInputViewStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoorInputViewStyle.m; sourceTree = "<group>"; };
 		C5575ACE2504E1FA00A2A694 /* ForgetCodeStep_01View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetCodeStep_01View.h; sourceTree = "<group>"; };
@@ -558,8 +566,6 @@
 		C58F011324EA5CAC00B6D09C /* DeleteSystemUITabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteSystemUITabBarButton.m; sourceTree = "<group>"; };
 		C58F011424EA5CAC00B6D09C /* DeleteSystemUITabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteSystemUITabBarButton.h; sourceTree = "<group>"; };
 		C58F011524EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "移除 系统自带的 UITabBarButton"; sourceTree = "<group>"; };
-		C58F011724EA5CAC00B6D09C /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
-		C58F011824EA5CAC00B6D09C /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
 		C58F011B24EA5CAC00B6D09C /* UIView+Chain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Chain.m"; sourceTree = "<group>"; };
 		C58F011C24EA5CAC00B6D09C /* UIView+SuspendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SuspendView.m"; sourceTree = "<group>"; };
 		C58F011D24EA5CAC00B6D09C /* UIView+Chain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Chain.h"; sourceTree = "<group>"; };
@@ -1880,8 +1886,12 @@
 		C58F011624EA5CAC00B6D09C /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				C58F011824EA5CAC00B6D09C /* NSString+Extras.h */,
-				C58F011724EA5CAC00B6D09C /* NSString+Extras.m */,
+				C556972C255BFD95005C1361 /* NSString+Extras.h */,
+				C5569729255BFD95005C1361 /* NSString+Extras.m */,
+				C5569728255BFD95005C1361 /* NSString+Time.h */,
+				C556972A255BFD95005C1361 /* NSString+Time.m */,
+				C556972D255BFD95005C1361 /* TimeModel.h */,
+				C556972B255BFD95005C1361 /* TimeModel.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -3131,6 +3141,7 @@
 				C5F452302529A6D900066AAB /* RSAUtil.m in Sources */,
 				C5F4513A25299CA900066AAB /* ZBRequestEngine.m in Sources */,
 				C56161C524EE5019001CD851 /* NSObject+Measure.m in Sources */,
+				C5569730255BFD95005C1361 /* TimeModel.m in Sources */,
 				C58F031B24EA65F200B6D09C /* BaseModel.m in Sources */,
 				C57278B92540974C002373D7 /* BaseNavigationVC.m in Sources */,
 				C5914BB025384CD0007777A6 /* UIViewController+BWShareView.m in Sources */,
@@ -3147,6 +3158,7 @@
 				C58F00E124EA581F00B6D09C /* SDWebImageImageIOCoder.m in Sources */,
 				C58F00E924EA581F00B6D09C /* BRPickerStyle.m in Sources */,
 				C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */,
+				C556972E255BFD95005C1361 /* NSString+Extras.m in Sources */,
 				C530B0F5254D9ACD00EDEDC8 /* CollectionViewCell.m in Sources */,
 				C58F00D424EA581F00B6D09C /* UINavigationItem+GKCategory.m in Sources */,
 				C58960592500B0F6002B1764 /* RegisterContentView.m in Sources */,
@@ -3185,9 +3197,9 @@
 				C58F001E24EA36F800B6D09C /* Shooting.xcdatamodeld in Sources */,
 				C58F033324EA69D400B6D09C /* ViewController@4.m in Sources */,
 				C58F030324EA645A00B6D09C /* LBLaunchImageAdView.m in Sources */,
-				C58F018324EA5CAC00B6D09C /* NSString+Extras.m in Sources */,
 				C58F00D524EA581F00B6D09C /* UIImage+GKCategory.m in Sources */,
 				C5A46C0C24EFB6E900158D1E /* LZBTabBarItem.m in Sources */,
+				C556972F255BFD95005C1361 /* NSString+Time.m in Sources */,
 				C5C67CA824FF5D68000A26B8 /* MovieCountDown.m in Sources */,
 				C59D9ACE24F8EF1100A74CE9 /* CustomerGPUImagePlayerVC.m in Sources */,
 				C58F030724EA647400B6D09C /* MonitorNetwoking.m in Sources */,
