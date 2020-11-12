@@ -7,19 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CustomSYSUITabBarController.h"
-#import "MKLaunchingAdModel.h"
 
 @interface ShootingSceneDelegate : UIResponder <UIWindowSceneDelegate>
 
 @property(nonatomic,strong)UIWindow *window;
 @property(nonatomic,strong)UIWindowScene *windowScene;
-@property(nonatomic,strong)CustomSYSUITabBarController *customSYSUITabBarController;
-@property(nonatomic,strong)UINavigationController *navigationController;
-@property(nonatomic,strong)MKLaunchingAdModel *launchingAdModel;
-@property(nonatomic,strong)NSString *launchingAdPathStr;
 
-+ (instancetype)sharedInstance;
++(instancetype)sharedInstance;
 
 @end
 

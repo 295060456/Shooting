@@ -102,7 +102,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [ShootingSceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
+    ShootingAppDelegate.sharedInstance.tabbarVC.tabBar.hidden = YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -111,7 +111,7 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [ShootingSceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
+    ShootingAppDelegate.sharedInstance.tabbarVC.tabBar.hidden = NO;
 }
 
 -(void)viewDidDisappear:(BOOL)animated{

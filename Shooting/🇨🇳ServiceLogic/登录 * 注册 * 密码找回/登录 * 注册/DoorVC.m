@@ -172,10 +172,10 @@ ZFPlayerController *ZFPlayer_DoorVC;
             }
         }];
         [self.view addSubview:_loginContentView];
-        _loginContentView.frame = CGRectMake(SCREEN_WIDTH,
-                                             SCREEN_HEIGHT / 3,
-                                             SCREEN_WIDTH - 100,
-                                             SCREEN_HEIGHT/ 3);
+        _loginContentView.frame = CGRectMake(MAINSCREEN_WIDTH,
+                                             MAINSCREEN_HEIGHT / 3,
+                                             MAINSCREEN_WIDTH - 100,
+                                             MAINSCREEN_HEIGHT/ 3);
     }return _loginContentView;
 }
 
@@ -230,10 +230,10 @@ ZFPlayerController *ZFPlayer_DoorVC;
         }];
         
         [self.view addSubview:_registerContentView];
-        _registerContentView.frame = CGRectMake(SCREEN_WIDTH,
-                                             SCREEN_HEIGHT / 3,
-                                             SCREEN_WIDTH - 100,
-                                             SCREEN_HEIGHT/ 3);
+        _registerContentView.frame = CGRectMake(MAINSCREEN_WIDTH,
+                                             MAINSCREEN_HEIGHT / 3,
+                                             MAINSCREEN_WIDTH - 100,
+                                             MAINSCREEN_HEIGHT/ 3);
     }return _registerContentView;
 }
 

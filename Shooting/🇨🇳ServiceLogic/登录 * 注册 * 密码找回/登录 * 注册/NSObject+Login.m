@@ -7,14 +7,15 @@
 //
 
 #import "NSObject+Login.h"
+#import "ShootingAppDelegate.h"
 
 @implementation NSObject (Login)
 
 #pragma mark —— 登录模块 在适当的时候调用
 +(void)Login{
-    CustomSYSUITabBarController *tbvc = [ShootingSceneDelegate sharedInstance].customSYSUITabBarController;
-    @weakify(tbvc)
-    [DoorVC ComingFromVC:weak_tbvc
+    TabbarVC *tabbarVC = ShootingAppDelegate.sharedInstance.tabbarVC;
+    @weakify(tabbarVC)
+    [DoorVC ComingFromVC:weak_tabbarVC
              comingStyle:ComingStyle_PUSH
        presentationStyle:UIModalPresentationFullScreen
            requestParams:nil

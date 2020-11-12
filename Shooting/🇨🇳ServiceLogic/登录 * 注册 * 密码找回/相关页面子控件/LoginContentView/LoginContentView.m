@@ -252,7 +252,7 @@
           initialSpringVelocity:10
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-        self.centerX = SCREEN_WIDTH / 2;
+        self.centerX = MAINSCREEN_WIDTH / 2;
         self.centerY -= offsetY;
     } completion:^(BOOL finished) {
         self.isOpen = YES;
@@ -439,16 +439,14 @@
 -(void)startToRegisterBtn{
     DoorInputViewStyle_3 *用户名 = (DoorInputViewStyle_3 *)self.inputViewMutArr[0];
     DoorInputViewStyle_3 *密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[1];
-               
-    CustomSYSUITabBarController *tbvc = [ShootingSceneDelegate sharedInstance].customSYSUITabBarController;
-    
+
     if ([NSString isNullString:用户名.tf.text]) {
         [NSObject showSYSAlertViewTitle:@"请输入用户名"
                                 message:@""
                         isSeparateStyle:NO
                             btnTitleArr:@[@"好的"]
                          alertBtnAction:@[@""]
-                               targetVC:tbvc
+                               targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
                            alertVCBlock:^(id data) {
             //DIY
         }];
@@ -459,7 +457,7 @@
                         isSeparateStyle:NO
                             btnTitleArr:@[@"好的"]
                          alertBtnAction:@[@""]
-                               targetVC:tbvc
+                               targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
                            alertVCBlock:^(id data) {
             //DIY
         }];
@@ -474,7 +472,7 @@
                             isSeparateStyle:NO
                                 btnTitleArr:@[@"好的"]
                              alertBtnAction:@[@""]
-                                   targetVC:tbvc
+                                   targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
                                alertVCBlock:^(id data) {
                 //DIY
             }];
@@ -485,7 +483,7 @@
                                 isSeparateStyle:NO
                                     btnTitleArr:@[@"好的"]
                                  alertBtnAction:@[@""]
-                                       targetVC:tbvc
+                                       targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
                                    alertVCBlock:^(id data) {
                     //DIY
                 }];
@@ -502,7 +500,7 @@
                         isSeparateStyle:NO
                             btnTitleArr:@[@"好的"]
                          alertBtnAction:@[@""]
-                               targetVC:tbvc
+                               targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
                            alertVCBlock:^(id data) {
             //DIY
         }];

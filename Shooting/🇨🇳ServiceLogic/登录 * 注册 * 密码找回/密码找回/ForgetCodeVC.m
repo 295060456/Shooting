@@ -181,13 +181,12 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
         [_tipsLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.view);
             make.bottom.equalTo(self.view).offset(-21);
-            make.width.mas_equalTo(SCREEN_WIDTH / 2);
+            make.width.mas_equalTo(MAINSCREEN_WIDTH / 2);
         }];
     }return _tipsLab;
 }
 
 -(void)startStep_01{
-    CustomSYSUITabBarController *tbvc = [ShootingSceneDelegate sharedInstance].customSYSUITabBarController;
     
     DoorInputViewStyle_3 *用户名 = self.step_01.inputViewMutArr[0];
     DoorInputViewStyle_3 *手机号码 = self.step_01.inputViewMutArr[1];
@@ -202,7 +201,7 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
                             isSeparateStyle:NO
                                 btnTitleArr:@[@"好的"]
                              alertBtnAction:@[@""]
-                                   targetVC:tbvc
+                                   targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
                                alertVCBlock:^(id data) {
                 //DIY
             }];
@@ -215,7 +214,7 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
                                 isSeparateStyle:NO
                                     btnTitleArr:@[@"好的"]
                                  alertBtnAction:@[@""]
-                                       targetVC:tbvc
+                                       targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
                                    alertVCBlock:^(id data) {
                     //DIY
                 }];
@@ -230,7 +229,7 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
                         isSeparateStyle:NO
                             btnTitleArr:@[@"好的"]
                          alertBtnAction:@[@""]
-                               targetVC:tbvc
+                               targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
                            alertVCBlock:^(id data) {
             //DIY
         }];
@@ -238,7 +237,6 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
 }
 
 -(void)startStep_02{
-    CustomSYSUITabBarController *tbvc = [ShootingSceneDelegate sharedInstance].customSYSUITabBarController;
     
     DoorInputViewStyle_3 *用户名 = self.step_01.inputViewMutArr[0];
 //                    DoorInputViewStyle_3 *手机号码 = self.step_01.inputViewMutArr[1];
@@ -256,7 +254,7 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
                             isSeparateStyle:NO
                                 btnTitleArr:@[@"好的"]
                              alertBtnAction:@[@""]
-                                   targetVC:tbvc
+                                   targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
                                alertVCBlock:^(id data) {
                 //DIY
             }];
@@ -272,7 +270,7 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
                         isSeparateStyle:NO
                             btnTitleArr:@[@"好的"]
                          alertBtnAction:@[@""]
-                               targetVC:tbvc
+                               targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
                            alertVCBlock:^(id data) {
             //DIY
         }];
@@ -383,9 +381,9 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
 //            @strongify(self)
         }];
         [self.view addSubview:_step_01];
-        _step_01.frame = CGRectMake(SCREEN_WIDTH,
-                                    SCREEN_HEIGHT / 3,
-                                    SCREEN_WIDTH - 100,
+        _step_01.frame = CGRectMake(MAINSCREEN_WIDTH,
+                                    MAINSCREEN_HEIGHT / 3,
+                                    MAINSCREEN_WIDTH - 100,
                                     175);
     }return _step_01;
 }
@@ -410,9 +408,9 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
             }
         }];
         [self.view addSubview:_step_02];
-        _step_02.frame = CGRectMake(SCREEN_WIDTH,
-                                    SCREEN_HEIGHT / 3,
-                                    SCREEN_WIDTH - 100,
+        _step_02.frame = CGRectMake(MAINSCREEN_WIDTH,
+                                    MAINSCREEN_HEIGHT / 3,
+                                    MAINSCREEN_WIDTH - 100,
                                     219);
     }return _step_02;
 }

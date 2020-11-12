@@ -8,7 +8,7 @@
 
 #import "ShootingAppDelegate.h"
 #import "ShootingSceneDelegate.h"
-#import "ShootingSceneDelegate+LaunchingAd.h"
+#import "ShootingAppDelegate+PopupView.h"
 
 API_AVAILABLE(ios(13.0))
 
@@ -30,47 +30,36 @@ static ShootingSceneDelegate *static_sceneDelegate = nil;
 -(instancetype)init{
     if (self = [super init]) {
         static_sceneDelegate = self;
-        self.launchingAdPathStr = [[FileFolderHandleTool cachesDir] stringByAppendingPathComponent:@"LaunchingAd"]; // /Library/caches
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(noti1:)
+                                                     name:UISceneWillConnectNotification
+                                                   object:nil];
     }return self;
 }
 
--(void)KKK:(NSNotification *)noti{
-    NSNumber *b = noti.object;
-    if (b.intValue == AFNetworkReachabilityStatusNotReachable) {
-        [WHToast showErrorWithMessage:@"没有网络连接"
-                             duration:2
-                        finishHandler:^{
-          
-        }];
-    }
-}
-//系统版本不低于iOS13.0的设备
-- (void)scene:(UIScene *)scene
-willConnectToSession:(UISceneSession *)session
-      options:(UISceneConnectionOptions *)connectionOptions  API_AVAILABLE(ios(13.0)){
-    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-    // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-    // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        //在这里手动创建新的window
-        if (@available(iOS 13.0, *)) {
-            self.windowScene = (UIWindowScene *)scene;
-            
-            [self.window setRootViewController:self.navigationController];
-            [self.window makeKeyAndVisible];
-        }
-    
-//#pragma mark —— 启动图
-////        [self netWorkingAd];
-//        [self fixedAdPicsUrl];
-////        [self localAdPic];
-    
+-(void)noti1:(NSNotification *)notification{
+    self.windowScene = notification.object;
 }
 
-- (void)sceneDidDisconnect:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
+- (void)scene:(UIScene *)scene
+willConnectToSession:(UISceneSession *)session
+      options:(UISceneConnectionOptions *)connectionOptions {
+    
+    //在这里手动创建新的window
+    if (@available(iOS 13.0, *)) {
+        self.windowScene = (UIWindowScene *)scene;
+        XHLaunchAd * ad = [XHLaunchAd setWaitDataDuration:10];
+        [ad scene:self.windowScene];
+        self.window.alpha = 1;
+        [[ShootingAppDelegate sharedInstance] Popupview];// 弹出框
+    }
+}
+
+- (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.
     // This occurs shortly after the scene enters the background, or when its session is discarded.
     // Release any resources associated with this scene that can be re-created the next time the scene connects.
-    // The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+    // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
 }
 
 - (void)sceneDidBecomeActive:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
@@ -85,18 +74,19 @@ willConnectToSession:(UISceneSession *)session
     }
 }
 
-- (void)sceneWillResignActive:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
+- (void)sceneWillResignActive:(UIScene *)scene {
     // Called when the scene will move from an active state to an inactive state.
     // This may occur due to temporary interruptions (ex. an incoming phone call).
 }
 
-- (void)sceneWillEnterForeground:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
+- (void)sceneWillEnterForeground:(UIScene *)scene {
     // Called as the scene transitions from the background to the foreground.
     // Use this method to undo the changes made on entering the background.
 }
 
 - (void)sceneDidEnterBackground:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
     [(ShootingAppDelegate *)UIApplication.sharedApplication.delegate saveContext];
+    [[NSNotificationCenter defaultCenter] postNotificationName:UBLEnterBackgroundStopPlayer object:nil];
     NSLog(@"---applicationDidEnterBackground----"); //进入后台
     extern ZFPlayerController *ZFPlayer_DoorVC;
     extern ZFPlayerController *ZFPlayer_ForgetCodeVC;
@@ -108,19 +98,10 @@ willConnectToSession:(UISceneSession *)session
     }
 }
 #pragma mark —— lazyLoad
--(CustomSYSUITabBarController *)customSYSUITabBarController{
-    if (!_customSYSUITabBarController) {
-        _customSYSUITabBarController = CustomSYSUITabBarController.new;
-    }return _customSYSUITabBarController;
-}
-
--(UINavigationController *)navigationController{
-    if (!_navigationController) {
-//        _navigationController = [[UINavigationController alloc] initWithRootViewController:self.customSYSUITabBarController];
-        _navigationController = [UINavigationController rootVC:self.customSYSUITabBarController
-                                               transitionScale:NO];
-        _navigationController.navigationBar.hidden = YES;
-    }return _navigationController;
+-(UIWindow *)window{
+    [_window setRootViewController:ShootingAppDelegate.sharedInstance.tabbarVC];
+    [_window makeKeyAndVisible];
+    return _window;
 }
 
 @end

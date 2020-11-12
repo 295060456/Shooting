@@ -63,7 +63,7 @@ UITextViewDelegate
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.isClickMKUploadingVCView = NO;
-    [ShootingSceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
+    ShootingAppDelegate.sharedInstance.tabbarVC.tabBar.hidden = NO;
 //    [self ff];
 }
 
@@ -135,14 +135,14 @@ UITextViewDelegate
 -(void)afterRelease{
     [self deleteButtonRemoveSelf:self.choosePicBtn];
     [self btnClickEvent:self.agreementView.agreementBtn];
-    [ShootingSceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
+    ShootingAppDelegate.sharedInstance.tabbarVC.tabBar.hidden = NO;
     self.textView.text = @"";
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches
           withEvent:(UIEvent *)event{
     self.isClickMKUploadingVCView = !self.isClickMKUploadingVCView;
-    [ShootingSceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = !self.isClickMKUploadingVCView;
+    ShootingAppDelegate.sharedInstance.tabbarVC.tabBar.hidden = !self.isClickMKUploadingVCView;
 }
 #pragma mark —— 点击事件
 -(void)btnClickEvent:(UIButton *)sender{
@@ -424,7 +424,7 @@ shouldChangeTextInRange:(NSRange)range
         }];
         [self.view addSubview:_releaseBtn];
         [_releaseBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH / 2.5, SCALING_RATIO(30)));
+            make.size.mas_equalTo(CGSizeMake(MAINSCREEN_WIDTH / 2.5, SCALING_RATIO(30)));
             make.centerX.equalTo(self.view);
             make.top.equalTo(self.choosePicBtn.mas_bottom).offset(SCALING_RATIO(50));
         }];

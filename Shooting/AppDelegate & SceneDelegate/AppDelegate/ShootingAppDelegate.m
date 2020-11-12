@@ -6,16 +6,12 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#ifdef DEBUG
-#import <DoraemonKit/DoraemonManager.h>
-#endif
-
 #import "ShootingAppDelegate.h"
-#import "CustomSYSUITabBarController.h"
+#import "ShootingAppDelegate+Func.h"
+#import "ShootingAppDelegate+PopupView.h"
+#import "ShootingAppDelegate+XHLaunchAdDelegate.h"
 
 @interface ShootingAppDelegate ()
-
-@property(nonatomic,strong)CustomSYSUITabBarController *customSYSUITabBarController;
 
 @end
 
@@ -35,132 +31,59 @@ static ShootingAppDelegate *static_appDelegate = nil;
         static_appDelegate = self;
     }return self;
 }
-
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wmethod-signatures"
+//- (UIInterfaceOrientationMask)application:(UIApplication *)application
+//  supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+//    //设置强制旋转屏幕
+//    if (self.cyl_isForceLandscape) {
+//        //只支持横屏
+//        return UIInterfaceOrientationMaskLandscape;
+//    } else {
+//        //只支持竖屏
+//        return UIInterfaceOrientationMaskPortrait;
+//    }
+//}
+//#pragma clang diagnostic pop
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    #if DEBUG
-        /**
-         *  宏忽略警告-+         */
-        SuppressPerformSelectorLeakWarning(
-                                           id overlayClass = NSClassFromString(@"UIDebuggingInformationOverlay");
-                                           [overlayClass performSelector:NSSelectorFromString(@"prepareDebuggingOverlay")];
-                                           );
-    #endif
-#pragma mark —— 网络监控
-    [FMARCNetwork.sharedInstance AFNReachability];
-//    [GKConfigure setupDefaultConfigure];
-// 沙盒路径
-    NSString *directory = NSHomeDirectory();
-    NSLog(@"沙盒路径 : %@", directory);
-    // 配置导航栏属性
-    [GKConfigure setupCustomConfigure:^(GKNavigationBarConfigure * _Nonnull configure) {
-        configure.gk_translationX = 15;
-        configure.gk_translationY = 20;
-        configure.gk_scaleX = 0.90;
-        configure.gk_scaleY = 0.92;
-        // 导航栏背景色
-        configure.backgroundColor = kClearColor;
-        // 导航栏标题颜色
-        configure.titleColor = kWhiteColor;
-        // 导航栏标题字体
-        configure.titleFont = [UIFont systemFontOfSize:18.0f];
-        // 导航栏返回按钮样式
-        configure.backStyle = GKNavigationBarBackStyleBlack;
-        // 导航栏左右item间距
-        configure.gk_navItemLeftSpace = 12.0f;
-        configure.gk_navItemRightSpace = 12.0f;
-    }];
+    
+    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];//保持屏幕常亮
+    /*
+     * 禁止App系统文件夹document同步
+     * 苹果要求：可重复产生的数据不得进行同步,什么叫做可重复数据？这里最好禁止，否则会影响上架，被拒！
+     */
+    [FileFolderHandleTool banSysDocSynchronization];
     
 #ifdef DEBUG
-       [[DoraemonManager shareInstance] install];
+    [UIFont getAvailableFont];//打印全员字体
 #endif
     
-#pragma mark —— 配置键盘全局
-//    IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager]; // 获取类库的单例变量
-//    keyboardManager.enable = YES; // 控制整个功能是否启用
-//    keyboardManager.shouldResignOnTouchOutside = YES; // 启用手势触摸:控制点击背景是否收起键盘
-//    keyboardManager.shouldToolbarUsesTextFieldTintColor = YES; // 控制键盘上的工具条文字颜色是否用户自定义,(使用TextField的tintColor属性IQToolbar，否则色调的颜色是黑色 )
-//    keyboardManager.toolbarManageBehaviour = IQAutoToolbarBySubviews; // 有多个输入框时，可以通过点击Toolbar 上的“前一个”“后一个”按钮来实现移动到不同的输入框
-//    keyboardManager.enableAutoToolbar = NO; // 控制是否显示键盘上的工具条,当需要支持内联编辑(Inline Editing), 这就需要隐藏键盘上的工具条(默认打开)
-//    keyboardManager.shouldShowToolbarPlaceholder = YES; // 是否显示占位文字
-//    keyboardManager.placeholderFont = [UIFont boldSystemFontOfSize:17]; // 设置占位文字的字体
-//    keyboardManager.keyboardDistanceFromTextField = 10.0f; // 输入框距离键盘的距离
-#pragma mark —— XHLaunchAd
-//    [XHLaunchAd setLaunchSourceType:SourceTypeLaunchImage];
-//    //配置广告数据
-//    XHLaunchImageAdConfiguration *imageAdconfiguration = [XHLaunchImageAdConfiguration defaultConfiguration];
-//    //广告图片URLString/或本地图片名(.jpg/.gif请带上后缀)
-//    imageAdconfiguration.imageNameOrURLString = @"开屏广告.jpg";
-//     //广告点击打开页面参数(openModel可为NSString,模型,字典等任意类型)
-//    imageAdconfiguration.openModel = @"http://www.baidu.com";
-//    //显示图片开屏广告
-//    [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:self];
+    [self makeIQKeyboardManagerConfigure];//智能键盘
+    [self makeGKNavigationBarConfigure];//自定义导航栏
+    [self makeDoraemonManagerConfigure];//滴滴打车团队出的一款小工具
+    [self makeXHLaunchAdConfigure];//开屏广告
+    [self makeReachabilityConfigure];//网络环境监测
     
-    //设置你工程的启动页使用的是:LaunchImage 还是 LaunchScreen.storyboard(不设置默认:LaunchImage)
-    [XHLaunchAd setLaunchSourceType:SourceTypeLaunchScreen];
-
-    //配置广告数据
-    XHLaunchImageAdConfiguration *imageAdconfiguration = [XHLaunchImageAdConfiguration new];
-    //广告停留时间
-    imageAdconfiguration.duration = 5;
-    //广告frame
-    imageAdconfiguration.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-150);
-    //广告图片URLString/或本地图片名(.jpg/.gif请带上后缀)
-    imageAdconfiguration.imageNameOrURLString = @"开屏广告.jpg";
-    //设置GIF动图是否只循环播放一次(仅对动图设置有效)
-    imageAdconfiguration.GIFImageCycleOnce = NO;
-    //网络图片缓存机制(只对网络图片有效)
-    imageAdconfiguration.imageOption = XHLaunchAdImageRefreshCached;
-    //图片填充模式
-    imageAdconfiguration.contentMode = UIViewContentModeScaleToFill;
-     //广告点击打开页面参数(openModel可为NSString,模型,字典等任意类型)
-    imageAdconfiguration.openModel = @"http://www.baidu.com";
-    //广告显示完成动画
-    imageAdconfiguration.showFinishAnimate =ShowFinishAnimateFadein;
-    //广告显示完成动画时间
-    imageAdconfiguration.showFinishAnimateTime = 0.8;
-    //跳过按钮类型
-    imageAdconfiguration.skipButtonType = SkipTypeTimeText;
-    //后台返回时,是否显示广告
-    imageAdconfiguration.showEnterForeground = NO;
-    
-     //设置要添加的子视图(可选)
-    //imageAdconfiguration.subViews = ...
-
-    //显示图片开屏广告
-    [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:self];
-
-    return YES;
+    if (HDDeviceSystemVersion.floatValue < 13.0) {
+        self.window.alpha = 1;
+        [[ShootingAppDelegate sharedInstance] Popupview];// 弹出框
+    }return YES;
 }
 //系统版本低于iOS13.0的设备
 -(void)applicationDidEnterBackground:(UIApplication *)application{
-    NSLog(@"---applicationDidEnterBackground----"); //进入后台
-    extern ZFPlayerController *ZFPlayer_DoorVC;
-    extern ZFPlayerController *ZFPlayer_ForgetCodeVC;
-    if (ZFPlayer_DoorVC) {
-        [ZFPlayer_DoorVC.currentPlayerManager pause];
-    }
-    if (ZFPlayer_ForgetCodeVC) {
-        [ZFPlayer_ForgetCodeVC.currentPlayerManager pause];
-    }
+    NSLog(@"---applicationDidEnterBackground----");//进入后台
+    [[NSNotificationCenter defaultCenter] postNotificationName:UBLEnterBackgroundStopPlayer object:nil];
 }
+
 //系统版本低于iOS13.0的设备
--(void)applicationDidBecomeActive:(UIApplication *)application {
+-(void)applicationDidBecomeActive:(UIApplication *)application{
     NSLog(@"---applicationDidBecomeActive----");//进入前台
-    extern ZFPlayerController *ZFPlayer_DoorVC;
-    extern ZFPlayerController *ZFPlayer_ForgetCodeVC;
-    if (ZFPlayer_DoorVC) {
-        [ZFPlayer_DoorVC.currentPlayerManager play];
-    }
-    if (ZFPlayer_ForgetCodeVC) {
-        [ZFPlayer_ForgetCodeVC.currentPlayerManager play];
-    }
 }
 #pragma mark - UISceneSession lifecycle
 - (UISceneConfiguration *)application:(UIApplication *)application
 configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession
-                              options:(UISceneConnectionOptions *)options  API_AVAILABLE(ios(13.0)){
+                              options:(UISceneConnectionOptions *)options {
     // Called when a new scene session is being created.
     // Use this method to select a configuration to create the new scene with.
     return [[UISceneConfiguration alloc] initWithName:@"Default Configuration"
@@ -168,19 +91,18 @@ configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession
 }
 
 - (void)application:(UIApplication *)application
-didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions  API_AVAILABLE(ios(13.0)){
+didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
     // Called when the user discards a scene session.
     // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
-
 #pragma mark - Core Data stack
 @synthesize persistentContainer = _persistentContainer;
-- (NSPersistentCloudKitContainer *)persistentContainer  API_AVAILABLE(ios(13.0)){
+- (NSPersistentCloudKitContainer *)persistentContainer {
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
         if (_persistentContainer == nil) {
-            _persistentContainer = [[NSPersistentCloudKitContainer alloc] initWithName:@"MonkeyKingVideo"];
+            _persistentContainer = [[NSPersistentCloudKitContainer alloc] initWithName:HDAppDisplayName];
             [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
                 if (error != nil) {
                     // Replace this implementation with code to handle the error appropriately.
@@ -201,7 +123,6 @@ didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions  API_AVAILABLE(
         }
     }return _persistentContainer;
 }
-
 #pragma mark - Core Data Saving support
 - (void)saveContext {
     NSManagedObjectContext *context = self.persistentContainer.viewContext;
@@ -213,12 +134,70 @@ didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions  API_AVAILABLE(
         abort();
     }
 }
-
 #pragma mark —— lazyLoad
--(CustomSYSUITabBarController *)customSYSUITabBarController{
-    if (!_customSYSUITabBarController) {
-        _customSYSUITabBarController = CustomSYSUITabBarController.new;
-    }return _customSYSUITabBarController;
+//仅仅为了iOS 13 版本向下兼容而存在
+-(UIWindow *)window{
+    if (!_window) {
+        _window = UIWindow.new;
+        _window.frame = [UIScreen mainScreen].bounds;
+        [_window setRootViewController:self.tabbarVC];
+        [_window makeKeyAndVisible];
+    }return _window;
+}
+
+-(TabbarVC *)tabbarVC{
+    if (!_tabbarVC) {
+        _tabbarVC = TabbarVC.new;
+//        _tabbarVC.isOpenScrollTabbar = NO;
+        _tabbarVC.myTabBar.offsetHeight = 5;
+        [_tabbarVC.childMutArr addObject:childViewController_customStyle(ViewController_1.new,
+                                                                         @"直播",
+                                                                         KBuddleIMG(@"资源文件", @"TabbaritemImage", nil, @"community_selected"),
+                                                                         KBuddleIMG(@"资源文件", @"TabbaritemImage", nil, @"community_unselected"),
+                                                                         0,
+                                                                         @"home_priase_animation",
+                                                                         1)];
+        
+        [_tabbarVC.childMutArr addObject:childViewController_customStyle(ViewController_2.new,
+                                                                         @"赛程",
+                                                                         KBuddleIMG(@"资源文件", @"TabbaritemImage", nil, @"post_selected"),
+                                                                         KBuddleIMG(@"资源文件", @"TabbaritemImage", nil, @"post_unselected"),
+                                                                         30,
+                                                                         @"green_lottie_tab_home",
+                                                                         1)];
+        
+        [_tabbarVC.childMutArr addObject:childViewController_customStyle(ViewController_3.new,
+                                                                         @"发现",
+                                                                         KBuddleIMG(@"资源文件", @"TabbaritemImage", nil, @"post_selected"),
+                                                                         KBuddleIMG(@"资源文件", @"TabbaritemImage", nil, @"post_unselected"),
+                                                                         30,
+                                                                         @"green_lottie_tab_home",
+                                                                         1)];
+        
+        [_tabbarVC.childMutArr addObject:childViewController_customStyle(ViewController_4.new,
+                                                                         @"预测",
+                                                                         KBuddleIMG(@"资源文件", @"TabbaritemImage", nil, @"post_selected"),
+                                                                         KBuddleIMG(@"资源文件", @"TabbaritemImage", nil, @"post_unselected"),
+                                                                         30,
+                                                                         @"green_lottie_tab_home",
+                                                                         1)];
+        
+        [_tabbarVC.childMutArr addObject:childViewController_customStyle(ViewController_5.new,
+                                                                         @"我的",
+                                                                         KBuddleIMG(@"资源文件", @"TabbaritemImage", nil, @"My_selected"),
+                                                                         KBuddleIMG(@"资源文件", @"TabbaritemImage", nil, @"My_unselected"),
+                                                                         0,
+                                                                         @"green_lottie_tab_mine",
+                                                                         1)];
+    }return _tabbarVC;
+}
+
+-(NoticePopupView *)popupView{
+    if (!_popupView) {
+        _popupView = NoticePopupView.new;
+        _popupView.mj_h = 250;
+        _popupView.mj_w = MAINSCREEN_WIDTH * 2 / 3;
+    }return _popupView;
 }
 
 @end

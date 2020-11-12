@@ -83,7 +83,7 @@
         [self.view addSubview:_gradProg];
         [_gradProg mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
-            make.width.mas_equalTo(SCREEN_WIDTH);
+            make.width.mas_equalTo(MAINSCREEN_WIDTH);
             make.height.mas_equalTo(5);
             make.bottom.equalTo(self.view.mas_bottom).offset(-100);
         }];

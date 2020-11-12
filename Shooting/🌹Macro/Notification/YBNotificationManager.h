@@ -7,15 +7,9 @@
 #import <Foundation/Foundation.h>
 
 extern NSString *const kUserAssert;
-FOUNDATION_EXTERN NSString *const kNotify_IsBackExchangeRefresh;
 
-FOUNDATION_EXTERN NSString *const KLockMaxNotifaction;
-FOUNDATION_EXTERN NSString *const KLockWillShowNotifaction;
-FOUNDATION_EXTERN NSString *const KLoginSuccessNotifaction;
-FOUNDATION_EXTERN NSString *const KRegisSuccessNotifaction;
-FOUNDATION_EXTERN NSString *const KLoginOutNotifaction;
+FOUNDATION_EXTERN NSString *const UBLEnterBackgroundStopPlayer;
 FOUNDATION_EXTERN NSString *const MKAFNReachability;
-FOUNDATION_EXTERN NSString *const MKRecordStartNotification;
 
 NS_ASSUME_NONNULL_BEGIN
 

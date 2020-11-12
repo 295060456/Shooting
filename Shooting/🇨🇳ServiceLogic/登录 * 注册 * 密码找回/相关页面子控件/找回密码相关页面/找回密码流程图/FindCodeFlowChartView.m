@@ -94,7 +94,7 @@
         //单个节点的高度
 //        CGFloat singleElementH = self.mj_h;
         //每个节点的宽度
-        CGFloat singleElementW = SCREEN_WIDTH / self.flowNum;
+        CGFloat singleElementW = MAINSCREEN_WIDTH / self.flowNum;
         for (int t = 0; t < self.flowNum; t++) {
             FlowChartSingleElementView *singleElement = FlowChartSingleElementView.new;
             singleElement.titleLab.text = self.titleMutArr[t];

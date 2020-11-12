@@ -156,7 +156,7 @@
           initialSpringVelocity:10
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-        self.centerX = SCREEN_WIDTH / 2;
+        self.centerX = MAINSCREEN_WIDTH / 2;
         self.centerY -= offsetY;
     } completion:^(BOOL finished) {
         self.isOpen = YES;
