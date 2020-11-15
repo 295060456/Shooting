@@ -7,7 +7,12 @@
 //
 
 #import "LZBTabBar.h"
+
+#if __has_include(<lottie-ios/Lottie.h>)
+#import <lottie-ios/Lottie.h>
+#else
 #import "Lottie.h"
+#endif
 
 #define default_TopLine_Height 0.5
 
