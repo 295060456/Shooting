@@ -12,7 +12,7 @@
 -(instancetype)init{
     if (self = [super init]) {
         self.clearButtonMode = UITextFieldViewModeWhileEditing;
-        [self modifyClearButtonWithImage:KBuddleIMG(@"⚽️PicResource",@"ZYTextField",nil, @"closeCircle")];
+        [self modifyClearButtonWithImage:KBuddleIMG(@"⚽️PicResource",@"ZYTextField", nil, @"closeCircle")];
     }return self;
 }
 
@@ -20,6 +20,7 @@
     [super drawRect:rect];
     if (!self.isOk) {
         [self setUpUI];
+        self.isOk = YES;
     }
 }
 
