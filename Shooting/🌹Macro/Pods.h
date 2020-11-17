@@ -145,6 +145,12 @@
 #import "GPUImage.h"
 #endif
 
+#if __has_include(<lottie-ios/Lottie.h>)
+#import <lottie-ios/Lottie.h>
+#else
+#import "Lottie.h"
+#endif
+
 #if __has_include(<LYEmptyView/LYEmptyViewHeader.h>)
 #import <LYEmptyView/LYEmptyViewHeader.h>
 #else
