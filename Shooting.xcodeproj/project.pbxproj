@@ -214,6 +214,8 @@
 		C5914BAD25384CD0007777A6 /* UIViewController+JPImageresizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5914B9B25384CCF007777A6 /* UIViewController+JPImageresizerView.m */; };
 		C5914BAF25384CD0007777A6 /* UIViewController+BackBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5914B9E25384CCF007777A6 /* UIViewController+BackBtn.m */; };
 		C5914BB025384CD0007777A6 /* UIViewController+BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5914BA125384CCF007777A6 /* UIViewController+BWShareView.m */; };
+		C591F1022563C9AD005B78CC /* JsonRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C591F1002563C9AD005B78CC /* JsonRes.bundle */; };
+		C591F1032563C9AD005B78CC /* CustomGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C591F1012563C9AD005B78CC /* CustomGifHeader.m */; };
 		C59B9E142526F0D20039B485 /* ZYTextField.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C59B9E132526F0D20039B485 /* ZYTextField.bundle */; };
 		C59B9E172526F1500039B485 /* ZYTextField+HistoryDataList.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9E152526F1500039B485 /* ZYTextField+HistoryDataList.m */; };
 		C59B9E3A2526F1DF0039B485 /* UITableView+XSAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9E362526F1DF0039B485 /* UITableView+XSAnimationKit.m */; };
@@ -728,6 +730,9 @@
 		C5914BA125384CCF007777A6 /* UIViewController+BWShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BWShareView.m"; sourceTree = "<group>"; };
 		C5914BA225384CCF007777A6 /* UIViewController+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJRefresh.h"; sourceTree = "<group>"; };
 		C5914BA325384CCF007777A6 /* UIViewController+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Shake.h"; sourceTree = "<group>"; };
+		C591F0FF2563C9AD005B78CC /* CustomGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomGifHeader.h; sourceTree = "<group>"; };
+		C591F1002563C9AD005B78CC /* JsonRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JsonRes.bundle; sourceTree = "<group>"; };
+		C591F1012563C9AD005B78CC /* CustomGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomGifHeader.m; sourceTree = "<group>"; };
 		C59B9E132526F0D20039B485 /* ZYTextField.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYTextField.bundle; sourceTree = "<group>"; };
 		C59B9E152526F1500039B485 /* ZYTextField+HistoryDataList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZYTextField+HistoryDataList.m"; sourceTree = "<group>"; };
 		C59B9E162526F1500039B485 /* ZYTextField+HistoryDataList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZYTextField+HistoryDataList.h"; sourceTree = "<group>"; };
@@ -2212,6 +2217,7 @@
 		C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C591F0FE2563C9AD005B78CC /* CustomGifHeader */,
 				C53D60EF255C2192006C290D /* 广告或者公示弹出框 */,
 				C53D6087255C20FC006C290D /* 深度拓展系统UITabBar全家桶 */,
 				C5F451F02529A6D100066AAB /* 加密体系 */,
@@ -2427,6 +2433,16 @@
 				C58F046D24EBD70300B6D09C /* UIControl+XY.m */,
 			);
 			path = "UIControl+XY";
+			sourceTree = "<group>";
+		};
+		C591F0FE2563C9AD005B78CC /* CustomGifHeader */ = {
+			isa = PBXGroup;
+			children = (
+				C591F0FF2563C9AD005B78CC /* CustomGifHeader.h */,
+				C591F1002563C9AD005B78CC /* JsonRes.bundle */,
+				C591F1012563C9AD005B78CC /* CustomGifHeader.m */,
+			);
+			path = CustomGifHeader;
 			sourceTree = "<group>";
 		};
 		C596079524F9221E00D4C824 /* res */ = {
@@ -3058,6 +3074,7 @@
 				C5E5C64425078860001E69DA /* iph_X.mp4 in Resources */,
 				C5F4522E2529A6D900066AAB /* GTMBase64.md in Resources */,
 				C53D60CE255C20FC006C290D /* green_lottie_tab_news.json in Resources */,
+				C591F1022563C9AD005B78CC /* JsonRes.bundle in Resources */,
 				C5E5C642250787A5001E69DA /* 非iph_X.mp4 in Resources */,
 				C59D9AA724F8C79500A74CE9 /* video.gif in Resources */,
 				C53D60D7255C20FC006C290D /* 上传与拍照.json in Resources */,
@@ -3289,6 +3306,7 @@
 				C58F00D824EA581F00B6D09C /* UIImage+WebP.m in Sources */,
 				C561619824EE4CA9001CD851 /* MKUploadingVC.m in Sources */,
 				C589607C2500E90C002B1764 /* ForgetCodeVC.m in Sources */,
+				C591F1032563C9AD005B78CC /* CustomGifHeader.m in Sources */,
 				C59D9AD724F8EF4100A74CE9 /* CustomerAVPlayerVC.m in Sources */,
 				C52DEF51255D2A820016FF07 /* XHLaunchAd.m in Sources */,
 				C53D60E1255C20FC006C290D /* JobsPullListTBVCell.m in Sources */,
