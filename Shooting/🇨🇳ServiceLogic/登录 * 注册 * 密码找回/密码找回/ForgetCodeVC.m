@@ -161,7 +161,11 @@ ZFPlayerController *ZFPlayer_ForgetCodeVC;
         [self.view addSubview:_findCodeFlowChartView];
         [_findCodeFlowChartView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(self.view);
-            make.top.equalTo(self.gk_navigationBar.mas_bottom);
+            if (self.gk_navBarAlpha && !self.gk_navigationBar.hidden) {//显示
+                make.top.equalTo(self.gk_navigationBar.mas_bottom);
+            }else{
+                make.top.equalTo(self.view.mas_top);
+            }
             make.height.mas_equalTo(60);
         }];
     }return _findCodeFlowChartView;

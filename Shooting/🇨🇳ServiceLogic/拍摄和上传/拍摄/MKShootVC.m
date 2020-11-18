@@ -764,10 +764,10 @@
             [_AVPlayerView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.equalTo(self.view).offset(SCALING_RATIO(50));
                 make.size.mas_equalTo(CGSizeMake(MAINSCREEN_WIDTH / 2, MAINSCREEN_HEIGHT / 2));
-                if (self.gk_navigationBar.hidden) {
-                    make.top.equalTo(self.view);
-                }else{
+                if (self.gk_navBarAlpha && !self.gk_navigationBar.hidden) {//显示
                     make.top.equalTo(self.gk_navigationBar.mas_bottom);
+                }else{
+                    make.top.equalTo(self.view.mas_top);
                 }
             }];
         }else{
