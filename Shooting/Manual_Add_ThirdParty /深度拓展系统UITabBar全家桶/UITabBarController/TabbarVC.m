@@ -150,9 +150,12 @@ UIViewController *childViewController_SystemStyle(UIViewController *viewControll
                                                                        0)];//修改图片偏移量，上下，左右必须为相反数，否则图片会被压缩
             [viewController.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, 0)];//修改文字偏移量
         }
-        BaseNavigationVC *nav = [[BaseNavigationVC alloc] initWithRootViewController:viewController];
-//        nav.title = config.title;
-        [self.childMutArr replaceObjectAtIndex:i withObject:nav];//替换元素，每个VC加Navigation
+        
+        if (![viewController isKindOfClass:BaseNavigationVC.class]) {//防止UIImagePickerController崩，见个人中心 -(void)takePhoto
+            BaseNavigationVC *nav = [[BaseNavigationVC alloc] initWithRootViewController:viewController];
+    //        nav.title = config.title;
+            [self.childMutArr replaceObjectAtIndex:i withObject:nav];//替换元素，每个VC加Navigation
+        }
     }
 #warning 这句话走了以后 才会有self.tabBar
     self.viewControllers = self.childMutArr;
