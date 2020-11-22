@@ -93,7 +93,7 @@ JXCategoryTitleViewDataSource
     self.navigationController.navigationBar.hidden = YES;
     
     self.categoryView.alpha = 1;
-    ShootingAppDelegate.sharedInstance.tabbarVC.tabBar.hidden = YES;
+    ShootingAppDelegate.sharedInstance.tabBarVC.tabBar.hidden = YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -166,7 +166,7 @@ didClickSelectedItemAtIndex:(NSInteger)index {
 - (void)categoryView:(JXCategoryBaseView *)categoryView
 didScrollSelectedItemAtIndex:(NSInteger)index{
     if (index) {//1
-        ShootingAppDelegate.sharedInstance.tabbarVC.tabBar.hidden = YES;
+        ShootingAppDelegate.sharedInstance.tabBarVC.tabBar.hidden = YES;
         self.gk_navigationBar.hidden = NO;
         [self.shootVC.gpuImageTools.videoCamera resumeCameraCapture];
     }else{//0
@@ -211,7 +211,7 @@ didScrollSelectedItemAtIndex:(NSInteger)index{
             default:
                 break;
         }
-        ShootingAppDelegate.sharedInstance.tabbarVC.tabBar.hidden = NO;
+        ShootingAppDelegate.sharedInstance.tabBarVC.tabBar.hidden = NO;
         self.gk_navigationBar.hidden = YES;
     }
 }

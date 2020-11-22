@@ -126,7 +126,7 @@
     }
     self.isClickMyGPUImageView = NO;
     self.gk_navigationBar.hidden = NO;
-    ShootingAppDelegate.sharedInstance.tabbarVC.tabBar.hidden = YES;
+    ShootingAppDelegate.sharedInstance.tabBarVC.tabBar.hidden = YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -149,7 +149,7 @@
     if (self.MKShootVCBlock) {
         self.MKShootVCBlock(@NO);
     }
-    ShootingAppDelegate.sharedInstance.tabbarVC.tabBar.hidden = NO;
+    ShootingAppDelegate.sharedInstance.tabBarVC.tabBar.hidden = NO;
 }
 #pragma mark —— 切换滤镜功能
 -(void)changeFilter{

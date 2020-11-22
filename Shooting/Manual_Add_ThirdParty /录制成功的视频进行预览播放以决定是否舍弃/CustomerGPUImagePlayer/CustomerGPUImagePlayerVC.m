@@ -102,7 +102,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    ShootingAppDelegate.sharedInstance.tabbarVC.tabBar.hidden = YES;
+    ShootingAppDelegate.sharedInstance.tabBarVC.tabBar.hidden = YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -111,7 +111,7 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    ShootingAppDelegate.sharedInstance.tabbarVC.tabBar.hidden = NO;
+    ShootingAppDelegate.sharedInstance.tabBarVC.tabBar.hidden = NO;
 }
 
 -(void)viewDidDisappear:(BOOL)animated{

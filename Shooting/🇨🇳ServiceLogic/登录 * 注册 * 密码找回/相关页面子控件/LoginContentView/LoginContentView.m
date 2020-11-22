@@ -446,7 +446,7 @@
                         isSeparateStyle:NO
                             btnTitleArr:@[@"好的"]
                          alertBtnAction:@[@""]
-                               targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
+                               targetVC:ShootingAppDelegate.sharedInstance.tabBarVC
                            alertVCBlock:^(id data) {
             //DIY
         }];
@@ -457,7 +457,7 @@
                         isSeparateStyle:NO
                             btnTitleArr:@[@"好的"]
                          alertBtnAction:@[@""]
-                               targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
+                               targetVC:ShootingAppDelegate.sharedInstance.tabBarVC
                            alertVCBlock:^(id data) {
             //DIY
         }];
@@ -472,7 +472,7 @@
                             isSeparateStyle:NO
                                 btnTitleArr:@[@"好的"]
                              alertBtnAction:@[@""]
-                                   targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
+                                   targetVC:ShootingAppDelegate.sharedInstance.tabBarVC
                                alertVCBlock:^(id data) {
                 //DIY
             }];
@@ -483,7 +483,7 @@
                                 isSeparateStyle:NO
                                     btnTitleArr:@[@"好的"]
                                  alertBtnAction:@[@""]
-                                       targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
+                                       targetVC:ShootingAppDelegate.sharedInstance.tabBarVC
                                    alertVCBlock:^(id data) {
                     //DIY
                 }];
@@ -500,7 +500,7 @@
                         isSeparateStyle:NO
                             btnTitleArr:@[@"好的"]
                          alertBtnAction:@[@""]
-                               targetVC:ShootingAppDelegate.sharedInstance.tabbarVC
+                               targetVC:ShootingAppDelegate.sharedInstance.tabBarVC
                            alertVCBlock:^(id data) {
             //DIY
         }];

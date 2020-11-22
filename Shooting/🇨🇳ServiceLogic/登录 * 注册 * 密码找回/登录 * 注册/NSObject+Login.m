@@ -13,8 +13,8 @@
 
 #pragma mark —— 登录模块 在适当的时候调用
 +(void)Login{
-    TabbarVC *tabbarVC = ShootingAppDelegate.sharedInstance.tabbarVC;
-    @weakify(tabbarVC)
+    TabbarVC *tabBarVC = ShootingAppDelegate.sharedInstance.tabBarVC;
+    @weakify(tabBarVC)
     [DoorVC ComingFromVC:weak_tabbarVC
              comingStyle:ComingStyle_PUSH
        presentationStyle:UIModalPresentationFullScreen

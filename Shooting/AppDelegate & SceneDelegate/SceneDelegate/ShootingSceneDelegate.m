@@ -99,7 +99,7 @@ willConnectToSession:(UISceneSession *)session
 }
 #pragma mark —— lazyLoad
 -(UIWindow *)window{
-    [_window setRootViewController:ShootingAppDelegate.sharedInstance.tabbarVC];
+    [_window setRootViewController:ShootingAppDelegate.sharedInstance.tabBarVC];
     [_window makeKeyAndVisible];
     return _window;
 }

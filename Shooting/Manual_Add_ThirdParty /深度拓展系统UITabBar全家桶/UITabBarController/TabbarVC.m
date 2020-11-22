@@ -10,7 +10,7 @@
 #import "UITabBar+TLAnimation.h"
 #import "UITabBarItem+TLAnimation.h"
 
-TabbarVC *tabbarVC;
+TabbarVC *tabBarVC;
 
 @interface TabbarVC ()
 <
@@ -34,7 +34,7 @@ UIGestureRecognizerDelegate
 -(instancetype)init{
     if (self = [super init]) {
         self.delegate = self;
-        tabbarVC = self;
+        tabBarVC = self;
         self.isOpenScrollTabbar = YES;
     }return self;
 }
@@ -97,7 +97,7 @@ UIViewController *childViewController_customStyle(UIViewController *viewControll
     config.lottieName = lottieName;
     config.tag = tag;
     
-    [[ShootingAppDelegate sharedInstance].tabbarVC.tabBarControllerConfigMutArr addObject:config];
+    [[ShootingAppDelegate sharedInstance].tabBarVC.tabBarControllerConfigMutArr addObject:config];
     
 //    setAnimation(viewController.tabBarItem, tag);//可选实现
     return viewController;

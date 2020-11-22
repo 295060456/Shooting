@@ -106,7 +106,7 @@ static inline CGFloat TopSafeAreaHeight(){
 #import "ShootingAppDelegate.h"
 //底部的安全距离，全面屏手机为34pt，非全面屏手机为0pt
 static inline CGFloat BottomSafeAreaHeight(){
-    return TabBarHeight() - 49 - ShootingAppDelegate.sharedInstance.tabbarVC.myTabBar.offsetHeight;
+    return TabBarHeight() - 49 - ShootingAppDelegate.sharedInstance.tabBarVC.myTabBar.offsetHeight;
 }
 
 #endif /* MacroDef_Size_h */
