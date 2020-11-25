@@ -30,8 +30,11 @@
 #import "UIView+Measure.h"
 #import "CustomTabBar.h"
 #import "SuspendBtn.h"
-
+#import "TLTabBarAnimation.h"
+#import "TransitionAnimation.h"
+#import "TransitionController.h"
 #import "TabBarControllerConfig.h"
+#import "JobsPullListAutoSizeView.h"
 
 /*
  * 1、如果用系统的 UITabBarController —— UITabBar 当关联VC ＞ 6 个的时候，最后一个会变成more按钮，其余的VC会在more按钮里面形成一个TableView来进行展现

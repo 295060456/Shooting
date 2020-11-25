@@ -202,7 +202,7 @@
         DoorInputViewStyle_3 *确认密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[2];
         DoorInputViewStyle_2 *填写验证码 = (DoorInputViewStyle_2 *)self.inputViewMutArr[3];
 
-        self.isEdit = 用户名.tf.isEditting | 密码.tf.isEditting | 确认密码.tf.isEditting| 填写验证码.tf.isEditting;
+        self.isEdit = 用户名.tf.isEditing | 密码.tf.isEditing | 确认密码.tf.isEditing| 填写验证码.tf.isEditing;
         
         if (self.isOpen) {
             if (self.isEdit) {

@@ -75,7 +75,7 @@
     DoorInputViewStyle_3 *新密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[1];
     DoorInputViewStyle_3 *确认新密码 = (DoorInputViewStyle_3 *)self.inputViewMutArr[2];
     
-    self.isEdit = 验证码.tf.isEditting | 新密码.tf.isEditting | 确认新密码.tf.isEditting;
+    self.isEdit = 验证码.tf.isEditing | 新密码.tf.isEditing | 确认新密码.tf.isEditing;
     
     NSLog(@"SSS = %d",self.isEdit);
     

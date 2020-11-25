@@ -209,7 +209,7 @@
     DoorInputViewStyle_3 *用户名 = self.inputViewMutArr[0];
     DoorInputViewStyle_3 *密码 = self.inputViewMutArr[1];
     
-    self.isEdit = 用户名.tf.isEditting | 密码.tf.isEditting;
+    self.isEdit = 用户名.tf.isEditing | 密码.tf.isEditing;
     
     NSLog(@"SSS = %d",self.isEdit);
     

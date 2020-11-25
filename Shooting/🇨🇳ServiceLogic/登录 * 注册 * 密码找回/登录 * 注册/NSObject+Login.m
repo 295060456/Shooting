@@ -15,7 +15,7 @@
 +(void)Login{
     TabbarVC *tabBarVC = ShootingAppDelegate.sharedInstance.tabBarVC;
     @weakify(tabBarVC)
-    [DoorVC ComingFromVC:weak_tabbarVC
+    [DoorVC ComingFromVC:weak_tabBarVC
              comingStyle:ComingStyle_PUSH
        presentationStyle:UIModalPresentationFullScreen
            requestParams:nil

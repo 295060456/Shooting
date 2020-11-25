@@ -79,7 +79,7 @@
 		C54AB1E7255E608E000A314D /* UITableViewCell+WhiteArrows.m in Sources */ = {isa = PBXBuildFile; fileRef = C54AB1E1255E608E000A314D /* UITableViewCell+WhiteArrows.m */; };
 		C54AB1E8255E608E000A314D /* UITableViewCell+Margin.m in Sources */ = {isa = PBXBuildFile; fileRef = C54AB1E4255E608E000A314D /* UITableViewCell+Margin.m */; };
 		C54B3CEB25526022003BE195 /* UIFont+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3CEA25526022003BE195 /* UIFont+Extras.m */; };
-		C54B3FC9255297C5003BE195 /* UILabel+RichText.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3FC5255297C5003BE195 /* UILabel+RichText.m */; };
+		C54B3FC9255297C5003BE195 /* NSObject+RichText.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3FC5255297C5003BE195 /* NSObject+RichText.m */; };
 		C54B3FCA255297C5003BE195 /* UILabel+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3FC8255297C5003BE195 /* UILabel+Extra.m */; };
 		C54F858F252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */; };
 		C55497A424F38CDB0065510D /* MKShootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A324F38CDB0065510D /* MKShootVC.m */; };
@@ -446,9 +446,9 @@
 		C54AB1E4255E608E000A314D /* UITableViewCell+Margin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Margin.m"; sourceTree = "<group>"; };
 		C54B3CE925526022003BE195 /* UIFont+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extras.h"; sourceTree = "<group>"; };
 		C54B3CEA25526022003BE195 /* UIFont+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extras.m"; sourceTree = "<group>"; };
-		C54B3FC5255297C5003BE195 /* UILabel+RichText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+RichText.m"; sourceTree = "<group>"; };
+		C54B3FC5255297C5003BE195 /* NSObject+RichText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RichText.m"; sourceTree = "<group>"; };
 		C54B3FC6255297C5003BE195 /* UILabel+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extra.h"; sourceTree = "<group>"; };
-		C54B3FC7255297C5003BE195 /* UILabel+RichText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+RichText.h"; sourceTree = "<group>"; };
+		C54B3FC7255297C5003BE195 /* NSObject+RichText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RichText.h"; sourceTree = "<group>"; };
 		C54B3FC8255297C5003BE195 /* UILabel+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extra.m"; sourceTree = "<group>"; };
 		C54F858D252B613E00EE3DD0 /* UITableView+WWFoldableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+WWFoldableTableView.h"; sourceTree = "<group>"; };
 		C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+WWFoldableTableView.m"; sourceTree = "<group>"; };
@@ -1283,8 +1283,6 @@
 			children = (
 				C54B3FC6255297C5003BE195 /* UILabel+Extra.h */,
 				C54B3FC8255297C5003BE195 /* UILabel+Extra.m */,
-				C54B3FC7255297C5003BE195 /* UILabel+RichText.h */,
-				C54B3FC5255297C5003BE195 /* UILabel+RichText.m */,
 			);
 			path = UILabel;
 			sourceTree = "<group>";
@@ -2195,6 +2193,8 @@
 		C58F017A24EA5CAC00B6D09C /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				C54B3FC7255297C5003BE195 /* NSObject+RichText.h */,
+				C54B3FC5255297C5003BE195 /* NSObject+RichText.m */,
 				C5AA4909250C8EFB009F583F /* NSObject+Alert */,
 				C57F0D1E253336ED0080EEF0 /* NSObject+OpenURL.h */,
 				C57F0D1F253336ED0080EEF0 /* NSObject+OpenURL.m */,
@@ -3447,7 +3447,7 @@
 				C57F0D20253336ED0080EEF0 /* NSObject+OpenURL.m in Sources */,
 				C5F4513D25299CA900066AAB /* ZBCacheManager.m in Sources */,
 				C58F020224EA617800B6D09C /* BWItemCollectionViewCell.m in Sources */,
-				C54B3FC9255297C5003BE195 /* UILabel+RichText.m in Sources */,
+				C54B3FC9255297C5003BE195 /* NSObject+RichText.m in Sources */,
 				C561618C24EE4C98001CD851 /* MyCell.m in Sources */,
 				C5F4513925299CA900066AAB /* ZBURLRequest.m in Sources */,
 				C58F018724EA5CAC00B6D09C /* UIColor+Hex.m in Sources */,
