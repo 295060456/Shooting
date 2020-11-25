@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		4FDC7C2ABB9BA7FD9476E474 /* Pods_ShootingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFE56B23CFD75AB0A6DB9B4 /* Pods_ShootingUITests.framework */; };
 		7F96368156DDD0B899DCFEA0 /* Pods_Shooting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */; };
-		C51A0BE1250203B000884016 /* DoorInputViewStyle_2.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A0BE0250203B000884016 /* DoorInputViewStyle_2.m */; };
-		C51A0BE4250203BD00884016 /* DoorInputViewStyle_3.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A0BE3250203BD00884016 /* DoorInputViewStyle_3.m */; };
 		C52DEF4D255D2A820016FF07 /* XHLaunchAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF3A255D2A820016FF07 /* XHLaunchAdView.m */; };
 		C52DEF4E255D2A820016FF07 /* XHLaunchAdButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF3D255D2A820016FF07 /* XHLaunchAdButton.m */; };
 		C52DEF4F255D2A820016FF07 /* XHLaunchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF3F255D2A820016FF07 /* XHLaunchImageView.m */; };
@@ -89,9 +87,6 @@
 		C556972E255BFD95005C1361 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5569729255BFD95005C1361 /* NSString+Extras.m */; };
 		C556972F255BFD95005C1361 /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C556972A255BFD95005C1361 /* NSString+Time.m */; };
 		C5569730255BFD95005C1361 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C556972B255BFD95005C1361 /* TimeModel.m */; };
-		C5575AC52504B62900A2A694 /* DoorInputViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575AC42504B62900A2A694 /* DoorInputViewStyle.m */; };
-		C5575AD02504E1FA00A2A694 /* ForgetCodeStep_01View.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575ACF2504E1FA00A2A694 /* ForgetCodeStep_01View.m */; };
-		C5575AD32504E20C00A2A694 /* ForgetCodeStep_02View.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575AD22504E20C00A2A694 /* ForgetCodeStep_02View.m */; };
 		C55B2A9F253426F10038E50C /* SuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C55B2A98253426F10038E50C /* SuspendLab.m */; };
 		C55B2AA0253426F10038E50C /* SuspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C55B2A9A253426F10038E50C /* SuspendBtn.m */; };
 		C55B2AA1253426F10038E50C /* SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55B2A9D253426F10038E50C /* SuspendView.m */; };
@@ -117,20 +112,11 @@
 		C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A28224FBE933000A1687 /* UIImage+Tailor.m */; };
 		C5766EA02546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5766E9E2546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */; };
 		C57C229A250240B500FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */; };
-		C57C22AE250263F100FAAA3F /* CustomZFPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C22AD250263F100FAAA3F /* CustomZFPlayerControlView.m */; };
 		C57C22BB2502717C00FAAA3F /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C22BA2502717C00FAAA3F /* UIView+Gradient.m */; };
-		C57D5B1825134D950073F90B /* DoorVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C57D5B1725134D950073F90B /* DoorVC+VM.m */; };
-		C57D5B1B25134E290073F90B /* NSObject+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = C57D5B1A25134E290073F90B /* NSObject+Login.m */; };
 		C57F0D20253336ED0080EEF0 /* NSObject+OpenURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C57F0D1F253336ED0080EEF0 /* NSObject+OpenURL.m */; };
 		C5850AEB25483DA1001E6676 /* ViewForTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C5850AE625483DA1001E6676 /* ViewForTableViewHeader.m */; };
 		C5850AEC25483DA1001E6676 /* ViewForTableViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C5850AE925483DA1001E6676 /* ViewForTableViewFooter.m */; };
 		C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589604E2500AC91002B1764 /* ImageCodeView.m */; };
-		C58960562500B0E0002B1764 /* LogoContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960552500B0E0002B1764 /* LogoContentView.m */; };
-		C58960592500B0F6002B1764 /* RegisterContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960582500B0F6002B1764 /* RegisterContentView.m */; };
-		C589605C2500B100002B1764 /* LoginContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589605B2500B100002B1764 /* LoginContentView.m */; };
-		C58960612500B196002B1764 /* DoorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960602500B196002B1764 /* DoorVC.m */; };
-		C58960732500E0FA002B1764 /* FindCodeFlowChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58960722500E0FA002B1764 /* FindCodeFlowChartView.m */; };
-		C589607C2500E90C002B1764 /* ForgetCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C589607B2500E90C002B1764 /* ForgetCodeVC.m */; };
 		C58C61932532B4020092BF89 /* RBCLikeButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C58C61912532B4020092BF89 /* RBCLikeButton.bundle */; };
 		C58C61942532B4020092BF89 /* RBCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C61922532B4020092BF89 /* RBCLikeButton.m */; };
 		C58F001224EA36F800B6D09C /* ShootingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001124EA36F800B6D09C /* ShootingAppDelegate.m */; };
@@ -248,11 +234,8 @@
 		C5C67CA824FF5D68000A26B8 /* MovieCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA624FF5D68000A26B8 /* MovieCountDown.m */; };
 		C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */; };
 		C5E3C7742517824B00F9A150 /* UIImage+screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E3C7732517824B00F9A150 /* UIImage+screenshot.m */; };
-		C5E5C6242505E116001E69DA /* DoorInputViewStyle_1.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575ADD250517F300A2A694 /* DoorInputViewStyle_1.m */; };
 		C5E5C6252505E1E4001E69DA /* UIButton+CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575AE2250518AA00A2A694 /* UIButton+CountDownBtn.m */; };
 		C5E5C63925077436001E69DA /* WGradientProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C63725077436001E69DA /* WGradientProgress.m */; };
-		C5E5C642250787A5001E69DA /* 非iph_X.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C641250787A5001E69DA /* 非iph_X.mp4 */; };
-		C5E5C64425078860001E69DA /* iph_X.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C64325078860001E69DA /* iph_X.mp4 */; };
 		C5E5C6492507963B001E69DA /* UIDevice+XMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C6462507963B001E69DA /* UIDevice+XMUtils.m */; };
 		C5E5C64A2507963B001E69DA /* iOS 获取手机型号、系统版本.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C6472507963B001E69DA /* iOS 获取手机型号、系统版本.png */; };
 		C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C6692508BEFB001E69DA /* 水平进度条.png */; };
@@ -323,13 +306,6 @@
 		8EF824CCB3C797C08F0AA84C /* Pods-ShootingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingTests.release.xcconfig"; path = "Target Support Files/Pods-ShootingTests/Pods-ShootingTests.release.xcconfig"; sourceTree = "<group>"; };
 		975BB3BDBE4F3C4E85B6606A /* Pods-Shooting-ShootingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shooting-ShootingUITests.release.xcconfig"; path = "Target Support Files/Pods-Shooting-ShootingUITests/Pods-Shooting-ShootingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BE8529673128AC0E9BFB2644 /* Pods-ShootingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShootingUITests/Pods-ShootingUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C51A0BD22502032B00884016 /* 输入框样式_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "输入框样式_3.png"; sourceTree = "<group>"; };
-		C51A0BD42502032B00884016 /* 输入框样式_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "输入框样式_2.png"; sourceTree = "<group>"; };
-		C51A0BDF250203B000884016 /* DoorInputViewStyle_2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoorInputViewStyle_2.h; sourceTree = "<group>"; };
-		C51A0BE0250203B000884016 /* DoorInputViewStyle_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoorInputViewStyle_2.m; sourceTree = "<group>"; };
-		C51A0BE2250203BD00884016 /* DoorInputViewStyle_3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoorInputViewStyle_3.h; sourceTree = "<group>"; };
-		C51A0BE3250203BD00884016 /* DoorInputViewStyle_3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoorInputViewStyle_3.m; sourceTree = "<group>"; };
-		C51A0BE5250203CD00884016 /* DoorInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoorInputView.h; sourceTree = "<group>"; };
 		C52DEF37255D2A820016FF07 /* XHLaunchAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdController.h; sourceTree = "<group>"; };
 		C52DEF38255D2A820016FF07 /* XHLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAd.h; sourceTree = "<group>"; };
 		C52DEF39255D2A820016FF07 /* XHLaunchAdDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdDownloader.h; sourceTree = "<group>"; };
@@ -466,15 +442,6 @@
 		C556972B255BFD95005C1361 /* TimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
 		C556972C255BFD95005C1361 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
 		C556972D255BFD95005C1361 /* TimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
-		C5575AC32504B62900A2A694 /* DoorInputViewStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoorInputViewStyle.h; sourceTree = "<group>"; };
-		C5575AC42504B62900A2A694 /* DoorInputViewStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoorInputViewStyle.m; sourceTree = "<group>"; };
-		C5575ACE2504E1FA00A2A694 /* ForgetCodeStep_01View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetCodeStep_01View.h; sourceTree = "<group>"; };
-		C5575ACF2504E1FA00A2A694 /* ForgetCodeStep_01View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetCodeStep_01View.m; sourceTree = "<group>"; };
-		C5575AD12504E20C00A2A694 /* ForgetCodeStep_02View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetCodeStep_02View.h; sourceTree = "<group>"; };
-		C5575AD22504E20C00A2A694 /* ForgetCodeStep_02View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetCodeStep_02View.m; sourceTree = "<group>"; };
-		C5575ADD250517F300A2A694 /* DoorInputViewStyle_1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoorInputViewStyle_1.m; sourceTree = "<group>"; };
-		C5575ADE250517F300A2A694 /* DoorInputViewStyle_1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoorInputViewStyle_1.h; sourceTree = "<group>"; };
-		C5575ADF2505181700A2A694 /* 输入框样式_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "输入框样式_1.png"; sourceTree = "<group>"; };
 		C5575AE2250518AA00A2A694 /* UIButton+CountDownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDownBtn.m"; sourceTree = "<group>"; };
 		C5575AE3250518AA00A2A694 /* UIButton+CountDownBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDownBtn.h"; sourceTree = "<group>"; };
 		C55B2A97253426F10038E50C /* SuspendLab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendLab.h; sourceTree = "<group>"; };
@@ -530,14 +497,8 @@
 		C5766E9F2546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JXPagerViewListViewDelegate.h"; sourceTree = "<group>"; };
 		C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		C57C2299250240B500FAAA3F /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
-		C57C22AC250263F100FAAA3F /* CustomZFPlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomZFPlayerControlView.h; sourceTree = "<group>"; };
-		C57C22AD250263F100FAAA3F /* CustomZFPlayerControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomZFPlayerControlView.m; sourceTree = "<group>"; };
 		C57C22B92502717C00FAAA3F /* UIView+Gradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Gradient.h"; sourceTree = "<group>"; };
 		C57C22BA2502717C00FAAA3F /* UIView+Gradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gradient.m"; sourceTree = "<group>"; };
-		C57D5B1625134D950073F90B /* DoorVC+VM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DoorVC+VM.h"; sourceTree = "<group>"; };
-		C57D5B1725134D950073F90B /* DoorVC+VM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DoorVC+VM.m"; sourceTree = "<group>"; };
-		C57D5B1925134E280073F90B /* NSObject+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Login.h"; sourceTree = "<group>"; };
-		C57D5B1A25134E290073F90B /* NSObject+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Login.m"; sourceTree = "<group>"; };
 		C57F0D1E253336ED0080EEF0 /* NSObject+OpenURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+OpenURL.h"; sourceTree = "<group>"; };
 		C57F0D1F253336ED0080EEF0 /* NSObject+OpenURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OpenURL.m"; sourceTree = "<group>"; };
 		C5850AE625483DA1001E6676 /* ViewForTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewForTableViewHeader.m; sourceTree = "<group>"; };
@@ -546,19 +507,6 @@
 		C5850AEA25483DA1001E6676 /* ViewForTableViewFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewForTableViewFooter.h; sourceTree = "<group>"; };
 		C589604D2500AC91002B1764 /* ImageCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCodeView.h; sourceTree = "<group>"; };
 		C589604E2500AC91002B1764 /* ImageCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCodeView.m; sourceTree = "<group>"; };
-		C58960542500B0E0002B1764 /* LogoContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoContentView.h; sourceTree = "<group>"; };
-		C58960552500B0E0002B1764 /* LogoContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogoContentView.m; sourceTree = "<group>"; };
-		C58960572500B0F6002B1764 /* RegisterContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterContentView.h; sourceTree = "<group>"; };
-		C58960582500B0F6002B1764 /* RegisterContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterContentView.m; sourceTree = "<group>"; };
-		C589605A2500B100002B1764 /* LoginContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginContentView.h; sourceTree = "<group>"; };
-		C589605B2500B100002B1764 /* LoginContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginContentView.m; sourceTree = "<group>"; };
-		C589605D2500B139002B1764 /* Door.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
-		C589605F2500B196002B1764 /* DoorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoorVC.h; sourceTree = "<group>"; };
-		C58960602500B196002B1764 /* DoorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoorVC.m; sourceTree = "<group>"; };
-		C58960712500E0FA002B1764 /* FindCodeFlowChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindCodeFlowChartView.h; sourceTree = "<group>"; };
-		C58960722500E0FA002B1764 /* FindCodeFlowChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindCodeFlowChartView.m; sourceTree = "<group>"; };
-		C589607A2500E90C002B1764 /* ForgetCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetCodeVC.h; sourceTree = "<group>"; };
-		C589607B2500E90C002B1764 /* ForgetCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetCodeVC.m; sourceTree = "<group>"; };
 		C58C61902532B4020092BF89 /* RBCLikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCLikeButton.h; sourceTree = "<group>"; };
 		C58C61912532B4020092BF89 /* RBCLikeButton.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RBCLikeButton.bundle; sourceTree = "<group>"; };
 		C58C61922532B4020092BF89 /* RBCLikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCLikeButton.m; sourceTree = "<group>"; };
@@ -800,9 +748,6 @@
 		C5E3C7732517824B00F9A150 /* UIImage+screenshot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+screenshot.m"; sourceTree = "<group>"; };
 		C5E5C63725077436001E69DA /* WGradientProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGradientProgress.m; sourceTree = "<group>"; };
 		C5E5C63825077436001E69DA /* WGradientProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGradientProgress.h; sourceTree = "<group>"; };
-		C5E5C63D25077E05001E69DA /* Question */ = {isa = PBXFileReference; lastKnownFileType = text; path = Question; sourceTree = "<group>"; };
-		C5E5C641250787A5001E69DA /* 非iph_X.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "非iph_X.mp4"; sourceTree = "<group>"; };
-		C5E5C64325078860001E69DA /* iph_X.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = iph_X.mp4; sourceTree = "<group>"; };
 		C5E5C6462507963B001E69DA /* UIDevice+XMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+XMUtils.m"; sourceTree = "<group>"; };
 		C5E5C6472507963B001E69DA /* iOS 获取手机型号、系统版本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS 获取手机型号、系统版本.png"; sourceTree = "<group>"; };
 		C5E5C6482507963B001E69DA /* UIDevice+XMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+XMUtils.h"; sourceTree = "<group>"; };
@@ -936,35 +881,6 @@
 				4FFE56B23CFD75AB0A6DB9B4 /* Pods_ShootingUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C51A0BD1250202C300884016 /* 输入框样式 */ = {
-			isa = PBXGroup;
-			children = (
-				C51A0BE5250203CD00884016 /* DoorInputView.h */,
-				C5575AC62504B66300A2A694 /* DoorInputViewStyle */,
-			);
-			path = "输入框样式";
-			sourceTree = "<group>";
-		};
-		C51A0BDA2502034F00884016 /* 输入框样式_2 */ = {
-			isa = PBXGroup;
-			children = (
-				C51A0BD42502032B00884016 /* 输入框样式_2.png */,
-				C51A0BDF250203B000884016 /* DoorInputViewStyle_2.h */,
-				C51A0BE0250203B000884016 /* DoorInputViewStyle_2.m */,
-			);
-			path = "输入框样式_2";
-			sourceTree = "<group>";
-		};
-		C51A0BDB2502035900884016 /* 输入框样式_3 */ = {
-			isa = PBXGroup;
-			children = (
-				C51A0BD22502032B00884016 /* 输入框样式_3.png */,
-				C51A0BE2250203BD00884016 /* DoorInputViewStyle_3.h */,
-				C51A0BE3250203BD00884016 /* DoorInputViewStyle_3.m */,
-			);
-			path = "输入框样式_3";
 			sourceTree = "<group>";
 		};
 		C52DEF36255D2A820016FF07 /* XHLaunchAd */ = {
@@ -1341,65 +1257,6 @@
 			path = OtherVC;
 			sourceTree = "<group>";
 		};
-		C5575ABF25049FE100A2A694 /* res */ = {
-			isa = PBXGroup;
-			children = (
-				C5E5C641250787A5001E69DA /* 非iph_X.mp4 */,
-				C5E5C64325078860001E69DA /* iph_X.mp4 */,
-			);
-			path = res;
-			sourceTree = "<group>";
-		};
-		C5575AC62504B66300A2A694 /* DoorInputViewStyle */ = {
-			isa = PBXGroup;
-			children = (
-				C5575AC32504B62900A2A694 /* DoorInputViewStyle.h */,
-				C5575AC42504B62900A2A694 /* DoorInputViewStyle.m */,
-				C5575ADC250517E700A2A694 /* 输入框样式_1 */,
-				C51A0BDA2502034F00884016 /* 输入框样式_2 */,
-				C51A0BDB2502035900884016 /* 输入框样式_3 */,
-			);
-			path = DoorInputViewStyle;
-			sourceTree = "<group>";
-		};
-		C5575ACB2504DE6500A2A694 /* 找回密码相关页面 */ = {
-			isa = PBXGroup;
-			children = (
-				C5575ACC2504DE7700A2A694 /* 找回密码第一步 */,
-				C5575ACD2504DE7F00A2A694 /* 找回密码第二步 */,
-				C58960702500E08E002B1764 /* 找回密码流程图 */,
-			);
-			path = "找回密码相关页面";
-			sourceTree = "<group>";
-		};
-		C5575ACC2504DE7700A2A694 /* 找回密码第一步 */ = {
-			isa = PBXGroup;
-			children = (
-				C5575ACE2504E1FA00A2A694 /* ForgetCodeStep_01View.h */,
-				C5575ACF2504E1FA00A2A694 /* ForgetCodeStep_01View.m */,
-			);
-			path = "找回密码第一步";
-			sourceTree = "<group>";
-		};
-		C5575ACD2504DE7F00A2A694 /* 找回密码第二步 */ = {
-			isa = PBXGroup;
-			children = (
-				C5575AD12504E20C00A2A694 /* ForgetCodeStep_02View.h */,
-				C5575AD22504E20C00A2A694 /* ForgetCodeStep_02View.m */,
-			);
-			path = "找回密码第二步";
-			sourceTree = "<group>";
-		};
-		C5575ADC250517E700A2A694 /* 输入框样式_1 */ = {
-			isa = PBXGroup;
-			children = (
-				C5575ADF2505181700A2A694 /* 输入框样式_1.png */,
-				C5575ADE250517F300A2A694 /* DoorInputViewStyle_1.h */,
-				C5575ADD250517F300A2A694 /* DoorInputViewStyle_1.m */,
-			);
-			path = "输入框样式_1";
-			sourceTree = "<group>";
-		};
 		C55B2A96253426F10038E50C /* SuspendLab */ = {
 			isa = PBXGroup;
 			children = (
@@ -1628,11 +1485,6 @@
 		C589604B2500AA2D002B1764 /* 登录 * 注册 * 密码找回 */ = {
 			isa = PBXGroup;
 			children = (
-				C5E5C63D25077E05001E69DA /* Question */,
-				C5575ABF25049FE100A2A694 /* res */,
-				C58960792500E8DA002B1764 /* 密码找回 */,
-				C58960782500E8CC002B1764 /* 登录 * 注册 */,
-				C58960502500AF5C002B1764 /* 相关页面子控件 */,
 			);
 			path = "登录 * 注册 * 密码找回";
 			sourceTree = "<group>";
@@ -1644,79 +1496,6 @@
 				C589604E2500AC91002B1764 /* ImageCodeView.m */,
 			);
 			path = "图形验证码";
-			sourceTree = "<group>";
-		};
-		C58960502500AF5C002B1764 /* 相关页面子控件 */ = {
-			isa = PBXGroup;
-			children = (
-				C589605D2500B139002B1764 /* Door.h */,
-				C57C22AC250263F100FAAA3F /* CustomZFPlayerControlView.h */,
-				C57C22AD250263F100FAAA3F /* CustomZFPlayerControlView.m */,
-				C5575ACB2504DE6500A2A694 /* 找回密码相关页面 */,
-				C51A0BD1250202C300884016 /* 输入框样式 */,
-				C58960532500B03A002B1764 /* LogoContentView */,
-				C58960522500AF9E002B1764 /* RegisterContentView */,
-				C58960512500AF86002B1764 /* LoginContentView */,
-			);
-			path = "相关页面子控件";
-			sourceTree = "<group>";
-		};
-		C58960512500AF86002B1764 /* LoginContentView */ = {
-			isa = PBXGroup;
-			children = (
-				C589605A2500B100002B1764 /* LoginContentView.h */,
-				C589605B2500B100002B1764 /* LoginContentView.m */,
-			);
-			path = LoginContentView;
-			sourceTree = "<group>";
-		};
-		C58960522500AF9E002B1764 /* RegisterContentView */ = {
-			isa = PBXGroup;
-			children = (
-				C58960572500B0F6002B1764 /* RegisterContentView.h */,
-				C58960582500B0F6002B1764 /* RegisterContentView.m */,
-			);
-			path = RegisterContentView;
-			sourceTree = "<group>";
-		};
-		C58960532500B03A002B1764 /* LogoContentView */ = {
-			isa = PBXGroup;
-			children = (
-				C58960542500B0E0002B1764 /* LogoContentView.h */,
-				C58960552500B0E0002B1764 /* LogoContentView.m */,
-			);
-			path = LogoContentView;
-			sourceTree = "<group>";
-		};
-		C58960702500E08E002B1764 /* 找回密码流程图 */ = {
-			isa = PBXGroup;
-			children = (
-				C58960712500E0FA002B1764 /* FindCodeFlowChartView.h */,
-				C58960722500E0FA002B1764 /* FindCodeFlowChartView.m */,
-			);
-			path = "找回密码流程图";
-			sourceTree = "<group>";
-		};
-		C58960782500E8CC002B1764 /* 登录 * 注册 */ = {
-			isa = PBXGroup;
-			children = (
-				C57D5B1925134E280073F90B /* NSObject+Login.h */,
-				C57D5B1A25134E290073F90B /* NSObject+Login.m */,
-				C589605F2500B196002B1764 /* DoorVC.h */,
-				C58960602500B196002B1764 /* DoorVC.m */,
-				C57D5B1625134D950073F90B /* DoorVC+VM.h */,
-				C57D5B1725134D950073F90B /* DoorVC+VM.m */,
-			);
-			path = "登录 * 注册";
-			sourceTree = "<group>";
-		};
-		C58960792500E8DA002B1764 /* 密码找回 */ = {
-			isa = PBXGroup;
-			children = (
-				C589607A2500E90C002B1764 /* ForgetCodeVC.h */,
-				C589607B2500E90C002B1764 /* ForgetCodeVC.m */,
-			);
-			path = "密码找回";
 			sourceTree = "<group>";
 		};
 		C58F000424EA36F800B6D09C = {
@@ -3071,11 +2850,9 @@
 				C59D9AA824F8C79500A74CE9 /* watermark.bmp in Resources */,
 				C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */,
 				C53D60D4255C20FC006C290D /* tab_home_animate.json in Resources */,
-				C5E5C64425078860001E69DA /* iph_X.mp4 in Resources */,
 				C5F4522E2529A6D900066AAB /* GTMBase64.md in Resources */,
 				C53D60CE255C20FC006C290D /* green_lottie_tab_news.json in Resources */,
 				C591F1022563C9AD005B78CC /* JsonRes.bundle in Resources */,
-				C5E5C642250787A5001E69DA /* 非iph_X.mp4 in Resources */,
 				C59D9AA724F8C79500A74CE9 /* video.gif in Resources */,
 				C53D60D7255C20FC006C290D /* 上传与拍照.json in Resources */,
 				C5F4523B2529A6D900066AAB /* MD5 in Resources */,
@@ -3252,7 +3029,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C589605C2500B100002B1764 /* LoginContentView.m in Sources */,
 				C58F019024EA5CAC00B6D09C /* BaseTableViewer.m in Sources */,
 				C53D610A255C2205006C290D /* ShootingAppDelegate+XHLaunchAdDelegate.m in Sources */,
 				C58F002624EA36FA00B6D09C /* main.m in Sources */,
@@ -3266,7 +3042,6 @@
 				C5F4514F25299D1F00066AAB /* RequestTool.m in Sources */,
 				C58F01AC24EA5CAD00B6D09C /* NSObject+Sound.m in Sources */,
 				C58F046F24EBD70300B6D09C /* UIControl+XY.m in Sources */,
-				C58960562500B0E0002B1764 /* LogoContentView.m in Sources */,
 				C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */,
 				C5F451792529A0B700066AAB /* FMHttpResonse.m in Sources */,
 				C58F00DF24EA581F00B6D09C /* NSImage+WebCache.m in Sources */,
@@ -3298,14 +3073,12 @@
 				C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */,
 				C556972E255BFD95005C1361 /* NSString+Extras.m in Sources */,
 				C530B0F5254D9ACD00EDEDC8 /* CollectionViewCell.m in Sources */,
-				C58960592500B0F6002B1764 /* RegisterContentView.m in Sources */,
 				C58F010A24EA584B00B6D09C /* LYLUnicode.m in Sources */,
 				C58F020324EA617800B6D09C /* BWShareView.m in Sources */,
 				C59D9ADD24F8EF4D00A74CE9 /* CustomerAVPlayerView.m in Sources */,
 				C59B9E3A2526F1DF0039B485 /* UITableView+XSAnimationKit.m in Sources */,
 				C58F00D824EA581F00B6D09C /* UIImage+WebP.m in Sources */,
 				C561619824EE4CA9001CD851 /* MKUploadingVC.m in Sources */,
-				C589607C2500E90C002B1764 /* ForgetCodeVC.m in Sources */,
 				C591F1032563C9AD005B78CC /* CustomGifHeader.m in Sources */,
 				C59D9AD724F8EF4100A74CE9 /* CustomerAVPlayerVC.m in Sources */,
 				C52DEF51255D2A820016FF07 /* XHLaunchAd.m in Sources */,
@@ -3357,7 +3130,6 @@
 				C57C22BB2502717C00FAAA3F /* UIView+Gradient.m in Sources */,
 				C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */,
 				C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */,
-				C5575AC52504B62900A2A694 /* DoorInputViewStyle.m in Sources */,
 				C5914BAC25384CD0007777A6 /* UIViewController+BaseVC.m in Sources */,
 				C5914BAB25384CD0007777A6 /* UIViewController+TZLocationManager.m in Sources */,
 				C54F858F252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */,
@@ -3365,11 +3137,8 @@
 				C58F01C224EA5E5E00B6D09C /* SoundBtn.m in Sources */,
 				C530B0F4254D9ACD00EDEDC8 /* UICollectionView+RegisterClass.m in Sources */,
 				C55B2A9F253426F10038E50C /* SuspendLab.m in Sources */,
-				C5E5C6242505E116001E69DA /* DoorInputViewStyle_1.m in Sources */,
 				C54AB1E8255E608E000A314D /* UITableViewCell+Margin.m in Sources */,
-				C58960612500B196002B1764 /* DoorVC.m in Sources */,
 				C58F00E024EA581F00B6D09C /* SDWebImageGIFCoder.m in Sources */,
-				C51A0BE4250203BD00884016 /* DoorInputViewStyle_3.m in Sources */,
 				C572A27A24FBD44A000A1687 /* UIImage+Overlay.m in Sources */,
 				C5914BAA25384CD0007777A6 /* UIViewController+GifImageView.m in Sources */,
 				C58F019824EA5CAC00B6D09C /* CALayer+Transition.m in Sources */,
@@ -3386,7 +3155,6 @@
 				C58F018124EA5CAC00B6D09C /* DeleteSystemUITabBarButton.m in Sources */,
 				C5F4513E25299CA900066AAB /* NSString+ZBUTF8Encoding.m in Sources */,
 				C5850AEB25483DA1001E6676 /* ViewForTableViewHeader.m in Sources */,
-				C51A0BE1250203B000884016 /* DoorInputViewStyle_2.m in Sources */,
 				C5B5EF26250CCE3E00DCDA93 /* NSObject+Shake.m in Sources */,
 				C58F019924EA5CAD00B6D09C /* CALayer+Anim.m in Sources */,
 				C52DEF52255D2A820016FF07 /* XHLaunchAdController.m in Sources */,
@@ -3394,14 +3162,12 @@
 				C57278B82540974C002373D7 /* NavigationBar.m in Sources */,
 				C58F033224EA69D400B6D09C /* ViewController@2.m in Sources */,
 				C5914BA425384CD0007777A6 /* UIViewController+MJRefresh.m in Sources */,
-				C58960732500E0FA002B1764 /* FindCodeFlowChartView.m in Sources */,
 				C58F001224EA36F800B6D09C /* ShootingAppDelegate.m in Sources */,
 				C58F018D24EA5CAC00B6D09C /* NSArray+Extension.m in Sources */,
 				C5914BA625384CD0007777A6 /* UIViewController+Shake.m in Sources */,
 				C5F4517A2529A0BD00066AAB /* FMHttpRequest.m in Sources */,
 				C59D9AD124F8EF1F00A74CE9 /* RepeatPlayer.m in Sources */,
 				C572A26A24FBC547000A1687 /* UIImage+SYS.m in Sources */,
-				C5575AD32504E20C00A2A694 /* ForgetCodeStep_02View.m in Sources */,
 				C52DEF55255D2A820016FF07 /* XHLaunchAdConfiguration.m in Sources */,
 				C5F4523C2529A6D900066AAB /* NSData+CommonCrypto.m in Sources */,
 				C53D6104255C21F7006C290D /* ShootingAppDelegate+PopupView.m in Sources */,
@@ -3420,7 +3186,6 @@
 				C53D60E5255C20FC006C290D /* TransitionController.m in Sources */,
 				C5766EA02546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */,
 				C5AA490F250C8F04009F583F /* NSObject+SYSAlertController.m in Sources */,
-				C57D5B1825134D950073F90B /* DoorVC+VM.m in Sources */,
 				C5F4522B2529A6D900066AAB /* NSString+Base64.m in Sources */,
 				C5E3C7742517824B00F9A150 /* UIImage+screenshot.m in Sources */,
 				C53D60E4255C20FC006C290D /* TransitionAnimation.m in Sources */,
@@ -3438,8 +3203,6 @@
 				C58F001524EA36F800B6D09C /* ShootingSceneDelegate.m in Sources */,
 				C54B3FCA255297C5003BE195 /* UILabel+Extra.m in Sources */,
 				C59D9AB324F8E8DC00A74CE9 /* MKShootVC+VM.m in Sources */,
-				C57C22AE250263F100FAAA3F /* CustomZFPlayerControlView.m in Sources */,
-				C57D5B1B25134E290073F90B /* NSObject+Login.m in Sources */,
 				C58F030224EA645A00B6D09C /* NSObject+LBLaunchImage.m in Sources */,
 				C59D9AED24F8F08500A74CE9 /* ZZCountingLabel.m in Sources */,
 				C58F033524EA69D400B6D09C /* ViewController@1.m in Sources */,
@@ -3457,7 +3220,6 @@
 				C5E5C63925077436001E69DA /* WGradientProgress.m in Sources */,
 				C58F01CB24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m in Sources */,
 				C55497A424F38CDB0065510D /* MKShootVC.m in Sources */,
-				C5575AD02504E1FA00A2A694 /* ForgetCodeStep_01View.m in Sources */,
 				C58F00DA24EA581F00B6D09C /* SDWebImageFrame.m in Sources */,
 				C59B9E3B2526F1DF0039B485 /* TableViewAnimationKit.m in Sources */,
 				C5EB98E0250A2290007660B3 /* AgreementView.m in Sources */,
