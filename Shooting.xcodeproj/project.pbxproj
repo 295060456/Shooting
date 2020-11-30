@@ -20,7 +20,6 @@
 		C52DEF55255D2A820016FF07 /* XHLaunchAdConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF47255D2A820016FF07 /* XHLaunchAdConfiguration.m */; };
 		C52DEF56255D2A820016FF07 /* XHLaunchAdCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF49255D2A820016FF07 /* XHLaunchAdCache.m */; };
 		C52DEF57255D2A820016FF07 /* XHLaunchAdImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF4B255D2A820016FF07 /* XHLaunchAdImageManager.m */; };
-		C52E89722510B4820070356F /* UITextField+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C52E89702510B4820070356F /* UITextField+Extend.m */; };
 		C530B0F3254D9ACD00EDEDC8 /* CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0DD254D9ACD00EDEDC8 /* CollectionView.m */; };
 		C530B0F4254D9ACD00EDEDC8 /* UICollectionView+RegisterClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0DE254D9ACD00EDEDC8 /* UICollectionView+RegisterClass.m */; };
 		C530B0F5254D9ACD00EDEDC8 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0E1254D9ACD00EDEDC8 /* CollectionViewCell.m */; };
@@ -80,6 +79,12 @@
 		C54B3FC9255297C5003BE195 /* NSObject+RichText.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3FC5255297C5003BE195 /* NSObject+RichText.m */; };
 		C54B3FCA255297C5003BE195 /* UILabel+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3FC8255297C5003BE195 /* UILabel+Extra.m */; };
 		C54F858F252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */; };
+		C5516B9D257520EB00FF5217 /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5516B8F257520EB00FF5217 /* ZYTextField.m */; };
+		C5516B9E257520EB00FF5217 /* ZYTextField+HistoryDataList.m in Sources */ = {isa = PBXBuildFile; fileRef = C5516B90257520EB00FF5217 /* ZYTextField+HistoryDataList.m */; };
+		C5516B9F257520EB00FF5217 /* ZYTextField.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5516B93257520EB00FF5217 /* ZYTextField.bundle */; };
+		C5516BA0257520EB00FF5217 /* CJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5516B95257520EB00FF5217 /* CJTextField.m */; };
+		C5516BA1257520EB00FF5217 /* UITextField+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C5516B99257520EB00FF5217 /* UITextField+Extend.m */; };
+		C5516BA2257520EB00FF5217 /* HQTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5516B9C257520EB00FF5217 /* HQTextField.m */; };
 		C55497A424F38CDB0065510D /* MKShootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A324F38CDB0065510D /* MKShootVC.m */; };
 		C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A624F38D9C0065510D /* AVFounationTools.m */; };
 		C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A924F3A1F00065510D /* GPUImageTools.m */; };
@@ -155,9 +160,6 @@
 		C58F018E24EA5CAC00B6D09C /* NSArray+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F013524EA5CAC00B6D09C /* NSArray+Extend.m */; };
 		C58F018F24EA5CAC00B6D09C /* 专治UITableView相应链断裂 in Resources */ = {isa = PBXBuildFile; fileRef = C58F013824EA5CAC00B6D09C /* 专治UITableView相应链断裂 */; };
 		C58F019024EA5CAC00B6D09C /* BaseTableViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F013924EA5CAC00B6D09C /* BaseTableViewer.m */; };
-		C58F019424EA5CAC00B6D09C /* HQTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F014424EA5CAC00B6D09C /* HQTextField.m */; };
-		C58F019524EA5CAC00B6D09C /* CJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F014624EA5CAC00B6D09C /* CJTextField.m */; };
-		C58F019624EA5CAC00B6D09C /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F014A24EA5CAC00B6D09C /* ZYTextField.m */; };
 		C58F019824EA5CAC00B6D09C /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F014E24EA5CAC00B6D09C /* CALayer+Transition.m */; };
 		C58F019924EA5CAD00B6D09C /* CALayer+Anim.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F014F24EA5CAC00B6D09C /* CALayer+Anim.m */; };
 		C58F01AC24EA5CAD00B6D09C /* NSObject+Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F017C24EA5CAC00B6D09C /* NSObject+Sound.m */; };
@@ -202,8 +204,6 @@
 		C5914BB025384CD0007777A6 /* UIViewController+BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5914BA125384CCF007777A6 /* UIViewController+BWShareView.m */; };
 		C591F1022563C9AD005B78CC /* JsonRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C591F1002563C9AD005B78CC /* JsonRes.bundle */; };
 		C591F1032563C9AD005B78CC /* CustomGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C591F1012563C9AD005B78CC /* CustomGifHeader.m */; };
-		C59B9E142526F0D20039B485 /* ZYTextField.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C59B9E132526F0D20039B485 /* ZYTextField.bundle */; };
-		C59B9E172526F1500039B485 /* ZYTextField+HistoryDataList.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9E152526F1500039B485 /* ZYTextField+HistoryDataList.m */; };
 		C59B9E3A2526F1DF0039B485 /* UITableView+XSAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9E362526F1DF0039B485 /* UITableView+XSAnimationKit.m */; };
 		C59B9E3B2526F1DF0039B485 /* TableViewAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9E392526F1DF0039B485 /* TableViewAnimationKit.m */; };
 		C59D9AA424F8C3BC00A74CE9 /* NSObject+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AA324F8C3BC00A74CE9 /* NSObject+Random.m */; };
@@ -328,8 +328,6 @@
 		C52DEF4A255D2A820016FF07 /* XHLaunchAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdView.h; sourceTree = "<group>"; };
 		C52DEF4B255D2A820016FF07 /* XHLaunchAdImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdImageManager.m; sourceTree = "<group>"; };
 		C52DEF4C255D2A820016FF07 /* XHLaunchAdConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdConst.h; sourceTree = "<group>"; };
-		C52E89702510B4820070356F /* UITextField+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extend.m"; sourceTree = "<group>"; };
-		C52E89712510B4820070356F /* UITextField+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extend.h"; sourceTree = "<group>"; };
 		C530B0DA254D9ACD00EDEDC8 /* 我为什么要这么做 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "我为什么要这么做"; sourceTree = "<group>"; };
 		C530B0DB254D9ACD00EDEDC8 /* CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionView.h; sourceTree = "<group>"; };
 		C530B0DC254D9ACD00EDEDC8 /* UICollectionView+RegisterClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+RegisterClass.h"; sourceTree = "<group>"; };
@@ -428,6 +426,17 @@
 		C54B3FC8255297C5003BE195 /* UILabel+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extra.m"; sourceTree = "<group>"; };
 		C54F858D252B613E00EE3DD0 /* UITableView+WWFoldableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+WWFoldableTableView.h"; sourceTree = "<group>"; };
 		C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+WWFoldableTableView.m"; sourceTree = "<group>"; };
+		C5516B8F257520EB00FF5217 /* ZYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYTextField.m; sourceTree = "<group>"; };
+		C5516B90257520EB00FF5217 /* ZYTextField+HistoryDataList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZYTextField+HistoryDataList.m"; sourceTree = "<group>"; };
+		C5516B91257520EB00FF5217 /* ZYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYTextField.h; sourceTree = "<group>"; };
+		C5516B92257520EB00FF5217 /* ZYTextField+HistoryDataList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZYTextField+HistoryDataList.h"; sourceTree = "<group>"; };
+		C5516B93257520EB00FF5217 /* ZYTextField.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYTextField.bundle; sourceTree = "<group>"; };
+		C5516B95257520EB00FF5217 /* CJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTextField.m; sourceTree = "<group>"; };
+		C5516B96257520EB00FF5217 /* CJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTextField.h; sourceTree = "<group>"; };
+		C5516B98257520EB00FF5217 /* UITextField+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extend.h"; sourceTree = "<group>"; };
+		C5516B99257520EB00FF5217 /* UITextField+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extend.m"; sourceTree = "<group>"; };
+		C5516B9B257520EB00FF5217 /* HQTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQTextField.h; sourceTree = "<group>"; };
+		C5516B9C257520EB00FF5217 /* HQTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQTextField.m; sourceTree = "<group>"; };
 		C55497A224F38CDB0065510D /* MKShootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKShootVC.h; sourceTree = "<group>"; };
 		C55497A324F38CDB0065510D /* MKShootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKShootVC.m; sourceTree = "<group>"; };
 		C55497A524F38D9C0065510D /* AVFounationTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVFounationTools.h; sourceTree = "<group>"; };
@@ -591,12 +600,6 @@
 		C58F013724EA5CAC00B6D09C /* BaseTableViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewer.h; sourceTree = "<group>"; };
 		C58F013824EA5CAC00B6D09C /* 专治UITableView相应链断裂 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "专治UITableView相应链断裂"; sourceTree = "<group>"; };
 		C58F013924EA5CAC00B6D09C /* BaseTableViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewer.m; sourceTree = "<group>"; };
-		C58F014324EA5CAC00B6D09C /* HQTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQTextField.h; sourceTree = "<group>"; };
-		C58F014424EA5CAC00B6D09C /* HQTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQTextField.m; sourceTree = "<group>"; };
-		C58F014624EA5CAC00B6D09C /* CJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTextField.m; sourceTree = "<group>"; };
-		C58F014724EA5CAC00B6D09C /* CJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTextField.h; sourceTree = "<group>"; };
-		C58F014A24EA5CAC00B6D09C /* ZYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYTextField.m; sourceTree = "<group>"; };
-		C58F014C24EA5CAC00B6D09C /* ZYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYTextField.h; sourceTree = "<group>"; };
 		C58F014E24EA5CAC00B6D09C /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
 		C58F014F24EA5CAC00B6D09C /* CALayer+Anim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Anim.m"; sourceTree = "<group>"; };
 		C58F015024EA5CAC00B6D09C /* CALayer+Anim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Anim.h"; sourceTree = "<group>"; };
@@ -681,9 +684,6 @@
 		C591F0FF2563C9AD005B78CC /* CustomGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomGifHeader.h; sourceTree = "<group>"; };
 		C591F1002563C9AD005B78CC /* JsonRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JsonRes.bundle; sourceTree = "<group>"; };
 		C591F1012563C9AD005B78CC /* CustomGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomGifHeader.m; sourceTree = "<group>"; };
-		C59B9E132526F0D20039B485 /* ZYTextField.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYTextField.bundle; sourceTree = "<group>"; };
-		C59B9E152526F1500039B485 /* ZYTextField+HistoryDataList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZYTextField+HistoryDataList.m"; sourceTree = "<group>"; };
-		C59B9E162526F1500039B485 /* ZYTextField+HistoryDataList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZYTextField+HistoryDataList.h"; sourceTree = "<group>"; };
 		C59B9E342526F1DE0039B485 /* TableViewAnimationKitConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKitConfig.h; sourceTree = "<group>"; };
 		C59B9E352526F1DE0039B485 /* UITableView+XSAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XSAnimationKit.h"; sourceTree = "<group>"; };
 		C59B9E362526F1DF0039B485 /* UITableView+XSAnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XSAnimationKit.m"; sourceTree = "<group>"; };
@@ -910,15 +910,6 @@
 				C52DEF3F255D2A820016FF07 /* XHLaunchImageView.m */,
 			);
 			path = XHLaunchAd;
-			sourceTree = "<group>";
-		};
-		C52E896F2510B4780070356F /* UITextField+Extend */ = {
-			isa = PBXGroup;
-			children = (
-				C52E89712510B4820070356F /* UITextField+Extend.h */,
-				C52E89702510B4820070356F /* UITextField+Extend.m */,
-			);
-			path = "UITextField+Extend";
 			sourceTree = "<group>";
 		};
 		C530B0D9254D9ACD00EDEDC8 /* UICollectionView */ = {
@@ -1210,6 +1201,44 @@
 				C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */,
 			);
 			path = "UITableView 折叠功能";
+			sourceTree = "<group>";
+		};
+		C5516B8E257520EB00FF5217 /* ZYTextField */ = {
+			isa = PBXGroup;
+			children = (
+				C5516B8F257520EB00FF5217 /* ZYTextField.m */,
+				C5516B90257520EB00FF5217 /* ZYTextField+HistoryDataList.m */,
+				C5516B91257520EB00FF5217 /* ZYTextField.h */,
+				C5516B92257520EB00FF5217 /* ZYTextField+HistoryDataList.h */,
+			);
+			path = ZYTextField;
+			sourceTree = "<group>";
+		};
+		C5516B94257520EB00FF5217 /* CJTextField */ = {
+			isa = PBXGroup;
+			children = (
+				C5516B95257520EB00FF5217 /* CJTextField.m */,
+				C5516B96257520EB00FF5217 /* CJTextField.h */,
+			);
+			path = CJTextField;
+			sourceTree = "<group>";
+		};
+		C5516B97257520EB00FF5217 /* UITextField+Extend */ = {
+			isa = PBXGroup;
+			children = (
+				C5516B98257520EB00FF5217 /* UITextField+Extend.h */,
+				C5516B99257520EB00FF5217 /* UITextField+Extend.m */,
+			);
+			path = "UITextField+Extend";
+			sourceTree = "<group>";
+		};
+		C5516B9A257520EB00FF5217 /* HQTextField */ = {
+			isa = PBXGroup;
+			children = (
+				C5516B9B257520EB00FF5217 /* HQTextField.h */,
+				C5516B9C257520EB00FF5217 /* HQTextField.m */,
+			);
+			path = HQTextField;
 			sourceTree = "<group>";
 		};
 		C55497A024F38CB20065510D /* GPUImage */ = {
@@ -1873,42 +1902,13 @@
 		C58F014124EA5CAC00B6D09C /* UITextField */ = {
 			isa = PBXGroup;
 			children = (
-				C52E896F2510B4780070356F /* UITextField+Extend */,
-				C58F014224EA5CAC00B6D09C /* HQTextField */,
-				C58F014524EA5CAC00B6D09C /* CJTextField */,
-				C58F014824EA5CAC00B6D09C /* ZYTextField */,
+				C5516B94257520EB00FF5217 /* CJTextField */,
+				C5516B9A257520EB00FF5217 /* HQTextField */,
+				C5516B97257520EB00FF5217 /* UITextField+Extend */,
+				C5516B8E257520EB00FF5217 /* ZYTextField */,
+				C5516B93257520EB00FF5217 /* ZYTextField.bundle */,
 			);
 			path = UITextField;
-			sourceTree = "<group>";
-		};
-		C58F014224EA5CAC00B6D09C /* HQTextField */ = {
-			isa = PBXGroup;
-			children = (
-				C58F014324EA5CAC00B6D09C /* HQTextField.h */,
-				C58F014424EA5CAC00B6D09C /* HQTextField.m */,
-			);
-			path = HQTextField;
-			sourceTree = "<group>";
-		};
-		C58F014524EA5CAC00B6D09C /* CJTextField */ = {
-			isa = PBXGroup;
-			children = (
-				C58F014724EA5CAC00B6D09C /* CJTextField.h */,
-				C58F014624EA5CAC00B6D09C /* CJTextField.m */,
-			);
-			path = CJTextField;
-			sourceTree = "<group>";
-		};
-		C58F014824EA5CAC00B6D09C /* ZYTextField */ = {
-			isa = PBXGroup;
-			children = (
-				C59B9E132526F0D20039B485 /* ZYTextField.bundle */,
-				C58F014C24EA5CAC00B6D09C /* ZYTextField.h */,
-				C58F014A24EA5CAC00B6D09C /* ZYTextField.m */,
-				C59B9E162526F1500039B485 /* ZYTextField+HistoryDataList.h */,
-				C59B9E152526F1500039B485 /* ZYTextField+HistoryDataList.m */,
-			);
-			path = ZYTextField;
 			sourceTree = "<group>";
 		};
 		C58F014D24EA5CAC00B6D09C /* CALayer */ = {
@@ -2880,13 +2880,13 @@
 				C53D60DC255C20FC006C290D /* green_lottie_tab_discover.json in Resources */,
 				C5F4522D2529A6D900066AAB /* Base64 in Resources */,
 				C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */,
+				C5516B9F257520EB00FF5217 /* ZYTextField.bundle in Resources */,
 				C5F4513B25299CA900066AAB /* ZBNetworking in Resources */,
 				C53D60D1255C20FC006C290D /* 我的.json in Resources */,
 				C5F452312529A6D900066AAB /* RSA in Resources */,
 				C53D60D6255C20FC006C290D /* tab_search_animate.json in Resources */,
 				C58F01C124EA5E5E00B6D09C /* Sound.wav in Resources */,
 				C53D60E6255C20FC006C290D /* 参考demo in Resources */,
-				C59B9E142526F0D20039B485 /* ZYTextField.bundle in Resources */,
 				C59D9AEF24F8F08500A74CE9 /* ZZCircleProgress.bundle in Resources */,
 				C54AB1E6255E608E000A314D /* WhiteRightArrow@3x.png in Resources */,
 				C5F452292529A6D900066AAB /* 凯撒加密解密 in Resources */,
@@ -3048,8 +3048,6 @@
 				C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */,
 				C58F032224EA68B500B6D09C /* LGiOSBtn.m in Sources */,
 				C58F018424EA5CAC00B6D09C /* UIView+Chain.m in Sources */,
-				C58F019424EA5CAC00B6D09C /* HQTextField.m in Sources */,
-				C52E89722510B4820070356F /* UITextField+Extend.m in Sources */,
 				C561618B24EE4C98001CD851 /* StartOrPauseBtn.m in Sources */,
 				C52DEF4D255D2A820016FF07 /* XHLaunchAdView.m in Sources */,
 				C5F4514D25299D1F00066AAB /* DataManager.m in Sources */,
@@ -3063,6 +3061,7 @@
 				C530B0F9254D9ACD00EDEDC8 /* HQCollectionViewFlowLayout.m in Sources */,
 				C52DEF50255D2A820016FF07 /* XHLaunchAdConst.m in Sources */,
 				C58F01F924EA60D100B6D09C /* CustomSYSUITabBarController.m in Sources */,
+				C5516B9D257520EB00FF5217 /* ZYTextField.m in Sources */,
 				C58C61942532B4020092BF89 /* RBCLikeButton.m in Sources */,
 				C59D9AEE24F8F08500A74CE9 /* ZZCircleProgress.m in Sources */,
 				C58F00DC24EA581F00B6D09C /* UIImage+WebP_Diff.m in Sources */,
@@ -3086,6 +3085,7 @@
 				C572A26B24FBC547000A1687 /* UIImage+Extras.m in Sources */,
 				C546C3E2252C2407003694FF /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				C5F4522C2529A6D900066AAB /* NSData+Base64.m in Sources */,
+				C5516B9E257520EB00FF5217 /* ZYTextField+HistoryDataList.m in Sources */,
 				C58F01AD24EA5CAD00B6D09C /* NSObject+Extras.m in Sources */,
 				C58F00EE24EA581F00B6D09C /* BaseGPUImageView.m in Sources */,
 				C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */,
@@ -3093,6 +3093,7 @@
 				C5F4515025299D1F00066AAB /* NetworkingAPI.m in Sources */,
 				C5914BA725384CD0007777A6 /* UIViewController+JXCategoryListContentViewDelegate.m in Sources */,
 				C5F4522F2529A6D900066AAB /* GTMBase64.m in Sources */,
+				C5516BA0257520EB00FF5217 /* CJTextField.m in Sources */,
 				C5914BAF25384CD0007777A6 /* UIViewController+BackBtn.m in Sources */,
 				C5F4514E25299D1F00066AAB /* URL_Manager.m in Sources */,
 				C53D60E9255C20FC006C290D /* UITabBar+Ex.m in Sources */,
@@ -3144,8 +3145,6 @@
 				C58F019824EA5CAC00B6D09C /* CALayer+Transition.m in Sources */,
 				C561619E24EE4CB7001CD851 /* PhotoVC+VM.m in Sources */,
 				C5E5C6492507963B001E69DA /* UIDevice+XMUtils.m in Sources */,
-				C59B9E172526F1500039B485 /* ZYTextField+HistoryDataList.m in Sources */,
-				C58F019624EA5CAC00B6D09C /* ZYTextField.m in Sources */,
 				C58F00DB24EA581F00B6D09C /* SDWebImageCodersManager.m in Sources */,
 				C58F00DD24EA581F00B6D09C /* SDWebImageCoderHelper.m in Sources */,
 				C53D60E7255C20FC006C290D /* TLTabBarAnimation.m in Sources */,
@@ -3192,6 +3191,7 @@
 				C53D60C8255C20FC006C290D /* TabBarControllerConfig.m in Sources */,
 				C53D60FE255C21EB006C290D /* ShootingAppDelegate+Func.m in Sources */,
 				C58F033424EA69D400B6D09C /* ViewController@3.m in Sources */,
+				C5516BA1257520EB00FF5217 /* UITextField+Extend.m in Sources */,
 				C59D9AA424F8C3BC00A74CE9 /* NSObject+Random.m in Sources */,
 				C56161BB24EE4F43001CD851 /* JhtBannerCardView.m in Sources */,
 				C5F451782529A0B300066AAB /* FMARCNetwork.m in Sources */,
@@ -3207,6 +3207,7 @@
 				C59D9AED24F8F08500A74CE9 /* ZZCountingLabel.m in Sources */,
 				C58F033524EA69D400B6D09C /* ViewController@1.m in Sources */,
 				C572A26924FBC547000A1687 /* UIImage+YBGIF.m in Sources */,
+				C5516BA2257520EB00FF5217 /* HQTextField.m in Sources */,
 				C57F0D20253336ED0080EEF0 /* NSObject+OpenURL.m in Sources */,
 				C5F4513D25299CA900066AAB /* ZBCacheManager.m in Sources */,
 				C58F020224EA617800B6D09C /* BWItemCollectionViewCell.m in Sources */,
@@ -3226,7 +3227,6 @@
 				C5E5C6252505E1E4001E69DA /* UIButton+CountDownBtn.m in Sources */,
 				C53D60C6255C20FC006C290D /* UITabBarItem+TLAnimation.m in Sources */,
 				C56161C224EE4F52001CD851 /* JhtBannerView.m in Sources */,
-				C58F019524EA5CAC00B6D09C /* CJTextField.m in Sources */,
 				C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */,
 				C5F452382529A6D900066AAB /* AES.m in Sources */,
 			);
