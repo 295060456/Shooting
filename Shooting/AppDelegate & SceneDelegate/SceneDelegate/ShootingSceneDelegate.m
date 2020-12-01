@@ -64,14 +64,14 @@ willConnectToSession:(UISceneSession *)session
 
 - (void)sceneDidBecomeActive:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
     NSLog(@"---applicationDidBecomeActive----");//进入前台
-    extern ZFPlayerController *ZFPlayer_DoorVC;
-    extern ZFPlayerController *ZFPlayer_ForgetCodeVC;
-    if (ZFPlayer_DoorVC) {
-        [ZFPlayer_DoorVC.currentPlayerManager play];
-    }
-    if (ZFPlayer_ForgetCodeVC) {
-        [ZFPlayer_ForgetCodeVC.currentPlayerManager play];
-    }
+//    extern ZFPlayerController *ZFPlayer_DoorVC;
+//    extern ZFPlayerController *ZFPlayer_ForgetCodeVC;
+//    if (ZFPlayer_DoorVC) {
+//        [ZFPlayer_DoorVC.currentPlayerManager play];
+//    }
+//    if (ZFPlayer_ForgetCodeVC) {
+//        [ZFPlayer_ForgetCodeVC.currentPlayerManager play];
+//    }
 }
 
 - (void)sceneWillResignActive:(UIScene *)scene {
@@ -88,14 +88,14 @@ willConnectToSession:(UISceneSession *)session
     [(ShootingAppDelegate *)UIApplication.sharedApplication.delegate saveContext];
     [[NSNotificationCenter defaultCenter] postNotificationName:UBLEnterBackgroundStopPlayer object:nil];
     NSLog(@"---applicationDidEnterBackground----"); //进入后台
-    extern ZFPlayerController *ZFPlayer_DoorVC;
-    extern ZFPlayerController *ZFPlayer_ForgetCodeVC;
-    if (ZFPlayer_DoorVC) {
-        [ZFPlayer_DoorVC.currentPlayerManager pause];
-    }
-    if (ZFPlayer_ForgetCodeVC) {
-        [ZFPlayer_ForgetCodeVC.currentPlayerManager pause];
-    }
+//    extern ZFPlayerController *ZFPlayer_DoorVC;
+//    extern ZFPlayerController *ZFPlayer_ForgetCodeVC;
+//    if (ZFPlayer_DoorVC) {
+//        [ZFPlayer_DoorVC.currentPlayerManager pause];
+//    }
+//    if (ZFPlayer_ForgetCodeVC) {
+//        [ZFPlayer_ForgetCodeVC.currentPlayerManager pause];
+//    }
 }
 #pragma mark —— lazyLoad
 -(UIWindow *)window{

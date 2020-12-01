@@ -35,12 +35,12 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches
           withEvent:(UIEvent *)event{
     @weakify(self)
-    [DoorVC ComingFromVC:weak_self
-             comingStyle:ComingStyle_PUSH
-       presentationStyle:UIModalPresentationFullScreen
-           requestParams:nil
-                 success:^(id data) {}
-                animated:YES];
+//    [DoorVC ComingFromVC:weak_self
+//             comingStyle:ComingStyle_PUSH
+//       presentationStyle:UIModalPresentationFullScreen
+//           requestParams:nil
+//                 success:^(id data) {}
+//                animated:YES];
 }
 
 @end

@@ -54,7 +54,7 @@
 #import "NSObject+SYSAlertController.h"
 #import "NSObject+SPAlertController.h"
 #import "NSObject+Shake.h"
-#import "NSObject+Login.h"
+//#import "NSObject+Login.h"
 #import "NSObject+OpenURL.h"
 
 #import "UIControl+XY.h"
@@ -112,8 +112,8 @@
 #import "CustomerAVPlayerView.h"
 #import "CustomerGPUImagePlayerVC.h"
 ///登录 * 注册 * 忘记密码
-#import "DoorVC.h"
-#import "ForgetCodeVC.h"
+//#import "DoorVC.h"
+//#import "ForgetCodeVC.h"
 
 #import "ViewForTableViewFooter.h"
 #import "ViewForTableViewHeader.h"
