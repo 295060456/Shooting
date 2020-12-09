@@ -1296,6 +1296,15 @@
 			path = OtherVC;
 			sourceTree = "<group>";
 		};
+		C555673B2580A559004DB33A /* TimeModel */ = {
+			isa = PBXGroup;
+			children = (
+				C556972D255BFD95005C1361 /* TimeModel.h */,
+				C556972B255BFD95005C1361 /* TimeModel.m */,
+			);
+			path = TimeModel;
+			sourceTree = "<group>";
+		};
 		C55B2A96253426F10038E50C /* SuspendLab */ = {
 			isa = PBXGroup;
 			children = (
@@ -1816,8 +1825,6 @@
 				C5569729255BFD95005C1361 /* NSString+Extras.m */,
 				C5569728255BFD95005C1361 /* NSString+Time.h */,
 				C556972A255BFD95005C1361 /* NSString+Time.m */,
-				C556972D255BFD95005C1361 /* TimeModel.h */,
-				C556972B255BFD95005C1361 /* TimeModel.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -1966,6 +1973,7 @@
 			children = (
 				C5AA4909250C8EFB009F583F /* NSObject+Alert */,
 				C534E765257F906700DBC3CE /* NSObject+Others */,
+				C555673B2580A559004DB33A /* TimeModel */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
