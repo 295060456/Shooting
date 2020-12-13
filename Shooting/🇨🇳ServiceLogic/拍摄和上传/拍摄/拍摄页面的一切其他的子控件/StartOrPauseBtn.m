@@ -45,7 +45,7 @@
 
 -(void)makeTimer{
     //启动方式——1
-    [NSTimerManager nsTimeStart:self.nsTimerManager.nsTimer
+    [NSTimerManager nsTimeStart:self.nsTimerManager
                     withRunLoop:NSRunLoop.currentRunLoop];
     //启动方式——2
 //    [self.nsTimerManager nsTimeStartSysAutoInRunLoop];
@@ -128,7 +128,7 @@
 -(void)vedioShoottingEnd{}
 #pragma mark —— 暂停录制
 -(void)vedioShoottingSuspend{
-    [NSTimerManager nsTimePause:self.nsTimerManager.nsTimer];
+    [NSTimerManager nsTimePause:self.nsTimerManager];
     self.progressView.progressLabel.placeStr = @"已暂停";
     self.backgroundColor = KGreenColor;
     _progressView.pathFillColor = kRedColor;
@@ -141,7 +141,7 @@
       
     }];
     
-    [NSTimerManager nsTimecontinue:self.nsTimerManager.nsTimer];
+    [NSTimerManager nsTimecontinue:self.nsTimerManager];
     self.progressView.progressLabel.placeStr = @"录制中";
     self.backgroundColor = kRedColor;
     _progressView.pathFillColor = kBlueColor;
