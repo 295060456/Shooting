@@ -33,9 +33,9 @@ def func
     pod 'JXCategoryView'
     pod 'JXPagingView/Pager' # https://github.com/pujiaxin33/JXPagingView NO_SMP
     pod 'YYKit'
+    pod 'SDWebImage'  # https://github.com/SDWebImage/SDWebImage Asynchronous image downloader with cache support as a UIImageView category
     pod 'IQKeyboardManager'
     pod 'LYEmptyView'
-    pod 'SDWebImage'
     pod 'WHToast' # https://github.com/remember17/WHToast 一个轻量级的提示控件，没有任何依赖
     pod 'SPAlertController'# https://github.com/SPStore/SPAlertController 深度定制AlertController
     pod 'JSONModel'
