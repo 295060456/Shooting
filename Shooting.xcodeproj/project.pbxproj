@@ -27,6 +27,9 @@
 		C530B0F7254D9ACD00EDEDC8 /* LMHWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0EB254D9ACD00EDEDC8 /* LMHWaterFallLayout.m */; };
 		C530B0F8254D9ACD00EDEDC8 /* KFZShopCatoryFlowLayput.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0EE254D9ACD00EDEDC8 /* KFZShopCatoryFlowLayput.m */; };
 		C530B0F9254D9ACD00EDEDC8 /* HQCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0F0254D9ACD00EDEDC8 /* HQCollectionViewFlowLayout.m */; };
+		C534CE1F25875A31001369FD /* BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE1925875A30001369FD /* BWShareView.m */; };
+		C534CE2025875A31001369FD /* BWItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE1A25875A30001369FD /* BWItemCollectionViewCell.m */; };
+		C534CE2125875A31001369FD /* BWItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE1D25875A31001369FD /* BWItemModel.m */; };
 		C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */ = {isa = PBXBuildFile; fileRef = C53B182B24FFA336000019F2 /* 视频水印.gif */; };
 		C53D60C6255C20FC006C290D /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D608B255C20FC006C290D /* UITabBarItem+TLAnimation.m */; };
 		C53D60C7255C20FC006C290D /* TabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D608D255C20FC006C290D /* TabBarItem.m */; };
@@ -150,14 +153,9 @@
 		C58F01CB24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01CA24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m */; };
 		C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */ = {isa = PBXBuildFile; fileRef = C58F01E224EA603400B6D09C /* 替换系统的UITabBarViewController */; };
 		C58F01F924EA60D100B6D09C /* CustomSYSUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01F824EA60D100B6D09C /* CustomSYSUITabBarController.m */; };
-		C58F020224EA617800B6D09C /* BWItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01FD24EA617800B6D09C /* BWItemCollectionViewCell.m */; };
-		C58F020324EA617800B6D09C /* BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01FF24EA617800B6D09C /* BWShareView.m */; };
-		C58F020424EA617800B6D09C /* BWItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F020024EA617800B6D09C /* BWItemModel.m */; };
-		C58F020524EA617800B6D09C /* 分享控件的用法 in Resources */ = {isa = PBXBuildFile; fileRef = C58F020124EA617800B6D09C /* 分享控件的用法 */; };
 		C58F02E324EA632800B6D09C /* FileFolderHandleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02E224EA632800B6D09C /* FileFolderHandleTool.m */; };
 		C58F030224EA645A00B6D09C /* NSObject+LBLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02FE24EA645A00B6D09C /* NSObject+LBLaunchImage.m */; };
 		C58F030324EA645A00B6D09C /* LBLaunchImageAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02FF24EA645A00B6D09C /* LBLaunchImageAdView.m */; };
-		C58F030724EA647400B6D09C /* MonitorNetwoking.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F030524EA647400B6D09C /* MonitorNetwoking.m */; };
 		C58F031B24EA65F200B6D09C /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F031924EA65F200B6D09C /* BaseModel.m */; };
 		C58F032224EA68B500B6D09C /* LGiOSBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F032124EA68B500B6D09C /* LGiOSBtn.m */; };
 		C58F033224EA69D400B6D09C /* ViewController@2.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F032924EA69D400B6D09C /* ViewController@2.m */; };
@@ -332,6 +330,13 @@
 		C530B0EE254D9ACD00EDEDC8 /* KFZShopCatoryFlowLayput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFZShopCatoryFlowLayput.m; sourceTree = "<group>"; };
 		C530B0F0254D9ACD00EDEDC8 /* HQCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		C530B0F1254D9ACD00EDEDC8 /* HQCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		C534CE1825875A30001369FD /* BWShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWShareView.h; sourceTree = "<group>"; };
+		C534CE1925875A30001369FD /* BWShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWShareView.m; sourceTree = "<group>"; };
+		C534CE1A25875A30001369FD /* BWItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemCollectionViewCell.m; sourceTree = "<group>"; };
+		C534CE1B25875A30001369FD /* BWItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWItemCollectionViewCell.h; sourceTree = "<group>"; };
+		C534CE1C25875A31001369FD /* BWItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWItemModel.h; sourceTree = "<group>"; };
+		C534CE1D25875A31001369FD /* BWItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemModel.m; sourceTree = "<group>"; };
+		C534CE1E25875A31001369FD /* 分享控件的用法.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "分享控件的用法.md"; sourceTree = "<group>"; };
 		C53B182B24FFA336000019F2 /* 视频水印.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "视频水印.gif"; sourceTree = "<group>"; };
 		C53D6083255C2072006C290D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C53D6088255C20FC006C290D /* TabbarControllerSysEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarControllerSysEx.h; sourceTree = "<group>"; };
@@ -568,21 +573,12 @@
 		C58F01E224EA603400B6D09C /* 替换系统的UITabBarViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "替换系统的UITabBarViewController"; sourceTree = "<group>"; };
 		C58F01F724EA60D100B6D09C /* CustomSYSUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSYSUITabBarController.h; sourceTree = "<group>"; };
 		C58F01F824EA60D100B6D09C /* CustomSYSUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSYSUITabBarController.m; sourceTree = "<group>"; };
-		C58F01FB24EA617800B6D09C /* BWItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWItemCollectionViewCell.h; sourceTree = "<group>"; };
-		C58F01FC24EA617800B6D09C /* BWItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWItemModel.h; sourceTree = "<group>"; };
-		C58F01FD24EA617800B6D09C /* BWItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemCollectionViewCell.m; sourceTree = "<group>"; };
-		C58F01FE24EA617800B6D09C /* BWShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWShareView.h; sourceTree = "<group>"; };
-		C58F01FF24EA617800B6D09C /* BWShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWShareView.m; sourceTree = "<group>"; };
-		C58F020024EA617800B6D09C /* BWItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemModel.m; sourceTree = "<group>"; };
-		C58F020124EA617800B6D09C /* 分享控件的用法 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "分享控件的用法"; sourceTree = "<group>"; };
 		C58F02E124EA632800B6D09C /* FileFolderHandleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileFolderHandleTool.h; sourceTree = "<group>"; };
 		C58F02E224EA632800B6D09C /* FileFolderHandleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileFolderHandleTool.m; sourceTree = "<group>"; };
 		C58F02FE24EA645A00B6D09C /* NSObject+LBLaunchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LBLaunchImage.m"; sourceTree = "<group>"; };
 		C58F02FF24EA645A00B6D09C /* LBLaunchImageAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBLaunchImageAdView.m; sourceTree = "<group>"; };
 		C58F030024EA645A00B6D09C /* NSObject+LBLaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LBLaunchImage.h"; sourceTree = "<group>"; };
 		C58F030124EA645A00B6D09C /* LBLaunchImageAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBLaunchImageAdView.h; sourceTree = "<group>"; };
-		C58F030524EA647400B6D09C /* MonitorNetwoking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorNetwoking.m; sourceTree = "<group>"; };
-		C58F030624EA647400B6D09C /* MonitorNetwoking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorNetwoking.h; sourceTree = "<group>"; };
 		C58F031924EA65F200B6D09C /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		C58F031A24EA65F200B6D09C /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		C58F032024EA68B500B6D09C /* LGiOSBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGiOSBtn.h; sourceTree = "<group>"; };
@@ -1946,7 +1942,6 @@
 				C56161B424EE4F10001CD851 /* 卡片式滑动效果 */,
 				C58F046B24EBD6F000B6D09C /* UIControl+XY */,
 				C58F046A24EBD6E900B6D09C /* ECAuthorizationTools */,
-				C58F030424EA647400B6D09C /* 网络数据实时监测 */,
 				C58F02FD24EA645100B6D09C /* LBLaunchImageAd. */,
 				C58F02E424EA634200B6D09C /* 高仿抖音点赞动画 */,
 				C58F02E024EA632200B6D09C /* 文件夹操作 */,
@@ -2042,13 +2037,13 @@
 		C58F01FA24EA617000B6D09C /* 分享控件 */ = {
 			isa = PBXGroup;
 			children = (
-				C58F020124EA617800B6D09C /* 分享控件的用法 */,
-				C58F01FB24EA617800B6D09C /* BWItemCollectionViewCell.h */,
-				C58F01FD24EA617800B6D09C /* BWItemCollectionViewCell.m */,
-				C58F01FC24EA617800B6D09C /* BWItemModel.h */,
-				C58F020024EA617800B6D09C /* BWItemModel.m */,
-				C58F01FE24EA617800B6D09C /* BWShareView.h */,
-				C58F01FF24EA617800B6D09C /* BWShareView.m */,
+				C534CE1E25875A31001369FD /* 分享控件的用法.md */,
+				C534CE1B25875A30001369FD /* BWItemCollectionViewCell.h */,
+				C534CE1A25875A30001369FD /* BWItemCollectionViewCell.m */,
+				C534CE1C25875A31001369FD /* BWItemModel.h */,
+				C534CE1D25875A31001369FD /* BWItemModel.m */,
+				C534CE1825875A30001369FD /* BWShareView.h */,
+				C534CE1925875A30001369FD /* BWShareView.m */,
 			);
 			path = "分享控件";
 			sourceTree = "<group>";
@@ -2091,15 +2086,6 @@
 				C58F02FE24EA645A00B6D09C /* NSObject+LBLaunchImage.m */,
 			);
 			path = LBLaunchImageAd.;
-			sourceTree = "<group>";
-		};
-		C58F030424EA647400B6D09C /* 网络数据实时监测 */ = {
-			isa = PBXGroup;
-			children = (
-				C58F030524EA647400B6D09C /* MonitorNetwoking.m */,
-				C58F030624EA647400B6D09C /* MonitorNetwoking.h */,
-			);
-			path = "网络数据实时监测";
 			sourceTree = "<group>";
 		};
 		C58F031824EA65F200B6D09C /* BaseModel */ = {
@@ -3031,7 +3017,6 @@
 				C5F452342529A6D900066AAB /* SHA-256 in Resources */,
 				C58F010C24EA584B00B6D09C /* 调试时候添加日志时使用,上线需要去掉 in Resources */,
 				C53D60D0255C20FC006C290D /* green_lottie_tab_home.json in Resources */,
-				C58F020524EA617800B6D09C /* 分享控件的用法 in Resources */,
 				C544C1A3258375C300C6CF2A /* JsonRes.bundle in Resources */,
 				C53D60D8255C20FC006C290D /* music_animation.json in Resources */,
 				C5F452322529A6D900066AAB /* SHA-1 in Resources */,
@@ -3206,6 +3191,7 @@
 				C5F451792529A0B700066AAB /* FMHttpResonse.m in Sources */,
 				C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */,
 				C58F032224EA68B500B6D09C /* LGiOSBtn.m in Sources */,
+				C534CE2125875A31001369FD /* BWItemModel.m in Sources */,
 				C58F018424EA5CAC00B6D09C /* UIView+Chain.m in Sources */,
 				C561618B24EE4C98001CD851 /* StartOrPauseBtn.m in Sources */,
 				C52DEF4D255D2A820016FF07 /* XHLaunchAdView.m in Sources */,
@@ -3228,11 +3214,11 @@
 				C556972E255BFD95005C1361 /* NSString+Extras.m in Sources */,
 				C530B0F5254D9ACD00EDEDC8 /* CollectionViewCell.m in Sources */,
 				C58F010A24EA584B00B6D09C /* LYLUnicode.m in Sources */,
-				C58F020324EA617800B6D09C /* BWShareView.m in Sources */,
 				C59D9ADD24F8EF4D00A74CE9 /* CustomerAVPlayerView.m in Sources */,
 				C544C1A2258375C300C6CF2A /* LOTAnimationMJRefreshHeader.m in Sources */,
 				C59B9E3A2526F1DF0039B485 /* UITableView+XSAnimationKit.m in Sources */,
 				C561619824EE4CA9001CD851 /* MKUploadingVC.m in Sources */,
+				C534CE1F25875A31001369FD /* BWShareView.m in Sources */,
 				C59D9AD724F8EF4100A74CE9 /* CustomerAVPlayerVC.m in Sources */,
 				C52DEF51255D2A820016FF07 /* XHLaunchAd.m in Sources */,
 				C53D60E1255C20FC006C290D /* JobsPullListTBVCell.m in Sources */,
@@ -3246,6 +3232,7 @@
 				C53D60C7255C20FC006C290D /* TabBarItem.m in Sources */,
 				C5D78026257F5FDF0087FC92 /* ZYTextField+HistoryDataList.m in Sources */,
 				C5F4515025299D1F00066AAB /* NetworkingAPI.m in Sources */,
+				C534CE2025875A31001369FD /* BWItemCollectionViewCell.m in Sources */,
 				C5914BA725384CD0007777A6 /* UIViewController+JXCategoryListContentViewDelegate.m in Sources */,
 				C5F4522F2529A6D900066AAB /* GTMBase64.m in Sources */,
 				C5D777FF257F5A5C0087FC92 /* CJTextField.m in Sources */,
@@ -3275,7 +3262,6 @@
 				C5A46C0C24EFB6E900158D1E /* LZBTabBarItem.m in Sources */,
 				C5C67CA824FF5D68000A26B8 /* MovieCountDown.m in Sources */,
 				C59D9ACE24F8EF1100A74CE9 /* CustomerGPUImagePlayerVC.m in Sources */,
-				C58F030724EA647400B6D09C /* MonitorNetwoking.m in Sources */,
 				C59D9ADC24F8EF4D00A74CE9 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m in Sources */,
 				C5D6DC5525860F1A00029AFF /* TimeModel.m in Sources */,
 				C52DEF4E255D2A820016FF07 /* XHLaunchAdButton.m in Sources */,
@@ -3321,7 +3307,6 @@
 				C52DEF55255D2A820016FF07 /* XHLaunchAdConfiguration.m in Sources */,
 				C5F4523C2529A6D900066AAB /* NSData+CommonCrypto.m in Sources */,
 				C53D6104255C21F7006C290D /* ShootingAppDelegate+PopupView.m in Sources */,
-				C58F020424EA617800B6D09C /* BWItemModel.m in Sources */,
 				C530B0F7254D9ACD00EDEDC8 /* LMHWaterFallLayout.m in Sources */,
 				C5F4523A2529A6D900066AAB /* AESCipher.m in Sources */,
 				C53D60F2255C2192006C290D /* NoticePopupView.m in Sources */,
@@ -3362,7 +3347,6 @@
 				C572A26924FBC547000A1687 /* UIImage+YBGIF.m in Sources */,
 				C57F0D20253336ED0080EEF0 /* NSObject+OpenURL.m in Sources */,
 				C5F4513D25299CA900066AAB /* ZBCacheManager.m in Sources */,
-				C58F020224EA617800B6D09C /* BWItemCollectionViewCell.m in Sources */,
 				C54B3FC9255297C5003BE195 /* NSObject+RichText.m in Sources */,
 				C561618C24EE4C98001CD851 /* MyCell.m in Sources */,
 				C5F4513925299CA900066AAB /* ZBURLRequest.m in Sources */,
