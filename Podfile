@@ -41,24 +41,23 @@ def func
     pod 'JSONModel'
     pod 'JPImageresizerView' # https://github.com/Rogue24/JPImageresizerView 一个专门裁剪图片、GIF、视频的轮子，简单易用，功能丰富（高自由度的参数设定、支持旋转和镜像翻转、蒙版、压缩等），能满足绝大部分裁剪的需求。
     pod 'GPUImage'
-    pod 'ZZCircleProgress'
     pod 'TXFileOperation'
     pod 'SZTextView'
   #  pod 'AWRichText'//有问题不好 用YYLabel
     pod 'FLAnimatedImageView+RGWrapper'
-    pod 'PPBadgeView' #https://github.com/jkpang/PPBadgeView iOS自定义Badge组件, 支持UIView, UITabBarItem, UIBarButtonItem以及子类
+    pod 'PPBadgeView' # https://github.com/jkpang/PPBadgeView iOS自定义Badge组件, 支持UIView, UITabBarItem, UIBarButtonItem以及子类
 #    pod 'XHLaunchAd'
     pod 'IQKeyboardManager' # https://github.com/hackiftekhar/IQKeyboardManager Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView. Neither need to write any code nor any setup required and much more.
-    pod 'JJException' #https://github.com/jezzmemo/JJException 保护App,一般常见的问题不会导致闪退，增强App的健壮性，同时会将错误抛出来，根据每个App自身的日志渠道记录
+    pod 'JJException' # https://github.com/jezzmemo/JJException 保护App,一般常见的问题不会导致闪退，增强App的健壮性，同时会将错误抛出来，根据每个App自身的日志渠道记录
     pod 'lottie-ios', '~> 2.5.3'
-    pod 'TFPopup'# https://github.com/shmxybfq/TFPopup 不耦合view代码,可以为已创建过 / 未创建过的view添加弹出方式;只是一种弹出方式;
+    pod 'TFPopup' #https://github.com/shmxybfq/TFPopup 不耦合view代码,可以为已创建过 / 未创建过的view添加弹出方式;只是一种弹出方式;
     
     pod 'ZFPlayer'
     pod 'ZFPlayer/ControlView'
     pod 'ZFPlayer/AVPlayer'
     pod 'ZFPlayer/ijkplayer'
 #    pod 'KTVHTTPCache' # 边下边播
-  #  pod 'ZFPlayer/KSYMediaPlayer'
+#    pod 'ZFPlayer/KSYMediaPlayer'
   end
 
 # 基础的公共配置

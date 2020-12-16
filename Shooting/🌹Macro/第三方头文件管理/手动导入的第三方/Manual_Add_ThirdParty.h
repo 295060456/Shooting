@@ -9,43 +9,20 @@
 #ifndef Manual_Add_ThirdParty_h
 #define Manual_Add_ThirdParty_h
 
-#import "PlaySound.h"//播放自定义声音关键代码
-#import "UIButton+ImageTitleSpacing.h"
-#import "AABlock.h"
-#import "YBNotificationManager.h"
-
-#import "BWShareView.h"
-#import "RBCLikeButton.h"//高仿抖音点赞动画
-#import "ZYTextField.h"
-#import "FileFolderHandleTool.h"
-#import "ZFMRACNetworkTool.h"//网络请求 RAC+MVVM
-#import "LGiOSBtn.h"
-#import "ECAuthorizationTools.h"
-#import "JhtBannerView.h"
-#import "ZZCircleProgress.h"
-#import "MovieCountDown.h"
-#import "ImageCodeView.h"
-#import "TimerManager.h"
-#import "UIButton+CountDownBtn.h"
-#import "UIDevice+XMUtils.h"
-#import "WGradientProgress.h"
-#import "WGradientProgressView.h"
-
-#pragma mark —— 以下是自定义的
-#import "MacroDef_Sys.h"
-#import "MacroDef_Cor.h"
-#import "MacroDef_Size.h"
-#import "MacroDef_Func.h"
-
+#pragma mark —— BaseCustomizeUIKit
+/// CALayer
 #import "CALayer+Anim.h"
 #import "CALayer+Transition.h"
+/// NSArray
 #import "NSArray+Extension.h"
 #import "NSArray+Extend.h"
+/// NSString
 #import "NSString+Extras.h"
-
+/// UIFont
 #import "UIFont+Extras.h"
-
+/// UIColor
 #import "UIColor+Hex.h"
+/// NSObject
 #import "NSObject+Extras.h"
 #import "NSObject+Time.h"
 #import "NSObject+LBLaunchImage.h"
@@ -54,20 +31,23 @@
 #import "NSObject+SYSAlertController.h"
 #import "NSObject+SPAlertController.h"
 #import "NSObject+Shake.h"
-//#import "NSObject+Login.h"
 #import "NSObject+OpenURL.h"
-
+//#import "NSObject+Login.h"
+/// UIControl
 #import "UIControl+XY.h"
+/// UITableViewCell
 #import "UITableViewCell+WhiteArrows.h"
+/// UIImageView
 #import "UIImageView+GIF.h"//UIImageView支持GIF动画 https://github.com/pupboss/UIImageView-GIF
+/// UIImage
+#import "LoadingImage.h"
 #import "UIImage+SYS.h"
 #import "UIImage+YBGIF.h"
 #import "UIImage+Overlay.h"
 #import "UIImage+Extras.h"
 #import "UIImage+Tailor.h"
-#import "UIImage+screenshot.h"
-#import "LoadingImage.h"
-
+#import "UIImage+ScreenShot.h"
+/// UIView
 #import "UIView+JHGestureBlock.h"
 #import "UIView+Chain.h"
 #import "UIView+SuspendView.h"
@@ -75,12 +55,7 @@
 #import "UIView+Extras.h"
 #import "UIView+Animation.h"
 #import "UIView+Gradient.h"
-
-#import "SuspendLab.h"
-#import "suspendBtn.h"
-#import "SuspendView.h"
-
-//UIViewController
+/// UIViewController
 #import "UIViewController+BaseVC.h"
 #import "UIViewController+BackBtn.h"
 #import "UIViewController+BRPickerView.h"
@@ -94,29 +69,39 @@
 #import "UIViewController+TZImagePickerController.h"
 #import "UIViewController+TZImagePickerControllerDelegate.h"
 #import "UIViewController+TZLocationManager.h"
-//UINavigationController
+/// UINavigationController
 #import "BaseNavigationVC.h"
-
-#import "ShootingAppDelegate.h"
-#import "ShootingSceneDelegate.h"
-#import <VideoToolbox/VideoToolbox.h>//FFmpeg 需要
-
-#import "APIKey.h"
-//#import "VedioTools.h"//视频录制
-//替代系统的TabBarController
-#import "LZBTabbarVC.h"
-#import "CustomSYSUITabBarController.h"
-#import "GPUImageTools.h"//GPUImage视频处理工具
-///视频预览
-#import "CustomerAVPlayerVC.h"
-#import "CustomerAVPlayerView.h"
-#import "CustomerGPUImagePlayerVC.h"
-///登录 * 注册 * 忘记密码
-//#import "DoorVC.h"
-//#import "ForgetCodeVC.h"
-
+/// UIButton
+#import "UIButton+ImageTitleSpacing.h"
+/// UITextField
+#import "ZYTextField.h"
+/// UIButton
+#import "RBCLikeButton.h"//高仿抖音点赞动画
+#import "LGiOSBtn.h"
+#import "UIButton+CountDownBtn.h"
+/// UIDevice
+#import "UIDevice+XMUtils.h"
+/// UITableViewHeaderFooterView
 #import "ViewForTableViewFooter.h"
 #import "ViewForTableViewHeader.h"
 
+#pragma mark —— Manual_Add_ThirdParty
+#import "SuspendLab.h"
+#import "suspendBtn.h"
+#import "SuspendView.h"
+#import "BWShareView.h"
+#import "FileFolderHandleTool.h"
+#import "ZFMRACNetworkTool.h"//网络请求 RAC+MVVM
+#import "ECAuthorizationTools.h"
+#import "JhtBannerView.h"
+#import "ZZCircleProgress.h"
+#import "MovieCountDown.h"
+#import "ImageCodeView.h"
+#import "TimerManager.h"
+#import "WGradientProgress.h"
+#import "WGradientProgressView.h"
+//加密体系
+#import "AESCipher.h"
+#import "AESCrypt.h"
 
 #endif /* Manual_Add_ThirdParty_h */

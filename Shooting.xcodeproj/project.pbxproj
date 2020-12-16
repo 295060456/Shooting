@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4FDC7C2ABB9BA7FD9476E474 /* Pods_ShootingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFE56B23CFD75AB0A6DB9B4 /* Pods_ShootingUITests.framework */; };
 		7F96368156DDD0B899DCFEA0 /* Pods_Shooting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */; };
+		C5267FB8258A4D1E0095A681 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5267FB6258A4D1E0095A681 /* TimeModel.m */; };
 		C52DEF4D255D2A820016FF07 /* XHLaunchAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF3A255D2A820016FF07 /* XHLaunchAdView.m */; };
 		C52DEF4E255D2A820016FF07 /* XHLaunchAdButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF3D255D2A820016FF07 /* XHLaunchAdButton.m */; };
 		C52DEF4F255D2A820016FF07 /* XHLaunchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF3F255D2A820016FF07 /* XHLaunchImageView.m */; };
@@ -108,7 +109,6 @@
 		C572A26A24FBC547000A1687 /* UIImage+SYS.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A26624FBC546000A1687 /* UIImage+SYS.m */; };
 		C572A26B24FBC547000A1687 /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A26824FBC547000A1687 /* UIImage+Extras.m */; };
 		C572A27A24FBD44A000A1687 /* UIImage+Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A27924FBD44A000A1687 /* UIImage+Overlay.m */; };
-		C572A27C24FBDD86000A1687 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C572A27B24FBDD86000A1687 /* Settings.bundle */; };
 		C572A28324FBE933000A1687 /* UIImage+Tailor.m in Sources */ = {isa = PBXBuildFile; fileRef = C572A28224FBE933000A1687 /* UIImage+Tailor.m */; };
 		C5766EA02546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5766E9E2546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */; };
 		C57C229A250240B500FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C2298250240B500FAAA3F /* UIButton+ImageTitleSpacing.m */; };
@@ -146,7 +146,7 @@
 		C58F019824EA5CAC00B6D09C /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F014E24EA5CAC00B6D09C /* CALayer+Transition.m */; };
 		C58F019924EA5CAD00B6D09C /* CALayer+Anim.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F014F24EA5CAC00B6D09C /* CALayer+Anim.m */; };
 		C58F01AD24EA5CAD00B6D09C /* NSObject+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F017F24EA5CAC00B6D09C /* NSObject+Extras.m */; };
-		C58F01C624EA5E7900B6D09C /* YBNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01C424EA5E7800B6D09C /* YBNotificationManager.m */; };
+		C58F01C624EA5E7900B6D09C /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01C424EA5E7800B6D09C /* NotificationManager.m */; };
 		C58F01CB24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01CA24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m */; };
 		C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */ = {isa = PBXBuildFile; fileRef = C58F01E224EA603400B6D09C /* 替换系统的UITabBarViewController */; };
 		C58F01F924EA60D100B6D09C /* CustomSYSUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01F824EA60D100B6D09C /* CustomSYSUITabBarController.m */; };
@@ -210,7 +210,6 @@
 		C5D602952586321500029AFF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D602932586321500029AFF /* BaseViewController.m */; };
 		C5D6029E2586322C00029AFF /* UIViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6029D2586322C00029AFF /* UIViewController+NavigationBar.m */; };
 		C5D6DC5425860F1A00029AFF /* NSObject+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6DC5025860F1900029AFF /* NSObject+Time.m */; };
-		C5D6DC5525860F1A00029AFF /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6DC5225860F1900029AFF /* TimeModel.m */; };
 		C5D6DC6525860F3200029AFF /* NSTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6DC6425860F3200029AFF /* NSTimerManager.m */; };
 		C5D777FD257F5A5C0087FC92 /* UITextField+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D777EF257F5A5B0087FC92 /* UITextField+Extend.m */; };
 		C5D777FE257F5A5C0087FC92 /* ZYTextField.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5D777F0257F5A5B0087FC92 /* ZYTextField.bundle */; };
@@ -290,6 +289,8 @@
 		8EF824CCB3C797C08F0AA84C /* Pods-ShootingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingTests.release.xcconfig"; path = "Target Support Files/Pods-ShootingTests/Pods-ShootingTests.release.xcconfig"; sourceTree = "<group>"; };
 		975BB3BDBE4F3C4E85B6606A /* Pods-Shooting-ShootingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shooting-ShootingUITests.release.xcconfig"; path = "Target Support Files/Pods-Shooting-ShootingUITests/Pods-Shooting-ShootingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BE8529673128AC0E9BFB2644 /* Pods-ShootingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShootingUITests/Pods-ShootingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C5267FB6258A4D1E0095A681 /* TimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
+		C5267FB7258A4D1E0095A681 /* TimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
 		C52DEF37255D2A820016FF07 /* XHLaunchAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdController.h; sourceTree = "<group>"; };
 		C52DEF38255D2A820016FF07 /* XHLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAd.h; sourceTree = "<group>"; };
 		C52DEF39255D2A820016FF07 /* XHLaunchAdDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdDownloader.h; sourceTree = "<group>"; };
@@ -434,6 +435,8 @@
 		C556972C255BFD95005C1361 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
 		C5575AE2250518AA00A2A694 /* UIButton+CountDownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDownBtn.m"; sourceTree = "<group>"; };
 		C5575AE3250518AA00A2A694 /* UIButton+CountDownBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDownBtn.h"; sourceTree = "<group>"; };
+		C558014B258A3F3F0078DB8F /* XHLaunchAd不用pod导入的情况说明.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "XHLaunchAd不用pod导入的情况说明.md"; sourceTree = "<group>"; };
+		C558F345258A2F900078DB8F /* PodsManual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PodsManual.h; sourceTree = "<group>"; };
 		C561618724EE4C97001CD851 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
 		C561618824EE4C97001CD851 /* StartOrPauseBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartOrPauseBtn.m; sourceTree = "<group>"; };
 		C561618924EE4C98001CD851 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
@@ -475,7 +478,6 @@
 		C572A26824FBC547000A1687 /* UIImage+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extras.m"; sourceTree = "<group>"; };
 		C572A27824FBD44A000A1687 /* UIImage+Overlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Overlay.h"; sourceTree = "<group>"; };
 		C572A27924FBD44A000A1687 /* UIImage+Overlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Overlay.m"; sourceTree = "<group>"; };
-		C572A27B24FBDD86000A1687 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C572A28124FBE933000A1687 /* UIImage+Tailor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tailor.h"; sourceTree = "<group>"; };
 		C572A28224FBE933000A1687 /* UIImage+Tailor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tailor.m"; sourceTree = "<group>"; };
 		C5766E9E2546B83900C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JXPagerViewListViewDelegate.m"; sourceTree = "<group>"; };
@@ -559,8 +561,8 @@
 		C58F015124EA5CAC00B6D09C /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
 		C58F017B24EA5CAC00B6D09C /* NSObject+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extras.h"; sourceTree = "<group>"; };
 		C58F017F24EA5CAC00B6D09C /* NSObject+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extras.m"; sourceTree = "<group>"; };
-		C58F01C424EA5E7800B6D09C /* YBNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNotificationManager.m; sourceTree = "<group>"; };
-		C58F01C524EA5E7900B6D09C /* YBNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBNotificationManager.h; sourceTree = "<group>"; };
+		C58F01C424EA5E7800B6D09C /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationManager.m; sourceTree = "<group>"; };
+		C58F01C524EA5E7900B6D09C /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
 		C58F01C724EA5E8900B6D09C /* APIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
 		C58F01C924EA5F0100B6D09C /* YHGPUImageBeautifyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHGPUImageBeautifyFilter.h; sourceTree = "<group>"; };
 		C58F01CA24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHGPUImageBeautifyFilter.m; sourceTree = "<group>"; };
@@ -687,8 +689,6 @@
 		C5D6029D2586322C00029AFF /* UIViewController+NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationBar.m"; sourceTree = "<group>"; };
 		C5D6DC4F25860F1900029AFF /* NSObject+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Time.h"; sourceTree = "<group>"; };
 		C5D6DC5025860F1900029AFF /* NSObject+Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Time.m"; sourceTree = "<group>"; };
-		C5D6DC5225860F1900029AFF /* TimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
-		C5D6DC5325860F1900029AFF /* TimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
 		C5D6DC6325860F3200029AFF /* NSTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerManager.h; sourceTree = "<group>"; };
 		C5D6DC6425860F3200029AFF /* NSTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerManager.m; sourceTree = "<group>"; };
 		C5D777EE257F5A5B0087FC92 /* UITextField+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extend.h"; sourceTree = "<group>"; };
@@ -841,9 +841,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C5267FB5258A4D1E0095A681 /* NSObject (Time) */ = {
+			isa = PBXGroup;
+			children = (
+				C5267FB6258A4D1E0095A681 /* TimeModel.m */,
+				C5267FB7258A4D1E0095A681 /* TimeModel.h */,
+			);
+			name = "NSObject (Time)";
+			path = "../../../../../Douyin_ZFPlayer/DouYin/3rd/BaseCustomizeUIKit/NSObject/NSObject (Time)";
+			sourceTree = "<group>";
+		};
 		C52DEF36255D2A820016FF07 /* XHLaunchAd */ = {
 			isa = PBXGroup;
 			children = (
+				C558014B258A3F3F0078DB8F /* XHLaunchAd不用pod导入的情况说明.md */,
 				C52DEF38255D2A820016FF07 /* XHLaunchAd.h */,
 				C52DEF42255D2A820016FF07 /* XHLaunchAd.m */,
 				C52DEF48255D2A820016FF07 /* XHLaunchAdButton.h */,
@@ -1333,8 +1344,8 @@
 		C552A74A2589D50E00A89501 /* UIImage+ScreenShot */ = {
 			isa = PBXGroup;
 			children = (
-				C552A74B2589D50E00A89501 /* UIImage+ScreenShot.m */,
 				C552A74C2589D50E00A89501 /* UIImage+ScreenShot.h */,
+				C552A74B2589D50E00A89501 /* UIImage+ScreenShot.m */,
 			);
 			path = "UIImage+ScreenShot";
 			sourceTree = "<group>";
@@ -1427,6 +1438,69 @@
 				C58F033124EA69D400B6D09C /* ViewController@5.m */,
 			);
 			path = OtherVC;
+			sourceTree = "<group>";
+		};
+		C558F2A1258A2F200078DB8F /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+				C58F011024EA5BD500B6D09C /* BaseCustomizeUIKit */,
+				C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */,
+			);
+			path = 3rd;
+			sourceTree = "<group>";
+		};
+		C558F39E258A2FD60078DB8F /* 第三方头文件管理 */ = {
+			isa = PBXGroup;
+			children = (
+				C558F3A0258A2FE40078DB8F /* Pods */,
+				C558F39F258A2FDD0078DB8F /* 手动导入的第三方 */,
+			);
+			path = "第三方头文件管理";
+			sourceTree = "<group>";
+		};
+		C558F39F258A2FDD0078DB8F /* 手动导入的第三方 */ = {
+			isa = PBXGroup;
+			children = (
+				C58F004E24EA577400B6D09C /* Manual_Add_ThirdParty.h */,
+			);
+			path = "手动导入的第三方";
+			sourceTree = "<group>";
+		};
+		C558F3A0258A2FE40078DB8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C58F004D24EA577400B6D09C /* Pods.h */,
+				C558F345258A2F900078DB8F /* PodsManual.h */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C558F3A7258A300B0078DB8F /* 各项全局定义 */ = {
+			isa = PBXGroup;
+			children = (
+				C5470F5E25309C0300651ACE /* 各项宏定义 */,
+				C558F3BB258A303B0078DB8F /* 其他的一些全局定义文件 */,
+				C58F01C324EA5E7200B6D09C /* NotificationManager */,
+			);
+			path = "各项全局定义";
+			sourceTree = "<group>";
+		};
+		C558F3AE258A301A0078DB8F /* 其他杂项 */ = {
+			isa = PBXGroup;
+			children = (
+				C58F004C24EA577400B6D09C /* Other.h */,
+			);
+			path = "其他杂项";
+			sourceTree = "<group>";
+		};
+		C558F3BB258A303B0078DB8F /* 其他的一些全局定义文件 */ = {
+			isa = PBXGroup;
+			children = (
+				C58F01C724EA5E8900B6D09C /* APIKey.h */,
+				C58F004B24EA576400B6D09C /* AABlock.h */,
+				C58F010E24EA5B2300B6D09C /* DefineStructure.h */,
+			);
+			path = "其他的一些全局定义文件";
 			sourceTree = "<group>";
 		};
 		C561618324EE4C72001CD851 /* 拍摄和上传 */ = {
@@ -1660,7 +1734,7 @@
 				C58F002E24EA36FA00B6D09C /* ShootingTests */,
 				C58F003924EA36FA00B6D09C /* ShootingUITests */,
 				1AD6F263795BF1A29595997A /* Pods */,
-				C58F007124EA580B00B6D09C /* Pods 不进去的 */,
+				C58F007124EA580B00B6D09C /* PodsManual */,
 				AEFC22584925A075C4EC097C /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -1679,14 +1753,11 @@
 		C58F000F24EA36F800B6D09C /* Shooting */ = {
 			isa = PBXGroup;
 			children = (
-				C56E428D2547188A00B9F555 /* ⚽️PicResource */,
-				C58F004824EA56F700B6D09C /* 🌹Macro */,
-				C58F010F24EA5B6C00B6D09C /* AppDelegate & SceneDelegate */,
-				C58F011024EA5BD500B6D09C /* BaseCustomizeUIKit */,
-				C58F031824EA65F200B6D09C /* BaseModel */,
-				C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */,
-				C58F032724EA69C800B6D09C /* 🇨🇳ServiceLogic */,
 				C58F002424EA36FA00B6D09C /* Info.plist */,
+				C58F010F24EA5B6C00B6D09C /* AppDelegate & SceneDelegate */,
+				C58F004824EA56F700B6D09C /* 🌹Macro */,
+				C558F2A1258A2F200078DB8F /* 3rd */,
+				C58F032724EA69C800B6D09C /* 🇨🇳ServiceLogic */,
 				C58F007024EA57E400B6D09C /* Other */,
 			);
 			path = Shooting;
@@ -1713,16 +1784,10 @@
 		C58F004824EA56F700B6D09C /* 🌹Macro */ = {
 			isa = PBXGroup;
 			children = (
-				C58F01C724EA5E8900B6D09C /* APIKey.h */,
-				C58F004B24EA576400B6D09C /* AABlock.h */,
-				C5470F5E25309C0300651ACE /* 各项宏定义 */,
-				C58F01C324EA5E7200B6D09C /* Notification */,
-				C58F010E24EA5B2300B6D09C /* DefineStructure.h */,
-				C58F004D24EA577400B6D09C /* Pods.h */,
-				C58F004E24EA577400B6D09C /* Manual_Add_ThirdParty.h */,
-				C58F004C24EA577400B6D09C /* Other.h */,
 				C58F004924EA571D00B6D09C /* PrefixHeader.pch */,
-				C572A27B24FBDD86000A1687 /* Settings.bundle */,
+				C558F39E258A2FD60078DB8F /* 第三方头文件管理 */,
+				C558F3A7258A300B0078DB8F /* 各项全局定义 */,
+				C558F3AE258A301A0078DB8F /* 其他杂项 */,
 			);
 			path = "🌹Macro";
 			sourceTree = "<group>";
@@ -1730,6 +1795,7 @@
 		C58F007024EA57E400B6D09C /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				C56E428D2547188A00B9F555 /* ⚽️PicResource */,
 				C58F00FF24EA584B00B6D09C /* Log */,
 				C58F000E24EA36F800B6D09C /* Products */,
 				C58F00F024EA584B00B6D09C /* Sys */,
@@ -1742,13 +1808,13 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		C58F007124EA580B00B6D09C /* Pods 不进去的 */ = {
+		C58F007124EA580B00B6D09C /* PodsManual */ = {
 			isa = PBXGroup;
 			children = (
 				C52DEF36255D2A820016FF07 /* XHLaunchAd */,
 				C59D9AE724F8F07B00A74CE9 /* ZZCircleProgress */,
 			);
-			path = "Pods 不进去的";
+			path = PodsManual;
 			sourceTree = "<group>";
 		};
 		C58F00C724EA581F00B6D09C /* MKGPUImageView */ = {
@@ -2006,7 +2072,7 @@
 		C58F017A24EA5CAC00B6D09C /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
-				C5D6DC5125860F1900029AFF /* NSObject (Time) */,
+				C5267FB5258A4D1E0095A681 /* NSObject (Time) */,
 				C5AA4909250C8EFB009F583F /* NSObject+Alert */,
 				C534E765257F906700DBC3CE /* NSObject+Others */,
 				C5D6DC4E25860F1900029AFF /* NSObject+Time */,
@@ -2048,13 +2114,13 @@
 			path = "高度自定义的按钮";
 			sourceTree = "<group>";
 		};
-		C58F01C324EA5E7200B6D09C /* Notification */ = {
+		C58F01C324EA5E7200B6D09C /* NotificationManager */ = {
 			isa = PBXGroup;
 			children = (
-				C58F01C524EA5E7900B6D09C /* YBNotificationManager.h */,
-				C58F01C424EA5E7800B6D09C /* YBNotificationManager.m */,
+				C58F01C524EA5E7900B6D09C /* NotificationManager.h */,
+				C58F01C424EA5E7800B6D09C /* NotificationManager.m */,
 			);
-			path = Notification;
+			path = NotificationManager;
 			sourceTree = "<group>";
 		};
 		C58F01C824EA5EEE00B6D09C /* GPUImage一些准备活动 */ = {
@@ -2524,16 +2590,6 @@
 			path = "NSObject+Time";
 			sourceTree = "<group>";
 		};
-		C5D6DC5125860F1900029AFF /* NSObject (Time) */ = {
-			isa = PBXGroup;
-			children = (
-				C5D6DC5225860F1900029AFF /* TimeModel.m */,
-				C5D6DC5325860F1900029AFF /* TimeModel.h */,
-			);
-			name = "NSObject (Time)";
-			path = "../../../../JobsBitsMonitor/JobsBitsMonitor/BaseCustomizeUIKit/NSObject/NSObject (Time)";
-			sourceTree = "<group>";
-		};
 		C5D6DC6225860F3200029AFF /* NSTimerManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -2671,6 +2727,7 @@
 		C5F4513F25299D1400066AAB /* 网络请求 */ = {
 			isa = PBXGroup;
 			children = (
+				C58F031824EA65F200B6D09C /* BaseModel */,
 				C5F4514025299D1E00066AAB /* 存取页面数据 */,
 				C5F4514625299D1E00066AAB /* 请求的公共配置文件 */,
 				C5F4514A25299D1F00066AAB /* App 的所有网络请求Api */,
@@ -3114,7 +3171,6 @@
 				C53D60D3255C20FC006C290D /* upgrade.json in Resources */,
 				C5F452372529A6D900066AAB /* SHA-512 in Resources */,
 				C53D60D9255C20FC006C290D /* green_lottie_tab_mine.json in Resources */,
-				C572A27C24FBDD86000A1687 /* Settings.bundle in Resources */,
 				C54AB1E5255E608E000A314D /* WhiteRightArrow@2x.png in Resources */,
 				C53D60E0255C20FC006C290D /* JobsPullListAutoSizeView in Resources */,
 				C53D60CA255C20FC006C290D /* home_priase_animation.json in Resources */,
@@ -3280,6 +3336,7 @@
 				C59D9AEE24F8F08500A74CE9 /* ZZCircleProgress.m in Sources */,
 				C5850AEC25483DA1001E6676 /* ViewForTableViewFooter.m in Sources */,
 				C58F047324EBD70F00B6D09C /* ECAuthorizationTools.m in Sources */,
+				C5267FB8258A4D1E0095A681 /* TimeModel.m in Sources */,
 				C561619724EE4CA9001CD851 /* MKUploadingVC+VM.m in Sources */,
 				C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */,
 				C556972E255BFD95005C1361 /* NSString+Extras.m in Sources */,
@@ -3335,7 +3392,6 @@
 				C5C67CA824FF5D68000A26B8 /* MovieCountDown.m in Sources */,
 				C59D9ACE24F8EF1100A74CE9 /* CustomerGPUImagePlayerVC.m in Sources */,
 				C59D9ADC24F8EF4D00A74CE9 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m in Sources */,
-				C5D6DC5525860F1A00029AFF /* TimeModel.m in Sources */,
 				C52DEF4E255D2A820016FF07 /* XHLaunchAdButton.m in Sources */,
 				C58F010D24EA584B00B6D09C /* NSlogToDocumentFolder.m in Sources */,
 				C5AEEAE025384197000E1C5F /* UIView+Extras.m in Sources */,
@@ -3404,7 +3460,7 @@
 				C5A46C0124EFB6E200158D1E /* UIViewController+LZBTabBarVCItem.m in Sources */,
 				C5914BA925384CD0007777A6 /* UIViewController+BRPickerView.m in Sources */,
 				C5914BA525384CD0007777A6 /* UIViewController+TZImagePickerController.m in Sources */,
-				C58F01C624EA5E7900B6D09C /* YBNotificationManager.m in Sources */,
+				C58F01C624EA5E7900B6D09C /* NotificationManager.m in Sources */,
 				C544C1A0258375C300C6CF2A /* UIViewController+MJRefresh.m in Sources */,
 				C58F001524EA36F800B6D09C /* ShootingSceneDelegate.m in Sources */,
 				C54B3FCA255297C5003BE195 /* UILabel+Extra.m in Sources */,

@@ -9,9 +9,35 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "DefineStructure.h"
+#pragma mark —— 系统SDK
+#import <QuartzCore/QuartzCore.h>
+#import <objc/runtime.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
+#import <VideoToolbox/VideoToolbox.h>//FFmpeg 需要
+
+#pragma mark —— 第三方头文件管理
+/// Pods
 #import "Pods.h"
+#import "PodsManual.h"
+/// Manual_Add_ThirdParty
 #import "Manual_Add_ThirdParty.h"
+#pragma mark —— 各项全局定义
+/// 各项宏定义
+#import "MacroDef_Sys.h"
+#import "MacroDef_Cor.h"
+#import "MacroDef_Size.h"
+#import "MacroDef_Func.h"
+/// 其他的一些全局定义文件
+#import "APIKey.h"
+#import "AABlock.h"
+#import "DefineStructure.h"
+/// NotificationManager
+#import "NotificationManager.h"
+
+#pragma mark —— 其他杂项
 #import "Other.h"
 
 #endif /* PrefixHeader_pch */
