@@ -55,6 +55,7 @@
 #import "UIView+Extras.h"
 #import "UIView+Animation.h"
 #import "UIView+Gradient.h"
+#import "UIView+EmptyData.h"
 /// UIViewController
 #import "UIViewController+BaseVC.h"
 #import "UIViewController+BackBtn.h"
@@ -69,6 +70,7 @@
 #import "UIViewController+TZImagePickerController.h"
 #import "UIViewController+TZImagePickerControllerDelegate.h"
 #import "UIViewController+TZLocationManager.h"
+#import "UIViewController+EmptyData.h"
 /// UINavigationController
 #import "BaseNavigationVC.h"
 /// UIButton
