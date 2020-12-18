@@ -77,6 +77,8 @@
 		C544C1A1258375C300C6CF2A /* MJRefreshConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C544C197258375C300C6CF2A /* MJRefreshConfigModel.m */; };
 		C544C1A2258375C300C6CF2A /* LOTAnimationMJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C544C19A258375C300C6CF2A /* LOTAnimationMJRefreshHeader.m */; };
 		C544C1A3258375C300C6CF2A /* JsonRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C544C19C258375C300C6CF2A /* JsonRes.bundle */; };
+		C546100D258C8F780008928C /* UIView+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = C546100B258C8F780008928C /* UIView+AOP.m */; };
+		C5461019258C8F890008928C /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5461017258C8F890008928C /* ZYTextField.m */; };
 		C54AB1E5255E608E000A314D /* WhiteRightArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C54AB1DF255E608E000A314D /* WhiteRightArrow@2x.png */; };
 		C54AB1E6255E608E000A314D /* WhiteRightArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C54AB1E0255E608E000A314D /* WhiteRightArrow@3x.png */; };
 		C54AB1E7255E608E000A314D /* UITableViewCell+WhiteArrows.m in Sources */ = {isa = PBXBuildFile; fileRef = C54AB1E1255E608E000A314D /* UITableViewCell+WhiteArrows.m */; };
@@ -217,7 +219,6 @@
 		C5D777FE257F5A5C0087FC92 /* ZYTextField.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5D777F0257F5A5B0087FC92 /* ZYTextField.bundle */; };
 		C5D777FF257F5A5C0087FC92 /* CJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D777F2257F5A5B0087FC92 /* CJTextField.m */; };
 		C5D77800257F5A5C0087FC92 /* HQTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D777F6257F5A5B0087FC92 /* HQTextField.m */; };
-		C5D77801257F5A5C0087FC92 /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D777F8257F5A5C0087FC92 /* ZYTextField.m */; };
 		C5D77802257F5A5C0087FC92 /* JobsMagicTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D777FB257F5A5C0087FC92 /* JobsMagicTextField.m */; };
 		C5D78026257F5FDF0087FC92 /* ZYTextField+HistoryDataList.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D78025257F5FDF0087FC92 /* ZYTextField+HistoryDataList.m */; };
 		C5E5C6252505E1E4001E69DA /* UIButton+CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575AE2250518AA00A2A694 /* UIButton+CountDownBtn.m */; };
@@ -403,6 +404,10 @@
 		C544C19A258375C300C6CF2A /* LOTAnimationMJRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOTAnimationMJRefreshHeader.m; sourceTree = "<group>"; };
 		C544C19B258375C300C6CF2A /* LOTAnimationMJRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOTAnimationMJRefreshHeader.h; sourceTree = "<group>"; };
 		C544C19C258375C300C6CF2A /* JsonRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JsonRes.bundle; sourceTree = "<group>"; };
+		C546100B258C8F780008928C /* UIView+AOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AOP.m"; sourceTree = "<group>"; };
+		C546100C258C8F780008928C /* UIView+AOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AOP.h"; sourceTree = "<group>"; };
+		C5461017258C8F890008928C /* ZYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYTextField.m; sourceTree = "<group>"; };
+		C5461018258C8F890008928C /* ZYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYTextField.h; sourceTree = "<group>"; };
 		C5470F6225309C1100651ACE /* MacroDef_Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Size.h; sourceTree = "<group>"; };
 		C5470F6325309C1100651ACE /* MacroDef_Sys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Sys.h; sourceTree = "<group>"; };
 		C5470F6425309C1100651ACE /* MacroDef_Cor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Cor.h; sourceTree = "<group>"; };
@@ -704,8 +709,6 @@
 		C5D777F3257F5A5B0087FC92 /* CJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTextField.h; sourceTree = "<group>"; };
 		C5D777F5257F5A5B0087FC92 /* HQTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQTextField.h; sourceTree = "<group>"; };
 		C5D777F6257F5A5B0087FC92 /* HQTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQTextField.m; sourceTree = "<group>"; };
-		C5D777F8257F5A5C0087FC92 /* ZYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYTextField.m; sourceTree = "<group>"; };
-		C5D777F9257F5A5C0087FC92 /* ZYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYTextField.h; sourceTree = "<group>"; };
 		C5D777FB257F5A5C0087FC92 /* JobsMagicTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsMagicTextField.m; sourceTree = "<group>"; };
 		C5D777FC257F5A5C0087FC92 /* JobsMagicTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsMagicTextField.h; sourceTree = "<group>"; };
 		C5D78024257F5FDF0087FC92 /* ZYTextField+HistoryDataList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZYTextField+HistoryDataList.h"; sourceTree = "<group>"; };
@@ -1223,6 +1226,15 @@
 				C544C19A258375C300C6CF2A /* LOTAnimationMJRefreshHeader.m */,
 			);
 			path = LOTAnimationMJRefreshHeader;
+			sourceTree = "<group>";
+		};
+		C546100A258C8F780008928C /* UIView+AOP */ = {
+			isa = PBXGroup;
+			children = (
+				C546100B258C8F780008928C /* UIView+AOP.m */,
+				C546100C258C8F780008928C /* UIView+AOP.h */,
+			);
+			path = "UIView+AOP";
 			sourceTree = "<group>";
 		};
 		C5470F5E25309C0300651ACE /* 各项宏定义 */ = {
@@ -1963,6 +1975,7 @@
 			isa = PBXGroup;
 			children = (
 				C595BE4D2586422B002A4531 /* UIView+Animation */,
+				C546100A258C8F780008928C /* UIView+AOP */,
 				C595BE4F25864239002A4531 /* UIView+Chain */,
 				C5D1C0E0258B20B200784D2F /* UIView+EmptyData */,
 				C595BE4E25864232002A4531 /* UIView+Extras */,
@@ -2655,8 +2668,8 @@
 			isa = PBXGroup;
 			children = (
 				C5D777F0257F5A5B0087FC92 /* ZYTextField.bundle */,
-				C5D777F9257F5A5C0087FC92 /* ZYTextField.h */,
-				C5D777F8257F5A5C0087FC92 /* ZYTextField.m */,
+				C5461018258C8F890008928C /* ZYTextField.h */,
+				C5461017258C8F890008928C /* ZYTextField.m */,
 				C5D78024257F5FDF0087FC92 /* ZYTextField+HistoryDataList.h */,
 				C5D78025257F5FDF0087FC92 /* ZYTextField+HistoryDataList.m */,
 			);
@@ -3403,12 +3416,12 @@
 				C5F452412529BABF00066AAB /* AESCrypt.m in Sources */,
 				C530B0F6254D9ACD00EDEDC8 /* CollectionReusableView.m in Sources */,
 				C5F4513C25299CA900066AAB /* ZBRequestManager.m in Sources */,
-				C5D77801257F5A5C0087FC92 /* ZYTextField.m in Sources */,
 				C58F033624EA69D400B6D09C /* ViewController@5.m in Sources */,
 				C58F018C24EA5CAC00B6D09C /* UIImageView+GIF.m in Sources */,
 				C58F001E24EA36F800B6D09C /* Shooting.xcdatamodeld in Sources */,
 				C54AB1E7255E608E000A314D /* UITableViewCell+WhiteArrows.m in Sources */,
 				C5D6DC5425860F1A00029AFF /* NSObject+Time.m in Sources */,
+				C546100D258C8F780008928C /* UIView+AOP.m in Sources */,
 				C58F033324EA69D400B6D09C /* ViewController@4.m in Sources */,
 				C595D4F1258714AD002A4531 /* SuspendBtn.m in Sources */,
 				C52DEF56255D2A820016FF07 /* XHLaunchAdCache.m in Sources */,
@@ -3512,6 +3525,7 @@
 				C58F01CB24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m in Sources */,
 				C55497A424F38CDB0065510D /* MKShootVC.m in Sources */,
 				C59B9E3B2526F1DF0039B485 /* TableViewAnimationKit.m in Sources */,
+				C5461019258C8F890008928C /* ZYTextField.m in Sources */,
 				C5EB98E0250A2290007660B3 /* AgreementView.m in Sources */,
 				C5E5C6252505E1E4001E69DA /* UIButton+CountDownBtn.m in Sources */,
 				C53D60C6255C20FC006C290D /* UITabBarItem+TLAnimation.m in Sources */,

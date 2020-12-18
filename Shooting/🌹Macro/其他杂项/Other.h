@@ -9,6 +9,9 @@
 #ifndef Other_h
 #define Other_h
 
+#import "ShootingAppDelegate.h"
+#import "ShootingSceneDelegate.h"
+
 //#import "VedioTools.h"//视频录制
 //替代系统的TabBarController
 #import "LZBTabbarVC.h"

@@ -48,6 +48,7 @@
 #import <UIKit/UIKit.h>
 
 static inline CGFloat rectOfStatusbar(){
+//    SuppressWdeprecatedDeclarationsWarning
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wdeprecated-declarations"
     CGFloat RectOfStatusbar = 0.0f;

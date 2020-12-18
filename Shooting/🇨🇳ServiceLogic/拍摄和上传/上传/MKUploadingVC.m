@@ -347,8 +347,8 @@ shouldChangeTextInRange:(NSRange)range
             [self choosePicBtnClickEvent:x];
         }];
         [UIView colourToLayerOfView:_choosePicBtn
-                         WithColour:KLightGrayColor
-                     AndBorderWidth:0.2f];
+                         withColour:KLightGrayColor
+                     andBorderWidth:0.2f];
         [self.view layoutIfNeeded];
     }return _choosePicBtn;
 }
@@ -429,7 +429,7 @@ shouldChangeTextInRange:(NSRange)range
             make.top.equalTo(self.choosePicBtn.mas_bottom).offset(SCALING_RATIO(50));
         }];
         [UIView cornerCutToCircleWithView:_releaseBtn
-                          AndCornerRadius:SCALING_RATIO(6)];
+                          andCornerRadius:SCALING_RATIO(6)];
     }return _releaseBtn;
 }
 

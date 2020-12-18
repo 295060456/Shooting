@@ -320,7 +320,7 @@
         }];
         [_recordBtn layoutIfNeeded];
         [UIView cornerCutToCircleWithView:_recordBtn
-                          AndCornerRadius:SCALING_RATIO(80) / 2];
+                          andCornerRadius:SCALING_RATIO(80) / 2];
         @weakify(self)
         //点击手势回调
         [_recordBtn actionTapGRHandleSingleFingerBlock:^(id data) {
@@ -571,7 +571,7 @@
             make.size.mas_equalTo(CGSizeMake(SCALING_RATIO(40), 30));
         }];
         [UIView cornerCutToCircleWithView:_previewBtn
-                          AndCornerRadius:8.f];
+                          andCornerRadius:8.f];
     }return _previewBtn;
 }
 
@@ -629,7 +629,8 @@
             make.centerX.equalTo(self.view);
             make.top.equalTo(self.bannerView.mas_bottom).offset(6);
         }];
-        [UIView cornerCutToCircleWithView:_indexView AndCornerRadius:10/2];
+        [UIView cornerCutToCircleWithView:_indexView
+                          andCornerRadius:10 / 2];
     }return _indexView;
 }
 

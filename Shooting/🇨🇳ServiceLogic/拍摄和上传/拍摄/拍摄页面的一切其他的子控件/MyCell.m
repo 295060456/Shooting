@@ -15,7 +15,7 @@
         self.icon.alpha = 1;
         self.leftText.alpha = 1;
         [UIView cornerCutToCircleWithView:self.contentView
-                          AndCornerRadius:8];
+                          andCornerRadius:8];
     }return self;
 }
 #pragma mark —— lazyLoad
