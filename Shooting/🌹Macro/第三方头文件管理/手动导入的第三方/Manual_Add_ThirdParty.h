@@ -88,6 +88,7 @@
 #import "ViewForTableViewHeader.h"
 
 #pragma mark —— Manual_Add_ThirdParty
+#import "UserDefaultManager.h"
 #import "SuspendLab.h"
 #import "suspendBtn.h"
 #import "SuspendView.h"

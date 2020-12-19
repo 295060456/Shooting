@@ -177,6 +177,8 @@
 		C595D4EF258714AD002A4531 /* SuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C595D4E8258714AD002A4531 /* SuspendLab.m */; };
 		C595D4F0258714AD002A4531 /* SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C595D4EA258714AD002A4531 /* SuspendView.m */; };
 		C595D4F1258714AD002A4531 /* SuspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C595D4ED258714AD002A4531 /* SuspendBtn.m */; };
+		C59A3E98258DD22E005F6260 /* UserDefaultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C59A3E96258DD22E005F6260 /* UserDefaultModel.m */; };
+		C59A3E99258DD22E005F6260 /* UserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C59A3E97258DD22E005F6260 /* UserDefaultManager.m */; };
 		C59B9E3A2526F1DF0039B485 /* UITableView+XSAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9E362526F1DF0039B485 /* UITableView+XSAnimationKit.m */; };
 		C59B9E3B2526F1DF0039B485 /* TableViewAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9E392526F1DF0039B485 /* TableViewAnimationKit.m */; };
 		C59D9AA424F8C3BC00A74CE9 /* NSObject+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AA324F8C3BC00A74CE9 /* NSObject+Random.m */; };
@@ -626,6 +628,10 @@
 		C595D4EB258714AD002A4531 /* SuspendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendView.h; sourceTree = "<group>"; };
 		C595D4ED258714AD002A4531 /* SuspendBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendBtn.m; sourceTree = "<group>"; };
 		C595D4EE258714AD002A4531 /* SuspendBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendBtn.h; sourceTree = "<group>"; };
+		C59A3E94258DD22E005F6260 /* UserDefaultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultManager.h; sourceTree = "<group>"; };
+		C59A3E95258DD22E005F6260 /* UserDefaultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultModel.h; sourceTree = "<group>"; };
+		C59A3E96258DD22E005F6260 /* UserDefaultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultModel.m; sourceTree = "<group>"; };
+		C59A3E97258DD22E005F6260 /* UserDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultManager.m; sourceTree = "<group>"; };
 		C59B9E342526F1DE0039B485 /* TableViewAnimationKitConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKitConfig.h; sourceTree = "<group>"; };
 		C59B9E352526F1DE0039B485 /* UITableView+XSAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XSAnimationKit.h"; sourceTree = "<group>"; };
 		C59B9E362526F1DF0039B485 /* UITableView+XSAnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XSAnimationKit.m"; sourceTree = "<group>"; };
@@ -2120,6 +2126,7 @@
 				C58F01CC24EA5FF600B6D09C /* LZBTabbarViewController */,
 				C58F02CB24EA62A800B6D09C /* Suspend */,
 				C5C67C9224FF5CFC000A26B8 /* TimerManager */,
+				C59A3E93258DD22E005F6260 /* UserDefaultManager */,
 			);
 			path = "Manual_Add_ThirdParty ";
 			sourceTree = "<group>";
@@ -2372,6 +2379,17 @@
 				C59D9AA624F8C79500A74CE9 /* watermark.bmp */,
 			);
 			path = res;
+			sourceTree = "<group>";
+		};
+		C59A3E93258DD22E005F6260 /* UserDefaultManager */ = {
+			isa = PBXGroup;
+			children = (
+				C59A3E94258DD22E005F6260 /* UserDefaultManager.h */,
+				C59A3E95258DD22E005F6260 /* UserDefaultModel.h */,
+				C59A3E96258DD22E005F6260 /* UserDefaultModel.m */,
+				C59A3E97258DD22E005F6260 /* UserDefaultManager.m */,
+			);
+			path = UserDefaultManager;
 			sourceTree = "<group>";
 		};
 		C59B9E322526F1BE0039B485 /* TableViewAnimationKit */ = {
@@ -3343,6 +3361,7 @@
 			files = (
 				C58F019024EA5CAC00B6D09C /* BaseTableViewer.m in Sources */,
 				C53D610A255C2205006C290D /* ShootingAppDelegate+XHLaunchAdDelegate.m in Sources */,
+				C59A3E98258DD22E005F6260 /* UserDefaultModel.m in Sources */,
 				C58F002624EA36FA00B6D09C /* main.m in Sources */,
 				C58F018824EA5CAC00B6D09C /* UIView+JHGestureBlock.m in Sources */,
 				C5AA490E250C8F04009F583F /* NSObject+SPAlertController.m in Sources */,
@@ -3503,6 +3522,7 @@
 				C5914BA525384CD0007777A6 /* UIViewController+TZImagePickerController.m in Sources */,
 				C58F01C624EA5E7900B6D09C /* NotificationManager.m in Sources */,
 				C544C1A0258375C300C6CF2A /* UIViewController+MJRefresh.m in Sources */,
+				C59A3E99258DD22E005F6260 /* UserDefaultManager.m in Sources */,
 				C58F001524EA36F800B6D09C /* ShootingSceneDelegate.m in Sources */,
 				C54B3FCA255297C5003BE195 /* UILabel+Extra.m in Sources */,
 				C59D9AB324F8E8DC00A74CE9 /* MKShootVC+VM.m in Sources */,
