@@ -80,15 +80,13 @@ UITextViewDelegate
 -(void)ff{
     NSMutableArray *dataMutArr = [self autoChoiceRes];
     PHAsset *phAsset = (PHAsset *)dataMutArr.lastObject;
-    
+    @weakify(self)
     [FileFolderHandleTool getVedioFromPHAsset:phAsset
-                                     complete:^(id data) {
-        if ([data isKindOfClass:AVURLAsset.class]) {
-            self.urlAsset = (AVURLAsset *)data;
-            NSURL *url = self.urlAsset.URL;
-            self.vedioData = [NSData dataWithContentsOfURL:url];
-            [GPUImageTools.new getImage:url.absoluteString];
-        }
+                                     complete:^(FileFolderHandleModel *data) {
+        @strongify(self)
+        self.vedioData = data.data;
+        self.urlAsset = (AVURLAsset *)data.asset;
+        [GPUImageTools.new getImage:self.urlAsset.URL.absoluteString];
     }];
 }
 ///进来以后直接选择最后一个资源文件，直接绕开TZ
@@ -208,12 +206,10 @@ UITextViewDelegate
                         NSLog(@"");
                         PHAsset *phAsset = (PHAsset *)arg;
                         [FileFolderHandleTool getVedioFromPHAsset:phAsset
-                                                         complete:^(id data) {
-                            if ([data isKindOfClass:AVURLAsset.class]) {
-                                self.urlAsset = (AVURLAsset *)data;
-                                NSURL *url = self.urlAsset.URL;
-                                self.vedioData = [NSData dataWithContentsOfURL:url];
-                            }
+                                                         complete:^(FileFolderHandleModel *data) {
+                            @strongify(self)
+                            self.vedioData = data.data;
+                            self.urlAsset = (AVURLAsset *)data.asset;
                         }];
                     }else if ([arg isKindOfClass:NSString.class]){
                         NSLog(@"");
