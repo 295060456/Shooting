@@ -193,6 +193,8 @@
 		C59D9AED24F8F08500A74CE9 /* ZZCountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AE924F8F08500A74CE9 /* ZZCountingLabel.m */; };
 		C59D9AEE24F8F08500A74CE9 /* ZZCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D9AEA24F8F08500A74CE9 /* ZZCircleProgress.m */; };
 		C59D9AEF24F8F08500A74CE9 /* ZZCircleProgress.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C59D9AEC24F8F08500A74CE9 /* ZZCircleProgress.bundle */; };
+		C59F3AC8259B3BF700E22F9B /* JobsBitsMonitorSuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C59F3AC3259B3BF700E22F9B /* JobsBitsMonitorSuspendLab.m */; };
+		C59F3AC9259B3BF700E22F9B /* JobsBitsMonitorCore.m in Sources */ = {isa = PBXBuildFile; fileRef = C59F3AC5259B3BF700E22F9B /* JobsBitsMonitorCore.m */; };
 		C5A46C0124EFB6E200158D1E /* UIViewController+LZBTabBarVCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFD24EFB6E100158D1E /* UIViewController+LZBTabBarVCItem.m */; };
 		C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFF24EFB6E200158D1E /* LZBTabBarVC.m */; };
 		C5A46C0A24EFB6E900158D1E /* LZBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0424EFB6E800158D1E /* LZBTabBar.m */; };
@@ -657,6 +659,11 @@
 		C59D9AEA24F8F08500A74CE9 /* ZZCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCircleProgress.m; sourceTree = "<group>"; };
 		C59D9AEB24F8F08500A74CE9 /* ZZCircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCircleProgress.h; sourceTree = "<group>"; };
 		C59D9AEC24F8F08500A74CE9 /* ZZCircleProgress.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZCircleProgress.bundle; sourceTree = "<group>"; };
+		C59F3AC2259B3BF700E22F9B /* JobsBitsMonitorSuspendLab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsBitsMonitorSuspendLab.h; sourceTree = "<group>"; };
+		C59F3AC3259B3BF700E22F9B /* JobsBitsMonitorSuspendLab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsBitsMonitorSuspendLab.m; sourceTree = "<group>"; };
+		C59F3AC5259B3BF700E22F9B /* JobsBitsMonitorCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsBitsMonitorCore.m; sourceTree = "<group>"; };
+		C59F3AC6259B3BF700E22F9B /* JobsBitsMonitorCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsBitsMonitorCore.h; sourceTree = "<group>"; };
+		C59F3AC7259B3BF700E22F9B /* JobsBitsMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsBitsMonitor.h; sourceTree = "<group>"; };
 		C5A46BFC24EFB6E100158D1E /* LZBTabBarVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarVCDelegate.h; sourceTree = "<group>"; };
 		C5A46BFD24EFB6E100158D1E /* UIViewController+LZBTabBarVCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LZBTabBarVCItem.m"; sourceTree = "<group>"; };
 		C5A46BFE24EFB6E100158D1E /* LZBTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarVC.h; sourceTree = "<group>"; };
@@ -2109,6 +2116,7 @@
 		C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C59F3AC0259B3BF700E22F9B /* JobsBitsMonitor */,
 				C5C67CA524FF5D61000A26B8 /* 电影倒计时特效 */,
 				C58F01FA24EA617000B6D09C /* 分享控件 */,
 				C53D60EF255C2192006C290D /* 广告或者公示弹出框 */,
@@ -2474,6 +2482,34 @@
 				C59D9AE924F8F08500A74CE9 /* ZZCountingLabel.m */,
 			);
 			path = ZZCircleProgress;
+			sourceTree = "<group>";
+		};
+		C59F3AC0259B3BF700E22F9B /* JobsBitsMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				C59F3AC7259B3BF700E22F9B /* JobsBitsMonitor.h */,
+				C59F3AC4259B3BF700E22F9B /* JobsBitsMonitorCore */,
+				C59F3AC1259B3BF700E22F9B /* JobsBitsMonitorSuspendLab */,
+			);
+			path = JobsBitsMonitor;
+			sourceTree = "<group>";
+		};
+		C59F3AC1259B3BF700E22F9B /* JobsBitsMonitorSuspendLab */ = {
+			isa = PBXGroup;
+			children = (
+				C59F3AC2259B3BF700E22F9B /* JobsBitsMonitorSuspendLab.h */,
+				C59F3AC3259B3BF700E22F9B /* JobsBitsMonitorSuspendLab.m */,
+			);
+			path = JobsBitsMonitorSuspendLab;
+			sourceTree = "<group>";
+		};
+		C59F3AC4259B3BF700E22F9B /* JobsBitsMonitorCore */ = {
+			isa = PBXGroup;
+			children = (
+				C59F3AC6259B3BF700E22F9B /* JobsBitsMonitorCore.h */,
+				C59F3AC5259B3BF700E22F9B /* JobsBitsMonitorCore.m */,
+			);
+			path = JobsBitsMonitorCore;
 			sourceTree = "<group>";
 		};
 		C5AA4909250C8EFB009F583F /* NSObject+Alert */ = {
@@ -3533,6 +3569,7 @@
 				C572A26924FBC547000A1687 /* UIImage+YBGIF.m in Sources */,
 				C57F0D20253336ED0080EEF0 /* NSObject+OpenURL.m in Sources */,
 				C5F4513D25299CA900066AAB /* ZBCacheManager.m in Sources */,
+				C59F3AC9259B3BF700E22F9B /* JobsBitsMonitorCore.m in Sources */,
 				C54B3FC9255297C5003BE195 /* NSObject+RichText.m in Sources */,
 				C561618C24EE4C98001CD851 /* MyCell.m in Sources */,
 				C5F4513925299CA900066AAB /* ZBURLRequest.m in Sources */,
@@ -3542,6 +3579,7 @@
 				C52DEF4F255D2A820016FF07 /* XHLaunchImageView.m in Sources */,
 				C530B0F8254D9ACD00EDEDC8 /* KFZShopCatoryFlowLayput.m in Sources */,
 				C5E5C63925077436001E69DA /* WGradientProgress.m in Sources */,
+				C59F3AC8259B3BF700E22F9B /* JobsBitsMonitorSuspendLab.m in Sources */,
 				C58F01CB24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m in Sources */,
 				C55497A424F38CDB0065510D /* MKShootVC.m in Sources */,
 				C59B9E3B2526F1DF0039B485 /* TableViewAnimationKit.m in Sources */,

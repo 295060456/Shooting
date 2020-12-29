@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability-new"
+
 @interface ShootingSceneDelegate : UIResponder <UIWindowSceneDelegate>
 
 @property(nonatomic,strong)UIWindow *window;
@@ -17,3 +20,4 @@
 
 @end
 
+#pragma clang diagnostic pop

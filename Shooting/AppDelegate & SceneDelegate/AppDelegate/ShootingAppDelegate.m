@@ -11,6 +11,9 @@
 #import "ShootingAppDelegate+PopupView.h"
 #import "ShootingAppDelegate+XHLaunchAdDelegate.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability-new"
+
 @interface ShootingAppDelegate ()
 
 @end
@@ -201,3 +204,5 @@ didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
 }
 
 @end
+
+#pragma clang diagnostic pop
