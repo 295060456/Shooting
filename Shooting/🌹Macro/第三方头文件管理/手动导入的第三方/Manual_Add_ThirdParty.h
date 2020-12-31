@@ -95,7 +95,6 @@
 #import "BWShareView.h"
 #import "FileFolderHandleTool.h"
 #import "ZFMRACNetworkTool.h"//网络请求 RAC+MVVM
-#import "ECAuthorizationTools.h"
 #import "JhtBannerView.h"
 #import "ZZCircleProgress.h"
 #import "MovieCountDown.h"

@@ -244,60 +244,39 @@
 //鉴权
 -(void)check{
     @weakify(self)
-    [ECAuthorizationTools checkAndRequestAccessForType:ECPrivacyType_Camera
-                                          accessStatus:^id(ECAuthorizationStatus status,
-                                                           ECPrivacyType type) {
+    [ECPrivacyCheckGatherTool requestCameraAuthorizationWithCompletionHandler:^(BOOL granted) {
         @strongify(self)
-        // status 即为权限状态，
-        //状态类型参考：ECAuthorizationStatus
-        NSLog(@"%lu",(unsigned long)status);
-        if (status == ECAuthorizationStatus_Authorized) {
+        if (granted) {
             NSLog(@"已经开启摄像头权限");
             self.isCameraCanBeUsed = YES;
-            return nil;
-        }else{
-            NSLog(@"摄像头不可用:%lu",(unsigned long)status);
+        } else {
+            NSLog(@"用户禁用该APP使用相机权限");
             self.isCameraCanBeUsed = NO;
             [self checkRes:self.isCameraCanBeUsed];
-            return nil;
-        }
-    }];
-
-    [ECAuthorizationTools checkAndRequestAccessForType:ECPrivacyType_Microphone
-                                          accessStatus:^id(ECAuthorizationStatus status,
-                                                           ECPrivacyType type) {
-        @strongify(self)
-        // status 即为权限状态，
-        //状态类型参考：ECAuthorizationStatus
-        NSLog(@"%lu",(unsigned long)status);
-        if (status == ECAuthorizationStatus_Authorized) {
-            NSLog(@"已经开启麦克风权限");
-            self.isMicrophoneCanBeUsed = YES;
-            self.recordBtn.alpha = 1;
-            return nil;
-        }else{
-            NSLog(@"麦克风不可用:%lu",(unsigned long)status);
-            self.isMicrophoneCanBeUsed = NO;
-            [self checkRes:self.isMicrophoneCanBeUsed];
-            return nil;
         }
     }];
     
-    [ECAuthorizationTools checkAndRequestAccessForType:ECPrivacyType_Photos
-                                          accessStatus:^id(ECAuthorizationStatus status,
-                                                           ECPrivacyType type) {
+    [ECPrivacyCheckMicrophone requestMicrophoneAuthorizationWithCompletionHandler:^(BOOL granted) {
         @strongify(self)
-        // status 即为权限状态，
-        //状态类型参考：ECAuthorizationStatus
-        NSLog(@"%lu",(unsigned long)status);
-        if (status == ECAuthorizationStatus_Authorized) {
+        if (granted) {
+            NSLog(@"已经开启麦克风权限");
+            self.isMicrophoneCanBeUsed = YES;
+            self.recordBtn.alpha = 1;
+         } else {
+             NSLog(@"用户禁用该APP使用麦克风权限");
+             self.isMicrophoneCanBeUsed = NO;
+             [self checkRes:self.isMicrophoneCanBeUsed];
+         }
+    }];
+    
+    [ECPrivacyCheckGatherTool requestPhotosAuthorizationWithCompletionHandler:^(BOOL granted) {
+        @strongify(self)
+        if (granted) {
             NSLog(@"系统相册可用");
             self.ispPhotoAlbumCanBeUsed = YES;
-            return nil;
-        }else{
-            NSLog(@"系统相册不可用:%lu",(unsigned long)status);
+        } else {
+            NSLog(@"系统相册不可用");
             self.ispPhotoAlbumCanBeUsed = NO;
-            return nil;
         }
     }];
 }

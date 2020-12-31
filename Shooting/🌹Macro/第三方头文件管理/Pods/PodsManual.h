@@ -21,4 +21,6 @@
 #import "ZZCircleProgress.h"
 #endif
 
+#import "ECPrivacyCheckTools.h"
+
 #endif /* PodsManual_h */
