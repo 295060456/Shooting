@@ -10,6 +10,8 @@
 		5F43483576DD63A976B15B35 /* Pods_ShootingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91512E9A64C266AD39D4E6DF /* Pods_ShootingTests.framework */; };
 		7F96368156DDD0B899DCFEA0 /* Pods_Shooting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */; };
 		C5267FB8258A4D1E0095A681 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5267FB6258A4D1E0095A681 /* TimeModel.m */; };
+		C52B98B1259F133D003D9E23 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C52B98AE259F133D003D9E23 /* CollectionViewCell.m */; };
+		C52B98B2259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C52B98B0259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.m */; };
 		C52DEF4D255D2A820016FF07 /* XHLaunchAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF3A255D2A820016FF07 /* XHLaunchAdView.m */; };
 		C52DEF4E255D2A820016FF07 /* XHLaunchAdButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF3D255D2A820016FF07 /* XHLaunchAdButton.m */; };
 		C52DEF4F255D2A820016FF07 /* XHLaunchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF3F255D2A820016FF07 /* XHLaunchImageView.m */; };
@@ -23,7 +25,6 @@
 		C52DEF57255D2A820016FF07 /* XHLaunchAdImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF4B255D2A820016FF07 /* XHLaunchAdImageManager.m */; };
 		C530B0F3254D9ACD00EDEDC8 /* CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0DD254D9ACD00EDEDC8 /* CollectionView.m */; };
 		C530B0F4254D9ACD00EDEDC8 /* UICollectionView+RegisterClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0DE254D9ACD00EDEDC8 /* UICollectionView+RegisterClass.m */; };
-		C530B0F5254D9ACD00EDEDC8 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0E1254D9ACD00EDEDC8 /* CollectionViewCell.m */; };
 		C530B0F6254D9ACD00EDEDC8 /* CollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0E7254D9ACD00EDEDC8 /* CollectionReusableView.m */; };
 		C530B0F7254D9ACD00EDEDC8 /* LMHWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0EB254D9ACD00EDEDC8 /* LMHWaterFallLayout.m */; };
 		C530B0F8254D9ACD00EDEDC8 /* KFZShopCatoryFlowLayput.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0EE254D9ACD00EDEDC8 /* KFZShopCatoryFlowLayput.m */; };
@@ -342,6 +343,10 @@
 		A8D5645268F6187C0B11450E /* Pods-ShootingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingUITests.release.xcconfig"; path = "Target Support Files/Pods-ShootingUITests/Pods-ShootingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C5267FB6258A4D1E0095A681 /* TimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
 		C5267FB7258A4D1E0095A681 /* TimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
+		C52B98AD259F133D003D9E23 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		C52B98AE259F133D003D9E23 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		C52B98AF259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+ShakeAnimation.h"; sourceTree = "<group>"; };
+		C52B98B0259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+ShakeAnimation.m"; sourceTree = "<group>"; };
 		C52DEF37255D2A820016FF07 /* XHLaunchAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdController.h; sourceTree = "<group>"; };
 		C52DEF38255D2A820016FF07 /* XHLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAd.h; sourceTree = "<group>"; };
 		C52DEF39255D2A820016FF07 /* XHLaunchAdDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdDownloader.h; sourceTree = "<group>"; };
@@ -368,8 +373,6 @@
 		C530B0DC254D9ACD00EDEDC8 /* UICollectionView+RegisterClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+RegisterClass.h"; sourceTree = "<group>"; };
 		C530B0DD254D9ACD00EDEDC8 /* CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionView.m; sourceTree = "<group>"; };
 		C530B0DE254D9ACD00EDEDC8 /* UICollectionView+RegisterClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+RegisterClass.m"; sourceTree = "<group>"; };
-		C530B0E0254D9ACD00EDEDC8 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
-		C530B0E1254D9ACD00EDEDC8 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		C530B0E6254D9ACD00EDEDC8 /* CollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionReusableView.h; sourceTree = "<group>"; };
 		C530B0E7254D9ACD00EDEDC8 /* CollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionReusableView.m; sourceTree = "<group>"; };
 		C530B0EA254D9ACD00EDEDC8 /* LMHWaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMHWaterFallLayout.h; sourceTree = "<group>"; };
@@ -1025,8 +1028,10 @@
 		C530B0DF254D9ACD00EDEDC8 /* UICollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				C530B0E0254D9ACD00EDEDC8 /* CollectionViewCell.h */,
-				C530B0E1254D9ACD00EDEDC8 /* CollectionViewCell.m */,
+				C52B98AD259F133D003D9E23 /* CollectionViewCell.h */,
+				C52B98AE259F133D003D9E23 /* CollectionViewCell.m */,
+				C52B98AF259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.h */,
+				C52B98B0259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.m */,
 			);
 			path = UICollectionViewCell;
 			sourceTree = "<group>";
@@ -3667,7 +3672,6 @@
 				C5D1C0EF258B20C400784D2F /* UIViewController+EmptyData.m in Sources */,
 				C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */,
 				C556972E255BFD95005C1361 /* NSString+Extras.m in Sources */,
-				C530B0F5254D9ACD00EDEDC8 /* CollectionViewCell.m in Sources */,
 				C58F010A24EA584B00B6D09C /* LYLUnicode.m in Sources */,
 				C59D9ADD24F8EF4D00A74CE9 /* CustomerAVPlayerView.m in Sources */,
 				C544C1A2258375C300C6CF2A /* LOTAnimationMJRefreshHeader.m in Sources */,
@@ -3696,6 +3700,7 @@
 				C5914BAF25384CD0007777A6 /* UIViewController+BackBtn.m in Sources */,
 				C5F4514E25299D1F00066AAB /* URL_Manager.m in Sources */,
 				C53D60E9255C20FC006C290D /* UITabBar+Ex.m in Sources */,
+				C52B98B2259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.m in Sources */,
 				C58F018E24EA5CAC00B6D09C /* NSArray+Extend.m in Sources */,
 				C561619D24EE4CB7001CD851 /* PhotoVC.m in Sources */,
 				C5914BAD25384CD0007777A6 /* UIViewController+JPImageresizerView.m in Sources */,
@@ -3824,6 +3829,7 @@
 				C52DEF4F255D2A820016FF07 /* XHLaunchImageView.m in Sources */,
 				C530B0F8254D9ACD00EDEDC8 /* KFZShopCatoryFlowLayput.m in Sources */,
 				C5E5C63925077436001E69DA /* WGradientProgress.m in Sources */,
+				C52B98B1259F133D003D9E23 /* CollectionViewCell.m in Sources */,
 				C59F3AC8259B3BF700E22F9B /* JobsBitsMonitorSuspendLab.m in Sources */,
 				C58F01CB24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m in Sources */,
 				C55497A424F38CDB0065510D /* MKShootVC.m in Sources */,
