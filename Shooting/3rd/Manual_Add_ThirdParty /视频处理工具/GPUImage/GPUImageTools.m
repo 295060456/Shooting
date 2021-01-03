@@ -102,8 +102,7 @@
         @strongify(self)
         self.videoSize = self.movieWriterSize;
         NSString *d = [NSString stringWithFormat:@"%@%@",[FileFolderHandleTool directoryAtPath:self.recentlyVedioFileUrl],@"/合成视频的缓存"];
-        
-        if ([FileFolderHandleTool createFolderByUrl:d error:nil]) {
+        if ([FileFolderHandleTool createFoldByFolderUrl:d error:nil]) {
             
             [self.urlArray addObject:[NSURL fileURLWithPath:self.recentlyVedioFileUrl]];
             self.compressedVedioPathStr = [NSString stringWithFormat:@"%@%@%@",[FileFolderHandleTool directoryAtPath:self.recentlyVedioFileUrl],@"/合成视频的缓存/",[FileFolderHandleTool getFullFileName:self.recentlyVedioFileUrl]];//被压缩的视频文件的路径
@@ -330,7 +329,8 @@
     BOOL d = [NSString isNullString:url.absoluteString];
     if (!d) {
         [FileFolderHandleTool delFile:@[url.absoluteString]
-                           fileSuffix:@"mp4"];//删除文件夹📂路径下的文件
+                           fileSuffix:@"mp4"
+                                error:nil];//删除文件夹📂路径下的文件
     }
 }
 ///videoCamera的点击事件
@@ -456,7 +456,7 @@
 }
 
 - (void)initMovieWriter{
-    if ([FileFolderHandleTool createFileByUrl:self.recentlyVedioFileUrl error:nil]) {
+    if ([FileFolderHandleTool createFoldByFolderUrl:self.recentlyVedioFileUrl error:nil]) {
         movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:[NSURL fileURLWithPath:self.recentlyVedioFileUrl]
                                                                size:self.movieWriterSize];
         movieWriter.encodingLiveVideo = YES;

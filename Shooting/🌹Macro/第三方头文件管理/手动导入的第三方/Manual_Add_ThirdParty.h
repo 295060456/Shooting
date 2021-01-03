@@ -32,6 +32,7 @@
 #import "NSObject+SPAlertController.h"
 #import "NSObject+Shake.h"
 #import "NSObject+OpenURL.h"
+#import "NSObject+DataSave.h"
 //#import "NSObject+Login.h"
 /// UIControl
 #import "UIControl+XY.h"
