@@ -57,6 +57,7 @@
 #import "UIView+Animation.h"
 #import "UIView+Gradient.h"
 #import "UIView+EmptyData.h"
+#import "UIView+Gesture.h"
 /// UIViewController
 #import "UIViewController+BaseVC.h"
 #import "UIViewController+BackBtn.h"

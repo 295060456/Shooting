@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5F43483576DD63A976B15B35 /* Pods_ShootingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91512E9A64C266AD39D4E6DF /* Pods_ShootingTests.framework */; };
 		7F96368156DDD0B899DCFEA0 /* Pods_Shooting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD724946959B4E1AA5A4A323 /* Pods_Shooting.framework */; };
+		C51576C925A351050074D945 /* UIView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = C51576C825A351050074D945 /* UIView+Gesture.m */; };
 		C5267FB8258A4D1E0095A681 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5267FB6258A4D1E0095A681 /* TimeModel.m */; };
 		C52B98B1259F133D003D9E23 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C52B98AE259F133D003D9E23 /* CollectionViewCell.m */; };
 		C52B98B2259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C52B98B0259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.m */; };
@@ -342,6 +343,8 @@
 		975BB3BDBE4F3C4E85B6606A /* Pods-Shooting-ShootingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shooting-ShootingUITests.release.xcconfig"; path = "Target Support Files/Pods-Shooting-ShootingUITests/Pods-Shooting-ShootingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A632BB4591B3A18FC18AFCCE /* Pods-ShootingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingTests.release.xcconfig"; path = "Target Support Files/Pods-ShootingTests/Pods-ShootingTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8D5645268F6187C0B11450E /* Pods-ShootingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingUITests.release.xcconfig"; path = "Target Support Files/Pods-ShootingUITests/Pods-ShootingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C51576C725A351050074D945 /* UIView+Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gesture.h"; sourceTree = "<group>"; };
+		C51576C825A351050074D945 /* UIView+Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gesture.m"; sourceTree = "<group>"; };
 		C5267FB6258A4D1E0095A681 /* TimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
 		C5267FB7258A4D1E0095A681 /* TimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
 		C52B98AD259F133D003D9E23 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -974,6 +977,15 @@
 				CD4BE3252B8466331AF9F6A0 /* Pods_ShootingUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C51576C625A351050074D945 /* UIView+Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				C51576C725A351050074D945 /* UIView+Gesture.h */,
+				C51576C825A351050074D945 /* UIView+Gesture.m */,
+			);
+			path = "UIView+Gesture";
 			sourceTree = "<group>";
 		};
 		C5267FB5258A4D1E0095A681 /* NSObject (Time) */ = {
@@ -2112,6 +2124,7 @@
 		C58F011924EA5CAC00B6D09C /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				C51576C625A351050074D945 /* UIView+Gesture */,
 				C595BE4D2586422B002A4531 /* UIView+Animation */,
 				C546100A258C8F780008928C /* UIView+AOP */,
 				C595BE4F25864239002A4531 /* UIView+Chain */,
@@ -3767,6 +3780,7 @@
 				C53D60DF255C20FC006C290D /* TabbarVC.m in Sources */,
 				C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */,
 				C58F018124EA5CAC00B6D09C /* DeleteSystemUITabBarButton.m in Sources */,
+				C51576C925A351050074D945 /* UIView+Gesture.m in Sources */,
 				C5F4513E25299CA900066AAB /* NSString+ZBUTF8Encoding.m in Sources */,
 				C5850AEB25483DA1001E6676 /* ViewForTableViewHeader.m in Sources */,
 				C5B5EF26250CCE3E00DCDA93 /* NSObject+Shake.m in Sources */,
