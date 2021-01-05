@@ -106,6 +106,7 @@
 		C56161BF24EE4F4B001CD851 /* JhtBannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161BD24EE4F4B001CD851 /* JhtBannerScrollView.m */; };
 		C56161C224EE4F52001CD851 /* JhtBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161C124EE4F52001CD851 /* JhtBannerView.m */; };
 		C56161C524EE5019001CD851 /* NSObject+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161C424EE5019001CD851 /* NSObject+Measure.m */; };
+		C565CBC125A4384800848134 /* TwoVerticalArrangementLabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C565CBBE25A4384800848134 /* TwoVerticalArrangementLabsView.m */; };
 		C56BBC5325879A6B0043C977 /* UIControl+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = C56BBC5125879A6B0043C977 /* UIControl+XY.m */; };
 		C56E428E2547188A00B9F555 /* ⚽️PicResource in Resources */ = {isa = PBXBuildFile; fileRef = C56E428D2547188A00B9F555 /* ⚽️PicResource */; };
 		C57278B82540974C002373D7 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C57278B32540974B002373D7 /* NavigationBar.m */; };
@@ -526,6 +527,9 @@
 		C56161C424EE5019001CD851 /* NSObject+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Measure.m"; sourceTree = "<group>"; };
 		C56208F82553FFE900FE435F /* 验证码按钮单例封装.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "验证码按钮单例封装.md"; sourceTree = "<group>"; };
 		C56208F92553FFF900FE435F /* 高度自定义的按钮.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "高度自定义的按钮.md"; sourceTree = "<group>"; };
+		C565CBBE25A4384800848134 /* TwoVerticalArrangementLabsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoVerticalArrangementLabsView.m; sourceTree = "<group>"; };
+		C565CBBF25A4384800848134 /* TwoVerticalArrangementLabsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoVerticalArrangementLabsView.h; sourceTree = "<group>"; };
+		C565CBC025A4384800848134 /* TwoVerticalArrangementLabsView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwoVerticalArrangementLabsView.png; sourceTree = "<group>"; };
 		C56BBC5025879A6B0043C977 /* UIControl+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+XY.h"; sourceTree = "<group>"; };
 		C56BBC5125879A6B0043C977 /* UIControl+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+XY.m"; sourceTree = "<group>"; };
 		C56BBC5225879A6B0043C977 /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "iOS小技巧：用runtime 解决UIButton 重复点击问题.md"; sourceTree = "<group>"; };
@@ -1765,6 +1769,16 @@
 			path = JhtBannerCardView;
 			sourceTree = "<group>";
 		};
+		C565CBBD25A4384800848134 /* TwoVerticalArrangementLabsView */ = {
+			isa = PBXGroup;
+			children = (
+				C565CBBF25A4384800848134 /* TwoVerticalArrangementLabsView.h */,
+				C565CBBE25A4384800848134 /* TwoVerticalArrangementLabsView.m */,
+				C565CBC025A4384800848134 /* TwoVerticalArrangementLabsView.png */,
+			);
+			path = TwoVerticalArrangementLabsView;
+			sourceTree = "<group>";
+		};
 		C56BBC4F25879A6B0043C977 /* UIControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -2255,6 +2269,7 @@
 		C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C565CBBD25A4384800848134 /* TwoVerticalArrangementLabsView */,
 				C59F3AC0259B3BF700E22F9B /* JobsBitsMonitor */,
 				C5C67CA524FF5D61000A26B8 /* 电影倒计时特效 */,
 				C58F01FA24EA617000B6D09C /* 分享控件 */,
@@ -3706,6 +3721,7 @@
 				C561619824EE4CA9001CD851 /* MKUploadingVC.m in Sources */,
 				C534CE1F25875A31001369FD /* BWShareView.m in Sources */,
 				C59D9AD724F8EF4100A74CE9 /* CustomerAVPlayerVC.m in Sources */,
+				C565CBC125A4384800848134 /* TwoVerticalArrangementLabsView.m in Sources */,
 				C52DEF51255D2A820016FF07 /* XHLaunchAd.m in Sources */,
 				C53D60E1255C20FC006C290D /* JobsPullListTBVCell.m in Sources */,
 				C572A26B24FBC547000A1687 /* UIImage+Extras.m in Sources */,
