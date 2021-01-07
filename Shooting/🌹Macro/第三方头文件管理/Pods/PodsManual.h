@@ -23,4 +23,6 @@
 
 #import "ECPrivacyCheckTools.h"
 
+#import "GKPhotoBrowser+SaveBtn.h"
+
 #endif /* PodsManual_h */

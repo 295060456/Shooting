@@ -7,20 +7,12 @@
 
 #import <UIKit/UIKit.h>
 
-//#import "UBLSearchCollectionReusableView.h"
-//#import "UBLHotCollectionReusableView.h"
-//#import "UBLAllCollectionReusableView.h"
-//
-//#import "UBLVideoCollectionViewCell@Style1.h"
-//#import "UBLVideoCollectionViewCell@Style2.h"
-//#import "UBLVideoCollectionViewCell@Style3.h"
-//#import "UBLVideoCollectionViewCell@Style4.h"
-//#import "UBLVideoCollectionViewCell@Style5.h"
-//#import "UBLVideoCollectionViewCell@Style6.h"
-//#import "UBLVideoCollectionViewCell@Style7.h"
-//#import "UBLVideoCollectionViewCell@Style8.h"
-//#import "UBLVideoCollectionViewCell@Style9.h"
-//#import "UBLVideoCollectionViewCell@Style10.h"
+#import "DDCollectionViewCell_Style1.h"
+#import "DDCollectionViewCell_Style2.h"
+#import "DDCollectionViewCell_Style3.h"
+#import "DDCollectionViewCell_Style4.h"
+#import "DDCollectionViewCell_Style5.h"
+#import "DDUserDetailsCollectionReusableView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

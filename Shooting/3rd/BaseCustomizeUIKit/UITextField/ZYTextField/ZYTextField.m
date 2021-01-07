@@ -28,7 +28,7 @@
 
 -(BOOL)canPerformAction:(SEL)action
              withSender:(id)sender{
-    UIMenuController.sharedMenuController.menuVisible = self.isShowMenu;
+    SuppressWdeprecatedDeclarationsWarning(UIMenuController.sharedMenuController.menuVisible = self.isShowMenu);
     return self.isShowMenu;
 }
 

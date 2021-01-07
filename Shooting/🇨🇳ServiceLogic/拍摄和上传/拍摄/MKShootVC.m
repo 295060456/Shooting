@@ -556,13 +556,13 @@
 
 -(JhtBannerView *)bannerView{
     if (!_bannerView) {
-        _bannerView = [[JhtBannerView alloc] initWithFrame:CGRectMake([NSObject measureSubview:MAINSCREEN_WIDTH * 2 / 3 superview:MAINSCREEN_WIDTH],
-//                                                                      MAINSCREEN_HEIGHT - SCALING_RATIO(98),
+        _bannerView = [[JhtBannerView alloc] initWithFrame:CGRectMake([NSObject measureSubview:SCREEN_WIDTH * 2 / 3 superview:SCREEN_WIDTH],
+//                                                                      SCREEN_HEIGHT - SCALING_RATIO(98),
                                                                       self.gradProg.mj_y + self.gradProg.mj_h,
-                                                                      MAINSCREEN_WIDTH * 2 / 3,
+                                                                      SCREEN_WIDTH * 2 / 3,
                                                                       SCALING_RATIO(40))];
         
-        _bannerView.JhtBannerCardViewSize = CGSizeMake(MAINSCREEN_WIDTH * 2 / 9, SCALING_RATIO(40));
+        _bannerView.JhtBannerCardViewSize = CGSizeMake(SCREEN_WIDTH * 2 / 9, SCALING_RATIO(40));
         [self.view addSubview:_bannerView];
 
         [_bannerView setDataArr:self.timeArr];//这个时候就设置了 UIPageControl
@@ -586,7 +586,7 @@
                 self.recordBtn.progressView.safetyTime = self.safetyTime;
                 self.gradProg = nil;
                 self.gradProg.alpha = 1;
-//                self.gradProg.fenceLayer_x = self.safetyTime * MAINSCREEN_WIDTH / self.time;
+//                self.gradProg.fenceLayer_x = self.safetyTime * SCREEN_WIDTH / self.time;
                 NSLog(@"self.time = %f",self.time);
             }
         }];
@@ -743,7 +743,7 @@
             [self.view.layer addSublayer:_AVPlayerView.playerLayer];
             [_AVPlayerView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.equalTo(self.view).offset(SCALING_RATIO(50));
-                make.size.mas_equalTo(CGSizeMake(MAINSCREEN_WIDTH / 2, MAINSCREEN_HEIGHT / 2));
+                make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2));
                 if (self.gk_navBarAlpha && !self.gk_navigationBar.hidden) {//显示
                     make.top.equalTo(self.gk_navigationBar.mas_bottom);
                 }else{
@@ -780,7 +780,7 @@
         _gradProg.length_timeInterval = 1;
         _gradProg.fenceLayerColor = kWhiteColor;
         _gradProg.increment = 1 / self.time;
-        _gradProg.fenceLayer_x = self.safetyTime * MAINSCREEN_WIDTH / self.time;
+        _gradProg.fenceLayer_x = self.safetyTime * SCREEN_WIDTH / self.time;
         
 //        @weakify(self)
         [_gradProg actionWGradientProgressBlock:^(NSNumber *data,
@@ -792,7 +792,7 @@
         [self.view addSubview:_gradProg];
         [_gradProg mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
-            make.width.mas_equalTo(MAINSCREEN_WIDTH);
+            make.width.mas_equalTo(SCREEN_WIDTH);
             make.height.mas_equalTo(5);
             make.top.equalTo(self.recordBtn.mas_bottom).offset(10);
         }];
@@ -811,7 +811,7 @@
         [_progressView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(25, 25));
             make.bottom.equalTo(self.gradProg.mas_top);
-            make.left.mas_equalTo(self.safetyTime * MAINSCREEN_WIDTH / self.time - 25 / 2);
+            make.left.mas_equalTo(self.safetyTime * SCREEN_WIDTH / self.time - 25 / 2);
         }];
     }return _progressView;
 }

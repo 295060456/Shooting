@@ -151,6 +151,12 @@
 #import "Lottie.h"
 #endif
 
+#if __has_include(<HXPhotoPicker/HXPhotoPicker.h>)
+#import <HXPhotoPicker/HXPhotoPicker.h>
+#else
+#import "HXPhotoPicker.h"
+#endif
+
 #if __has_include(<LYEmptyView/LYEmptyViewHeader.h>)
 #import <LYEmptyView/LYEmptyViewHeader.h>
 #else

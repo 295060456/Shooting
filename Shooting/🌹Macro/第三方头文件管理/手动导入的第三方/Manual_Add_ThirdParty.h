@@ -88,11 +88,25 @@
 /// UITableViewHeaderFooterView
 #import "ViewForTableViewFooter.h"
 #import "ViewForTableViewHeader.h"
+/// UICollectionReusableView 用作基类
+#import "CollectionReusableView.h"
+// UICollectionView
+#import "CollectionView.h"
+#import "UICollectionView+RegisterClass.h"
+/// UICollectionViewCell
+#import "CollectionViewCell.h"
+// UICollectionViewFlowLayout
+/// LMHWaterFallLayout
+#import "LMHWaterFallLayout.h"
+/// 给UICollectionView每个section加背景
+#import "KFZShopCatoryFlowLayput.h"
+/// UICollectionView 实现类似于UITableView的悬停效果
+#import "HQCollectionViewFlowLayout.h"
 
 #pragma mark —— Manual_Add_ThirdParty
 #import "UserDefaultManager.h"
 #import "SuspendLab.h"
-#import "suspendBtn.h"
+#import "SuspendBtn.h"
 #import "SuspendView.h"
 #import "BWShareView.h"
 #import "FileFolderHandleTool.h"
@@ -107,5 +121,6 @@
 //加密体系
 #import "AESCipher.h"
 #import "AESCrypt.h"
+#import "MD5.h"
 
 #endif /* Manual_Add_ThirdParty_h */

@@ -423,7 +423,7 @@ shouldChangeTextInRange:(NSRange)range
         }];
         [self.view addSubview:_releaseBtn];
         [_releaseBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(MAINSCREEN_WIDTH / 2.5, SCALING_RATIO(30)));
+            make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH / 2.5, SCALING_RATIO(30)));
             make.centerX.equalTo(self.view);
             make.top.equalTo(self.choosePicBtn.mas_bottom).offset(SCALING_RATIO(50));
         }];

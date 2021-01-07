@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonHMAC.h>
 #import "NSString+Extras.h"
+#import "GTMBase64.h"
 
 /// MD5  信息摘要
 /// @param salt  MD5 加盐

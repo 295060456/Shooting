@@ -26,8 +26,10 @@
 #import "PodsManual.h"
 /// Manual_Add_ThirdParty
 #import "Manual_Add_ThirdParty.h"
+
 #pragma mark —— 各项全局定义
 /// 各项宏定义
+#import "MacroDef_App.h"
 #import "MacroDef_Sys.h"
 #import "MacroDef_Cor.h"
 #import "MacroDef_Size.h"
@@ -38,6 +40,9 @@
 #import "DefineStructure.h"
 /// NotificationManager
 #import "NotificationManager.h"
+
+#pragma mark —— 数据层相关
+#import "DAO.h"
 
 #pragma mark —— 其他杂项
 #import "Other.h"

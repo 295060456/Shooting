@@ -169,8 +169,8 @@ didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
                                                                          @"green_lottie_tab_home",
                                                                          1)];
         
-        [_tabBarVC.childMutArr addObject:childViewController_customStyle(ViewController_3.new,
-                                                                         @"发现",
+        [_tabBarVC.childMutArr addObject:childViewController_customStyle(DDPlazaVC.new,
+                                                                         @"广场",
                                                                          KBuddleIMG(@"资源文件", @"TabbaritemImage", nil, @"post_selected"),
                                                                          KBuddleIMG(@"资源文件", @"TabbaritemImage", nil, @"post_unselected"),
                                                                          30,
@@ -199,7 +199,7 @@ didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
     if (!_popupView) {
         _popupView = NoticePopupView.new;
         _popupView.mj_h = 250;
-        _popupView.mj_w = MAINSCREEN_WIDTH * 2 / 3;
+        _popupView.mj_w = SCREEN_WIDTH * 2 / 3;
     }return _popupView;
 }
 
