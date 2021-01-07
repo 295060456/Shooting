@@ -362,16 +362,16 @@
                   MKDataBlock block = ^(NSString *title){
                       NSLog(@"打开失败");
                       @strongify(self)
-                      [NSObject showSYSAlertViewTitle:title
+                      [NSObject showSYSAlertViewTitle:@"主人，写点什么吧~~~"
                                               message:nil
                                       isSeparateStyle:YES
                                           btnTitleArr:@[@"去获取"]
                                        alertBtnAction:@[@"pushToSysConfig"]
                                              targetVC:self
-                                         alertVCBlock:^(id data) {
-                          //DIY
-                          NSLog(@"");
-                      }];
+                                               funcVC:nil
+                                             animated:YES
+                                         alertVCBlock:nil
+                                      completionBlock:nil];
                   };
 
                   if (self.isCameraCanBeUsed && //摄像头
@@ -626,13 +626,14 @@
             [self.gpuImageTools vedioShoottingSuspend];
             [NSObject showSYSAlertViewTitle:@"删除作品？"
                                     message:nil
-                            isSeparateStyle:NO
+                            isSeparateStyle:YES
                                 btnTitleArr:@[@"确认",@"继续录制"]
                              alertBtnAction:@[@"sure",@"shoottingContinue"]
                                    targetVC:self
-                               alertVCBlock:^(id data) {
-
-            }];
+                                     funcVC:nil
+                                   animated:YES
+                               alertVCBlock:nil
+                            completionBlock:nil];
         }];
         [self.view addSubview:_deleteFilmBtn];
         [_deleteFilmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -707,16 +708,15 @@
                 @strongify(self)
                 [NSObject showSYSAlertViewTitle:@"软件内部错误"
                                         message:@"因为某种未知的原因，找不到播放的资源文件"
-                                isSeparateStyle:NO
+                                isSeparateStyle:YES
                                     btnTitleArr:@[@"确定"]
                                  alertBtnAction:@[@""]
                                        targetVC:self
-                                   alertVCBlock:^(id data) {
-                    //DIY
-                    NSLog(@"");
-                }];
+                                         funcVC:nil
+                                       animated:YES
+                                   alertVCBlock:nil
+                                completionBlock:nil];
             }];
-            
             ///点击事件回调 参数1：self CustomerAVPlayerView，参数2：手势 UITapGestureRecognizer & UISwipeGestureRecognizer
             [_AVPlayerView actionCustomerAVPlayerBlock:^(id data,
                                                          id data2) {
@@ -830,20 +830,18 @@
         @weakify(self)
         [[_backBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self)
-            [NSObject showSYSActionSheetTitle:nil
-                                      message:nil
-                              isSeparateStyle:YES
-                                  btnTitleArr:@[@"重新拍摄",@"退出",@"取消"]
-                               alertBtnAction:@[@"",@"exit",@""]
-                                        targetVC:self
-                                       sender:nil
-                                 alertVCBlock:^(id data) {
-                //DIY
-                NSLog(@"");
-            }];
+            [NSObject showSYSAlertViewTitle:nil
+                                    message:nil
+                            isSeparateStyle:YES
+                                btnTitleArr:@[@"重新拍摄",@"退出",@"取消"]
+                             alertBtnAction:@[@"",@"exit",@""]
+                                   targetVC:self
+                                     funcVC:nil
+                                   animated:YES
+                               alertVCBlock:nil
+                            completionBlock:nil];
         }];
     }return _backBtn;
 }
-
 
 @end

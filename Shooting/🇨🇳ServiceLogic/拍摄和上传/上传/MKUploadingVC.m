@@ -221,13 +221,14 @@ UITextViewDelegate
                             }else if ([arr[0] isKindOfClass:UIImage.class]){
                                 [NSObject showSYSAlertViewTitle:@"请选择视频作品"
                                                         message:nil
-                                                isSeparateStyle:NO
+                                                isSeparateStyle:YES
                                                     btnTitleArr:@[@"确认"]
                                                  alertBtnAction:@[@"sure"]
                                                        targetVC:self
-                                                   alertVCBlock:^(id data) {
-                                    //DIY
-                                }];
+                                                         funcVC:nil
+                                                       animated:YES
+                                                   alertVCBlock:nil
+                                                completionBlock:nil];
                             }else{
                                 NSLog(@"");
                             }
@@ -398,23 +399,25 @@ shouldChangeTextInRange:(NSRange)range
                 if (!self.imgData) {
                     [NSObject showSYSAlertViewTitle:@"您还没选择需要上传的视频呢~~~"
                                             message:nil
-                                    isSeparateStyle:NO
-                                        btnTitleArr:@[@"确定"]
+                                    isSeparateStyle:YES
+                                        btnTitleArr:@[@"确认"]
                                      alertBtnAction:@[@"sure"]
                                            targetVC:self
-                                       alertVCBlock:^(id data) {
-                        //DIY
-                    }];
+                                             funcVC:nil
+                                           animated:YES
+                                       alertVCBlock:nil
+                                    completionBlock:nil];
                 }else if ([NSString isNullString:self.textView.text]){
                     [NSObject showSYSAlertViewTitle:@"主人，写点什么吧~~~"
                                             message:nil
-                                    isSeparateStyle:NO
-                                        btnTitleArr:@[@"确定"]
-                                     alertBtnAction:@[@""]
+                                    isSeparateStyle:YES
+                                        btnTitleArr:@[@"确认"]
+                                     alertBtnAction:@[@"sure"]
                                            targetVC:self
-                                       alertVCBlock:^(id data) {
-                        //DIY
-                    }];
+                                             funcVC:nil
+                                           animated:YES
+                                       alertVCBlock:nil
+                                    completionBlock:nil];
                 }else{}
             }
         }];

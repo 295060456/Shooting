@@ -180,13 +180,14 @@ didScrollSelectedItemAtIndex:(NSInteger)index{
             case VedioShootType_on:{//开始录制
                 [NSObject showSYSAlertViewTitle:@"暂停拍摄？"
                                         message:nil
-                                isSeparateStyle:NO
+                                isSeparateStyle:YES
                                     btnTitleArr:@[@"确认暂停",@"继续拍摄"]
                                  alertBtnAction:@[@"suspendShoot",@"continueShoot"]
-                                        targetVC:self
-                                   alertVCBlock:^(id data) {
-                    //DIY
-                }];
+                                       targetVC:self
+                                         funcVC:nil
+                                       animated:YES
+                                   alertVCBlock:nil
+                                completionBlock:nil];
             } break;
             case VedioShootType_suspend:{//暂停录制
                 
@@ -194,13 +195,14 @@ didScrollSelectedItemAtIndex:(NSInteger)index{
             case VedioShootType_continue:{//继续录制
                 [NSObject showSYSAlertViewTitle:@"丢弃掉当前拍摄的作品？"
                                         message:nil
-                                isSeparateStyle:NO
+                                isSeparateStyle:YES
                                     btnTitleArr:@[@"确认",@"手滑了"]
                                  alertBtnAction:@[@"sure",@"Cancel"]
                                        targetVC:self
-                                   alertVCBlock:^(id data) {
-                    //DIY
-                }];
+                                         funcVC:nil
+                                       animated:YES
+                                   alertVCBlock:nil
+                                completionBlock:nil];
             } break;
             case VedioShootType_off:{//取消录制
                 
