@@ -20,6 +20,18 @@
 #import "GKPhotoBrowser.h"
 #endif
 
+#if __has_include(<YYImage/YYImage.h>)
+#import <YYImage/YYImage.h>
+#else
+#import "YYImage.h"
+#endif
+
+#if __has_include(<SDWebImage/SDWebImage.h>)
+#import <SDWebImage/SDWebImage.h>
+#else
+#import "SDWebImage.h"
+#endif
+
 @interface NSObject (Extras)
 ///震动特效反馈
 +(void)feedbackGenerator;

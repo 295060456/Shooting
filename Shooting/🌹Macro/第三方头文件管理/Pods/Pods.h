@@ -73,6 +73,12 @@
 #import "GKNavigationBar.h"
 #endif
 
+#if __has_include(<GKPhotoBrowser/GKPhotoBrowser.h>)
+#import <GKPhotoBrowser/GKPhotoBrowser.h>
+#else
+#import "GKPhotoBrowser.h"
+#endif
+
 #if __has_include(<JXCategoryView/JXCategoryView.h>)
 #import <JXCategoryView/JXCategoryView.h>
 #else
