@@ -96,7 +96,7 @@ replacementString:(NSString *)string{
     }
 
     NSLog(@"SSSresString = %@",resString);
-    self.securityModeBtn.hidden = ![NSString isNullString:resString] || !self.doorInputViewBaseStyleModel.isShowSecurityBtn;
+//    self.securityModeBtn.hidden = ![NSString isNullString:resString] || !self.doorInputViewBaseStyleModel.isShowSecurityBtn;
     [self block:textField
           value:resString];
     return YES;
@@ -115,11 +115,11 @@ replacementString:(NSString *)string{
     NSLog(@"SSSSresString = %@",textField.text);
     if ([textField.placeholder isEqualToString:@"6-12位字母或数字的密码"] ||
         [textField.placeholder isEqualToString:@"确认密码"]) {
-        if (textField.text.length > 0) {
-            self.securityModeBtn.hidden = NO;
-        } else {
-            self.securityModeBtn.hidden = YES;
-        }
+//        if (textField.text.length > 0) {
+//            self.securityModeBtn.hidden = NO;
+//        } else {
+//            self.securityModeBtn.hidden = YES;
+//        }
     }
 }
 
@@ -137,9 +137,9 @@ replacementString:(NSString *)string{
     if (!_securityModeBtn) {
         _securityModeBtn = UIButton.new;
         [_securityModeBtn setImage:self.doorInputViewBaseStyleModel.selectedSecurityBtnIMG
-                          forState:UIControlStateNormal];
-        [_securityModeBtn setImage:self.doorInputViewBaseStyleModel.unSelectedSecurityBtnIMG
                           forState:UIControlStateSelected];
+        [_securityModeBtn setImage:self.doorInputViewBaseStyleModel.unSelectedSecurityBtnIMG
+                          forState:UIControlStateNormal];
         @weakify(self)
         [[_securityModeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIButton * _Nullable x) {
             @strongify(self)
@@ -178,6 +178,5 @@ replacementString:(NSString *)string{
         }];
     }return _tf;
 }
-
 
 @end
