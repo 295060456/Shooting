@@ -20,9 +20,14 @@
 #else
 #import "ZZCircleProgress.h"
 #endif
-
+/// 鉴权
 #import "ECPrivacyCheckTools.h"
-
+/// GKPhotoBrowser
 #import "GKPhotoBrowser+SaveBtn.h"
+/// JXCategoryView
+#import "JXCategoryTitleBackgroundView.h"
+#import "JXCategoryTimelineView.h"
+/// 提示框
+#import "WHToast+DDToast.h"
 
 #endif /* PodsManual_h */
