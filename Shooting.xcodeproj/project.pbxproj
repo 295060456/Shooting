@@ -253,6 +253,8 @@
 		C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9D24FF5D3B000A26B8 /* Nanosecond_TimerManager.m */; };
 		C5C67CA824FF5D68000A26B8 /* MovieCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA624FF5D68000A26B8 /* MovieCountDown.m */; };
 		C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */; };
+		C5CF16EE25AC7F7300381935 /* LYLUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF16EB25AC7F7300381935 /* LYLUnicode.m */; };
+		C5CF16EF25AC7F7300381935 /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */ = {isa = PBXBuildFile; fileRef = C5CF16EC25AC7F7300381935 /* 解决打印日志对于Unicode编码不能正常显示中文的问题 */; };
 		C5D0BAC725878EA6002CA224 /* Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5D0BAC325878EA6002CA224 /* Sound.wav */; };
 		C5D0BAC825878EA6002CA224 /* 带有按键音的按钮.md in Resources */ = {isa = PBXBuildFile; fileRef = C5D0BAC425878EA6002CA224 /* 带有按键音的按钮.md */; };
 		C5D0BAC925878EA6002CA224 /* SoundBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D0BAC525878EA6002CA224 /* SoundBtn.m */; };
@@ -922,6 +924,9 @@
 		C5C67CA724FF5D68000A26B8 /* MovieCountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCountDown.h; sourceTree = "<group>"; };
 		C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Measure.m"; sourceTree = "<group>"; };
 		C5C67CAA24FF5D94000A26B8 /* UIView+Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Measure.h"; sourceTree = "<group>"; };
+		C5CF16EB25AC7F7300381935 /* LYLUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLUnicode.m; sourceTree = "<group>"; };
+		C5CF16EC25AC7F7300381935 /* 解决打印日志对于Unicode编码不能正常显示中文的问题 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "解决打印日志对于Unicode编码不能正常显示中文的问题"; sourceTree = "<group>"; };
+		C5CF16ED25AC7F7300381935 /* LYLUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLUnicode.h; sourceTree = "<group>"; };
 		C5D0BAC325878EA6002CA224 /* Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound.wav; sourceTree = "<group>"; };
 		C5D0BAC425878EA6002CA224 /* 带有按键音的按钮.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "带有按键音的按钮.md"; sourceTree = "<group>"; };
 		C5D0BAC525878EA6002CA224 /* SoundBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundBtn.m; sourceTree = "<group>"; };
@@ -2563,6 +2568,7 @@
 		C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C5CF16EA25AC7F7300381935 /* LYLUnicode */,
 				C5A43A7025AAF8A5000F0CD2 /* 手势滑动返回 */,
 				C5D7B4CD25A740D500166E83 /* KeychainIDFA */,
 				C5D7B46B25A73E1800166E83 /* 播放器控制层 */,
@@ -3139,6 +3145,16 @@
 				C5C67CA624FF5D68000A26B8 /* MovieCountDown.m */,
 			);
 			path = "电影倒计时特效";
+			sourceTree = "<group>";
+		};
+		C5CF16EA25AC7F7300381935 /* LYLUnicode */ = {
+			isa = PBXGroup;
+			children = (
+				C5CF16EB25AC7F7300381935 /* LYLUnicode.m */,
+				C5CF16EC25AC7F7300381935 /* 解决打印日志对于Unicode编码不能正常显示中文的问题 */,
+				C5CF16ED25AC7F7300381935 /* LYLUnicode.h */,
+			);
+			path = LYLUnicode;
 			sourceTree = "<group>";
 		};
 		C5D0BAC225878EA6002CA224 /* SoundBtn */ = {
@@ -4783,6 +4799,7 @@
 				C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */,
 				C53D60D1255C20FC006C290D /* 我的.json in Resources */,
 				C5C65411259DF94500FD2F99 /* 麦克风@2x.png in Resources */,
+				C5CF16EF25AC7F7300381935 /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */,
 				C5C65423259DF94500FD2F99 /* 相机@3x.png in Resources */,
 				C5F452312529A6D900066AAB /* RSA in Resources */,
 				C5D7B15E25A73AE500166E83 /* 输入框样式_3.png in Resources */,
@@ -5248,6 +5265,7 @@
 				C53D60C6255C20FC006C290D /* UITabBarItem+TLAnimation.m in Sources */,
 				C56161C224EE4F52001CD851 /* JhtBannerView.m in Sources */,
 				C5D7B26825A73B3B00166E83 /* DDInvitationModel.m in Sources */,
+				C5CF16EE25AC7F7300381935 /* LYLUnicode.m in Sources */,
 				C5D7B47925A73E5600166E83 /* UIViewController+XLBubbleTransition.m in Sources */,
 				C5D7B22125A73B2500166E83 /* NetworkingAPI+MsgApi.m in Sources */,
 				C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */,
