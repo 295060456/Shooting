@@ -7,12 +7,12 @@
 //
 
 #import "TabbarVC.h"
+#import "UIView+Gesture.h"
 #import "TLTabBarAnimation.h"
 #import "UITabBar+TLAnimation.h"
 #import "UITabBarItem+TLAnimation.h"
 #import "TransitionController.h"
 #import "TransitionAnimation.h"
-#import "ShootingAppDelegate.h"
 
 TabbarVC *tabBarVC;
 
@@ -24,7 +24,6 @@ UIGestureRecognizerDelegate
 
 @property(nonatomic,assign)NSInteger subViewControllerCount;
 @property(nonatomic,strong)NSMutableArray <UIView *>*UITabBarButtonMutArr;//UITabBarButton 是内部类 直接获取不到，需要间接获取
-@property(nonatomic,strong)UIPanGestureRecognizer *panGestureRecognizer;
 
 @end
 
@@ -45,7 +44,11 @@ UIGestureRecognizerDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.panGestureRecognizer.enabled = self.isOpenScrollTabbar;
+    if (self.isOpenScrollTabbar) {
+        self.view.target = self;
+        self.view.panGRSEL = NSStringFromSelector(@selector(panGestureRecognizer:));
+        self.view.panGR.enabled = self.isOpenScrollTabbar;
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -191,26 +194,12 @@ UIGestureRecognizerDelegate
 -(void)添加长按手势{
     for (UIView *subView in self.UITabBarButtonMutArr) {
         subView.tag = [self.UITabBarButtonMutArr indexOfObject:subView];
-        
-        /*
-         * 长按手势是连续的。
-         当在指定的时间段（minimumPressDuration）
-         按下允许的手指的数量（numberOfTouchesRequired）
-         并且触摸不超过允许的移动范围（allowableMovement）时，
-         手势开始（UIGestureRecognizerStateBegan）。
-         手指移动时，手势识别器转换到“更改”状态，
-         并且当任何手指抬起时手势识别器结束（UIGestureRecognizerStateEnded）。
-         *
-         */
-        
-        UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self
-                                                                                                  action:@selector(LZBTabBarItemLongPress:)];
-        longPressGR.delegate = self;
-        longPressGR.numberOfTouchesRequired = 1;//手指数
-        longPressGR.minimumPressDuration = 1;
-//        longPressGR.allowableMovement;
-        
-        [subView addGestureRecognizer:longPressGR];
+
+        subView.longPressGRSEL = NSStringFromSelector(@selector(LZBTabBarItemLongPress:));
+        subView.numberOfTouchesRequired = 1;//手指数
+        subView.minimumPressDuration = 1;
+        subView.target = self;
+        subView.longPressGR.enabled = YES;
     }
 }
 
@@ -278,9 +267,9 @@ shouldSelectViewController:(UIViewController *)viewController {
 
 - (id<UIViewControllerInteractiveTransitioning>)tabBarController:(UITabBarController *)tabBarController
                      interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
-    if (self.panGestureRecognizer.state == UIGestureRecognizerStateBegan ||
-        self.panGestureRecognizer.state == UIGestureRecognizerStateChanged) {
-        return [[TransitionController alloc] initWithGestureRecognizer:self.panGestureRecognizer];
+    if (self.view.panGR.state == UIGestureRecognizerStateBegan ||
+        self.view.panGR.state == UIGestureRecognizerStateChanged) {
+        return [[TransitionController alloc] initWithGestureRecognizer:self.view.panGR];
     }else {
         return nil;
     }
@@ -304,23 +293,17 @@ shouldSelectViewController:(UIViewController *)viewController {
         @weakify(self)
         self.view.vc = weak_self;
         [self.view addSubview:_suspendBtn];
-        _suspendBtn.frame = CGRectMake(80, 100, 50, 50);
+        _suspendBtn.frame = CGRectMake(80,
+                                       100,
+                                       50,
+                                       50);
         [UIView cornerCutToCircleWithView:_suspendBtn
                           andCornerRadius:25];
-        [[_suspendBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-            @strongify(self)
-            [self->_suspendBtn startRotateAnimation];
-            
+        [[_suspendBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof SuspendBtn * _Nullable x) {
+//            @strongify(self)
+            [x startRotateAnimation];
         }];
     }return _suspendBtn;
-}
-
-- (UIPanGestureRecognizer *)panGestureRecognizer{
-    if (!_panGestureRecognizer){
-        _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
-                                                                        action:@selector(panGestureRecognizer:)];
-        [self.view addGestureRecognizer:_panGestureRecognizer];
-    }return _panGestureRecognizer;
 }
 
 -(NSMutableArray<UIView *> *)UITabBarButtonMutArr{
