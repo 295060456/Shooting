@@ -60,7 +60,6 @@
 		C53D60DC255C20FC006C290D /* green_lottie_tab_discover.json in Resources */ = {isa = PBXBuildFile; fileRef = C53D60A6255C20FC006C290D /* green_lottie_tab_discover.json */; };
 		C53D60DD255C20FC006C290D /* record_change.json in Resources */ = {isa = PBXBuildFile; fileRef = C53D60A7255C20FC006C290D /* record_change.json */; };
 		C53D60DE255C20FC006C290D /* tab_message_animate.json in Resources */ = {isa = PBXBuildFile; fileRef = C53D60A8255C20FC006C290D /* tab_message_animate.json */; };
-		C53D60DF255C20FC006C290D /* TabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D60AB255C20FC006C290D /* TabbarVC.m */; };
 		C53D60E0255C20FC006C290D /* JobsPullListAutoSizeView in Resources */ = {isa = PBXBuildFile; fileRef = C53D60AE255C20FC006C290D /* JobsPullListAutoSizeView */; };
 		C53D60E1255C20FC006C290D /* JobsPullListTBVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D60B1255C20FC006C290D /* JobsPullListTBVCell.m */; };
 		C53D60E2255C20FC006C290D /* JobsPullListAutoSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D60B3255C20FC006C290D /* JobsPullListAutoSizeView.m */; };
@@ -90,6 +89,7 @@
 		C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A924F3A1F00065510D /* GPUImageTools.m */; };
 		C55497B024F3AD990065510D /* MKGPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497AE24F3AD990065510D /* MKGPUImageView.m */; };
 		C556972E255BFD95005C1361 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5569729255BFD95005C1361 /* NSString+Extras.m */; };
+		C55BF5C425AC90B600A8347F /* TabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55BF5C225AC90B500A8347F /* TabbarVC.m */; };
 		C561618B24EE4C98001CD851 /* StartOrPauseBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C561618824EE4C97001CD851 /* StartOrPauseBtn.m */; };
 		C561618C24EE4C98001CD851 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C561618924EE4C98001CD851 /* MyCell.m */; };
 		C561619724EE4CA9001CD851 /* MKUploadingVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C561619424EE4CA9001CD851 /* MKUploadingVC+VM.m */; };
@@ -254,7 +254,6 @@
 		C5C67CA824FF5D68000A26B8 /* MovieCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA624FF5D68000A26B8 /* MovieCountDown.m */; };
 		C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */; };
 		C5CF16EE25AC7F7300381935 /* LYLUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF16EB25AC7F7300381935 /* LYLUnicode.m */; };
-		C5CF16EF25AC7F7300381935 /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */ = {isa = PBXBuildFile; fileRef = C5CF16EC25AC7F7300381935 /* 解决打印日志对于Unicode编码不能正常显示中文的问题 */; };
 		C5D0BAC725878EA6002CA224 /* Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5D0BAC325878EA6002CA224 /* Sound.wav */; };
 		C5D0BAC825878EA6002CA224 /* 带有按键音的按钮.md in Resources */ = {isa = PBXBuildFile; fileRef = C5D0BAC425878EA6002CA224 /* 带有按键音的按钮.md */; };
 		C5D0BAC925878EA6002CA224 /* SoundBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D0BAC525878EA6002CA224 /* SoundBtn.m */; };
@@ -536,8 +535,6 @@
 		C53D60A6255C20FC006C290D /* green_lottie_tab_discover.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_lottie_tab_discover.json; sourceTree = "<group>"; };
 		C53D60A7255C20FC006C290D /* record_change.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = record_change.json; sourceTree = "<group>"; };
 		C53D60A8255C20FC006C290D /* tab_message_animate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tab_message_animate.json; sourceTree = "<group>"; };
-		C53D60AA255C20FC006C290D /* TabbarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarVC.h; sourceTree = "<group>"; };
-		C53D60AB255C20FC006C290D /* TabbarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarVC.m; sourceTree = "<group>"; };
 		C53D60AE255C20FC006C290D /* JobsPullListAutoSizeView */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JobsPullListAutoSizeView; sourceTree = "<group>"; };
 		C53D60AF255C20FC006C290D /* JobsPullListAutoSizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsPullListAutoSizeView.h; sourceTree = "<group>"; };
 		C53D60B1255C20FC006C290D /* JobsPullListTBVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsPullListTBVCell.m; sourceTree = "<group>"; };
@@ -602,6 +599,9 @@
 		C5575AE3250518AA00A2A694 /* UIButton+CountDownBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDownBtn.h"; sourceTree = "<group>"; };
 		C558014B258A3F3F0078DB8F /* XHLaunchAd不用pod导入的情况说明.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "XHLaunchAd不用pod导入的情况说明.md"; sourceTree = "<group>"; };
 		C558F345258A2F900078DB8F /* PodsManual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PodsManual.h; sourceTree = "<group>"; };
+		C55BF5C225AC90B500A8347F /* TabbarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarVC.m; sourceTree = "<group>"; };
+		C55BF5C325AC90B600A8347F /* TabbarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarVC.h; sourceTree = "<group>"; };
+		C55BF5C825AC90BF00A8347F /* TabBarControllerConstruction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarControllerConstruction.h; sourceTree = "<group>"; };
 		C561618724EE4C97001CD851 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
 		C561618824EE4C97001CD851 /* StartOrPauseBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartOrPauseBtn.m; sourceTree = "<group>"; };
 		C561618924EE4C98001CD851 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
@@ -1480,6 +1480,7 @@
 		C53D608E255C20FC006C290D /* 全局配置文件 */ = {
 			isa = PBXGroup;
 			children = (
+				C55BF5C825AC90BF00A8347F /* TabBarControllerConstruction.h */,
 				C53D608F255C20FC006C290D /* TabBarControllerConfig.h */,
 				C53D6090255C20FC006C290D /* TabBarControllerConfig.m */,
 			);
@@ -1526,8 +1527,8 @@
 		C53D60A9255C20FC006C290D /* UITabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				C53D60AA255C20FC006C290D /* TabbarVC.h */,
-				C53D60AB255C20FC006C290D /* TabbarVC.m */,
+				C55BF5C325AC90B600A8347F /* TabbarVC.h */,
+				C55BF5C225AC90B500A8347F /* TabbarVC.m */,
 			);
 			path = UITabBarController;
 			sourceTree = "<group>";
@@ -3150,9 +3151,9 @@
 		C5CF16EA25AC7F7300381935 /* LYLUnicode */ = {
 			isa = PBXGroup;
 			children = (
-				C5CF16EB25AC7F7300381935 /* LYLUnicode.m */,
 				C5CF16EC25AC7F7300381935 /* 解决打印日志对于Unicode编码不能正常显示中文的问题 */,
 				C5CF16ED25AC7F7300381935 /* LYLUnicode.h */,
+				C5CF16EB25AC7F7300381935 /* LYLUnicode.m */,
 			);
 			path = LYLUnicode;
 			sourceTree = "<group>";
@@ -4799,7 +4800,6 @@
 				C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */,
 				C53D60D1255C20FC006C290D /* 我的.json in Resources */,
 				C5C65411259DF94500FD2F99 /* 麦克风@2x.png in Resources */,
-				C5CF16EF25AC7F7300381935 /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */,
 				C5C65423259DF94500FD2F99 /* 相机@3x.png in Resources */,
 				C5F452312529A6D900066AAB /* RSA in Resources */,
 				C5D7B15E25A73AE500166E83 /* 输入框样式_3.png in Resources */,
@@ -5033,6 +5033,7 @@
 				C5F4522C2529A6D900066AAB /* NSData+Base64.m in Sources */,
 				C5D7B48E25A73E9500166E83 /* JXCategoryTitleBackgroundCell.m in Sources */,
 				C58F01AD24EA5CAD00B6D09C /* NSObject+Extras.m in Sources */,
+				C55BF5C425AC90B600A8347F /* TabbarVC.m in Sources */,
 				C58F00EE24EA581F00B6D09C /* BaseGPUImageView.m in Sources */,
 				C5D7B48D25A73E9500166E83 /* JXCategoryTitleBackgroundCellModel.m in Sources */,
 				C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */,
@@ -5134,7 +5135,6 @@
 				C5D7B26C25A73B3B00166E83 /* DDUserDetailsCollectionReusableView.m in Sources */,
 				C5D7B22425A73B2500166E83 /* NetworkingAPI+MsgStateApi.m in Sources */,
 				C5D7B21F25A73B2500166E83 /* NetworkingAPI+WalletApi.m in Sources */,
-				C53D60DF255C20FC006C290D /* TabbarVC.m in Sources */,
 				C5D7B26725A73B3B00166E83 /* DDInvitationVC.m in Sources */,
 				C5D7B47825A73E5600166E83 /* XLBubbleTransition.m in Sources */,
 				C5D7B4D325A740D500166E83 /* KeychainHelper.m in Sources */,

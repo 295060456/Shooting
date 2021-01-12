@@ -10,6 +10,7 @@
 #define Header_h
 
 #import "TabBarControllerConfig.h"//全局配置文件
+#import "TabBarControllerConstruction.h"//构造方法
 
 //UITabBarItem
 #import "UITabBarItem+TLAnimation.h"
@@ -31,7 +32,6 @@
 #import "UIView+SuspendView.h"//悬浮的根
 //NSString
 #import "NSString+Extras.h"
-#import "NSString+Time.h"
 //NSObject
 #import "NSObject+Extras.h"
 #import "NSObject+Sound.h"

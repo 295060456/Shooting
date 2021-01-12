@@ -118,6 +118,7 @@
 #import "TimerManager.h"
 #import "WGradientProgress.h"
 #import "WGradientProgressView.h"
+#import "TabbarControllerSysEx.h"
 //加密体系
 #import "AESCipher.h"
 #import "AESCrypt.h"
