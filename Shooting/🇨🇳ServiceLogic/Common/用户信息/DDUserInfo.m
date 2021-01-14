@@ -7,12 +7,16 @@
 
 #import "DDUserInfo.h"
 
+static NSString *userInfoKey = @"userinfoKey";
+static NSString *PostDraftURLKey = @"PostDraftURL";
+
 @implementation DDUserInfo
 
-@synthesize token = _token;
 @synthesize postDraftURLStr = _postDraftURLStr;
+@synthesize userModel = _userModel;
 
 static DDUserInfo *static_userInfo = nil;
+
 +(instancetype)sharedInstance{
     @synchronized(self){
         if (!static_userInfo) {
@@ -26,35 +30,41 @@ static DDUserInfo *static_userInfo = nil;
         static_userInfo = self;
     }return self;
 }
+//鉴别是否登录的标准：userIdKey值对应的token是否为空
+-(BOOL)isLogin{
+    DDUserModel *model = [DDUserModel mj_objectWithKeyValues:[UserDefaultManager fetchDataWithKey:userInfoKey]];
+    return ![NSString isNullString:model.token];
+}
+#pragma mark —— userModel
+-(DDUserModel *)userModel{
+    if (!_userModel) {
+        _userModel = [DDUserModel mj_objectWithKeyValues:[UserDefaultManager fetchDataWithKey:userInfoKey]] ? : DDUserModel.new;
+    }return _userModel;
+}
 
--(void)setToken:(NSString *)token{
-    _token = token;
+-(void)setUserModel:(DDUserModel *)userModel{
+    _userModel = userModel;
+    if ([NSString isNullString:_userModel.token]) {
+        _userModel.uid = @"";
+    }
     //先清
-    [UserDefaultManager cleanDataWithKey:@"Authorization"];
+    [UserDefaultManager cleanDataWithKey:userInfoKey];
     //后装
-    UserDefaultModel *userDefaultModel = UserDefaultModel.new;
-    userDefaultModel.key = @"Authorization";
-    userDefaultModel.obj = token;
-    [UserDefaultManager storedData:userDefaultModel];
+    [UserDefaultManager saveValue:_userModel
+                           forKey:userInfoKey];
 }
-
--(NSString *)token{
-    return (NSString *)[UserDefaultManager fetchDataWithKey:@"Authorization"];
-}
-
+#pragma mark —— postDraftURLStr
 -(void)setPostDraftURLStr:(NSString *)postDraftURLStr{
     _postDraftURLStr = postDraftURLStr;
     //先清
-    [UserDefaultManager cleanDataWithKey:@"PostDraftURL"];
+    [UserDefaultManager cleanDataWithKey:PostDraftURLKey];
     //后装
-    UserDefaultModel *userDefaultModel = UserDefaultModel.new;
-    userDefaultModel.key = @"PostDraftURL";
-    userDefaultModel.obj = postDraftURLStr;
-    [UserDefaultManager storedData:userDefaultModel];
+    [UserDefaultManager saveValue:postDraftURLStr
+                           forKey:PostDraftURLKey];
 }
 
 -(NSString *)postDraftURLStr{
-    return (NSString *)[UserDefaultManager fetchDataWithKey:@"PostDraftURL"];
+    return (NSString *)[UserDefaultManager fetchDataWithKey:PostDraftURLKey];
 }
 
 @end
