@@ -167,7 +167,7 @@
 }
 // 登录
 -(void)loginRequestData{
-    if (DDUserInfo.sharedInstance.token) {
+    if (DDUserInfo.sharedInstance.userModel.token) {
         NSLog(@"当前是否有网：%d 状态：%ld",[ZBRequestManager isNetworkReachable],[ZBRequestManager networkReachability]);
         [DataManager sharedInstance].tag = ReuseIdentifier;
         /**
@@ -189,7 +189,7 @@
                                     @"originType":@(originType_Apple),
                                     @"deviceId":UDID,
                                     @"appVersion":HDAppVersion,
-                                    @"token":DDUserInfo.sharedInstance.token
+                                    @"token":DDUserInfo.sharedInstance.userModel.token
                        }
                      successBlock:^(id data) {
             @strongify(self)

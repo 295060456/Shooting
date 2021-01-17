@@ -90,6 +90,8 @@
 		C55497B024F3AD990065510D /* MKGPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497AE24F3AD990065510D /* MKGPUImageView.m */; };
 		C556972E255BFD95005C1361 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5569729255BFD95005C1361 /* NSString+Extras.m */; };
 		C55BF5C425AC90B600A8347F /* TabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55BF5C225AC90B500A8347F /* TabbarVC.m */; };
+		C55FEC4225B427AF00D8C30D /* UIView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C55FEC4025B427AF00D8C30D /* UIView+MJRefresh.m */; };
+		C55FF33025B42C7200D8C30D /* DDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C55FF32E25B42C7200D8C30D /* DDUserModel.m */; };
 		C561618B24EE4C98001CD851 /* StartOrPauseBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C561618824EE4C97001CD851 /* StartOrPauseBtn.m */; };
 		C561618C24EE4C98001CD851 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C561618924EE4C98001CD851 /* MyCell.m */; };
 		C561619724EE4CA9001CD851 /* MKUploadingVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C561619424EE4CA9001CD851 /* MKUploadingVC+VM.m */; };
@@ -454,6 +456,7 @@
 		975BB3BDBE4F3C4E85B6606A /* Pods-Shooting-ShootingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shooting-ShootingUITests.release.xcconfig"; path = "Target Support Files/Pods-Shooting-ShootingUITests/Pods-Shooting-ShootingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A632BB4591B3A18FC18AFCCE /* Pods-ShootingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingTests.release.xcconfig"; path = "Target Support Files/Pods-ShootingTests/Pods-ShootingTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8D5645268F6187C0B11450E /* Pods-ShootingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingUITests.release.xcconfig"; path = "Target Support Files/Pods-ShootingUITests/Pods-ShootingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C50CBDD125B189FC00611FC6 /* 经验总结.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "经验总结.md"; sourceTree = "<group>"; };
 		C51576C725A351050074D945 /* UIView+Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gesture.h"; sourceTree = "<group>"; };
 		C51576C825A351050074D945 /* UIView+Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gesture.m"; sourceTree = "<group>"; };
 		C5267FB6258A4D1E0095A681 /* TimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
@@ -602,6 +605,10 @@
 		C55BF5C225AC90B500A8347F /* TabbarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarVC.m; sourceTree = "<group>"; };
 		C55BF5C325AC90B600A8347F /* TabbarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarVC.h; sourceTree = "<group>"; };
 		C55BF5C825AC90BF00A8347F /* TabBarControllerConstruction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarControllerConstruction.h; sourceTree = "<group>"; };
+		C55FEC4025B427AF00D8C30D /* UIView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJRefresh.m"; sourceTree = "<group>"; };
+		C55FEC4125B427AF00D8C30D /* UIView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJRefresh.h"; sourceTree = "<group>"; };
+		C55FF32E25B42C7200D8C30D /* DDUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDUserModel.m; sourceTree = "<group>"; };
+		C55FF32F25B42C7200D8C30D /* DDUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDUserModel.h; sourceTree = "<group>"; };
 		C561618724EE4C97001CD851 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
 		C561618824EE4C97001CD851 /* StartOrPauseBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartOrPauseBtn.m; sourceTree = "<group>"; };
 		C561618924EE4C98001CD851 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
@@ -1978,6 +1985,15 @@
 			path = "其他的一些全局定义文件";
 			sourceTree = "<group>";
 		};
+		C55FEC3F25B427AF00D8C30D /* UIView+MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				C55FEC4125B427AF00D8C30D /* UIView+MJRefresh.h */,
+				C55FEC4025B427AF00D8C30D /* UIView+MJRefresh.m */,
+			);
+			path = "UIView+MJRefresh";
+			sourceTree = "<group>";
+		};
 		C561618324EE4C72001CD851 /* 拍摄和上传 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2438,15 +2454,16 @@
 		C58F011924EA5CAC00B6D09C /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				C51576C625A351050074D945 /* UIView+Gesture */,
 				C595BE4D2586422B002A4531 /* UIView+Animation */,
 				C546100A258C8F780008928C /* UIView+AOP */,
 				C595BE4F25864239002A4531 /* UIView+Chain */,
 				C5D1C0E0258B20B200784D2F /* UIView+EmptyData */,
 				C595BE4E25864232002A4531 /* UIView+Extras */,
+				C51576C625A351050074D945 /* UIView+Gesture */,
 				C595BE5025864242002A4531 /* UIView+Gradient */,
 				C552A1692589CE8000A89501 /* UIView+JHGestureBlock */,
 				C595BE512586424A002A4531 /* UIView+Measure */,
+				C55FEC3F25B427AF00D8C30D /* UIView+MJRefresh */,
 				C595BE5225864255002A4531 /* UIView+SuspendView */,
 			);
 			path = UIView;
@@ -4008,8 +4025,10 @@
 		C5D7B20F25A73B2500166E83 /* 用户信息 */ = {
 			isa = PBXGroup;
 			children = (
-				C5D7B21025A73B2500166E83 /* DDUserInfo.m */,
 				C5D7B21125A73B2500166E83 /* DDUserInfo.h */,
+				C5D7B21025A73B2500166E83 /* DDUserInfo.m */,
+				C55FF32F25B42C7200D8C30D /* DDUserModel.h */,
+				C55FF32E25B42C7200D8C30D /* DDUserModel.m */,
 			);
 			path = "用户信息";
 			sourceTree = "<group>";
@@ -4021,6 +4040,7 @@
 				C5D7B22D25A73B3A00166E83 /* 广场-我的 */,
 				C5D7B26225A73B3A00166E83 /* DDPlazaVC.h */,
 				C5D7B25E25A73B3A00166E83 /* DDPlazaVC.m */,
+				C50CBDD125B189FC00611FC6 /* 经验总结.md */,
 			);
 			path = "广场";
 			sourceTree = "<group>";
@@ -5164,6 +5184,7 @@
 				C572A26A24FBC547000A1687 /* UIImage+SYS.m in Sources */,
 				C52DEF55255D2A820016FF07 /* XHLaunchAdConfiguration.m in Sources */,
 				C5F4523C2529A6D900066AAB /* NSData+CommonCrypto.m in Sources */,
+				C55FF33025B42C7200D8C30D /* DDUserModel.m in Sources */,
 				C53D6104255C21F7006C290D /* ShootingAppDelegate+PopupView.m in Sources */,
 				C530B0F7254D9ACD00EDEDC8 /* LMHWaterFallLayout.m in Sources */,
 				C5D7B4A725A73F7100166E83 /* NSString+ZBUTF8Encoding.m in Sources */,
@@ -5214,6 +5235,7 @@
 				C5DF454C25A89A0300E91985 /* LOTAnimationMJRefreshFooter.m in Sources */,
 				C5D7B1AB25A73AF100166E83 /* VideoTagModel.m in Sources */,
 				C58F001524EA36F800B6D09C /* ShootingSceneDelegate.m in Sources */,
+				C55FEC4225B427AF00D8C30D /* UIView+MJRefresh.m in Sources */,
 				C54B3FCA255297C5003BE195 /* UILabel+Extra.m in Sources */,
 				C59D9AB324F8E8DC00A74CE9 /* MKShootVC+VM.m in Sources */,
 				C58F030224EA645A00B6D09C /* NSObject+LBLaunchImage.m in Sources */,

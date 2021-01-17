@@ -33,8 +33,8 @@
         headers[@"User-Agent"] = newUserAgent;
     }
 #pragma mark —— Authorization
-    if (![NSString isNullString:DDUserInfo.sharedInstance.token]) {
-        headers[@"Authorization"] = DDUserInfo.sharedInstance.token;
+    if (![NSString isNullString:DDUserInfo.sharedInstance.userModel.token]) {
+        headers[@"Authorization"] = DDUserInfo.sharedInstance.userModel.token;
     }
     
     [ZBRequestManager setupBaseConfig:^(ZBConfig * _Nullable config) {
