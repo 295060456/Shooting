@@ -1330,8 +1330,8 @@
 		C5267FB5258A4D1E0095A681 /* NSObject (Time) */ = {
 			isa = PBXGroup;
 			children = (
-				C5267FB6258A4D1E0095A681 /* TimeModel.m */,
 				C5267FB7258A4D1E0095A681 /* TimeModel.h */,
+				C5267FB6258A4D1E0095A681 /* TimeModel.m */,
 			);
 			name = "NSObject (Time)";
 			path = "../../../../../Douyin_ZFPlayer/DouYin/3rd/BaseCustomizeUIKit/NSObject/NSObject (Time)";
