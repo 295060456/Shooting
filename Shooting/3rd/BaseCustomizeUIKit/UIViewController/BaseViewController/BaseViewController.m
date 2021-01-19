@@ -79,5 +79,13 @@ shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherG
 -(void)keyboardDidChangeFrameNotification:(NSNotification *)notification{
 
 }
+#pragma mark —— lazyLoad
+-(UIImageView *)bgImageView{
+    if (!_bgImageView) {
+        _bgImageView = UIImageView.new;
+        _bgImageView.frame = self.view.bounds;
+        self.view = _bgImageView;
+    }return _bgImageView;
+}
 
 @end
