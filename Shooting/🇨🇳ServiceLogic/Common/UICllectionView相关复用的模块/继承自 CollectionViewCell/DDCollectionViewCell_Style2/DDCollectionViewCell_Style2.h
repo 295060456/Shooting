@@ -7,7 +7,7 @@
 
 #import "DDInvitationModel.h"
 
-#import "CollectionViewCell.h"
+#import "BaseCollectionViewCell.h"
 #import "DDCollectionViewCell_Style3.h"
 #if __has_include(<GKPhotoBrowser/GKPhotoBrowser.h>)
 #import <GKPhotoBrowser/GKPhotoBrowser.h>
@@ -17,7 +17,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 ///(图文 或者 纯文字 或者 纯图片 )+评论
-@interface DDCollectionViewCell_Style2 : CollectionViewCell
+@interface DDCollectionViewCell_Style2 : BaseCollectionViewCell
 
 //UI /** 不能强引用 */
 @property(nonatomic,weak)GKPhotoBrowser *browser;

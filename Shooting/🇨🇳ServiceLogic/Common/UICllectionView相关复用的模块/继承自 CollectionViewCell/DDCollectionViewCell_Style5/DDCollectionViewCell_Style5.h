@@ -5,7 +5,7 @@
 //  Created by Jobs on 2020/12/28.
 //
 
-#import "CollectionViewCell.h"
+#import "BaseCollectionViewCell.h"
 
 #pragma mark —— ZFPlayer 播放器相关
 //Core
@@ -103,7 +103,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DDCollectionViewCell_Style5 : CollectionViewCell
+@interface DDCollectionViewCell_Style5 : BaseCollectionViewCell
 
 -(void)actionBlockCollectionViewCell_Style5:(MKDataBlock)collectionViewCell_Style5Block;
 

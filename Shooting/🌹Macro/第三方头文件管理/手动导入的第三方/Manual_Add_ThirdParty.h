@@ -95,7 +95,7 @@
 #import "CollectionView.h"
 #import "UICollectionView+RegisterClass.h"
 /// UICollectionViewCell
-#import "CollectionViewCell.h"
+#import "BaseCollectionViewCell.h"
 // UICollectionViewFlowLayout
 /// LMHWaterFallLayout
 #import "LMHWaterFallLayout.h"
