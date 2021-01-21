@@ -90,7 +90,7 @@
 #import "ViewForTableViewFooter.h"
 #import "ViewForTableViewHeader.h"
 /// UICollectionReusableView 用作基类
-#import "CollectionReusableView.h"
+#import "BaseCollectionReusableView.h"
 // UICollectionView
 #import "CollectionView.h"
 #import "UICollectionView+RegisterClass.h"
