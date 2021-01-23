@@ -390,7 +390,7 @@
 		C5D7B5A725A7424E00166E83 /* CJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B59D25A7424E00166E83 /* CJTextField.m */; };
 		C5D7B5A825A7424E00166E83 /* UITextField+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B5A125A7424E00166E83 /* UITextField+Extend.m */; };
 		C5D7B5B925A743EA00166E83 /* UICollectionView+RegisterClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B5B525A743E900166E83 /* UICollectionView+RegisterClass.m */; };
-		C5D7B5BA25A743EA00166E83 /* CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B5B725A743EA00166E83 /* CollectionView.m */; };
+		C5D7B5BA25A743EA00166E83 /* BaseCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B5B725A743EA00166E83 /* BaseCollectionView.m */; };
 		C5D7B69E25A745D800166E83 /* welcome_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C5D7B69D25A745D800166E83 /* welcome_video.mp4 */; };
 		C5DF454B25A89A0300E91985 /* LOTAnimationMJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DF454025A89A0300E91985 /* LOTAnimationMJRefreshHeader.m */; };
 		C5DF454C25A89A0300E91985 /* LOTAnimationMJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DF454325A89A0300E91985 /* LOTAnimationMJRefreshFooter.m */; };
@@ -1195,8 +1195,8 @@
 		C5D7B5A025A7424E00166E83 /* UITextField+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extend.h"; sourceTree = "<group>"; };
 		C5D7B5A125A7424E00166E83 /* UITextField+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extend.m"; sourceTree = "<group>"; };
 		C5D7B5B525A743E900166E83 /* UICollectionView+RegisterClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+RegisterClass.m"; sourceTree = "<group>"; };
-		C5D7B5B625A743E900166E83 /* CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionView.h; sourceTree = "<group>"; };
-		C5D7B5B725A743EA00166E83 /* CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionView.m; sourceTree = "<group>"; };
+		C5D7B5B625A743E900166E83 /* BaseCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionView.h; sourceTree = "<group>"; };
+		C5D7B5B725A743EA00166E83 /* BaseCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionView.m; sourceTree = "<group>"; };
 		C5D7B5B825A743EA00166E83 /* UICollectionView+RegisterClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+RegisterClass.h"; sourceTree = "<group>"; };
 		C5D7B69925A7454300166E83 /* MacroDef_App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDef_App.h; sourceTree = "<group>"; };
 		C5D7B69D25A745D800166E83 /* welcome_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = welcome_video.mp4; sourceTree = "<group>"; };
@@ -1377,8 +1377,8 @@
 			isa = PBXGroup;
 			children = (
 				C552A7462589D4DD00A89501 /* 我为什么要这么做.md */,
-				C5D7B5B625A743E900166E83 /* CollectionView.h */,
-				C5D7B5B725A743EA00166E83 /* CollectionView.m */,
+				C5D7B5B625A743E900166E83 /* BaseCollectionView.h */,
+				C5D7B5B725A743EA00166E83 /* BaseCollectionView.m */,
 				C5D7B5B825A743EA00166E83 /* UICollectionView+RegisterClass.h */,
 				C5D7B5B525A743E900166E83 /* UICollectionView+RegisterClass.m */,
 			);
@@ -5177,7 +5177,7 @@
 				C5D7B1B225A73AF100166E83 /* DDCommentMsgModel.m in Sources */,
 				C5D7B15325A73AE500166E83 /* JobsAppDoorInputViewBaseStyle_1.m in Sources */,
 				C5D7B16125A73AE500166E83 /* JobsAppDoorVC_Style1.m in Sources */,
-				C5D7B5BA25A743EA00166E83 /* CollectionView.m in Sources */,
+				C5D7B5BA25A743EA00166E83 /* BaseCollectionView.m in Sources */,
 				C53D60E7255C20FC006C290D /* TLTabBarAnimation.m in Sources */,
 				C5D7B26C25A73B3B00166E83 /* DDUserDetailsCollectionReusableView.m in Sources */,
 				C5D7B22425A73B2500166E83 /* NetworkingAPI+MsgStateApi.m in Sources */,

@@ -92,7 +92,7 @@
 /// UICollectionReusableView 用作基类
 #import "BaseCollectionReusableView.h"
 // UICollectionView
-#import "CollectionView.h"
+#import "BaseCollectionView.h"
 #import "UICollectionView+RegisterClass.h"
 /// UICollectionViewCell
 #import "BaseCollectionViewCell.h"
