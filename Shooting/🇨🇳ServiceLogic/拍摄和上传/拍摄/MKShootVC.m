@@ -368,7 +368,7 @@
                                           btnTitleArr:@[@"去获取"]
                                        alertBtnAction:@[@"pushToSysConfig"]
                                              targetVC:self
-                                               funcVC:nil
+                                               funcInWhere:nil
                                              animated:YES
                                          alertVCBlock:nil
                                       completionBlock:nil];
@@ -630,7 +630,7 @@
                                 btnTitleArr:@[@"确认",@"继续录制"]
                              alertBtnAction:@[@"sure",@"shoottingContinue"]
                                    targetVC:self
-                                     funcVC:nil
+                                     funcInWhere:nil
                                    animated:YES
                                alertVCBlock:nil
                             completionBlock:nil];
@@ -712,7 +712,7 @@
                                     btnTitleArr:@[@"确定"]
                                  alertBtnAction:@[@""]
                                        targetVC:self
-                                         funcVC:nil
+                                         funcInWhere:nil
                                        animated:YES
                                    alertVCBlock:nil
                                 completionBlock:nil];
@@ -836,7 +836,7 @@
                                 btnTitleArr:@[@"重新拍摄",@"退出",@"取消"]
                              alertBtnAction:@[@"",@"exit",@""]
                                    targetVC:self
-                                     funcVC:nil
+                                     funcInWhere:nil
                                    animated:YES
                                alertVCBlock:nil
                             completionBlock:nil];

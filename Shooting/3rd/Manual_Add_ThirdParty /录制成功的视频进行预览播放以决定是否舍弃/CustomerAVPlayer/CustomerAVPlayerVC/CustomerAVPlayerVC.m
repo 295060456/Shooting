@@ -121,7 +121,7 @@
                                 btnTitleArr:@[@"确定"]
                              alertBtnAction:@[@""]
                                    targetVC:self
-                                     funcVC:nil
+                                     funcInWhere:nil
                                    animated:YES
                                alertVCBlock:nil
                             completionBlock:nil];

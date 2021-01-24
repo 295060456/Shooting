@@ -225,7 +225,7 @@ UITextViewDelegate
                                                     btnTitleArr:@[@"确认"]
                                                  alertBtnAction:@[@"sure"]
                                                        targetVC:self
-                                                         funcVC:nil
+                                                         funcInWhere:nil
                                                        animated:YES
                                                    alertVCBlock:nil
                                                 completionBlock:nil];
@@ -403,7 +403,7 @@ shouldChangeTextInRange:(NSRange)range
                                         btnTitleArr:@[@"确认"]
                                      alertBtnAction:@[@"sure"]
                                            targetVC:self
-                                             funcVC:nil
+                                             funcInWhere:nil
                                            animated:YES
                                        alertVCBlock:nil
                                     completionBlock:nil];
@@ -414,7 +414,7 @@ shouldChangeTextInRange:(NSRange)range
                                         btnTitleArr:@[@"确认"]
                                      alertBtnAction:@[@"sure"]
                                            targetVC:self
-                                             funcVC:nil
+                                             funcInWhere:nil
                                            animated:YES
                                        alertVCBlock:nil
                                     completionBlock:nil];

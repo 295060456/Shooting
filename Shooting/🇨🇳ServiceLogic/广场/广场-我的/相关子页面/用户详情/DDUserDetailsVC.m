@@ -122,7 +122,7 @@ referenceSizeForHeaderInSection:(NSInteger)section {
                                             btnTitleArr:@[@"确定",@"取消"]
                                          alertBtnAction:@[@"unfollow",@""]
                                                targetVC:self
-                                                 funcVC:nil
+                                                 funcInWhere:nil
                                                animated:YES
                                            alertVCBlock:nil
                                         completionBlock:nil];
@@ -162,7 +162,7 @@ referenceSizeForHeaderInSection:(NSInteger)section {
                                             btnTitleArr:@[@"确定",@"取消"]
                                          alertBtnAction:@[@"unfollow",@""]
                                                targetVC:self
-                                                 funcVC:nil
+                                                 funcInWhere:nil
                                                animated:YES
                                            alertVCBlock:nil
                                         completionBlock:nil];
@@ -179,7 +179,7 @@ referenceSizeForHeaderInSection:(NSInteger)section {
                                       btnTitleArr:@[@"保存图片",@"取消"]
                                    alertBtnAction:@[@"savePic",@"nil"]
                                          targetVC:self.saveImageModel.photoBrowser
-                                           funcVC:self
+                                           funcInWhere:self
                                            sender:nil
                                          animated:YES
                                      alertVCBlock:nil

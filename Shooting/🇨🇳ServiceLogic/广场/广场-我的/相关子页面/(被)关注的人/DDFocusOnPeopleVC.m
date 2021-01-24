@@ -95,7 +95,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
                                         btnTitleArr:@[@"确定",@"取消"]
                                      alertBtnAction:@[@"unfollow",@""]
                                            targetVC:self
-                                             funcVC:nil
+                                             funcInWhere:nil
                                            animated:YES
                                        alertVCBlock:nil
                                     completionBlock:nil];

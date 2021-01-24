@@ -184,7 +184,7 @@ didScrollSelectedItemAtIndex:(NSInteger)index{
                                     btnTitleArr:@[@"确认暂停",@"继续拍摄"]
                                  alertBtnAction:@[@"suspendShoot",@"continueShoot"]
                                        targetVC:self
-                                         funcVC:nil
+                                         funcInWhere:nil
                                        animated:YES
                                    alertVCBlock:nil
                                 completionBlock:nil];
@@ -199,7 +199,7 @@ didScrollSelectedItemAtIndex:(NSInteger)index{
                                     btnTitleArr:@[@"确认",@"手滑了"]
                                  alertBtnAction:@[@"sure",@"Cancel"]
                                        targetVC:self
-                                         funcVC:nil
+                                         funcInWhere:nil
                                        animated:YES
                                    alertVCBlock:nil
                                 completionBlock:nil];
