@@ -121,6 +121,12 @@
 #import "PPBadgeView.h"
 #endif
 
+#if __has_include(<TABAnimated/TABAnimated.h>)
+#import <TABAnimated/TABAnimated.h>
+#else
+#import "TABAnimated.h"
+#endif
+
 #if __has_include(<IQKeyboardManager/IQKeyboardManager.h>)
 #import <IQKeyboardManager/IQKeyboardManager.h>
 #else

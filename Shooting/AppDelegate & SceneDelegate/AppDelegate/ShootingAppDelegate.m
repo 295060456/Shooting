@@ -61,7 +61,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 #ifdef DEBUG
     [UIFont getAvailableFont];//打印全员字体
 #endif
-    
+    [self makeTABAnimatedConfigure];
     [self makeIQKeyboardManagerConfigure];//智能键盘
     [self makeGKNavigationBarConfigure];//自定义导航栏
     [self makeDoraemonManagerConfigure];//滴滴打车团队出的一款小工具
