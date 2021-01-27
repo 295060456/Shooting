@@ -12,19 +12,20 @@
 -(void)RegisterClass{
     
     [self registerClass:DDUserDetailsCollectionReusableView.class
-    forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
-    withReuseIdentifier:@"DDUserDetailsCollectionReusableView"];
-    
+        forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+        withReuseIdentifier:NSStringFromClass(DDUserDetailsCollectionReusableView.class)];
+
     [self registerClass:DDCollectionViewCell_Style1.class
-        forCellWithReuseIdentifier:@"DDCollectionViewCell_Style1"];
+        forCellWithReuseIdentifier:NSStringFromClass(DDCollectionViewCell_Style1.class)];
     [self registerClass:DDCollectionViewCell_Style2.class
-        forCellWithReuseIdentifier:@"DDCollectionViewCell_Style2"];
+        forCellWithReuseIdentifier:NSStringFromClass(DDCollectionViewCell_Style2.class)];
     [self registerClass:DDCollectionViewCell_Style3.class
-        forCellWithReuseIdentifier:@"DDCollectionViewCell_Style3"];
+        forCellWithReuseIdentifier:NSStringFromClass(DDCollectionViewCell_Style3.class)];
     [self registerClass:DDCollectionViewCell_Style4.class
-        forCellWithReuseIdentifier:@"DDCollectionViewCell_Style4"];
+        forCellWithReuseIdentifier:NSStringFromClass(DDCollectionViewCell_Style4.class)];
     [self registerClass:DDCollectionViewCell_Style5.class
-        forCellWithReuseIdentifier:@"DDCollectionViewCell_Style5"];
+        forCellWithReuseIdentifier:NSStringFromClass(DDCollectionViewCell_Style5.class)];
+    
 }
 
 @end
