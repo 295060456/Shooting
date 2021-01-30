@@ -23,4 +23,13 @@
 //    };
 //}
 
+//@property(nonatomic,strong)NSString *headImage;
+//@property(nonatomic,strong)NSURL *headImage;
+//- (id)mj_newValueFromOldValue:(id)oldValue
+//                     property:(MJProperty *)property{
+//    if ([property.name isEqualToString:@"headImage"]) {
+//        return [NSURL URLWithString:oldValue];
+//    }return oldValue;
+//}
+
 @end
