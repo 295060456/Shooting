@@ -81,6 +81,10 @@
 		C54B3FC9255297C5003BE195 /* NSObject+RichText.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3FC5255297C5003BE195 /* NSObject+RichText.m */; };
 		C54B3FCA255297C5003BE195 /* UILabel+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3FC8255297C5003BE195 /* UILabel+Extra.m */; };
 		C54F858F252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */; };
+		C551352625C68A09007BCA82 /* ZWPullMenuConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C551351F25C68A09007BCA82 /* ZWPullMenuConfig.m */; };
+		C551352725C68A09007BCA82 /* ZWPullMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C551352025C68A09007BCA82 /* ZWPullMenuModel.m */; };
+		C551352825C68A09007BCA82 /* ZWPullMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C551352425C68A09007BCA82 /* ZWPullMenuView.m */; };
+		C551352925C68A09007BCA82 /* ZWPullMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C551352525C68A09007BCA82 /* ZWPullMenuCell.m */; };
 		C552A74D2589D50E00A89501 /* UIImage+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = C552A74B2589D50E00A89501 /* UIImage+ScreenShot.m */; };
 		C55497A424F38CDB0065510D /* MKShootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A324F38CDB0065510D /* MKShootVC.m */; };
 		C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A624F38D9C0065510D /* AVFounationTools.m */; };
@@ -582,6 +586,14 @@
 		C54B3FC8255297C5003BE195 /* UILabel+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extra.m"; sourceTree = "<group>"; };
 		C54F858D252B613E00EE3DD0 /* UITableView+WWFoldableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+WWFoldableTableView.h"; sourceTree = "<group>"; };
 		C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+WWFoldableTableView.m"; sourceTree = "<group>"; };
+		C551351D25C68A09007BCA82 /* ZWPullMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWPullMenuModel.h; sourceTree = "<group>"; };
+		C551351E25C68A09007BCA82 /* ZWPullMenuConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWPullMenuConfig.h; sourceTree = "<group>"; };
+		C551351F25C68A09007BCA82 /* ZWPullMenuConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWPullMenuConfig.m; sourceTree = "<group>"; };
+		C551352025C68A09007BCA82 /* ZWPullMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWPullMenuModel.m; sourceTree = "<group>"; };
+		C551352225C68A09007BCA82 /* ZWPullMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWPullMenuView.h; sourceTree = "<group>"; };
+		C551352325C68A09007BCA82 /* ZWPullMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWPullMenuCell.h; sourceTree = "<group>"; };
+		C551352425C68A09007BCA82 /* ZWPullMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWPullMenuView.m; sourceTree = "<group>"; };
+		C551352525C68A09007BCA82 /* ZWPullMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWPullMenuCell.m; sourceTree = "<group>"; };
 		C552A7462589D4DD00A89501 /* 我为什么要这么做.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "我为什么要这么做.md"; sourceTree = "<group>"; };
 		C552A74B2589D50E00A89501 /* UIImage+ScreenShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ScreenShot.m"; sourceTree = "<group>"; };
 		C552A74C2589D50E00A89501 /* UIImage+ScreenShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ScreenShot.h"; sourceTree = "<group>"; };
@@ -1784,6 +1796,37 @@
 			path = "UIViewController+Category";
 			sourceTree = "<group>";
 		};
+		C551351B25C68A09007BCA82 /* ZWPullMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				C551351C25C68A09007BCA82 /* Config */,
+				C551352125C68A09007BCA82 /* View */,
+			);
+			path = ZWPullMenuView;
+			sourceTree = "<group>";
+		};
+		C551351C25C68A09007BCA82 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C551351D25C68A09007BCA82 /* ZWPullMenuModel.h */,
+				C551351E25C68A09007BCA82 /* ZWPullMenuConfig.h */,
+				C551351F25C68A09007BCA82 /* ZWPullMenuConfig.m */,
+				C551352025C68A09007BCA82 /* ZWPullMenuModel.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		C551352125C68A09007BCA82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C551352225C68A09007BCA82 /* ZWPullMenuView.h */,
+				C551352325C68A09007BCA82 /* ZWPullMenuCell.h */,
+				C551352425C68A09007BCA82 /* ZWPullMenuView.m */,
+				C551352525C68A09007BCA82 /* ZWPullMenuCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C552A1692589CE8000A89501 /* UIView+JHGestureBlock */ = {
 			isa = PBXGroup;
 			children = (
@@ -2329,6 +2372,7 @@
 		C58F007124EA580B00B6D09C /* PodsManual */ = {
 			isa = PBXGroup;
 			children = (
+				C551351B25C68A09007BCA82 /* ZWPullMenuView */,
 				C5A444C025ABFC35000F0CD2 /* WHToast */,
 				C5D7B48425A73E9500166E83 /* JXCategoryView */,
 				C5D7B29725A73CC400166E83 /* GKPhotoBrowser+SaveBtn */,
@@ -5143,6 +5187,7 @@
 				C5D7B22325A73B2500166E83 /* NetworkingAPI+FriendsRelationshipApi.m in Sources */,
 				C59D9ADC24F8EF4D00A74CE9 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m in Sources */,
 				C52DEF4E255D2A820016FF07 /* XHLaunchAdButton.m in Sources */,
+				C551352625C68A09007BCA82 /* ZWPullMenuConfig.m in Sources */,
 				C5D7B27825A73B3B00166E83 /* DDPlazaCommunityVC.m in Sources */,
 				C5A43A7625AAF8A6000F0CD2 /* UIScrollView+FDFullscreenPopGesture.m in Sources */,
 				C58F010D24EA584B00B6D09C /* NSlogToDocumentFolder.m in Sources */,
@@ -5204,6 +5249,7 @@
 				C5D7B5A325A7424E00166E83 /* ZYTextField.m in Sources */,
 				C58F033224EA69D400B6D09C /* ViewController@2.m in Sources */,
 				C58F001224EA36F800B6D09C /* ShootingAppDelegate.m in Sources */,
+				C551352725C68A09007BCA82 /* ZWPullMenuModel.m in Sources */,
 				C58F018D24EA5CAC00B6D09C /* NSArray+Extension.m in Sources */,
 				C5914BA625384CD0007777A6 /* UIViewController+Shake.m in Sources */,
 				C5F4517A2529A0BD00066AAB /* FMHttpRequest.m in Sources */,
@@ -5266,6 +5312,7 @@
 				C54B3FCA255297C5003BE195 /* UILabel+Extra.m in Sources */,
 				C59D9AB324F8E8DC00A74CE9 /* MKShootVC+VM.m in Sources */,
 				C58F030224EA645A00B6D09C /* NSObject+LBLaunchImage.m in Sources */,
+				C551352825C68A09007BCA82 /* ZWPullMenuView.m in Sources */,
 				C59D9AED24F8F08500A74CE9 /* ZZCountingLabel.m in Sources */,
 				C5D7B1B425A73AF100166E83 /* DDCollectionViewCell_Style1.m in Sources */,
 				C5DF454B25A89A0300E91985 /* LOTAnimationMJRefreshHeader.m in Sources */,
@@ -5291,6 +5338,7 @@
 				C58F018724EA5CAC00B6D09C /* UIColor+Hex.m in Sources */,
 				C5D0BAC925878EA6002CA224 /* SoundBtn.m in Sources */,
 				C53D60EA255C20FC006C290D /* CustomTabBar.m in Sources */,
+				C551352925C68A09007BCA82 /* ZWPullMenuCell.m in Sources */,
 				C52DEF4F255D2A820016FF07 /* XHLaunchImageView.m in Sources */,
 				C530B0F8254D9ACD00EDEDC8 /* KFZShopCatoryFlowLayput.m in Sources */,
 				C5E5C63925077436001E69DA /* WGradientProgress.m in Sources */,

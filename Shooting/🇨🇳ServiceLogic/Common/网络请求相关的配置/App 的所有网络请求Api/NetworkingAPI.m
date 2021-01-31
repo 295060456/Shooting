@@ -49,7 +49,7 @@ requestSerializer:(ZBRequestSerializerType)requestSerializerType
     
     [ZBRequestManager requestWithConfig:^(ZBURLRequest * _Nullable request) {
 
-        request.server = NSObject.BaseUrl_1;
+        request.server = NSObject.BaseUrl;
         request.url = [request.server stringByAppendingString:path];
         NSLog(@"request.URLString = %@",[request.server stringByAppendingString:request.url]);
         request.methodType = type; //默认为GET

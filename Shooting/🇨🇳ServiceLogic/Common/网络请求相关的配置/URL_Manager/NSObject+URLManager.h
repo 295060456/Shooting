@@ -15,36 +15,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (URLManager)
-/*
- * APP端接口文档
- * http://172.24.135.53:8011/swagger-ui.html#/APP%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3
- 
- 开发环境：
- 管理后台：http://172.24.135.55/
- app-api：http://172.24.135.55/api/
- h5：http://172.24.135.55/taskpage/
-
- 测试环境(数据已初始化)：
- 管理后台：http://172.24.135.54/dist/
- app-api：http://172.24.135.54/api/
- h5：http://172.24.135.54/taskpage/
- 
- 抖动生产环境
- web-admin：http://www.xiuwa.top/web/beBQJvUpWl
- H5：https://www.xiuwa.top/h5/
- API：https://www.xiuwa.top/api/
- 
- 抖动备用域名：
- www.vdutbr.cn
- www.peprh.cn
- www.msahe.cn
- 
- */
 #pragma mark —— BaseURL
-+(NSString *)BaseUrl_1;
++(NSString *)BaseUrl;
 +(NSString *)BaseUrl_H5;
-#pragma mark —— port
-+(NSString *)BasePort;
 #pragma mark —— 数据统计相关接口
 ///活跃用户 POST
 +(URLManagerModel *)addActiveUserDataPOST;
@@ -56,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(URLManagerModel *)channelListGET;
 ///版本信息 GET
 +(URLManagerModel *)versionInfoAppGET;
-#pragma mark —— APP登录信息相关接口
+#pragma mark —— App登录信息相关接口
 ///找回密码接口-重置密码 POST
 +(URLManagerModel *)changePasswordPOST;
 ///找回密码接口-身份验证 POST
@@ -73,37 +46,35 @@ NS_ASSUME_NONNULL_BEGIN
 +(URLManagerModel *)resetPasswordPOST;
 ///发送短信 POST
 +(URLManagerModel *)sendSmsCodePOST;
-#pragma mark —— APP广告相关接口
+#pragma mark —— App广告相关接口
 ///查询开屏或视频广告 GET
 +(URLManagerModel *)adInfoGET;
-#pragma mark —— APP好友关系相关接口
+#pragma mark —— App好友关系相关接口
 ///手动执行奖励记录 GET
 +(URLManagerModel *)addAwardGET;
-///手动执行奖励记录 GET
-+(URLManagerModel *)addAwardInfoGET;
 ///获取活跃用户 GET
 +(URLManagerModel *)awardListGET;
 ///最新四个好友 GET
 +(URLManagerModel *)fourListGET;
 ///selectUrl GET
 +(URLManagerModel *)friendUrlselectUrlGET;
-///好友列表 GET
+///二期好友列表 GET
 +(URLManagerModel *)userFriendListGET;
 ///统计我的收益 GET
 +(URLManagerModel *)myInComeGET;
 ///面对面邀请保存好友手机号码 POST
 +(URLManagerModel *)savePhonePOST;
-#pragma mark —— APP黑名单相关接口
+#pragma mark —— App黑名单相关接口
 /// 添加 POST
 +(URLManagerModel *)blackListAddPOST;
 ///删除 GET
 +(URLManagerModel *)blackListDeleteGET;
 ///黑名单列表 GET
 +(URLManagerModel *)blackListGET;
-#pragma mark —— APP获取配置信息
+#pragma mark —— App获取配置信息
 ///app启动参数 GET
 +(URLManagerModel *)refreshGET;
-#pragma mark —— APP看视频获得金币奖励
+#pragma mark —— App看视频获得金币奖励
 /// 首页宝箱奖励 POST
 +(URLManagerModel *)boxRewardPOST;
 /// 抖币领取开关 GET
@@ -116,7 +87,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(URLManagerModel *)rewardSnapshotGET;
 /// 首页看视频得抖币配置 POST
 +(URLManagerModel *)rewardSnapshotPOST;
-#pragma mark —— APP评论相关接口
+#pragma mark —— App评论相关接口
 /// 评论视频 POST
 +(URLManagerModel *)commentVideoPOST;
 /// 删除评论 POST
@@ -129,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(URLManagerModel *)replyCommentPOST;
 /// 点赞或取消点赞 POST
 +(URLManagerModel *)setPraisePOST;
-#pragma mark —— APP钱包相关接口
+#pragma mark —— App钱包相关接口
 /// 抖币兑换余额提示 GET
 +(URLManagerModel *)chargeBalanceTipsGET;
 /// 金币兑换 POST
@@ -146,7 +117,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(URLManagerModel *)myWalletPOST;
 /// 余额提现 POST
 +(URLManagerModel *)withdrawBalancePOST;
-#pragma mark —— APP视频相关接口
+#pragma mark —— App视频相关接口
 /// 删除自己发布的视频 POST
 +(URLManagerModel *)delAppVideoPOST;
 /// 标签列表 GET
@@ -163,6 +134,23 @@ NS_ASSUME_NONNULL_BEGIN
 +(URLManagerModel *)searchPOST;
 /// 上传视频 POST
 +(URLManagerModel *)uploadVideoPOST;
+#pragma mark —— App帖子粉丝相关接口
+/// 帖子粉丝用户列表 GET
++(URLManagerModel *)postFansListGET;
+#pragma mark —— App帖子关注相关接口
+/// 添加 POST
++(URLManagerModel *)postFansListPOST;
+/// 删除 GET
++(URLManagerModel *)postFocusDeleteGET;
+/// 帖子关注用户列表 GET
++(URLManagerModel *)postFocusListGET;
+#pragma mark —— App帖子评论相关接口
+/// 评论 GET
++(URLManagerModel *)commentAddGET;
+/// 全部评论列表 GET
++(URLManagerModel *)commentAllListGET;
+/// 评论列表 GET
++(URLManagerModel *)commentListGET;
 #pragma mark —— App消息相关接口
 /// 获取用户粉丝详情 GET
 +(URLManagerModel *)fansInfoGET;
@@ -172,7 +160,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(URLManagerModel *)messageInfoGET;
 /// 消息二级级列表 GET
 +(URLManagerModel *)messageSecondClassListGET;
-/// 公告列表 GET
+/// app公告列表 GET
 +(URLManagerModel *)noticeListGET;
 /// 消息开关列表 GET
 +(URLManagerModel *)turnOffListGET;
@@ -181,7 +169,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark —— App消息状态相关接口
 /// 添加已读消息 POST
 +(URLManagerModel *)messageStatusAddPOST;
-#pragma mark —— APP银行卡相关接口
+#pragma mark —— App银行卡相关接口
 /// 添加银行卡 POST
 +(URLManagerModel *)bankAddPOST;
 /// 获取银行卡信息 GET
@@ -192,29 +180,54 @@ NS_ASSUME_NONNULL_BEGIN
 +(URLManagerModel *)bankListGET;
 /// 修改银行卡 POST
 +(URLManagerModel *)bankUpdatePOST;
-#pragma mark —— APP用户粉丝相关接口
+#pragma mark —— App用户粉丝相关接口
 ///用户粉丝列表 GET
 +(URLManagerModel *)userFansListGET;
-#pragma mark —— APP用户关注相关接口
+#pragma mark —— App用户关注相关接口
 /// 添加 POST
 +(URLManagerModel *)userFocusAddPOST;
 /// 删除 GET
 +(URLManagerModel *)userFocusDeleteGET;
 /// 关注用户列表 GET
 +(URLManagerModel *)userFocusListGET;
-#pragma mark —— APP用户信息相关接口
+#pragma mark —— App用户帖子相关接口
+/// 发帖 POST
++(URLManagerModel *)postAddPostPOST;
+/// 帖子详情 GET
++(URLManagerModel *)postcommentDetailInfoGET;
+/// 用户帖子详情 GET
++(URLManagerModel *)postDetailInfoGET;
+/// 帖子列表 GET
++(URLManagerModel *)postListGET;
+/// 帖子我的(关注、点赞.发布) GET
++(URLManagerModel *)postMyPostGET;
+/// 帖子详情 GET
++(URLManagerModel *)postInfoGET;
+/// 点赞 POST
++(URLManagerModel *)postPraisePostPOST;
+/// 帖子图片上传 POST
++(URLManagerModel *)postUploadImagePOST;
+/// 帖子视频上传 POST
++(URLManagerModel *)postuploadVideoPOST;
+#pragma mark —— App用户信息相关接口
 /// 绑定手机号 POST
 +(URLManagerModel *)bindPhonePOST;
 /// 校验是否有权限 GET
 +(URLManagerModel *)checkHadRoleGET;
 /// 进行签到 POST
 +(URLManagerModel *)doSignPOST;
+/// 二期邀请好友 POST
++(URLManagerModel *)userInfoInviteFriendPOST;
+/// 邀请任务数据展示 GET
++(URLManagerModel *)userInfoListGET;
 /// 获取我的详情 GET
 +(URLManagerModel *)myUserInfoGET;
 /// 滚动数据 GET
 +(URLManagerModel *)rollDateGET;
 /// 查询用户信息 GET
 +(URLManagerModel *)selectIdCardGET;
+/// 查询视频数量 POST
++(URLManagerModel *)userInfoSelectVideoCountPOST;
 /// 我的签到列表 GET
 +(URLManagerModel *)signListGET;
 /// 编辑个人资料 POST

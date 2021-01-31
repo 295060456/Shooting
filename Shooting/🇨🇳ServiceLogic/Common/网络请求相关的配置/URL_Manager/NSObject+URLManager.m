@@ -8,32 +8,21 @@
 
 #import "NSObject+URLManager.h"
 
-@implementation NSObject (URLManager)
-/*
- * APP端接口文档
- * http://172.24.135.53:8011/swagger-ui.html#/APP%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3
- 
- 开发环境：
- 管理后台：http://172.24.135.55/
- app-api：http://172.24.135.55/api/
- h5：http://172.24.135.55/taskpage/
+/// 柬埔寨（主要）开发环境
+BOOL DevEnviron_Cambodia_Main = YES;
+///// 柬埔寨（次要）开发环境
+BOOL DevEnviron_Cambodia_Minor = NO;
+/// 柬埔寨Rally（次要）开发环境
+BOOL DevEnviron_Cambodia_Rally = NO;
+/// 中国大陆开发环境
+BOOL DevEnviron_China_Mainland = NO;
+/// 测试环境
+BOOL TestEnviron = NO;
+/// 生产环境
+BOOL ProductEnviron = NO;
 
- 测试环境(数据已初始化)：
- 管理后台：http://172.24.135.54/dist/
- app-api：http://172.24.135.54/api/
- h5：http://172.24.135.54/taskpage/
- 
- 抖动生产环境
- web-admin：http://www.xiuwa.top/web/beBQJvUpWl
- H5：https://www.xiuwa.top/h5/
- API：https://www.xiuwa.top/api/
- 
- 抖动备用域名：
- www.vdutbr.cn
- www.peprh.cn
- www.msahe.cn
- 
- */
+@implementation NSObject (URLManager)
+
 +(URLManagerModel *)url:(NSString *)url
                funcName:(NSString *)funcName{
     URLManagerModel *managerModel = URLManagerModel.new;
@@ -42,462 +31,577 @@
     return managerModel;
 }
 #pragma mark —— BaseURL
-+(NSString *)BaseUrl_1{
-#if DEBUG
-//    return @"http://172.24.135.55/api";//开发环境
-    return @"http://222.186.150.148/api/";//开发环境
-#elif
-    return @"http://172.24.135.54/api";//测试环境
-//    return @"https://www.xiuwa.top/api/"//生产环境
-#endif
++(NSString *)BaseUrl{
+    if (DevEnviron_Cambodia_Main) {
+        /// 柬埔寨（主要）开发环境
+        return @"http://172.24.135.53:8011/";
+    }else if(DevEnviron_Cambodia_Minor){
+        /// 柬埔寨的开发环境(次要)，因为某些代码未合并，柬埔寨的开发环境临时用测试环境替代
+        return @"";
+    }else if (DevEnviron_Cambodia_Rally){
+        /// 柬埔寨Rally（次要）开发环境
+        return @"http://172.24.135.15/api/";
+    }else if (DevEnviron_China_Mainland){
+        /// 中国大陆开发环境
+        return @"http://222.186.150.148/api/";
+    }else if (TestEnviron){
+        /// 测试环境
+        return @"http://172.24.135.54/api";
+    }else if (ProductEnviron){
+        /// 生产环境
+        return @"https://www.xiuwa.top/api/";
+    }else{
+        return @"";
+    }
 }
 
 +(NSString *)BaseUrl_H5{
-#if DEBUG
-    return @"http://172.24.135.54/taskpage";//开发环境
-#elif
-    return @"http://172.24.135.54/taskpage";//测试环境
-//    return @"https://www.xiuwa.top/h5/"//生产环境
-#endif
-}
-#pragma mark —— port
-+(NSString *)BasePort{
-    return @"";//测试环境
-//#if DEBUG
-//    return @"";//测试环境
-//#elif
-//    return @"";//开发环境
-//#endif
+    if (DevEnviron_Cambodia_Main) {
+        /// 柬埔寨（主要）开发环境
+        return @"http://222.186.150.148/taskpage";
+    }else if (DevEnviron_Cambodia_Minor){
+        /// 柬埔寨的开发环境(次要)，因为某些代码未合并，柬埔寨的开发环境临时用测试环境替代
+        return @"";
+    }else if (DevEnviron_Cambodia_Rally){
+        /// 柬埔寨Rally（次要）开发环境
+        return @"http://172.24.135.15/api/";
+    }else if (DevEnviron_China_Mainland){
+        /// 中国大陆开发环境
+        return @"http://222.186.150.148/api/";
+    }else if (TestEnviron){
+        /// 测试环境
+        return @"http://172.24.135.54/taskpage";
+    }else if (ProductEnviron){
+        /// 生产环境
+        return @"https://www.xiuwa.top/h5/";
+    }else{
+        return @"";
+    }
 }
 #pragma mark —— 数据统计相关接口
 ///活跃用户 POST
 +(URLManagerModel *)addActiveUserDataPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/statistics/addActiveUserData"]
+    return [NSObject url:@"app/statistics/addActiveUserData"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///启动次数 POST
 +(URLManagerModel *)addStartTimePOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/statistics/addStartTime"]
+    return [NSObject url:@"app/statistics/addStartTime"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///使用时长 POST
 +(URLManagerModel *)addUseTimeDataPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/statistics/addUseTimeData"]
+    return [NSObject url:@"app/statistics/addUseTimeData"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///渠道列表 GET
 +(URLManagerModel *)channelListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/statistics/channelList"]
+    return [NSObject url:@"app/statistics/channelList"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///版本信息 GET
 +(URLManagerModel *)versionInfoAppGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/statistics/versionInfo"]
+    return [NSObject url:@"app/statistics/versionInfo"
                 funcName:NSStringFromSelector(_cmd)];
 }
-#pragma mark —— APP登录信息相关接口
+#pragma mark —— App登录信息相关接口
 ///找回密码接口-重置密码 POST
 +(URLManagerModel *)changePasswordPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/login/changePassword"]
+    return [NSObject url:@"app/login/changePassword"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///找回密码接口-身份验证 POST
 +(URLManagerModel *)checkIdentityPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/login/checkIdentity"]
+    return [NSObject url:@"app/login/checkIdentity"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///登录接口 POST
 +(URLManagerModel *)appLoginPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/login/login"]
+    return [NSObject url:@"app/login/login"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///退出接口 GET
 +(URLManagerModel *)appLogoutGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/login/out"]
+    return [NSObject url:@"app/login/out"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///随机生成4位随机数 GET
 +(URLManagerModel *)randCodeGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/login/randCode"]
+    return [NSObject url:@"app/login/randCode"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///注册接口(new) POST
 +(URLManagerModel *)appRegisterPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/login/register"]
+    return [NSObject url:@"app/login/register"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///修改密码接口 POST
 +(URLManagerModel *)resetPasswordPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/login/resetPassword"]
+    return [NSObject url:@"app/login/resetPassword"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///发送短信 POST
 +(URLManagerModel *)sendSmsCodePOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/login/sendSmsCode"]
+    return [NSObject url:@"app/login/sendSmsCode"
                 funcName:NSStringFromSelector(_cmd)];
 }
-#pragma mark —— APP广告相关接口
+#pragma mark —— App广告相关接口
 ///查询开屏或视频广告 GET
 +(URLManagerModel *)adInfoGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/adInfo/adInfo"]
+    return [NSObject url:@"app/adInfo/adInfo"
                 funcName:NSStringFromSelector(_cmd)];
 }
-#pragma mark —— APP好友关系相关接口
+#pragma mark —— App好友关系相关接口
 ///手动执行奖励记录 GET
 +(URLManagerModel *)addAwardGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userFriend/addAward"]
-                funcName:NSStringFromSelector(_cmd)];
-}
-///手动执行奖励记录 GET
-+(URLManagerModel *)addAwardInfoGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userFriend/addAwardInfo"]
+    return [NSObject url:@"app/userFriend/addAward"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///获取活跃用户 GET
 +(URLManagerModel *)awardListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userFriend/awardList"]
+    return [NSObject url:@"app/userFriend/awardList"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///最新四个好友 GET
 +(URLManagerModel *)fourListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userFriend/fourList"]
+    return [NSObject url:@"app/userFriend/fourList"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///selectUrl GET
 +(URLManagerModel *)friendUrlselectUrlGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userFriend/friendUrl"]
+    return [NSObject url:@"app/userFriend/friendUrl"
                 funcName:NSStringFromSelector(_cmd)];
 }
-///好友列表 GET
+///二期好友列表 GET
 +(URLManagerModel *)userFriendListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userFriend/list"]
+    return [NSObject url:@"app/userFriend/frindList"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///统计我的收益 GET
 +(URLManagerModel *)myInComeGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userFriend/myInCome"]
+    return [NSObject url:@"app/userFriend/myInCome"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///面对面邀请保存好友手机号码 POST
 +(URLManagerModel *)savePhonePOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userFriend/savePhone"]
+    return [NSObject url:@"app/userFriend/savePhone"
                 funcName:NSStringFromSelector(_cmd)];
 }
-#pragma mark —— APP黑名单相关接口
+#pragma mark —— App黑名单相关接口
 /// 添加 POST
 +(URLManagerModel *)blackListAddPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/black/add"]
+    return [NSObject url:@"app/black/add"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///删除 GET
 +(URLManagerModel *)blackListDeleteGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/black/delete"]
+    return [NSObject url:@"app/black/delete"
                 funcName:NSStringFromSelector(_cmd)];
 }
 ///黑名单列表 GET
 +(URLManagerModel *)blackListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/black/list"]
+    return [NSObject url:@"app/black/list"
                 funcName:NSStringFromSelector(_cmd)];
 }
-#pragma mark —— APP获取配置信息
+#pragma mark —— App获取配置信息
 ///app启动参数 GET
 +(URLManagerModel *)refreshGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/sys/refresh"]
+    return [NSObject url:@"app/sys/refresh"
                 funcName:NSStringFromSelector(_cmd)];
 }
-#pragma mark —— APP看视频获得金币奖励
+#pragma mark —— App看视频获得金币奖励
 /// 首页宝箱奖励 POST
 +(URLManagerModel *)boxRewardPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/reward/boxReward"]
+    return [NSObject url:@"app/reward/boxReward"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 抖币领取开关 GET
 +(URLManagerModel *)goldSwitchGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/reward/goldSwitch"]
+    return [NSObject url:@"app/reward/goldSwitch"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 抖币领取开关 POST
 +(URLManagerModel *)goldSwitchPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/reward/goldSwitch"]
+    return [NSObject url:@"app/reward/goldSwitch"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 首页看视频得抖币奖励 POST
 +(URLManagerModel *)randomRewardPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/reward/randomReward"]
+    return [NSObject url:@"app/reward/randomReward"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 首页看视频得抖币配置 GET
 +(URLManagerModel *)rewardSnapshotGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/reward/rewardSnapshot"]
+    return [NSObject url:@"app/reward/rewardSnapshot"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 首页看视频得抖币配置 POST
 +(URLManagerModel *)rewardSnapshotPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/reward/rewardSnapshot"]
+    return [NSObject url:@"app/reward/rewardSnapshot"
                 funcName:NSStringFromSelector(_cmd)];
 }
-#pragma mark —— APP评论相关接口
+#pragma mark —— App评论相关接口
 /// 评论视频 POST
 +(URLManagerModel *)commentVideoPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/comment/commentVideo"]
+    return [NSObject url:@"app/comment/commentVideo"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 删除评论 POST
 +(URLManagerModel *)delCommentPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/comment/delComment"]
+    return [NSObject url:@"app/comment/delComment"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 初始化用户评论列表 GET
 +(URLManagerModel *)queryInitListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/comment/queryInitList"]
+    return [NSObject url:@"app/comment/queryInitList"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 获取回复列表 GET
 +(URLManagerModel *)queryReplyListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/comment/queryReplyList"]
+    return [NSObject url:@"app/comment/queryReplyList"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 回复评论 POST
 +(URLManagerModel *)replyCommentPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/comment/replyComment"]
+    return [NSObject url:@"app/comment/replyComment"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 点赞或取消点赞 POST
 +(URLManagerModel *)setPraisePOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/comment/setPraise"]
+    return [NSObject url:@"app/comment/setPraise"
                 funcName:NSStringFromSelector(_cmd)];
 }
-#pragma mark —— APP钱包相关接口
+#pragma mark —— App钱包相关接口
 /// 抖币兑换余额提示 GET
 +(URLManagerModel *)chargeBalanceTipsGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/wallet/chargeBalanceTips"]
+    return [NSObject url:@"app/wallet/chargeBalanceTips"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 金币兑换 POST
 +(URLManagerModel *)chargeGoldPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/wallet/chargeGold"]
+    return [NSObject url:@"app/wallet/chargeGold"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 余额兑换会员 POST
 +(URLManagerModel *)chargeVipPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/wallet/chargeVIP"]
+    return [NSObject url:@"app/wallet/chargeVIP"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 获取余额兑换会员类型下拉框 GET
 +(URLManagerModel *)getToMemTypeGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/wallet/getToMemType"]
+    return [NSObject url:@"app/wallet/getToMemType"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 获取提现兑换类型下拉框 GET
 +(URLManagerModel *)getWithdrawTypeGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/wallet/getWithdrawType"]
+    return [NSObject url:@"app/wallet/getWithdrawType"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 我的钱包流水 POST
 +(URLManagerModel *)myFlowsPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/wallet/myFlows"]
+    return [NSObject url:@"app/wallet/myFlows"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 获取用户信息 POST
 +(URLManagerModel *)myWalletPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/wallet/myWallet"]
+    return [NSObject url:@"app/wallet/myWallet"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 余额提现 POST
 +(URLManagerModel *)withdrawBalancePOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/wallet/withdrawBalance"]
+    return [NSObject url:@"app/wallet/withdrawBalance"
                 funcName:NSStringFromSelector(_cmd)];
 }
-#pragma mark —— APP视频相关接口
+#pragma mark —— App视频相关接口
 /// 删除自己发布的视频 POST
 +(URLManagerModel *)delAppVideoPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/videos/delAppVideo"]
+    return [NSObject url:@"app/videos/delAppVideo"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 标签列表 GET
 +(URLManagerModel *)labelListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/videos/labelList"]
+    return [NSObject url:@"app/videos/labelList"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 视频列表(关注、点赞)  POST
 +(URLManagerModel *)loadVideosPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/videos/loadVideos"]
+    return [NSObject url:@"app/videos/loadVideos"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 视频点赞or取消 POST
 +(URLManagerModel *)praiseVideoPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/videos/praiseVideo"]
+    return [NSObject url:@"app/videos/praiseVideo"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 生成上传链接 POST
 +(URLManagerModel *)presignedUploadUrlPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/videos/presignedUploadUrl"]
+    return [NSObject url:@"app/videos/presignedUploadUrl"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 推荐的视频列表 POST
 +(URLManagerModel *)recommendVideosPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/videos/recommendVideos"]
+    return [NSObject url:@"app/videos/recommendVideos"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 搜索视频 POST
 +(URLManagerModel *)searchPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/videos/search"]
+    return [NSObject url:@"app/videos/search"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 上传视频 POST
 +(URLManagerModel *)uploadVideoPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/videos/uploadVideo"]
+    return [NSObject url:@"app/videos/uploadVideo"
+                funcName:NSStringFromSelector(_cmd)];
+}
+#pragma mark —— App帖子粉丝相关接口
+/// 帖子粉丝用户列表 GET
++(URLManagerModel *)postFansListGET{
+    return [NSObject url:@"/app/postFans/list"
+                funcName:NSStringFromSelector(_cmd)];
+}
+#pragma mark —— App帖子关注相关接口
+/// 添加 POST
++(URLManagerModel *)postFansListPOST{
+return [NSObject url:@"/app/postFocus/add"
+            funcName:NSStringFromSelector(_cmd)];
+}
+/// 删除 GET
++(URLManagerModel *)postFocusDeleteGET{
+    return [NSObject url:@"/app/postFocus/delete"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 帖子关注用户列表 GET
++(URLManagerModel *)postFocusListGET{
+    return [NSObject url:@"/app/postFocus/list"
+                funcName:NSStringFromSelector(_cmd)];
+}
+#pragma mark —— App帖子评论相关接口
+/// 评论 GET
++(URLManagerModel *)commentAddGET{
+    return [NSObject url:@"/app/comment/add"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 全部评论列表 GET
++(URLManagerModel *)commentAllListGET{
+    return [NSObject url:@"/app/comment/allList"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 评论列表 GET
++(URLManagerModel *)commentListGET{
+    return [NSObject url:@"/app/comment/list"
                 funcName:NSStringFromSelector(_cmd)];
 }
 #pragma mark —— App消息相关接口
 /// 获取用户粉丝详情 GET
 +(URLManagerModel *)fansInfoGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/message/fansInfo"]
+    return [NSObject url:@"app/message/fansInfo"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 消息一级列表 GET
 +(URLManagerModel *)messageFirstClassListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/message/list"]
+    return [NSObject url:@"app/message/list"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 获取系统消息详情视频列表 GET
 +(URLManagerModel *)messageInfoGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/message/messageInfo"]
+    return [NSObject url:@"app/message/messageInfo"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 消息二级级列表 GET
 +(URLManagerModel *)messageSecondClassListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/message/messageList"]
+    return [NSObject url:@"app/message/messageList"
                 funcName:NSStringFromSelector(_cmd)];
 }
-/// 公告列表 GET
+/// app公告列表 GET
 +(URLManagerModel *)noticeListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/message/noticeList"]
+    return [NSObject url:@"app/message/noticeList"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 消息开关列表 GET
 +(URLManagerModel *)turnOffListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/message/turnOffList"]
+    return [NSObject url:@"app/message/turnOffList"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 修改消息开关 POST
 +(URLManagerModel *)updateOffPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/message/updateOff"]
+    return [NSObject url:@"app/message/updateOff"
                 funcName:NSStringFromSelector(_cmd)];
 }
 #pragma mark —— App消息状态相关接口
 /// 添加已读消息 POST
 +(URLManagerModel *)messageStatusAddPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/messageStatus/add"]
+    return [NSObject url:@"app/messageStatus/add"
                 funcName:NSStringFromSelector(_cmd)];
 }
-#pragma mark —— APP银行卡相关接口
+#pragma mark —— App银行卡相关接口
 /// 添加银行卡 POST
 +(URLManagerModel *)bankAddPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/bank/add"]
+    return [NSObject url:@"app/bank/add"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 获取银行卡信息 GET
 +(URLManagerModel *)bankInfoGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/bank/bankInfo"]
+    return [NSObject url:@"app/bank/bankInfo"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 删除 GET
 +(URLManagerModel *)bankDeleteGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/bank/delete"]
+    return [NSObject url:@"app/bank/delete"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 银行卡列表 GET
 +(URLManagerModel *)bankListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/bank/list"]
+    return [NSObject url:@"app/bank/list"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 修改银行卡 POST
 +(URLManagerModel *)bankUpdatePOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/bank/update"]
+    return [NSObject url:@"app/bank/update"
                 funcName:NSStringFromSelector(_cmd)];
 }
-#pragma mark —— APP用户粉丝相关接口
+#pragma mark —— App用户粉丝相关接口
 ///用户粉丝列表 GET
 +(URLManagerModel *)userFansListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userFans/list"]
+    return [NSObject url:@"app/userFans/list"
                 funcName:NSStringFromSelector(_cmd)];
 }
-#pragma mark —— APP用户关注相关接口
+#pragma mark —— App用户关注相关接口
 /// 添加 POST
 +(URLManagerModel *)userFocusAddPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userFocus/add"]
+    return [NSObject url:@"app/userFocus/add"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 删除 GET
 +(URLManagerModel *)userFocusDeleteGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userFocus/delete"]
+    return [NSObject url:@"app/userFocus/delete"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 关注用户列表 GET
 +(URLManagerModel *)userFocusListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userFocus/list"]
+    return [NSObject url:@"app/userFocus/list"
                 funcName:NSStringFromSelector(_cmd)];
 }
-#pragma mark —— APP用户信息相关接口
+#pragma mark —— App用户帖子相关接口
+/// 发帖 POST
++(URLManagerModel *)postAddPostPOST{
+    return [NSObject url:@"/app/post/addPost"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 帖子详情 GET
++(URLManagerModel *)postcommentDetailInfoGET{
+    return [NSObject url:@"/app/post/commentDetailInfo"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 用户帖子详情 GET
++(URLManagerModel *)postDetailInfoGET{
+    return [NSObject url:@"/app/post/detailInfo"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 帖子列表 GET
++(URLManagerModel *)postListGET{
+    return [NSObject url:@"app/post/list"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 帖子我的(关注、点赞.发布) GET
++(URLManagerModel *)postMyPostGET{
+    return [NSObject url:@"/app/post/myPost"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 帖子详情 GET
++(URLManagerModel *)postInfoGET{
+    return [NSObject url:@"/app/post/postInfo"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 点赞 POST
++(URLManagerModel *)postPraisePostPOST{
+    return [NSObject url:@"/app/post/praisePost"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 帖子图片上传 POST
++(URLManagerModel *)postUploadImagePOST{
+    return [NSObject url:@"/app/post/uploadImage"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 帖子视频上传 POST
++(URLManagerModel *)postuploadVideoPOST{
+    return [NSObject url:@"/app/post/uploadVideo"
+                funcName:NSStringFromSelector(_cmd)];
+}
+#pragma mark —— App用户信息相关接口
 /// 绑定手机号 POST
 +(URLManagerModel *)bindPhonePOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userInfo/bindPhone"]
+    return [NSObject url:@"app/userInfo/bindPhone"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 校验是否有权限 GET
 +(URLManagerModel *)checkHadRoleGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userInfo/checkHadRole"]
+    return [NSObject url:@"app/userInfo/checkHadRole"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 进行签到 POST
 +(URLManagerModel *)doSignPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userInfo/doSign"]
+    return [NSObject url:@"app/userInfo/doSign"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 二期邀请好友 POST
++(URLManagerModel *)userInfoInviteFriendPOST{
+    return [NSObject url:@"/app/userInfo/inviteFriend"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 邀请任务数据展示 GET
++(URLManagerModel *)userInfoListGET{
+    return [NSObject url:@"/app/userInfo/list"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 获取我的详情 GET
 +(URLManagerModel *)myUserInfoGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userInfo/myUserInfo"]
+    return [NSObject url:@"app/userInfo/myUserInfo"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 滚动数据 GET
 +(URLManagerModel *)rollDateGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userInfo/rollDate"]
+    return [NSObject url:@"app/userInfo/rollDate"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 查询用户信息 GET
 +(URLManagerModel *)selectIdCardGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userInfo/selectIdCard"]
+    return [NSObject url:@"app/userInfo/selectIdCard"
+                funcName:NSStringFromSelector(_cmd)];
+}
+/// 查询视频数量 POST
++(URLManagerModel *)userInfoSelectVideoCountPOST{
+    return [NSObject url:@"/app/userInfo/selectVideoCount"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 我的签到列表 GET
 +(URLManagerModel *)signListGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userInfo/signList"]
+    return [NSObject url:@"app/userInfo/signList"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 编辑个人资料 POST
 +(URLManagerModel *)userInfoUpdatePOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userInfo/update"]
+    return [NSObject url:@"app/userInfo/update"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 绑定支付宝 POST
 +(URLManagerModel *)updateAccountInfoPOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userInfo/updateAccountInfo"]
+    return [NSObject url:@"app/userInfo/updateAccountInfo"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 邀请好友 POST
 +(URLManagerModel *)userInfoUpdateCodePOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userInfo/updateCode"]
+    return [NSObject url:@"app/userInfo/updateCode"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 上传头像 POST
 +(URLManagerModel *)uploadImagePOST{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userInfo/uploadImage"]
+    return [NSObject url:@"app/userInfo/uploadImage"
                 funcName:NSStringFromSelector(_cmd)];
 }
 /// 获取用户详情 GET
 +(URLManagerModel *)userInfoGET{
-    return [NSObject url:[NSObject.BasePort stringByAppendingString:@"app/userInfo/userInfo"]
+    return [NSObject url:@"app/userInfo/userInfo"
                 funcName:NSStringFromSelector(_cmd)];
 }
+
 @end
