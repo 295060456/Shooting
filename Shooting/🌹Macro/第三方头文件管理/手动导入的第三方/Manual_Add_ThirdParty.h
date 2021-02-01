@@ -22,6 +22,7 @@
 #import "UIFont+Extras.h"
 /// UIColor
 #import "UIColor+Hex.h"
+#import "UIColor+Gradient.h"
 /// NSObject
 #import "NSObject+Extras.h"
 #import "NSObject+Time.h"

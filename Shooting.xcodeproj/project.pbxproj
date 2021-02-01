@@ -107,6 +107,8 @@
 		C562DE5225C7C55D004D1AEA /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C562DE5125C7C55D004D1AEA /* UIView+ViewController.m */; };
 		C565CBC125A4384800848134 /* TwoVerticalArrangementLabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C565CBBE25A4384800848134 /* TwoVerticalArrangementLabsView.m */; };
 		C56BBC5325879A6B0043C977 /* UIControl+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = C56BBC5125879A6B0043C977 /* UIControl+XY.m */; };
+		C56D8B6025C823C1001960CD /* UIColor+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = C56D8B5B25C823C1001960CD /* UIColor+Gradient.m */; };
+		C56D8B6125C823C1001960CD /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C56D8B5E25C823C1001960CD /* UIColor+Hex.m */; };
 		C56E428E2547188A00B9F555 /* ⚽️PicResource in Resources */ = {isa = PBXBuildFile; fileRef = C56E428D2547188A00B9F555 /* ⚽️PicResource */; };
 		C57278B82540974C002373D7 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C57278B32540974B002373D7 /* NavigationBar.m */; };
 		C57278B92540974C002373D7 /* BaseNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C57278B62540974B002373D7 /* BaseNavigationVC.m */; };
@@ -143,7 +145,6 @@
 		C58F018224EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton in Resources */ = {isa = PBXBuildFile; fileRef = C58F011524EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton */; };
 		C58F018424EA5CAC00B6D09C /* UIView+Chain.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F011B24EA5CAC00B6D09C /* UIView+Chain.m */; };
 		C58F018524EA5CAC00B6D09C /* UIView+SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F011C24EA5CAC00B6D09C /* UIView+SuspendView.m */; };
-		C58F018724EA5CAC00B6D09C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F012124EA5CAC00B6D09C /* UIColor+Hex.m */; };
 		C58F018824EA5CAC00B6D09C /* UIView+JHGestureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F012424EA5CAC00B6D09C /* UIView+JHGestureBlock.m */; };
 		C58F018C24EA5CAC00B6D09C /* UIImageView+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F012F24EA5CAC00B6D09C /* UIImageView+GIF.m */; };
 		C58F018D24EA5CAC00B6D09C /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F013224EA5CAC00B6D09C /* NSArray+Extension.m */; };
@@ -653,6 +654,10 @@
 		C56BBC5025879A6B0043C977 /* UIControl+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+XY.h"; sourceTree = "<group>"; };
 		C56BBC5125879A6B0043C977 /* UIControl+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+XY.m"; sourceTree = "<group>"; };
 		C56BBC5225879A6B0043C977 /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "iOS小技巧：用runtime 解决UIButton 重复点击问题.md"; sourceTree = "<group>"; };
+		C56D8B5B25C823C1001960CD /* UIColor+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Gradient.m"; sourceTree = "<group>"; };
+		C56D8B5C25C823C1001960CD /* UIColor+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Gradient.h"; sourceTree = "<group>"; };
+		C56D8B5E25C823C1001960CD /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		C56D8B5F25C823C1001960CD /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		C56E428D2547188A00B9F555 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "⚽️PicResource"; sourceTree = "<group>"; };
 		C57278B32540974B002373D7 /* NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBar.m; sourceTree = "<group>"; };
 		C57278B42540974B002373D7 /* NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBar.h; sourceTree = "<group>"; };
@@ -735,8 +740,6 @@
 		C58F011C24EA5CAC00B6D09C /* UIView+SuspendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SuspendView.m"; sourceTree = "<group>"; };
 		C58F011D24EA5CAC00B6D09C /* UIView+Chain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Chain.h"; sourceTree = "<group>"; };
 		C58F011F24EA5CAC00B6D09C /* UIView+SuspendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SuspendView.h"; sourceTree = "<group>"; };
-		C58F012124EA5CAC00B6D09C /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
-		C58F012224EA5CAC00B6D09C /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		C58F012424EA5CAC00B6D09C /* UIView+JHGestureBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JHGestureBlock.m"; sourceTree = "<group>"; };
 		C58F012524EA5CAC00B6D09C /* UIView+JHGestureBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JHGestureBlock.h"; sourceTree = "<group>"; };
 		C58F012F24EA5CAC00B6D09C /* UIImageView+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+GIF.m"; sourceTree = "<group>"; };
@@ -2170,6 +2173,24 @@
 			path = UIControl;
 			sourceTree = "<group>";
 		};
+		C56D8B5A25C823C1001960CD /* UIColor+Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				C56D8B5B25C823C1001960CD /* UIColor+Gradient.m */,
+				C56D8B5C25C823C1001960CD /* UIColor+Gradient.h */,
+			);
+			path = "UIColor+Gradient";
+			sourceTree = "<group>";
+		};
+		C56D8B5D25C823C1001960CD /* UIColor+Hex */ = {
+			isa = PBXGroup;
+			children = (
+				C56D8B5E25C823C1001960CD /* UIColor+Hex.m */,
+				C56D8B5F25C823C1001960CD /* UIColor+Hex.h */,
+			);
+			path = "UIColor+Hex";
+			sourceTree = "<group>";
+		};
 		C57278B22540974B002373D7 /* UINavigationBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -2554,8 +2575,8 @@
 		C58F012024EA5CAC00B6D09C /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
-				C58F012224EA5CAC00B6D09C /* UIColor+Hex.h */,
-				C58F012124EA5CAC00B6D09C /* UIColor+Hex.m */,
+				C56D8B5A25C823C1001960CD /* UIColor+Gradient */,
+				C56D8B5D25C823C1001960CD /* UIColor+Hex */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -5072,6 +5093,7 @@
 				C5D7B22825A73B2500166E83 /* DDUserInfo.m in Sources */,
 				C59A3E98258DD22E005F6260 /* UserDefaultModel.m in Sources */,
 				C58F002624EA36FA00B6D09C /* main.m in Sources */,
+				C56D8B6125C823C1001960CD /* UIColor+Hex.m in Sources */,
 				C5D7B21B25A73B2500166E83 /* NetworkingAPI+AdsApi.m in Sources */,
 				C58F018824EA5CAC00B6D09C /* UIView+JHGestureBlock.m in Sources */,
 				C53D60E2255C20FC006C290D /* JobsPullListAutoSizeView.m in Sources */,
@@ -5149,6 +5171,7 @@
 				C5D7B21525A73B2500166E83 /* NetworkingAPI+EarnApi.m in Sources */,
 				C5D7B15825A73AE500166E83 /* JobsAppDoorInputViewBaseStyle_5.m in Sources */,
 				C5D7B26625A73B3B00166E83 /* DDFocusOnPeopleVC.m in Sources */,
+				C56D8B6025C823C1001960CD /* UIColor+Gradient.m in Sources */,
 				C5D7B27525A73B3B00166E83 /* DDPlazaMineVC.m in Sources */,
 				C5C65403259DF94500FD2F99 /* ECPrivacyCheckMotionAndFitness.m in Sources */,
 				C534CE2025875A31001369FD /* BWItemCollectionViewCell.m in Sources */,
@@ -5349,7 +5372,6 @@
 				C54B3FC9255297C5003BE195 /* NSObject+RichText.m in Sources */,
 				C561618C24EE4C98001CD851 /* MyCell.m in Sources */,
 				C5C6543D259DF95700FD2F99 /* UIViewController+TZLocationManager.m in Sources */,
-				C58F018724EA5CAC00B6D09C /* UIColor+Hex.m in Sources */,
 				C5D0BAC925878EA6002CA224 /* SoundBtn.m in Sources */,
 				C53D60EA255C20FC006C290D /* CustomTabBar.m in Sources */,
 				C551352925C68A09007BCA82 /* ZWPullMenuCell.m in Sources */,
