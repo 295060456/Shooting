@@ -50,6 +50,9 @@
 #import "UIImage+Tailor.h"
 #import "UIImage+ScreenShot.h"
 /// UIView
+// BaseView
+#import "BaseView.h"
+// UIView+Category
 #import "UIView+JHGestureBlock.h"
 #import "UIView+Chain.h"
 #import "UIView+SuspendView.h"
