@@ -164,13 +164,19 @@ static CGFloat offset = 20;//高度补偿值
 -(UIImageView *)userHeaderIMGV{
     if (!_userHeaderIMGV) {
         _userHeaderIMGV = UIImageView.new;
-        _userHeaderIMGV.userInteractionEnabled = YES;
-        _userHeaderIMGV.target = self;//这句很关键
-        _userHeaderIMGV.tapGRSEL = NSStringFromSelector(@selector(skipToUserDetail));
-        _userHeaderIMGV.numberOfTouchesRequired = 1;
-        _userHeaderIMGV.numberOfTapsRequired = 1;
-        _userHeaderIMGV.tapGR.enabled = YES;
-        
+        {
+            _userHeaderIMGV.userInteractionEnabled = YES;
+            _userHeaderIMGV.target = self;//这句很关键
+            _userHeaderIMGV.numberOfTouchesRequired = 1;
+            _userHeaderIMGV.numberOfTapsRequired = 1;
+            _userHeaderIMGV.tapGR.enabled = YES;
+            
+    //        @weakify(self)
+            _userHeaderIMGV.callbackBlock = ^(id weakSelf, id arg, UIGestureRecognizer *data3) {
+    //            @strongify(self)
+                [weakSelf skipToUserDetail];
+            };
+        }
         [self.contentView addSubview:_userHeaderIMGV];
         [_userHeaderIMGV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(29, 29));

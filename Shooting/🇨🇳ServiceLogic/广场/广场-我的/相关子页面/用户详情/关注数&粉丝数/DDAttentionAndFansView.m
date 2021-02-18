@@ -51,10 +51,14 @@
         {// A
             _labsView_1.userInteractionEnabled = YES;
             _labsView_1.target = self;
-            _labsView_1.tapGRSEL = NSStringFromSelector(@selector(IFocusOn));
             _labsView_1.numberOfTouchesRequired = 1;
             _labsView_1.numberOfTapsRequired = 1;
             _labsView_1.tapGR.enabled = YES;
+//            @weakify(self)
+            _labsView_1.callbackBlock = ^(id weakSelf, id arg, UIGestureRecognizer *data3) {
+//                @strongify(self)
+                [weakSelf IFocusOn];
+            };
         }
         
         [_labsView_1 richElementsInCellWithModel:self.model_1];
@@ -73,10 +77,15 @@
         {// A
             _labsView_2.userInteractionEnabled = YES;
             _labsView_2.target = self;
-            _labsView_2.tapGRSEL = NSStringFromSelector(@selector(payAttentionToMe));
             _labsView_2.numberOfTouchesRequired = 1;
             _labsView_2.numberOfTapsRequired = 1;
             _labsView_2.tapGR.enabled = YES;
+            
+//            @weakify(self)
+            _labsView_2.callbackBlock = ^(id weakSelf, id arg, UIGestureRecognizer *data3) {
+//                @strongify(self)
+                [weakSelf payAttentionToMe];
+            };
         }
         [_labsView_2 richElementsInCellWithModel:self.model_2];
         [self addSubview:_labsView_2];
