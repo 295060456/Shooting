@@ -9,21 +9,21 @@
 #ifndef Manual_Add_ThirdParty_h
 #define Manual_Add_ThirdParty_h
 
-#pragma mark —— BaseCustomizeUIKit
-/// CALayer
+/// BaseCustomizeUIKit
+#pragma mark —— CALayer
 #import "CALayer+Anim.h"
 #import "CALayer+Transition.h"
-/// NSArray
+#pragma mark —— NSArray
 #import "NSArray+Extension.h"
 #import "NSArray+Extend.h"
-/// NSString
+#pragma mark —— NSString
 #import "NSString+Extras.h"
-/// UIFont
+#pragma mark —— UIFont
 #import "UIFont+Extras.h"
-/// UIColor
+#pragma mark —— UIColor
 #import "UIColor+Hex.h"
 #import "UIColor+Gradient.h"
-/// NSObject
+#pragma mark —— NSObject
 #import "NSObject+Extras.h"
 #import "NSObject+Time.h"
 #import "NSObject+LBLaunchImage.h"
@@ -35,13 +35,13 @@
 #import "NSObject+OpenURL.h"
 #import "NSObject+DataSave.h"
 //#import "NSObject+Login.h"
-/// UIControl
+#pragma mark —— UIControl
 #import "UIControl+XY.h"
-/// UITableViewCell
+#pragma mark —— UITableViewCell
 #import "UITableViewCell+WhiteArrows.h"
-/// UIImageView
+#pragma mark —— UIImageView
 #import "UIImageView+GIF.h"//UIImageView支持GIF动画 https://github.com/pupboss/UIImageView-GIF
-/// UIImage
+#pragma mark —— UIImage
 #import "LoadingImage.h"
 #import "UIImage+SYS.h"
 #import "UIImage+YBGIF.h"
@@ -49,7 +49,7 @@
 #import "UIImage+Extras.h"
 #import "UIImage+Tailor.h"
 #import "UIImage+ScreenShot.h"
-/// UIView
+#pragma mark —— UIView
 // BaseView
 #import "BaseView.h"
 // UIView+Category
@@ -64,7 +64,7 @@
 #import "UIView+Gesture.h"
 #import "UIView+MJRefresh.h"
 #import "UIView+ViewController.h"
-/// UIViewController
+#pragma mark —— UIViewController
 #import "UIViewController+BaseVC.h"
 #import "UIViewController+BackBtn.h"
 #import "UIViewController+BRPickerView.h"
@@ -79,27 +79,27 @@
 #import "UIViewController+TZImagePickerControllerDelegate.h"
 #import "UIViewController+TZLocationManager.h"
 #import "UIViewController+EmptyData.h"
-/// UINavigationController
+#pragma mark —— UINavigationController
 #import "BaseNavigationVC.h"
-/// UIButton
+#pragma mark —— UIButton
 #import "UIButton+ImageTitleSpacing.h"
-/// UITextField
+#pragma mark —— UITextField
 #import "ZYTextField.h"
-/// UIButton
+#pragma mark —— UIButton
 #import "RBCLikeButton.h"//高仿抖音点赞动画
 #import "LGiOSBtn.h"
 #import "UIButton+CountDownBtn.h"
-/// UIDevice
+#pragma mark —— UIDevice
 #import "UIDevice+XMUtils.h"
-/// UITableViewHeaderFooterView
+#pragma mark —— UITableViewHeaderFooterView
 #import "ViewForTableViewFooter.h"
 #import "ViewForTableViewHeader.h"
-/// UICollectionReusableView 用作基类
+#pragma mark —— UICollectionReusableView 用作基类
 #import "BaseCollectionReusableView.h"
-// UICollectionView
+#pragma mark —— UICollectionView
 #import "BaseCollectionView.h"
 #import "UICollectionView+RegisterClass.h"
-/// UICollectionViewCell
+#pragma mark —— UICollectionViewCell
 #import "BaseCollectionViewCell.h"
 // UICollectionViewFlowLayout
 /// LMHWaterFallLayout
@@ -108,6 +108,11 @@
 #import "KFZShopCatoryFlowLayput.h"
 /// UICollectionView 实现类似于UITableView的悬停效果
 #import "HQCollectionViewFlowLayout.h"
+#pragma mark —— UIImageView
+/// BaseImageView
+#import "BaseImageView.h"
+/// UIImageView+Category
+#import "UIImageView+GIF.h"//UIImageView支持GIF动画 https://github.com/pupboss/UIImageView-GIF
 
 #pragma mark —— Manual_Add_ThirdParty
 #import "UserDefaultManager.h"
