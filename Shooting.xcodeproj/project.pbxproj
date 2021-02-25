@@ -176,6 +176,7 @@
 		C5914BAD25384CD0007777A6 /* UIViewController+JPImageresizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5914B9B25384CCF007777A6 /* UIViewController+JPImageresizerView.m */; };
 		C5914BAF25384CD0007777A6 /* UIViewController+BackBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5914B9E25384CCF007777A6 /* UIViewController+BackBtn.m */; };
 		C5914BB025384CD0007777A6 /* UIViewController+BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5914BA125384CCF007777A6 /* UIViewController+BWShareView.m */; };
+		C59434B125E7AAD8003BCA91 /* UITextView+IndicateWordLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59434AE25E7AAD8003BCA91 /* UITextView+IndicateWordLimit.m */; };
 		C595D4EF258714AD002A4531 /* SuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C595D4E8258714AD002A4531 /* SuspendLab.m */; };
 		C595D4F0258714AD002A4531 /* SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C595D4EA258714AD002A4531 /* SuspendView.m */; };
 		C595D4F1258714AD002A4531 /* SuspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C595D4ED258714AD002A4531 /* SuspendBtn.m */; };
@@ -804,6 +805,9 @@
 		C5914B9F25384CCF007777A6 /* UIViewController+BackBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackBtn.h"; sourceTree = "<group>"; };
 		C5914BA125384CCF007777A6 /* UIViewController+BWShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BWShareView.m"; sourceTree = "<group>"; };
 		C5914BA325384CCF007777A6 /* UIViewController+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Shake.h"; sourceTree = "<group>"; };
+		C59434AE25E7AAD8003BCA91 /* UITextView+IndicateWordLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+IndicateWordLimit.m"; sourceTree = "<group>"; };
+		C59434AF25E7AAD8003BCA91 /* UITextView+IndicateWordLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+IndicateWordLimit.h"; sourceTree = "<group>"; };
+		C59434B025E7AAD8003BCA91 /* UITextView+IndicateWordLimit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UITextView+IndicateWordLimit.png"; sourceTree = "<group>"; };
 		C595D4E7258714AD002A4531 /* SuspendLab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendLab.h; sourceTree = "<group>"; };
 		C595D4E8258714AD002A4531 /* SuspendLab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendLab.m; sourceTree = "<group>"; };
 		C595D4EA258714AD002A4531 /* SuspendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendView.m; sourceTree = "<group>"; };
@@ -2550,8 +2554,6 @@
 		C58F011024EA5BD500B6D09C /* BaseCustomizeUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				C5E5C64525079634001E69DA /* UIDevice */,
-				C56BBC4F25879A6B0043C977 /* UIControl */,
 				C58F014D24EA5CAC00B6D09C /* CALayer */,
 				C58F013124EA5CAC00B6D09C /* NSArray */,
 				C58F017A24EA5CAC00B6D09C /* NSObject */,
@@ -2563,6 +2565,8 @@
 				C530B0DF254D9ACD00EDEDC8 /* UICollectionViewCell */,
 				C530B0E8254D9ACD00EDEDC8 /* UICollectionViewFlowLayout */,
 				C58F012024EA5CAC00B6D09C /* UIColor */,
+				C56BBC4F25879A6B0043C977 /* UIControl */,
+				C5E5C64525079634001E69DA /* UIDevice */,
 				C54B3CE825526022003BE195 /* UIFont */,
 				C58F016D24EA5CAC00B6D09C /* UIImage */,
 				C58F012E24EA5CAC00B6D09C /* UIImageView */,
@@ -2573,6 +2577,7 @@
 				C58F013A24EA5CAC00B6D09C /* UITableViewCell */,
 				C5850AE425483DA1001E6676 /* UITableViewHeaderFooterView */,
 				C58F014124EA5CAC00B6D09C /* UITextField */,
+				C59434AD25E7AAD8003BCA91 /* UITextView+IndicateWordLimit */,
 				C58F011924EA5CAC00B6D09C /* UIView */,
 				C58F015224EA5CAC00B6D09C /* UIViewController */,
 			);
@@ -2898,6 +2903,16 @@
 				C55497AD24F3A3A20065510D /* OtherVC */,
 			);
 			path = "🇨🇳ServiceLogic";
+			sourceTree = "<group>";
+		};
+		C59434AD25E7AAD8003BCA91 /* UITextView+IndicateWordLimit */ = {
+			isa = PBXGroup;
+			children = (
+				C59434AF25E7AAD8003BCA91 /* UITextView+IndicateWordLimit.h */,
+				C59434AE25E7AAD8003BCA91 /* UITextView+IndicateWordLimit.m */,
+				C59434B025E7AAD8003BCA91 /* UITextView+IndicateWordLimit.png */,
+			);
+			path = "UITextView+IndicateWordLimit";
 			sourceTree = "<group>";
 		};
 		C595BE4D2586422B002A4531 /* UIView+Animation */ = {
@@ -5191,6 +5206,7 @@
 				C561619824EE4CA9001CD851 /* MKUploadingVC.m in Sources */,
 				C5DF454D25A89A0300E91985 /* MJRefreshConfigModel.m in Sources */,
 				C5D7B15025A73AE500166E83 /* JobsAppDoorInputViewBaseStyle_6.m in Sources */,
+				C59434B125E7AAD8003BCA91 /* UITextView+IndicateWordLimit.m in Sources */,
 				C5D7B22525A73B2500166E83 /* NetworkingAPI.m in Sources */,
 				C534CE1F25875A31001369FD /* BWShareView.m in Sources */,
 				C59D9AD724F8EF4100A74CE9 /* CustomerAVPlayerVC.m in Sources */,
