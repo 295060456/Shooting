@@ -34,6 +34,7 @@
 #import "NSObject+Shake.h"
 #import "NSObject+OpenURL.h"
 #import "NSObject+DataSave.h"
+#import "NSObject+CallBackInfoByBlock.h"
 //#import "NSObject+Login.h"
 #pragma mark —— UIControl
 #import "UIControl+XY.h"
@@ -64,7 +65,6 @@
 #import "UIView+Gesture.h"
 #import "UIView+MJRefresh.h"
 #import "UIView+ViewController.h"
-#import "UIView+CallBackInfoByBlock.h"
 #pragma mark —— UIViewController
 #import "UIViewController+BaseVC.h"
 #import "UIViewController+BackBtn.h"
@@ -80,7 +80,6 @@
 #import "UIViewController+TZImagePickerControllerDelegate.h"
 #import "UIViewController+TZLocationManager.h"
 #import "UIViewController+EmptyData.h"
-#import "UIViewController+CallBackInfoByBlock.h"
 #pragma mark —— UINavigationController
 #import "BaseNavigationVC.h"
 #pragma mark —— UIButton
