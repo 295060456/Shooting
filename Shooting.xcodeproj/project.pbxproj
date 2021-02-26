@@ -108,6 +108,8 @@
 		C565CBC125A4384800848134 /* TwoVerticalArrangementLabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C565CBBE25A4384800848134 /* TwoVerticalArrangementLabsView.m */; };
 		C567359825D77B43008ABAF9 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C567359325D77B43008ABAF9 /* BaseView.m */; };
 		C56BBC5325879A6B0043C977 /* UIControl+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = C56BBC5125879A6B0043C977 /* UIControl+XY.m */; };
+		C56BBC6725E90766001E1E69 /* UIViewController+CallBackInfoByBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C56BBC6625E90766001E1E69 /* UIViewController+CallBackInfoByBlock.m */; };
+		C56BBC6E25E90772001E1E69 /* UIView+CallBackInfoByBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C56BBC6D25E90772001E1E69 /* UIView+CallBackInfoByBlock.m */; };
 		C56D8B6025C823C1001960CD /* UIColor+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = C56D8B5B25C823C1001960CD /* UIColor+Gradient.m */; };
 		C56D8B6125C823C1001960CD /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C56D8B5E25C823C1001960CD /* UIColor+Hex.m */; };
 		C56E428E2547188A00B9F555 /* ⚽️PicResource in Resources */ = {isa = PBXBuildFile; fileRef = C56E428D2547188A00B9F555 /* ⚽️PicResource */; };
@@ -659,6 +661,10 @@
 		C56BBC5025879A6B0043C977 /* UIControl+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+XY.h"; sourceTree = "<group>"; };
 		C56BBC5125879A6B0043C977 /* UIControl+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+XY.m"; sourceTree = "<group>"; };
 		C56BBC5225879A6B0043C977 /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "iOS小技巧：用runtime 解决UIButton 重复点击问题.md"; sourceTree = "<group>"; };
+		C56BBC6525E90766001E1E69 /* UIViewController+CallBackInfoByBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CallBackInfoByBlock.h"; sourceTree = "<group>"; };
+		C56BBC6625E90766001E1E69 /* UIViewController+CallBackInfoByBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CallBackInfoByBlock.m"; sourceTree = "<group>"; };
+		C56BBC6C25E90772001E1E69 /* UIView+CallBackInfoByBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CallBackInfoByBlock.h"; sourceTree = "<group>"; };
+		C56BBC6D25E90772001E1E69 /* UIView+CallBackInfoByBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CallBackInfoByBlock.m"; sourceTree = "<group>"; };
 		C56D8B5B25C823C1001960CD /* UIColor+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Gradient.m"; sourceTree = "<group>"; };
 		C56D8B5C25C823C1001960CD /* UIColor+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Gradient.h"; sourceTree = "<group>"; };
 		C56D8B5E25C823C1001960CD /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
@@ -2176,10 +2182,10 @@
 		C567358525D77B2A008ABAF9 /* UIView+Category */ = {
 			isa = PBXGroup;
 			children = (
-				C562DE4C25C7C558004D1AEA /* UIView+ViewController */,
-				C572979F25BB0A8400726419 /* UIView+BackgroundImage */,
 				C595BE4D2586422B002A4531 /* UIView+Animation */,
 				C546100A258C8F780008928C /* UIView+AOP */,
+				C572979F25BB0A8400726419 /* UIView+BackgroundImage */,
+				C56BBC6B25E90772001E1E69 /* UIView+CallBackInfoByBlock */,
 				C595BE4F25864239002A4531 /* UIView+Chain */,
 				C5D1C0E0258B20B200784D2F /* UIView+EmptyData */,
 				C595BE4E25864232002A4531 /* UIView+Extras */,
@@ -2189,6 +2195,7 @@
 				C595BE512586424A002A4531 /* UIView+Measure */,
 				C55FEC3F25B427AF00D8C30D /* UIView+MJRefresh */,
 				C595BE5225864255002A4531 /* UIView+SuspendView */,
+				C562DE4C25C7C558004D1AEA /* UIView+ViewController */,
 			);
 			path = "UIView+Category";
 			sourceTree = "<group>";
@@ -2210,6 +2217,24 @@
 				C56BBC5125879A6B0043C977 /* UIControl+XY.m */,
 			);
 			path = UIControl;
+			sourceTree = "<group>";
+		};
+		C56BBC6425E90766001E1E69 /* UIViewController+CallBackInfoByBlock */ = {
+			isa = PBXGroup;
+			children = (
+				C56BBC6525E90766001E1E69 /* UIViewController+CallBackInfoByBlock.h */,
+				C56BBC6625E90766001E1E69 /* UIViewController+CallBackInfoByBlock.m */,
+			);
+			path = "UIViewController+CallBackInfoByBlock";
+			sourceTree = "<group>";
+		};
+		C56BBC6B25E90772001E1E69 /* UIView+CallBackInfoByBlock */ = {
+			isa = PBXGroup;
+			children = (
+				C56BBC6C25E90772001E1E69 /* UIView+CallBackInfoByBlock.h */,
+				C56BBC6D25E90772001E1E69 /* UIView+CallBackInfoByBlock.m */,
+			);
+			path = "UIView+CallBackInfoByBlock";
 			sourceTree = "<group>";
 		};
 		C56D8B5A25C823C1001960CD /* UIColor+Gradient */ = {
@@ -3462,6 +3487,7 @@
 				C544BDE12583739A00C6CF2A /* UIViewController+BaseVC */,
 				C544BDEB258373A300C6CF2A /* UIViewController+BRPickerView */,
 				C544BDF5258373AA00C6CF2A /* UIViewController+BWShareView */,
+				C56BBC6425E90766001E1E69 /* UIViewController+CallBackInfoByBlock */,
 				C5D1BC30258B0D0100784D2F /* UIViewController+EmptyData */,
 				C544BDFC258373B200C6CF2A /* UIViewController+GifImageView */,
 				C544BE03258373BC00C6CF2A /* UIViewController+JPImageresizerView */,
@@ -5159,6 +5185,7 @@
 				C57C229A250240B500FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */,
 				C56161BF24EE4F4B001CD851 /* JhtBannerScrollView.m in Sources */,
 				C5AEEAE125384197000E1C5F /* UIView+Animation.m in Sources */,
+				C56BBC6725E90766001E1E69 /* UIViewController+CallBackInfoByBlock.m in Sources */,
 				C5D7B16325A73AE500166E83 /* BaseContentView.m in Sources */,
 				C5A43A7825AAF8A6000F0CD2 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */,
@@ -5281,6 +5308,7 @@
 				C5D7B22325A73B2500166E83 /* NetworkingAPI+FriendsRelationshipApi.m in Sources */,
 				C59D9ADC24F8EF4D00A74CE9 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m in Sources */,
 				C52DEF4E255D2A820016FF07 /* XHLaunchAdButton.m in Sources */,
+				C56BBC6E25E90772001E1E69 /* UIView+CallBackInfoByBlock.m in Sources */,
 				C551352625C68A09007BCA82 /* ZWPullMenuConfig.m in Sources */,
 				C5D7B27825A73B3B00166E83 /* DDPlazaCommunityVC.m in Sources */,
 				C5A43A7625AAF8A6000F0CD2 /* UIScrollView+FDFullscreenPopGesture.m in Sources */,
