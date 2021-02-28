@@ -1,20 +1,20 @@
 //
-//  BaseView.m
-//  MonkeyKingVideo
+//  CollectionView.m
+//  My_BaseProj
 //
-//  Created by Jobs on 2021/2/5.
-//  Copyright © 2021 MonkeyKingVideo. All rights reserved.
+//  Created by Jobs on 2020/10/31.
+//  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "BaseView.h"
+#import "BaseCollectionView.h"
 
-@interface BaseView ()
+@interface BaseCollectionView ()
 
-@property(nonatomic,copy)MKDataBlock baseViewBlock;
+@property(nonatomic,copy)MKDataBlock baseCollectionViewBlock;
 
 @end
 
-@implementation BaseView
+@implementation BaseCollectionView
 
 -(instancetype)init{
     if (self = [super init]) {
@@ -33,6 +33,10 @@
 }
 //具体由子类进行复写【数据定UI】【如果所传参数为基本数据类型，那么包装成对象NSNumber进行转化承接】
 -(void)richElementsInViewWithModel:(id _Nullable)model{}
+//具体由子类进行复写【数据定宽】【如果所传参数为基本数据类型，那么包装成对象NSNumber进行转化承接】
++(CGFloat)viewWidthWithModel:(id _Nullable)model{
+    return 0;
+}
 //具体由子类进行复写【数据定高】【如果所传参数为基本数据类型，那么包装成对象NSNumber进行转化承接】
 +(CGFloat)viewHeightWithModel:(id _Nullable)model{
     return 0;
@@ -46,10 +50,10 @@
     return CGRectZero;
 }
 /*
-    用于以此为基类的View层上所有数据的回调,当然也可以用NSObject分类的方法定位于：@interface NSObject (CallBackInfoByBlock)
+    用于以此为基类的UICollectionView具体子类上所有数据的回调,当然也可以用NSObject分类的方法定位于：@interface NSObject (CallBackInfoByBlock)
  */
--(void)actionBlockBaseView:(MKDataBlock)baseViewBlock{
-    self.baseViewBlock = baseViewBlock;
+-(void)actionBlockBaseCollectionView:(MKDataBlock)baseCollectionViewBlock{
+    self.baseCollectionViewBlock = baseCollectionViewBlock;
 }
 
 @end
