@@ -93,8 +93,8 @@
 #pragma mark —— UIDevice
 #import "UIDevice+XMUtils.h"
 #pragma mark —— UITableViewHeaderFooterView
-#import "ViewForTableViewFooter.h"
-#import "ViewForTableViewHeader.h"
+#import "TableViewFooterView.h"
+#import "TableViewHeaderView.h"
 #pragma mark —— UICollectionReusableView 用作基类
 #import "BaseCollectionReusableView.h"
 #pragma mark —— UICollectionView
