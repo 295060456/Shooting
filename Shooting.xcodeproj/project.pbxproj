@@ -590,6 +590,7 @@
 		C54B3FC6255297C5003BE195 /* UILabel+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extra.h"; sourceTree = "<group>"; };
 		C54B3FC7255297C5003BE195 /* NSObject+RichText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RichText.h"; sourceTree = "<group>"; };
 		C54B3FC8255297C5003BE195 /* UILabel+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extra.m"; sourceTree = "<group>"; };
+		C54C63FB25EFC2FA007DD043 /* DDCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCacheTool.h; sourceTree = "<group>"; };
 		C54F858D252B613E00EE3DD0 /* UITableView+WWFoldableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+WWFoldableTableView.h"; sourceTree = "<group>"; };
 		C54F858E252B613E00EE3DD0 /* UITableView+WWFoldableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+WWFoldableTableView.m"; sourceTree = "<group>"; };
 		C551351D25C68A09007BCA82 /* ZWPullMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWPullMenuModel.h; sourceTree = "<group>"; };
@@ -1960,6 +1961,14 @@
 			path = UILabel;
 			sourceTree = "<group>";
 		};
+		C54C63FA25EFC2FA007DD043 /* 清除缓存 */ = {
+			isa = PBXGroup;
+			children = (
+				C54C63FB25EFC2FA007DD043 /* DDCacheTool.h */,
+			);
+			path = "清除缓存";
+			sourceTree = "<group>";
+		};
 		C54F858C252B613500EE3DD0 /* UITableView 折叠功能 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2919,6 +2928,7 @@
 		C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C54C63FA25EFC2FA007DD043 /* 清除缓存 */,
 				C5CF16EA25AC7F7300381935 /* LYLUnicode */,
 				C5A43A7025AAF8A5000F0CD2 /* 手势滑动返回 */,
 				C5D7B4CD25A740D500166E83 /* KeychainIDFA */,
