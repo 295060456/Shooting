@@ -7,12 +7,9 @@
 
 #import "DDSortVideoListModel.h"
 
-
-
 @implementation DDSortVideoListModel
 
 @end
-
 
 @implementation DDSortVideoApiModel
 

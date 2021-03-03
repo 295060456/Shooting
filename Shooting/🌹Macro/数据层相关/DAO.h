@@ -8,12 +8,7 @@
 #ifndef DAO_h
 #define DAO_h
 /// 数据模型层
-#import "BaseModel.h"
-#import "DDMsgTBVModel.h"//消息页面Model
-#import "DDCommentMsgModel.h"//评论消息
-#import "DDFansMsgModel.h"//粉丝消息
-#import "DDSysMsgModel.h"//系统消息
-#import "DDInvitationModel.h"
+#import "ShootingModelHeader.h"// 🇨🇳数据模型层(此文件夹存放全局的所有Model)
 /// 网络请求相关的配置
 // URL_Manager
 #import "URLManagerModel.h"

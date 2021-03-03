@@ -313,7 +313,6 @@
 		C5D7B1AA25A73AF100166E83 /* DDSortVideoListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B16E25A73AF000166E83 /* DDSortVideoListModel.m */; };
 		C5D7B1AB25A73AF100166E83 /* VideoTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B16F25A73AF000166E83 /* VideoTagModel.m */; };
 		C5D7B1AC25A73AF100166E83 /* DDRewardConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B17125A73AF000166E83 /* DDRewardConfigModel.m */; };
-		C5D7B1AD25A73AF100166E83 /* 此文件夹存放全局的所有Model.md in Resources */ = {isa = PBXBuildFile; fileRef = C5D7B17225A73AF000166E83 /* 此文件夹存放全局的所有Model.md */; };
 		C5D7B1AE25A73AF100166E83 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B17325A73AF000166E83 /* BaseModel.m */; };
 		C5D7B1AF25A73AF100166E83 /* DDSysMsgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B17725A73AF000166E83 /* DDSysMsgModel.m */; };
 		C5D7B1B025A73AF100166E83 /* DDMsgTBVModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B17925A73AF000166E83 /* DDMsgTBVModel.m */; };
@@ -471,6 +470,7 @@
 		C50CBDD125B189FC00611FC6 /* 经验总结.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "经验总结.md"; sourceTree = "<group>"; };
 		C51576C725A351050074D945 /* UIView+Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gesture.h"; sourceTree = "<group>"; };
 		C51576C825A351050074D945 /* UIView+Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gesture.m"; sourceTree = "<group>"; };
+		C526522625EF627000C8AB2B /* ShootingModelHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShootingModelHeader.h; sourceTree = "<group>"; };
 		C5267FB6258A4D1E0095A681 /* TimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
 		C5267FB7258A4D1E0095A681 /* TimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
 		C52B98AD259F133D003D9E23 /* BaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewCell.h; sourceTree = "<group>"; };
@@ -1049,7 +1049,6 @@
 		C5D7B16F25A73AF000166E83 /* VideoTagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTagModel.m; sourceTree = "<group>"; };
 		C5D7B17025A73AF000166E83 /* DDSortVideoListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSortVideoListModel.h; sourceTree = "<group>"; };
 		C5D7B17125A73AF000166E83 /* DDRewardConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRewardConfigModel.m; sourceTree = "<group>"; };
-		C5D7B17225A73AF000166E83 /* 此文件夹存放全局的所有Model.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "此文件夹存放全局的所有Model.md"; sourceTree = "<group>"; };
 		C5D7B17325A73AF000166E83 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		C5D7B17525A73AF000166E83 /* DDFansMsgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFansMsgModel.h; sourceTree = "<group>"; };
 		C5D7B17625A73AF000166E83 /* DDMsgTBVModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMsgTBVModel.h; sourceTree = "<group>"; };
@@ -1362,6 +1361,78 @@
 				C51576C825A351050074D945 /* UIView+Gesture.m */,
 			);
 			path = "UIView+Gesture";
+			sourceTree = "<group>";
+		};
+		C526520925EF61F200C8AB2B /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5D7B17D25A73AF000166E83 /* BaseModel.h */,
+				C5D7B17325A73AF000166E83 /* BaseModel.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		C526521325EF621300C8AB2B /* DDCommentMsgModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5D7B17825A73AF000166E83 /* DDCommentMsgModel.h */,
+				C5D7B17C25A73AF000166E83 /* DDCommentMsgModel.m */,
+			);
+			path = DDCommentMsgModel;
+			sourceTree = "<group>";
+		};
+		C526521725EF621A00C8AB2B /* DDFansMsgModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5D7B17525A73AF000166E83 /* DDFansMsgModel.h */,
+				C5D7B17A25A73AF000166E83 /* DDFansMsgModel.m */,
+			);
+			path = DDFansMsgModel;
+			sourceTree = "<group>";
+		};
+		C526521825EF622100C8AB2B /* DDMsgTBVModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5D7B17625A73AF000166E83 /* DDMsgTBVModel.h */,
+				C5D7B17925A73AF000166E83 /* DDMsgTBVModel.m */,
+			);
+			path = DDMsgTBVModel;
+			sourceTree = "<group>";
+		};
+		C526521F25EF622800C8AB2B /* DDSysMsgModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5D7B17B25A73AF000166E83 /* DDSysMsgModel.h */,
+				C5D7B17725A73AF000166E83 /* DDSysMsgModel.m */,
+			);
+			path = DDSysMsgModel;
+			sourceTree = "<group>";
+		};
+		C526522025EF623900C8AB2B /* DDRewardConfigModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5D7B16D25A73AF000166E83 /* DDRewardConfigModel.h */,
+				C5D7B17125A73AF000166E83 /* DDRewardConfigModel.m */,
+			);
+			path = DDRewardConfigModel;
+			sourceTree = "<group>";
+		};
+		C526522125EF623E00C8AB2B /* DDSortVideoListModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5D7B17025A73AF000166E83 /* DDSortVideoListModel.h */,
+				C5D7B16E25A73AF000166E83 /* DDSortVideoListModel.m */,
+			);
+			path = DDSortVideoListModel;
+			sourceTree = "<group>";
+		};
+		C526522225EF624500C8AB2B /* VideoTagModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5D7B16C25A73AF000166E83 /* VideoTagModel.h */,
+				C5D7B16F25A73AF000166E83 /* VideoTagModel.m */,
+			);
+			path = VideoTagModel;
 			sourceTree = "<group>";
 		};
 		C5267FB5258A4D1E0095A681 /* NSObject (Time) */ = {
@@ -3610,7 +3681,7 @@
 				C5D7B1CC25A73B2400166E83 /* 网络请求相关的配置 */,
 				C5D7B20F25A73B2500166E83 /* 用户信息 */,
 				C5D7B17E25A73AF000166E83 /* 广告或者公示弹出框 */,
-				C5D7B16A25A73AF000166E83 /* 数据模型层 */,
+				C5D7B16A25A73AF000166E83 /* 🇨🇳数据模型层(此文件夹存放全局的所有Model) */,
 				C5D7B18125A73AF100166E83 /* UICllectionView相关复用的模块 */,
 				C5D7B0F725A73AE400166E83 /* JobsAppDoor */,
 			);
@@ -3908,27 +3979,23 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		C5D7B16A25A73AF000166E83 /* 数据模型层 */ = {
+		C5D7B16A25A73AF000166E83 /* 🇨🇳数据模型层(此文件夹存放全局的所有Model) */ = {
 			isa = PBXGroup;
 			children = (
-				C5D7B16B25A73AF000166E83 /* SortVideo */,
-				C5D7B17225A73AF000166E83 /* 此文件夹存放全局的所有Model.md */,
-				C5D7B17325A73AF000166E83 /* BaseModel.m */,
+				C526522625EF627000C8AB2B /* ShootingModelHeader.h */,
+				C526520925EF61F200C8AB2B /* BaseModel */,
 				C5D7B17425A73AF000166E83 /* 消息 */,
-				C5D7B17D25A73AF000166E83 /* BaseModel.h */,
+				C5D7B16B25A73AF000166E83 /* SortVideo */,
 			);
-			path = "数据模型层";
+			path = "🇨🇳数据模型层(此文件夹存放全局的所有Model)";
 			sourceTree = "<group>";
 		};
 		C5D7B16B25A73AF000166E83 /* SortVideo */ = {
 			isa = PBXGroup;
 			children = (
-				C5D7B16C25A73AF000166E83 /* VideoTagModel.h */,
-				C5D7B16D25A73AF000166E83 /* DDRewardConfigModel.h */,
-				C5D7B16E25A73AF000166E83 /* DDSortVideoListModel.m */,
-				C5D7B16F25A73AF000166E83 /* VideoTagModel.m */,
-				C5D7B17025A73AF000166E83 /* DDSortVideoListModel.h */,
-				C5D7B17125A73AF000166E83 /* DDRewardConfigModel.m */,
+				C526522025EF623900C8AB2B /* DDRewardConfigModel */,
+				C526522125EF623E00C8AB2B /* DDSortVideoListModel */,
+				C526522225EF624500C8AB2B /* VideoTagModel */,
 			);
 			path = SortVideo;
 			sourceTree = "<group>";
@@ -3936,14 +4003,10 @@
 		C5D7B17425A73AF000166E83 /* 消息 */ = {
 			isa = PBXGroup;
 			children = (
-				C5D7B17525A73AF000166E83 /* DDFansMsgModel.h */,
-				C5D7B17625A73AF000166E83 /* DDMsgTBVModel.h */,
-				C5D7B17725A73AF000166E83 /* DDSysMsgModel.m */,
-				C5D7B17825A73AF000166E83 /* DDCommentMsgModel.h */,
-				C5D7B17925A73AF000166E83 /* DDMsgTBVModel.m */,
-				C5D7B17A25A73AF000166E83 /* DDFansMsgModel.m */,
-				C5D7B17B25A73AF000166E83 /* DDSysMsgModel.h */,
-				C5D7B17C25A73AF000166E83 /* DDCommentMsgModel.m */,
+				C526521325EF621300C8AB2B /* DDCommentMsgModel */,
+				C526521725EF621A00C8AB2B /* DDFansMsgModel */,
+				C526521825EF622100C8AB2B /* DDMsgTBVModel */,
+				C526521F25EF622800C8AB2B /* DDSysMsgModel */,
 			);
 			path = "消息";
 			sourceTree = "<group>";
@@ -5127,7 +5190,6 @@
 				C5C6540B259DF94500FD2F99 /* 运动与健身@2x.png in Resources */,
 				C5D7B1B525A73AF100166E83 /* DDCollectionViewCell_Style1.png in Resources */,
 				C5D7B1B925A73AF100166E83 /* DDCollectionViewCell_Style3.png in Resources */,
-				C5D7B1AD25A73AF100166E83 /* 此文件夹存放全局的所有Model.md in Resources */,
 				C5C6541D259DF94500FD2F99 /* 定位服务@2x.png in Resources */,
 				C53D60DA255C20FC006C290D /* huiyuan.json in Resources */,
 			);
