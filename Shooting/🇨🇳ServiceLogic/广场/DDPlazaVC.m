@@ -87,7 +87,7 @@ didSelectedItemAtIndex:(NSInteger)index {//终值
         _categoryTitleView = JXCategoryDotView.new;
         _categoryTitleView.width = 180;
         _categoryTitleView.height = categoryTitleViewHeight;
-        _categoryTitleView.y = Top() - NavigationHeight() + 18;
+        _categoryTitleView.y = Top() - NavigationBarAndStatusBarHeight() + 18;
         _categoryTitleView.backgroundColor = kClearColor;
         _categoryTitleView.dotSize = CGSizeMake(5, 5);
         _categoryTitleView.titles = self.headerTitles;

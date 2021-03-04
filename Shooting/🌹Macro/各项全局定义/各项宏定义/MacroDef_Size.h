@@ -94,7 +94,12 @@ static inline CGFloat StatusBarHeight(){
 }
 //导航栏高度
 static inline CGFloat NavigationHeight(){
-    return StatusBarHeight() + 44;
+    NSLog(@"%f",StatusBarHeight());
+    return 44;
+}
+//导航栏高度 + 状态栏高度
+static inline CGFloat NavigationBarAndStatusBarHeight(){
+    return StatusBarHeight() + NavigationHeight();
 }
 //tabbar高度
 static inline CGFloat TabBarHeight(){
