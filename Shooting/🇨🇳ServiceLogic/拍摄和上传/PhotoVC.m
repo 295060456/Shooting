@@ -326,8 +326,8 @@ scrollingFromLeftIndex:(NSInteger)leftIndex
         _categoryView.backgroundColor = kClearColor;
         _categoryView.titleSelectedColor = kWhiteColor;
         _categoryView.titleColor = kWhiteColor;
-        _categoryView.titleFont = [UIFont systemFontOfSize:18];
-        _categoryView.titleSelectedFont = [UIFont systemFontOfSize:28];
+        _categoryView.titleFont = [UIFont systemFontOfSize:18 weight:UIFontWeightRegular];
+        _categoryView.titleSelectedFont = [UIFont systemFontOfSize:28 weight:UIFontWeightRegular];
         _categoryView.delegate = self;
         _categoryView.titles = self.titleMutArr;
         _categoryView.titleColorGradientEnabled = YES;
