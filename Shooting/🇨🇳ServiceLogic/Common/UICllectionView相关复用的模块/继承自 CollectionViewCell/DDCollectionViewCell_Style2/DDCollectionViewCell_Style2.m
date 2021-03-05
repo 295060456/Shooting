@@ -345,7 +345,7 @@ static CGFloat offset = 20;//高度补偿值
         _collectionView.delegate = self;
         _collectionView.scrollEnabled = NO;
         
-        [_collectionView RegisterClass];
+        [_collectionView registerCollectionViewClass];
 
         [self.contentView addSubview:_collectionView];
         [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
