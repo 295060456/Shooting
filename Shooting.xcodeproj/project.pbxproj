@@ -86,6 +86,8 @@
 		C551352825C68A09007BCA82 /* ZWPullMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C551352425C68A09007BCA82 /* ZWPullMenuView.m */; };
 		C551352925C68A09007BCA82 /* ZWPullMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C551352525C68A09007BCA82 /* ZWPullMenuCell.m */; };
 		C552A74D2589D50E00A89501 /* UIImage+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = C552A74B2589D50E00A89501 /* UIImage+ScreenShot.m */; };
+		C5542D7F25F324FB002D1CA6 /* CheckMemFreeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5542D7E25F324FA002D1CA6 /* CheckMemFreeVC.m */; };
+		C554464925F37D70002D1CA6 /* UIViewController+TFPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = C554464825F37D70002D1CA6 /* UIViewController+TFPopup.m */; };
 		C55497A424F38CDB0065510D /* MKShootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A324F38CDB0065510D /* MKShootVC.m */; };
 		C55497A724F38D9C0065510D /* AVFounationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A624F38D9C0065510D /* AVFounationTools.m */; };
 		C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497A924F3A1F00065510D /* GPUImageTools.m */; };
@@ -605,6 +607,10 @@
 		C552A74B2589D50E00A89501 /* UIImage+ScreenShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ScreenShot.m"; sourceTree = "<group>"; };
 		C552A74C2589D50E00A89501 /* UIImage+ScreenShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ScreenShot.h"; sourceTree = "<group>"; };
 		C552A7592589D55500A89501 /* 专治UITableView相应链断裂.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "专治UITableView相应链断裂.md"; sourceTree = "<group>"; };
+		C5542D7D25F324FA002D1CA6 /* CheckMemFreeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckMemFreeVC.h; sourceTree = "<group>"; };
+		C5542D7E25F324FA002D1CA6 /* CheckMemFreeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckMemFreeVC.m; sourceTree = "<group>"; };
+		C554464725F37D70002D1CA6 /* UIViewController+TFPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TFPopup.h"; sourceTree = "<group>"; };
+		C554464825F37D70002D1CA6 /* UIViewController+TFPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TFPopup.m"; sourceTree = "<group>"; };
 		C55497A224F38CDB0065510D /* MKShootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKShootVC.h; sourceTree = "<group>"; };
 		C55497A324F38CDB0065510D /* MKShootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKShootVC.m; sourceTree = "<group>"; };
 		C55497A524F38D9C0065510D /* AVFounationTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVFounationTools.h; sourceTree = "<group>"; };
@@ -2127,6 +2133,24 @@
 			path = "UIImage+YBGIF";
 			sourceTree = "<group>";
 		};
+		C5542D7C25F324FA002D1CA6 /* CheckMemFreeVC */ = {
+			isa = PBXGroup;
+			children = (
+				C5542D7D25F324FA002D1CA6 /* CheckMemFreeVC.h */,
+				C5542D7E25F324FA002D1CA6 /* CheckMemFreeVC.m */,
+			);
+			path = CheckMemFreeVC;
+			sourceTree = "<group>";
+		};
+		C554464625F37D70002D1CA6 /* UIViewController+TFPopup */ = {
+			isa = PBXGroup;
+			children = (
+				C554464725F37D70002D1CA6 /* UIViewController+TFPopup.h */,
+				C554464825F37D70002D1CA6 /* UIViewController+TFPopup.m */,
+			);
+			path = "UIViewController+TFPopup";
+			sourceTree = "<group>";
+		};
 		C55497A024F38CB20065510D /* GPUImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -2928,6 +2952,7 @@
 		C58F01AF24EA5DAB00B6D09C /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C5542D7C25F324FA002D1CA6 /* CheckMemFreeVC */,
 				C54C63FA25EFC2FA007DD043 /* 清除缓存 */,
 				C5CF16EA25AC7F7300381935 /* LYLUnicode */,
 				C5A43A7025AAF8A5000F0CD2 /* 手势滑动返回 */,
@@ -3650,6 +3675,7 @@
 		C5D78AAF257F7A840087FC92 /* UIViewController+Others */ = {
 			isa = PBXGroup;
 			children = (
+				C554464625F37D70002D1CA6 /* UIViewController+TFPopup */,
 				C544BDD72583739200C6CF2A /* UIViewController+BackBtn */,
 				C544BDE12583739A00C6CF2A /* UIViewController+BaseVC */,
 				C544BDEB258373A300C6CF2A /* UIViewController+BRPickerView */,
@@ -5534,6 +5560,7 @@
 				C59D9AD124F8EF1F00A74CE9 /* RepeatPlayer.m in Sources */,
 				C572A26A24FBC547000A1687 /* UIImage+SYS.m in Sources */,
 				C52DEF55255D2A820016FF07 /* XHLaunchAdConfiguration.m in Sources */,
+				C5542D7F25F324FB002D1CA6 /* CheckMemFreeVC.m in Sources */,
 				C5F4523C2529A6D900066AAB /* NSData+CommonCrypto.m in Sources */,
 				C55FF33025B42C7200D8C30D /* DDUserModel.m in Sources */,
 				C53D6104255C21F7006C290D /* ShootingAppDelegate+PopupView.m in Sources */,
@@ -5596,6 +5623,7 @@
 				C5D7B1B425A73AF100166E83 /* DDCollectionViewCell_Style1.m in Sources */,
 				C5DF454B25A89A0300E91985 /* LOTAnimationMJRefreshHeader.m in Sources */,
 				C5D602952586321500029AFF /* BaseViewController.m in Sources */,
+				C554464925F37D70002D1CA6 /* UIViewController+TFPopup.m in Sources */,
 				C58F033524EA69D400B6D09C /* ViewController@1.m in Sources */,
 				C572A26924FBC547000A1687 /* UIImage+YBGIF.m in Sources */,
 				C57F0D20253336ED0080EEF0 /* NSObject+OpenURL.m in Sources */,
