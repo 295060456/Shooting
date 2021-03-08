@@ -89,16 +89,19 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
             self.btn = (UIButton *)data;
             if ([NSString isNullString:self.btn.titleLabel.text]) {//关注&未关注按钮
                 if (self.btn.selected) {
-                    [NSObject showSYSAlertViewTitle:@"是否取消对其关注？"
-                                            message:nil
-                                    isSeparateStyle:NO
-                                        btnTitleArr:@[@"确定",@"取消"]
-                                     alertBtnAction:@[@"unfollow",@""]
-                                           targetVC:self
-                                             funcInWhere:nil
-                                           animated:YES
-                                       alertVCBlock:nil
-                                    completionBlock:nil];
+                    
+                    SYSAlertControllerConfig *config = SYSAlertControllerConfig.new;
+                    config.title = @"是否取消对其关注？";
+                    config.isSeparateStyle = YES;
+                    config.btnTitleArr = @[@"确定",@"取消"];
+                    config.alertBtnActionArr = @[@"unfollow",@""];
+                    config.targetVC = self;
+                    config.funcInWhere = self;
+                    config.animated = YES;
+                    
+                    [NSObject showSYSAlertViewConfig:config
+                                        alertVCBlock:nil
+                                     completionBlock:nil];
                 }else{
                     //关注
                     self.btn.selected = !self.btn.selected;

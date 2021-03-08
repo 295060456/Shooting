@@ -116,16 +116,19 @@ referenceSizeForHeaderInSection:(NSInteger)section {
                 self.btn = (UIButton *)data;
                 if ([NSString isNullString:self.btn.titleLabel.text]) {//关注&未关注按钮
                     if (self.btn.selected) {
-                        [NSObject showSYSAlertViewTitle:@"是否取消对其关注？"
-                                                message:nil
-                                        isSeparateStyle:NO
-                                            btnTitleArr:@[@"确定",@"取消"]
-                                         alertBtnAction:@[@"unfollow",@""]
-                                               targetVC:self
-                                                 funcInWhere:nil
-                                               animated:YES
-                                           alertVCBlock:nil
-                                        completionBlock:nil];
+                        
+                        SYSAlertControllerConfig *config = SYSAlertControllerConfig.new;
+                        config.title = @"是否取消对其关注？";
+                        config.isSeparateStyle = YES;
+                        config.btnTitleArr = @[@"确定",@"取消"];
+                        config.alertBtnActionArr = @[@"unfollow",@""];
+                        config.targetVC = self;
+                        config.funcInWhere = self;
+                        config.animated = YES;
+                        
+                        [NSObject showSYSAlertViewConfig:config
+                                            alertVCBlock:nil
+                                         completionBlock:nil];
                     }else{
                         //关注
                         self.btn.selected = !self.btn.selected;
@@ -156,16 +159,19 @@ referenceSizeForHeaderInSection:(NSInteger)section {
                 self.btn = (UIButton *)data;
                 if ([NSString isNullString:self.btn.titleLabel.text]) {//关注&未关注按钮
                     if (self.btn.selected) {
-                        [NSObject showSYSAlertViewTitle:@"是否取消对其关注？"
-                                                message:nil
-                                        isSeparateStyle:NO
-                                            btnTitleArr:@[@"确定",@"取消"]
-                                         alertBtnAction:@[@"unfollow",@""]
-                                               targetVC:self
-                                                 funcInWhere:nil
-                                               animated:YES
-                                           alertVCBlock:nil
-                                        completionBlock:nil];
+                        
+                        SYSAlertControllerConfig *config = SYSAlertControllerConfig.new;
+                        config.title = @"是否取消对其关注？";
+                        config.isSeparateStyle = YES;
+                        config.btnTitleArr = @[@"确定",@"取消"];
+                        config.alertBtnActionArr = @[@"unfollow",@""];
+                        config.targetVC = self;
+                        config.funcInWhere = self;
+                        config.animated = YES;
+                        
+                        [NSObject showSYSAlertViewConfig:config
+                                            alertVCBlock:nil
+                                         completionBlock:nil];
                     }else{
                         //关注
                         self.btn.selected = !self.btn.selected;
@@ -173,17 +179,18 @@ referenceSizeForHeaderInSection:(NSInteger)section {
                 }
             }else if ([data isKindOfClass:SaveImageModel.class]){
                 self.saveImageModel = (SaveImageModel *)data;
-                [NSObject showSYSActionSheetTitle:nil
-                                          message:nil
-                                  isSeparateStyle:YES
-                                      btnTitleArr:@[@"保存图片",@"取消"]
-                                   alertBtnAction:@[@"savePic",@"nil"]
-                                         targetVC:self.saveImageModel.photoBrowser
-                                           funcInWhere:self
-                                           sender:nil
-                                         animated:YES
-                                     alertVCBlock:nil
-                                  completionBlock:nil];
+                
+                SYSAlertControllerConfig *config = SYSAlertControllerConfig.new;
+                config.isSeparateStyle = YES;
+                config.btnTitleArr = @[@"保存图片",@"取消"];
+                config.alertBtnActionArr = @[@"savePic",@"nil"];
+                config.targetVC = self.saveImageModel.photoBrowser;
+                config.funcInWhere = self;
+                config.animated = YES;
+                
+                [NSObject showSYSActionSheetConfig:config
+                                      alertVCBlock:nil
+                                   completionBlock:nil];
             }else{}
         }];
         [cell richElementsInCellWithModel:self.invitationModel];

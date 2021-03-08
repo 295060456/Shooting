@@ -115,16 +115,7 @@
 //        _AVPlayerView.isSuspend = YES;//开启悬浮窗效果
         [_AVPlayerView errorCustomerAVPlayerBlock:^{
             @strongify(self)
-            [NSObject showSYSAlertViewTitle:@"软件内部错误"
-                                    message:@"因为某种未知的原因，找不到播放的资源文件"
-                            isSeparateStyle:YES
-                                btnTitleArr:@[@"确定"]
-                             alertBtnAction:@[@""]
-                                   targetVC:self
-                                     funcInWhere:nil
-                                   animated:YES
-                               alertVCBlock:nil
-                            completionBlock:nil];
+            [WHToast toastErrMsg:@"软件内部错误 : 因为某种未知的原因，找不到播放的资源文件"];
         }];
         ///点击事件回调 参数1：self CustomerAVPlayerView，参数2：手势 UITapGestureRecognizer & UISwipeGestureRecognizer
         [_AVPlayerView actionCustomerAVPlayerBlock:^(id data,

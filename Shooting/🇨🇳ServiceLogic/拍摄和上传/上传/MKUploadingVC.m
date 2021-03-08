@@ -219,16 +219,19 @@ UITextViewDelegate
                             if ([arr[0] isKindOfClass:PHAsset.class]) {
                                 
                             }else if ([arr[0] isKindOfClass:UIImage.class]){
-                                [NSObject showSYSAlertViewTitle:@"请选择视频作品"
-                                                        message:nil
-                                                isSeparateStyle:YES
-                                                    btnTitleArr:@[@"确认"]
-                                                 alertBtnAction:@[@"sure"]
-                                                       targetVC:self
-                                                         funcInWhere:nil
-                                                       animated:YES
-                                                   alertVCBlock:nil
-                                                completionBlock:nil];
+                                
+                                SYSAlertControllerConfig *config = SYSAlertControllerConfig.new;
+                                config.title = @"请选择视频作品";
+                                config.isSeparateStyle = YES;
+                                config.btnTitleArr = @[@"确认"];
+                                config.alertBtnActionArr = @[@"sure"];
+                                config.targetVC = self;
+                                config.funcInWhere = self;
+                                config.animated = YES;
+                                
+                                [NSObject showSYSAlertViewConfig:config
+                                                    alertVCBlock:nil
+                                                 completionBlock:nil];
                             }else{
                                 NSLog(@"");
                             }
@@ -397,27 +400,33 @@ shouldChangeTextInRange:(NSRange)range
                 }
             }else{
                 if (!self.imgData) {
-                    [NSObject showSYSAlertViewTitle:@"您还没选择需要上传的视频呢~~~"
-                                            message:nil
-                                    isSeparateStyle:YES
-                                        btnTitleArr:@[@"确认"]
-                                     alertBtnAction:@[@"sure"]
-                                           targetVC:self
-                                             funcInWhere:nil
-                                           animated:YES
-                                       alertVCBlock:nil
-                                    completionBlock:nil];
+                    
+                    SYSAlertControllerConfig *config = SYSAlertControllerConfig.new;
+                    config.title = @"您还没选择需要上传的视频呢~~~";
+                    config.isSeparateStyle = YES;
+                    config.btnTitleArr = @[@"确认"];
+                    config.alertBtnActionArr = @[@"sure"];
+                    config.targetVC = self;
+                    config.funcInWhere = self;
+                    config.animated = YES;
+                    
+                    [NSObject showSYSAlertViewConfig:config
+                                        alertVCBlock:nil
+                                     completionBlock:nil];
                 }else if ([NSString isNullString:self.textView.text]){
-                    [NSObject showSYSAlertViewTitle:@"主人，写点什么吧~~~"
-                                            message:nil
-                                    isSeparateStyle:YES
-                                        btnTitleArr:@[@"确认"]
-                                     alertBtnAction:@[@"sure"]
-                                           targetVC:self
-                                             funcInWhere:nil
-                                           animated:YES
-                                       alertVCBlock:nil
-                                    completionBlock:nil];
+                    
+                    SYSAlertControllerConfig *config = SYSAlertControllerConfig.new;
+                    config.title = @"主人，写点什么吧~~~";
+                    config.isSeparateStyle = YES;
+                    config.btnTitleArr = @[@"确认"];
+                    config.alertBtnActionArr = @[@"sure"];
+                    config.targetVC = self;
+                    config.funcInWhere = self;
+                    config.animated = YES;
+                    
+                    [NSObject showSYSAlertViewConfig:config
+                                        alertVCBlock:nil
+                                     completionBlock:nil];
                 }else{}
             }
         }];

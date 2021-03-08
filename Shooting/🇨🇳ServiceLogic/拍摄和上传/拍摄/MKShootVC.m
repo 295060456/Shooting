@@ -362,16 +362,19 @@
                   MKDataBlock block = ^(NSString *title){
                       NSLog(@"打开失败");
                       @strongify(self)
-                      [NSObject showSYSAlertViewTitle:@"主人，写点什么吧~~~"
-                                              message:nil
-                                      isSeparateStyle:YES
-                                          btnTitleArr:@[@"去获取"]
-                                       alertBtnAction:@[@"pushToSysConfig"]
-                                             targetVC:self
-                                               funcInWhere:nil
-                                             animated:YES
-                                         alertVCBlock:nil
-                                      completionBlock:nil];
+                      
+                      SYSAlertControllerConfig *config = SYSAlertControllerConfig.new;
+                      config.title = @"主人，写点什么吧~~~";
+                      config.isSeparateStyle = YES;
+                      config.btnTitleArr = @[@"去获取"];
+                      config.alertBtnActionArr = @[@"pushToSysConfig"];
+                      config.targetVC = self;
+                      config.funcInWhere = self;
+                      config.animated = YES;
+                      
+                      [NSObject showSYSAlertViewConfig:config
+                                          alertVCBlock:nil
+                                       completionBlock:nil];
                   };
 
                   if (self.isCameraCanBeUsed && //摄像头
@@ -624,16 +627,19 @@
             @strongify(self)
             NSLog(@"删除作品？");
             [self.gpuImageTools vedioShoottingSuspend];
-            [NSObject showSYSAlertViewTitle:@"删除作品？"
-                                    message:nil
-                            isSeparateStyle:YES
-                                btnTitleArr:@[@"确认",@"继续录制"]
-                             alertBtnAction:@[@"sure",@"shoottingContinue"]
-                                   targetVC:self
-                                     funcInWhere:nil
-                                   animated:YES
-                               alertVCBlock:nil
-                            completionBlock:nil];
+            
+            SYSAlertControllerConfig *config = SYSAlertControllerConfig.new;
+            config.title = @"删除作品？";
+            config.isSeparateStyle = YES;
+            config.btnTitleArr = @[@"确认",@"继续录制"];
+            config.alertBtnActionArr = @[@"sure",@"shoottingContinue"];
+            config.targetVC = self;
+            config.funcInWhere = self;
+            config.animated = YES;
+            
+            [NSObject showSYSAlertViewConfig:config
+                                alertVCBlock:nil
+                             completionBlock:nil];
         }];
         [self.view addSubview:_deleteFilmBtn];
         [_deleteFilmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -706,16 +712,7 @@
             _AVPlayerView.isSuspend = YES;//开启悬浮窗效果
             [_AVPlayerView errorCustomerAVPlayerBlock:^{
                 @strongify(self)
-                [NSObject showSYSAlertViewTitle:@"软件内部错误"
-                                        message:@"因为某种未知的原因，找不到播放的资源文件"
-                                isSeparateStyle:YES
-                                    btnTitleArr:@[@"确定"]
-                                 alertBtnAction:@[@""]
-                                       targetVC:self
-                                         funcInWhere:nil
-                                       animated:YES
-                                   alertVCBlock:nil
-                                completionBlock:nil];
+                [WHToast toastErrMsg:@"软件内部错误 : 因为某种未知的原因，找不到播放的资源文件"];
             }];
             ///点击事件回调 参数1：self CustomerAVPlayerView，参数2：手势 UITapGestureRecognizer & UISwipeGestureRecognizer
             [_AVPlayerView actionCustomerAVPlayerBlock:^(id data,
@@ -830,16 +827,18 @@
         @weakify(self)
         [[_backBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self)
-            [NSObject showSYSAlertViewTitle:nil
-                                    message:nil
-                            isSeparateStyle:YES
-                                btnTitleArr:@[@"重新拍摄",@"退出",@"取消"]
-                             alertBtnAction:@[@"",@"exit",@""]
-                                   targetVC:self
-                                     funcInWhere:nil
-                                   animated:YES
-                               alertVCBlock:nil
-                            completionBlock:nil];
+            
+            SYSAlertControllerConfig *config = SYSAlertControllerConfig.new;
+            config.isSeparateStyle = YES;
+            config.btnTitleArr = @[@"重新拍摄",@"退出",@"取消"];
+            config.alertBtnActionArr =@[@"",@"exit",@""];
+            config.targetVC = self;
+            config.funcInWhere = self;
+            config.animated = YES;
+            
+            [NSObject showSYSAlertViewConfig:config
+                                alertVCBlock:nil
+                             completionBlock:nil];
         }];
     }return _backBtn;
 }
