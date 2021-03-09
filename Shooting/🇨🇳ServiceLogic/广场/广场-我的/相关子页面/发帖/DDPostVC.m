@@ -63,7 +63,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.view.backgroundColor = RGBSAMECOLOR(249);
+    self.view.backgroundColor = RGB_SAMECOLOR(249);
 }
 
 -(void)viewDidAppear:(BOOL)animated{

@@ -328,7 +328,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
 
 -(UIColor *)bgCor{
     if (!_bgCor) {
-        _bgCor = RGBSAMECOLOR(246);
+        _bgCor = RGB_SAMECOLOR(246);
     }return _bgCor;
 }
 

@@ -25,8 +25,8 @@
     if (!cell) {
         cell = [[DDCollectionViewCell_Style2TBVCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                                          reuseIdentifier:ReuseIdentifier];
-        cell.backgroundColor = RGBSAMECOLOR(242);
-        cell.contentView.backgroundColor = RGBSAMECOLOR(242);
+        cell.backgroundColor = RGB_SAMECOLOR(242);
+        cell.contentView.backgroundColor = RGB_SAMECOLOR(242);
         [UIView cornerCutToCircleWithView:cell andCornerRadius:6];
     }return cell;
 }
