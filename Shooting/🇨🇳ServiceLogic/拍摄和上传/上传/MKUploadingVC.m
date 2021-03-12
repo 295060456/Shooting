@@ -81,7 +81,7 @@ UITextViewDelegate
     NSMutableArray *dataMutArr = [self autoChoiceRes];
     PHAsset *phAsset = (PHAsset *)dataMutArr.lastObject;
     @weakify(self)
-    [FileFolderHandleTool getVedioFromPHAsset:phAsset
+    [FileFolderHandleTool getVideoFromPHAsset:phAsset
                                      complete:^(FileFolderHandleModel *data) {
         @strongify(self)
         self.vedioData = data.data;
@@ -205,7 +205,7 @@ UITextViewDelegate
                     }else if ([arg isKindOfClass:PHAsset.class]){
                         NSLog(@"");
                         PHAsset *phAsset = (PHAsset *)arg;
-                        [FileFolderHandleTool getVedioFromPHAsset:phAsset
+                        [FileFolderHandleTool getVideoFromPHAsset:phAsset
                                                          complete:^(FileFolderHandleModel *data) {
                             @strongify(self)
                             self.vedioData = data.data;
