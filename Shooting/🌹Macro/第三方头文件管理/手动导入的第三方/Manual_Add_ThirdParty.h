@@ -101,7 +101,11 @@
 #import "BaseCollectionView.h"
 #import "UICollectionView+RegisterClass.h"
 #pragma mark —— UICollectionViewCell
+/// BaseCollectionViewCell
 #import "BaseCollectionViewCell.h"
+/// UICollectionViewCell+Category
+#import "UICollectionViewCell+Default.h"
+#import "UICollectionViewCell+ShakeAnimation.h"
 // UICollectionViewFlowLayout
 /// LMHWaterFallLayout
 #import "LMHWaterFallLayout.h"

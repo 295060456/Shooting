@@ -12,7 +12,6 @@
 		C51576C925A351050074D945 /* UIView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = C51576C825A351050074D945 /* UIView+Gesture.m */; };
 		C5267FB8258A4D1E0095A681 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5267FB6258A4D1E0095A681 /* TimeModel.m */; };
 		C52B98B1259F133D003D9E23 /* BaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C52B98AE259F133D003D9E23 /* BaseCollectionViewCell.m */; };
-		C52B98B2259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C52B98B0259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.m */; };
 		C52DEF4D255D2A820016FF07 /* XHLaunchAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF3A255D2A820016FF07 /* XHLaunchAdView.m */; };
 		C52DEF4E255D2A820016FF07 /* XHLaunchAdButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF3D255D2A820016FF07 /* XHLaunchAdButton.m */; };
 		C52DEF4F255D2A820016FF07 /* XHLaunchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DEF3F255D2A820016FF07 /* XHLaunchImageView.m */; };
@@ -94,6 +93,8 @@
 		C55497B024F3AD990065510D /* MKGPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55497AE24F3AD990065510D /* MKGPUImageView.m */; };
 		C556972E255BFD95005C1361 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5569729255BFD95005C1361 /* NSString+Extras.m */; };
 		C55BF5C425AC90B600A8347F /* TabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55BF5C225AC90B500A8347F /* TabbarVC.m */; };
+		C55E0DE025F9CA8000716A9B /* UICollectionViewCell+ShakeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55E0DDC25F9CA8000716A9B /* UICollectionViewCell+ShakeAnimation.m */; };
+		C55E0DE125F9CA8000716A9B /* UICollectionViewCell+Default.m in Sources */ = {isa = PBXBuildFile; fileRef = C55E0DDF25F9CA8000716A9B /* UICollectionViewCell+Default.m */; };
 		C55FEC4225B427AF00D8C30D /* UIView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C55FEC4025B427AF00D8C30D /* UIView+MJRefresh.m */; };
 		C55FF33025B42C7200D8C30D /* DDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C55FF32E25B42C7200D8C30D /* DDUserModel.m */; };
 		C561618B24EE4C98001CD851 /* StartOrPauseBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C561618824EE4C97001CD851 /* StartOrPauseBtn.m */; };
@@ -477,8 +478,6 @@
 		C5267FB7258A4D1E0095A681 /* TimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
 		C52B98AD259F133D003D9E23 /* BaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewCell.h; sourceTree = "<group>"; };
 		C52B98AE259F133D003D9E23 /* BaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewCell.m; sourceTree = "<group>"; };
-		C52B98AF259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+ShakeAnimation.h"; sourceTree = "<group>"; };
-		C52B98B0259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+ShakeAnimation.m"; sourceTree = "<group>"; };
 		C52DEF37255D2A820016FF07 /* XHLaunchAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdController.h; sourceTree = "<group>"; };
 		C52DEF38255D2A820016FF07 /* XHLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAd.h; sourceTree = "<group>"; };
 		C52DEF39255D2A820016FF07 /* XHLaunchAdDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdDownloader.h; sourceTree = "<group>"; };
@@ -628,6 +627,11 @@
 		C55BF5C225AC90B500A8347F /* TabbarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarVC.m; sourceTree = "<group>"; };
 		C55BF5C325AC90B600A8347F /* TabbarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarVC.h; sourceTree = "<group>"; };
 		C55BF5C825AC90BF00A8347F /* TabBarControllerConstruction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarControllerConstruction.h; sourceTree = "<group>"; };
+		C55E0DDB25F9CA8000716A9B /* UICollectionViewCell+ShakeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+ShakeAnimation.h"; sourceTree = "<group>"; };
+		C55E0DDC25F9CA8000716A9B /* UICollectionViewCell+ShakeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+ShakeAnimation.m"; sourceTree = "<group>"; };
+		C55E0DDE25F9CA8000716A9B /* UICollectionViewCell+Default.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+Default.h"; sourceTree = "<group>"; };
+		C55E0DDF25F9CA8000716A9B /* UICollectionViewCell+Default.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+Default.m"; sourceTree = "<group>"; };
+		C55E2AA925FB286200716A9B /* MacroDef_SysWarning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDef_SysWarning.h; sourceTree = "<group>"; };
 		C55FEC4025B427AF00D8C30D /* UIView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJRefresh.m"; sourceTree = "<group>"; };
 		C55FEC4125B427AF00D8C30D /* UIView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJRefresh.h"; sourceTree = "<group>"; };
 		C55FF32E25B42C7200D8C30D /* DDUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDUserModel.m; sourceTree = "<group>"; };
@@ -1496,7 +1500,7 @@
 			isa = PBXGroup;
 			children = (
 				C542D63625EB7AC000D776D8 /* BaseCollectionViewCell */,
-				C542D68F25EB7AE300D776D8 /* UICollectionViewCell+ShakeAnimation */,
+				C55E0DD925F9CA8000716A9B /* UICollectionViewCell+Category */,
 			);
 			path = UICollectionViewCell;
 			sourceTree = "<group>";
@@ -1761,15 +1765,6 @@
 			path = BaseCollectionViewCell;
 			sourceTree = "<group>";
 		};
-		C542D68F25EB7AE300D776D8 /* UICollectionViewCell+ShakeAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				C52B98AF259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.h */,
-				C52B98B0259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.m */,
-			);
-			path = "UICollectionViewCell+ShakeAnimation";
-			sourceTree = "<group>";
-		};
 		C542D69025EB7AF200D776D8 /* UIControl+XY */ = {
 			isa = PBXGroup;
 			children = (
@@ -1922,11 +1917,11 @@
 		C5470F5E25309C0300651ACE /* 各项宏定义 */ = {
 			isa = PBXGroup;
 			children = (
-				C5D7B69925A7454300166E83 /* MacroDef_App.h */,
-				C5470F6425309C1100651ACE /* MacroDef_Cor.h */,
-				C5470F6525309C1100651ACE /* MacroDef_Func.h */,
-				C5470F6225309C1100651ACE /* MacroDef_Size.h */,
-				C5470F6325309C1100651ACE /* MacroDef_Sys.h */,
+				C55E2A8C25FB283C00716A9B /* MacroDef_App */,
+				C55E2A9325FB284200716A9B /* MacroDef_Cor */,
+				C55E2A9A25FB284800716A9B /* MacroDef_Func */,
+				C55E2A9E25FB284F00716A9B /* MacroDef_Size */,
+				C55E2AA225FB285500716A9B /* MacroDef_Sys */,
 			);
 			path = "各项宏定义";
 			sourceTree = "<group>";
@@ -2257,6 +2252,74 @@
 				C58F010E24EA5B2300B6D09C /* DefineStructure.h */,
 			);
 			path = "其他的一些全局定义文件";
+			sourceTree = "<group>";
+		};
+		C55E0DD925F9CA8000716A9B /* UICollectionViewCell+Category */ = {
+			isa = PBXGroup;
+			children = (
+				C55E0DDA25F9CA8000716A9B /* UICollectionViewCell+ShakeAnimation */,
+				C55E0DDD25F9CA8000716A9B /* UICollectionViewCell+Default */,
+			);
+			path = "UICollectionViewCell+Category";
+			sourceTree = "<group>";
+		};
+		C55E0DDA25F9CA8000716A9B /* UICollectionViewCell+ShakeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C55E0DDB25F9CA8000716A9B /* UICollectionViewCell+ShakeAnimation.h */,
+				C55E0DDC25F9CA8000716A9B /* UICollectionViewCell+ShakeAnimation.m */,
+			);
+			path = "UICollectionViewCell+ShakeAnimation";
+			sourceTree = "<group>";
+		};
+		C55E0DDD25F9CA8000716A9B /* UICollectionViewCell+Default */ = {
+			isa = PBXGroup;
+			children = (
+				C55E0DDE25F9CA8000716A9B /* UICollectionViewCell+Default.h */,
+				C55E0DDF25F9CA8000716A9B /* UICollectionViewCell+Default.m */,
+			);
+			path = "UICollectionViewCell+Default";
+			sourceTree = "<group>";
+		};
+		C55E2A8C25FB283C00716A9B /* MacroDef_App */ = {
+			isa = PBXGroup;
+			children = (
+				C5D7B69925A7454300166E83 /* MacroDef_App.h */,
+			);
+			path = MacroDef_App;
+			sourceTree = "<group>";
+		};
+		C55E2A9325FB284200716A9B /* MacroDef_Cor */ = {
+			isa = PBXGroup;
+			children = (
+				C5470F6425309C1100651ACE /* MacroDef_Cor.h */,
+			);
+			path = MacroDef_Cor;
+			sourceTree = "<group>";
+		};
+		C55E2A9A25FB284800716A9B /* MacroDef_Func */ = {
+			isa = PBXGroup;
+			children = (
+				C5470F6525309C1100651ACE /* MacroDef_Func.h */,
+			);
+			path = MacroDef_Func;
+			sourceTree = "<group>";
+		};
+		C55E2A9E25FB284F00716A9B /* MacroDef_Size */ = {
+			isa = PBXGroup;
+			children = (
+				C5470F6225309C1100651ACE /* MacroDef_Size.h */,
+			);
+			path = MacroDef_Size;
+			sourceTree = "<group>";
+		};
+		C55E2AA225FB285500716A9B /* MacroDef_Sys */ = {
+			isa = PBXGroup;
+			children = (
+				C55E2AA925FB286200716A9B /* MacroDef_SysWarning.h */,
+				C5470F6325309C1100651ACE /* MacroDef_Sys.h */,
+			);
+			path = MacroDef_Sys;
 			sourceTree = "<group>";
 		};
 		C55FEC3F25B427AF00D8C30D /* UIView+MJRefresh */ = {
@@ -5441,6 +5504,7 @@
 				C5D7B27525A73B3B00166E83 /* DDPlazaMineVC.m in Sources */,
 				C5C65403259DF94500FD2F99 /* ECPrivacyCheckMotionAndFitness.m in Sources */,
 				C534CE2025875A31001369FD /* BWItemCollectionViewCell.m in Sources */,
+				C55E0DE125F9CA8000716A9B /* UICollectionViewCell+Default.m in Sources */,
 				C5D7B21E25A73B2500166E83 /* NetworkingAPI+ConfigApi.m in Sources */,
 				C5D7B21725A73B2500166E83 /* NetworkingAPI+CommentApi.m in Sources */,
 				C5A444BC25ABFC2C000F0CD2 /* JXCategoryTimelineCell.m in Sources */,
@@ -5449,7 +5513,6 @@
 				C5914BAF25384CD0007777A6 /* UIViewController+BackBtn.m in Sources */,
 				C5D7B1BF25A73AF100166E83 /* DDCollectionViewCell_Style2+GKPhotoBrowserDelegate.m in Sources */,
 				C53D60E9255C20FC006C290D /* UITabBar+Ex.m in Sources */,
-				C52B98B2259F133D003D9E23 /* UICollectionViewCell+ShakeAnimation.m in Sources */,
 				C58F018E24EA5CAC00B6D09C /* NSArray+Extend.m in Sources */,
 				C5D7B14C25A73AE500166E83 /* DDForgetCodeVC.m in Sources */,
 				C561619D24EE4CB7001CD851 /* PhotoVC.m in Sources */,
@@ -5515,6 +5578,7 @@
 				C58F019824EA5CAC00B6D09C /* CALayer+Transition.m in Sources */,
 				C561619E24EE4CB7001CD851 /* PhotoVC+VM.m in Sources */,
 				C5C6543C259DF95700FD2F99 /* UIViewController+TZImagePickerControllerDelegate.m in Sources */,
+				C55E0DE025F9CA8000716A9B /* UICollectionViewCell+ShakeAnimation.m in Sources */,
 				C57297A225BB0A8400726419 /* UIView+BackgroundImage.m in Sources */,
 				C5D7B5A825A7424E00166E83 /* UITextField+Extend.m in Sources */,
 				C5D7B27325A73B3B00166E83 /* DDPostInputView.m in Sources */,
