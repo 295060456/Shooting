@@ -148,7 +148,7 @@
                             finishHandler:^{
               
             }];
-            return t = NO;;
+            return t = NO;
         }
         
         if (确认密码.length >= 6 && 确认密码.length <= 12 && 密码.length == 确认密码.length) {

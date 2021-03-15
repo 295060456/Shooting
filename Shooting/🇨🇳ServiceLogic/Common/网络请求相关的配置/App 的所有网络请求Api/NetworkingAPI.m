@@ -26,94 +26,145 @@
  * 错误在内部处理不向外抛出
  */
 @implementation NetworkingAPI
-// 不需要错误回调的
+#pragma mark —— 普通的网络请求
+/// 【只有Body参数、不需要错误回调】
 +(void)requestApi:(NSString *_Nonnull)requestApi
        parameters:(id _Nullable)parameters
      successBlock:(MKDataBlock)successBlock{
-    NSString *funcName = [requestApi stringByAppendingString:@":withsuccessBlock:"];
-    //字符串不正确，遍历后没有会崩溃
-    SuppressWarcPerformSelectorLeaksWarning([self performSelector:NSSelectorFromString(funcName)
-                                                       withObject:parameters
-                                                       withObject:successBlock]);
+    
+    NSLog(@"接口名：%@，请求参数打印 %@",requestApi,parameters);
+    
+    {
+        NSMutableArray *paramMutArr = NSMutableArray.array;
+        [paramMutArr addObject:parameters];
+        
+        if (successBlock) {
+            [paramMutArr addObject:successBlock];
+        }
+
+        NSString *funcName = [requestApi stringByAppendingString:@":successBlock:"];
+        [NSObject methodName:funcName
+                      target:self
+                 paramarrays:paramMutArr];
+    }
 }
-// 需要错误回调的
+///【只有Body参数、需要错误回调的】
 +(void)requestApi:(NSString *_Nonnull)requestApi
        parameters:(id _Nullable)parameters
      successBlock:(MKDataBlock)successBlock
      failureBlock:(MKDataBlock)failureBlock{
     
     NSLog(@"接口名：%@，请求参数打印 %@",requestApi,parameters);
-    NSString *funcName = [requestApi stringByAppendingString:@":success:failure:"];
-    //字符串不正确，遍历后没有会崩溃
-    SuppressWarcPerformSelectorLeaksWarning([self performSelector:NSSelectorFromString(funcName)
-                                                       withObject:parameters
-                                                       withObject:successBlock]);
-}
+    
+    {
+        NSMutableArray *paramMutArr = NSMutableArray.array;
+        [paramMutArr addObject:parameters];
+        
+        if (successBlock) {
+            [paramMutArr addObject:successBlock];
+        }
+        
+        if (failureBlock) {
+            [paramMutArr addObject:failureBlock];
+        }
 
+        NSString *funcName = [requestApi stringByAppendingString:@":successBlock:failureBlock:"];
+        [NSObject methodName:funcName
+                      target:self
+                 paramarrays:paramMutArr];
+    }
+}
+#pragma mark —— 特殊的上传文件的网络请求
+/// 上传【图片】文件的网络请求
++(void)requestApi:(NSString *_Nonnull)requestApi
+uploadImagesParamArr:(NSArray *)uploadImagesParamArr
+     successBlock:(MKDataBlock)successBlock
+     failureBlock:(MKDataBlock)failureBlock{
+
+    NSMutableArray *paramMutArr = [NSMutableArray arrayWithArray:uploadImagesParamArr];
+    
+    if (successBlock) {
+        [paramMutArr addObject:successBlock];
+    }
+    
+    if (failureBlock) {
+        [paramMutArr addObject:failureBlock];
+    }
+    
+    NSString *funcName = [requestApi stringByAppendingString:@":uploadImageDatas:successBlock:failureBlock:"];
+    [NSObject methodName:funcName
+                  target:self
+             paramarrays:paramMutArr];
+}
+/// 上传【视频】文件的网络请求
++(void)requestApi:(NSString *_Nonnull)requestApi
+uploadVideosParamArr:(NSArray *)uploadVideosParamArr
+     successBlock:(MKDataBlock)successBlock
+     failureBlock:(MKDataBlock)failureBlock{
+
+    NSMutableArray *paramMutArr = [NSMutableArray arrayWithArray:uploadVideosParamArr];
+    
+    if (successBlock) {
+        [paramMutArr addObject:successBlock];
+    }
+    
+    if (failureBlock) {
+        [paramMutArr addObject:failureBlock];
+    }
+    
+    NSString *funcName = [requestApi stringByAppendingString:@":uploadVideo:successBlock:failureBlock:"];
+    [NSObject methodName:funcName
+                  target:self
+             paramarrays:paramMutArr];
+}
+#pragma mark —— 其他的一些调用方式，和上面等价
 +(void)request:(NSString *)path
         method:(ZBMethodType)type
     parameters:(nullable id)parameters
+   uploadDatas:(NSMutableArray<ZBUploadData *> *)uploadDatas
 requestSerializer:(ZBRequestSerializerType)requestSerializerType
        headers:(nullable NSDictionary <NSString *, NSString *> *)headers
       progress:(nullable void (^)(NSProgress * _Nonnull))progress
        success:(nullable void (^)(DDResponseModel *))success
        failure:(nullable void (^)(NSError *))failure {
-    
     [ZBRequestManager requestWithConfig:^(ZBURLRequest * _Nullable request) {
-
         request.server = NSObject.BaseUrl;
         request.url = [request.server stringByAppendingString:path];
-        NSLog(@"request.URLString = %@",[request.server stringByAppendingString:request.url]);
-        request.methodType = type; //默认为GET
+        NSLog(@"request.URLString = %@",request.url);
+        request.methodType = type;
         request.apiType = ZBRequestTypeRefresh;//（默认为ZBRequestTypeRefresh 不读取缓存，不存储缓存）
         request.parameters = parameters;//与公共配置 Parameters 兼容
         request.headers = headers;//与公共配置 Headers 兼容
         request.retryCount = 1;//请求失败 单次请求 重新连接次数 优先级大于 全局设置，不影响其他请求设置
-        request.timeoutInterval = 20;//默认30 //优先级 高于 公共配置,不影响其他请求设置
+        request.timeoutInterval = 120;//默认30 //优先级 高于 公共配置,不影响其他请求设置
         request.requestSerializer = requestSerializerType;
+        request.uploadDatas = uploadDatas;
         if (![NSString isNullString:[DataManager sharedInstance].tag]) {
             request.userInfo = @{@"info":[DataManager sharedInstance].tag};//与公共配置 UserInfo 不兼容 优先级大于 公共配置
         };//与公共配置 UserInfo 不兼容 优先级大于 公共配置
-        
-        {
-//            request.filtrationCacheKey = @[@""];//与公共配置 filtrationCacheKey 兼容
-//            request.requestSerializer = ZBJSONRequestSerializer; //单次请求设置 请求格式 默认JSON，优先级大于 公共配置，不影响其他请求设置
-//            request.responseSerializer = ZBJSONResponseSerializer; //单次请求设置 响应格式 默认JSON，优先级大于 公共配置,不影响其他请求设置
-           
-            /**
-             多次请求同一个接口 保留第一次或最后一次请求结果 只在请求时有用  读取缓存无效果。默认ZBResponseKeepNone 什么都不做
-             使用场景是在 重复点击造成的 多次请求，如发帖，评论，搜索等业务
-             */
-//            request.keepType=ZBResponseKeepNone;
-        }//一些临时的其他的配置
-        
     }progress:^(NSProgress * _Nullable progress){
         NSLog(@"进度 = %f",progress.fractionCompleted * 100);
     }success:^(id  _Nullable responseObject,
                ZBURLRequest * _Nullable request){
-        
-        DDResponseModel *model =  [DDResponseModel mj_objectWithKeyValues:responseObject];
+        NSLog(@"responseObject = %@",responseObject);
+        DDResponseModel *model = [DDResponseModel mj_objectWithKeyValues:responseObject];
         if(model.code == 200) {
             if(success) {
                 success(model);
             }
         } else {
             if(failure) {
-                NSError *error = [NSError errorWithDomain:NSNetServicesErrorDomain code:model.code userInfo:@{@"msg":model.msg}];
+                NSError *error = [NSError errorWithDomain:NSNetServicesErrorDomain
+                                                     code:model.code
+                                                 userInfo:@{@"msg":model.msg}];
                 failure(error);
             }
         }
-    }failure:^(NSError * _Nullable error){
-        NSLog(@"error = %@",error);
-        if(failure) {
-            failure(error);
-        }
-    }finished:^(id  _Nullable responseObject,
+    } failure:failure finished:^(id  _Nullable responseObject,
                 NSError * _Nullable error,
-                ZBURLRequest * _Nullable request){
+                ZBURLRequest * _Nullable request) {
         NSLog(@"请求完成 userInfo:%@",request.userInfo);
     }];
-    
 }
 
 +(void)POST:(NSString *)path
@@ -123,7 +174,15 @@ requestSerializer:(ZBRequestSerializerType)requestSerializerType
    progress:(nullable void (^)(NSProgress * _Nonnull))progress
     success:(nullable void (^)(DDResponseModel *))success
     failure:(nullable void (^)(NSError *))failure {
-    [self request:path method:ZBMethodTypePOST parameters:parameters requestSerializer:requestSerializerType  headers:headers progress:progress success:success failure:failure];
+    [self request:path
+           method:ZBMethodTypePOST
+       parameters:parameters
+      uploadDatas: nil
+requestSerializer:requestSerializerType
+          headers:headers
+         progress:progress
+          success:success
+          failure:failure];
 }
 
 +(void)GET:(NSString *)path
@@ -132,8 +191,35 @@ requestSerializer:(ZBRequestSerializerType)requestSerializerType
     headers:(nullable NSDictionary <NSString *, NSString *> *)headers
    progress:(nullable void (^)(NSProgress * _Nonnull))progress
     success:(nullable void (^)(DDResponseModel *))success
-   failure:(nullable void (^)(NSError *))failure {
-    [self request:path method:ZBMethodTypeGET parameters:parameters requestSerializer:requestSerializerType  headers:headers progress:progress success:success failure:failure];
+    failure:(nullable void (^)(NSError *))failure {
+    [self request:path
+           method:ZBMethodTypeGET
+       parameters:parameters
+      uploadDatas:nil
+requestSerializer:requestSerializerType
+          headers:headers
+         progress:progress
+          success:success
+          failure:failure];
+}
+
++(void)upload:(NSString *)path
+   parameters:(nullable id)parameters
+  uploadDatas:(NSMutableArray<ZBUploadData *> *)uploadDatas
+requestSerializer:(ZBRequestSerializerType)requestSerializerType
+      headers:(nullable NSDictionary <NSString *, NSString *> *)headers
+     progress:(nullable void (^)(NSProgress * _Nonnull))progress
+      success:(nullable void (^)(DDResponseModel *))success
+      failure:(nullable void (^)(NSError *))failure {
+    [self request:path
+           method:ZBMethodTypeUpload
+       parameters:parameters
+      uploadDatas:uploadDatas
+requestSerializer:requestSerializerType
+          headers:headers
+         progress:progress
+          success:success
+          failure:failure];
 }
 
 @end
