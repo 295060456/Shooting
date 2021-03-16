@@ -86,6 +86,10 @@
 #import "UIButton+ImageTitleSpacing.h"
 #pragma mark —— UITextField
 #import "ZYTextField.h"
+#pragma mark —— UITextView
+/// UITextView+Category
+#import "UITextView+IndicateWordLimit.h"
+#import "UITextView+Extend.h"
 #pragma mark —— UIButton
 #import "RBCLikeButton.h"//高仿抖音点赞动画
 #import "LGiOSBtn.h"

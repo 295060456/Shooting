@@ -117,6 +117,7 @@
 		C56161BB24EE4F43001CD851 /* JhtBannerCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161B924EE4F43001CD851 /* JhtBannerCardView.m */; };
 		C56161BF24EE4F4B001CD851 /* JhtBannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161BD24EE4F4B001CD851 /* JhtBannerScrollView.m */; };
 		C56161C224EE4F52001CD851 /* JhtBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161C124EE4F52001CD851 /* JhtBannerView.m */; };
+		C56190DE26008F4800D4546E /* UITextView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C56190DD26008F4800D4546E /* UITextView+Extend.m */; };
 		C562DE5225C7C55D004D1AEA /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C562DE5125C7C55D004D1AEA /* UIView+ViewController.m */; };
 		C565CBC125A4384800848134 /* TwoVerticalArrangementLabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C565CBBE25A4384800848134 /* TwoVerticalArrangementLabsView.m */; };
 		C567359825D77B43008ABAF9 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C567359325D77B43008ABAF9 /* BaseView.m */; };
@@ -680,6 +681,8 @@
 		C56161BE24EE4F4B001CD851 /* JhtBannerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhtBannerScrollView.h; sourceTree = "<group>"; };
 		C56161C024EE4F52001CD851 /* JhtBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhtBannerView.h; sourceTree = "<group>"; };
 		C56161C124EE4F52001CD851 /* JhtBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhtBannerView.m; sourceTree = "<group>"; };
+		C56190DC26008F4800D4546E /* UITextView+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Extend.h"; sourceTree = "<group>"; };
+		C56190DD26008F4800D4546E /* UITextView+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Extend.m"; sourceTree = "<group>"; };
 		C56208F82553FFE900FE435F /* 验证码按钮单例封装.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "验证码按钮单例封装.md"; sourceTree = "<group>"; };
 		C56208F92553FFF900FE435F /* 高度自定义的按钮.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "高度自定义的按钮.md"; sourceTree = "<group>"; };
 		C562DE5025C7C55D004D1AEA /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
@@ -1935,7 +1938,7 @@
 		C542D6ED25EB7B5000D776D8 /* UITextView */ = {
 			isa = PBXGroup;
 			children = (
-				C59434AD25E7AAD8003BCA91 /* UITextView+IndicateWordLimit */,
+				C56190DA26008F4000D4546E /* UITextView+Category */,
 			);
 			path = UITextView;
 			sourceTree = "<group>";
@@ -2544,6 +2547,24 @@
 				C56161B924EE4F43001CD851 /* JhtBannerCardView.m */,
 			);
 			path = JhtBannerCardView;
+			sourceTree = "<group>";
+		};
+		C56190DA26008F4000D4546E /* UITextView+Category */ = {
+			isa = PBXGroup;
+			children = (
+				C56190DB26008F4800D4546E /* UITextView+Extend */,
+				C59434AD25E7AAD8003BCA91 /* UITextView+IndicateWordLimit */,
+			);
+			path = "UITextView+Category";
+			sourceTree = "<group>";
+		};
+		C56190DB26008F4800D4546E /* UITextView+Extend */ = {
+			isa = PBXGroup;
+			children = (
+				C56190DC26008F4800D4546E /* UITextView+Extend.h */,
+				C56190DD26008F4800D4546E /* UITextView+Extend.m */,
+			);
+			path = "UITextView+Extend";
 			sourceTree = "<group>";
 		};
 		C562DE4C25C7C558004D1AEA /* UIView+ViewController */ = {
@@ -5523,6 +5544,7 @@
 				C5D7B15925A73AE500166E83 /* JobsAppDoorInputViewBaseStyle.m in Sources */,
 				C5D7B26F25A73B3B00166E83 /* DDMyLikedVC.m in Sources */,
 				C5DF454F25A89A0300E91985 /* UIViewController+MJRefresh.m in Sources */,
+				C56190DE26008F4800D4546E /* UITextView+Extend.m in Sources */,
 				C53D60C7255C20FC006C290D /* TabBarItem.m in Sources */,
 				C5D7B1B325A73AF100166E83 /* NoticePopupView.m in Sources */,
 				C5D7B21525A73B2500166E83 /* NetworkingAPI+EarnApi.m in Sources */,
