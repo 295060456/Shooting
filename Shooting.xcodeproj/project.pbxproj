@@ -172,8 +172,6 @@
 		C58F01E324EA603400B6D09C /* 替换系统的UITabBarViewController in Resources */ = {isa = PBXBuildFile; fileRef = C58F01E224EA603400B6D09C /* 替换系统的UITabBarViewController */; };
 		C58F01F924EA60D100B6D09C /* CustomSYSUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F01F824EA60D100B6D09C /* CustomSYSUITabBarController.m */; };
 		C58F02E324EA632800B6D09C /* FileFolderHandleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02E224EA632800B6D09C /* FileFolderHandleTool.m */; };
-		C58F030224EA645A00B6D09C /* NSObject+LBLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02FE24EA645A00B6D09C /* NSObject+LBLaunchImage.m */; };
-		C58F030324EA645A00B6D09C /* LBLaunchImageAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F02FF24EA645A00B6D09C /* LBLaunchImageAdView.m */; };
 		C58F032224EA68B500B6D09C /* LGiOSBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F032124EA68B500B6D09C /* LGiOSBtn.m */; };
 		C58F033224EA69D400B6D09C /* ViewController@2.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F032924EA69D400B6D09C /* ViewController@2.m */; };
 		C58F033324EA69D400B6D09C /* ViewController@4.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F032A24EA69D400B6D09C /* ViewController@4.m */; };
@@ -5589,7 +5587,6 @@
 				C595D4F1258714AD002A4531 /* SuspendBtn.m in Sources */,
 				C52DEF56255D2A820016FF07 /* XHLaunchAdCache.m in Sources */,
 				C5D7B21D25A73B2500166E83 /* NetworkingAPI+StatisticsApi.m in Sources */,
-				C58F030324EA645A00B6D09C /* LBLaunchImageAdView.m in Sources */,
 				C5D7B21425A73B2500166E83 /* DataManager.m in Sources */,
 				C52DEF54255D2A820016FF07 /* XHLaunchAdImageView+XHLaunchAdCache.m in Sources */,
 				C5C653FF259DF94500FD2F99 /* ECPrivacyCheckLocationServices.m in Sources */,
@@ -5732,7 +5729,6 @@
 				C54B3FCA255297C5003BE195 /* UILabel+Extra.m in Sources */,
 				C562DE5225C7C55D004D1AEA /* UIView+ViewController.m in Sources */,
 				C59D9AB324F8E8DC00A74CE9 /* MKShootVC+VM.m in Sources */,
-				C58F030224EA645A00B6D09C /* NSObject+LBLaunchImage.m in Sources */,
 				C53E48A625FB5640007D92BE /* NSObject+Random.m in Sources */,
 				C551352825C68A09007BCA82 /* ZWPullMenuView.m in Sources */,
 				C59D9AED24F8F08500A74CE9 /* ZZCountingLabel.m in Sources */,

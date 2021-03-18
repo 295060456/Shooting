@@ -291,8 +291,8 @@ shouldChangeTextInRange:(NSRange)range
         [self.view addSubview:_backView];
         [_backView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(self.view);
-            make.top.equalTo(self.gk_navigationBar.mas_bottom).offset(SCALING_RATIO(16));
-            make.height.mas_equalTo(SCALING_RATIO(153));
+            make.top.equalTo(self.gk_navigationBar.mas_bottom).offset(KHeight(16));
+            make.height.mas_equalTo(KHeight(153));
         }];
     }return _backView;
 }
@@ -311,7 +311,7 @@ shouldChangeTextInRange:(NSRange)range
         [self.backView addSubview:_textView];
         [_textView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.right.equalTo(self.backView);
-            make.height.mas_equalTo(SCALING_RATIO(133));
+            make.height.mas_equalTo(KHeight(133));
         }];
     }return _textView;
 }
@@ -325,8 +325,8 @@ shouldChangeTextInRange:(NSRange)range
                                                                                       NSForegroundColorAttributeName:HEXCOLOR(0x242A37)}];
         [self.backView addSubview:_tipsLab];
         [_tipsLab mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.bottom.equalTo(self.backView).offset(SCALING_RATIO(-6));
-            make.top.equalTo(self.textView.mas_bottom).offset(SCALING_RATIO(-6));
+            make.right.bottom.equalTo(self.backView).offset(KWidth(-6));
+            make.top.equalTo(self.textView.mas_bottom).offset(KHeight(-6));
         }];
     }return _tipsLab;
 }
@@ -337,9 +337,9 @@ shouldChangeTextInRange:(NSRange)range
         _choosePicBtn.delegate = self;
         [self.view addSubview:_choosePicBtn];
         [_choosePicBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(SCALING_RATIO(130), SCALING_RATIO(130)));
-            make.left.equalTo(self.view).offset(SCALING_RATIO(13));
-            make.top.equalTo(self.backView.mas_bottom).offset(SCALING_RATIO(13));
+            make.size.mas_equalTo(CGSizeMake(KWidth(130), KHeight(130)));
+            make.left.equalTo(self.view).offset(KWidth(13));
+            make.top.equalTo(self.backView.mas_bottom).offset(KHeight(13));
         }];
         @weakify(self)
         [[_choosePicBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -432,12 +432,12 @@ shouldChangeTextInRange:(NSRange)range
         }];
         [self.view addSubview:_releaseBtn];
         [_releaseBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH / 2.5, SCALING_RATIO(30)));
+            make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH / 2.5, KHeight(30)));
             make.centerX.equalTo(self.view);
-            make.top.equalTo(self.choosePicBtn.mas_bottom).offset(SCALING_RATIO(50));
+            make.top.equalTo(self.choosePicBtn.mas_bottom).offset(KHeight(50));
         }];
         [UIView cornerCutToCircleWithView:_releaseBtn
-                          andCornerRadius:SCALING_RATIO(6)];
+                          andCornerRadius:KWidth(6)];
     }return _releaseBtn;
 }
 

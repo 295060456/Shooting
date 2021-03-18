@@ -293,13 +293,13 @@
         _recordBtn.time = self.time;// 准备跑多少秒 —— 预设值。本类的init里面设置了是默认值5分钟
         [self.view addSubview:_recordBtn];
         [_recordBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(SCALING_RATIO(80), SCALING_RATIO(80)));
+            make.size.mas_equalTo(CGSizeMake(KWidth(80), KHeight(80)));
             make.centerX.equalTo(self.view.mas_centerX);
-            make.bottom.equalTo(self.view).offset(-SCALING_RATIO(100));
+            make.bottom.equalTo(self.view).offset(-KHeight(100));
         }];
         [_recordBtn layoutIfNeeded];
         [UIView cornerCutToCircleWithView:_recordBtn
-                          andCornerRadius:SCALING_RATIO(80) / 2];
+                          andCornerRadius:KWidth(80) / 2];
         @weakify(self)
         //点击手势回调
         [_recordBtn actionTapGRHandleSingleFingerBlock:^(id data) {
@@ -549,8 +549,8 @@
         [self.view addSubview:_previewBtn];
         [_previewBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.recordBtn);
-            make.right.equalTo(self.recordBtn.mas_left).offset(-SCALING_RATIO(10));
-            make.size.mas_equalTo(CGSizeMake(SCALING_RATIO(40), 30));
+            make.right.equalTo(self.recordBtn.mas_left).offset(-KWidth(10));
+            make.size.mas_equalTo(CGSizeMake(KWidth(40), KHeight(30)));
         }];
         [UIView cornerCutToCircleWithView:_previewBtn
                           andCornerRadius:8.f];
@@ -560,12 +560,12 @@
 -(JhtBannerView *)bannerView{
     if (!_bannerView) {
         _bannerView = [[JhtBannerView alloc] initWithFrame:CGRectMake([NSObject measureSubview:SCREEN_WIDTH * 2 / 3 superview:SCREEN_WIDTH],
-//                                                                      SCREEN_HEIGHT - SCALING_RATIO(98),
+//                                                                      SCREEN_HEIGHT - KWidth(98),
                                                                       self.gradProg.mj_y + self.gradProg.mj_h,
                                                                       SCREEN_WIDTH * 2 / 3,
-                                                                      SCALING_RATIO(40))];
+                                                                      KWidth(40))];
         
-        _bannerView.JhtBannerCardViewSize = CGSizeMake(SCREEN_WIDTH * 2 / 9, SCALING_RATIO(40));
+        _bannerView.JhtBannerCardViewSize = CGSizeMake(SCREEN_WIDTH * 2 / 9, KHeight(40));
         [self.view addSubview:_bannerView];
 
         [_bannerView setDataArr:self.timeArr];//这个时候就设置了 UIPageControl
@@ -644,8 +644,8 @@
         [self.view addSubview:_deleteFilmBtn];
         [_deleteFilmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.recordBtn);
-            make.size.mas_equalTo(CGSizeMake(SCALING_RATIO(36), SCALING_RATIO(36)));
-            make.right.equalTo(self.recordBtn.mas_left).offset(SCALING_RATIO(-32));
+            make.size.mas_equalTo(CGSizeMake(KWidth(36), KHeight(36)));
+            make.right.equalTo(self.recordBtn.mas_left).offset(KWidth(-32));
         }];
     }return _deleteFilmBtn;
 }
@@ -680,8 +680,8 @@
         [self.view addSubview:_sureFilmBtn];
         [_sureFilmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.recordBtn);
-            make.size.mas_equalTo(CGSizeMake(SCALING_RATIO(36), SCALING_RATIO(36)));
-            make.left.equalTo(self.recordBtn.mas_right).offset(SCALING_RATIO(32));
+            make.size.mas_equalTo(CGSizeMake(KWidth(36), KHeight(36)));
+            make.left.equalTo(self.recordBtn.mas_right).offset(KWidth(32));
         }];
     }return _sureFilmBtn;
 }
@@ -739,7 +739,7 @@
             [self.view addSubview:_AVPlayerView];
             [self.view.layer addSublayer:_AVPlayerView.playerLayer];
             [_AVPlayerView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.left.equalTo(self.view).offset(SCALING_RATIO(50));
+                make.left.equalTo(self.view).offset(KWidth(50));
                 make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2));
                 if (self.gk_navBarAlpha && !self.gk_navigationBar.hidden) {//显示
                     make.top.equalTo(self.gk_navigationBar.mas_bottom);

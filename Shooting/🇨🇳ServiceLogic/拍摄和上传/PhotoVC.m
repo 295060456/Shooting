@@ -272,7 +272,7 @@ scrollingFromLeftIndex:(NSInteger)leftIndex
                         [self.categoryView mas_remakeConstraints:^(MASConstraintMaker *make) {
                             make.left.equalTo(self.view);
                             make.right.equalTo(self.view.mas_centerX);
-                            make.height.mas_equalTo(SCALING_RATIO(0));
+                            make.height.mas_equalTo(KHeight(0));
                             make.top.equalTo(self.listContainerView).offset(rectOfStatusbar());
                         }];
                     } completion:^(BOOL finished) {
@@ -284,7 +284,7 @@ scrollingFromLeftIndex:(NSInteger)leftIndex
                         [self.categoryView mas_remakeConstraints:^(MASConstraintMaker *make) {
                             make.left.equalTo(self.view);
                             make.right.equalTo(self.view.mas_centerX);
-                            make.height.mas_equalTo(SCALING_RATIO(50));
+                            make.height.mas_equalTo(KHeight(50));
                             make.top.equalTo(self.listContainerView).offset(rectOfStatusbar());
                         }];
                     } completion:^(BOOL finished) {
@@ -346,7 +346,7 @@ scrollingFromLeftIndex:(NSInteger)leftIndex
         [_categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
             make.right.equalTo(self.view.mas_centerX);
-            make.height.mas_equalTo(SCALING_RATIO(50));
+            make.height.mas_equalTo(KHeight(50));
             make.top.equalTo(self.listContainerView).offset(rectOfStatusbar());
         }];
         [self.view layoutIfNeeded];

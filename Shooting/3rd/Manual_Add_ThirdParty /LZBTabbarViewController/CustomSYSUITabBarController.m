@@ -43,7 +43,8 @@ CGFloat LZB_TABBAR_HEIGHT;
 
 -(instancetype)init{
     if (self = [super init]) {
-        LZB_TABBAR_HEIGHT = isiPhoneX_series() ? (50 + isiPhoneX_seriesBottom) : 49;
+        NavigationBarAndStatusBarHeight(nil);
+        LZB_TABBAR_HEIGHT = TabBarHeightByBottomSafeArea(nil);
     }return self;
 }
 

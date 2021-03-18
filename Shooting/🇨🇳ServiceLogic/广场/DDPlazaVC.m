@@ -87,7 +87,7 @@ didSelectedItemAtIndex:(NSInteger)index {//终值
         _categoryTitleView = JXCategoryDotView.new;
         _categoryTitleView.width = 180;
         _categoryTitleView.height = categoryTitleViewHeight;
-        _categoryTitleView.y = Top() - NavigationBarAndStatusBarHeight() + 18;
+        _categoryTitleView.y = NavigationBarAndStatusBarHeight(nil) + 18;
         _categoryTitleView.backgroundColor = kClearColor;
         _categoryTitleView.dotSize = CGSizeMake(5, 5);
         _categoryTitleView.titles = self.headerTitles;
@@ -151,7 +151,7 @@ didSelectedItemAtIndex:(NSInteger)index {//终值
         self.view.vc = weak_self;
         [self.view addSubview:_postBtn];
         _postBtn.frame = CGRectMake(SCREEN_WIDTH - 43 - 34,
-                                    SCREEN_HEIGHT - 84 - 34 - TabBarHeight() - BottomSafeAreaHeight(),
+                                    SCREEN_HEIGHT - 84 - 34 - TabBarHeight(nil) - BottomSafeAreaHeight(),
                                     34,
                                     34);
         [UIView cornerCutToCircleWithView:_postBtn
