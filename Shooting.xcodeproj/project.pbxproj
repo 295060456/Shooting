@@ -910,6 +910,7 @@
 		C5AEEADD25384196000E1C5F /* UIView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extras.m"; sourceTree = "<group>"; };
 		C5AEEADE25384196000E1C5F /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
 		C5AEEADF25384196000E1C5F /* UIView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extras.h"; sourceTree = "<group>"; };
+		C5B7BA922609998A00BFF168 /* UICollectionViewFlowLayout.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UICollectionViewFlowLayout.md; sourceTree = "<group>"; };
 		C5C653B7259DF94500FD2F99 /* ECPrivacyCheckCalendars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPrivacyCheckCalendars.h; sourceTree = "<group>"; };
 		C5C653B8259DF94500FD2F99 /* ECPrivacyCheckMicrophone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPrivacyCheckMicrophone.m; sourceTree = "<group>"; };
 		C5C653B9259DF94500FD2F99 /* ECPrivacyCheckMotionAndFitness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPrivacyCheckMotionAndFitness.h; sourceTree = "<group>"; };
@@ -1615,6 +1616,7 @@
 		C530B0E8254D9ACD00EDEDC8 /* UICollectionViewFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
+				C5B7BA922609998A00BFF168 /* UICollectionViewFlowLayout.md */,
 				C51F6DF32608575500953C10 /* BaseCollectionViewFlowLayout */,
 			);
 			path = UICollectionViewFlowLayout;
