@@ -36,22 +36,20 @@ static DDUserInfo *static_userInfo = nil;
     return ![NSString isNullString:model.token];
 }
 #pragma mark —— userModel
--(DDUserModel *)userModel{
-    if (!_userModel) {
-        _userModel = [DDUserModel mj_objectWithKeyValues:[UserDefaultManager fetchDataWithKey:userInfoKey]] ? : DDUserModel.new;
-    }return _userModel;
-}
-
 -(void)setUserModel:(DDUserModel *)userModel{
     _userModel = userModel;
-    if ([NSString isNullString:_userModel.token]) {
-        _userModel.uid = @"";
-    }
     //先清
     [UserDefaultManager cleanDataWithKey:userInfoKey];
     //后装
-    [UserDefaultManager saveValue:_userModel
+    [UserDefaultManager saveValue:userModel
                            forKey:userInfoKey];
+}
+
+-(DDUserModel *)userModel{
+    NSString *userinfo = [UserDefaultManager fetchDataWithKey:userInfoKey];
+    if (userinfo.length) {
+        _userModel = [DDUserModel mj_objectWithKeyValues:userinfo];
+    }return _userModel;
 }
 #pragma mark —— postDraftURLStr
 -(void)setPostDraftURLStr:(NSString *)postDraftURLStr{
