@@ -21,10 +21,6 @@
 #import "CustomerAVPlayerVC.h"
 #import "CustomerAVPlayerView.h"
 #import "CustomerGPUImagePlayerVC.h"
-///登录 * 注册 * 忘记密码
-#import "JobsAppDoorVC_Style1.h"
-#import "JobsAppDoorVC_Style2.h"
-#import "DDForgetCodeVC.h"
 
 #import "DDPlazaVC.h"
 #import "DDUserDetailsVC.h"//用户详情
