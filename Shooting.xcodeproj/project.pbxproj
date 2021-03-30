@@ -154,8 +154,6 @@
 		C58F003024EA36FA00B6D09C /* ShootingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F002F24EA36FA00B6D09C /* ShootingTests.m */; };
 		C58F003B24EA36FA00B6D09C /* ShootingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F003A24EA36FA00B6D09C /* ShootingUITests.m */; };
 		C58F00EE24EA581F00B6D09C /* BaseGPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F00C824EA581F00B6D09C /* BaseGPUImageView.m */; };
-		C58F010A24EA584B00B6D09C /* LYLUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F00FC24EA584B00B6D09C /* LYLUnicode.m */; };
-		C58F010B24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */ = {isa = PBXBuildFile; fileRef = C58F00FD24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 */; };
 		C58F010D24EA584B00B6D09C /* NSlogToDocumentFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F010224EA584B00B6D09C /* NSlogToDocumentFolder.m */; };
 		C58F018124EA5CAC00B6D09C /* DeleteSystemUITabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F011324EA5CAC00B6D09C /* DeleteSystemUITabBarButton.m */; };
 		C58F018224EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton in Resources */ = {isa = PBXBuildFile; fileRef = C58F011524EA5CAC00B6D09C /* 移除 系统自带的 UITabBarButton */; };
@@ -272,7 +270,6 @@
 		C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9D24FF5D3B000A26B8 /* Nanosecond_TimerManager.m */; };
 		C5C67CA824FF5D68000A26B8 /* MovieCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA624FF5D68000A26B8 /* MovieCountDown.m */; };
 		C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */; };
-		C5CF16EE25AC7F7300381935 /* LYLUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF16EB25AC7F7300381935 /* LYLUnicode.m */; };
 		C5D0BAC725878EA6002CA224 /* Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5D0BAC325878EA6002CA224 /* Sound.wav */; };
 		C5D0BAC825878EA6002CA224 /* 带有按键音的按钮.md in Resources */ = {isa = PBXBuildFile; fileRef = C5D0BAC425878EA6002CA224 /* 带有按键音的按钮.md */; };
 		C5D0BAC925878EA6002CA224 /* SoundBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D0BAC525878EA6002CA224 /* SoundBtn.m */; };
@@ -381,6 +378,7 @@
 		C5DF454D25A89A0300E91985 /* MJRefreshConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DF454825A89A0300E91985 /* MJRefreshConfigModel.m */; };
 		C5DF454E25A89A0300E91985 /* JsonRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5DF454925A89A0300E91985 /* JsonRes.bundle */; };
 		C5DF454F25A89A0300E91985 /* UIViewController+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DF454A25A89A0300E91985 /* UIViewController+MJRefresh.m */; };
+		C5DFE13426131987008C7E2E /* DebugLogDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DFE13326131987008C7E2E /* DebugLogDescription.m */; };
 		C5E5C6252505E1E4001E69DA /* UIButton+CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5575AE2250518AA00A2A694 /* UIButton+CountDownBtn.m */; };
 		C5E5C63925077436001E69DA /* WGradientProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C63725077436001E69DA /* WGradientProgress.m */; };
 		C5E5C6492507963B001E69DA /* UIDevice+XMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C6462507963B001E69DA /* UIDevice+XMUtils.m */; };
@@ -746,9 +744,6 @@
 		C58F00F824EA584B00B6D09C /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libstdc++.6.dylib"; sourceTree = "<group>"; };
 		C58F00F924EA584B00B6D09C /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libstdc++.6.0.9.dylib"; sourceTree = "<group>"; };
 		C58F00FA24EA584B00B6D09C /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libstdc++.dylib"; sourceTree = "<group>"; };
-		C58F00FC24EA584B00B6D09C /* LYLUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLUnicode.m; sourceTree = "<group>"; };
-		C58F00FD24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "解决打印日志对于Unicode编码不能正常显示中文的问题"; sourceTree = "<group>"; };
-		C58F00FE24EA584B00B6D09C /* LYLUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLUnicode.h; sourceTree = "<group>"; };
 		C58F010024EA584B00B6D09C /* NSlogToDocumentFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSlogToDocumentFolder.h; sourceTree = "<group>"; };
 		C58F010124EA584B00B6D09C /* 调试时候添加日志时使用,上线需要去掉 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "调试时候添加日志时使用,上线需要去掉"; sourceTree = "<group>"; };
 		C58F010224EA584B00B6D09C /* NSlogToDocumentFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSlogToDocumentFolder.m; sourceTree = "<group>"; };
@@ -967,9 +962,6 @@
 		C5C67CA724FF5D68000A26B8 /* MovieCountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCountDown.h; sourceTree = "<group>"; };
 		C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Measure.m"; sourceTree = "<group>"; };
 		C5C67CAA24FF5D94000A26B8 /* UIView+Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Measure.h"; sourceTree = "<group>"; };
-		C5CF16EB25AC7F7300381935 /* LYLUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLUnicode.m; sourceTree = "<group>"; };
-		C5CF16EC25AC7F7300381935 /* 解决打印日志对于Unicode编码不能正常显示中文的问题 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "解决打印日志对于Unicode编码不能正常显示中文的问题"; sourceTree = "<group>"; };
-		C5CF16ED25AC7F7300381935 /* LYLUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLUnicode.h; sourceTree = "<group>"; };
 		C5D0BAC325878EA6002CA224 /* Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound.wav; sourceTree = "<group>"; };
 		C5D0BAC425878EA6002CA224 /* 带有按键音的按钮.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "带有按键音的按钮.md"; sourceTree = "<group>"; };
 		C5D0BAC525878EA6002CA224 /* SoundBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundBtn.m; sourceTree = "<group>"; };
@@ -1185,6 +1177,8 @@
 		C5DF454825A89A0300E91985 /* MJRefreshConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConfigModel.m; sourceTree = "<group>"; };
 		C5DF454925A89A0300E91985 /* JsonRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JsonRes.bundle; sourceTree = "<group>"; };
 		C5DF454A25A89A0300E91985 /* UIViewController+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJRefresh.m"; sourceTree = "<group>"; };
+		C5DFE13226131987008C7E2E /* DebugLogDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugLogDescription.h; sourceTree = "<group>"; };
+		C5DFE13326131987008C7E2E /* DebugLogDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugLogDescription.m; sourceTree = "<group>"; };
 		C5E5C63725077436001E69DA /* WGradientProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGradientProgress.m; sourceTree = "<group>"; };
 		C5E5C63825077436001E69DA /* WGradientProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGradientProgress.h; sourceTree = "<group>"; };
 		C5E5C6462507963B001E69DA /* UIDevice+XMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+XMUtils.m"; sourceTree = "<group>"; };
@@ -2929,7 +2923,6 @@
 			isa = PBXGroup;
 			children = (
 				C58F00F124EA584B00B6D09C /* libstdc++ */,
-				C58F00FB24EA584B00B6D09C /* LYLUnicode */,
 			);
 			path = Sys;
 			sourceTree = "<group>";
@@ -2964,16 +2957,6 @@
 			path = "iPhone-Simulator";
 			sourceTree = "<group>";
 		};
-		C58F00FB24EA584B00B6D09C /* LYLUnicode */ = {
-			isa = PBXGroup;
-			children = (
-				C58F00FC24EA584B00B6D09C /* LYLUnicode.m */,
-				C58F00FD24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 */,
-				C58F00FE24EA584B00B6D09C /* LYLUnicode.h */,
-			);
-			path = LYLUnicode;
-			sourceTree = "<group>";
-		};
 		C58F00FF24EA584B00B6D09C /* Log */ = {
 			isa = PBXGroup;
 			children = (
@@ -2996,6 +2979,7 @@
 		C58F011024EA5BD500B6D09C /* BaseCustomizeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				C5DFE13126131987008C7E2E /* DebugLogDescription */,
 				C563219826084B8300822149 /* BaseProtocol */,
 				C58F014D24EA5CAC00B6D09C /* CALayer */,
 				C58F013124EA5CAC00B6D09C /* NSArray */,
@@ -3158,11 +3142,11 @@
 		C58F017A24EA5CAC00B6D09C /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
-				C5D8D8E4260CC93F00BDAF76 /* NSObject+DefConfig */,
 				C53E487325FB563F007D92BE /* NSObject (Time) */,
 				C53E487925FB563F007D92BE /* NSObject+Alert */,
 				C53E489925FB5640007D92BE /* NSObject+CallBackInfoByBlock */,
 				C53E487625FB563F007D92BE /* NSObject+DataSave */,
+				C5D8D8E4260CC93F00BDAF76 /* NSObject+DefConfig */,
 				C53E488025FB563F007D92BE /* NSObject+Others */,
 				C53E489C25FB5640007D92BE /* NSObject+Time */,
 			);
@@ -3174,7 +3158,6 @@
 			children = (
 				C5542D7C25F324FA002D1CA6 /* CheckMemFreeVC */,
 				C54C63FA25EFC2FA007DD043 /* 清除缓存 */,
-				C5CF16EA25AC7F7300381935 /* LYLUnicode */,
 				C5A43A7025AAF8A5000F0CD2 /* 手势滑动返回 */,
 				C5D7B4CD25A740D500166E83 /* KeychainIDFA */,
 				C5D7B46B25A73E1800166E83 /* 播放器控制层 */,
@@ -3768,16 +3751,6 @@
 				C5C67CA624FF5D68000A26B8 /* MovieCountDown.m */,
 			);
 			path = "电影倒计时特效";
-			sourceTree = "<group>";
-		};
-		C5CF16EA25AC7F7300381935 /* LYLUnicode */ = {
-			isa = PBXGroup;
-			children = (
-				C5CF16EC25AC7F7300381935 /* 解决打印日志对于Unicode编码不能正常显示中文的问题 */,
-				C5CF16ED25AC7F7300381935 /* LYLUnicode.h */,
-				C5CF16EB25AC7F7300381935 /* LYLUnicode.m */,
-			);
-			path = LYLUnicode;
 			sourceTree = "<group>";
 		};
 		C5D0BAC225878EA6002CA224 /* SoundBtn */ = {
@@ -4589,6 +4562,15 @@
 			path = ConfigModel;
 			sourceTree = "<group>";
 		};
+		C5DFE13126131987008C7E2E /* DebugLogDescription */ = {
+			isa = PBXGroup;
+			children = (
+				C5DFE13226131987008C7E2E /* DebugLogDescription.h */,
+				C5DFE13326131987008C7E2E /* DebugLogDescription.m */,
+			);
+			path = DebugLogDescription;
+			sourceTree = "<group>";
+		};
 		C5E5C630250773FE001E69DA /* 水平进度条 */ = {
 			isa = PBXGroup;
 			children = (
@@ -5025,7 +5007,6 @@
 				C58F002324EA36FA00B6D09C /* LaunchScreen.storyboard in Resources */,
 				C5F452362529A6D900066AAB /* SHA in Resources */,
 				C5D8D2FF260CC49A00BDAF76 /* toastLoading.gif in Resources */,
-				C58F010B24EA584B00B6D09C /* 解决打印日志对于Unicode编码不能正常显示中文的问题 in Resources */,
 				C53D60CC255C20FC006C290D /* wode.json in Resources */,
 				C53D60DB255C20FC006C290D /* fangzi.json in Resources */,
 				C5C6540C259DF94500FD2F99 /* 媒体与AppleMusic@3x.png in Resources */,
@@ -5266,7 +5247,6 @@
 				C5D7B29A25A73CC400166E83 /* GKPhotoBrowser+SaveBtn.m in Sources */,
 				C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */,
 				C556972E255BFD95005C1361 /* NSString+Extras.m in Sources */,
-				C58F010A24EA584B00B6D09C /* LYLUnicode.m in Sources */,
 				C5D7B4D225A740D500166E83 /* KeychainIDFA.m in Sources */,
 				C59D9ADD24F8EF4D00A74CE9 /* CustomerAVPlayerView.m in Sources */,
 				C5D7B1BD25A73AF100166E83 /* DDCollectionViewCell_Style2+UICollectionViewDelegate.m in Sources */,
@@ -5413,6 +5393,7 @@
 				C5D7B4AC25A73F7100166E83 /* ZBRequestManager.m in Sources */,
 				C59D9AD124F8EF1F00A74CE9 /* RepeatPlayer.m in Sources */,
 				C572A26A24FBC547000A1687 /* UIImage+SYS.m in Sources */,
+				C5DFE13426131987008C7E2E /* DebugLogDescription.m in Sources */,
 				C52DEF55255D2A820016FF07 /* XHLaunchAdConfiguration.m in Sources */,
 				C5542D7F25F324FB002D1CA6 /* CheckMemFreeVC.m in Sources */,
 				C5F4523C2529A6D900066AAB /* NSData+CommonCrypto.m in Sources */,
@@ -5513,7 +5494,6 @@
 				C53D60C6255C20FC006C290D /* UITabBarItem+TLAnimation.m in Sources */,
 				C56161C224EE4F52001CD851 /* JhtBannerView.m in Sources */,
 				C5D7B26825A73B3B00166E83 /* DDInvitationModel.m in Sources */,
-				C5CF16EE25AC7F7300381935 /* LYLUnicode.m in Sources */,
 				C5D7B47925A73E5600166E83 /* UIViewController+XLBubbleTransition.m in Sources */,
 				C5D7B22125A73B2500166E83 /* NetworkingAPI+MsgApi.m in Sources */,
 				C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */,
