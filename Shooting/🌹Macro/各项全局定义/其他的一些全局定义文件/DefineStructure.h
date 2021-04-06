@@ -54,5 +54,11 @@ typedef enum : NSInteger {
     FocusOnOthers//我关注别人的
 } FocusOnStyle;
 
+typedef enum : NSInteger {
+    VIP界面 = 1,
+    充值界面,
+    上传短视频界面,
+    上传帖子界面
+} 界面;
 
 #endif /* DefineStructure_h */

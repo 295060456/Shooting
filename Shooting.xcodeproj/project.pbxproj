@@ -30,6 +30,7 @@
 		C534CE2025875A31001369FD /* BWItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE1A25875A30001369FD /* BWItemCollectionViewCell.m */; };
 		C534CE2125875A31001369FD /* BWItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE1D25875A31001369FD /* BWItemModel.m */; };
 		C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */ = {isa = PBXBuildFile; fileRef = C53B182B24FFA336000019F2 /* 视频水印.gif */; };
+		C53CAF36261C4E3A00AC1891 /* NSObject+AppTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C53CAF33261C4E3900AC1891 /* NSObject+AppTools.m */; };
 		C53D60C6255C20FC006C290D /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D608B255C20FC006C290D /* UITabBarItem+TLAnimation.m */; };
 		C53D60C7255C20FC006C290D /* TabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D608D255C20FC006C290D /* TabBarItem.m */; };
 		C53D60C8255C20FC006C290D /* TabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D6090255C20FC006C290D /* TabBarControllerConfig.m */; };
@@ -385,9 +386,6 @@
 		C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C6692508BEFB001E69DA /* 水平进度条.png */; };
 		C5E5C66D2508C486001E69DA /* WGradientProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C66C2508C486001E69DA /* WGradientProgressView.m */; };
 		C5EB98E0250A2290007660B3 /* AgreementView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EB98DF250A2290007660B3 /* AgreementView.m */; };
-		C5F451782529A0B300066AAB /* FMARCNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F451712529A00900066AAB /* FMARCNetwork.m */; };
-		C5F451792529A0B700066AAB /* FMHttpResonse.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4516C2529A00900066AAB /* FMHttpResonse.m */; };
-		C5F4517A2529A0BD00066AAB /* FMHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F451742529A00900066AAB /* FMHttpRequest.m */; };
 		C5F452292529A6D900066AAB /* 凯撒加密解密 in Resources */ = {isa = PBXBuildFile; fileRef = C5F451F32529A6D900066AAB /* 凯撒加密解密 */; };
 		C5F4522A2529A6D900066AAB /* DES in Resources */ = {isa = PBXBuildFile; fileRef = C5F451F62529A6D900066AAB /* DES */; };
 		C5F4522B2529A6D900066AAB /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F451FB2529A6D900066AAB /* NSString+Base64.m */; };
@@ -488,6 +486,9 @@
 		C534CE1D25875A31001369FD /* BWItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemModel.m; sourceTree = "<group>"; };
 		C534CE1E25875A31001369FD /* 分享控件的用法.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "分享控件的用法.md"; sourceTree = "<group>"; };
 		C53B182B24FFA336000019F2 /* 视频水印.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "视频水印.gif"; sourceTree = "<group>"; };
+		C53CAF33261C4E3900AC1891 /* NSObject+AppTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AppTools.m"; sourceTree = "<group>"; };
+		C53CAF34261C4E3900AC1891 /* NSObject+AppTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AppTools.h"; sourceTree = "<group>"; };
+		C53CAF35261C4E3900AC1891 /* 此类主要封装一些本App常用的、可以替换资源的函数调用或者是鉴权机制.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "此类主要封装一些本App常用的、可以替换资源的函数调用或者是鉴权机制.md"; sourceTree = "<group>"; };
 		C53D6088255C20FC006C290D /* TabbarControllerSysEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarControllerSysEx.h; sourceTree = "<group>"; };
 		C53D608A255C20FC006C290D /* TabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarItem.h; sourceTree = "<group>"; };
 		C53D608B255C20FC006C290D /* UITabBarItem+TLAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+TLAnimation.m"; sourceTree = "<group>"; };
@@ -1189,14 +1190,6 @@
 		C5E5C66C2508C486001E69DA /* WGradientProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGradientProgressView.m; sourceTree = "<group>"; };
 		C5EB98DE250A2290007660B3 /* AgreementView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgreementView.h; sourceTree = "<group>"; };
 		C5EB98DF250A2290007660B3 /* AgreementView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgreementView.m; sourceTree = "<group>"; };
-		C5F4516B2529A00900066AAB /* FMHttpResonse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMHttpResonse.h; sourceTree = "<group>"; };
-		C5F4516C2529A00900066AAB /* FMHttpResonse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMHttpResonse.m; sourceTree = "<group>"; };
-		C5F4516D2529A00900066AAB /* ZFMRACNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFMRACNetworkTool.h; sourceTree = "<group>"; };
-		C5F4516F2529A00900066AAB /* FMHttpConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMHttpConstant.h; sourceTree = "<group>"; };
-		C5F451712529A00900066AAB /* FMARCNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMARCNetwork.m; sourceTree = "<group>"; };
-		C5F451722529A00900066AAB /* FMHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMHttpRequest.h; sourceTree = "<group>"; };
-		C5F451732529A00900066AAB /* FMARCNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMARCNetwork.h; sourceTree = "<group>"; };
-		C5F451742529A00900066AAB /* FMHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMHttpRequest.m; sourceTree = "<group>"; };
 		C5F451F32529A6D900066AAB /* 凯撒加密解密 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "凯撒加密解密"; sourceTree = "<group>"; };
 		C5F451F42529A6D900066AAB /* CaesarCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaesarCipher.h; sourceTree = "<group>"; };
 		C5F451F62529A6D900066AAB /* DES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DES; sourceTree = "<group>"; };
@@ -1564,6 +1557,16 @@
 				C530B0F0254D9ACD00EDEDC8 /* HQCollectionViewFlowLayout.m */,
 			);
 			path = "UICollectionView 实现类似于UITableView的悬停效果";
+			sourceTree = "<group>";
+		};
+		C53CAF32261C4E3900AC1891 /* NSObject+AppTools */ = {
+			isa = PBXGroup;
+			children = (
+				C53CAF35261C4E3900AC1891 /* 此类主要封装一些本App常用的、可以替换资源的函数调用或者是鉴权机制.md */,
+				C53CAF34261C4E3900AC1891 /* NSObject+AppTools.h */,
+				C53CAF33261C4E3900AC1891 /* NSObject+AppTools.m */,
+			);
+			path = "NSObject+AppTools";
 			sourceTree = "<group>";
 		};
 		C53D6087255C20FC006C290D /* 深度拓展系统UITabBar全家桶 */ = {
@@ -3842,10 +3845,11 @@
 		C5D7B0F625A73AD400166E83 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C5D7B16A25A73AF000166E83 /* 🇨🇳数据模型层(此文件夹存放全局的所有Model) */,
+				C5D7B17E25A73AF000166E83 /* 广告或者公示弹出框 */,
 				C5D7B1CC25A73B2400166E83 /* 网络请求相关的配置 */,
 				C5D7B20F25A73B2500166E83 /* 用户信息 */,
-				C5D7B17E25A73AF000166E83 /* 广告或者公示弹出框 */,
-				C5D7B16A25A73AF000166E83 /* 🇨🇳数据模型层(此文件夹存放全局的所有Model) */,
+				C53CAF32261C4E3900AC1891 /* NSObject+AppTools */,
 				C5D7B18125A73AF100166E83 /* UICllectionView相关复用的模块 */,
 			);
 			path = Common;
@@ -4603,7 +4607,6 @@
 		C5F4512A25299C9900066AAB /* 网络请求框架 */ = {
 			isa = PBXGroup;
 			children = (
-				C5F451692529A00900066AAB /* 🌍ZFMRACNetworkTool */,
 				C5F4512B25299CA900066AAB /* ZBNetworking */,
 			);
 			path = "网络请求框架";
@@ -4628,45 +4631,6 @@
 				C5D7B49F25A73F7100166E83 /* ZBURLRequest.m */,
 			);
 			path = ZBNetworking;
-			sourceTree = "<group>";
-		};
-		C5F451692529A00900066AAB /* 🌍ZFMRACNetworkTool */ = {
-			isa = PBXGroup;
-			children = (
-				C5F4516D2529A00900066AAB /* ZFMRACNetworkTool.h */,
-				C5F4516E2529A00900066AAB /* Constant */,
-				C5F451702529A00900066AAB /* Request */,
-				C5F4516A2529A00900066AAB /* Response */,
-			);
-			path = "🌍ZFMRACNetworkTool";
-			sourceTree = "<group>";
-		};
-		C5F4516A2529A00900066AAB /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				C5F4516B2529A00900066AAB /* FMHttpResonse.h */,
-				C5F4516C2529A00900066AAB /* FMHttpResonse.m */,
-			);
-			path = Response;
-			sourceTree = "<group>";
-		};
-		C5F4516E2529A00900066AAB /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-				C5F4516F2529A00900066AAB /* FMHttpConstant.h */,
-			);
-			path = Constant;
-			sourceTree = "<group>";
-		};
-		C5F451702529A00900066AAB /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				C5F451732529A00900066AAB /* FMARCNetwork.h */,
-				C5F451712529A00900066AAB /* FMARCNetwork.m */,
-				C5F451722529A00900066AAB /* FMHttpRequest.h */,
-				C5F451742529A00900066AAB /* FMHttpRequest.m */,
-			);
-			path = Request;
 			sourceTree = "<group>";
 		};
 		C5F451F02529A6D100066AAB /* 加密体系 */ = {
@@ -5215,7 +5179,6 @@
 				C5A43A7825AAF8A6000F0CD2 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */,
 				C5D7B1C425A73AF100166E83 /* DDCollectionViewCell_Style5.m in Sources */,
-				C5F451792529A0B700066AAB /* FMHttpResonse.m in Sources */,
 				C5D7B21825A73B2500166E83 /* NetworkingAPI+BlankList.m in Sources */,
 				C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */,
 				C58F032224EA68B500B6D09C /* LGiOSBtn.m in Sources */,
@@ -5263,6 +5226,7 @@
 				C572A26B24FBC547000A1687 /* UIImage+Extras.m in Sources */,
 				C5F4522C2529A6D900066AAB /* NSData+Base64.m in Sources */,
 				C5D7B48E25A73E9500166E83 /* JXCategoryTitleBackgroundCell.m in Sources */,
+				C53CAF36261C4E3A00AC1891 /* NSObject+AppTools.m in Sources */,
 				C55BF5C425AC90B600A8347F /* TabbarVC.m in Sources */,
 				C53E48AC25FB5640007D92BE /* NSObject+Time.m in Sources */,
 				C58F00EE24EA581F00B6D09C /* BaseGPUImageView.m in Sources */,
@@ -5389,7 +5353,6 @@
 				C58F018D24EA5CAC00B6D09C /* NSArray+Extension.m in Sources */,
 				C583BA7125E4B3540054FD6E /* UIImageView+GIF.m in Sources */,
 				C5914BA625384CD0007777A6 /* UIViewController+Shake.m in Sources */,
-				C5F4517A2529A0BD00066AAB /* FMHttpRequest.m in Sources */,
 				C5D7B4AC25A73F7100166E83 /* ZBRequestManager.m in Sources */,
 				C59D9AD124F8EF1F00A74CE9 /* RepeatPlayer.m in Sources */,
 				C572A26A24FBC547000A1687 /* UIImage+SYS.m in Sources */,
@@ -5433,7 +5396,6 @@
 				C5D7B1BC25A73AF100166E83 /* DDCollectionViewCell_Style2+UITableViewDataSource.m in Sources */,
 				C5D7B5A225A7424E00166E83 /* JobsMagicTextField.m in Sources */,
 				C595D4EF258714AD002A4531 /* SuspendLab.m in Sources */,
-				C5F451782529A0B300066AAB /* FMARCNetwork.m in Sources */,
 				C52DEF57255D2A820016FF07 /* XHLaunchAdImageManager.m in Sources */,
 				C5A46C0124EFB6E200158D1E /* UIViewController+LZBTabBarVCItem.m in Sources */,
 				C5914BA925384CD0007777A6 /* UIViewController+BRPickerView.m in Sources */,
