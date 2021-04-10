@@ -216,6 +216,7 @@
 		C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFF24EFB6E200158D1E /* LZBTabBarVC.m */; };
 		C5A46C0A24EFB6E900158D1E /* LZBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0424EFB6E800158D1E /* LZBTabBar.m */; };
 		C5A46C0C24EFB6E900158D1E /* LZBTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */; };
+		C5A4F63426218CA600DF959C /* UITableView+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A4F63326218CA600DF959C /* UITableView+Expand.m */; };
 		C5AEEAE025384197000E1C5F /* UIView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEADD25384196000E1C5F /* UIView+Extras.m */; };
 		C5AEEAE125384197000E1C5F /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEADE25384196000E1C5F /* UIView+Animation.m */; };
 		C5C653FB259DF94500FD2F99 /* ECPrivacyCheckMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C653B8259DF94500FD2F99 /* ECPrivacyCheckMicrophone.m */; };
@@ -874,6 +875,8 @@
 		C5A46C0524EFB6E800158D1E /* LZBTabBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarDelegate.h; sourceTree = "<group>"; };
 		C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBarItem.m; sourceTree = "<group>"; };
 		C5A46C0924EFB6E900158D1E /* LZBTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarItem.h; sourceTree = "<group>"; };
+		C5A4F63226218CA600DF959C /* UITableView+Expand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Expand.h"; sourceTree = "<group>"; };
+		C5A4F63326218CA600DF959C /* UITableView+Expand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Expand.m"; sourceTree = "<group>"; };
 		C5AEEADC25384196000E1C5F /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
 		C5AEEADD25384196000E1C5F /* UIView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extras.m"; sourceTree = "<group>"; };
 		C5AEEADE25384196000E1C5F /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
@@ -1328,13 +1331,14 @@
 			path = "UIImage+Category";
 			sourceTree = "<group>";
 		};
-		C51F724F26085AC500953C10 /* TableView+Category */ = {
+		C51F724F26085AC500953C10 /* UITableView+Category */ = {
 			isa = PBXGroup;
 			children = (
 				C59B9E322526F1BE0039B485 /* TableViewAnimationKit */,
 				C54F858C252B613500EE3DD0 /* UITableView 折叠功能 */,
+				C5A4F63126218CA600DF959C /* UITableView+Expand */,
 			);
-			path = "TableView+Category";
+			path = "UITableView+Category";
 			sourceTree = "<group>";
 		};
 		C51F725326085AE800953C10 /* BaseTableView */ = {
@@ -3091,7 +3095,7 @@
 			isa = PBXGroup;
 			children = (
 				C51F725326085AE800953C10 /* BaseTableView */,
-				C51F724F26085AC500953C10 /* TableView+Category */,
+				C51F724F26085AC500953C10 /* UITableView+Category */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -3601,6 +3605,15 @@
 				C5A444C225ABFC35000F0CD2 /* WHToast+DDToast.h */,
 			);
 			path = WHToast;
+			sourceTree = "<group>";
+		};
+		C5A4F63126218CA600DF959C /* UITableView+Expand */ = {
+			isa = PBXGroup;
+			children = (
+				C5A4F63226218CA600DF959C /* UITableView+Expand.h */,
+				C5A4F63326218CA600DF959C /* UITableView+Expand.m */,
+			);
+			path = "UITableView+Expand";
 			sourceTree = "<group>";
 		};
 		C5C653B5259DF94500FD2F99 /* ECPrivacyCheckTools */ = {
@@ -5339,6 +5352,7 @@
 				C51576C925A351050074D945 /* UIView+Gesture.m in Sources */,
 				C5D7B27025A73B3B00166E83 /* DDMyRemarkedVC.m in Sources */,
 				C58D952F25B80D6500414ACB /* BaseTableViewCell.m in Sources */,
+				C5A4F63426218CA600DF959C /* UITableView+Expand.m in Sources */,
 				C5850AEB25483DA1001E6676 /* TableViewHeaderView.m in Sources */,
 				C5C653FE259DF94500FD2F99 /* ECPrivacyCheckCamera.m in Sources */,
 				C58F019924EA5CAD00B6D09C /* CALayer+Anim.m in Sources */,
