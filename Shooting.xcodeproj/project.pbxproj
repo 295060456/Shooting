@@ -1750,8 +1750,8 @@
 		C53E487A25FB563F007D92BE /* NSObject+SPAlertController */ = {
 			isa = PBXGroup;
 			children = (
-				C53E487B25FB563F007D92BE /* NSObject+SPAlertController.m */,
 				C53E487C25FB563F007D92BE /* NSObject+SPAlertController.h */,
+				C53E487B25FB563F007D92BE /* NSObject+SPAlertController.m */,
 			);
 			path = "NSObject+SPAlertController";
 			sourceTree = "<group>";
@@ -1759,8 +1759,8 @@
 		C53E487D25FB563F007D92BE /* NSObject+SYSAlertController */ = {
 			isa = PBXGroup;
 			children = (
-				C53E487E25FB563F007D92BE /* NSObject+SYSAlertController.m */,
 				C53E487F25FB563F007D92BE /* NSObject+SYSAlertController.h */,
+				C53E487E25FB563F007D92BE /* NSObject+SYSAlertController.m */,
 			);
 			path = "NSObject+SYSAlertController";
 			sourceTree = "<group>";
