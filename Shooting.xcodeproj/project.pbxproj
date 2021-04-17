@@ -26,6 +26,7 @@
 		C530B0F7254D9ACD00EDEDC8 /* LMHWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0EB254D9ACD00EDEDC8 /* LMHWaterFallLayout.m */; };
 		C530B0F8254D9ACD00EDEDC8 /* KFZShopCatoryFlowLayput.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0EE254D9ACD00EDEDC8 /* KFZShopCatoryFlowLayput.m */; };
 		C530B0F9254D9ACD00EDEDC8 /* HQCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0F0254D9ACD00EDEDC8 /* HQCollectionViewFlowLayout.m */; };
+		C5318748262A90C9003C69AD /* DispatchTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5318747262A90C9003C69AD /* DispatchTimerManager.m */; };
 		C534CE1F25875A31001369FD /* BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE1925875A30001369FD /* BWShareView.m */; };
 		C534CE2025875A31001369FD /* BWItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE1A25875A30001369FD /* BWItemCollectionViewCell.m */; };
 		C534CE2125875A31001369FD /* BWItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE1D25875A31001369FD /* BWItemModel.m */; };
@@ -268,7 +269,6 @@
 		C5C6543D259DF95700FD2F99 /* UIViewController+TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C65438259DF95700FD2F99 /* UIViewController+TZLocationManager.m */; };
 		C5C6543E259DF95700FD2F99 /* UIViewController+TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C6543A259DF95700FD2F99 /* UIViewController+TZImagePickerController.m */; };
 		C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */; };
-		C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9B24FF5D33000A26B8 /* GCD_TimerManager.m */; };
 		C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67C9D24FF5D3B000A26B8 /* Nanosecond_TimerManager.m */; };
 		C5C67CA824FF5D68000A26B8 /* MovieCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA624FF5D68000A26B8 /* MovieCountDown.m */; };
 		C5C67CAB24FF5D94000A26B8 /* UIView+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C67CA924FF5D94000A26B8 /* UIView+Measure.m */; };
@@ -479,6 +479,8 @@
 		C530B0EE254D9ACD00EDEDC8 /* KFZShopCatoryFlowLayput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFZShopCatoryFlowLayput.m; sourceTree = "<group>"; };
 		C530B0F0254D9ACD00EDEDC8 /* HQCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		C530B0F1254D9ACD00EDEDC8 /* HQCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		C5318746262A90C9003C69AD /* DispatchTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchTimerManager.h; sourceTree = "<group>"; };
+		C5318747262A90C9003C69AD /* DispatchTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchTimerManager.m; sourceTree = "<group>"; };
 		C534CE1825875A30001369FD /* BWShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWShareView.h; sourceTree = "<group>"; };
 		C534CE1925875A30001369FD /* BWShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWShareView.m; sourceTree = "<group>"; };
 		C534CE1A25875A30001369FD /* BWItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemCollectionViewCell.m; sourceTree = "<group>"; };
@@ -956,8 +958,6 @@
 		C5C67C4324FE382C000A26B8 /* ViewController@1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController@1.h"; sourceTree = "<group>"; };
 		C5C67C9724FF5D28000A26B8 /* CADisplayLink_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CADisplayLink_TimerManager.m; sourceTree = "<group>"; };
 		C5C67C9824FF5D28000A26B8 /* CADisplayLink_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADisplayLink_TimerManager.h; sourceTree = "<group>"; };
-		C5C67C9A24FF5D33000A26B8 /* GCD_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD_TimerManager.h; sourceTree = "<group>"; };
-		C5C67C9B24FF5D33000A26B8 /* GCD_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCD_TimerManager.m; sourceTree = "<group>"; };
 		C5C67C9D24FF5D3B000A26B8 /* Nanosecond_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nanosecond_TimerManager.m; sourceTree = "<group>"; };
 		C5C67C9E24FF5D3C000A26B8 /* Nanosecond_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nanosecond_TimerManager.h; sourceTree = "<group>"; };
 		C5C67CA324FF5D53000A26B8 /* TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerManager.h; sourceTree = "<group>"; };
@@ -1561,6 +1561,15 @@
 				C530B0F0254D9ACD00EDEDC8 /* HQCollectionViewFlowLayout.m */,
 			);
 			path = "UICollectionView 实现类似于UITableView的悬停效果";
+			sourceTree = "<group>";
+		};
+		C5318745262A90C9003C69AD /* DispatchTimerManager */ = {
+			isa = PBXGroup;
+			children = (
+				C5318746262A90C9003C69AD /* DispatchTimerManager.h */,
+				C5318747262A90C9003C69AD /* DispatchTimerManager.m */,
+			);
+			path = DispatchTimerManager;
 			sourceTree = "<group>";
 		};
 		C53CAF32261C4E3900AC1891 /* NSObject+AppTools */ = {
@@ -3724,7 +3733,7 @@
 			isa = PBXGroup;
 			children = (
 				C5C67C9624FF5D1F000A26B8 /* CADisplayLink_TimerManager */,
-				C5C67C9524FF5D16000A26B8 /* GCD_TimerManager(未完) */,
+				C5318745262A90C9003C69AD /* DispatchTimerManager */,
 				C5C67C9424FF5D0E000A26B8 /* Nanosecond_TimerManager */,
 				C5D6DC6225860F3200029AFF /* NSTimerManager */,
 				C5C67CA424FF5D53000A26B8 /* TimerManager_DefineStructure.h */,
@@ -3740,15 +3749,6 @@
 				C5C67C9D24FF5D3B000A26B8 /* Nanosecond_TimerManager.m */,
 			);
 			path = Nanosecond_TimerManager;
-			sourceTree = "<group>";
-		};
-		C5C67C9524FF5D16000A26B8 /* GCD_TimerManager(未完) */ = {
-			isa = PBXGroup;
-			children = (
-				C5C67C9A24FF5D33000A26B8 /* GCD_TimerManager.h */,
-				C5C67C9B24FF5D33000A26B8 /* GCD_TimerManager.m */,
-			);
-			path = "GCD_TimerManager(未完)";
 			sourceTree = "<group>";
 		};
 		C5C67C9624FF5D1F000A26B8 /* CADisplayLink_TimerManager */ = {
@@ -5221,7 +5221,6 @@
 				C561619724EE4CA9001CD851 /* MKUploadingVC+VM.m in Sources */,
 				C5D1C0EF258B20C400784D2F /* UIViewController+EmptyData.m in Sources */,
 				C5D7B29A25A73CC400166E83 /* GKPhotoBrowser+SaveBtn.m in Sources */,
-				C5C67C9C24FF5D33000A26B8 /* GCD_TimerManager.m in Sources */,
 				C556972E255BFD95005C1361 /* NSString+Extras.m in Sources */,
 				C5D7B4D225A740D500166E83 /* KeychainIDFA.m in Sources */,
 				C59D9ADD24F8EF4D00A74CE9 /* CustomerAVPlayerView.m in Sources */,
@@ -5279,6 +5278,7 @@
 				C58F033624EA69D400B6D09C /* ViewController@5.m in Sources */,
 				C58F001E24EA36F800B6D09C /* Shooting.xcdatamodeld in Sources */,
 				C5A444BA25ABFC2C000F0CD2 /* JXCategoryTimelineView.m in Sources */,
+				C5318748262A90C9003C69AD /* DispatchTimerManager.m in Sources */,
 				C5D7B4C025A73FD200166E83 /* NSObject+URLManager.m in Sources */,
 				C54AB1E7255E608E000A314D /* UITableViewCell+WhiteArrows.m in Sources */,
 				C5D7B1C125A73AF100166E83 /* DDCollectionViewCell_Style2TBVCell.m in Sources */,
