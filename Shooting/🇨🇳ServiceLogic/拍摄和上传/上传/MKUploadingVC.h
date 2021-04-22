@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#if __has_include(<TZImagePickerController/TZImagePickerController.h>)
+#import <TZImagePickerController/TZImagePickerController.h>
+#else
+#import "TZImagePickerController.h"
+#endif
+
+#import "UIViewController+TZLocationManager.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MKUploadingVC : UIViewController
