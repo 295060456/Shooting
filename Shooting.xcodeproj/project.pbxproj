@@ -213,7 +213,7 @@
 		C58D813A2630540900966F5F /* UIViewController+TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D81342630540900966F5F /* UIViewController+TZLocationManager.m */; };
 		C58D813B2630540900966F5F /* UIViewController+TZImagePickerControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D81352630540900966F5F /* UIViewController+TZImagePickerControllerDelegate.m */; };
 		C58D813C2630540900966F5F /* UIViewController+TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D81362630540900966F5F /* UIViewController+TZImagePickerController.m */; };
-		C58E944C26312FF200D1EDB8 /* UIButton+DataBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = C58E944B26312FF200D1EDB8 /* UIButton+DataBinding.m */; };
+		C58E9EFA26313BEB00D1EDB8 /* NSObject+DataBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = C58E9EF826313BEA00D1EDB8 /* NSObject+DataBinding.m */; };
 		C58F001224EA36F800B6D09C /* ShootingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001124EA36F800B6D09C /* ShootingAppDelegate.m */; };
 		C58F001524EA36F800B6D09C /* ShootingSceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58F001424EA36F800B6D09C /* ShootingSceneDelegate.m */; };
 		C58F001B24EA36F800B6D09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58F001924EA36F800B6D09C /* Main.storyboard */; };
@@ -848,8 +848,8 @@
 		C58D816F263055BA00966F5F /* JobsBaseCustomizeUIKitCoreHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsBaseCustomizeUIKitCoreHeader.h; sourceTree = "<group>"; };
 		C58D81A22630572D00966F5F /* TZImagePickerControllerDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TZImagePickerControllerDef.h; sourceTree = "<group>"; };
 		C58D81FB263058C300966F5F /* CollectionViewCellHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCellHeader.h; sourceTree = "<group>"; };
-		C58E944A26312FF200D1EDB8 /* UIButton+DataBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DataBinding.h"; sourceTree = "<group>"; };
-		C58E944B26312FF200D1EDB8 /* UIButton+DataBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DataBinding.m"; sourceTree = "<group>"; };
+		C58E9EF826313BEA00D1EDB8 /* NSObject+DataBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DataBinding.m"; sourceTree = "<group>"; };
+		C58E9EF926313BEA00D1EDB8 /* NSObject+DataBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DataBinding.h"; sourceTree = "<group>"; };
 		C58F000D24EA36F800B6D09C /* Shooting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58F001024EA36F800B6D09C /* ShootingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShootingAppDelegate.h; sourceTree = "<group>"; };
 		C58F001124EA36F800B6D09C /* ShootingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShootingAppDelegate.m; sourceTree = "<group>"; };
@@ -2130,7 +2130,6 @@
 				C58D7F622630531600966F5F /* 高仿抖音点赞动画 */,
 				C58D7F722630531600966F5F /* 高仿iOS长按删除+抖动 */,
 				C58D7F6D2630531600966F5F /* SoundBtn */,
-				C58E944926312FF200D1EDB8 /* UIButton+DataBinding */,
 				C58D7F662630531600966F5F /* UIButton+Timer */,
 			);
 			path = UIButton;
@@ -3125,13 +3124,14 @@
 		C58D806A2630531600966F5F /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
-				C58D806B2630531600966F5F /* NSObject+Alert */,
-				C58D80722630531600966F5F /* NSObject+Others */,
-				C58D808B2630531600966F5F /* NSObject+DataSave */,
-				C58D808E2630531600966F5F /* NSObject+Time */,
 				C58D80912630531600966F5F /* NSObject (Time) */,
-				C58D80942630531600966F5F /* NSObject+DefConfig */,
+				C58D806B2630531600966F5F /* NSObject+Alert */,
 				C58D80972630531600966F5F /* NSObject+CallBackInfoByBlock */,
+				C58E9EF726313BEA00D1EDB8 /* NSObject+DataBinding */,
+				C58D808B2630531600966F5F /* NSObject+DataSave */,
+				C58D80942630531600966F5F /* NSObject+DefConfig */,
+				C58D80722630531600966F5F /* NSObject+Others */,
+				C58D808E2630531600966F5F /* NSObject+Time */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -3428,13 +3428,13 @@
 			path = "UIViewController+TZLocationManager";
 			sourceTree = "<group>";
 		};
-		C58E944926312FF200D1EDB8 /* UIButton+DataBinding */ = {
+		C58E9EF726313BEA00D1EDB8 /* NSObject+DataBinding */ = {
 			isa = PBXGroup;
 			children = (
-				C58E944A26312FF200D1EDB8 /* UIButton+DataBinding.h */,
-				C58E944B26312FF200D1EDB8 /* UIButton+DataBinding.m */,
+				C58E9EF826313BEA00D1EDB8 /* NSObject+DataBinding.m */,
+				C58E9EF926313BEA00D1EDB8 /* NSObject+DataBinding.h */,
 			);
-			path = "UIButton+DataBinding";
+			path = "NSObject+DataBinding";
 			sourceTree = "<group>";
 		};
 		C58F000424EA36F800B6D09C = {
@@ -5373,6 +5373,7 @@
 				C58D811F2630531700966F5F /* NSObject+Sound.m in Sources */,
 				C58D81292630531700966F5F /* UITextField+Extend.m in Sources */,
 				C58D810E2630531600966F5F /* NSArray+Extension.m in Sources */,
+				C58E9EFA26313BEB00D1EDB8 /* NSObject+DataBinding.m in Sources */,
 				C5C65404259DF94500FD2F99 /* ECPrivacyCheckMediaAndAppleMusic.m in Sources */,
 				C5D7B1AC25A73AF100166E83 /* DDRewardConfigModel.m in Sources */,
 				C52DEF50255D2A820016FF07 /* XHLaunchAdConst.m in Sources */,
@@ -5556,7 +5557,6 @@
 				C5D7B4AA25A73F7100166E83 /* ZBURLRequest.m in Sources */,
 				C5D7B1AA25A73AF100166E83 /* DDSortVideoListModel.m in Sources */,
 				C5C65400259DF94500FD2F99 /* ECPrivacyCheckFilesAndFolders.m in Sources */,
-				C58E944C26312FF200D1EDB8 /* UIButton+DataBinding.m in Sources */,
 				C5D7B1C025A73AF100166E83 /* DDCollectionViewCell_Style2+UITableViewDelegate.m in Sources */,
 				C58D80F32630531600966F5F /* XLBubbleTransition.m in Sources */,
 				C5F4522B2529A6D900066AAB /* NSString+Base64.m in Sources */,
