@@ -397,6 +397,7 @@
 		C5E5C63925077436001E69DA /* WGradientProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C63725077436001E69DA /* WGradientProgress.m */; };
 		C5E5C66A2508BEFB001E69DA /* 水平进度条.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E5C6692508BEFB001E69DA /* 水平进度条.png */; };
 		C5E5C66D2508C486001E69DA /* WGradientProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5C66C2508C486001E69DA /* WGradientProgressView.m */; };
+		C5EA14942631206B00155822 /* UILabel+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EA14922631206B00155822 /* UILabel+Gesture.m */; };
 		C5EB98E0250A2290007660B3 /* AgreementView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EB98DF250A2290007660B3 /* AgreementView.m */; };
 		C5F452292529A6D900066AAB /* 凯撒加密解密 in Resources */ = {isa = PBXBuildFile; fileRef = C5F451F32529A6D900066AAB /* 凯撒加密解密 */; };
 		C5F4522A2529A6D900066AAB /* DES in Resources */ = {isa = PBXBuildFile; fileRef = C5F451F62529A6D900066AAB /* DES */; };
@@ -1209,6 +1210,8 @@
 		C5E5C6692508BEFB001E69DA /* 水平进度条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水平进度条.png"; sourceTree = "<group>"; };
 		C5E5C66B2508C486001E69DA /* WGradientProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGradientProgressView.h; sourceTree = "<group>"; };
 		C5E5C66C2508C486001E69DA /* WGradientProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGradientProgressView.m; sourceTree = "<group>"; };
+		C5EA14922631206B00155822 /* UILabel+Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Gesture.m"; sourceTree = "<group>"; };
+		C5EA14932631206B00155822 /* UILabel+Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Gesture.h"; sourceTree = "<group>"; };
 		C5EB98DE250A2290007660B3 /* AgreementView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgreementView.h; sourceTree = "<group>"; };
 		C5EB98DF250A2290007660B3 /* AgreementView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgreementView.m; sourceTree = "<group>"; };
 		C5F451F32529A6D900066AAB /* 凯撒加密解密 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "凯撒加密解密"; sourceTree = "<group>"; };
@@ -1936,34 +1939,34 @@
 		C58D7F352630531500966F5F /* JobsBaseCustomizeUIKitCore */ = {
 			isa = PBXGroup;
 			children = (
-				C58D7F362630531500966F5F /* UIImage */,
-				C58D7F4B2630531500966F5F /* UILabel */,
-				C58D7F502630531500966F5F /* UITableViewCell */,
-				C58D7F5D2630531600966F5F /* UIButton */,
-				C58D7F772630531600966F5F /* UIColor */,
-				C58D7F802630531600966F5F /* UIView */,
-				C58D7FAF2630531600966F5F /* UIFont */,
+				C58D809A2630531600966F5F /* BaseProtocol */,
+				C58D805F2630531600966F5F /* CALayer */,
+				C58D809E2630531600966F5F /* DebugLogDescription */,
+				C58D80442630531600966F5F /* NSArray */,
+				C58D806A2630531600966F5F /* NSObject */,
+				C58D7FE72630531600966F5F /* NSString */,
 				C58D7FB52630531600966F5F /* RedefineSys */,
-				C58D7FBA2630531600966F5F /* UITextView */,
-				C58D7FC32630531600966F5F /* UIDevice */,
+				C58D7F5D2630531600966F5F /* UIButton */,
+				C58D80662630531600966F5F /* UICollectionReusableView 用作基类 */,
 				C58D7FC92630531600966F5F /* UICollectionView */,
 				C58D7FD12630531600966F5F /* UICollectionViewCell */,
+				C58D80532630531600966F5F /* UICollectionViewFlowLayout */,
+				C58D7F772630531600966F5F /* UIColor */,
+				C58D803E2630531600966F5F /* UIControl */,
+				C58D7FC32630531600966F5F /* UIDevice */,
+				C58D7FAF2630531600966F5F /* UIFont */,
+				C58D7F362630531500966F5F /* UIImage */,
 				C58D7FDC2630531600966F5F /* UIImageView */,
+				C58D7F4B2630531500966F5F /* UILabel */,
 				C58D7FE32630531600966F5F /* UINavigationBar */,
-				C58D7FE72630531600966F5F /* NSString */,
-				C58D7FEB2630531600966F5F /* UIViewController */,
 				C58D80272630531600966F5F /* UINavigationController */,
 				C58D802B2630531600966F5F /* UITableView */,
-				C58D803E2630531600966F5F /* UIControl */,
-				C58D80442630531600966F5F /* NSArray */,
+				C58D7F502630531500966F5F /* UITableViewCell */,
 				C58D804B2630531600966F5F /* UITableViewHeaderFooterView */,
-				C58D80532630531600966F5F /* UICollectionViewFlowLayout */,
-				C58D805F2630531600966F5F /* CALayer */,
-				C58D80662630531600966F5F /* UICollectionReusableView 用作基类 */,
-				C58D806A2630531600966F5F /* NSObject */,
-				C58D809A2630531600966F5F /* BaseProtocol */,
-				C58D809E2630531600966F5F /* DebugLogDescription */,
 				C58D80A12630531600966F5F /* UITextField */,
+				C58D7FBA2630531600966F5F /* UITextView */,
+				C58D7F802630531600966F5F /* UIView */,
+				C58D7FEB2630531600966F5F /* UIViewController */,
 			);
 			path = JobsBaseCustomizeUIKitCore;
 			sourceTree = "<group>";
@@ -2056,6 +2059,7 @@
 			isa = PBXGroup;
 			children = (
 				C58D7F4D2630531500966F5F /* UILabel+Extra */,
+				C5EA14912631206B00155822 /* UILabel+Gesture */,
 			);
 			path = "UILabel+Category";
 			sourceTree = "<group>";
@@ -4737,6 +4741,15 @@
 			path = "水平进度条";
 			sourceTree = "<group>";
 		};
+		C5EA14912631206B00155822 /* UILabel+Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				C5EA14922631206B00155822 /* UILabel+Gesture.m */,
+				C5EA14932631206B00155822 /* UILabel+Gesture.h */,
+			);
+			path = "UILabel+Gesture";
+			sourceTree = "<group>";
+		};
 		C5EB98DA250A19D4007660B3 /* 已阅读并同意上传须知 */ = {
 			isa = PBXGroup;
 			children = (
@@ -5364,6 +5377,7 @@
 				C561619824EE4CA9001CD851 /* MKUploadingVC.m in Sources */,
 				C58D81102630531700966F5F /* TableViewHeaderView.m in Sources */,
 				C58D80BA2630531600966F5F /* UIImage+Tailor.m in Sources */,
+				C5EA14942631206B00155822 /* UILabel+Gesture.m in Sources */,
 				C5D7B22525A73B2500166E83 /* NetworkingAPI.m in Sources */,
 				C534CE1F25875A31001369FD /* BWShareView.m in Sources */,
 				C59D9AD724F8EF4100A74CE9 /* CustomerAVPlayerVC.m in Sources */,
