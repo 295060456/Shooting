@@ -19,6 +19,7 @@ use_frameworks!
 # 特别说明：Ruby对大小写敏感，所以方法名不要用大写，否则执行失败
 def func
 #  pod 'WMZBanner'
+  pod 'JobsGlobleDef'
   pod 'DoraemonKit' # https://github.com/didi/DoraemonKit 滴滴打车出的工具
   pod 'FBRetainCycleDetector' # https://github.com/facebook/FBRetainCycleDetector
   pod 'Reachability'  # https://github.com/tonymillion/Reachability 检查联网情况 NO_SMP
