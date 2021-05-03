@@ -21,7 +21,7 @@ def func
 #  pod 'WMZBanner'
   pod 'JobsGlobleDef'
   pod 'DoraemonKit' # https://github.com/didi/DoraemonKit 滴滴打车出的工具
-  pod 'FBRetainCycleDetector' # https://github.com/facebook/FBRetainCycleDetector
+#  pod 'FBRetainCycleDetector' # https://github.com/facebook/FBRetainCycleDetector
   pod 'Reachability'  # https://github.com/tonymillion/Reachability 检查联网情况 NO_SMP
   pod 'Masonry'
   pod 'AFNetworking'
@@ -55,6 +55,7 @@ def func
   pod 'lottie-ios', '~> 2.5.3'
   pod 'TFPopup' #https://github.com/shmxybfq/TFPopup 不耦合view代码,可以为已创建过 / 未创建过的view添加弹出方式;只是一种弹出方式;
   pod 'TABAnimated' # https://github.com/tigerAndBull/TABAnimated
+  pod 'ZLCollectionViewFlowLayout' # https://github.com/czl0325/ZLCollectionView 为应对类似淘宝首页，京东首页，国美首页等复杂布局而写的ZLCollectionview。基于UICollectionView实现，目前支持标签布局，列布局，百分比布局，定位布局，填充式布局，瀑布流布局等。支持纵向布局和横向布局，可以根据不同的section设置不同的布局，支持拖动cell，头部悬浮，设置section背景色和自定义section背景view，向自定义背景view传递自定义方法。实现了电影选座等高难度的布局。
   
   pod 'ZFPlayer'
   pod 'ZFPlayer/ControlView'

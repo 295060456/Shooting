@@ -26,12 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark —— 特殊的上传文件的网络请求
 /// 上传【图片】文件的网络请求
 +(void)requestApi:(NSString *_Nonnull)requestApi
-uploadImagesParamArr:(NSArray *)uploadImagesParamArr
+uploadImagesParamArr:(NSArray *_Nullable)uploadImagesParamArr
      successBlock:(MKDataBlock)successBlock
      failureBlock:(MKDataBlock)failureBlock;
 /// 上传【视频】文件的网络请求
 +(void)requestApi:(NSString *_Nonnull)requestApi
-uploadVideosParamArr:(NSArray *)uploadVideosParamArr
+uploadVideosParamArr:(NSArray *_Nullable)uploadVideosParamArr
      successBlock:(MKDataBlock)successBlock
      failureBlock:(MKDataBlock)failureBlock;
 #pragma mark —— 其他的一些调用方式，和上面等价
