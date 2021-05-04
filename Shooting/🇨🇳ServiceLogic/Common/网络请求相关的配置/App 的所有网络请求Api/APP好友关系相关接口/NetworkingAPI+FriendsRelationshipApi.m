@@ -13,7 +13,7 @@
 #pragma mark —— App好友关系相关接口
 /// 手动执行奖励记录
 +(void)addAwardGET:(id)parameters
-  withsuccessBlock:(MKDataBlock)successBlock{
+  withsuccessBlock:(MKDataBlock _Nullable)successBlock{
 //    NSDictionary *parameterss = @{};
 //    NSDictionary *headers = @{};
     
@@ -63,7 +63,7 @@
 }
 /// 获取活跃用户
 +(void)awardListGET:(id)parameters
-   withsuccessBlock:(MKDataBlock)successBlock{
+   withsuccessBlock:(MKDataBlock _Nullable)successBlock{
 //    NSDictionary *parameterss = @{};
 //    NSDictionary *headers = @{};
     
@@ -113,7 +113,7 @@
 }
 /// 最新四个好友
 +(void)fourListGET:(id)parameters
-  withsuccessBlock:(MKDataBlock)successBlock{
+  withsuccessBlock:(MKDataBlock _Nullable)successBlock{
 //    NSDictionary *parameterss = @{};
 //    NSDictionary *headers = @{};
     
@@ -163,7 +163,7 @@
 }
 /// selectUrl
 +(void)friendUrlselectUrlGET:(id)parameters
-            withsuccessBlock:(MKDataBlock)successBlock{
+            withsuccessBlock:(MKDataBlock _Nullable)successBlock{
 //    NSDictionary *parameterss = @{};
 //    NSDictionary *headers = @{};
     
@@ -219,7 +219,7 @@
 }
 /// 二期好友列表 GET
 +(void)userFriendListGET:(id)parameters
-        withsuccessBlock:(MKDataBlock)successBlock{
+        withsuccessBlock:(MKDataBlock _Nullable)successBlock{
 //    NSDictionary *parameterss = @{};
 //    NSDictionary *headers = @{};
     
@@ -275,7 +275,7 @@
 }
 /// 统计我的收益
 +(void)myInComeGET:(id)parameters
-  withsuccessBlock:(MKDataBlock)successBlock{
+  withsuccessBlock:(MKDataBlock _Nullable)successBlock{
 //    NSDictionary *parameterss = @{};
 //    NSDictionary *headers = @{};
     
@@ -325,7 +325,7 @@
 }
 ///面对面邀请保存好友手机号码
 +(void)savePhonePOST:(id)parameters
-    withsuccessBlock:(MKDataBlock)successBlock{
+    withsuccessBlock:(MKDataBlock _Nullable)successBlock{
 //    NSDictionary *parameterss = @{};
 //    NSDictionary *headers = @{};
     

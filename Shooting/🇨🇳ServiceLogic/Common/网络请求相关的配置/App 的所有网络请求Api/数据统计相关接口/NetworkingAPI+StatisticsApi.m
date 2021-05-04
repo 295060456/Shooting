@@ -13,7 +13,7 @@
 #pragma mark —— 数据统计相关接口
 /// 活跃用户
 +(void)addActiveUserDataPOST:(id)parameters
-            withsuccessBlock:(MKDataBlock)successBlock{
+            withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *parameterss = @{};
     NSDictionary *headers = @{};
     
@@ -62,7 +62,7 @@
 }
 /// 启动次数
 +(void)addStartTimePOST:(id)parameters
-       withsuccessBlock:(MKDataBlock)successBlock{
+       withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *parameterss = @{};
     NSDictionary *headers = @{};
     
@@ -112,7 +112,7 @@
 }
 /// 使用时长
 +(void)addUseTimeDataPOST:(id)parameters
-         withsuccessBlock:(MKDataBlock)successBlock{
+         withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *parameterss = @{};
     NSDictionary *headers = @{};
     
@@ -162,7 +162,7 @@
 }
 /// 渠道列表
 +(void)channelListGET:(id)parameters
-     withsuccessBlock:(MKDataBlock)successBlock{
+     withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *parameterss = @{};
     NSDictionary *headers = @{};
     
@@ -212,7 +212,7 @@
 }
 /// 版本信息
 +(void)versionInfoAppGET:(id)parameters
-        withsuccessBlock:(MKDataBlock)successBlock{
+        withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *parameterss = @{};
     NSDictionary *headers = @{};
     

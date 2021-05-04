@@ -14,7 +14,7 @@
 #pragma mark —— APP视频相关接口
 /// 删除自己发布的视频
 +(void)delAppVideoPOST:(id)parameters
-      withsuccessBlock:(MKDataBlock)successBlock{
+      withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *parameterss = @{};
     NSDictionary *headers = @{};
     
@@ -64,7 +64,7 @@
 }
 /// 标签列表
 +(void)labelListGET:(id)parameters
-   withsuccessBlock:(MKDataBlock)successBlock{
+   withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *parameterss = @{};
     NSDictionary *headers = @{};
     
@@ -143,7 +143,7 @@
 }
 /// 视频点赞or取消
 +(void)praiseVideoPOST:(id)parameters
-      withsuccessBlock:(MKDataBlock)successBlock{
+      withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *headers = @{};
     [ZBRequestManager requestWithConfig:^(ZBURLRequest * _Nullable request) {
 
@@ -192,7 +192,7 @@
 }
 /// 生成上传链接
 +(void)presignedUploadUrlPOST:(id)parameters
-             withsuccessBlock:(MKDataBlock)successBlock{
+             withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *parameterss = @{};
     NSDictionary *headers = @{};
     
@@ -260,7 +260,7 @@
 
 /// 搜索视频
 +(void)searchPOST:(id)parameters
- withsuccessBlock:(MKDataBlock)successBlock{
+ withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *parameterss = @{};
     NSDictionary *headers = @{};
     
@@ -310,7 +310,7 @@
 }
 /// 上传视频
 +(void)uploadVideoPOST:(id)parameters
-      withsuccessBlock:(MKDataBlock)successBlock{
+      withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *parameterss = @{};
     NSDictionary *headers = @{};
     

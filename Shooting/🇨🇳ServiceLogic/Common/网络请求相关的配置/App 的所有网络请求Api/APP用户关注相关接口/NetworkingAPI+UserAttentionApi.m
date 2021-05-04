@@ -13,7 +13,7 @@
 #pragma mark —— APP用户关注相关接口
 /// 添加
 +(void)userFocusAddPOST:(id)parameters
-       withsuccessBlock:(MKDataBlock)successBlock{
+       withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *parameterss = @{};
     NSDictionary *headers = @{};
     
@@ -63,7 +63,7 @@
 }
 /// 删除
 +(void)userFocusDeleteGET:(id)parameters
-         withsuccessBlock:(MKDataBlock)successBlock{
+         withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *parameterss = @{};
     NSDictionary *headers = @{};
     
@@ -113,7 +113,7 @@
 }
 /// 关注用户列表
 +(void)userFocusListGET:(id)parameters
-       withsuccessBlock:(MKDataBlock)successBlock{
+       withsuccessBlock:(MKDataBlock _Nullable)successBlock{
     NSDictionary *parameterss = @{};
     NSDictionary *headers = @{};
     
