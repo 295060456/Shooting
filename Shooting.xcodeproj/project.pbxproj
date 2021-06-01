@@ -24,6 +24,28 @@
 		C534CE1F25875A31001369FD /* BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE1925875A30001369FD /* BWShareView.m */; };
 		C534CE2025875A31001369FD /* BWItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE1A25875A30001369FD /* BWItemCollectionViewCell.m */; };
 		C534CE2125875A31001369FD /* BWItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE1D25875A31001369FD /* BWItemModel.m */; };
+		C5361E122666A47D005D5168 /* DDNetworkingAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DCF2666A47D005D5168 /* DDNetworkingAPI.m */; };
+		C5361E132666A47D005D5168 /* DDNetworkingAPI+EarnApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DD22666A47D005D5168 /* DDNetworkingAPI+EarnApi.m */; };
+		C5361E142666A47D005D5168 /* DDNetworkingAPI+PostFocusApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DD42666A47D005D5168 /* DDNetworkingAPI+PostFocusApi.m */; };
+		C5361E152666A47D005D5168 /* DDNetworkingAPI+FeedBackApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DD82666A47D005D5168 /* DDNetworkingAPI+FeedBackApi.m */; };
+		C5361E162666A47D005D5168 /* DDNetworkingAPI+StatisticsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DDA2666A47D005D5168 /* DDNetworkingAPI+StatisticsApi.m */; };
+		C5361E172666A47D005D5168 /* DDNetworkingAPI+CommentApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DDE2666A47D005D5168 /* DDNetworkingAPI+CommentApi.m */; };
+		C5361E182666A47D005D5168 /* DDNetworkingAPI+UserAttentionApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DE12666A47D005D5168 /* DDNetworkingAPI+UserAttentionApi.m */; };
+		C5361E192666A47D005D5168 /* DDNetworkingAPI+UserPostApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DE32666A47D005D5168 /* DDNetworkingAPI+UserPostApi.m */; };
+		C5361E1A2666A47D005D5168 /* DDNetworkingAPI+LoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DE72666A47D005D5168 /* DDNetworkingAPI+LoginApi.m */; };
+		C5361E1B2666A47D005D5168 /* DDNetworkingAPI+AdsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DE92666A47D005D5168 /* DDNetworkingAPI+AdsApi.m */; };
+		C5361E1C2666A47D005D5168 /* DDNetworkingAPI+UserFansApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DEC2666A47D005D5168 /* DDNetworkingAPI+UserFansApi.m */; };
+		C5361E1D2666A47D005D5168 /* DDNetworkingAPI+ConfigApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DEF2666A47D005D5168 /* DDNetworkingAPI+ConfigApi.m */; };
+		C5361E1E2666A47D005D5168 /* DDNetworkingAPI+WalletApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DF22666A47D005D5168 /* DDNetworkingAPI+WalletApi.m */; };
+		C5361E1F2666A47D005D5168 /* DDNetworkingAPI+MsgApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DF82666A47D005D5168 /* DDNetworkingAPI+MsgApi.m */; };
+		C5361E202666A47D005D5168 /* DDNetworkingAPI+UserInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DFA2666A47D005D5168 /* DDNetworkingAPI+UserInfoApi.m */; };
+		C5361E212666A47D005D5168 /* DDNetworkingAPI+FriendsRelationshipApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361DFE2666A47D005D5168 /* DDNetworkingAPI+FriendsRelationshipApi.m */; };
+		C5361E222666A47D005D5168 /* DDNetworkingAPI+PostFansApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361E012666A47D005D5168 /* DDNetworkingAPI+PostFansApi.m */; };
+		C5361E232666A47D005D5168 /* DDNetworkingAPI+MsgStateApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361E032666A47D005D5168 /* DDNetworkingAPI+MsgStateApi.m */; };
+		C5361E242666A47D005D5168 /* DDNetworkingAPI+PostCommentApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361E062666A47D005D5168 /* DDNetworkingAPI+PostCommentApi.m */; };
+		C5361E252666A47D005D5168 /* DDNetworkingAPI+Vip.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361E0A2666A47D005D5168 /* DDNetworkingAPI+Vip.m */; };
+		C5361E262666A47D005D5168 /* URLManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361E0D2666A47D005D5168 /* URLManagerModel.m */; };
+		C5361E272666A47D005D5168 /* NSObject+URLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5361E102666A47D005D5168 /* NSObject+URLManager.m */; };
 		C53B182C24FFA336000019F2 /* 视频水印.gif in Resources */ = {isa = PBXBuildFile; fileRef = C53B182B24FFA336000019F2 /* 视频水印.gif */; };
 		C53CAF36261C4E3A00AC1891 /* NSObject+AppTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C53CAF33261C4E3900AC1891 /* NSObject+AppTools.m */; };
 		C53D60C6255C20FC006C290D /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D608B255C20FC006C290D /* UITabBarItem+TLAnimation.m */; };
@@ -343,23 +365,6 @@
 		C5D7B1C425A73AF100166E83 /* DDCollectionViewCell_Style5.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1A725A73AF100166E83 /* DDCollectionViewCell_Style5.m */; };
 		C5D7B1C525A73AF100166E83 /* DDCollectionViewCell_Style5.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D7B1A825A73AF100166E83 /* DDCollectionViewCell_Style5.png */; };
 		C5D7B21425A73B2500166E83 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1D425A73B2400166E83 /* DataManager.m */; };
-		C5D7B21525A73B2500166E83 /* NetworkingAPI+EarnApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1D825A73B2400166E83 /* NetworkingAPI+EarnApi.m */; };
-		C5D7B21625A73B2500166E83 /* NetworkingAPI+BankCardApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1DB25A73B2400166E83 /* NetworkingAPI+BankCardApi.m */; };
-		C5D7B21725A73B2500166E83 /* NetworkingAPI+CommentApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1DE25A73B2400166E83 /* NetworkingAPI+CommentApi.m */; };
-		C5D7B21825A73B2500166E83 /* NetworkingAPI+BlankList.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1E025A73B2400166E83 /* NetworkingAPI+BlankList.m */; };
-		C5D7B21925A73B2500166E83 /* NetworkingAPI+UserAttentionApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1E425A73B2400166E83 /* NetworkingAPI+UserAttentionApi.m */; };
-		C5D7B21A25A73B2500166E83 /* NetworkingAPI+LoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1E825A73B2400166E83 /* NetworkingAPI+LoginApi.m */; };
-		C5D7B21B25A73B2500166E83 /* NetworkingAPI+AdsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1EB25A73B2400166E83 /* NetworkingAPI+AdsApi.m */; };
-		C5D7B21C25A73B2500166E83 /* NetworkingAPI+UserFansApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1EE25A73B2400166E83 /* NetworkingAPI+UserFansApi.m */; };
-		C5D7B21D25A73B2500166E83 /* NetworkingAPI+StatisticsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1F125A73B2400166E83 /* NetworkingAPI+StatisticsApi.m */; };
-		C5D7B21E25A73B2500166E83 /* NetworkingAPI+ConfigApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1F425A73B2400166E83 /* NetworkingAPI+ConfigApi.m */; };
-		C5D7B21F25A73B2500166E83 /* NetworkingAPI+WalletApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1F725A73B2400166E83 /* NetworkingAPI+WalletApi.m */; };
-		C5D7B22025A73B2500166E83 /* NetworkingAPI+VideoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1FA25A73B2400166E83 /* NetworkingAPI+VideoApi.m */; };
-		C5D7B22125A73B2500166E83 /* NetworkingAPI+MsgApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B1FC25A73B2400166E83 /* NetworkingAPI+MsgApi.m */; };
-		C5D7B22225A73B2500166E83 /* NetworkingAPI+UserInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B20025A73B2400166E83 /* NetworkingAPI+UserInfoApi.m */; };
-		C5D7B22325A73B2500166E83 /* NetworkingAPI+FriendsRelationshipApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B20225A73B2400166E83 /* NetworkingAPI+FriendsRelationshipApi.m */; };
-		C5D7B22425A73B2500166E83 /* NetworkingAPI+MsgStateApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B20625A73B2400166E83 /* NetworkingAPI+MsgStateApi.m */; };
-		C5D7B22525A73B2500166E83 /* NetworkingAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B20725A73B2400166E83 /* NetworkingAPI.m */; };
 		C5D7B22625A73B2500166E83 /* DDResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B20A25A73B2400166E83 /* DDResponseModel.m */; };
 		C5D7B22725A73B2500166E83 /* RequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B20E25A73B2400166E83 /* RequestTool.m */; };
 		C5D7B22825A73B2500166E83 /* DDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B21025A73B2500166E83 /* DDUserInfo.m */; };
@@ -390,8 +395,6 @@
 		C5D7B4AA25A73F7100166E83 /* ZBURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B49F25A73F7100166E83 /* ZBURLRequest.m */; };
 		C5D7B4AB25A73F7100166E83 /* ZBRequestEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B4A225A73F7100166E83 /* ZBRequestEngine.m */; };
 		C5D7B4AC25A73F7100166E83 /* ZBRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B4A425A73F7100166E83 /* ZBRequestManager.m */; };
-		C5D7B4C025A73FD200166E83 /* NSObject+URLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B4BD25A73FD200166E83 /* NSObject+URLManager.m */; };
-		C5D7B4C125A73FD200166E83 /* URLManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B4BF25A73FD200166E83 /* URLManagerModel.m */; };
 		C5D7B4D225A740D500166E83 /* KeychainIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B4CF25A740D500166E83 /* KeychainIDFA.m */; };
 		C5D7B4D325A740D500166E83 /* KeychainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D7B4D125A740D500166E83 /* KeychainHelper.m */; };
 		C5D7B69E25A745D800166E83 /* welcome_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C5D7B69D25A745D800166E83 /* welcome_video.mp4 */; };
@@ -490,6 +493,50 @@
 		C534CE1C25875A31001369FD /* BWItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWItemModel.h; sourceTree = "<group>"; };
 		C534CE1D25875A31001369FD /* BWItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemModel.m; sourceTree = "<group>"; };
 		C534CE1E25875A31001369FD /* 分享控件的用法.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "分享控件的用法.md"; sourceTree = "<group>"; };
+		C5361DCF2666A47D005D5168 /* DDNetworkingAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDNetworkingAPI.m; sourceTree = "<group>"; };
+		C5361DD12666A47D005D5168 /* DDNetworkingAPI+EarnApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+EarnApi.h"; sourceTree = "<group>"; };
+		C5361DD22666A47D005D5168 /* DDNetworkingAPI+EarnApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+EarnApi.m"; sourceTree = "<group>"; };
+		C5361DD42666A47D005D5168 /* DDNetworkingAPI+PostFocusApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+PostFocusApi.m"; sourceTree = "<group>"; };
+		C5361DD52666A47D005D5168 /* DDNetworkingAPI+PostFocusApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+PostFocusApi.h"; sourceTree = "<group>"; };
+		C5361DD72666A47D005D5168 /* DDNetworkingAPI+FeedBackApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+FeedBackApi.h"; sourceTree = "<group>"; };
+		C5361DD82666A47D005D5168 /* DDNetworkingAPI+FeedBackApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+FeedBackApi.m"; sourceTree = "<group>"; };
+		C5361DDA2666A47D005D5168 /* DDNetworkingAPI+StatisticsApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+StatisticsApi.m"; sourceTree = "<group>"; };
+		C5361DDB2666A47D005D5168 /* DDNetworkingAPI+StatisticsApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+StatisticsApi.h"; sourceTree = "<group>"; };
+		C5361DDD2666A47D005D5168 /* DDNetworkingAPI+CommentApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+CommentApi.h"; sourceTree = "<group>"; };
+		C5361DDE2666A47D005D5168 /* DDNetworkingAPI+CommentApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+CommentApi.m"; sourceTree = "<group>"; };
+		C5361DE02666A47D005D5168 /* DDNetworkingAPI+UserAttentionApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+UserAttentionApi.h"; sourceTree = "<group>"; };
+		C5361DE12666A47D005D5168 /* DDNetworkingAPI+UserAttentionApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+UserAttentionApi.m"; sourceTree = "<group>"; };
+		C5361DE32666A47D005D5168 /* DDNetworkingAPI+UserPostApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+UserPostApi.m"; sourceTree = "<group>"; };
+		C5361DE42666A47D005D5168 /* DDNetworkingAPI+UserPostApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+UserPostApi.h"; sourceTree = "<group>"; };
+		C5361DE62666A47D005D5168 /* DDNetworkingAPI+LoginApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+LoginApi.h"; sourceTree = "<group>"; };
+		C5361DE72666A47D005D5168 /* DDNetworkingAPI+LoginApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+LoginApi.m"; sourceTree = "<group>"; };
+		C5361DE92666A47D005D5168 /* DDNetworkingAPI+AdsApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+AdsApi.m"; sourceTree = "<group>"; };
+		C5361DEA2666A47D005D5168 /* DDNetworkingAPI+AdsApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+AdsApi.h"; sourceTree = "<group>"; };
+		C5361DEC2666A47D005D5168 /* DDNetworkingAPI+UserFansApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+UserFansApi.m"; sourceTree = "<group>"; };
+		C5361DED2666A47D005D5168 /* DDNetworkingAPI+UserFansApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+UserFansApi.h"; sourceTree = "<group>"; };
+		C5361DEF2666A47D005D5168 /* DDNetworkingAPI+ConfigApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+ConfigApi.m"; sourceTree = "<group>"; };
+		C5361DF02666A47D005D5168 /* DDNetworkingAPI+ConfigApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+ConfigApi.h"; sourceTree = "<group>"; };
+		C5361DF22666A47D005D5168 /* DDNetworkingAPI+WalletApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+WalletApi.m"; sourceTree = "<group>"; };
+		C5361DF32666A47D005D5168 /* DDNetworkingAPI+WalletApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+WalletApi.h"; sourceTree = "<group>"; };
+		C5361DF52666A47D005D5168 /* DDNetworkingAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDNetworkingAPI.h; sourceTree = "<group>"; };
+		C5361DF72666A47D005D5168 /* DDNetworkingAPI+MsgApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+MsgApi.h"; sourceTree = "<group>"; };
+		C5361DF82666A47D005D5168 /* DDNetworkingAPI+MsgApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+MsgApi.m"; sourceTree = "<group>"; };
+		C5361DFA2666A47D005D5168 /* DDNetworkingAPI+UserInfoApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+UserInfoApi.m"; sourceTree = "<group>"; };
+		C5361DFB2666A47D005D5168 /* DDNetworkingAPI+UserInfoApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+UserInfoApi.h"; sourceTree = "<group>"; };
+		C5361DFD2666A47D005D5168 /* DDNetworkingAPI+FriendsRelationshipApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+FriendsRelationshipApi.h"; sourceTree = "<group>"; };
+		C5361DFE2666A47D005D5168 /* DDNetworkingAPI+FriendsRelationshipApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+FriendsRelationshipApi.m"; sourceTree = "<group>"; };
+		C5361E002666A47D005D5168 /* DDNetworkingAPI+PostFansApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+PostFansApi.h"; sourceTree = "<group>"; };
+		C5361E012666A47D005D5168 /* DDNetworkingAPI+PostFansApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+PostFansApi.m"; sourceTree = "<group>"; };
+		C5361E032666A47D005D5168 /* DDNetworkingAPI+MsgStateApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+MsgStateApi.m"; sourceTree = "<group>"; };
+		C5361E042666A47D005D5168 /* DDNetworkingAPI+MsgStateApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+MsgStateApi.h"; sourceTree = "<group>"; };
+		C5361E062666A47D005D5168 /* DDNetworkingAPI+PostCommentApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+PostCommentApi.m"; sourceTree = "<group>"; };
+		C5361E072666A47D005D5168 /* DDNetworkingAPI+PostCommentApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+PostCommentApi.h"; sourceTree = "<group>"; };
+		C5361E092666A47D005D5168 /* DDNetworkingAPI+Vip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDNetworkingAPI+Vip.h"; sourceTree = "<group>"; };
+		C5361E0A2666A47D005D5168 /* DDNetworkingAPI+Vip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDNetworkingAPI+Vip.m"; sourceTree = "<group>"; };
+		C5361E0D2666A47D005D5168 /* URLManagerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLManagerModel.m; sourceTree = "<group>"; };
+		C5361E0E2666A47D005D5168 /* URLManagerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLManagerModel.h; sourceTree = "<group>"; };
+		C5361E102666A47D005D5168 /* NSObject+URLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+URLManager.m"; sourceTree = "<group>"; };
+		C5361E112666A47D005D5168 /* NSObject+URLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+URLManager.h"; sourceTree = "<group>"; };
 		C53B182B24FFA336000019F2 /* 视频水印.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "视频水印.gif"; sourceTree = "<group>"; };
 		C53CAF33261C4E3900AC1891 /* NSObject+AppTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AppTools.m"; sourceTree = "<group>"; };
 		C53CAF34261C4E3900AC1891 /* NSObject+AppTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AppTools.h"; sourceTree = "<group>"; };
@@ -1097,40 +1144,6 @@
 		C5D7B1A825A73AF100166E83 /* DDCollectionViewCell_Style5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DDCollectionViewCell_Style5.png; sourceTree = "<group>"; };
 		C5D7B1D325A73B2400166E83 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		C5D7B1D425A73B2400166E83 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
-		C5D7B1D725A73B2400166E83 /* NetworkingAPI+EarnApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+EarnApi.h"; sourceTree = "<group>"; };
-		C5D7B1D825A73B2400166E83 /* NetworkingAPI+EarnApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+EarnApi.m"; sourceTree = "<group>"; };
-		C5D7B1DA25A73B2400166E83 /* NetworkingAPI+BankCardApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+BankCardApi.h"; sourceTree = "<group>"; };
-		C5D7B1DB25A73B2400166E83 /* NetworkingAPI+BankCardApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+BankCardApi.m"; sourceTree = "<group>"; };
-		C5D7B1DD25A73B2400166E83 /* NetworkingAPI+CommentApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+CommentApi.h"; sourceTree = "<group>"; };
-		C5D7B1DE25A73B2400166E83 /* NetworkingAPI+CommentApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+CommentApi.m"; sourceTree = "<group>"; };
-		C5D7B1E025A73B2400166E83 /* NetworkingAPI+BlankList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+BlankList.m"; sourceTree = "<group>"; };
-		C5D7B1E125A73B2400166E83 /* NetworkingAPI+BlankList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+BlankList.h"; sourceTree = "<group>"; };
-		C5D7B1E325A73B2400166E83 /* NetworkingAPI+UserAttentionApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+UserAttentionApi.h"; sourceTree = "<group>"; };
-		C5D7B1E425A73B2400166E83 /* NetworkingAPI+UserAttentionApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+UserAttentionApi.m"; sourceTree = "<group>"; };
-		C5D7B1E525A73B2400166E83 /* NetworkingAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingAPI.h; sourceTree = "<group>"; };
-		C5D7B1E725A73B2400166E83 /* NetworkingAPI+LoginApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+LoginApi.h"; sourceTree = "<group>"; };
-		C5D7B1E825A73B2400166E83 /* NetworkingAPI+LoginApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+LoginApi.m"; sourceTree = "<group>"; };
-		C5D7B1EA25A73B2400166E83 /* NetworkingAPI+AdsApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+AdsApi.h"; sourceTree = "<group>"; };
-		C5D7B1EB25A73B2400166E83 /* NetworkingAPI+AdsApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+AdsApi.m"; sourceTree = "<group>"; };
-		C5D7B1ED25A73B2400166E83 /* NetworkingAPI+UserFansApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+UserFansApi.h"; sourceTree = "<group>"; };
-		C5D7B1EE25A73B2400166E83 /* NetworkingAPI+UserFansApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+UserFansApi.m"; sourceTree = "<group>"; };
-		C5D7B1F025A73B2400166E83 /* NetworkingAPI+StatisticsApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+StatisticsApi.h"; sourceTree = "<group>"; };
-		C5D7B1F125A73B2400166E83 /* NetworkingAPI+StatisticsApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+StatisticsApi.m"; sourceTree = "<group>"; };
-		C5D7B1F325A73B2400166E83 /* NetworkingAPI+ConfigApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+ConfigApi.h"; sourceTree = "<group>"; };
-		C5D7B1F425A73B2400166E83 /* NetworkingAPI+ConfigApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+ConfigApi.m"; sourceTree = "<group>"; };
-		C5D7B1F625A73B2400166E83 /* NetworkingAPI+WalletApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+WalletApi.h"; sourceTree = "<group>"; };
-		C5D7B1F725A73B2400166E83 /* NetworkingAPI+WalletApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+WalletApi.m"; sourceTree = "<group>"; };
-		C5D7B1F925A73B2400166E83 /* NetworkingAPI+VideoApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+VideoApi.h"; sourceTree = "<group>"; };
-		C5D7B1FA25A73B2400166E83 /* NetworkingAPI+VideoApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+VideoApi.m"; sourceTree = "<group>"; };
-		C5D7B1FC25A73B2400166E83 /* NetworkingAPI+MsgApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+MsgApi.m"; sourceTree = "<group>"; };
-		C5D7B1FD25A73B2400166E83 /* NetworkingAPI+MsgApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+MsgApi.h"; sourceTree = "<group>"; };
-		C5D7B1FF25A73B2400166E83 /* NetworkingAPI+UserInfoApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+UserInfoApi.h"; sourceTree = "<group>"; };
-		C5D7B20025A73B2400166E83 /* NetworkingAPI+UserInfoApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+UserInfoApi.m"; sourceTree = "<group>"; };
-		C5D7B20225A73B2400166E83 /* NetworkingAPI+FriendsRelationshipApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+FriendsRelationshipApi.m"; sourceTree = "<group>"; };
-		C5D7B20325A73B2400166E83 /* NetworkingAPI+FriendsRelationshipApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+FriendsRelationshipApi.h"; sourceTree = "<group>"; };
-		C5D7B20525A73B2400166E83 /* NetworkingAPI+MsgStateApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkingAPI+MsgStateApi.h"; sourceTree = "<group>"; };
-		C5D7B20625A73B2400166E83 /* NetworkingAPI+MsgStateApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkingAPI+MsgStateApi.m"; sourceTree = "<group>"; };
-		C5D7B20725A73B2400166E83 /* NetworkingAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingAPI.m; sourceTree = "<group>"; };
 		C5D7B20A25A73B2400166E83 /* DDResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDResponseModel.m; sourceTree = "<group>"; };
 		C5D7B20B25A73B2400166E83 /* DDResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDResponseModel.h; sourceTree = "<group>"; };
 		C5D7B20D25A73B2400166E83 /* RequestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestTool.h; sourceTree = "<group>"; };
@@ -1200,10 +1213,6 @@
 		C5D7B4A425A73F7100166E83 /* ZBRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBRequestManager.m; sourceTree = "<group>"; };
 		C5D7B4A525A73F7100166E83 /* ZBRequestConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBRequestConst.h; sourceTree = "<group>"; };
 		C5D7B4A625A73F7100166E83 /* ZBRequestEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBRequestEngine.h; sourceTree = "<group>"; };
-		C5D7B4BC25A73FD200166E83 /* NSObject+URLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+URLManager.h"; sourceTree = "<group>"; };
-		C5D7B4BD25A73FD200166E83 /* NSObject+URLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+URLManager.m"; sourceTree = "<group>"; };
-		C5D7B4BE25A73FD200166E83 /* URLManagerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLManagerModel.h; sourceTree = "<group>"; };
-		C5D7B4BF25A73FD200166E83 /* URLManagerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLManagerModel.m; sourceTree = "<group>"; };
 		C5D7B4C925A7405400166E83 /* DAO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAO.h; sourceTree = "<group>"; };
 		C5D7B4CE25A740D500166E83 /* KeychainHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainHelper.h; sourceTree = "<group>"; };
 		C5D7B4CF25A740D500166E83 /* KeychainIDFA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainIDFA.m; sourceTree = "<group>"; };
@@ -1438,6 +1447,240 @@
 				C5318747262A90C9003C69AD /* DispatchTimerManager.m */,
 			);
 			path = DispatchTimerManager;
+			sourceTree = "<group>";
+		};
+		C5361DCE2666A47D005D5168 /* App 的所有网络请求Api */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DCF2666A47D005D5168 /* DDNetworkingAPI.m */,
+				C5361DD02666A47D005D5168 /* App看视频获得金币奖励 */,
+				C5361DD32666A47D005D5168 /* App帖子关注相关接口 */,
+				C5361DD62666A47D005D5168 /* App意见反馈相关接口 */,
+				C5361DD92666A47D005D5168 /* App数据统计相关接口 */,
+				C5361DDC2666A47D005D5168 /* App评论相关接口 */,
+				C5361DDF2666A47D005D5168 /* App用户关注相关接口 */,
+				C5361DE22666A47D005D5168 /* App用户帖子相关接口 */,
+				C5361DE52666A47D005D5168 /* App登录信息相关接口 */,
+				C5361DE82666A47D005D5168 /* App广告相关接口 */,
+				C5361DEB2666A47D005D5168 /* App用户粉丝相关接口 */,
+				C5361DEE2666A47D005D5168 /* App获取配置信息 */,
+				C5361DF12666A47D005D5168 /* App钱包相关接口 */,
+				C5361DF42666A47D005D5168 /* App视频相关接口 */,
+				C5361DF52666A47D005D5168 /* DDNetworkingAPI.h */,
+				C5361DF62666A47D005D5168 /* App消息相关接口 */,
+				C5361DF92666A47D005D5168 /* App用户信息相关接口 */,
+				C5361DFC2666A47D005D5168 /* App好友关系相关接口 */,
+				C5361DFF2666A47D005D5168 /* App帖子粉丝相关接口 */,
+				C5361E022666A47D005D5168 /* App消息状态相关接口 */,
+				C5361E052666A47D005D5168 /* App帖子评论相关接口 */,
+				C5361E082666A47D005D5168 /* AppVip相关接口 */,
+			);
+			path = "App 的所有网络请求Api";
+			sourceTree = "<group>";
+		};
+		C5361DD02666A47D005D5168 /* App看视频获得金币奖励 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DD12666A47D005D5168 /* DDNetworkingAPI+EarnApi.h */,
+				C5361DD22666A47D005D5168 /* DDNetworkingAPI+EarnApi.m */,
+			);
+			path = "App看视频获得金币奖励";
+			sourceTree = "<group>";
+		};
+		C5361DD32666A47D005D5168 /* App帖子关注相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DD42666A47D005D5168 /* DDNetworkingAPI+PostFocusApi.m */,
+				C5361DD52666A47D005D5168 /* DDNetworkingAPI+PostFocusApi.h */,
+			);
+			path = "App帖子关注相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DD62666A47D005D5168 /* App意见反馈相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DD72666A47D005D5168 /* DDNetworkingAPI+FeedBackApi.h */,
+				C5361DD82666A47D005D5168 /* DDNetworkingAPI+FeedBackApi.m */,
+			);
+			path = "App意见反馈相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DD92666A47D005D5168 /* App数据统计相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DDA2666A47D005D5168 /* DDNetworkingAPI+StatisticsApi.m */,
+				C5361DDB2666A47D005D5168 /* DDNetworkingAPI+StatisticsApi.h */,
+			);
+			path = "App数据统计相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DDC2666A47D005D5168 /* App评论相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DDD2666A47D005D5168 /* DDNetworkingAPI+CommentApi.h */,
+				C5361DDE2666A47D005D5168 /* DDNetworkingAPI+CommentApi.m */,
+			);
+			path = "App评论相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DDF2666A47D005D5168 /* App用户关注相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DE02666A47D005D5168 /* DDNetworkingAPI+UserAttentionApi.h */,
+				C5361DE12666A47D005D5168 /* DDNetworkingAPI+UserAttentionApi.m */,
+			);
+			path = "App用户关注相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DE22666A47D005D5168 /* App用户帖子相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DE32666A47D005D5168 /* DDNetworkingAPI+UserPostApi.m */,
+				C5361DE42666A47D005D5168 /* DDNetworkingAPI+UserPostApi.h */,
+			);
+			path = "App用户帖子相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DE52666A47D005D5168 /* App登录信息相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DE62666A47D005D5168 /* DDNetworkingAPI+LoginApi.h */,
+				C5361DE72666A47D005D5168 /* DDNetworkingAPI+LoginApi.m */,
+			);
+			path = "App登录信息相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DE82666A47D005D5168 /* App广告相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DE92666A47D005D5168 /* DDNetworkingAPI+AdsApi.m */,
+				C5361DEA2666A47D005D5168 /* DDNetworkingAPI+AdsApi.h */,
+			);
+			path = "App广告相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DEB2666A47D005D5168 /* App用户粉丝相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DEC2666A47D005D5168 /* DDNetworkingAPI+UserFansApi.m */,
+				C5361DED2666A47D005D5168 /* DDNetworkingAPI+UserFansApi.h */,
+			);
+			path = "App用户粉丝相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DEE2666A47D005D5168 /* App获取配置信息 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DEF2666A47D005D5168 /* DDNetworkingAPI+ConfigApi.m */,
+				C5361DF02666A47D005D5168 /* DDNetworkingAPI+ConfigApi.h */,
+			);
+			path = "App获取配置信息";
+			sourceTree = "<group>";
+		};
+		C5361DF12666A47D005D5168 /* App钱包相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DF22666A47D005D5168 /* DDNetworkingAPI+WalletApi.m */,
+				C5361DF32666A47D005D5168 /* DDNetworkingAPI+WalletApi.h */,
+			);
+			path = "App钱包相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DF42666A47D005D5168 /* App视频相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "App视频相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DF62666A47D005D5168 /* App消息相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DF72666A47D005D5168 /* DDNetworkingAPI+MsgApi.h */,
+				C5361DF82666A47D005D5168 /* DDNetworkingAPI+MsgApi.m */,
+			);
+			path = "App消息相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DF92666A47D005D5168 /* App用户信息相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DFA2666A47D005D5168 /* DDNetworkingAPI+UserInfoApi.m */,
+				C5361DFB2666A47D005D5168 /* DDNetworkingAPI+UserInfoApi.h */,
+			);
+			path = "App用户信息相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DFC2666A47D005D5168 /* App好友关系相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361DFD2666A47D005D5168 /* DDNetworkingAPI+FriendsRelationshipApi.h */,
+				C5361DFE2666A47D005D5168 /* DDNetworkingAPI+FriendsRelationshipApi.m */,
+			);
+			path = "App好友关系相关接口";
+			sourceTree = "<group>";
+		};
+		C5361DFF2666A47D005D5168 /* App帖子粉丝相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361E002666A47D005D5168 /* DDNetworkingAPI+PostFansApi.h */,
+				C5361E012666A47D005D5168 /* DDNetworkingAPI+PostFansApi.m */,
+			);
+			path = "App帖子粉丝相关接口";
+			sourceTree = "<group>";
+		};
+		C5361E022666A47D005D5168 /* App消息状态相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361E032666A47D005D5168 /* DDNetworkingAPI+MsgStateApi.m */,
+				C5361E042666A47D005D5168 /* DDNetworkingAPI+MsgStateApi.h */,
+			);
+			path = "App消息状态相关接口";
+			sourceTree = "<group>";
+		};
+		C5361E052666A47D005D5168 /* App帖子评论相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361E062666A47D005D5168 /* DDNetworkingAPI+PostCommentApi.m */,
+				C5361E072666A47D005D5168 /* DDNetworkingAPI+PostCommentApi.h */,
+			);
+			path = "App帖子评论相关接口";
+			sourceTree = "<group>";
+		};
+		C5361E082666A47D005D5168 /* AppVip相关接口 */ = {
+			isa = PBXGroup;
+			children = (
+				C5361E092666A47D005D5168 /* DDNetworkingAPI+Vip.h */,
+				C5361E0A2666A47D005D5168 /* DDNetworkingAPI+Vip.m */,
+			);
+			path = "AppVip相关接口";
+			sourceTree = "<group>";
+		};
+		C5361E0B2666A47D005D5168 /* URL_Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C5361E0C2666A47D005D5168 /* URLManagerModel */,
+				C5361E0F2666A47D005D5168 /* NSObject+URLManager */,
+			);
+			path = URL_Manager;
+			sourceTree = "<group>";
+		};
+		C5361E0C2666A47D005D5168 /* URLManagerModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5361E0D2666A47D005D5168 /* URLManagerModel.m */,
+				C5361E0E2666A47D005D5168 /* URLManagerModel.h */,
+			);
+			path = URLManagerModel;
+			sourceTree = "<group>";
+		};
+		C5361E0F2666A47D005D5168 /* NSObject+URLManager */ = {
+			isa = PBXGroup;
+			children = (
+				C5361E102666A47D005D5168 /* NSObject+URLManager.m */,
+				C5361E112666A47D005D5168 /* NSObject+URLManager.h */,
+			);
+			path = "NSObject+URLManager";
 			sourceTree = "<group>";
 		};
 		C53CAF32261C4E3900AC1891 /* NSObject+AppTools */ = {
@@ -4296,24 +4539,13 @@
 		C5D7B1CC25A73B2400166E83 /* 网络请求相关的配置 */ = {
 			isa = PBXGroup;
 			children = (
-				C5D7B1CD25A73B2400166E83 /* URL_Manager */,
 				C5D7B1D225A73B2400166E83 /* 存取页面数据 */,
-				C5D7B1D525A73B2400166E83 /* App 的所有网络请求Api */,
-				C5D7B20825A73B2400166E83 /* RequestManager */,
 				C5D7B20C25A73B2400166E83 /* 请求的公共配置文件 */,
+				C5361DCE2666A47D005D5168 /* App 的所有网络请求Api */,
+				C5D7B20825A73B2400166E83 /* RequestManager */,
+				C5361E0B2666A47D005D5168 /* URL_Manager */,
 			);
 			path = "网络请求相关的配置";
-			sourceTree = "<group>";
-		};
-		C5D7B1CD25A73B2400166E83 /* URL_Manager */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B4BC25A73FD200166E83 /* NSObject+URLManager.h */,
-				C5D7B4BD25A73FD200166E83 /* NSObject+URLManager.m */,
-				C5D7B4BE25A73FD200166E83 /* URLManagerModel.h */,
-				C5D7B4BF25A73FD200166E83 /* URLManagerModel.m */,
-			);
-			path = URL_Manager;
 			sourceTree = "<group>";
 		};
 		C5D7B1D225A73B2400166E83 /* 存取页面数据 */ = {
@@ -4323,175 +4555,6 @@
 				C5D7B1D425A73B2400166E83 /* DataManager.m */,
 			);
 			path = "存取页面数据";
-			sourceTree = "<group>";
-		};
-		C5D7B1D525A73B2400166E83 /* App 的所有网络请求Api */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1EF25A73B2400166E83 /* 数据统计相关接口 */,
-				C5D7B1E625A73B2400166E83 /* APP登录信息相关接口 */,
-				C5D7B1E925A73B2400166E83 /* APP广告相关接口 */,
-				C5D7B20125A73B2400166E83 /* APP好友关系相关接口 */,
-				C5D7B1DF25A73B2400166E83 /* APP黑名单相关接口 */,
-				C5D7B1F225A73B2400166E83 /* APP获取配置信息 */,
-				C5D7B1D625A73B2400166E83 /* APP看视频获得金币奖励 */,
-				C5D7B1DC25A73B2400166E83 /* APP评论相关接口 */,
-				C5D7B1F525A73B2400166E83 /* APP钱包相关接口 */,
-				C5D7B1F825A73B2400166E83 /* APP视频相关接口 */,
-				C5D7B1FB25A73B2400166E83 /* App消息相关接口 */,
-				C5D7B20425A73B2400166E83 /* App消息状态相关接口 */,
-				C5D7B1D925A73B2400166E83 /* APP银行卡相关接口 */,
-				C5D7B1EC25A73B2400166E83 /* APP用户粉丝相关接口 */,
-				C5D7B1E225A73B2400166E83 /* APP用户关注相关接口 */,
-				C5D7B1FE25A73B2400166E83 /* APP用户信息相关接口 */,
-				C5D7B1E525A73B2400166E83 /* NetworkingAPI.h */,
-				C5D7B20725A73B2400166E83 /* NetworkingAPI.m */,
-			);
-			path = "App 的所有网络请求Api";
-			sourceTree = "<group>";
-		};
-		C5D7B1D625A73B2400166E83 /* APP看视频获得金币奖励 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1D725A73B2400166E83 /* NetworkingAPI+EarnApi.h */,
-				C5D7B1D825A73B2400166E83 /* NetworkingAPI+EarnApi.m */,
-			);
-			path = "APP看视频获得金币奖励";
-			sourceTree = "<group>";
-		};
-		C5D7B1D925A73B2400166E83 /* APP银行卡相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1DA25A73B2400166E83 /* NetworkingAPI+BankCardApi.h */,
-				C5D7B1DB25A73B2400166E83 /* NetworkingAPI+BankCardApi.m */,
-			);
-			path = "APP银行卡相关接口";
-			sourceTree = "<group>";
-		};
-		C5D7B1DC25A73B2400166E83 /* APP评论相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1DD25A73B2400166E83 /* NetworkingAPI+CommentApi.h */,
-				C5D7B1DE25A73B2400166E83 /* NetworkingAPI+CommentApi.m */,
-			);
-			path = "APP评论相关接口";
-			sourceTree = "<group>";
-		};
-		C5D7B1DF25A73B2400166E83 /* APP黑名单相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1E025A73B2400166E83 /* NetworkingAPI+BlankList.m */,
-				C5D7B1E125A73B2400166E83 /* NetworkingAPI+BlankList.h */,
-			);
-			path = "APP黑名单相关接口";
-			sourceTree = "<group>";
-		};
-		C5D7B1E225A73B2400166E83 /* APP用户关注相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1E325A73B2400166E83 /* NetworkingAPI+UserAttentionApi.h */,
-				C5D7B1E425A73B2400166E83 /* NetworkingAPI+UserAttentionApi.m */,
-			);
-			path = "APP用户关注相关接口";
-			sourceTree = "<group>";
-		};
-		C5D7B1E625A73B2400166E83 /* APP登录信息相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1E725A73B2400166E83 /* NetworkingAPI+LoginApi.h */,
-				C5D7B1E825A73B2400166E83 /* NetworkingAPI+LoginApi.m */,
-			);
-			path = "APP登录信息相关接口";
-			sourceTree = "<group>";
-		};
-		C5D7B1E925A73B2400166E83 /* APP广告相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1EA25A73B2400166E83 /* NetworkingAPI+AdsApi.h */,
-				C5D7B1EB25A73B2400166E83 /* NetworkingAPI+AdsApi.m */,
-			);
-			path = "APP广告相关接口";
-			sourceTree = "<group>";
-		};
-		C5D7B1EC25A73B2400166E83 /* APP用户粉丝相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1ED25A73B2400166E83 /* NetworkingAPI+UserFansApi.h */,
-				C5D7B1EE25A73B2400166E83 /* NetworkingAPI+UserFansApi.m */,
-			);
-			path = "APP用户粉丝相关接口";
-			sourceTree = "<group>";
-		};
-		C5D7B1EF25A73B2400166E83 /* 数据统计相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1F025A73B2400166E83 /* NetworkingAPI+StatisticsApi.h */,
-				C5D7B1F125A73B2400166E83 /* NetworkingAPI+StatisticsApi.m */,
-			);
-			path = "数据统计相关接口";
-			sourceTree = "<group>";
-		};
-		C5D7B1F225A73B2400166E83 /* APP获取配置信息 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1F325A73B2400166E83 /* NetworkingAPI+ConfigApi.h */,
-				C5D7B1F425A73B2400166E83 /* NetworkingAPI+ConfigApi.m */,
-			);
-			path = "APP获取配置信息";
-			sourceTree = "<group>";
-		};
-		C5D7B1F525A73B2400166E83 /* APP钱包相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1F625A73B2400166E83 /* NetworkingAPI+WalletApi.h */,
-				C5D7B1F725A73B2400166E83 /* NetworkingAPI+WalletApi.m */,
-			);
-			path = "APP钱包相关接口";
-			sourceTree = "<group>";
-		};
-		C5D7B1F825A73B2400166E83 /* APP视频相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1F925A73B2400166E83 /* NetworkingAPI+VideoApi.h */,
-				C5D7B1FA25A73B2400166E83 /* NetworkingAPI+VideoApi.m */,
-			);
-			path = "APP视频相关接口";
-			sourceTree = "<group>";
-		};
-		C5D7B1FB25A73B2400166E83 /* App消息相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1FC25A73B2400166E83 /* NetworkingAPI+MsgApi.m */,
-				C5D7B1FD25A73B2400166E83 /* NetworkingAPI+MsgApi.h */,
-			);
-			path = "App消息相关接口";
-			sourceTree = "<group>";
-		};
-		C5D7B1FE25A73B2400166E83 /* APP用户信息相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B1FF25A73B2400166E83 /* NetworkingAPI+UserInfoApi.h */,
-				C5D7B20025A73B2400166E83 /* NetworkingAPI+UserInfoApi.m */,
-			);
-			path = "APP用户信息相关接口";
-			sourceTree = "<group>";
-		};
-		C5D7B20125A73B2400166E83 /* APP好友关系相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B20225A73B2400166E83 /* NetworkingAPI+FriendsRelationshipApi.m */,
-				C5D7B20325A73B2400166E83 /* NetworkingAPI+FriendsRelationshipApi.h */,
-			);
-			path = "APP好友关系相关接口";
-			sourceTree = "<group>";
-		};
-		C5D7B20425A73B2400166E83 /* App消息状态相关接口 */ = {
-			isa = PBXGroup;
-			children = (
-				C5D7B20525A73B2400166E83 /* NetworkingAPI+MsgStateApi.h */,
-				C5D7B20625A73B2400166E83 /* NetworkingAPI+MsgStateApi.m */,
-			);
-			path = "App消息状态相关接口";
 			sourceTree = "<group>";
 		};
 		C5D7B20825A73B2400166E83 /* RequestManager */ = {
@@ -5360,11 +5423,11 @@
 				C59A3E98258DD22E005F6260 /* UserDefaultModel.m in Sources */,
 				C58F002624EA36FA00B6D09C /* main.m in Sources */,
 				C58D81222630531700966F5F /* NSObject+Extras.m in Sources */,
-				C5D7B21B25A73B2500166E83 /* NetworkingAPI+AdsApi.m in Sources */,
 				C53D60E2255C20FC006C290D /* JobsPullListAutoSizeView.m in Sources */,
 				C58D80EC2630531600966F5F /* BaseCollectionViewCell.m in Sources */,
 				C5D7B27425A73B3B00166E83 /* DDPostDelView.m in Sources */,
 				C58D80DE2630531600966F5F /* UIView+Extras.m in Sources */,
+				C5361E262666A47D005D5168 /* URLManagerModel.m in Sources */,
 				C5D7B48F25A73E9500166E83 /* JXCategoryTitleBackgroundView.m in Sources */,
 				C58D80CE2630531600966F5F /* UIColor+Gradient.m in Sources */,
 				C58D81242630531700966F5F /* NSObject+Time.m in Sources */,
@@ -5373,10 +5436,10 @@
 				C58D81082630531600966F5F /* UITableView+Expand.m in Sources */,
 				C5C67C9924FF5D28000A26B8 /* CADisplayLink_TimerManager.m in Sources */,
 				C5D7B1C425A73AF100166E83 /* DDCollectionViewCell_Style5.m in Sources */,
-				C5D7B21825A73B2500166E83 /* NetworkingAPI+BlankList.m in Sources */,
 				C58D80BC2630531600966F5F /* UILabel+Extra.m in Sources */,
 				C58D811D2630531700966F5F /* NSObject+Shake.m in Sources */,
 				C55497AA24F3A1F00065510D /* GPUImageTools.m in Sources */,
+				C5361E122666A47D005D5168 /* DDNetworkingAPI.m in Sources */,
 				C534CE2125875A31001369FD /* BWItemModel.m in Sources */,
 				C58D81162630531700966F5F /* CALayer+Transition.m in Sources */,
 				C561618B24EE4C98001CD851 /* StartOrPauseBtn.m in Sources */,
@@ -5386,10 +5449,14 @@
 				C58D81232630531700966F5F /* NSObject+DataSave.m in Sources */,
 				C58D80E32630531600966F5F /* UITextView+IndicateWordLimit.m in Sources */,
 				C58D811F2630531700966F5F /* NSObject+Sound.m in Sources */,
+				C5361E1C2666A47D005D5168 /* DDNetworkingAPI+UserFansApi.m in Sources */,
 				C58D81292630531700966F5F /* UITextField+Extend.m in Sources */,
 				C58D810E2630531600966F5F /* NSArray+Extension.m in Sources */,
+				C5361E172666A47D005D5168 /* DDNetworkingAPI+CommentApi.m in Sources */,
+				C5361E242666A47D005D5168 /* DDNetworkingAPI+PostCommentApi.m in Sources */,
 				C58E9EFA26313BEB00D1EDB8 /* NSObject+DataBinding.m in Sources */,
 				C5C65404259DF94500FD2F99 /* ECPrivacyCheckMediaAndAppleMusic.m in Sources */,
+				C5361E1A2666A47D005D5168 /* DDNetworkingAPI+LoginApi.m in Sources */,
 				C5D7B1AC25A73AF100166E83 /* DDRewardConfigModel.m in Sources */,
 				C52DEF50255D2A820016FF07 /* XHLaunchAdConst.m in Sources */,
 				C58F01F924EA60D100B6D09C /* CustomSYSUITabBarController.m in Sources */,
@@ -5397,6 +5464,7 @@
 				C561619724EE4CA9001CD851 /* MKUploadingVC+VM.m in Sources */,
 				C58D80DC2630531600966F5F /* UIView+AOP.m in Sources */,
 				C5D7B29A25A73CC400166E83 /* GKPhotoBrowser+SaveBtn.m in Sources */,
+				C5361E1F2666A47D005D5168 /* DDNetworkingAPI+MsgApi.m in Sources */,
 				C5D7B4D225A740D500166E83 /* KeychainIDFA.m in Sources */,
 				C59D9ADD24F8EF4D00A74CE9 /* CustomerAVPlayerView.m in Sources */,
 				C58D80F12630531600966F5F /* UIViewController+JXPagerViewListViewDelegate.m in Sources */,
@@ -5404,12 +5472,13 @@
 				C58D810A2630531600966F5F /* BaseTableView.m in Sources */,
 				C58D81202630531700966F5F /* NSObject+AFNReachability.m in Sources */,
 				C561619824EE4CA9001CD851 /* MKUploadingVC.m in Sources */,
+				C5361E142666A47D005D5168 /* DDNetworkingAPI+PostFocusApi.m in Sources */,
 				C58D81102630531700966F5F /* TableViewHeaderView.m in Sources */,
 				C58D80BA2630531600966F5F /* UIImage+Tailor.m in Sources */,
 				C5EA14942631206B00155822 /* UILabel+Gesture.m in Sources */,
-				C5D7B22525A73B2500166E83 /* NetworkingAPI.m in Sources */,
 				C534CE1F25875A31001369FD /* BWShareView.m in Sources */,
 				C59D9AD724F8EF4100A74CE9 /* CustomerAVPlayerVC.m in Sources */,
+				C5361E192666A47D005D5168 /* DDNetworkingAPI+UserPostApi.m in Sources */,
 				C58D81052630531600966F5F /* BaseNavigationVC.m in Sources */,
 				C58D80FD2630531600966F5F /* UIViewController+BaseNavigationBar.m in Sources */,
 				C58D80F72630531600966F5F /* UIViewController+JPImageresizerView.m in Sources */,
@@ -5431,7 +5500,6 @@
 				C53D60C7255C20FC006C290D /* TabBarItem.m in Sources */,
 				C58D80E92630531600966F5F /* UICollectionView+RegisterClass.m in Sources */,
 				C5D7B1B325A73AF100166E83 /* NoticePopupView.m in Sources */,
-				C5D7B21525A73B2500166E83 /* NetworkingAPI+EarnApi.m in Sources */,
 				C5D7B26625A73B3B00166E83 /* DDFocusOnPeopleVC.m in Sources */,
 				C58D80C52630531600966F5F /* RBCLikeButton.m in Sources */,
 				C5D7B27525A73B3B00166E83 /* DDPlazaMineVC.m in Sources */,
@@ -5442,9 +5510,7 @@
 				C5C65403259DF94500FD2F99 /* ECPrivacyCheckMotionAndFitness.m in Sources */,
 				C534CE2025875A31001369FD /* BWItemCollectionViewCell.m in Sources */,
 				C58D80DD2630531600966F5F /* UIView+MJRefresh.m in Sources */,
-				C5D7B21E25A73B2500166E83 /* NetworkingAPI+ConfigApi.m in Sources */,
 				C58D80F92630531600966F5F /* UIViewController+EmptyData.m in Sources */,
-				C5D7B21725A73B2500166E83 /* NetworkingAPI+CommentApi.m in Sources */,
 				C5A444BC25ABFC2C000F0CD2 /* JXCategoryTimelineCell.m in Sources */,
 				C5F4522F2529A6D900066AAB /* GTMBase64.m in Sources */,
 				C5D7B1BF25A73AF100166E83 /* DDCollectionViewCell_Style2+GKPhotoBrowserDelegate.m in Sources */,
@@ -5461,7 +5527,6 @@
 				C5A444BA25ABFC2C000F0CD2 /* JXCategoryTimelineView.m in Sources */,
 				C58D813A2630540900966F5F /* UIViewController+TZLocationManager.m in Sources */,
 				C5318748262A90C9003C69AD /* DispatchTimerManager.m in Sources */,
-				C5D7B4C025A73FD200166E83 /* NSObject+URLManager.m in Sources */,
 				C58D80D72630531600966F5F /* UIView+EmptyData.m in Sources */,
 				C5D7B1C125A73AF100166E83 /* DDCollectionViewCell_Style2TBVCell.m in Sources */,
 				C5D7B26925A73B3B00166E83 /* DDUserDetailsVC.m in Sources */,
@@ -5470,7 +5535,6 @@
 				C595D4F1258714AD002A4531 /* SuspendBtn.m in Sources */,
 				C58D80EA2630531600966F5F /* UICollectionViewCell+ShakeAnimation.m in Sources */,
 				C52DEF56255D2A820016FF07 /* XHLaunchAdCache.m in Sources */,
-				C5D7B21D25A73B2500166E83 /* NetworkingAPI+StatisticsApi.m in Sources */,
 				C5D7B21425A73B2500166E83 /* DataManager.m in Sources */,
 				C52DEF54255D2A820016FF07 /* XHLaunchAdImageView+XHLaunchAdCache.m in Sources */,
 				C58D80C32630531600966F5F /* UIButton+ImageTitleSpacing.m in Sources */,
@@ -5484,13 +5548,12 @@
 				C58D81182630531700966F5F /* BaseCollectionReusableView.m in Sources */,
 				C58D80C02630531600966F5F /* UITableViewCell+WhiteArrows.m in Sources */,
 				C58D80D22630531600966F5F /* UIView+ZFPlayer.m in Sources */,
-				C5D7B22025A73B2500166E83 /* NetworkingAPI+VideoApi.m in Sources */,
 				C5A46C0C24EFB6E900158D1E /* LZBTabBarItem.m in Sources */,
 				C5C67CA824FF5D68000A26B8 /* MovieCountDown.m in Sources */,
 				C58D80D62630531600966F5F /* UIView+Chain.m in Sources */,
+				C5361E222666A47D005D5168 /* DDNetworkingAPI+PostFansApi.m in Sources */,
 				C58D80F42630531600966F5F /* UIViewController+XLBubbleTransition.m in Sources */,
 				C59D9ACE24F8EF1100A74CE9 /* CustomerGPUImagePlayerVC.m in Sources */,
-				C5D7B22325A73B2500166E83 /* NetworkingAPI+FriendsRelationshipApi.m in Sources */,
 				C59D9ADC24F8EF4D00A74CE9 /* CustomerAVPlayerView+UIGestureRecognizerDelegate.m in Sources */,
 				C58D80C12630531600966F5F /* BaseTableViewCell.m in Sources */,
 				C52DEF4E255D2A820016FF07 /* XHLaunchAdButton.m in Sources */,
@@ -5500,6 +5563,7 @@
 				C551352625C68A09007BCA82 /* ZWPullMenuConfig.m in Sources */,
 				C58D811E2630531700966F5F /* NSObject+Random.m in Sources */,
 				C58D80FA2630531600966F5F /* UIViewController+Shake.m in Sources */,
+				C5361E232666A47D005D5168 /* DDNetworkingAPI+MsgStateApi.m in Sources */,
 				C5D7B27825A73B3B00166E83 /* DDPlazaCommunityVC.m in Sources */,
 				C5A43A7625AAF8A6000F0CD2 /* UIScrollView+FDFullscreenPopGesture.m in Sources */,
 				C58D811B2630531700966F5F /* NSObject+OpenURL.m in Sources */,
@@ -5510,6 +5574,7 @@
 				C5C653FB259DF94500FD2F99 /* ECPrivacyCheckMicrophone.m in Sources */,
 				C5D7B1BE25A73AF100166E83 /* DDCollectionViewCell_Style2+UICollectionViewDelegateFlowLayout.m in Sources */,
 				C58D81192630531700966F5F /* NSObject+SPAlertController.m in Sources */,
+				C5361E212666A47D005D5168 /* DDNetworkingAPI+FriendsRelationshipApi.m in Sources */,
 				C5C653FC259DF94500FD2F99 /* ECPrivacyCheckHomeKit.m in Sources */,
 				C5D7B27225A73B3B00166E83 /* DDPostVC.m in Sources */,
 				C58D80B92630531600966F5F /* UIImage+YBGIF.m in Sources */,
@@ -5521,28 +5586,25 @@
 				C5D7B1AF25A73AF100166E83 /* DDSysMsgModel.m in Sources */,
 				C561619E24EE4CB7001CD851 /* PhotoVC+VM.m in Sources */,
 				C5D7B27325A73B3B00166E83 /* DDPostInputView.m in Sources */,
-				C5D7B22225A73B2500166E83 /* NetworkingAPI+UserInfoApi.m in Sources */,
 				C58D80B72630531600966F5F /* UIImage+Extras.m in Sources */,
 				C5D7B1BA25A73AF100166E83 /* DDCollectionViewCell_Style2TBVCellModel.m in Sources */,
 				C5D7B1B225A73AF100166E83 /* DDCommentMsgModel.m in Sources */,
 				C58D810F2630531600966F5F /* NSArray+Extend.m in Sources */,
 				C53D60E7255C20FC006C290D /* TLTabBarAnimation.m in Sources */,
 				C5D7B26C25A73B3B00166E83 /* DDUserDetailsCollectionReusableView.m in Sources */,
-				C5D7B22425A73B2500166E83 /* NetworkingAPI+MsgStateApi.m in Sources */,
 				C58D81142630531700966F5F /* HQCollectionViewFlowLayout.m in Sources */,
 				C58D80B62630531600966F5F /* UIImage+ScreenShot.m in Sources */,
 				C58D80FC2630531600966F5F /* UIViewController+GifImageView.m in Sources */,
-				C5D7B21F25A73B2500166E83 /* NetworkingAPI+WalletApi.m in Sources */,
 				C5D7B26725A73B3B00166E83 /* DDInvitationVC.m in Sources */,
 				C5D7B4D325A740D500166E83 /* KeychainHelper.m in Sources */,
 				C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */,
 				C5D7B27025A73B3B00166E83 /* DDMyRemarkedVC.m in Sources */,
 				C5C653FE259DF94500FD2F99 /* ECPrivacyCheckCamera.m in Sources */,
-				C5D7B21C25A73B2500166E83 /* NetworkingAPI+UserFansApi.m in Sources */,
 				C52DEF52255D2A820016FF07 /* XHLaunchAdController.m in Sources */,
 				C5D7B27125A73B3B00166E83 /* DDMyReleasedVC.m in Sources */,
 				C58D80F22630531600966F5F /* UIViewController+JXCategoryListContentViewDelegate.m in Sources */,
 				C58F033224EA69D400B6D09C /* ViewController@2.m in Sources */,
+				C5361E182666A47D005D5168 /* DDNetworkingAPI+UserAttentionApi.m in Sources */,
 				C58D80E62630531600966F5F /* UIDevice+XMUtils.m in Sources */,
 				C58F001224EA36F800B6D09C /* ShootingAppDelegate.m in Sources */,
 				C58D812A2630531700966F5F /* HQTextField.m in Sources */,
@@ -5550,21 +5612,24 @@
 				C5D7B4AC25A73F7100166E83 /* ZBRequestManager.m in Sources */,
 				C59D9AD124F8EF1F00A74CE9 /* RepeatPlayer.m in Sources */,
 				C52DEF55255D2A820016FF07 /* XHLaunchAdConfiguration.m in Sources */,
+				C5361E1D2666A47D005D5168 /* DDNetworkingAPI+ConfigApi.m in Sources */,
 				C5542D7F25F324FB002D1CA6 /* CheckMemFreeVC.m in Sources */,
 				C5F4523C2529A6D900066AAB /* NSData+CommonCrypto.m in Sources */,
 				C55FF33025B42C7200D8C30D /* DDUserModel.m in Sources */,
+				C5361E152666A47D005D5168 /* DDNetworkingAPI+FeedBackApi.m in Sources */,
 				C58D80F82630531600966F5F /* UIViewController+BackBtn.m in Sources */,
 				C53D6104255C21F7006C290D /* ShootingAppDelegate+PopupView.m in Sources */,
 				C5D7B4A725A73F7100166E83 /* NSString+ZBUTF8Encoding.m in Sources */,
 				C58D80CA2630531600966F5F /* SoundBtn.m in Sources */,
 				C58D80C62630531600966F5F /* UIButton+Timer.m in Sources */,
-				C5D7B21A25A73B2500166E83 /* NetworkingAPI+LoginApi.m in Sources */,
 				C5F4523A2529A6D900066AAB /* AESCipher.m in Sources */,
+				C5361E1B2666A47D005D5168 /* DDNetworkingAPI+AdsApi.m in Sources */,
 				C5C67C9F24FF5D3C000A26B8 /* Nanosecond_TimerManager.m in Sources */,
 				C52DEF53255D2A820016FF07 /* XHLaunchAdDownloader.m in Sources */,
 				C55497B024F3AD990065510D /* MKGPUImageView.m in Sources */,
 				C5D7B1BB25A73AF100166E83 /* DDCollectionViewCell_Style2+UICollectionViewDataSource.m in Sources */,
 				C58D80ED2630531600966F5F /* BaseImageView.m in Sources */,
+				C5361E202666A47D005D5168 /* DDNetworkingAPI+UserInfoApi.m in Sources */,
 				C58F02E324EA632800B6D09C /* FileFolderHandleTool.m in Sources */,
 				C5D7B1B625A73AF100166E83 /* DDCollectionViewCell_Style4.m in Sources */,
 				C5C65405259DF94500FD2F99 /* ECPrivacyCheckPhotos.m in Sources */,
@@ -5575,13 +5640,13 @@
 				C5D7B1C025A73AF100166E83 /* DDCollectionViewCell_Style2+UITableViewDelegate.m in Sources */,
 				C58D80F32630531600966F5F /* XLBubbleTransition.m in Sources */,
 				C5F4522B2529A6D900066AAB /* NSString+Base64.m in Sources */,
+				C5361E272666A47D005D5168 /* NSObject+URLManager.m in Sources */,
 				C53D60E4255C20FC006C290D /* TransitionAnimation.m in Sources */,
 				C58D80EB2630531600966F5F /* UICollectionViewCell+Default.m in Sources */,
 				C58D80DF2630531600966F5F /* UIFont+Extras.m in Sources */,
 				C53D60C8255C20FC006C290D /* TabBarControllerConfig.m in Sources */,
 				C53D60FE255C21EB006C290D /* ShootingAppDelegate+Func.m in Sources */,
 				C58F033424EA69D400B6D09C /* ViewController@3.m in Sources */,
-				C5D7B4C125A73FD200166E83 /* URLManagerModel.m in Sources */,
 				C58D81072630531600966F5F /* UITableView+XSAnimationKit.m in Sources */,
 				C5D7B1B825A73AF100166E83 /* DDCollectionViewCell_Style3.m in Sources */,
 				C5D6DC6525860F3200029AFF /* NSTimerManager.m in Sources */,
@@ -5599,8 +5664,11 @@
 				C58F01C624EA5E7900B6D09C /* NotificationManager.m in Sources */,
 				C5B5CBA126666C2400264958 /* BaseButton.m in Sources */,
 				C5C65406259DF94500FD2F99 /* ECPrivacyCheckContacts.m in Sources */,
+				C5361E132666A47D005D5168 /* DDNetworkingAPI+EarnApi.m in Sources */,
 				C58D81172630531700966F5F /* CALayer+Anim.m in Sources */,
+				C5361E1E2666A47D005D5168 /* DDNetworkingAPI+WalletApi.m in Sources */,
 				C58D80FE2630531600966F5F /* UIViewController+BRPickerView.m in Sources */,
+				C5361E162666A47D005D5168 /* DDNetworkingAPI+StatisticsApi.m in Sources */,
 				C5C65407259DF94500FD2F99 /* ECPrivacyCheckHealth.m in Sources */,
 				C59A3E99258DD22E005F6260 /* UserDefaultManager.m in Sources */,
 				C5D7B1AB25A73AF100166E83 /* VideoTagModel.m in Sources */,
@@ -5615,7 +5683,6 @@
 				C59D9AED24F8F08500A74CE9 /* ZZCountingLabel.m in Sources */,
 				C5D7B1B425A73AF100166E83 /* DDCollectionViewCell_Style1.m in Sources */,
 				C58F033524EA69D400B6D09C /* ViewController@1.m in Sources */,
-				C5D7B21925A73B2500166E83 /* NetworkingAPI+UserAttentionApi.m in Sources */,
 				C5C653FD259DF94500FD2F99 /* ECPrivacyCheckBluetooth.m in Sources */,
 				C5D7B4AB25A73F7100166E83 /* ZBRequestEngine.m in Sources */,
 				C5D7B1AE25A73AF100166E83 /* BaseModel.m in Sources */,
@@ -5640,7 +5707,6 @@
 				C58F01CB24EA5F0100B6D09C /* YHGPUImageBeautifyFilter.m in Sources */,
 				C55497A424F38CDB0065510D /* MKShootVC.m in Sources */,
 				C58D81062630531600966F5F /* TableViewAnimationKit.m in Sources */,
-				C5D7B21625A73B2500166E83 /* NetworkingAPI+BankCardApi.m in Sources */,
 				C5D7B1B125A73AF100166E83 /* DDFansMsgModel.m in Sources */,
 				C58D81262630531700966F5F /* NSObject+DefConfig.m in Sources */,
 				C5D7B27725A73B3B00166E83 /* DDPlazaVC.m in Sources */,
@@ -5656,7 +5722,7 @@
 				C53D60C6255C20FC006C290D /* UITabBarItem+TLAnimation.m in Sources */,
 				C56161C224EE4F52001CD851 /* JhtBannerView.m in Sources */,
 				C5D7B26825A73B3B00166E83 /* DDInvitationModel.m in Sources */,
-				C5D7B22125A73B2500166E83 /* NetworkingAPI+MsgApi.m in Sources */,
+				C5361E252666A47D005D5168 /* DDNetworkingAPI+Vip.m in Sources */,
 				C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */,
 				C5F452382529A6D900066AAB /* AES.m in Sources */,
 			);

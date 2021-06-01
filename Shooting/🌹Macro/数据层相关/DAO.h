@@ -16,7 +16,7 @@
 // 存取页面数据
 #import "DataManager.h"
 // App 的所有网络请求Api
-#import "NetworkingAPI.h"
+#import "DDNetworkingAPI.h"
 // 请求的公共配置文件
 #import "RequestTool.h"
 // 用户信息

@@ -26,7 +26,7 @@
 #import "DDUserDetailsVC.h"//用户详情
 
 //网络请求接口
-#import "NetworkingAPI.h"
+#import "DDNetworkingAPI.h"
 
 #import "ViewController@1.h"
 #import "ViewController@2.h"
