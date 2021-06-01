@@ -263,6 +263,7 @@
 		C5A46C0224EFB6E200158D1E /* LZBTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46BFF24EFB6E200158D1E /* LZBTabBarVC.m */; };
 		C5A46C0A24EFB6E900158D1E /* LZBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0424EFB6E800158D1E /* LZBTabBar.m */; };
 		C5A46C0C24EFB6E900158D1E /* LZBTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */; };
+		C5B5CBA126666C2400264958 /* BaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B5CBA026666C2400264958 /* BaseButton.m */; };
 		C5C653FB259DF94500FD2F99 /* ECPrivacyCheckMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C653B8259DF94500FD2F99 /* ECPrivacyCheckMicrophone.m */; };
 		C5C653FC259DF94500FD2F99 /* ECPrivacyCheckHomeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C653BA259DF94500FD2F99 /* ECPrivacyCheckHomeKit.m */; };
 		C5C653FD259DF94500FD2F99 /* ECPrivacyCheckBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C653BC259DF94500FD2F99 /* ECPrivacyCheckBluetooth.m */; };
@@ -964,6 +965,9 @@
 		C5A46C0524EFB6E800158D1E /* LZBTabBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarDelegate.h; sourceTree = "<group>"; };
 		C5A46C0824EFB6E900158D1E /* LZBTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBarItem.m; sourceTree = "<group>"; };
 		C5A46C0924EFB6E900158D1E /* LZBTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarItem.h; sourceTree = "<group>"; };
+		C5B5CB9F26666C2400264958 /* BaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseButton.h; sourceTree = "<group>"; };
+		C5B5CBA026666C2400264958 /* BaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseButton.m; sourceTree = "<group>"; };
+		C5B5CBA226666C2A00264958 /* BaseButtonProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseButtonProtocol.h; sourceTree = "<group>"; };
 		C5C653B7259DF94500FD2F99 /* ECPrivacyCheckCalendars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPrivacyCheckCalendars.h; sourceTree = "<group>"; };
 		C5C653B8259DF94500FD2F99 /* ECPrivacyCheckMicrophone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPrivacyCheckMicrophone.m; sourceTree = "<group>"; };
 		C5C653B9259DF94500FD2F99 /* ECPrivacyCheckMotionAndFitness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPrivacyCheckMotionAndFitness.h; sourceTree = "<group>"; };
@@ -2129,6 +2133,7 @@
 				C58D7F5E2630531600966F5F /* 高度自定义的按钮 */,
 				C58D7F622630531600966F5F /* 高仿抖音点赞动画 */,
 				C58D7F722630531600966F5F /* 高仿iOS长按删除+抖动 */,
+				C5B5CB9E26666C2400264958 /* BaseButton */,
 				C58D7F6D2630531600966F5F /* SoundBtn */,
 				C58D7F662630531600966F5F /* UIButton+Timer */,
 			);
@@ -3298,8 +3303,9 @@
 		C58D809A2630531600966F5F /* BaseProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				C58D809B2630531600966F5F /* BaseViewControllerProtocol.h */,
+				C5B5CBA226666C2A00264958 /* BaseButtonProtocol.h */,
 				C58D809C2630531600966F5F /* BaseCellProtocol.h */,
+				C58D809B2630531600966F5F /* BaseViewControllerProtocol.h */,
 				C58D809D2630531600966F5F /* BaseViewProtocol.h */,
 			);
 			path = BaseProtocol;
@@ -3938,6 +3944,15 @@
 				C5A444C225ABFC35000F0CD2 /* WHToast+DDToast.h */,
 			);
 			path = WHToast;
+			sourceTree = "<group>";
+		};
+		C5B5CB9E26666C2400264958 /* BaseButton */ = {
+			isa = PBXGroup;
+			children = (
+				C5B5CB9F26666C2400264958 /* BaseButton.h */,
+				C5B5CBA026666C2400264958 /* BaseButton.m */,
+			);
+			path = BaseButton;
 			sourceTree = "<group>";
 		};
 		C5C653B5259DF94500FD2F99 /* ECPrivacyCheckTools */ = {
@@ -5582,6 +5597,7 @@
 				C58D81042630531600966F5F /* BaseViewController.m in Sources */,
 				C58D80EF2630531600966F5F /* BaseNavigationBar.m in Sources */,
 				C58F01C624EA5E7900B6D09C /* NotificationManager.m in Sources */,
+				C5B5CBA126666C2400264958 /* BaseButton.m in Sources */,
 				C5C65406259DF94500FD2F99 /* ECPrivacyCheckContacts.m in Sources */,
 				C58D81172630531700966F5F /* CALayer+Anim.m in Sources */,
 				C58D80FE2630531600966F5F /* UIViewController+BRPickerView.m in Sources */,
