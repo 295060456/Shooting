@@ -287,7 +287,7 @@ shouldChangeTextInRange:(NSRange)range
 -(UIView *)backView{
     if (!_backView) {
         _backView = UIView.new;
-        _backView.backgroundColor = COLOR_RGBA(33, 38, 50, 1);
+        _backView.backgroundColor = RGBA_COLOR(33, 38, 50, 1);
         [self.view addSubview:_backView];
         [_backView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(self.view);
@@ -300,7 +300,7 @@ shouldChangeTextInRange:(NSRange)range
 -(SZTextView *)textView{
     if (!_textView) {
         _textView = SZTextView.new;
-        _textView.backgroundColor = COLOR_RGBA(33, 38, 50, 1);
+        _textView.backgroundColor = RGBA_COLOR(33, 38, 50, 1);
         _textView.delegate = self;
         _textView.attributedPlaceholder = [[NSMutableAttributedString alloc] initWithString:@"主人来两句嘛！~~~"
                                                                                  attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15 weight:UIFontWeightRegular],

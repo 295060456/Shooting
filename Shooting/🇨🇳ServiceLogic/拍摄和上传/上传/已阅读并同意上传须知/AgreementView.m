@@ -50,7 +50,7 @@
                        forState:UIControlStateSelected];
         _agreementBtn.titleLabel.font = [UIFont systemFontOfSize:10.2
                                                           weight:UIFontWeightRegular];
-        _agreementBtn.titleLabel.textColor = COLOR_RGB(78, 110, 255);
+        _agreementBtn.titleLabel.textColor = RGB_COLOR(78, 110, 255);
         [_agreementBtn sizeToFit];
         [_agreementBtn.titleLabel adjustsFontSizeToFitWidth];
         @weakify(self)
@@ -73,7 +73,7 @@
         NSString *str = @"上传须知";
         NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:str];
         [text setTextHighlightRange:NSMakeRange(0, 4)
-                              color:COLOR_RGB(78, 88, 110)
+                              color:RGB_COLOR(78, 88, 110)
                     backgroundColor:kWhiteColor
                           tapAction:^(UIView * _Nonnull containerView,
                                       NSAttributedString * _Nonnull text,
@@ -89,7 +89,7 @@
         
         _yylab.font = [UIFont systemFontOfSize:10.2
                                         weight:UIFontWeightRegular];
-        _yylab.textColor = COLOR_RGB(78, 110, 255);
+        _yylab.textColor = RGB_COLOR(78, 110, 255);
         [self addSubview:_yylab];
         [_yylab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.agreementBtn.mas_right).offset(5);
