@@ -109,6 +109,7 @@
 		C56161C224EE4F52001CD851 /* JhtBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56161C124EE4F52001CD851 /* JhtBannerView.m */; };
 		C565CBC125A4384800848134 /* TwoVerticalArrangementLabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C565CBBE25A4384800848134 /* TwoVerticalArrangementLabsView.m */; };
 		C56E428E2547188A00B9F555 /* ⚽️PicResource in Resources */ = {isa = PBXBuildFile; fileRef = C56E428D2547188A00B9F555 /* ⚽️PicResource */; };
+		C57688602674AC9600379F34 /* DDRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = C576885F2674AC9600379F34 /* DDRecord.m */; };
 		C589604F2500AC91002B1764 /* ImageCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C589604E2500AC91002B1764 /* ImageCodeView.m */; };
 		C58D80B62630531600966F5F /* UIImage+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D7F3A2630531500966F5F /* UIImage+ScreenShot.m */; };
 		C58D80B72630531600966F5F /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D7F3D2630531500966F5F /* UIImage+Extras.m */; };
@@ -652,6 +653,8 @@
 		C565CBBF25A4384800848134 /* TwoVerticalArrangementLabsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoVerticalArrangementLabsView.h; sourceTree = "<group>"; };
 		C565CBC025A4384800848134 /* TwoVerticalArrangementLabsView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwoVerticalArrangementLabsView.png; sourceTree = "<group>"; };
 		C56E428D2547188A00B9F555 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "⚽️PicResource"; sourceTree = "<group>"; };
+		C576885E2674AC9600379F34 /* DDRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRecord.h; sourceTree = "<group>"; };
+		C576885F2674AC9600379F34 /* DDRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRecord.m; sourceTree = "<group>"; };
 		C589604D2500AC91002B1764 /* ImageCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCodeView.h; sourceTree = "<group>"; };
 		C589604E2500AC91002B1764 /* ImageCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCodeView.m; sourceTree = "<group>"; };
 		C58D7F372630531500966F5F /* LoadingImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingImage.h; sourceTree = "<group>"; };
@@ -2177,6 +2180,15 @@
 			path = SceneDelegate;
 			sourceTree = "<group>";
 		};
+		C576885D2674AC9600379F34 /* DDRecord */ = {
+			isa = PBXGroup;
+			children = (
+				C576885E2674AC9600379F34 /* DDRecord.h */,
+				C576885F2674AC9600379F34 /* DDRecord.m */,
+			);
+			path = DDRecord;
+			sourceTree = "<group>";
+		};
 		C589604C2500AB00002B1764 /* 图形验证码 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3372,6 +3384,7 @@
 		C58D806A2630531600966F5F /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				C576885D2674AC9600379F34 /* DDRecord */,
 				C58D80912630531600966F5F /* NSObject (Time) */,
 				C58D806B2630531600966F5F /* NSObject+Alert */,
 				C58D80972630531600966F5F /* NSObject+CallBackInfoByBlock */,
@@ -5474,6 +5487,7 @@
 				C561619824EE4CA9001CD851 /* MKUploadingVC.m in Sources */,
 				C5361E142666A47D005D5168 /* DDNetworkingAPI+PostFocusApi.m in Sources */,
 				C58D81102630531700966F5F /* TableViewHeaderView.m in Sources */,
+				C57688602674AC9600379F34 /* DDRecord.m in Sources */,
 				C58D80BA2630531600966F5F /* UIImage+Tailor.m in Sources */,
 				C5EA14942631206B00155822 /* UILabel+Gesture.m in Sources */,
 				C534CE1F25875A31001369FD /* BWShareView.m in Sources */,
